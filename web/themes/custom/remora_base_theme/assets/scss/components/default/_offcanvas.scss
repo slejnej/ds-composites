@@ -1,0 +1,8 @@
+.offcanvas {
+  --bs-offcanvas-width: #{$offcanvas-horizontal-width};
+  --bs-offcanvas-padding-x: #{$offcanvas-padding-x};
+  --bs-offcanvas-padding-y: #{$offcanvas-padding-y};
+  --bs-offcanvas-color: #{$offcanvas-color};
+  --bs-offcanvas-bg: #{$offcanvas-bg-color};
+  --bs-offcanvas-border-color: #{$offcanvas-border-color};
+}

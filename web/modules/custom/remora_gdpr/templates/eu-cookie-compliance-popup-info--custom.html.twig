@@ -1,0 +1,100 @@
+{% if privacy_settings_tab_label %}
+  <button type="button" class="eu-cookie-withdraw-tab">{{ privacy_settings_tab_label }}</button>
+{% endif %}
+
+{% set classes = [
+  'eu-cookie-compliance-banner',
+  'eu-cookie-compliance-banner-info',
+  'eu-cookie-compliance-banner--' ~ method|clean_class,
+  'py-3',
+  'py-lg-5'
+] %}
+
+<div role="alertdialog" aria-labelledby="popup-text" {{ attributes.addClass(classes) }}>
+  <div class="popup-content eu-cookie-compliance-content container-xl d-flex flex-column flex-md-row align-items-center">
+
+    {# Cookie message #}
+    <div class="eu-cookie-message col-12 col-md-8 col-lg-9">
+      <div id="popup-text" class="eu-cookie-compliance-message">
+        {{ message }}
+
+        {% if more_info_button %}
+          <button type="button" class="find-more-button eu-cookie-compliance-more-button">{{ more_info_button }}</button>
+        {% endif %}
+      </div>
+    </div>
+
+    {# Cookie buttons #}
+    <div id="popup-buttons" class="eu-cookie-compliance-buttons col-12 col-md-4 col-lg-3 d-flex flex-column mb-0">
+      <button type="button" class="{{ primary_button_class }} btn btn-primary m-0">{{ agree_button }}</button>
+
+      <button type="button" class="btn btn-secondary m-0" data-bs-toggle="modal" data-bs-target="#cookieModal">
+        Cookie settings
+      </button>
+    </div>
+
+    {# Cookie modal #}
+    {% if cookie_categories %}
+    <div class="modal fade" id="cookieModal" tabindex="-1" aria-labelledby="cookieModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header border-0">
+            <div>Manage consent preferences</div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="eu-cookie-compliance-categories" class="eu-cookie-compliance-categories pt-0 d-flex flex-column">
+
+              {# Cookie categories #}
+              {% for key, category in cookie_categories %}
+
+                <div class="eu-cookie-compliance-category {% if category.description %} has-description {% endif %}">
+                  <div class="accordion-wrapper d-flex flex-column justify-content-between">
+
+                    {% set accordion_id = 'cookie-accordion-'~ key %}
+
+                    <div class="accordion-header d-flex align-items-center justify-content-between" id="{{ accordion_id }}-heading">
+                      <button class="accordion-button d-flex align-items-center justify-content-between collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{ accordion_id }}" aria-expanded="false" aria-controls="{{ accordion_id }}">
+                        <span class="accordion-icon me-1"></span>
+                        <span class="accordion-title">{{ category.label }}</span>
+                      </button>
+
+                      <div class="cookie-toggle position-relative">
+                        <input type="checkbox" name="cookie-categories" id="cookie-category-{{ key }}" value="{{ key }}"
+                          {% if category.checkbox_default_state in ['checked', 'required'] %} checked {% endif %}
+                          {% if category.checkbox_default_state == 'required' %} disabled {% endif %} class="position-absolute">
+                        <label for="cookie-category-{{ key }}" class="switch-toggle d-inline-block mb-0">{{ category.label }}</label>
+                      </div>
+
+                    </div>
+
+                    <div id="{{ accordion_id }}" class="accordion-collapse collapse" aria-labelledby="{{ accordion_id }}-heading">
+                      <div class="accordion-body py-2">
+                        {{ category.description }}
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              {% endfor %}
+
+              {% if save_preferences_button_label %}
+                <div class="eu-cookie-compliance-categories-buttons d-flex justify-content-center min-w-100 mb-0">
+                  <button type="button" class="eu-cookie-compliance-save-preferences-button {{ olivero_secondary_button_classes }} btn btn-primary" data-bs-dismiss="modal" aria-label="Close">{{ save_preferences_button_label }}</button>
+                </div>
+              {% endif %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+</div>
+</div>
+
+

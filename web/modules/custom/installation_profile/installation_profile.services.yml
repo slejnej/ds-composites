@@ -1,0 +1,8 @@
+services:
+  installation_profile.manager.module_scss:
+    class: \Drupal\installation_profile\Manager\ModuleScssManager
+    arguments: ['@file_system']
+
+  installation_profile.logger:
+    parent: logger.channel_base
+    arguments: ['installation_profile']

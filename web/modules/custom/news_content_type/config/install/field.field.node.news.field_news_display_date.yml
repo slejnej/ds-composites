@@ -1,0 +1,19 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_display_date
+    - node.type.news
+id: node.news.field_news_display_date
+field_name: field_news_display_date
+entity_type: node
+bundle: news
+label: 'Display date'
+description: 'Override the default display of the news item.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

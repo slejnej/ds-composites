@@ -1,0 +1,10 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+id: media.landscape_21_9
+label: 'Landscape: 21x9'
+targetEntityType: media
+cache: true

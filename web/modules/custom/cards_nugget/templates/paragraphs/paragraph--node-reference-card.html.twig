@@ -1,0 +1,39 @@
+{% block paragraph %}
+
+  {%
+    set classes = [
+      'paragraph',
+      'paragraph--type--' ~ paragraph.bundle|clean_class,
+      view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+      not paragraph.isPublished() ? 'paragraph--unpublished',
+      'card',
+      'p-3',
+    ] %}
+
+  {% block paragraph_content %}
+    <div{{ attributes.addClass(classes) }}>
+
+      {% block content %}
+
+        {% block card-image %}
+          {% if content.field_page_link is not empty %}
+            <div class="card-img-top">
+              <img src="{{ file_url(content.field_page_link.0['#node'].field_card_image.entity.uri.value) }}" alt="">
+            </div>
+          {% endif %}
+        {% endblock %}
+
+        {% block card-body %}
+          <div class="card-body">
+            <h5 class="card-title">{{ content.field_page_link.0['#node'].title.value }}</h5>
+            {% if content.field_page_link.0['#node'].field_card_summary is not empty %}
+              <p class="card-text">{{ content.field_page_link.0['#node'].field_card_summary.value }}</p>
+            {% endif %}
+          </div>
+        {% endblock %}
+
+      {% endblock %}
+
+    </div>
+  {% endblock %}
+{% endblock %}

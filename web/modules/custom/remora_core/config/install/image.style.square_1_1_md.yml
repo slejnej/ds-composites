@@ -1,0 +1,32 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.square_1x1
+  module:
+    - crop
+name: square_1_1_md
+label: 'Square: 1x1 - MD'
+effects:
+  f1d6c056-04f4-43cc-9cf5-f72bcce5b439:
+    uuid: f1d6c056-04f4-43cc-9cf5-f72bcce5b439
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: square_1x1
+      automatic_crop_provider: null
+  005b67ba-2e3e-46e4-83e6-118bb5ca121c:
+    uuid: 005b67ba-2e3e-46e4-83e6-118bb5ca121c
+    id: image_scale
+    weight: 2
+    data:
+      width: 992
+      height: null
+      upscale: true
+  f21e8d5d-3c63-4c74-8bf1-add5d2045a32:
+    uuid: f21e8d5d-3c63-4c74-8bf1-add5d2045a32
+    id: image_convert
+    weight: 3
+    data:
+      extension: webp

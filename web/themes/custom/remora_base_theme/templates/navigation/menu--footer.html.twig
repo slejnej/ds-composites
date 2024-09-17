@@ -1,0 +1,10 @@
+{% extends 'menu.html.twig' %}
+{% block menu %}
+  <ul class="d-flex list-unstyled m-0 flex-wrap">
+    {{ block('items') }}
+  </ul>
+{% endblock %}
+
+{% block item %}
+  <li class="nav-item d-inline position-relative">{{ link(item.title, item.url, {'class': ['nav-link d-inline text-uppercase']}) }}{% if not loop.last %}<span aria-hidden="true">|</span>{% endif %}</li>
+{% endblock %}

@@ -1,0 +1,14 @@
+uuid: b5c0e37d-3518-4f82-b6a8-d5f111ef3bea
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Sb1KHunbtQnRy0ZbLppVASG7hgRKaznvDmOxD7T7UYI
+id: free
+label: Free
+description: ''
+aspect_ratio: ''
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

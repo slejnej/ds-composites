@@ -1,0 +1,43 @@
+{% extends '@cards_nugget/partials/card-body.html.twig' %}
+{% import '@cards_nugget/macros/card-macros.twig' as macros %}
+
+{% block card_body %}
+
+  {% set content = referencedNode ?? content %}
+
+  <div class="card-body-wrapper h-100">
+    <div class="card-text-wrapper h-100 d-flex flex-column justify-content-between">
+
+      <div class="card-text pb-0">
+        {% block card_date %}
+          <span class="card-date card-subtitle d-block">
+          {% if content.field_news_display_date.0 is not empty %}
+            {{ macros.field_text(content, 'field_news_display_date') }}
+          {% else %}
+            {{ macros.field_date(content, 'field_date') }}
+          {% endif %}
+        </span>
+        {% endblock %}
+
+        {% block card_news_title %}
+          {{ block('card_title') }}
+        {% endblock %}
+
+        {% block card_news_text %}
+          {{ block('card_text') }}
+        {% endblock %}
+      </div>
+
+      {% block category_type %}
+        {% if (content.field_categories.0.value is not empty) or (content.field_categories['#items'] is not empty) %}
+          <div class="card-type mb-0">
+            <span class="card-type card-tag d-inline-block text-capitalize">
+              {{ macros.field_type(content, 'field_categories') }}
+            </span>
+          </div>
+        {% endif %}
+      {% endblock %}
+
+    </div>
+  </div>
+{% endblock %}

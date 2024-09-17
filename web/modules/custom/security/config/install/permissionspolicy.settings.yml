@@ -1,0 +1,84 @@
+langcode: en-gb
+enforce:
+  enable: true
+  features:
+    accelerometer:
+      base: none
+    ambient-light-sensor:
+      base: none
+    autoplay:
+      base: none
+    battery:
+      base: none
+    bluetooth:
+      base: none
+    camera:
+      base: none
+    ch-ua:
+      base: none
+    ch-ua-arch:
+      base: none
+    ch-ua-bitness:
+      base: none
+    ch-ua-full-version:
+      base: none
+    ch-ua-full-version-list:
+      base: none
+    ch-ua-mobile:
+      base: none
+    ch-ua-model:
+      base: none
+    ch-ua-platform:
+      base: none
+    ch-ua-platform-version:
+      base: none
+    ch-ua-wow64:
+      base: none
+    cross-origin-isolated:
+      base: none
+    display-capture:
+      base: none
+    encrypted-media:
+      base: none
+    execution-while-not-rendered:
+      base: any
+    execution-while-out-of-viewport:
+      base: any
+    fullscreen:
+      base: any
+    geolocation:
+      base: none
+    gyroscope:
+      base: none
+    hid:
+      base: none
+    idle-detection:
+      base: none
+    keyboard-map:
+      base: none
+    magnetometer:
+      base: none
+    microphone:
+      base: none
+    midi:
+      base: none
+    navigation-override:
+      base: none
+    payment:
+      base: none
+    picture-in-picture:
+      base: any
+    publickey-credentials-get:
+      base: none
+    screen-wake-lock:
+      base: none
+    serial:
+      base: none
+    sync-xhr:
+      base: none
+    usb:
+      base: none
+    web-share:
+      base: any
+    xr-spatial-tracking:
+      base: none

@@ -1,0 +1,8 @@
+diff --git a/config/install/google_tag.settings.yml b/config/install/google_tag.settings.yml
+deleted file mode 100644
+index 1e51f48..0000000
+--- a/config/install/google_tag.settings.yml
++++ /dev/null
+@@ -1,2 +0,0 @@
+-use_collection: false
+-default_google_tag_entity: ''

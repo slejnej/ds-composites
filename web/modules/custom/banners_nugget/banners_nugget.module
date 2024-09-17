@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Banners nugget module.
+ */
+
+use Drupal\remora_core\Manager\LibraryManager;
+
+/**
+ *  Automatically registers all the templates in the templates/ directory
+ * @return array The theme containing the theme implementations (templates)
+ */
+function banners_nugget_theme(): array
+{
+  return Drupal::service('remora_core.service.module_template')->generateThemesFromTemplates('banners_nugget');
+}
+
+function banners_nugget_page_attachments(array &$attachments): void
+{
+  LibraryManager::addAdminLibrary($attachments, 'banners_nugget/admin_styles');
+}

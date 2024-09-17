@@ -1,0 +1,42 @@
+#!/bin/bash
+
+APP='ds-composites'
+
+if [[ -z "${SERVER_TYPE}" ]]; then
+  ENV="develop"
+else
+  ENV="${SERVER_TYPE}"
+fi
+
+mkdir -p /home/ubuntu/shared-folders/private-files/$APP/backups
+
+# function to pass in settings file to parse
+backup_database() {
+  local file=$1
+  local d=$(date +%Y-%m-%d)
+  local properties=('database' 'username' 'password' 'host')
+
+  for property in "${properties[@]}"
+  do
+    local value=$(sed -rn "s/.*'$property' => '(.*)'.*/\1/p" $file)
+    declare $property=$(echo $value | cut -d' ' -f1)
+  done
+
+  echo "-h${host} -u${username} -p${password} ${database}"
+  mysqldump -h${host} -u${username} -p${password} ${database} | sudo -u ubuntu gzip > /home/ubuntu/shared-folders/private-files/$APP/backups/${database}-${d}.sql.gz
+}
+
+# backup drupal mysql to private folder
+file=/home/ubuntu/apps/$APP/current/web/sites/default/settings.local.php
+backup_database "$file"
+
+# backup folders to S3
+cd /home/ubuntu/shared-folders/public-files/$APP/
+/usr/bin/aws s3 sync ./ s3://s3-$APP/$ENV/public-files/ --region eu-west-1 \
+        --exclude 'css/*' \
+        --exclude 'js/*' \
+        --exclude 'php/*' \
+        --exclude 'styles/*' \
+        --size-only
+
+/usr/bin/aws s3 sync /home/ubuntu/shared-folders/private-files/$APP/ s3://s3-$APP/$ENV/private-files/ --region eu-west-1

@@ -1,0 +1,17 @@
+{
+  "name": "mrm-remora/attachments_nugget",
+  "type": "drupal-custom-module",
+  "description": "Attachments nugget - contains functionalities to enable attachments nugget",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Anna Dunets",
+      "email": "anna@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "drupal/field_group": "^3.4"
+  }
+}

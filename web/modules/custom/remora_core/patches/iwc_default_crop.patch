@@ -1,0 +1,79 @@
+diff --git a/src/Element/ImageCrop.php b/src/Element/ImageCrop.php
+index 14bf40e..5f5794c 100644
+--- a/src/Element/ImageCrop.php
++++ b/src/Element/ImageCrop.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\image_widget_crop\Element;
+ 
++use Drupal;
+ use Drupal\Component\Serialization\Json;
+ use Drupal\Core\Render\Element\FormElement;
+ use Drupal\Core\Form\FormStateInterface;
+@@ -238,9 +239,45 @@ public static function processCrop(array &$element, FormStateInterface $form_sta
+             if (isset($properties['crop_applied']) && $properties['crop_applied'] == '0') {
+               $element['crop_wrapper'][$type]['crop_container']['values']['crop_applied']['#default_value'] = 0;
+             }
++
++            // set a default crop if none is defined
++          } else {
++            // get the image's size
++            $imagePath = Drupal::service('file_system')->realpath($file->getFileUri());
++            $imageSize = getimagesize($imagePath);
++            $aspectRatio = $crop_type->getAspectRatio();
++
++            $imageWidth = $imageSize[0];
++            $imageHeight = $imageSize[1];
++
++            // if no crop defined, use the aspect ratio to set the crop area.
++            // if no aspect ratio is set, select the entire area, no need to fuss about with hard/soft limits since they will be met assuming the image is large enough
++            if(!isset($aspectRatio) || !preg_match('/\d+:\d+/', $aspectRatio)) {
++              $newWidth = $imageWidth;
++              $newHeight = $imageHeight;
++            } else {
++              $aspectRatio = explode(':', $aspectRatio);
++
++              $multiplier = min(floor($imageWidth / $aspectRatio[0]), floor($imageHeight / $aspectRatio[1]));
++              $newWidth = $aspectRatio[0] * $multiplier;
++              $newHeight = $aspectRatio[1] * $multiplier;
++            }
++
++            $properties = [
++              'width' => $newWidth,
++              'height' => $newHeight,
++              'x' => $imageWidth / 2 - $newWidth / 2,
++              'y' => $imageHeight / 2 - $newHeight / 2
++            ];
++
++            // needs to be set to true to properly apply the crop, don't ask
++            $edit = true;
++            $element['crop_wrapper'][$type]['crop_container']['values']['crop_applied']['#default_value'] = 1;
+           }
++
+           self::getCropFormElement($element, 'crop_container', $properties, $edit, $type);
+         }
++
+         // Stock Original File Values.
+         $element['file-uri'] = [
+           '#type' => 'value',
+@@ -253,6 +290,7 @@ public static function processCrop(array &$element, FormStateInterface $form_sta
+         ];
+       }
+     }
++
+     return $element;
+   }
+ 
+@@ -475,9 +513,9 @@ public static function cropRequired(array $element, FormStateInterface $form_sta
+     if (!empty($required_crops)) {
+       $form_state->setError($element, \Drupal::translation()
+         ->formatPlural(count($required_crops), '@crop_required is required.', '@crops_required are required.', [
+-          "@crop_required" => current($required_crops),
+-          "@crops_required" => implode(', ', $required_crops),
+-        ]
++            "@crop_required" => current($required_crops),
++            "@crops_required" => implode(', ', $required_crops),
++          ]
+         ));
+     }
+   }

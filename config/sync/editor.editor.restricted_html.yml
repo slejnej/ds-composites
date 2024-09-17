@@ -1,0 +1,101 @@
+uuid: 1934d979-86af-449b-9474-9267ce01243b
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - ckeditor5
+_core:
+  default_config_hash: UBTYfRB59vgLhrTCJfGQgmeS0r7zZ2JeiiHSHdACHiw
+format: restricted_html
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - bold
+      - italic
+      - underline
+      - strikethrough
+      - superscript
+      - subscript
+      - removeFormat
+      - '|'
+      - alignment
+      - '|'
+      - bulletedList
+      - numberedList
+      - '|'
+      - indent
+      - outdent
+      - '|'
+      - undo
+      - redo
+      - '|'
+      - link
+      - '|'
+      - horizontalLine
+      - '|'
+      - '-'
+      - heading
+      - style
+      - '|'
+      - specialCharacters
+      - sourceEditing
+  plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_list:
+      properties:
+        reversed: true
+        startIndex: true
+      multiBlock: true
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<p id>'
+        - '<h2 id>'
+        - '<h3 id>'
+        - '<h4 id>'
+        - '<h5 id>'
+        - '<h6 id>'
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Larger text'
+          element: '<p class="text-larger">'
+        -
+          label: 'Smaller text'
+          element: '<p class="text-smaller">'
+        -
+          label: 'Default button'
+          element: '<a class="btn btn-primary">'
+        -
+          label: 'Outline button'
+          element: '<a class="btn btn-outline-primary">'
+        -
+          label: 'Full-width default button'
+          element: '<a class="btn btn-primary w-100">'
+        -
+          label: 'Alternative button'
+          element: '<a class="btn btn-warning">'
+        -
+          label: 'Alternative outline button'
+          element: '<a class="btn btn-outline-warning">'
+        -
+          label: 'Full-width alternative button'
+          element: '<a class="btn btn-warning w-100">'
+    linkit_extension:
+      linkit_enabled: true
+      linkit_profile: default
+image_upload: {  }

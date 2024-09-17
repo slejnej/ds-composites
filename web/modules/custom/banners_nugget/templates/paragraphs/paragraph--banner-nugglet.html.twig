@@ -1,0 +1,85 @@
+{% block paragraph %}
+
+  {% set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'position-relative',
+    'm-0',
+    'h-100',
+    'overflow-hidden'
+  ] %}
+
+  {% set banner_link = paragraph.field_banner_nt_link|first %}
+  {% set image = paragraph.field_banner_nt_image.entity.field_media_image.entity.uri.value %}
+  {% set captionSource = paragraph.field_banner_nt_image.entity.field_image_caption_formatted.0.value %}
+
+  {% block paragraph_content %}
+    <div{{ attributes.addClass(classes) }}>
+      {% block content %}
+        <div class="banner-wrapper container-xxl h-100 d-flex flex-column flex-md-row align-items-end justify-content-between position-relative">
+
+          {% block image_caption %}
+            {% include '@remora_base_theme/templates/macros/caption.twig' with { 'imageCaption': captionSource } %}
+          {% endblock %}
+
+          {% block banner_caption %}
+            {% if content.field_banner_nt_title['#items'] is not empty or
+              content.field_banner_nt_summary['#items'] is not empty or
+              content.field_banner_nt_link['#items'] is not empty %}
+                <div class="banner-caption-wrapper d-flex flex-column justify-content-center h-100 flex-md-8 flex-lg-6 flex-xl-7 flex-xxl-6 position-relative">
+
+                  {% block banner_title %}
+                    {% if content.field_banner_nt_title['#items'] is not empty %}
+                      <div class="caption-title">
+                        {{ content.field_banner_nt_title }}
+                      </div>
+                    {% endif %}
+                  {% endblock %}
+
+                  {% block banner_summary %}
+                    {% if content.field_banner_nt_summary['#items'] is not empty %}
+                      <div class="caption-subtitle mb-3">
+                        {{ content.field_banner_nt_summary }}
+                      </div>
+                    {% endif %}
+                  {% endblock %}
+
+                  {% block banner_link %}
+                    {% if content.field_banner_nt_link['#items'] is not empty %}
+                      <div class="caption-link">
+                        {% if banner_link %}
+                          <a href="{{ banner_link.getUrl() }}" class="btn btn-primary">
+                            {{ banner_link.title }}
+                          </a>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  {% endblock %}
+
+              </div>
+            {% endif %}
+          {% endblock %}
+
+          {% block banner_image %}
+            {% if content.field_banner_nt_image['#items'] is not empty %}
+              <div class="banner-image-wrapper position-relative flex-md-6 flex-lg-6 flex-xl-5 flex-xxl-6">
+                {% block banner_image_ratio %}
+                  <div class="banner-image position-relative d-flex justify-content-center align-items-center">
+                    {{ image|remora_image({'default': 'free'}) }}
+                  </div>
+                {% endblock %}
+
+                {% block banner_image_icon %}
+                  <div class="banner-icon position-absolute"></div>
+                {% endblock %}
+              </div>
+            {% endif %}
+          {% endblock %}
+
+        </div>
+      {% endblock %}
+    </div>
+  {% endblock %}
+{% endblock paragraph %}

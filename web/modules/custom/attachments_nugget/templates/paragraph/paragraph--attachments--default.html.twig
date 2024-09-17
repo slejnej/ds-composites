@@ -1,0 +1,29 @@
+{% block paragraph %}
+
+  {% set classes = [
+    'paragraph',
+    'paragraph--type--attachments',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+  ] %}
+
+  {% block paragraph_content %}
+    <div{{ attributes.addClass(classes) }}>
+      {% block content %}
+
+        {% block nugget_title %}
+          {% remora_include 'partials/paragraphs/nugget-title.html.twig' %}
+        {% endblock %}
+
+        {% block nugget_content %}
+          <div class="container-xxl">
+            {{ content.field_attachments_nt_file_atts }}
+          </div>
+        {% endblock %}
+
+      {% endblock %}
+    </div>
+  {% endblock %}
+
+{% endblock paragraph %}

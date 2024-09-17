@@ -1,0 +1,75 @@
+{#
+We call a macro which calls itself to render the full tree.
+@see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ _self.build_menu(items, attributes, 0) }}
+
+{% macro build_menu(items, attributes, menu_level, parent_item = null) %}
+  {% if items %}
+    {% if menu_level > 0 %}
+      <div class="dropdown-menu">
+    {% endif %}
+    {% set ul_classes = [
+      menu_level == 0 ? 'navbar-nav justify-content-end flex-wrap' : '',
+      menu_level > 0 ? 'list-unstyled' : '',
+      'nav-level-' ~ menu_level,
+    ] %}
+    <ul{{ attributes.addClass(ul_classes) }}>
+      {% if parent_item is not null and menu_level > 0 %}
+        <li class="nav-item">
+          {{ _self.print_link(parent_item, { 'class': 'dropdown-item nav-link toggle-nav-link title' }) }}
+        </li>
+      {% endif %}
+
+      {% for item in items %}
+        {{ _self.add_link(item, attributes.removeClass(ul_classes), menu_level) }}
+      {% endfor %}
+
+      {# if remora_search is installed print header seearch block #}
+      {% if is_module_installed('remora_search') and menu_level == 0 %}
+        <li class="d-none d-lg-block">
+          {{ drupal_block('remora_search_nav_block') }}
+        </li>
+      {% endif %}
+
+    </ul>
+    {% if menu_level > 0 %}
+      </div>
+    {% endif %}
+  {% endif %}
+{% endmacro %}
+
+{# wraps the link in a span to prevent funny issues with flex when links contain italics #}
+{# attributes are applied to anchor tag #}
+{% macro print_link(item, attributes) %}
+  {% set title = item.title|check_markup('title') %}
+  {% set url = item.url %}
+
+  <a href="{{ url }}" {{ create_attribute(attributes) }}><span>{{ title }}</span></a>
+{% endmacro %}
+
+
+{% macro add_link(item, attributes, menu_level) %}
+  {% set list_item_classes = [
+    'nav-item',
+    item.is_expanded ? 'dropdown' : '',
+    menu_level >= 1 ? 'dropend' : '',
+    'level-' ~ (menu_level + 1)
+  ] %}
+  {% set link_class = [
+    'text-wrap',
+    menu_level == 0 ? 'nav-link' : '',
+    item.in_active_trail ? 'active' : '',
+    menu_level == 0 and (item.is_expanded or item.is_collapsed) ? 'dropdown-toggle' : '',
+    menu_level > 0 and (item.is_expanded or item.is_collapsed) ? 'dropdown-item dropdown-toggle' : '',
+    menu_level > 0 ? 'dropdown-item nav-link' : '',
+  ] %}
+  <li{{ item.attributes.addClass(list_item_classes) }}>
+    {% if item.below %}
+      {{ _self.print_link(item, { 'class': link_class, 'role': 'button', 'data-bs-toggle': 'dropdown', 'aria-haspopup':'true', 'aria-expanded': 'false', 'title': ('Expand menu' | t) ~ ' ' ~ item.title }) }}
+      {{ _self.build_menu(item.below, attributes, menu_level + 1, item) }}
+    {% else %}
+      {{ _self.print_link(item, { 'class': link_class }) }}
+    {% endif %}
+  </li>
+{% endmacro %}

@@ -1,0 +1,11 @@
+// FLEX GROW
+
+@each $breakpoint, $value in $grid-breakpoints {
+  @for $i from 0 through 12 {
+    .flex-#{$breakpoint}-#{$i} {
+      @include media-breakpoint-up($breakpoint) {
+        flex: $i;
+      }
+    }
+  }
+}

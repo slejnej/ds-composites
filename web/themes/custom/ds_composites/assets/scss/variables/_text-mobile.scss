@@ -1,0 +1,160 @@
+@import 'global';
+// buttons
+
+// default
+$text-mobile-default-font: $global-text-secondary-font;
+$text-mobile-default-size: $global-text-font-size-m;
+$text-mobile-default-weight: $global-text-font-weight-semibold;
+$text-mobile-default-line-height: 16px;
+
+// large
+$text-mobile-large-size: $global-text-font-size-xl;
+$text-mobile-large-weight: $global-text-font-weight-semibold;
+$text-mobile-large-line-height: 20px;
+
+// small
+$text-mobile-small-size: $global-text-font-size-xs;
+$text-mobile-small-weight: $global-text-font-weight-semibold;
+$text-mobile-small-line-height: 14px;
+
+// nav
+$text-mobile-nav-font: $global-text-secondary-font;
+$text-mobile-nav-size: $global-text-font-size-xl;
+$text-mobile-nav-weight: $global-text-font-weight-normal;
+$text-mobile-nav-line-height: 20px;
+
+// breadcrumb
+$text-mobile-breadcrumb-font: $global-text-secondary-font;
+$text-mobile-breadcrumb-size: $global-text-font-size-m;
+$text-mobile-breadcrumb-weight: $global-text-font-weight-medium;
+$text-mobile-breadcrumb-line-height: 16px;
+
+// title
+
+// node
+$text-mobile-title-node-font: $global-text-primary-font;
+$text-mobile-title-node-size: $global-text-font-size-4xl;
+$text-mobile-title-node-weight: $global-text-font-weight-bolder;
+$text-mobile-title-node-line-height: 60px;
+
+// promo
+$text-mobile-title-promo-font: $global-text-primary-font;
+$text-mobile-title-promo-size: $global-text-font-size-3xl;
+$text-mobile-title-promo-weight: $global-text-font-weight-bold;
+$text-mobile-title-promo-line-height: 38px;
+
+// card
+$text-mobile-title-card-font: $global-text-primary-font;
+$text-mobile-title-card-size: $global-text-font-size-xl;
+$text-mobile-title-card-weight: $global-text-font-weight-normal;
+$text-mobile-title-card-line-height: 26px;
+
+// section
+$text-mobile-title-section-font: $global-text-primary-font;
+$text-mobile-title-section-size: $global-text-font-size-6xl;
+$text-mobile-title-section-weight: $global-text-font-weight-bold;
+$text-mobile-title-section-line-height: 50px;
+
+// nugget
+$text-mobile-title-nugget-font: $global-text-primary-font;
+$text-mobile-title-nugget-size: $global-text-font-size-3xl;
+$text-mobile-title-nugget-weight: $global-text-font-weight-bold;
+$text-mobile-title-nugget-line-height: 40px;
+
+// slideshow
+$text-mobile-title-slideshow-font: $global-text-primary-font;
+$text-mobile-title-slideshow-size: $global-text-font-size-4xl;
+$text-mobile-title-slideshow-weight: $global-text-font-weight-bolder;
+$text-mobile-title-slideshow-line-height: 46px;
+$text-mobile-title-slideshow-sub-font: $global-text-secondary-font;
+$text-mobile-title-slideshow-sub-size: $global-text-font-size-xl;
+$text-mobile-title-slideshow-sub-weight: $global-text-font-weight-normal;
+$text-mobile-title-slideshow-sub-line-height: 30px;
+
+// featured article
+$text-mobile-title-featured-article-font: $global-text-primary-font;
+$text-mobile-title-featured-article-size: $global-text-font-size-3xl;
+$text-mobile-title-featured-article-weight: $global-text-font-weight-bold;
+$text-mobile-title-featured-article-line-height: 40px;
+$text-mobile-title-featured-article-sub-font: $global-text-primary-font;
+$text-mobile-title-featured-article-sub-size: $global-text-font-size-l;
+$text-mobile-title-featured-article-sub-weight: $global-text-font-weight-normal;
+$text-mobile-title-featured-article-sub-line-height: 26px;
+$text-mobile-title-featured-article-description-font: $global-text-secondary-font;
+$text-mobile-title-featured-article-description-size: $global-text-font-size-m;
+$text-mobile-title-featured-article-description-weight: $global-text-font-weight-normal;
+$text-mobile-title-featured-article-description-line-height: 24px;
+
+// tagline
+$text-mobile-title-tagline-font: $global-text-primary-font;
+$text-mobile-title-tagline-size: $global-text-font-size-3xl;
+$text-mobile-title-tagline-weight: $global-text-font-weight-bold;
+$text-mobile-title-tagline-line-height: 40px;
+$text-mobile-title-tagline-sub-font: $global-text-secondary-font;
+$text-mobile-title-tagline-sub-size: $global-text-font-size-xl;
+$text-mobile-title-tagline-sub-weight: $global-text-font-weight-normal;
+$text-mobile-title-tagline-sub-line-height: 28px;
+
+// display
+$text-mobile-display-1-font: $global-text-primary-font;
+$text-mobile-display-1-size: $global-text-font-size-12xl;
+$text-mobile-display-1-weight: $global-text-font-weight-bold;
+$text-mobile-display-1-line-height: 84px;
+$text-mobile-display-2-font: $global-text-primary-font;
+$text-mobile-display-2-size: $global-text-font-size-10xl;
+$text-mobile-display-2-weight: $global-text-font-weight-bold;
+$text-mobile-display-2-line-height: 80px;
+$text-mobile-display-3-font: $global-text-primary-font;
+$text-mobile-display-3-size: $global-text-font-size-9xl;
+$text-mobile-display-3-weight: $global-text-font-weight-bold;
+$text-mobile-display-3-line-height: 76px;
+$text-mobile-display-4-font: $global-text-primary-font;
+$text-mobile-display-4-size: $global-text-font-size-8xl;
+$text-mobile-display-4-weight: $global-text-font-weight-bold;
+$text-mobile-display-4-line-height: 68px;
+$text-mobile-display-5-font: $global-text-primary-font;
+$text-mobile-display-5-size: $global-text-font-size-6xl;
+$text-mobile-display-5-weight: $global-text-font-weight-bold;
+$text-mobile-display-5-line-height: 60px;
+$text-mobile-display-6-font: $global-text-primary-font;
+$text-mobile-display-6-size: $global-text-font-size-4xl;
+$text-mobile-display-6-weight: $global-text-font-weight-bolder;
+$text-mobile-display-6-line-height: 52px;
+
+// heading
+$text-mobile-heading-1-font: $global-text-primary-font;
+$text-mobile-heading-1-size: $global-text-font-size-4xl;
+$text-mobile-heading-1-weight: $global-text-font-weight-bold;
+$text-mobile-heading-1-line-height: 36px;
+$text-mobile-heading-2-font: $global-text-primary-font;
+$text-mobile-heading-2-size: $global-text-font-size-3xl;
+$text-mobile-heading-2-weight: $global-text-font-weight-bold;
+$text-mobile-heading-2-line-height: 36px;
+$text-mobile-heading-3-font: $global-text-primary-font;
+$text-mobile-heading-3-size: $global-text-font-size-xl;
+$text-mobile-heading-3-weight: $global-text-font-weight-normal;
+$text-mobile-heading-3-line-height: 30px;
+$text-mobile-heading-4-font: $global-text-primary-font;
+$text-mobile-heading-4-size: $global-text-font-size-xl;
+$text-mobile-heading-4-weight: $global-text-font-weight-normal;
+$text-mobile-heading-4-line-height: 28px;
+$text-mobile-heading-5-font: $global-text-primary-font;
+$text-mobile-heading-5-size: $global-text-font-size-m;
+$text-mobile-heading-5-weight: $global-text-font-weight-normal;
+$text-mobile-heading-5-line-height: 26px;
+$text-mobile-heading-6-font: $global-text-primary-font;
+$text-mobile-heading-6-size: $global-text-font-size-m;
+$text-mobile-heading-6-weight: $global-text-font-weight-normal;
+$text-mobile-heading-6-line-height: 24px;
+
+// body
+$text-mobile-body-regular-font: $global-text-secondary-font;
+$text-mobile-body-regular-size: $global-text-font-size-m;
+$text-mobile-body-regular-size-small: $global-text-font-size-xs;
+$text-mobile-body-regular-size-large: $global-text-font-size-xl;
+$text-mobile-body-regular-weight: $global-text-font-weight-normal;
+$text-mobile-body-regular-line-height: 26px;
+$text-mobile-body-large-line-height: 32px;
+$text-mobile-body-bold-weight: $global-text-font-weight-bold;
+$text-mobile-body-medium-weight: $global-text-font-weight-medium;
+$text-mobile-body-light-weight: $global-text-font-weight-light;

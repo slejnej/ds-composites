@@ -1,0 +1,21 @@
+name: 'DS Composites'
+type: theme
+version: 0.0.1
+description: 'DS Composites subtheme based on Remora base theme.'
+core_version_requirement: '^9.4 || ^10'
+'base theme': remora_base_theme
+libraries:
+  - ds_composites/global-styling
+  - ds_composites/global-javascript
+libraries-override:
+  remora_base_theme/global-styling: true
+regions:
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer

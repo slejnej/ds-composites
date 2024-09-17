@@ -1,0 +1,17 @@
+editor:
+  - 'create paragraph content slideshow'
+  - 'delete paragraph content slideshow'
+  - 'update paragraph content slideshow'
+  - 'view paragraph content slideshow'
+  - 'create paragraph content slide_nugglet'
+  - 'delete paragraph content slide_nugglet'
+  - 'update paragraph content slide_nugglet'
+  - 'view paragraph content slide_nugglet'
+
+anonymous:
+  - 'view paragraph content slideshow'
+  - 'view paragraph content slide_nugglet'
+
+authenticated:
+  - 'view paragraph content slideshow'
+  - 'view paragraph content slide_nugglet'

@@ -1,0 +1,23 @@
+uuid: a42d3170-c7f1-4335-a00d-2419168fea67
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.rabbit_hole__settings
+    - taxonomy.vocabulary.diseases
+  module:
+    - rabbit_hole
+_core:
+  default_config_hash: UVZkPuWuV-zcXZFgHOtvOU7i4tw2Amsc3FYlY-mIpeI
+id: taxonomy_term.diseases.rabbit_hole__settings
+field_name: rabbit_hole__settings
+entity_type: taxonomy_term
+bundle: diseases
+label: 'Rabbit Hole settings'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: rabbit_hole

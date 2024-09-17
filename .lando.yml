@@ -1,0 +1,59 @@
+name: ds-composites
+recipe: drupal10
+
+config:
+  php: '8.1'
+  via: nginx
+  webroot: web
+  drush: "*"
+  xdebug: false
+
+services:
+  appserver:
+    install_dependencies_as_root:
+      - apt-get update && apt-get install -y openjdk-11-jdk && apt-get install -y ant && apt-get clean
+
+    build_as_root:
+      - docker-php-ext-install pcntl
+      - apt-get install -y ca-certificates curl gnupg
+      - mkdir -p /etc/apt/keyrings
+      - curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+      - echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" | tee /etc/apt/sources.list.d/pgdg.list
+      - apt-get update && apt-get install -y nodejs
+
+  database:
+    type: mariadb:10.5.13
+    portforward: 17906
+
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+
+  node:
+    type: node:18
+    globals:
+      gulp-cli: latest
+
+  search:
+    type: solr:8
+    core: ds-composites_develop
+    portforward: 24829
+    config:
+      dir: config/solr-config
+
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
+  gulp:
+    service: node
+  ant:
+    service: appserver
+    cmd: 'ant'
+
+events:
+  post-start:
+    - appserver: cd $LANDO_MOUNT && composer install
+    - appserver: /bin/bash $LANDO_MOUNT/config/lando_cmd.sh

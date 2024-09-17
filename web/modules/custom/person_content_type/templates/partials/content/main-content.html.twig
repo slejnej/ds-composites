@@ -1,0 +1,81 @@
+{# only show div if there is at least 1 item being rendered #}
+{% set fields = content.field_photo|merge(content.field_body)|merge(content.field_main_nuggets) %}
+{% if fields['#items'] is not empty %}
+
+  <section id="content-main" class="col g-0 overflow-hidden">
+    <div{{ content_attributes.addClass('person node__content col d-flex flex-column') }}>{% apply spaceless %}
+
+        <div class="person-details d-flex flex-column">
+
+          {% block title %}
+            <div class="title-wrapper m-0 p-0">
+              <div class="title-inner">
+                <h1 class="page-title mb-0">
+                  {{ label }}
+
+                  {% block suffix %}
+                    {% if content.field_suffix.0 is not empty %}
+                      <div class="node-suffix d-inline-block">, {{ content.field_suffix }}</div>
+                    {% endif %}
+                  {% endblock %}
+                </h1>
+
+                {% block person_employment %}
+                  {% if any_fields_not_empty(content, ['field_department', 'field_person_organisation', 'field_role']) %}
+
+                    <div class="node-employment d-flex flex-column">
+
+                      {% block person_role %}
+                        {% if content.field_role is not empty %}
+                          <div class="node-role d-inline-block">{{ content.field_role  }}</div>
+                        {% endif %}
+                      {% endblock %}
+
+                      <div class="node-job-details d-flex flex-wrap">
+
+                        {% block person_department %}
+                          {% if content.field_department.0 is not empty %}
+                            <div class="d-flex">
+                              {{ content.field_department }}
+                              {% if content.field_person_organisation.0 is not empty  %}<span class="comma d-inline-block ms-0 me-2">,</span>{% endif %}
+                            </div>
+                          {% endif %}
+                        {% endblock %}
+
+                        {% block person_organisation %}
+                          {% if content.field_person_organisation.0 is not empty %}
+                            <div class="d-inline-block">{{ content.field_person_organisation  }}</div>
+                          {% endif %}
+                        {% endblock %}
+
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endblock %}
+
+              </div>
+            </div>
+          {% endblock %}
+
+        </div>
+
+        {% block body %}
+          {% if content.field_body['#items'] is not empty %}
+            <div class="body-wrapper">
+              {{ content.field_body }}
+            </div>
+          {% endif %}
+        {% endblock body %}
+
+        {% block main_content_nuggets %}
+          {% if content.field_main_nuggets['#items'] is not empty %}
+            <section id="main-content-nuggets">
+              {{ content.field_main_nuggets }}
+            </section>
+          {% endif %}
+        {% endblock %}
+
+      {% endapply %}</div>
+  </section>
+
+{% endif %}

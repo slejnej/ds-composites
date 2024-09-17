@@ -1,0 +1,25 @@
+uuid: 23ad8853-3e1c-437a-b730-52e4ee999ea5
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+  enforced:
+    module:
+      - cards_nugget
+_core:
+  default_config_hash: svHbud8TY3YzwtNaWJdQuqy5WYOaIXHH8aTt4ZSJIQI
+id: paragraph.field_card_nt_display_title
+field_name: field_card_nt_display_title
+entity_type: paragraph
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,7 @@
+{% extends "@remora_base_theme/field/field.html.twig" %}
+
+{% block field_content %}
+  {% for item in items %}
+    <div{{ item.attributes.addClass(classes, 'field__item media-oembed-video position-relative') }}>{{ item.content }}</div>
+  {% endfor %}
+{% endblock %}

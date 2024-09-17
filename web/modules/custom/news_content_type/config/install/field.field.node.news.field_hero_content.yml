@@ -1,0 +1,24 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_content
+    - node.type.news
+  module:
+    - entity_reference_revisions
+id: node.news.field_hero_content
+field_name: field_hero_content
+entity_type: node
+bundle: news
+label: 'Hero content'
+description: 'These nuggets will be displayed at the top of your page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_paragraph_types_hero_content
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference_revisions

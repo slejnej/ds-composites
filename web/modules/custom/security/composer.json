@@ -1,0 +1,42 @@
+{
+  "name": "mrm-remora/security",
+  "type": "drupal-custom-module",
+  "description": "Security - strengthen the security of your site",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Esli Stavenga",
+      "email": "esli@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "cweagans/composer-patches": "^1.7",
+    "drupal/permissionspolicy": "^1.1",
+    "drupal/seckit": "2.0.1"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "cweagans/composer-patches": true
+    }
+  },
+  "extra": {
+    "patches": {
+      "drupal/seckit": {
+        "Deleted module provided settings": "web/modules/custom/security/patches/seckit_settings.patch"
+      },
+      "drupal/permissionspolicy": {
+        "Deleted module provided settings": "web/modules/custom/security/patches/permissionspolicy_settings.patch"
+      }
+    },
+    "enable-patching": true
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ]
+}

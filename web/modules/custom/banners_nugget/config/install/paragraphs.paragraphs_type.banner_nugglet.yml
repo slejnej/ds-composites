@@ -1,0 +1,10 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies: {  }
+id: banner_nugglet
+label: Banner
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

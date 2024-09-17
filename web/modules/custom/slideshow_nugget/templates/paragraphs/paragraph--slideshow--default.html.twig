@@ -1,0 +1,59 @@
+{% block paragraph %}
+
+  {% set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ] %}
+
+  {% block paragraph_content %}
+    <div{{ attributes.addClass(classes) }}>
+      {% block content %}
+
+        {% block nugget_title %}
+          {% if content.field_display_title['#items'] is not empty %}
+            <div class="container">
+              <h3 class="paragraph-title">{{ content.field_display_title.0 }}</h3>
+            </div>
+          {% endif %}
+        {% endblock %}
+
+        {% block nugget_content %}
+
+          {% set carousel_id = 'carousel-' ~ paragraph.id.value %}
+          {% set markers = paragraph.field_markers.value ? 'true' : 'false' %}
+          {% set arrows = paragraph.field_arrows.value ? 'true' : 'false' %}
+          {% set loop = paragraph.field_loop.value ? 'true' : 'false' %}
+          {% set autoplay = paragraph.field_autoplay.value %}
+
+          <div class="slick-carousel slider position-relative" data-interval="false">
+            <div class="slick-slideshow" data-interval="false" data-slick='{
+              "slidesToShow": 1,
+              "slidesToScroll": 1,
+              "pauseOnHover": true,
+              "pauseOnFocus": true,
+              "pauseOnDotsHover": true,
+              "autoplay": {{ autoplay ? 'true, "autoplaySpeed": 5000' : 'false' }},
+              "infinite": {{ loop  }},
+              "arrows": {{ arrows }},
+              "dots": {{ markers }}
+             }'>
+
+              {{ content.field_slideshow_nt_slides }}
+
+            </div>
+
+            {% block carousel_controls %}
+              <!-- Controls -->
+              {% include '@slideshow_nugget/templates/partials/carousel-controls.html.twig' with {'show_arrows': arrows, 'show_dots': markers} %}
+            {% endblock %}
+          </div>
+
+        {% endblock %}
+
+      {% endblock %}
+    </div>
+  {% endblock %}
+
+{% endblock %}

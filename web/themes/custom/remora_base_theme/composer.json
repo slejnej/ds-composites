@@ -1,0 +1,24 @@
+{
+  "name": "mrm-remora/remora_base_theme",
+  "description": "REMORA 3 base theme as sub theme of Bootstrap 5",
+  "type": "drupal-theme",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Jernej Slejko",
+      "email": "slejnej@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=8.1",
+    "drupal/core": "^10",
+    "drupal/bootstrap5": "^4.0.2"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ]
+}

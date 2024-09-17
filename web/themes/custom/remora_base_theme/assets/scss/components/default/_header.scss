@@ -1,0 +1,50 @@
+header {
+  background-color: $navbar-default-bg;
+  padding: 8px 0;
+
+  // Logo
+  .navbar-brand img {
+    @extend .m-0;
+    height: 30px;
+    max-width: 100%;
+  }
+
+  // Set height of header buttons
+  $navbar-toggler-height-mobile: 30px !default;
+  $navbar-toggler-width-mobile: 30px !default;
+  $navbar-toggler-height: 55px !default;
+  $navbar-toggler-width: 55px !default;
+
+  .main-menu {
+    width: auto;
+    @media(min-width: 576px) {
+      width: 100%;
+    }
+
+    button.navbar-toggler {
+      @extend .p-0;
+      height: $navbar-toggler-height-mobile;
+      width: $navbar-toggler-width-mobile;
+
+      .navbar-toggler-icon {
+        height: calc($navbar-toggler-height-mobile - 10px);
+        width: calc($navbar-toggler-width-mobile - 10px);
+      }
+
+      @media(max-width: 575px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media(min-width: 576px) {
+        height: $navbar-toggler-height;
+        width: $navbar-toggler-width;
+        .navbar-toggler-icon {
+          height: calc($navbar-toggler-height - 10px);
+          width: calc($navbar-toggler-width - 10px);
+        }
+      }
+    }
+  }
+}

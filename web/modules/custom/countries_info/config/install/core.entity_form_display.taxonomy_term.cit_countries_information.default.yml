@@ -1,0 +1,88 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.cit_countries_information.field_cit_region
+    - field.field.taxonomy_term.cit_countries_information.field_citf_continent
+    - field.field.taxonomy_term.cit_countries_information.field_citf_iso2_code
+    - field.field.taxonomy_term.cit_countries_information.field_citf_iso3_code
+    - field.field.taxonomy_term.cit_countries_information.field_citf_iso_num_code
+    - field.field.taxonomy_term.cit_countries_information.field_citf_official_name
+    - taxonomy.vocabulary.cit_countries_information
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: taxonomy_term.cit_countries_information.default
+targetEntityType: taxonomy_term
+bundle: cit_countries_information
+mode: default
+content:
+  field_cit_region:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_citf_iso2_code:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_citf_iso3_code:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_citf_iso_num_code:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_citf_official_name:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  field_citf_continent: true
+  path: true
+  simple_sitemap_index_now: true
+  status: true

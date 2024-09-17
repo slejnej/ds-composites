@@ -1,0 +1,35 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.slide_nugglet.field_editor_title
+    - field.field.paragraph.slide_nugglet.field_slide_nt_add_a_link
+    - field.field.paragraph.slide_nugglet.field_slide_nt_image
+    - field.field.paragraph.slide_nugglet.field_slide_nt_link
+    - field.field.paragraph.slide_nugglet.field_slide_nt_summary
+    - field.field.paragraph.slide_nugglet.field_slide_nt_title
+    - paragraphs.paragraphs_type.slide_nugglet
+  enforced:
+    module:
+      - slideshow_nugget
+id: paragraph.slide_nugglet.preview
+targetEntityType: paragraph
+bundle: slide_nugglet
+mode: preview
+content:
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_slide_nt_add_a_link: true
+  field_slide_nt_image: true
+  field_slide_nt_link: true
+  field_slide_nt_summary: true
+  field_slide_nt_title: true

@@ -1,0 +1,13 @@
+uuid: e980cf90-5d50-4157-a289-9b953fb153c8
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: fefglfSLZIV7KBDzf1MRKlMB1OQ8MWSgA4f7Cs_EDIs
+id: node.content_specific_search_index
+label: 'Content specific search index'
+description: 'This display will be used on content specific search pages, such as the upcoming/past event searches, or the PRA + resource search.'
+targetEntityType: node
+cache: true

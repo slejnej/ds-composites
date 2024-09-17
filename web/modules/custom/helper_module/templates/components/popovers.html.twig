@@ -1,0 +1,48 @@
+<div class="container">
+  {{ include('@helper_module/includes/menu-back.html.twig') }}
+
+  <h1 class="mb-0" id="content">Popovers</h1>
+  <p></p>
+
+  <div class="row">
+    <h2 class="mt-4">Directions</h2>
+    <p><small>Available options: top, right, bottom, left</small></p>
+    <div class="snippet">
+      <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+        Popover on top
+      </button>
+      <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+        Popover on right
+      </button>
+      <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+        Popover on bottom
+      </button>
+      <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+        Popover on left
+      </button>
+    </div>
+
+    <h2 class="mt-4">Custom style</h2>
+    <p><small>Custom look on request</small></p>
+    <div class="snippet">
+      <button type="button" class="btn btn-secondary"
+              data-bs-toggle="popover" data-bs-placement="right"
+              data-bs-custom-class="custom-popover"
+              data-bs-title="Custom popover"
+              data-bs-content="This popover is themed via CSS variables.">
+        Custom popover
+      </button>
+    </div>
+
+    <h2 class="mt-4">Dismiss on next click</h2>
+    <p><small>Click anywhere to close. Default behaviour is click on trigger to dismiss.</small></p>
+    <div class="snippet">
+      <a tabindex="0" class="btn btn-lg btn-danger" role="button"
+         data-bs-toggle="popover"
+         data-bs-trigger="focus"
+         data-bs-title="Dismissible popover"
+         data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+    </div>
+  </div>
+
+</div>

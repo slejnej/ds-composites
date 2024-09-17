@@ -1,0 +1,73 @@
+<?php
+
+use Drupal\media\IFrameMarkup;
+use Drupal\media\OEmbed\Provider;
+
+/**
+ * Hook in media API is not working so we are doing it here
+ * Implements hook_oembed_resource_url_alter().
+ *
+ * @param array $parsed_url
+ * @param Provider $provider
+ * @return void
+ */
+function remora_gdpr_oembed_resource_url_alter(array &$parsed_url, Provider $provider): void
+{
+    // add Do Not Track flag to Vimeo oEmbed requests
+    if ($provider->getName() === 'Vimeo') {
+        $parsed_url['query']['dnt'] = true;
+    }
+}
+
+/**
+ * Preprocesses the media oEmbed iframe by replacing the domain with a privacy-enhanced domain.
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param array &$variables The variables to be preprocessed.
+ * @return void
+ */
+function remora_gdpr_preprocess_media_oembed_iframe(&$variables): void
+{
+    // get iframe tag
+    $iFrame = $variables['media']->__toString();
+
+    if (stripos($iFrame, 'youtube.com') !== false){
+        $newFrame = str_replace('youtube.com/', 'youtube-nocookie.com/', $iFrame);
+        $variables['media'] = IFrameMarkup::create($newFrame);
+    }
+}
+
+/**
+ * Alter the suggestions for the theme name for EU cookie compliance popup
+ * This function allows us to add custom suggestion for EU cookie compliance popup theme template.
+ * It will help to override the default markup easily by assigning a custom template to it.
+ * Implements hook_theme_suggestions_HOOK().
+ *
+ * @param array &$suggestions An array of suggested theme hook names.
+ * @param array $variables An array of variables to pass to the theme template.
+ * @return void
+ */
+function remora_gdpr_theme_suggestions_eu_cookie_compliance_popup_info_alter(array &$suggestions, array $variables): void
+{
+    $suggestions[] = 'eu_cookie_compliance_popup_info__custom';
+}
+
+
+/**
+ * Implements hook_theme() to provide custom theme suggestions.
+ *
+ * This function is used for adding new theme suggestions for the 'eu_cookie_compliance_popup_info' theme hook.
+ * The custom theme suggestion created is named 'eu_cookie_compliance_popup_info__custom'.
+ *
+ * @return array
+ *   A list of theme templates including our custom suggestion for the EU cookie compliance popup.
+ */
+function remora_gdpr_theme() {
+    return [
+        'eu_cookie_compliance_popup_info__custom' => [
+            'render element' => 'children',
+            'base hook' => 'eu_cookie_compliance_popup_info',
+            'template' => 'eu-cookie-compliance-popup-info--custom',
+        ],
+    ];
+}

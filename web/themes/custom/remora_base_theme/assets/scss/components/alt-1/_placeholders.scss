@@ -1,0 +1,11 @@
+.palette-alt-1 {
+  &.placeholder,
+  .placeholder {
+    background-color: $alt-1-placeholder-color;
+    border-radius: $alt-1-placeholder-border-radius;
+  }
+  &.placeholder-img rect,
+  .placeholder-img rect {
+    fill: $alt-1-placeholder-image;
+  }
+}

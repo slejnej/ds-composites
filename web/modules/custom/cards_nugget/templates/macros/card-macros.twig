@@ -1,0 +1,53 @@
+{# Plain text fields #}
+{% macro field_text(content, field_name) %}
+  {% set field = content.get(field_name).0.value %}
+
+  {% if content[field_name].0['#context'] is defined %}
+    {% set field = content[field_name].0['#context'].value %}
+  {% endif %}
+
+  {{ field }}
+
+{% endmacro %}
+
+
+{# Date fields #}
+{% macro field_date(content, field_name) %}
+  {% set field = content.get(field_name).0.value|date('U')|format_date('remora_ct_date') %}
+
+  {% if content[field_name]['#items'] is defined %}
+    {% set field = content[field_name] %}
+  {% endif %}
+
+  {{ field }}
+
+{% endmacro %}
+
+
+{# Category field #}
+{% macro field_type(content, field_name, content_type) %}
+  {% set field = content.get(field_name).entity.name.value %}
+
+  {% if content[field_name].0['#entity'] is defined %}
+    {% set field = content[field_name].0['#entity'].name.value %}
+  {% endif %}
+
+  {{ field }}
+
+{% endmacro %}
+
+
+{# Multi-value taxonomy field #}
+{% macro field_multi_taxonomy(content, field_name) %}
+
+  {% set fields = content.get(field_name) %}
+
+  {% if content[field_name]['#items'] is defined %}
+    {% set fields = content[field_name]['#items'] %}
+  {% endif %}
+
+  {% for field in fields %}
+    <span class="field__item">{{ field.entity.name.value }}</span>
+  {% endfor %}
+
+{% endmacro %}

@@ -1,0 +1,28 @@
+// LANDING PAGES
+.node-landing-page #page-content:not(:has(#content-sidebar-fields > *), :has(#content-main-fields > *)) {
+  display: none;
+}
+
+// Temporary wysiwyg media styles
+
+article.media {
+  @extend .mb-4;
+  picture {
+    @extend .d-flex;
+  }
+  &.align-left, &.align-right {
+    @extend .col-md-6;
+  }
+
+  &.align-center {
+    @extend .col-sm-10, .mb-3;
+  }
+
+  &.align-right {
+    @extend .ms-md-5;
+  }
+
+  &.align-left {
+    @extend .me-md-5;
+  }
+}

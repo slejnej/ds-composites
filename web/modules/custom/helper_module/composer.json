@@ -1,0 +1,14 @@
+{
+  "name": "mrm-remora/helper_module",
+  "description": "The Remora helper module with BS5 components",
+  "type": "drupal-custom-module",
+  "require": {
+    "drupal/core": "^9.1 | ^10"
+  },
+  "authors": [
+    {
+      "name": "Jernej Slejko",
+      "email": "slejnej@gmail.com"
+    }
+  ]
+}

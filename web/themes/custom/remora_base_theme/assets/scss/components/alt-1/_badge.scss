@@ -1,0 +1,52 @@
+// all is important as the base class overriden has already in BS important
+
+.palette-alt-1 {
+  &.badge,
+  .badge {
+    --bs-badge-border-radius: #{$alt-1-badge-border-radius};
+
+    &.rounded-pill {
+      --bs-badge-border-radius: #{$alt-1-badge-border-radius-pill};
+    }
+
+    &.text-bg-primary {
+      color: $alt-1-badge-primary-text!important;
+      background-color: $alt-1-badge-primary!important;
+    }
+
+    &.text-bg-secondary {
+      color: $alt-1-badge-secondary-text!important;
+      background-color: $alt-1-badge-secondary!important;
+    }
+
+    &.text-bg-success {
+      color: $alt-1-badge-success-text!important;
+      background-color: $alt-1-badge-success!important;
+    }
+
+    &.text-bg-danger {
+      color: $alt-1-badge-danger-text!important;
+      background-color: $alt-1-badge-danger!important;
+    }
+
+    &.text-bg-warning {
+      color: $alt-1-badge-warning-text!important;
+      background-color: $alt-1-badge-warning!important;
+    }
+
+    &.text-bg-info {
+      color: $alt-1-badge-info-text!important;
+      background-color: $alt-1-badge-info!important;
+    }
+
+    &.text-bg-light {
+      color: $alt-1-badge-light-text!important;
+      background-color: $alt-1-badge-light!important;
+    }
+
+    &.text-bg-dark {
+      color: $alt-1-badge-dark-text!important;
+      background-color: $alt-1-badge-dark!important;
+    }
+  }
+}

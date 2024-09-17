@@ -1,0 +1,12 @@
+{% extends '@remora_base_theme/content/node.html.twig'%}
+
+{% block page_title %}
+  {% if not is_landing_page %}
+    <section id="content-title" class="title-wrapper p-0">
+      {% block title %}
+        {% remora_include 'partials/content/title.html.twig' %}
+      {% endblock %}
+    </section>
+  {% endif %}
+
+{% endblock %}

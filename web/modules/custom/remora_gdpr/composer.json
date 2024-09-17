@@ -1,0 +1,45 @@
+{
+  "name": "mrm-remora/remora_gdpr",
+  "type": "drupal-custom-module",
+  "description": "Remora GDPR - contains GDPR functionalities",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Ivan Solic",
+      "email": "ivan@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "cweagans/composer-patches": "^1.7",
+    "drupal/eu_cookie_compliance": "^1.24",
+    "drupal/eu_cookie_compliance_gtm": "^2.1"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "cweagans/composer-patches": true
+    }
+  },
+  "extra": {
+    "patches": {
+      "drupal/eu_cookie_compliance": {
+        "Override eu_cookie_compliance settings with our own": "web/modules/contrib/remora_gdpr/patches/eu_cookie_compliance_settings.patch"
+      },
+      "drupal/eu_cookie_compliance_gtm": {
+        "GTM consent mode": "https://raw.githubusercontent.com/MantaRayMedia/gists/master/Patches/gtm_consent_mode.patch"
+      },
+      "drupal/google_tag": {
+        "Override google_tag settings with our own": "web/modules/contrib/remora_gdpr/patches/google_tag_settings.patch"
+      }
+    },
+    "enable-patching": true
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ]
+}

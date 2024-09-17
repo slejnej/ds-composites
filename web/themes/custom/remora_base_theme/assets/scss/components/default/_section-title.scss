@@ -1,0 +1,19 @@
+section:not(#sidebar-nuggets) {
+  .section-title-wrapper {
+    margin: $layout-section-title-margin-top auto $layout-section-title-margin-bottom;
+    text-align: $layout-section-title-align;
+    color: $layout-section-title-color;
+    border-style: solid;
+    border-color: $layout-section-title-border-color;
+    border-right-width: $layout-section-title-border-right;
+    border-left-width: $layout-section-title-border-left;
+    border-bottom-width: $layout-section-title-border-bottom;
+    border-top-width: $layout-section-title-border-top;
+    border-radius: $layout-section-title-border-radius;
+    padding: $layout-section-title-padding-y $layout-section-title-padding-x;
+  }
+
+  h2.section-title {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,14 @@
+<?php
+
+use Drupal\paragraphs\ParagraphInterface;
+
+/**
+* Replaces default value of palette to palette-alt-1 in the left-sidebar
+*
+*/
+function remora_sections_paragraph_presave(ParagraphInterface $entity): void
+{
+  if ($entity->hasField('parent_field_name') && $entity->hasField('field_palette') && $entity->get('parent_field_name')->value === 'field_sidebar_nuggets') {
+    $entity->set('field_palette','palette-alt-1');
+  }
+}

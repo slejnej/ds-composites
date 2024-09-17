@@ -1,0 +1,59 @@
+name: Remora Core
+type: module
+description: Contains functionalities shared between all Remora installations
+core_version_requirement: ^9 || ^10
+package: Remora
+configure: remora_core.settings
+dependencies:
+  - drupal:administerusersbyrole
+  - drupal:admin_toolbar
+  - drupal:admin_toolbar_tools
+  - drupal:admin_toolbar_links_access_filter
+  - drupal:administerusersbyrole
+  - drupal:captcha
+  - drupal:ckeditor5
+  - drupal:config_ignore
+  - drupal:config_sync
+  - drupal:datetime
+  - drupal:dblog
+  - drupal:easy_breadcrumb
+  - drupal:field
+  - drupal:field_group
+  - drupal:field_layout
+  - drupal:field_ui
+  - drupal:file
+  - drupal:filter
+  - drupal:gin_toolbar
+  - drupal:honeypot
+  - drupal:image
+  - drupal:image_widget_crop
+  - drupal:language
+  - drupal:layout_builder
+  - drupal:layout_paragraphs
+  - drupal:linkchecker
+  - drupal:linkit
+  - drupal:locale
+  - drupal:media
+  - drupal:media_library
+  - drupal:menu_admin_per_menu
+  - drupal:menu_ui
+  - drupal:metatag
+  - drupal:node_title_help_text
+  - drupal:options
+  - drupal:paragraphs
+  - drupal:paragraphs_type_permissions
+  - drupal:path
+  - drupal:pathauto
+  - drupal:recaptcha
+  - drupal:recaptcha_v3
+  - drupal:redirect
+  - drupal:responsive_image
+  - drupal:security
+  - drupal:simple_sitemap
+  - drupal:taxonomy
+  - drupal:text
+  - drupal:twig_tweak
+  - drupal:views
+  - drupal:views_bulk_edit
+  - drupal:views_bulk_operations
+  - drupal:raven

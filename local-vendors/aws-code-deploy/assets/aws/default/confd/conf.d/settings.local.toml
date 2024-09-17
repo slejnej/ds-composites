@@ -1,0 +1,9 @@
+[template]
+src = "ds-composites/settings.local.php.tmpl"
+dest = "/home/ubuntu/apps/ds-composites/current/web/sites/default/settings.local.php"
+keys = [
+    "/ds-composites",
+]
+uid = 1000
+gid = 1000
+mode = "0444"

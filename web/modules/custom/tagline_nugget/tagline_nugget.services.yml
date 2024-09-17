@@ -1,0 +1,5 @@
+services:
+  tagline_nugget.event_subscriber.referenceable_entity:
+    class: \Drupal\tagline_nugget\EventSubscriber\ReferenceableEntitySubscriber
+    tags:
+      - { name: 'event_subscriber' }

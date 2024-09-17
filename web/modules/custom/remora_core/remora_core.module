@@ -1,0 +1,364 @@
+<?php
+
+use Drupal\Core\Field\FieldFilteredMarkup;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteProvider;
+use Drupal\media\MediaInterface;
+use Drupal\node\Entity\Node;
+use Drupal\node\Entity\NodeType;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\paragraphs\Entity\ParagraphsType;
+use Drupal\remora_core\Cache\RemoraConfigCache;
+use Drupal\remora_core\Form\ObfuscateVersionsForm;
+use Drupal\remora_core\Manager\ConfigIgnoreManager;
+use Drupal\remora_core\Manager\ModulePermissionsManager;
+use Drupal\remora_core\Util\StringUtil;
+use Drupal\user\Entity\User;
+
+/**
+ * Adds metatags to any node being saved that has SEO fields
+ *
+ * @param Node $node
+ * @return void
+ */
+function remora_core_node_presave(Node $node): void
+{
+  if(!$node->hasField('field_seo_title') ||
+    !$node->hasField('field_seo_description') ||
+    !$node->hasField('field_meta_tags')
+  ) {
+    return;
+  }
+
+  // we need to resolve tokens, metatags module doesnt do it for us
+  $token = Drupal::token();
+  $seoTitle = $token->replace($node->get('field_seo_title')->value, ['node' => $node]);
+  $seoDesc = $token->replace($node->get('field_seo_description')->value, ['node' => $node]);
+
+  $node->set('field_meta_tags', serialize([
+    'title' => $seoTitle,
+    'description' => $seoDesc,
+    "canonical_url" => "[node:url]",
+    'image_src' => '[node:field_image:entity:field_media_image:entity:url]',
+  ]));
+}
+
+/**
+ * Rebuilds the remora routing file
+ *
+ * @return void
+ */
+function remora_core_rebuild(): void
+{
+  /** @var RouteProvider $routingProvider */
+  $routingProvider = Drupal::service('router.route_provider');
+  $routes = $routingProvider->getAllRoutes();
+  $json = [];
+
+  foreach($routes as $name => $route) {
+    $remoraCoreOptions = $route->getOption('_remora_core');
+
+    if($remoraCoreOptions !== null && ($remoraCoreOptions['expose'] ?? false)) {
+
+      $json[$name] = [
+        'path' => $route->getPath(),
+        'default_parameters' => array_filter($route->getDefaults(), fn($key) => !str_starts_with($key, '_'), ARRAY_FILTER_USE_KEY),
+      ];
+    }
+  }
+
+  // this file is picked up by the routing.js file
+  $fs = Drupal::service('file_system');
+  file_put_contents(
+    $fs->realpath('public://remora_core.routes.json.js'),
+    sprintf("export default %s;", json_encode($json))
+  );
+}
+
+/**
+ * Pick up templates from the Tonic theme for admin pages + custom templates for twig functions/filters
+ *
+ * @return array[]
+ */
+function remora_core_theme(): array
+{
+  $tonicTheme = Drupal::service('remora_core.service.module_template')->generateThemesFromTemplates('tonic');
+
+  return $tonicTheme + [
+      'remora_image' => [
+        'variables' => [
+          'sources' => [],
+          'default_image' => null,
+          'media' => null
+        ]
+      ]
+    ];
+}
+
+/**
+ * Implements hook_modules_installed
+ * Loops over all the modules and handles the config/remora/permissions.yml file if it exists
+ * Loops over all the modules and adds config/remora/config_ignore.yml file if it exists
+ *
+ * @param array $modules An array of module names being installed
+ * @param bool $isSyncing Whether the module is being installed through config:import or not
+ * @return void
+ * @see ModulePermissionsManager::handleModulePermissions()
+ */
+function remora_core_modules_installed(array $modules, bool $isSyncing): void
+{
+  // if the module is being installed from a config sync, do nothing. aka only run on pm:e
+  if($isSyncing) {
+    return;
+  }
+
+  /** @var ModulePermissionsManager $permissionsManager */
+  $permissionsManager = Drupal::service('remora_core.manager.module_permissions');
+  /** @var ConfigIgnoreManager $configIgnoreManager */
+  $configIgnoreManager = Drupal::service('remora_core.manager.config_ignore');
+
+  foreach($modules as $module) {
+    try {
+      $permissionsManager->handleModulePermissions($module);
+      $configIgnoreManager->addToConfigIgnore($module);
+      // catch any and all exceptions to prevent the installation from aborting on malformed modules
+    } catch(Exception $e) {
+      Drupal::service('remora_core.logger')->error($e->getMessage());
+    }
+  }
+}
+
+/**
+ *  Adding help text to node title
+ *  Close nugget title properties accordion if editing paragraph
+ *  Don't show media revisions to editors
+ */
+function remora_core_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void
+{
+  if(str_contains($form_id, 'node')) {
+    $form['title']['widget'][0]['value']['#description'] = FieldFilteredMarkup::create(
+      sprintf(
+        'This title will be displayed at the top of the page unless landing page is enabled just below. <br> %s',
+        htmlspecialchars('Allowed HTML tags: <em> <i> <sup> <sub>'))
+    );
+  }
+
+  // Add paragraph type class to all paragraph forms
+  if(isset($form['#paragraph'])) {
+    remora_core_add_paragraph_type_class($form);
+  }
+
+  $current_route = Drupal::routeMatch()->getRouteName();
+  if($current_route === 'layout_paragraphs.builder.edit_item' && isset($form['#fieldgroups']['group_nugget_title_properties'])) {
+    $form['#fieldgroups']['group_nugget_title_properties']->format_settings['open'] = false;
+  }
+
+  $hasRole = User::load(Drupal::currentUser()->id())->hasRole('administrator');
+  if(str_contains($form_id, 'media') && !$hasRole) {
+    $form['revision_information']['#access'] = false;
+  }
+
+  if(str_contains($form_id, 'edit_form')) {
+    $form['#process'][] = 'remora_core_main_content_fieldgroup_process';
+  }
+
+  // Run after_build to override data-drupal-selector for all paragraphs only
+  if($form_id === 'layout_paragraphs_component_form') {
+    $form['#after_build'][] = 'remora_core_override_after_build';
+  }
+
+}
+
+/**
+ * Adds the paragraph's type to the form's classes
+ *
+ * @param array $form Reference to the form to be updated
+ * @return void
+ */
+function remora_core_add_paragraph_type_class(array &$form): void
+{
+  $paragraph = $form['#paragraph'] ?? null;
+  if(!$paragraph instanceof Paragraph) {
+    return;
+  }
+
+  $form['#attributes']['class'][] = sprintf('paragraph-type-%s', StringUtil::slugify($paragraph->getParagraphType()->id()));
+}
+
+/**
+ * Override after_build from layout_paragraphs modules so we can add a suffix to the data-drupal-selector
+ *
+ * @param array $form
+ * @param FormStateInterface $form_state
+ * @return array
+ */
+function remora_core_override_after_build(array $form, FormStateInterface &$form_state): array
+{
+  $paragraph = $form['#paragraph'] ?? null;
+  // Add paragraph type suffix to all paragraph form data-drupal-selectors
+  if($paragraph instanceof Paragraph) {
+    remora_core_add_paragraph_type_class($form);
+
+    if(isset($form['#attributes']['data-drupal-selector'])) {
+      $form['#attributes']['data-drupal-selector'] .= sprintf('-%s', StringUtil::slugify($paragraph->getParagraphType()->id()));
+    }
+  }
+
+  return $form;
+}
+
+/**
+ * Custom process function to close all expandable sections in main content tab.
+ */
+function remora_core_main_content_fieldgroup_process(array $element): array
+{
+  $fieldgroups = ['group_overview', 'group_initial_content', 'group_tagging', 'group_nuggets'];
+
+  foreach($fieldgroups as $fieldgroup) {
+    if(isset($element['#fieldgroups'][$fieldgroup])) {
+      $element['#fieldgroups'][$fieldgroup]->format_settings['open'] = false;
+    }
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_field_group_form_process().
+ * @param array $element
+ * @param $group
+ * @param $complete_form
+ */
+function remora_core_field_group_form_process(array &$element, &$group, &$complete_form): void
+{
+  /**
+   * Provides a generic way for assigning Form API #states to field group elements
+   *
+   * @usage - In a from_alter hook the Group object can be modified to include a form_api_states property,
+   *          which is picked up here and applied to the field group element
+   * @code
+   *  $form['#fieldgroups']['group_my_group']->form_api_states = [
+   *     'visible' => [
+   *        ':input[name^="my_field_name"]' => ['checked' => TRUE],
+   *      ]
+   *    ];
+   * @endcode
+   */
+  if(isset($group->form_api_states) && is_array($group->form_api_states) && !isset($element['#states'])) {
+    $element['#states'] = $group->form_api_states;
+  }
+}
+
+/**
+ * Add our custom styles library for Gin theme
+ *
+ * @param array $attachments
+ * @return void
+ */
+function remora_core_page_attachments(array &$attachments): void
+{
+  if(Drupal::service('router.admin_context')->isAdminRoute()) {
+    $attachments['#attached']['library'][] = 'tonic/global-styling';
+  }
+}
+
+/**
+ * Returns palette options defined in remora_core.settings
+ * used in field.storage.field_palettes.yml
+ *
+ * @return array
+ */
+function remora_core_get_palettes(): array
+{
+  $config = Drupal::config('remora_core.settings');
+  $listFieldValue = $config->get('palettes');
+
+  $processedValues = [];
+
+  // Split the text field value into lines or pairs separated by a delimiter.
+  $lines = explode("\n", $listFieldValue);
+  foreach($lines as $line) {
+    $pair = explode('|', $line);
+    if(count($pair) === 2) {
+      $processedValues[$pair[0]] = $pair[1];
+    }
+  }
+
+  return $processedValues;
+}
+
+/**
+ * Preprocess file link template to have the name from the media entity.
+ * Add 'display_name' variable to be used in file-link template
+ *
+ * @param array $variables
+ * @return void
+ */
+function remora_core_preprocess_file_link(array &$variables): void
+{
+  // Check if there is a file.
+  if(isset($variables['file'])) {
+    $file = $variables['file'];
+
+    // Load the media entity that references this file.
+    $media = Drupal::entityTypeManager()->getStorage('media')->loadByProperties(['field_media_file' => $file->id()]);
+
+    if($media) {
+      $media = reset($media);
+      // Check if the name field is available and has a value else use file name.
+      if(!$media->get('name')->isEmpty()) {
+        $variables['display_name'] = $media->get('name')->value;
+      } else {
+        $variables['display_name'] = $file->getFilename();
+      }
+    }
+    $variables['display_name'] ??= '';
+  }
+}
+
+/**
+ * Add human readable name of paragraph to render on templates
+ * @param array $variables
+ * @return void
+ */
+function remora_core_preprocess_paragraph(array &$variables): void
+{
+  $paragraph = $variables['paragraph'];
+  $paragraph_type = ParagraphsType::load($paragraph->bundle());
+  $variables['human_readable_name'] = $paragraph_type->label();
+}
+
+/**
+ * Add human readable name of CT to render on templates
+ * Implements hook_preprocess_node() for node templates.
+ */
+function remora_core_preprocess_node(array &$variables): void
+{
+  if(isset($variables['node'])) {
+    $node = $variables['node'];
+    $contentType = $node->bundle();
+    $contentTypeEntity = NodeType::load($contentType);
+    $humanName = $contentTypeEntity->label();
+    $variables['content_type'] = $humanName;
+  }
+}
+
+/**
+ * Change the saved name of the file to be able to handle dots in the name
+ * Implements hook_media_presave().
+ */
+function remora_core_media_presave(MediaInterface $media): void
+{
+    if ($media->bundle() == 'document') {
+        $file = $media->get('field_media_file')->entity;
+        if ($file) {
+            $file_name = $file->getFilename();
+            $parts = pathinfo($file_name);
+            $filename = preg_replace('/[^A-Za-z0-9]/', '_', $parts['filename']);
+            $extension = isset($parts['extension']) ? '.'. $parts['extension'] : '';
+            $sanitized_file_name = $filename . $extension;
+            $file->setFilename($sanitized_file_name);
+            $file->save();
+        }
+    }
+}

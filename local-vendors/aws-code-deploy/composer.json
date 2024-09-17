@@ -1,0 +1,21 @@
+{
+    "name": "mrm-remora/aws-code-deploy",
+    "description": "AWS CodeDeploy requirements for MRM infrastructure",
+    "type": "mrm-template",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "extra": {
+        "installer-logging": true,
+        "move-paths": [
+            {"assets/aws/default/nginx.conf": "/aws/default/nginx.conf"},
+            {"assets/aws/default/custom.conf": "/aws/default/custom.conf"},
+            {"assets/web": "/web"},
+            {"assets/root":  "/"}
+        ],
+        "replace-variables": [
+            {"assets": {"app_name": "project_name"}},
+            {"assets": {"APP_NAME": "project_name"}},
+            {"assets": {"theme_name": "theme_name"}}
+        ]
+    }
+}

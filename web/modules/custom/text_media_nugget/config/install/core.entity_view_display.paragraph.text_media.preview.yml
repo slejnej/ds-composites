@@ -1,0 +1,39 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.text_media.field_display_title
+    - field.field.paragraph.text_media.field_editor_title
+    - field.field.paragraph.text_media.field_text_media_nt_media
+    - field.field.paragraph.text_media.field_text_media_nt_presentation
+    - field.field.paragraph.text_media.field_text_media_nt_text
+    - paragraphs.paragraphs_type.text_media
+  module:
+    - layout_builder
+  enforced:
+    module:
+      - text_media_nugget
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.text_media.preview
+targetEntityType: paragraph
+bundle: text_media
+mode: preview
+content:
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_display_title: true
+  field_text_media_nt_media: true
+  field_text_media_nt_presentation: true
+  field_text_media_nt_text: true

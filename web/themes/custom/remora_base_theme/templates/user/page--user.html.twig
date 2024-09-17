@@ -1,0 +1,32 @@
+<div id="page-wrapper" class="min-vh-100">
+  {% block login_page %}
+    <main class="d-flex flex-column min-vh-100">
+      <a id="main-content" tabindex="-1"></a>
+
+      {% block login_logo %}
+        <section class="user-logo col-12 d-flex justify-content-center align-items-center p-3 p-lg-4">
+          {% remora_include 'partials/layout/header-logo.html.twig' %}
+        </section>
+      {% endblock%}
+
+      {% block login_form %}
+        <section class="user-form palette-alt-1 d-flex flex-grow-1 pt-5">
+          <div class="user-form-wrapper col-10 col-sm-6 col-lg-3 p-0 mx-auto mb-auto">
+            <h2 class="text-center">Log in to your account</h2>
+            {{ page.content }}
+          </div>
+        </section>
+      {% endblock%}
+
+      {% block footer_secondary %}
+        <div class="footer-secondary">
+          <div class="d-flex container-xl justify-content-center align-items-center">
+          </div>
+
+        </div>
+      {% endblock %}
+
+    </main>
+
+  {% endblock%}
+</div>

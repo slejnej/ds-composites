@@ -1,0 +1,5 @@
+uuid: null
+langcode: en-gb
+mode: simple
+ignored_config_entities:
+  - system.site

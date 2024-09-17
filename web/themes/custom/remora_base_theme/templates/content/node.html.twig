@@ -1,0 +1,67 @@
+{{ attach_library('bootstrap5/node') }}
+
+{% set is_landing_page = content.field_landing.0['#markup'] == 'On' %}
+{%
+  set classes = [
+  'node',
+  'g-0',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  is_landing_page ? 'node-landing-page'
+]
+%}
+{% block node %}
+  <article{{ attributes.addClass(classes) }}>
+
+    {% block hero %}
+      {% remora_include 'partials/content/hero.html.twig' %}
+    {% endblock %}
+
+    <div id="page-content">
+
+      {% block page_title %}
+        {% if not is_landing_page %}
+          <section id="content-title" class="title-wrapper container-fluid g-0">
+            <div class="container-xxl">
+
+              {% block title %}
+                {% remora_include 'partials/content/title.html.twig' %}
+              {% endblock %}
+
+            </div>
+          </section>
+        {% endif %}
+
+      {% endblock %}
+
+      {% block main_content_wrapper %}
+        <div class="main-content-wrapper container-xxl">
+          <div class="row g-0">
+
+            {% block sidebar_content %}
+              {% remora_include 'partials/content/sidebar-content.html.twig' %}
+            {% endblock %}
+
+            {% block main_content %}
+              {% remora_include 'partials/content/main-content.html.twig' %}
+            {% endblock %}
+
+            {% block sidebar_nuggets %}
+              {% remora_include 'partials/content/sidebar-nuggets.html.twig' %}
+            {% endblock %}
+
+          </div>
+        </div>
+      {% endblock %}
+
+    </div>
+
+    {% block postscript %}
+      {% remora_include 'partials/content/postscript.html.twig' %}
+    {% endblock %}
+
+  </article>
+{% endblock %}

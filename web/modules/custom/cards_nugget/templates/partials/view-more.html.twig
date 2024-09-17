@@ -1,0 +1,27 @@
+{% block view_more_button_wrapper %}
+<div class="view-more-wrapper d-flex justify-content-end mt-3">
+
+  {% block view_more_button %}
+
+      {% set viewMore = paragraph.field_view_more_link.0 %}
+      {% set button_title = viewMore.title %}
+
+      <a href="{{ viewMore.getUrl() }}" class="view-more btn d-flex align-items-center m-0 text-uppercase">
+
+        {% block button_title %}
+          <span class="button-title">{{ button_title }}</span>
+        {% endblock %}
+
+        {% block button_icon %}
+          <span class="button-icon d-flex ms-2">
+            <svg class="bi" width="16" height="16">
+              <use xlink:href="{{ get_bs_icon_path('arrow-right-circle') }}"/>
+            </svg>
+          </span>
+        {% endblock %}
+
+      </a>
+    {% endblock %}
+
+  </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+dependencies:
+  module:
+    - taxonomy
+
+editor:
+  - 'access taxonomy overview'
+  - 'create terms in categories'
+  - 'create terms in diseases'
+  - 'create terms in tags'
+  - 'create terms in topics'
+  - 'delete terms in categories'
+  - 'delete terms in diseases'
+  - 'delete terms in tags'
+  - 'delete terms in topics'
+  - 'edit terms in categories'
+  - 'edit terms in diseases'
+  - 'edit terms in tags'
+  - 'edit terms in topics'
+  - 'rabbit hole bypass taxonomy_term'

@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\tagging\Service\InstallTaggingFieldsService;
+
+/**
+ * Adds the tagging fields to the person content type.
+ * Only runs when the module is installed manually, not when syncing.
+ *
+ * @param bool $isSyncing
+ * @return void
+ */
+function person_content_type_install(bool $isSyncing): void
+{
+  if($isSyncing || !Drupal::hasService('tagging.service.install_fields')) {
+    return;
+  }
+
+  /** @var InstallTaggingFieldsService $fieldService */
+  $fieldService = Drupal::service('tagging.service.install_fields');
+  // Attach the fields to CT.
+  $fieldService->installFields('person');
+  // add fields to the search index
+  $fieldService->addSearchFields();
+}

@@ -1,0 +1,13 @@
+uuid: 08eb4800-848e-4dbb-97dd-913d56daaeb7
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: F0ZEBtP2SWa8fTFKETcDynBKLoovakCMLeEHtTWnh9U
+id: media.landscape_16_9
+label: 'Landscape: 16x9'
+description: ''
+targetEntityType: media
+cache: true

@@ -1,0 +1,8 @@
+name: Remora GDPR
+type: module
+description: Contains functionalities of eu_cookie compliance and GTM
+core_version_requirement: ^10
+package: Remora
+dependencies:
+  - drupal:eu_cookie_compliance
+  - drupal:eu_cookie_compliance_gtm

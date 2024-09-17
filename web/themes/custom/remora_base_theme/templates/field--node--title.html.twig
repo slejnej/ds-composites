@@ -1,0 +1,7 @@
+<span{{ attributes }}>
+  {%- for item in items -%}
+    {% block item %}
+     {{ item.content['#context'].value | check_markup('title') }}
+    {% endblock %}
+  {%- endfor -%}
+</span>

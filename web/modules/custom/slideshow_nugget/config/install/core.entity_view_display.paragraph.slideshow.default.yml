@@ -1,0 +1,82 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow.field_arrows
+    - field.field.paragraph.slideshow.field_autoplay
+    - field.field.paragraph.slideshow.field_display_title
+    - field.field.paragraph.slideshow.field_editor_title
+    - field.field.paragraph.slideshow.field_loop
+    - field.field.paragraph.slideshow.field_markers
+    - field.field.paragraph.slideshow.field_slideshow_nt_slides
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - entity_reference_revisions
+    - text
+  enforced:
+    module:
+      - slideshow_nugget
+id: paragraph.slideshow.default
+targetEntityType: paragraph
+bundle: slideshow
+mode: default
+content:
+  field_arrows:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_autoplay:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_display_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_loop:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_markers:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_slideshow_nt_slides:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_editor_title: true

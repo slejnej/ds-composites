@@ -1,0 +1,24 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+    - text_media_nugget
+  enforced:
+    module:
+      - text_media_nugget
+id: paragraph.field_text_media_nt_media
+field_name: field_text_media_nt_media
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

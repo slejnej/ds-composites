@@ -1,0 +1,34 @@
+uuid: a00a698c-53d4-4713-a9c0-fad76a127e2e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.section.field_display_title
+    - field.field.paragraph.section.field_editor_title
+    - field.field.paragraph.section.field_palette
+    - paragraphs.paragraphs_type.section
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: 0K7lyQsVP_BQLzThj-rllob1qDU5KrpVbhuKqwW0sq8
+id: paragraph.section.preview
+targetEntityType: paragraph
+bundle: section
+mode: preview
+content:
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_display_title: true
+  field_palette: true

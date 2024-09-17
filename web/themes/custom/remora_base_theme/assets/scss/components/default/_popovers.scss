@@ -1,0 +1,14 @@
+.popover.bs-popover-auto {
+  --bs-popover-max-width: #{$popover-max-width};
+  --bs-popover-bg: #{$popover-bg};
+  --bs-popover-border-color: #{$popover-border-color};
+  --bs-popover-border-color: #{$popover-border-color};
+  --bs-popover-border-radius: #{$popover-border-radius};
+  --bs-popover-header-padding-x: #{$popover-header-padding-x};
+  --bs-popover-header-padding-y: #{$popover-header-padding-y};
+  --bs-popover-header-color: #{$popover-header-color};
+  --bs-popover-header-bg: #{$popover-header-bg};
+  --bs-popover-body-padding-x: #{$popover-body-padding-x};
+  --bs-popover-body-padding-y: #{$popover-body-padding-y};
+  --bs-popover-body-color: #{$popover-body-color};
+}

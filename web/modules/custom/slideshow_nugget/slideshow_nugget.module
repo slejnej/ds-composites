@@ -1,0 +1,51 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ *  Form conditionals
+ */
+function slideshow_nugget_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void
+{
+
+    if ($form_id === 'layout_paragraphs_component_form' && isset($form['field_slide_nt_link'])) {
+        // only show link field if add a link checkbox is checked
+        $form['field_slide_nt_link']['#states'] = [
+            'visible' => [
+                ':input[name="field_slide_nt_add_a_link[value]"]' => ['checked' => true],
+            ]
+        ];
+    }
+
+}
+
+/**
+ * Add our custom styles for slideshows edit
+ *
+ * @param array $attachments
+ * @return void
+ */
+function slideshow_nugget_page_attachments(array &$attachments): void
+{
+    if (!isset($attachments['#attached']['library'])) {
+        $attachments['#attached']['library'] = [];
+    }
+    if (Drupal::service('router.admin_context')->isAdminRoute()) {
+        $attachments['#attached']['library'][] = 'slideshow_nugget/admin_styles';
+    }
+    if (!in_array('slideshow_nugget/slideshow', $attachments['#attached']['library'])) {
+        $attachments['#attached']['library'][] = 'slideshow_nugget/slideshow';
+    }
+    if (!in_array('remora_base_theme/slick-carousel', $attachments['#attached']['library'])) {
+        $attachments['#attached']['library'][] = 'remora_base_theme/slick-carousel';
+    }
+}
+
+
+/**
+ *  Automatically registers all the templates in the templates/ directory
+ *  @return array The theme containing the theme implementations (templates)
+ */
+function slideshow_nugget_theme() {
+    return Drupal::service('remora_core.service.module_template')->generateThemesFromTemplates('slideshow_nugget');
+}

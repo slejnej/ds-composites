@@ -1,0 +1,27 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_nt_title
+    - filter.format.title
+    - paragraphs.paragraphs_type.slide_nugglet
+  module:
+    - text
+  enforced:
+    module:
+      - slideshow_nugget
+id: paragraph.slide_nugglet.field_slide_nt_title
+field_name: field_slide_nt_title
+entity_type: paragraph
+bundle: slide_nugglet
+label: Title
+description: 'This title is displayed on the Slide.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - title
+field_type: text

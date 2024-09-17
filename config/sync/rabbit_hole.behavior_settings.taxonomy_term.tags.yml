@@ -1,0 +1,18 @@
+uuid: 91a0df9a-e848-49ee-9636-9228eef5e4a7
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tags
+_core:
+  default_config_hash: gtS_5Amf-SLfFUcEQeoxa5H2CzNYfxSH3nN_yG2JAHI
+id: taxonomy_term.tags
+targetEntityType: taxonomy_term
+bundle: tags
+action: page_redirect
+no_bypass: false
+bypass_message: true
+configuration:
+  redirect: '<front>'
+  redirect_code: 302
+  redirect_fallback_action: page_not_found

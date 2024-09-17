@@ -1,0 +1,12 @@
+name: Tonic
+type: theme
+base theme: gin
+description: 'Remora 3 admin theme with a strong focus on improving the Editorial Experience, with a hint of lemon.'
+core_version_requirement: ^9 || ^10
+version: 0.0.1
+dependencies:
+  - drupal:remora_core
+
+libraries-extend:
+  gin/gin_base:
+    - tonic/global-styling

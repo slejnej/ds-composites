@@ -1,0 +1,17 @@
+section:not(#sidebar-nuggets) {
+  .palette-alt-2 {
+    .section-title-wrapper {
+      margin: $alt-2-layout-section-title-margin-top auto $alt-2-layout-section-title-margin-bottom;
+      text-align: $alt-2-layout-section-title-align;
+      color: $alt-2-layout-section-title-color;
+      border-style: solid;
+      border-color: $alt-2-layout-section-title-border-color;
+      border-right-width: $alt-2-layout-section-title-border-right;
+      border-left-width: $alt-2-layout-section-title-border-left;
+      border-bottom-width: $alt-2-layout-section-title-border-bottom;
+      border-top-width: $alt-2-layout-section-title-border-top;
+      border-radius: $alt-2-layout-section-title-border-radius;
+      padding: $alt-2-layout-section-title-padding-y $alt-2-layout-section-title-padding-x;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{% block paragraph %}
+
+  {% set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ] %}
+
+  {% block paragraph_content %}
+    <div{{ attributes.addClass(classes) }}>
+      {% block content %}
+
+        {% block nugget_title %}
+          {% remora_include 'partials/paragraphs/nugget-title.html.twig' %}
+        {% endblock %}
+
+        {% block nugget_content %}
+          <div class="nugget-content container-xxl position-relative">
+
+            {% block cards %}
+              {% if paragraph.field_presentation.value == 'slideshow' %}
+                {% include '@cards_nugget/templates/partials/carousel.html.twig' with {
+                  cards: content.field_cards_nt_card['#items'],
+                  items_per_slide: paragraph.field_cards_nt_slides_per_page.value,
+                  show_markers: paragraph.field_cards_nt_markers.value,
+                  show_arrows: paragraph.field_cards_nt_arrows.value,
+                  do_loop: paragraph.field_cards_nt_loop.value,
+                  do_autoplay: paragraph.field_cards_nt_autoplay.value,
+                  paragraph_id: paragraph.id()
+                } %}
+              {% else %}
+                {% include '@cards_nugget/templates/partials/grid.html.twig' with {'items_per_row': paragraph.field_items_per_row.value, 'cards': content.field_cards_nt_card['#items']} %}
+              {% endif %}
+            {% endblock %}
+
+          </div>
+        {% endblock %}
+
+      {% endblock %}
+    </div>
+  {% endblock %}
+
+{% endblock %}

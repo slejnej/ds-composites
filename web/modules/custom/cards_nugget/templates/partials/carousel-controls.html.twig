@@ -1,0 +1,33 @@
+{% block slideshow_controls %}
+	<div class="slider-controls slick d-flex align-items-center justify-content-center">
+
+		{% block arrow_prev %}
+			{% if show_arrows %}
+				<button type="button" class="arrow slide-cards-prev btn btn-outline-primary m-0 p-0 d-none d-sm-flex">
+					{% block arrow_prev_icon %}
+						<svg class="bi" width="32" height="32">
+							<use xlink:href="{{ get_bs_icon_path('arrow-left') }}"/>
+						</svg>
+					{% endblock %}
+				</button>
+			{% endif %}
+		{% endblock %}
+
+		{% block markers %}
+			<div class="slide-cards-dots"></div>
+		{% endblock %}
+
+		{% block arrow_next %}
+			{% if show_arrows %}
+				<button type="button" class="arrow slide-cards-next btn btn-outline-primary m-0 p-0 d-none d-sm-flex">
+					{% block arrow_next_icon %}
+						<svg class="bi" width="32" height="32">
+							<use xlink:href="{{ get_bs_icon_path('arrow-right') }}"/>
+						</svg>
+					{% endblock %}
+				</button>
+			{% endif %}
+		{% endblock %}
+
+	</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+fieldset[data-drupal-selector="edit-field-slideshow-nt-slides"] {
+    border: none;
+}
+
+fieldset[data-drupal-selector="edit-field-slideshow-nt-slides"] .fieldset__legend {
+    display: none;
+}
+
+fieldset[data-drupal-selector="edit-field-slideshow-nt-slides"] .lpb-btn--add {
+    background: none;
+}
+
+fieldset[data-drupal-selector="edit-field-slideshow-nt-slides"] .lpb-btn--add:after {
+    content: 'Add slide';
+}
+
+fieldset[data-drupal-selector="edit-field-slideshow-nt-slides"] .js-lpb-component:first-child .lpb-btn--add.before {
+    display: block;
+}
+
+fieldset[data-drupal-selector="edit-field-slideshow-nt-slides"] .js-lpb-component:last-of-type .lpb-btn--add.after {
+    display: block;
+}
+
+.lpb-component-list__item.type-slideshow .nugget-icon {
+    background: url("../icons/slideshow.svg") no-repeat 50% 50% / 90px 90px;
+}

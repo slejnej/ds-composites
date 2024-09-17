@@ -1,0 +1,31 @@
+uuid: 92b24b25-a886-4691-a543-1e4aa8139611
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_topics
+    - node.type.page
+    - taxonomy.vocabulary.topics
+_core:
+  default_config_hash: P7lQluBYqosAZLKEi7Bl9AmviVJ9tfsWnG6T0i35rcI
+id: node.page.field_topics
+field_name: field_topics
+entity_type: node
+bundle: page
+label: Topics
+description: 'Relate your content to a one or multiple topics.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      topics: topics
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

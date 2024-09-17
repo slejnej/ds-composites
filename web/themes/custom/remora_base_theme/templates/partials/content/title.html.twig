@@ -1,0 +1,20 @@
+{{ title_prefix }}
+  {% block title_wrapper %}
+    <div class="title-inner">
+
+      {% block title %}
+        <h1 class="page-title mb-0">{{ label }}</h1>
+      {% endblock %}
+
+      {% block text %}
+      {% endblock text %}
+
+      {% block date %}
+      {% endblock date %}
+
+      {% block author %}
+      {% endblock author %}
+
+    </div>
+  {% endblock %}
+{{ title_suffix }}

@@ -1,0 +1,160 @@
+@import 'global';
+// buttons
+
+// default
+$text-desktop-default-font: $global-text-secondary-font;
+$text-desktop-default-size: $global-text-font-size-m;
+$text-desktop-default-weight: $global-text-font-weight-semibold;
+$text-desktop-default-line-height: 16px;
+
+// large
+$text-desktop-large-size: $global-text-font-size-xl;
+$text-desktop-large-weight: $global-text-font-weight-semibold;
+$text-desktop-large-line-height: 20px;
+
+// small
+$text-desktop-small-size: $global-text-font-size-s;
+$text-desktop-small-weight: $global-text-font-weight-semibold;
+$text-desktop-small-line-height: 14px;
+
+// nav
+$text-desktop-nav-font: $global-text-secondary-font;
+$text-desktop-nav-size: $global-text-font-size-xl;
+$text-desktop-nav-weight: $global-text-font-weight-normal;
+$text-desktop-nav-line-height: 20px;
+
+// breadcrumb
+$text-desktop-breadcrumb-font: $global-text-secondary-font;
+$text-desktop-breadcrumb-size: $global-text-font-size-m;
+$text-desktop-breadcrumb-weight: $global-text-font-weight-medium;
+$text-desktop-breadcrumb-line-height: 16px;
+
+// title
+
+// node
+$text-desktop-title-node-font: $global-text-primary-font;
+$text-desktop-title-node-size: $global-text-font-size-6xl;
+$text-desktop-title-node-weight: $global-text-font-weight-bolder;
+$text-desktop-title-node-line-height: 68px;
+
+// promo
+$text-desktop-title-promo-font: $global-text-primary-font;
+$text-desktop-title-promo-size: $global-text-font-size-5xl;
+$text-desktop-title-promo-weight: $global-text-font-weight-bold;
+$text-desktop-title-promo-line-height: 40px;
+
+// card
+$text-desktop-title-card-font: $global-text-primary-font;
+$text-desktop-title-card-size: $global-text-font-size-2xl;
+$text-desktop-title-card-weight: $global-text-font-weight-normal;
+$text-desktop-title-card-line-height: 28px;
+
+// section
+$text-desktop-title-section-font: $global-text-primary-font;
+$text-desktop-title-section-size: $global-text-font-size-8xl;
+$text-desktop-title-section-weight: $global-text-font-weight-bold;
+$text-desktop-title-section-line-height: 52px;
+
+// nugget
+$text-desktop-title-nugget-font: $global-text-primary-font;
+$text-desktop-title-nugget-size: $global-text-font-size-5xl;
+$text-desktop-title-nugget-weight: $global-text-font-weight-bold;
+$text-desktop-title-nugget-line-height: 42px;
+
+// slideshow
+$text-desktop-title-slideshow-font: $global-text-primary-font;
+$text-desktop-title-slideshow-size: $global-text-font-size-6xl;
+$text-desktop-title-slideshow-weight: $global-text-font-weight-bolder;
+$text-desktop-title-slideshow-line-height: 58px;
+$text-desktop-title-slideshow-sub-font: $global-text-secondary-font;
+$text-desktop-title-slideshow-sub-size: $global-text-font-size-3xl;
+$text-desktop-title-slideshow-sub-weight: $global-text-font-weight-normal;
+$text-desktop-title-slideshow-sub-line-height: 42px;
+
+// featured article
+$text-desktop-title-featured-article-font: $global-text-primary-font;
+$text-desktop-title-featured-article-size: $global-text-font-size-5xl;
+$text-desktop-title-featured-article-weight: $global-text-font-weight-bold;
+$text-desktop-title-featured-article-line-height: 46px;
+$text-desktop-title-featured-article-sub-font: $global-text-primary-font;
+$text-desktop-title-featured-article-sub-size: $global-text-font-size-xl;
+$text-desktop-title-featured-article-sub-weight: $global-text-font-weight-normal;
+$text-desktop-title-featured-article-sub-line-height: 28px;
+$text-desktop-title-featured-article-description-font: $global-text-secondary-font;
+$text-desktop-title-featured-article-description-size: $global-text-font-size-l;
+$text-desktop-title-featured-article-description-weight: $global-text-font-weight-normal;
+$text-desktop-title-featured-article-description-line-height: 26px;
+
+// tagline
+$text-desktop-title-tagline-font: $global-text-primary-font;
+$text-desktop-title-tagline-size: $global-text-font-size-5xl;
+$text-desktop-title-tagline-weight: $global-text-font-weight-bold;
+$text-desktop-title-tagline-line-height: 46px;
+$text-desktop-title-tagline-sub-font: $global-text-secondary-font;
+$text-desktop-title-tagline-sub-size: $global-text-font-size-2xl;
+$text-desktop-title-tagline-sub-weight: $global-text-font-weight-normal;
+$text-desktop-title-tagline-sub-line-height: 30px;
+
+// display
+$text-desktop-display-1-font: $global-text-primary-font;
+$text-desktop-display-1-size: $global-text-font-size-14xl;
+$text-desktop-display-1-weight: $global-text-font-weight-bold;
+$text-desktop-display-1-line-height: 88px;
+$text-desktop-display-2-font: $global-text-primary-font;
+$text-desktop-display-2-size: $global-text-font-size-12xl;
+$text-desktop-display-2-weight: $global-text-font-weight-bold;
+$text-desktop-display-2-line-height: 82px;
+$text-desktop-display-3-font: $global-text-primary-font;
+$text-desktop-display-3-size: $global-text-font-size-11xl;
+$text-desktop-display-3-weight: $global-text-font-weight-bold;
+$text-desktop-display-3-line-height: 78px;
+$text-desktop-display-4-font: $global-text-primary-font;
+$text-desktop-display-4-size: $global-text-font-size-10xl;
+$text-desktop-display-4-weight: $global-text-font-weight-bold;
+$text-desktop-display-4-line-height: 70px;
+$text-desktop-display-5-font: $global-text-primary-font;
+$text-desktop-display-5-size: $global-text-font-size-8xl;
+$text-desktop-display-5-weight: $global-text-font-weight-bold;
+$text-desktop-display-5-line-height: 64px;
+$text-desktop-display-6-font: $global-text-primary-font;
+$text-desktop-display-6-size: $global-text-font-size-6xl;
+$text-desktop-display-6-weight: $global-text-font-weight-bolder;
+$text-desktop-display-6-line-height: 60px;
+
+// heading
+$text-desktop-heading-1-font: $global-text-primary-font;
+$text-desktop-heading-1-size: $global-text-font-size-5xl;
+$text-desktop-heading-1-weight: $global-text-font-weight-bold;
+$text-desktop-heading-1-line-height: 42px;
+$text-desktop-heading-2-font: $global-text-primary-font;
+$text-desktop-heading-2-size: $global-text-font-size-4xl;
+$text-desktop-heading-2-weight: $global-text-font-weight-bold;
+$text-desktop-heading-2-line-height: 38px;
+$text-desktop-heading-3-font: $global-text-primary-font;
+$text-desktop-heading-3-size: $global-text-font-size-2xl;
+$text-desktop-heading-3-weight: $global-text-font-weight-normal;
+$text-desktop-heading-3-line-height: 32px;
+$text-desktop-heading-4-font: $global-text-primary-font;
+$text-desktop-heading-4-size: $global-text-font-size-xl;
+$text-desktop-heading-4-weight: $global-text-font-weight-normal;
+$text-desktop-heading-4-line-height: 30px;
+$text-desktop-heading-5-font: $global-text-primary-font;
+$text-desktop-heading-5-size: $global-text-font-size-l;
+$text-desktop-heading-5-weight: $global-text-font-weight-normal;
+$text-desktop-heading-5-line-height: 28px;
+$text-desktop-heading-6-font: $global-text-primary-font;
+$text-desktop-heading-6-size: $global-text-font-size-m;
+$text-desktop-heading-6-weight: $global-text-font-weight-normal;
+$text-desktop-heading-6-line-height: 26px;
+
+// body
+$text-desktop-body-regular-font: $global-text-secondary-font;
+$text-desktop-body-regular-size: $global-text-font-size-l;
+$text-desktop-body-regular-size-small: $global-text-font-size-s;
+$text-desktop-body-regular-size-large: $global-text-font-size-2xl;
+$text-desktop-body-regular-weight: $global-text-font-weight-normal;
+$text-desktop-body-regular-line-height: 28px;
+$text-desktop-body-large-line-height: 34px;
+$text-desktop-body-bold-weight: $global-text-font-weight-bold;
+$text-desktop-body-medium-weight: $global-text-font-weight-medium;
+$text-desktop-body-light-weight: $global-text-font-weight-light;

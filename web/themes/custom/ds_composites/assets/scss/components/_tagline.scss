@@ -1,0 +1,48 @@
+.paragraph--type--tagline {
+  .tagline-content {
+    margin-bottom: 90px;
+    z-index: 1;
+
+    .field--name-field-display-title {
+      font-size: 2.125rem;
+
+    }
+
+    .field--name-field-tagline-nt-text p {
+      font-size: 1.375rem;
+    }
+  }
+
+  .tagline-bg {
+    mask: url('../assets/images/sun-shape.svg') no-repeat 45% 55%/150%;
+    background: #FCC529;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .tagline-swoosh {
+    bottom: -1px;
+    left: 0;
+    mask: url('../assets/images/under-swoosh.svg') no-repeat 50% 50%/100%;
+    height: 90px;
+    background-color: $surface-primary;
+  }
+}
+
+
+.palette-alt-1 .paragraph--type--tagline {
+  .tagline-bg {
+    background: #1993D1;
+  }
+
+  .tagline-swoosh {
+    background-color: $alt-1-surface-primary;
+  }
+}
+
+.palette-alt-2 .paragraph--type--tagline {
+  .tagline-swoosh {
+    background-color: $alt-2-surface-primary;
+  }
+}

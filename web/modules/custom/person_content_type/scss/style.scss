@@ -1,0 +1,66 @@
+// CARDS
+
+.card-role {
+  margin-bottom: $card-title-spacer-y;
+}
+
+.card-employment {
+  margin-bottom: $card-title-spacer-y;
+
+  span.comma {
+    margin-left: -3px;
+  }
+}
+
+// NODE
+
+.page-node-type-person {
+
+  .node-suffix {
+    margin-left: -3px;
+
+    & > div {
+      display: inline;
+    }
+  }
+
+  .person.node__content {
+    gap: $global-spacing-3;
+
+    .person-details {
+      h1 {
+        line-height: 1;
+      }
+
+      gap: $global-text-line-height-base;
+
+      .node-employment {
+        gap: 8px;
+
+        .node-role {
+          font-size: 1.222rem;
+        }
+
+        .node-job-details {
+          font-weight: 500;
+          font-size: 1.111rem;
+        }
+      }
+    }
+  }
+
+  .left-sidebar-section {
+    gap: $global-spacing-2;
+  }
+
+  .node-social a {
+    &.btn svg {
+      fill: $btn-primary-color;
+      height: 16px;
+    }
+
+    &:hover .btn svg {
+      fill: $btn-primary-hover-color
+    }
+  }
+}

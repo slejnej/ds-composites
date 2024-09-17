@@ -1,0 +1,22 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_editor_title
+    - paragraphs.paragraphs_type.slideshow
+  enforced:
+    module:
+      - slideshow_nugget
+id: paragraph.slideshow.field_editor_title
+field_name: field_editor_title
+entity_type: paragraph
+bundle: slideshow
+label: 'Editor title'
+description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

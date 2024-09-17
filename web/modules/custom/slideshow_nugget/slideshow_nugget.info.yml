@@ -1,0 +1,13 @@
+name: Slideshow nugget
+type: module
+description: 'Remora slideshow nugget. Also provides slide nugglets'
+package: Remora
+version: 0.0.1
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:field_group
+  - drupal:layout_paragraphs
+  - drupal:link
+  - drupal:media
+  - drupal:media_library
+  - drupal:remora_core

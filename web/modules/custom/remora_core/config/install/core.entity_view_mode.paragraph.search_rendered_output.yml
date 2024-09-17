@@ -1,0 +1,11 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.search_rendered_output
+label: 'Search rendered output'
+description: ''
+targetEntityType: paragraph
+cache: true

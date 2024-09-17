@@ -1,0 +1,56 @@
+// in future test if button color can be overriden by the variable alert-xxx-button
+
+.palette-alt-1 {
+  &.alert,
+  .alert {
+    --bs-alert-padding-x: #{$alt-1-alert-padding-x};
+    --bs-alert-padding-y: #{$alt-1-alert-padding-y};
+    --bs-alert-border-radius: #{$alt-1-alert-border-radius};
+
+    --bs-alert-bg: #{$alt-1-alert-primary};
+    --bs-alert-border-color: #{$alt-1-alert-primary-border};
+    --bs-alert-color: #{$alt-1-alert-primary-text};
+
+    &.alert-secondary {
+      --bs-alert-bg: #{$alt-1-alert-secondary};
+      --bs-alert-border-color: #{$alt-1-alert-secondary-border};
+      --bs-alert-color: #{$alt-1-alert-secondary-text};
+    }
+
+    &.alert-success {
+      --bs-alert-bg: #{$alt-1-alert-success};
+      --bs-alert-border-color: #{$alt-1-alert-success-border};
+      --bs-alert-color: #{$alt-1-alert-success-text};
+    }
+
+    &.alert-danger {
+      --bs-alert-bg: #{$alt-1-alert-danger};
+      --bs-alert-border-color: #{$alt-1-alert-danger-border};
+      --bs-alert-color: #{$alt-1-alert-danger-text};
+    }
+
+    &.alert-warning {
+      --bs-alert-bg: #{$alt-1-alert-warning};
+      --bs-alert-border-color: #{$alt-1-alert-warning-border};
+      --bs-alert-color: #{$alt-1-alert-warning-text};
+    }
+
+    &.alert-info {
+      --bs-alert-bg: #{$alt-1-alert-info};
+      --bs-alert-border-color: #{$alt-1-alert-info-border};
+      --bs-alert-color: #{$alt-1-alert-info-text};
+    }
+
+    &.alert-light {
+      --bs-alert-bg: #{$alt-1-alert-light};
+      --bs-alert-border-color: #{$alt-1-alert-light-border};
+      --bs-alert-color: #{$alt-1-alert-light-text};
+    }
+
+    &.alert-dark {
+      --bs-alert-bg: #{$alt-1-alert-dark};
+      --bs-alert-border-color: #{$alt-1-alert-dark-border};
+      --bs-alert-color: #{$alt-1-alert-dark-text};
+    }
+  }
+}

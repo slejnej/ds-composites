@@ -1,0 +1,34 @@
+uuid: af9790b8-0cc7-402f-9995-d1460fdb9fd9
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.portrait_3x4
+  module:
+    - crop
+_core:
+  default_config_hash: ufFBnjUL8Mpu9m9D6564U5k4iiOBTIFtwYvmY13ipyw
+name: portrait_3_4_md
+label: 'Portrait: 3x4 - MD'
+effects:
+  ec6cd055-1702-4ff8-9905-2e320809173a:
+    uuid: ec6cd055-1702-4ff8-9905-2e320809173a
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: portrait_3x4
+      automatic_crop_provider: null
+  b8e8b08b-2331-401c-a1a2-95102ce108b8:
+    uuid: b8e8b08b-2331-401c-a1a2-95102ce108b8
+    id: image_scale
+    weight: 2
+    data:
+      width: 496
+      height: null
+      upscale: true
+  15decddd-4bd6-4dd7-8580-a94cb764a6e4:
+    uuid: 15decddd-4bd6-4dd7-8580-a94cb764a6e4
+    id: image_convert
+    weight: 3
+    data:
+      extension: webp

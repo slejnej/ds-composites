@@ -1,0 +1,17 @@
+{
+  "name": "mrm-remora/person_content_type",
+  "type": "drupal-custom-module",
+  "description": "Person content type - contains functionalities for Person CT",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.1",
+    "drupal/auto_entitylabel": "^3.0"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ]
+}

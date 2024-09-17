@@ -1,0 +1,27 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_nt_summary
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.slide_nugglet
+  module:
+    - text
+  enforced:
+    module:
+      - slideshow_nugget
+id: paragraph.slide_nugglet.field_slide_nt_summary
+field_name: field_slide_nt_summary
+entity_type: paragraph
+bundle: slide_nugglet
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

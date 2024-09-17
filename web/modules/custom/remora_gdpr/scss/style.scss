@@ -1,0 +1,168 @@
+// COOKIE BANNER
+
+#sliding-popup.sliding-popup-bottom {
+  background: $global-color-light-light-100;
+
+  .btn.btn-primary {
+    background-image: none;
+    text-shadow: none;
+    border: 0;
+  }
+
+  div {
+    color: inherit;
+  }
+
+  #popup-text {
+    h2 {
+      font-size: 1.5rem;
+      color: $text-primary;
+      font-weight: 300;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $text-secondary;
+      font-weight: 300;
+    }
+
+    .find-more-button {
+      padding: 0 !important;
+      color: $text-link;
+
+      &:hover {
+        color: $text-link-hover;
+      }
+    }
+  }
+
+  // MODAL
+
+  #cookieModal {
+    .modal-content {
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+      border-radius: $global-border-border-radius-sm;
+
+      .modal-header {
+        border-radius: $global-border-border-radius-sm;
+        background-color: $global-color-black-white;
+        padding: 40px 40px 0;
+
+        div {
+          color: $text-primary;
+          font-size: 1.5rem;
+        }
+      }
+
+      .modal-body {
+        padding: 40px;
+
+        .eu-cookie-compliance-categories {
+          gap: 20px;
+
+          .accordion-header .accordion-button {
+            .accordion-title {
+              color: $text-link;
+              font-size: 1.375rem;
+            }
+
+            .accordion-icon {
+              mask: url("../../../../custom/remora_base_theme/node_modules/bootstrap-icons/icons/plus.svg") no-repeat 50% 50% / 100%;
+              height: 20px;
+              width: 20px;
+              background: $text-link;
+            }
+
+            &:hover {
+              .accordion-title {
+                color: $text-link-hover;
+              }
+
+              .accordion-icon {
+                background: $text-link-hover;
+              }
+            }
+
+            &[aria-expanded="true"] {
+              .accordion-icon {
+                mask: url("../../../../custom/remora_base_theme/node_modules/bootstrap-icons/icons/dash.svg") no-repeat 50% 50% / 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  /* MODAL POPUP */
+  .eu-cookie-compliance-content {
+    gap: 20px;
+
+    .eu-cookie-compliance-buttons {
+      gap: 20px;
+    }
+
+    .eu-cookie-compliance-category {
+
+      .cookie-toggle {
+        input[type="checkbox"] {
+          top: 0;
+          left: 0;
+          height: 30px;
+          width: 50px;
+          opacity: 0;
+
+          &:checked + label.switch-toggle {
+            &:after {
+              background: $btn-primary-hover-background;
+              left: calc(100% - 4px);
+              top: 5px;
+              height: 20px;
+              width: 20px;
+              transform: translateX(-100%);
+            }
+          }
+
+          // Disabled toggle styles
+
+          &:disabled + label.switch-toggle {
+            border: solid 1px $global-color-black-balck-300;
+            background: $global-color-black-black-100 !important;
+
+            &:after {
+              background: $global-color-black-balck-300 !important;
+            }
+          }
+        }
+      }
+
+      // Default toggle styles
+      label.switch-toggle {
+        background: white;
+        border: solid 1px $global-color-black-balck-300;
+        height: 30px;
+        width: 50px;
+        border-radius: 100px;
+        text-indent: -9999px;
+
+        &:after {
+          left: 5px;
+          top: 7px;
+          height: 16px;
+          width: 16px;
+          border-radius: 50%;
+          content: "";
+          display: inline-block;
+          position: absolute;
+          background: $btn-primary-background;
+          transition: .3s;
+        }
+      }
+    }
+  }
+}
+
+.min-w-100 {
+  min-width: 100%;
+}

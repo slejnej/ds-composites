@@ -1,0 +1,24 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tagline_nt_text
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.tagline
+  module:
+    - text
+id: paragraph.tagline.field_tagline_nt_text
+field_name: field_tagline_nt_text
+entity_type: paragraph
+bundle: tagline
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - node_title_help_text
+third_party_settings:
+  node_title_help_text:
+    title_help: 'This title will be displayed at the top of the page unless landing page is enabled just below.'
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Page
+type: page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

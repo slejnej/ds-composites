@@ -1,0 +1,4 @@
+administer remora settings:
+  title: 'Administer Remora settings'
+  description: 'Administer Remora settings (footer content, cards button label,...)'
+  restrict access: true

@@ -1,0 +1,14 @@
+diff --git a/config/install/recaptcha_v3.settings.yml b/config/install/recaptcha_v3.settings.yml
+deleted file mode 100644
+index 10f9ca7..0000000
+--- a/config/install/recaptcha_v3.settings.yml
++++ /dev/null
+@@ -1,8 +0,0 @@
+-site_key: ""
+-secret_key: ""
+-verify_hostname: true
+-default_challenge: 'captcha\Math'
+-error_message: "Antibot verification failed."
+-cacheable: false
+-library_use_recaptcha_net: false
+-hide_badge: false

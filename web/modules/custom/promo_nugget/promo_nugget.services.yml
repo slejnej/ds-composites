@@ -1,0 +1,5 @@
+services:
+  promo_nugget.event_subscriber.referenceable_entity:
+    class: \Drupal\promo_nugget\EventSubscriber\ReferenceableEntitySubscriber
+    tags:
+      - { name: 'event_subscriber' }

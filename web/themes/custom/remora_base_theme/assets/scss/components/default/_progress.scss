@@ -1,0 +1,22 @@
+.progress {
+  --bs-progress-height: #{$progress-height};
+  --bs-progress-bg: #{$progress-bg};
+  --bs-progress-border-radius: #{$progress-border-radius};
+  --bs-progress-bar-color: #{$progress-bar-color};
+  --bs-progress-bar-bg: #{$progress-bar-bg-primary};
+
+  .progress-bar {
+    &.bg-success {
+      background-color: $progress-bar-bg-success;
+    }
+    &.bg-info {
+      background-color: $progress-bar-bg-info;
+    }
+    &.bg-warning {
+      background-color: $progress-bar-bg-warning;
+    }
+    &.bg-danger {
+      background-color: $progress-bar-bg-danger;
+    }
+  }
+}

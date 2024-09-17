@@ -1,0 +1,55 @@
+{% extends '@cards_nugget/card.html.twig' %}
+
+{% set classes = [
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'card',
+  'h-100',
+  'd-flex',
+  'justify-content-between',
+  'overflow-hidden'
+] %}
+
+{% set id = paragraph.id() %}
+{% set field_link = paragraph.field_card_nt_link|first %}
+{% set link = field_link.url.toString %}
+{% set button_text = drupal_config('remora_core.remora_settings', 'card_button_text') %}
+
+{% if field_link.uri starts with 'entity:node/' %}
+  {% set referencedNode = drupal_entity('node', field_link.url.routeParameters.node, 'card') %}
+  {% set referencedNode = referencedNode['#node'] %}
+  {% set display_title = referencedNode.field_alternative_title.value|default(referencedNode.title.value) %}
+  {% set image = referencedNode.field_image.entity.field_media_image.entity.uri.value %}
+  {% set summary = referencedNode.field_summary.value %}
+  {% set referencedNodeType = referencedNode.type.value.0.target_id %}
+{% endif %}
+
+{% if paragraph.field_card_nt_customise_card.value %}
+  {% set display_title = content.field_card_nt_display_title.0 %}
+  {% set image = paragraph.field_card_nt_image.entity.field_media_image.entity.uri.value %}
+  {% set summary = content.field_card_nt_summary %}
+  {% set button_text = content.field_card_nt_alt_button_text|render|default(button_text) %}
+{% endif %}
+
+{% block card_image_wrapper %}
+  {# Fixme Please for the love of god someone else get this to work so it can be overwritten in sub themes im so tired #}
+  {% set template_name = "@#{referencedNodeType}_content_type/templates/content/#{referencedNodeType}-card-image.html.twig" %}
+  {{ include([template_name, '@cards_nugget/partials/card-image.html.twig'], ignore_missing = true)  }}
+{% endblock %}
+
+{% block card_body_wrapper %}
+  {# Fixme Please for the love of god someone else get this to work so it can be overwritten in sub themes im so tired #}
+  {% set template_name = "@#{referencedNodeType}_content_type/templates/content/#{referencedNodeType}-card.html.twig" %}
+  {% if referencedNodeType == 'peer_reviewed_article' %}
+    {% include '@pra_content_type/templates/content/peer_reviewed_article-card.html.twig' %}
+  {% else %}
+    {{ include([template_name, '@cards_nugget/partials/card-body.html.twig'], ignore_missing = true)  }}
+  {% endif %}
+{% endblock %}
+
+{% block card_footer_text %}
+  {% if content.field_card_nt_footer|render is not empty %}
+    {{ content.field_card_nt_footer }}
+  {% endif %}
+{% endblock %}

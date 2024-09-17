@@ -1,0 +1,9 @@
+# Provides the Drupal.Routing object
+routing:
+  version: 0.0.1
+  header: true
+  js:
+    js/routing.js:
+      weight: -100
+      attributes:
+        type: 'module'

@@ -1,0 +1,10 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+id: media.square_1_1
+label: 'Square: 1x1'
+targetEntityType: media
+cache: true

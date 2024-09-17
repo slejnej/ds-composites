@@ -1,0 +1,9 @@
+name: Security
+type: module
+description: Strengthen the security of your site.
+core_version_requirement: ^10
+package: Remora
+configure: security.settings
+dependencies:
+  - drupal:permissionspolicy
+  - drupal:seckit

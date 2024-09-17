@@ -1,0 +1,23 @@
+uuid: 94a4e505-ef6a-41a7-aa5c-fa9f1947f7e4
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - node_title_help_text
+third_party_settings:
+  node_title_help_text:
+    title_help: 'This title will be displayed at the top of the page unless landing page is enabled just below.'
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: O9hycvpgz3q2OzBeAsIp5Q8pa3DRP0sbSYmCGERPDDQ
+name: Page
+type: page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

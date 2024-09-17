@@ -1,0 +1,285 @@
+<div class="container">
+  {{ include('@helper_module/includes/menu-back.html.twig') }}
+
+  <h1 class="mb-0" id="content">List group</h1>
+  <p>List groups are a flexible and powerful component for displaying a series of content.</p>
+
+  <div class="row">
+    <h2 class="mt-4">Example 1 - basic</h2>
+    <p><small>The most basic list group is an unordered list with list items.</small></p>
+
+    <h3 class="mt-4">Active / Disabled</h3>
+    <div class="snippet">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <ul class="list-group">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item active">A second item is active</li>
+          <li class="list-group-item">A third item</li>
+          <li class="list-group-item disabled">A fourth item is disabled</li>
+          <li class="list-group-item">And a fifth one</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="mt-4">Links and buttons</h3>
+    <p><small>Clickable items can be <code>a</code> or <code>button</code></small></p>
+    <div class="snippet">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            The current link item
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+          <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+          <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+          <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
+        </div>
+
+        <p></p>
+        <div class="list-group">
+          <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+            The current button
+          </button>
+          <button type="button" class="list-group-item list-group-item-action">A second button item</button>
+          <button type="button" class="list-group-item list-group-item-action">A third button item</button>
+          <button type="button" class="list-group-item list-group-item-action">A fourth button item</button>
+          <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item</button>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="mt-4">Styling</h3>
+    <div class="snippet">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div>
+          <h4 class="mt-4">Flush</h4>
+          <p><small>Removed borders and rounded corners</small></p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">A fourth item</li>
+            <li class="list-group-item">And a fifth one</li>
+          </ul>
+        </div>
+
+        <p></p>
+        <div>
+          <h4 class="mt-4">Numbered - basic</h4>
+          <p><small>With extra class <code>.list-group-numbered</code> and combination of <code>&lt;ol&gt;</code> </small></p>
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item">A list item</li>
+            <li class="list-group-item">A list item</li>
+            <li class="list-group-item">A list item</li>
+          </ol>
+        </div>
+
+        <p></p>
+        <div>
+          <h4 class="mt-4">Numbered - mixed content</h4>
+          <p></p>
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Subheading</div>
+                Content for list item
+              </div>
+              <span class="badge bg-primary rounded-pill">14</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Subheading</div>
+                Content for list item
+              </div>
+              <span class="badge bg-primary rounded-pill">14</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Subheading</div>
+                Content for list item
+              </div>
+              <span class="badge bg-primary rounded-pill">14</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="mt-4">Horizontal</h3>
+    <div class="snippet">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div>
+          <h4 class="mt-4">Basic with available flex sizes</h4>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <ul class="list-group list-group-horizontal-sm">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <ul class="list-group list-group-horizontal-md">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <ul class="list-group list-group-horizontal-lg">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <ul class="list-group list-group-horizontal-xl">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <ul class="list-group list-group-horizontal-xxl">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+
+        <p></p>
+        <div>
+          <h4 class="mt-4">Equal width</h4>
+          <p><small>Equal-width list group items with <code>.flex-fill</code> on list group item.</small></p>
+          <ul class="list-group list-group-horizontal flex-fill">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="mt-4">Variants</h3>
+    <div class="snippet">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div>
+          <h4 class="mt-4">Basic <code>&lt;li&gt;</code></h4>
+          <ul class="list-group">
+            <li class="list-group-item">A simple default list group item</li>
+            <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
+            <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
+            <li class="list-group-item list-group-item-success">A simple success list group item</li>
+            <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+            <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+            <li class="list-group-item list-group-item-info">A simple info list group item</li>
+            <li class="list-group-item list-group-item-light">A simple light list group item</li>
+            <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
+          </ul>
+        </div>
+
+        <p></p>
+        <div>
+          <h4 class="mt-4">For buttons and links</h4>
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-primary">A simple primary list group item</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">A simple secondary list group item</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-success">A simple success list group item</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-danger">A simple danger list group item</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-warning">A simple warning list group item</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-info">A simple info list group item</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-light">A simple light list group item</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-dark">A simple dark list group item</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="mt-4">Custom content</h3>
+    <p><small>Almost any HTML content within <code>list-group</code></small></p>
+    <div class="snippet">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">List group item heading</h5>
+              <small>3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small>And some small print.</small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">List group item heading</h5>
+              <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small class="text-muted">And some muted small print.</small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">List group item heading</h5>
+              <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small class="text-muted">And some muted small print.</small>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="mt-4">Checkboxes and radios</h3>
+    <div class="snippet">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+              <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+              <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+              <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+            </li>
+          </ul>
+
+          <p></p>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
+              <label class="form-check-label" for="firstRadio">First radio</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
+              <label class="form-check-label" for="secondRadio">Second radio</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
+              <label class="form-check-label" for="thirdRadio">Third radio</label>
+            </li>
+          </ul>
+        </div>
+
+        <p></p>
+        <div>
+          <p><small>You can use <code>.stretched-link</code> on <code>&lt;label&gt;</code>s to make the whole list group item clickable.</small></p>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
+              <label class="form-check-label stretched-link" for="firstCheckboxStretched">First checkbox</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckboxStretched">
+              <label class="form-check-label stretched-link" for="secondCheckboxStretched">Second checkbox</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
+              <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Third checkbox</label>
+            </li>
+          </ul>
+        </div>
+    </div>
+
+  </div>
+
+</div>

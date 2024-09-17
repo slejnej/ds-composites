@@ -1,0 +1,39 @@
+{
+  "name": "tonic",
+  "version": "1.0.1",
+  "description": "Remora 3 admin theme based on Gin",
+  "main": "gulpfile.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./node_modules/.bin/gulp"
+  },
+  "contributors": [
+    {
+      "name": "Esli Stavenga",
+      "email": "esli@mantaraymedia.co.uk"
+    }
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.15",
+    "browserslist": "^4.21.10",
+    "del": "^7.0.0",
+    "glob": "^10.3.3",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "minimist": "^1.2.8",
+    "sass": "^1.66.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "grunt-bump": "^0.8.0"
+  }
+}

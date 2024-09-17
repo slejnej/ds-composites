@@ -1,0 +1,29 @@
+uuid: b792d5b2-18ed-423d-b576-2834d5c87bb6
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_nt_display_title
+    - filter.format.title
+    - paragraphs.paragraphs_type.card_nugglet
+  module:
+    - text
+  enforced:
+    module:
+      - cards_nugget
+_core:
+  default_config_hash: jwERV1VPtp9cMC4bBt_Bx2EcXBOttL2CbXqEWNDb9Go
+id: paragraph.card_nugglet.field_card_nt_display_title
+field_name: field_card_nt_display_title
+entity_type: paragraph
+bundle: card_nugglet
+label: 'Display title'
+description: 'This title is displayed on the card.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - title
+field_type: text

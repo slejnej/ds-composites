@@ -1,0 +1,9 @@
+{% extends "field.html.twig" %}
+
+{% block field_content %}
+  {% for item in items %}
+    <div{{ item.attributes.addClass(classes, 'field__item') }}>
+      <a href="{{ item.content['#url'] }}" class="btn btn-primary">{{ item.content['#title']|check_markup('title') }}</a>
+    </div>
+  {% endfor %}
+{% endblock %}

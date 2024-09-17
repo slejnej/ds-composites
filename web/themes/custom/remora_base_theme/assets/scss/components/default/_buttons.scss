@@ -1,0 +1,280 @@
+.btn {
+  --bs-btn-padding-x: #{$btn-padding-x};
+  --bs-btn-padding-y: #{$btn-padding-y};
+  --bs-btn-border-radius: #{$btn-border-radius};
+  --bs-btn-border-width: #{$btn-border-width};
+  @extend .text-break;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &.btn-sm {
+    --bs-btn-padding-x: #{$btn-padding-x-sm};
+    --bs-btn-padding-y: #{$btn-padding-y-sm};
+    --bs-btn-border-radius: #{$btn-border-radius};
+    --bs-btn-border-width: #{$btn-border-width};
+  }
+
+  &.btn-lg {
+    --bs-btn-padding-x: #{$btn-padding-x-lg};
+    --bs-btn-padding-y: #{$btn-padding-y-lg};
+    --bs-btn-border-radius: #{$btn-border-radius};
+    --bs-btn-border-width: #{$btn-border-width};
+  }
+
+  &.btn-primary {
+    --bs-btn-color: #{$btn-primary-color};
+    --bs-btn-bg: #{$btn-primary-background};
+    --bs-btn-border-color: #{$btn-primary-border};
+    --bs-btn-hover-color: #{$btn-primary-hover-color};
+    --bs-btn-hover-bg: #{$btn-primary-hover-background};
+    --bs-btn-hover-border-color: #{$btn-primary-hover-border};
+    --bs-btn-active-color: #{$btn-primary-active-color};
+    --bs-btn-active-bg: #{$btn-primary-active-background};
+    --bs-btn-active-border-color: #{$btn-primary-active-border};
+    --bs-btn-disabled-color: #{$btn-primary-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-primary-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-primary-disabled-border};
+  }
+
+  &.btn-secondary {
+    --bs-btn-color: #{$btn-secondary-color};
+    --bs-btn-bg: #{$btn-secondary-background};
+    --bs-btn-border-color: #{$btn-secondary-border};
+    --bs-btn-hover-color: #{$btn-secondary-hover-color};
+    --bs-btn-hover-bg: #{$btn-secondary-hover-background};
+    --bs-btn-hover-border-color: #{$btn-secondary-hover-border};
+    --bs-btn-active-color: #{$btn-secondary-active-color};
+    --bs-btn-active-bg: #{$btn-secondary-active-background};
+    --bs-btn-active-border-color: #{$btn-secondary-active-border};
+    --bs-btn-disabled-color: #{$btn-secondary-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-secondary-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-secondary-disabled-border};
+  }
+
+  &.btn-success {
+    --bs-btn-color: #{$btn-success-color};
+    --bs-btn-bg: #{$btn-success-background};
+    --bs-btn-border-color: #{$btn-success-border};
+    --bs-btn-hover-color: #{$btn-success-hover-color};
+    --bs-btn-hover-bg: #{$btn-success-hover-background};
+    --bs-btn-hover-border-color: #{$btn-success-hover-border};
+    --bs-btn-active-color: #{$btn-success-active-color};
+    --bs-btn-active-bg: #{$btn-success-active-background};
+    --bs-btn-active-border-color: #{$btn-success-active-border};
+    --bs-btn-disabled-color: #{$btn-success-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-success-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-success-disabled-border};
+  }
+
+  &.btn-danger {
+    --bs-btn-color: #{$btn-danger-color};
+    --bs-btn-bg: #{$btn-danger-background};
+    --bs-btn-border-color: #{$btn-danger-border};
+    --bs-btn-hover-color: #{$btn-danger-hover-color};
+    --bs-btn-hover-bg: #{$btn-danger-hover-background};
+    --bs-btn-hover-border-color: #{$btn-danger-hover-border};
+    --bs-btn-active-color: #{$btn-danger-active-color};
+    --bs-btn-active-bg: #{$btn-danger-active-background};
+    --bs-btn-active-border-color: #{$btn-danger-active-border};
+    --bs-btn-disabled-color: #{$btn-danger-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-danger-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-danger-disabled-border};
+  }
+
+  &.btn-warning {
+    --bs-btn-color: #{$btn-warning-color};
+    --bs-btn-bg: #{$btn-warning-background};
+    --bs-btn-border-color: #{$btn-warning-border};
+    --bs-btn-hover-color: #{$btn-warning-hover-color};
+    --bs-btn-hover-bg: #{$btn-warning-hover-background};
+    --bs-btn-hover-border-color: #{$btn-warning-hover-border};
+    --bs-btn-active-color: #{$btn-warning-active-color};
+    --bs-btn-active-bg: #{$btn-warning-active-background};
+    --bs-btn-active-border-color: #{$btn-warning-active-border};
+    --bs-btn-disabled-color: #{$btn-warning-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-warning-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-warning-disabled-border};
+  }
+
+  &.btn-info {
+    --bs-btn-color: #{$btn-info-color};
+    --bs-btn-bg: #{$btn-info-background};
+    --bs-btn-border-color: #{$btn-info-border};
+    --bs-btn-hover-color: #{$btn-info-hover-color};
+    --bs-btn-hover-bg: #{$btn-info-hover-background};
+    --bs-btn-hover-border-color: #{$btn-info-hover-border};
+    --bs-btn-active-color: #{$btn-info-active-color};
+    --bs-btn-active-bg: #{$btn-info-active-background};
+    --bs-btn-active-border-color: #{$btn-info-active-border};
+    --bs-btn-disabled-color: #{$btn-info-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-info-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-info-disabled-border};
+  }
+
+  &.btn-light {
+    --bs-btn-color: #{$btn-light-color};
+    --bs-btn-bg: #{$btn-light-background};
+    --bs-btn-border-color: #{$btn-light-border};
+    --bs-btn-hover-color: #{$btn-light-hover-color};
+    --bs-btn-hover-bg: #{$btn-light-hover-background};
+    --bs-btn-hover-border-color: #{$btn-light-hover-border};
+    --bs-btn-active-color: #{$btn-light-active-color};
+    --bs-btn-active-bg: #{$btn-light-active-background};
+    --bs-btn-active-border-color: #{$btn-light-active-border};
+    --bs-btn-disabled-color: #{$btn-light-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-light-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-light-disabled-border};
+  }
+
+  &.btn-dark {
+    --bs-btn-color: #{$btn-dark-color};
+    --bs-btn-bg: #{$btn-dark-background};
+    --bs-btn-border-color: #{$btn-dark-border};
+    --bs-btn-hover-color: #{$btn-dark-hover-color};
+    --bs-btn-hover-bg: #{$btn-dark-hover-background};
+    --bs-btn-hover-border-color: #{$btn-dark-hover-border};
+    --bs-btn-active-color: #{$btn-dark-active-color};
+    --bs-btn-active-bg: #{$btn-dark-active-background};
+    --bs-btn-active-border-color: #{$btn-dark-active-border};
+    --bs-btn-disabled-color: #{$btn-dark-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-dark-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-dark-disabled-border};
+  }
+
+  &.btn-link {
+    --bs-btn-color: #{$btn-link-color};
+    --bs-btn-bg: #{$btn-link-background};
+    --bs-btn-border-color: #{$btn-link-border};
+    --bs-btn-hover-color: #{$btn-link-hover-color};
+    --bs-btn-hover-bg: #{$btn-link-hover-background};
+    --bs-btn-hover-border-color: #{$btn-link-hover-border};
+    --bs-btn-active-color: #{$btn-link-active-color};
+    --bs-btn-active-bg: #{$btn-link-active-background};
+    --bs-btn-active-border-color: #{$btn-link-active-border};
+    --bs-btn-disabled-color: #{$btn-link-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-link-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-link-disabled-border};
+  }
+
+  &.btn-outline-primary {
+    --bs-btn-color: #{$btn-outline-primary-color};
+    --bs-btn-bg: #{$btn-outline-primary-background};
+    --bs-btn-border-color: #{$btn-outline-primary-border};
+    --bs-btn-hover-color: #{$btn-outline-primary-hover-color};
+    --bs-btn-hover-bg: #{$btn-outline-primary-hover-background};
+    --bs-btn-hover-border-color: #{$btn-outline-primary-hover-border};
+    --bs-btn-active-color: #{$btn-outline-primary-active-color};
+    --bs-btn-active-bg: #{$btn-outline-primary-active-background};
+    --bs-btn-active-border-color: #{$btn-outline-primary-active-border};
+    --bs-btn-disabled-color: #{$btn-outline-primary-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-outline-primary-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-outline-primary-disabled-border};
+  }
+
+  &.btn-outline-secondary {
+    --bs-btn-color: #{$btn-outline-secondary-color};
+    --bs-btn-bg: #{$btn-outline-secondary-background};
+    --bs-btn-border-color: #{$btn-outline-secondary-border};
+    --bs-btn-hover-color: #{$btn-outline-secondary-hover-color};
+    --bs-btn-hover-bg: #{$btn-outline-secondary-hover-background};
+    --bs-btn-hover-border-color: #{$btn-outline-secondary-hover-border};
+    --bs-btn-active-color: #{$btn-outline-secondary-active-color};
+    --bs-btn-active-bg: #{$btn-outline-secondary-active-background};
+    --bs-btn-active-border-color: #{$btn-outline-secondary-active-border};
+    --bs-btn-disabled-color: #{$btn-outline-secondary-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-outline-secondary-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-outline-secondary-disabled-border};
+  }
+
+  &.btn-outline-success {
+    --bs-btn-color: #{$btn-outline-success-color};
+    --bs-btn-bg: #{$btn-outline-success-background};
+    --bs-btn-border-color: #{$btn-outline-success-border};
+    --bs-btn-hover-color: #{$btn-outline-success-hover-color};
+    --bs-btn-hover-bg: #{$btn-outline-success-hover-background};
+    --bs-btn-hover-border-color: #{$btn-outline-success-hover-border};
+    --bs-btn-active-color: #{$btn-outline-success-active-color};
+    --bs-btn-active-bg: #{$btn-outline-success-active-background};
+    --bs-btn-active-border-color: #{$btn-outline-success-active-border};
+    --bs-btn-disabled-color: #{$btn-outline-success-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-outline-success-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-outline-success-disabled-border};
+  }
+
+  &.btn-outline-danger {
+    --bs-btn-color: #{$btn-outline-danger-color};
+    --bs-btn-bg: #{$btn-outline-danger-background};
+    --bs-btn-border-color: #{$btn-outline-danger-border};
+    --bs-btn-hover-color: #{$btn-outline-danger-hover-color};
+    --bs-btn-hover-bg: #{$btn-outline-danger-hover-background};
+    --bs-btn-hover-border-color: #{$btn-outline-danger-hover-border};
+    --bs-btn-active-color: #{$btn-outline-danger-active-color};
+    --bs-btn-active-bg: #{$btn-outline-danger-active-background};
+    --bs-btn-active-border-color: #{$btn-outline-danger-active-border};
+    --bs-btn-disabled-color: #{$btn-outline-danger-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-outline-danger-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-outline-danger-disabled-border};
+  }
+
+  &.btn-outline-warning {
+    --bs-btn-color: #{$btn-outline-warning-color};
+    --bs-btn-bg: #{$btn-outline-warning-background};
+    --bs-btn-border-color: #{$btn-outline-warning-border};
+    --bs-btn-hover-color: #{$btn-outline-warning-hover-color};
+    --bs-btn-hover-bg: #{$btn-outline-warning-hover-background};
+    --bs-btn-hover-border-color: #{$btn-outline-warning-hover-border};
+    --bs-btn-active-color: #{$btn-outline-warning-active-color};
+    --bs-btn-active-bg: #{$btn-outline-warning-active-background};
+    --bs-btn-active-border-color: #{$btn-outline-warning-active-border};
+    --bs-btn-disabled-color: #{$btn-outline-warning-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-outline-warning-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-outline-warning-disabled-border};
+  }
+
+  &.btn-outline-info {
+    --bs-btn-color: #{$btn-outline-info-color};
+    --bs-btn-bg: #{$btn-outline-info-background};
+    --bs-btn-border-color: #{$btn-outline-info-border};
+    --bs-btn-hover-color: #{$btn-outline-info-hover-color};
+    --bs-btn-hover-bg: #{$btn-outline-info-hover-background};
+    --bs-btn-hover-border-color: #{$btn-outline-info-hover-border};
+    --bs-btn-active-color: #{$btn-outline-info-active-color};
+    --bs-btn-active-bg: #{$btn-outline-info-active-background};
+    --bs-btn-active-border-color: #{$btn-outline-info-active-border};
+    --bs-btn-disabled-color: #{$btn-outline-info-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-outline-info-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-outline-info-disabled-border};
+  }
+
+  &.btn-outline-light {
+    --bs-btn-color: #{$btn-outline-light-color};
+    --bs-btn-bg: #{$btn-outline-light-background};
+    --bs-btn-border-color: #{$btn-outline-light-border};
+    --bs-btn-hover-color: #{$btn-outline-light-hover-color};
+    --bs-btn-hover-bg: #{$btn-outline-light-hover-background};
+    --bs-btn-hover-border-color: #{$btn-outline-light-hover-border};
+    --bs-btn-active-color: #{$btn-outline-light-active-color};
+    --bs-btn-active-bg: #{$btn-outline-light-active-background};
+    --bs-btn-active-border-color: #{$btn-outline-light-active-border};
+    --bs-btn-disabled-color: #{$btn-outline-light-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-outline-light-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-outline-light-disabled-border};
+  }
+
+  &.btn-outline-dark {
+    --bs-btn-color: #{$btn-outline-dark-color};
+    --bs-btn-bg: #{$btn-outline-dark-background};
+    --bs-btn-border-color: #{$btn-outline-dark-border};
+    --bs-btn-hover-color: #{$btn-outline-dark-hover-color};
+    --bs-btn-hover-bg: #{$btn-outline-dark-hover-background};
+    --bs-btn-hover-border-color: #{$btn-outline-dark-hover-border};
+    --bs-btn-active-color: #{$btn-outline-dark-active-color};
+    --bs-btn-active-bg: #{$btn-outline-dark-active-background};
+    --bs-btn-active-border-color: #{$btn-outline-dark-active-border};
+    --bs-btn-disabled-color: #{$btn-outline-dark-disabled-color};
+    --bs-btn-disabled-bg: #{$btn-outline-dark-disabled-background};
+    --bs-btn-disabled-border-color: #{$btn-outline-dark-disabled-border};
+  }
+}

@@ -1,0 +1,29 @@
+uuid: 47f02868-93dd-4bf9-9d63-e4c59130f0ab
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_file
+    - media.type.document
+  module:
+    - file
+_core:
+  default_config_hash: TuGgFm7-8ewqy9igxB39jqICZPawBRH51e3Eox84XI8
+id: media.document.field_media_file
+field_name: field_media_file
+entity_type: media
+bundle: document
+label: File
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: content/document
+  file_extensions: 'png svg gif jpg jpeg fodg odg webp tiff txt rtf pdf odf odp pages word doc docx fodt odt numbers csv xlsm xlsx xls ods fods ppt pptx fodp key zip 7z tar gz rar mp3 mp4'
+  max_filesize: ''
+  description_field: false
+field_type: file

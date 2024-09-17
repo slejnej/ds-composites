@@ -1,0 +1,16 @@
+.palette-alt-1 {
+  &.popover,
+  .popover {
+    --bs-popover-max-width: #{$alt-1-popover-max-width};
+    --bs-popover-bg: #{$alt-1-popover-bg};
+    --bs-popover-border-color: #{$alt-1-popover-border-color};
+    --bs-popover-border-radius: #{$alt-1-popover-border-radius};
+    --bs-popover-header-padding-x: #{$alt-1-popover-header-padding-x};
+    --bs-popover-header-padding-y: #{$alt-1-popover-header-padding-y};
+    --bs-popover-header-color: #{$alt-1-popover-header-color};
+    --bs-popover-header-bg: #{$alt-1-popover-header-bg};
+    --bs-popover-body-padding-x: #{$alt-1-popover-body-padding-x};
+    --bs-popover-body-padding-y: #{$alt-1-popover-body-padding-y};
+    --bs-popover-body-color: #{$alt-1-popover-body-color};
+  }
+}

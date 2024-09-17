@@ -1,0 +1,27 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_title
+    - filter.format.title
+    - paragraphs.paragraphs_type.cards
+  module:
+    - text
+  enforced:
+    module:
+      - cards_nugget
+id: paragraph.cards.field_display_title
+field_name: field_display_title
+entity_type: paragraph
+bundle: cards
+label: 'Display title'
+description: 'This title is displayed on the page above the content of this section.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - title
+field_type: text

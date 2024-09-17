@@ -1,0 +1,16 @@
+{
+  "name": "mrm-remora/page_content_type",
+  "type": "drupal-custom-module",
+  "description": "Page content type - contains functionalities for Page CT",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Ivan Solic",
+      "email": "ivan@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1"
+  }
+}

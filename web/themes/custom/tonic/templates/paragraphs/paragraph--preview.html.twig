@@ -1,0 +1,16 @@
+{%
+  set classes = [
+  'preview-wrapper',
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="field__label">{{ content.field_editor_title.0 }} [{{ human_readable_name }}]</div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

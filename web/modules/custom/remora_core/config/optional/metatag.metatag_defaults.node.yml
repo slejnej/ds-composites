@@ -1,0 +1,11 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies: {  }
+id: node
+label: Content
+tags:
+  canonical_url: '[node:url]'
+  description: '[node:field_summary]'
+  image_src: '[node:field_image:entity:field_media_image:entity:url]'
+  title: '[node:title] | [site:name]'

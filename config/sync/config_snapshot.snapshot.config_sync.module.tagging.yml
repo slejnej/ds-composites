@@ -1,0 +1,738 @@
+uuid: 3de0e21a-9946-44b8-9998-e72239ace701
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - tagging
+id: config_sync.module.tagging
+snapshotSet: config_sync
+extensionType: module
+extensionName: tagging
+items:
+  -
+    collection: ''
+    name: core.entity_form_display.taxonomy_term.categories.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.categories
+        module:
+          - field_layout
+          - layout_discovery
+      third_party_settings:
+        field_layout:
+          id: layout_onecol
+          settings:
+            label: ''
+      id: taxonomy_term.categories.default
+      targetEntityType: taxonomy_term
+      bundle: categories
+      mode: default
+      content:
+        langcode:
+          type: language_select
+          weight: 1
+          region: content
+          settings:
+            include_locked: true
+          third_party_settings: {  }
+        name:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        simple_sitemap_index_now:
+          weight: 2
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+      hidden:
+        description: true
+        path: true
+        simple_sitemap: true
+        status: true
+      _core:
+        default_config_hash: 4nvNqQuxrMww83x8EbrXTTHinkLY2gF_6ktql-saUc0
+  -
+    collection: ''
+    name: core.entity_form_display.taxonomy_term.diseases.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.taxonomy_term.diseases.rabbit_hole__settings
+          - taxonomy.vocabulary.diseases
+        module:
+          - field_layout
+          - layout_discovery
+          - rabbit_hole
+      third_party_settings:
+        field_layout:
+          id: layout_onecol
+          settings:
+            label: ''
+      id: taxonomy_term.diseases.default
+      targetEntityType: taxonomy_term
+      bundle: diseases
+      mode: default
+      content:
+        langcode:
+          type: language_select
+          weight: 1
+          region: content
+          settings:
+            include_locked: true
+          third_party_settings: {  }
+        name:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        rabbit_hole__settings:
+          type: rabbit_hole_default
+          weight: 2
+          region: content
+          settings:
+            advanced: true
+          third_party_settings: {  }
+      hidden:
+        description: true
+        path: true
+        simple_sitemap: true
+        simple_sitemap_index_now: true
+        status: true
+      _core:
+        default_config_hash: StcP-yYA2JRe_DpT_j_NLnk1EYmnDAhJoGUP-U7REn8
+  -
+    collection: ''
+    name: core.entity_form_display.taxonomy_term.tags.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.taxonomy_term.tags.rabbit_hole__settings
+          - taxonomy.vocabulary.tags
+        module:
+          - field_layout
+          - layout_discovery
+          - rabbit_hole
+      third_party_settings:
+        field_layout:
+          id: layout_onecol
+          settings:
+            label: ''
+      id: taxonomy_term.tags.default
+      targetEntityType: taxonomy_term
+      bundle: tags
+      mode: default
+      content:
+        langcode:
+          type: language_select
+          weight: 1
+          region: content
+          settings:
+            include_locked: true
+          third_party_settings: {  }
+        name:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        rabbit_hole__settings:
+          type: rabbit_hole_default
+          weight: 100
+          region: content
+          settings:
+            advanced: true
+          third_party_settings: {  }
+      hidden:
+        description: true
+        path: true
+        simple_sitemap: true
+        simple_sitemap_index_now: true
+        status: true
+      _core:
+        default_config_hash: h4VZnGk3wmKNvLZNR4XuPRl6Q_SeBF5692mEyaHl6Y0
+  -
+    collection: ''
+    name: core.entity_form_display.taxonomy_term.topics.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.taxonomy_term.topics.rabbit_hole__settings
+          - taxonomy.vocabulary.topics
+        module:
+          - field_layout
+          - layout_discovery
+          - rabbit_hole
+      third_party_settings:
+        field_layout:
+          id: layout_onecol
+          settings:
+            label: ''
+      id: taxonomy_term.topics.default
+      targetEntityType: taxonomy_term
+      bundle: topics
+      mode: default
+      content:
+        langcode:
+          type: language_select
+          weight: 1
+          region: content
+          settings:
+            include_locked: true
+          third_party_settings: {  }
+        name:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        rabbit_hole__settings:
+          type: rabbit_hole_default
+          weight: 100
+          region: content
+          settings:
+            advanced: true
+          third_party_settings: {  }
+      hidden:
+        description: true
+        path: true
+        simple_sitemap: true
+        simple_sitemap_index_now: true
+        status: true
+      _core:
+        default_config_hash: tB18Hep53E3HMQGYNfsiR1HkUDc0IoF6i88_bJF8_V0
+  -
+    collection: ''
+    name: core.entity_view_display.taxonomy_term.diseases.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.taxonomy_term.diseases.rabbit_hole__settings
+          - taxonomy.vocabulary.diseases
+        module:
+          - text
+      id: taxonomy_term.diseases.default
+      targetEntityType: taxonomy_term
+      bundle: diseases
+      mode: default
+      content:
+        description:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        langcode: true
+        rabbit_hole__settings: true
+      _core:
+        default_config_hash: dIKPZOC91T7ul2MvK_nGrmV90roLqeRc-dir8zONDSY
+  -
+    collection: ''
+    name: core.entity_view_display.taxonomy_term.tags.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.taxonomy_term.tags.rabbit_hole__settings
+          - taxonomy.vocabulary.tags
+        module:
+          - text
+      id: taxonomy_term.tags.default
+      targetEntityType: taxonomy_term
+      bundle: tags
+      mode: default
+      content:
+        description:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        langcode: true
+        rabbit_hole__settings: true
+      _core:
+        default_config_hash: BZDhjOt-BxSPdVfOU---LOxmo7bHIzog00Ncexzwn_U
+  -
+    collection: ''
+    name: core.entity_view_display.taxonomy_term.topics.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.taxonomy_term.topics.rabbit_hole__settings
+          - taxonomy.vocabulary.topics
+        module:
+          - text
+      id: taxonomy_term.topics.default
+      targetEntityType: taxonomy_term
+      bundle: topics
+      mode: default
+      content:
+        description:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        langcode: true
+        rabbit_hole__settings: true
+      _core:
+        default_config_hash: 945RwkCe-7RgeGnsUEmGiaebCGIRWzmhS4JAtKGgh90
+  -
+    collection: ''
+    name: field.field.taxonomy_term.diseases.rabbit_hole__settings
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.taxonomy_term.rabbit_hole__settings
+          - taxonomy.vocabulary.diseases
+        module:
+          - rabbit_hole
+      id: taxonomy_term.diseases.rabbit_hole__settings
+      field_name: rabbit_hole__settings
+      entity_type: taxonomy_term
+      bundle: diseases
+      label: 'Rabbit Hole settings'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: rabbit_hole
+      _core:
+        default_config_hash: UVZkPuWuV-zcXZFgHOtvOU7i4tw2Amsc3FYlY-mIpeI
+  -
+    collection: ''
+    name: field.field.taxonomy_term.tags.rabbit_hole__settings
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.taxonomy_term.rabbit_hole__settings
+          - taxonomy.vocabulary.tags
+        module:
+          - rabbit_hole
+      id: taxonomy_term.tags.rabbit_hole__settings
+      field_name: rabbit_hole__settings
+      entity_type: taxonomy_term
+      bundle: tags
+      label: 'Rabbit Hole settings'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: rabbit_hole
+      _core:
+        default_config_hash: DqhcZHtDGWeYArQhYX9qS-2AglSUQ8GTCyXsqVEeob0
+  -
+    collection: ''
+    name: field.field.taxonomy_term.topics.rabbit_hole__settings
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.taxonomy_term.rabbit_hole__settings
+          - taxonomy.vocabulary.topics
+        module:
+          - rabbit_hole
+      id: taxonomy_term.topics.rabbit_hole__settings
+      field_name: rabbit_hole__settings
+      entity_type: taxonomy_term
+      bundle: topics
+      label: 'Rabbit Hole settings'
+      description: ''
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: rabbit_hole
+      _core:
+        default_config_hash: Du6JwpTpZJIbPIkFygPYR4eQhzO7wadAKRdj1gYRiQg
+  -
+    collection: ''
+    name: field.storage.node.field_categories
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - node
+          - taxonomy
+      id: node.field_categories
+      field_name: field_categories
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: taxonomy_term
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: u6Si8LDry1V3tNhe6KxUzHTfld1bqceeXvOf8_VxthE
+  -
+    collection: ''
+    name: field.storage.node.field_diseases
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - node
+          - taxonomy
+      id: node.field_diseases
+      field_name: field_diseases
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: taxonomy_term
+      module: core
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: NggwFaxTr-ejhAi9nEy5y9D6X1qt6e6lPPFgSPRcJug
+  -
+    collection: ''
+    name: field.storage.node.field_tags
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - node
+          - taxonomy
+      id: node.field_tags
+      field_name: field_tags
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: taxonomy_term
+      module: core
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: pSnP0e--W5-9MCxQJcgsaNU7v5SiSmHcU5giQprOgQ0
+  -
+    collection: ''
+    name: field.storage.node.field_topics
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - node
+          - taxonomy
+      id: node.field_topics
+      field_name: field_topics
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: taxonomy_term
+      module: core
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: WRr5azLd6tGdgGZWNU6PkbahYYMBa24e6Th6MHhGoaM
+  -
+    collection: ''
+    name: field.storage.taxonomy_term.rabbit_hole__settings
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - rabbit_hole
+          - taxonomy
+      id: taxonomy_term.rabbit_hole__settings
+      field_name: rabbit_hole__settings
+      entity_type: taxonomy_term
+      type: rabbit_hole
+      settings: {  }
+      module: rabbit_hole
+      locked: true
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: yQ0IX5SifXhZBY9XZMYssdsmsj1Tm03AsYdKAWjOAl4
+  -
+    collection: ''
+    name: language.content_settings.taxonomy_term.categories
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.categories
+      id: taxonomy_term.categories
+      target_entity_type_id: taxonomy_term
+      target_bundle: categories
+      default_langcode: site_default
+      language_alterable: false
+      _core:
+        default_config_hash: VfOs4MIwrKXhw25IX-VGy1CWgSahRxQp-lIEKwX5F24
+  -
+    collection: ''
+    name: language.content_settings.taxonomy_term.diseases
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.diseases
+      id: taxonomy_term.diseases
+      target_entity_type_id: taxonomy_term
+      target_bundle: diseases
+      default_langcode: site_default
+      language_alterable: false
+      _core:
+        default_config_hash: JcLf6AeKbeoUJqCmwxuSau0Yxn1yhfInTU47PjTardw
+  -
+    collection: ''
+    name: language.content_settings.taxonomy_term.tags
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.tags
+      id: taxonomy_term.tags
+      target_entity_type_id: taxonomy_term
+      target_bundle: tags
+      default_langcode: site_default
+      language_alterable: false
+      _core:
+        default_config_hash: FGcVaCe7fMOpXHLPxMFYrWtdk9ei_85mBLXVl7jMcAs
+  -
+    collection: ''
+    name: language.content_settings.taxonomy_term.topics
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.topics
+      id: taxonomy_term.topics
+      target_entity_type_id: taxonomy_term
+      target_bundle: topics
+      default_langcode: site_default
+      language_alterable: false
+      _core:
+        default_config_hash: SCF4hFuOXiG3v3JxFs5e0gGHkofK91EgvcI_gSejUfg
+  -
+    collection: ''
+    name: rabbit_hole.behavior_settings.taxonomy_term.categories
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.categories
+      id: taxonomy_term.categories
+      targetEntityType: taxonomy_term
+      bundle: categories
+      action: page_redirect
+      no_bypass: false
+      bypass_message: true
+      configuration:
+        redirect: '<front>'
+        redirect_code: 301
+        redirect_fallback_action: access_denied
+      _core:
+        default_config_hash: HZuVsnRuEfl6eEwZudjIobyIj4vxUJ2rh9S8HJiJQdk
+  -
+    collection: ''
+    name: rabbit_hole.behavior_settings.taxonomy_term.diseases
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.diseases
+      id: taxonomy_term.diseases
+      targetEntityType: taxonomy_term
+      bundle: diseases
+      action: page_redirect
+      no_bypass: false
+      bypass_message: true
+      configuration:
+        redirect: '<front>'
+        redirect_code: 302
+        redirect_fallback_action: page_not_found
+      _core:
+        default_config_hash: pmsef34jwqBWrPHaQ4b4l_pyQzfMCLaIYDnmtPzPP-U
+  -
+    collection: ''
+    name: rabbit_hole.behavior_settings.taxonomy_term.tags
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.tags
+      id: taxonomy_term.tags
+      targetEntityType: taxonomy_term
+      bundle: tags
+      action: page_redirect
+      no_bypass: false
+      bypass_message: true
+      configuration:
+        redirect: '<front>'
+        redirect_code: 302
+        redirect_fallback_action: page_not_found
+      _core:
+        default_config_hash: gtS_5Amf-SLfFUcEQeoxa5H2CzNYfxSH3nN_yG2JAHI
+  -
+    collection: ''
+    name: rabbit_hole.behavior_settings.taxonomy_term.topics
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.topics
+      id: taxonomy_term.topics
+      targetEntityType: taxonomy_term
+      bundle: topics
+      action: page_redirect
+      no_bypass: false
+      bypass_message: true
+      configuration:
+        redirect: '<front>'
+        redirect_code: 302
+        redirect_fallback_action: page_not_found
+      _core:
+        default_config_hash: 5YMck0tApW6FOIoU2wPqzZDvdvmYmMeJKfUJ0FIRipo
+  -
+    collection: ''
+    name: taxonomy.vocabulary.categories
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies: {  }
+      name: Categories
+      vid: categories
+      description: ''
+      weight: 0
+      _core:
+        default_config_hash: xr7_T64WcTqL4R0_xtMZVsHrtEWwhR9DrxeeKtS1FKA
+  -
+    collection: ''
+    name: taxonomy.vocabulary.diseases
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies: {  }
+      name: Diseases
+      vid: diseases
+      description: ''
+      weight: 0
+      _core:
+        default_config_hash: a52h2nezr0kdKNRMKRDIHuvViyuPN2_QUowNpzGlmbU
+  -
+    collection: ''
+    name: taxonomy.vocabulary.tags
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies: {  }
+      name: Tags
+      vid: tags
+      description: ''
+      weight: 0
+      _core:
+        default_config_hash: 8bDkNSWl9QbGd83zKZNdGxlmc4G-gpB_dXuciGWZpD4
+  -
+    collection: ''
+    name: taxonomy.vocabulary.topics
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies: {  }
+      name: Topics
+      vid: topics
+      description: ''
+      weight: 0
+      _core:
+        default_config_hash: KXwZQu_rjY1pTpIluyHOLCxvlUiWDcKp9IsibRy1KpM

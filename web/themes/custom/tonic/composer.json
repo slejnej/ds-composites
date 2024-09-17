@@ -1,0 +1,16 @@
+{
+    "name": "mrm-remora/tonic",
+    "description": "Remora 3 admin theme, based on gin",
+    "type": "drupal-custom-theme",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Esli Stavenga",
+            "email": "esli@mantaraymedia.co.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "drupal/gin": "^3.0@RC"
+    }
+}

@@ -1,0 +1,32 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.free
+  module:
+    - crop
+name: free_xl
+label: 'Free - XL'
+effects:
+  764e0728-e2e5-4d0d-ab53-4be29b09105a:
+    uuid: 764e0728-e2e5-4d0d-ab53-4be29b09105a
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: free
+      automatic_crop_provider: null
+  e1cfd269-818c-4e09-8e46-92de9fc02cab:
+    uuid: e1cfd269-818c-4e09-8e46-92de9fc02cab
+    id: image_scale
+    weight: 2
+    data:
+      width: 1600
+      height: null
+      upscale: true
+  981504cb-a02f-4cfc-9a1f-847a18959e86:
+    uuid: 981504cb-a02f-4cfc-9a1f-847a18959e86
+    id: image_convert
+    weight: 3
+    data:
+      extension: webp

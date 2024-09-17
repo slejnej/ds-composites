@@ -1,0 +1,50 @@
+uuid: ff2418c0-4d4f-4193-aaf2-355571fd7a6b
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - image.style.landscape_16_9_lg
+    - image.style.landscape_16_9_md
+    - image.style.landscape_16_9_sm
+    - image.style.landscape_16_9_xl
+    - image.style.landscape_16_9_xs
+    - image.style.landscape_16_9_xxl
+  theme:
+    - remora_base_theme
+_core:
+  default_config_hash: 33fDjkxgxlOLq68DDXG6bxCQGEN95zhpHnqgP7dZjus
+id: landscape_16_9
+label: 'Landscape 16x9'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_16_9_xxl
+    breakpoint_id: remora_base_theme.xxl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_16_9_xl
+    breakpoint_id: remora_base_theme.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_16_9_lg
+    breakpoint_id: remora_base_theme.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_16_9_md
+    breakpoint_id: remora_base_theme.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_16_9_sm
+    breakpoint_id: remora_base_theme.sm
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: landscape_16_9_xs
+    breakpoint_id: remora_base_theme.xs
+    multiplier: 1x
+breakpoint_group: remora_base_theme
+fallback_image_style: landscape_16_9_xxl

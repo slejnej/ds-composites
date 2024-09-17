@@ -1,0 +1,18 @@
+uuid: 414c8548-4fea-4a09-bae1-f748c40f3b38
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - admin_toolbar
+id: config_sync.module.admin_toolbar
+snapshotSet: config_sync
+extensionType: module
+extensionName: admin_toolbar
+items:
+  -
+    collection: ''
+    name: admin_toolbar.settings
+    data:
+      menu_depth: 4
+      _core:
+        default_config_hash: jvTSppzcgH5wnzBhX5xnAExcp2I1CzkQ_aky65XNfYI

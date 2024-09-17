@@ -1,0 +1,89 @@
+// Global title swoosh
+$title-swoosh-height-mobile: 60px;
+$title-swoosh-height-desktop: 120px;
+
+.title-swoosh img {
+  height: $title-swoosh-height-mobile;
+  bottom: -$title-swoosh-height-mobile;
+  z-index: 0;
+  @media(min-width: 576px) {
+    height: $title-swoosh-height-desktop;
+    bottom: -$title-swoosh-height-desktop;
+  }
+}
+
+.main-content-wrapper {
+  z-index: 1;
+
+  .body-wrapper {
+    background: white;
+    padding: $global-spacing-1;
+    border-radius: $global-spacing-border-radius-m;
+    @media(min-width: 576px) {
+      padding: $global-spacing-2;
+    }
+  }
+}
+
+/* If there's no main content, add some spacing to the first section so swoosh doesn't overlap postscript nuggets */
+.swooshy-spacing .field--name-field-postscript-nuggets.field__item:first-child .paragraph-section {
+  padding-top: 80px;
+}
+
+.title-wrapper.main-content .title-inner {
+  padding: $global-spacing-3 $global-spacing-2;
+  border-radius: $global-spacing-border-radius-m;
+}
+
+.title-content-wrapper {
+  margin: 0 $global-spacing-2;
+}
+
+// Organisation specific styles
+.node--type-organisation {
+  .sidebar-details .media-wrapper .media {
+    z-index: 1;
+
+    img {
+      border-radius: $global-spacing-border-radius-m;
+      border: solid 1px $border-primary;
+    }
+  }
+
+  .img-blob {
+    max-width: 300px;
+    width: 100%;
+    bottom: -35px;
+    left: -40px;
+    z-index: 0;
+  }
+}
+
+// Person specific styles
+.node--type-person {
+  #content-sidebar-fields .sidebar-fields-wrapper .left-sidebar-section {
+    overflow: visible !important;
+  }
+
+  .sidebar-details .media-wrapper .media {
+    z-index: 1;
+
+    img {
+      box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.17);
+    }
+  }
+
+  .blob-top {
+    max-width: 215px;
+    top: -20px;
+    left: -40px;
+    z-index: 0;
+  }
+
+  .blob-bottom {
+    max-width: 135px;
+    bottom: -15px;
+    right: -27px;
+    z-index: 0;
+  }
+}

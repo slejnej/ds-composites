@@ -1,0 +1,17 @@
+editor:
+  - 'create paragraph content card_nugglet'
+  - 'create paragraph content cards'
+  - 'delete paragraph content card_nugglet'
+  - 'delete paragraph content cards'
+  - 'update paragraph content card_nugglet'
+  - 'update paragraph content cards'
+  - 'view paragraph content card_nugglet'
+  - 'view paragraph content cards'
+
+anonymous:
+  - 'view paragraph content card_nugglet'
+  - 'view paragraph content cards'
+
+authenticated:
+  - 'view paragraph content card_nugglet'
+  - 'view paragraph content cards'

@@ -1,0 +1,77 @@
+{% block paragraph %}
+
+  {% set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'position-relative',
+    'slide'
+  ] %}
+
+  {% set slideshow_link = paragraph.field_slide_nt_link|first %}
+  {% set image = paragraph.field_slide_nt_image.entity.field_media_image.entity.uri.value %}
+  {% set captionSource = paragraph.field_slide_nt_image.entity.field_image_caption_formatted.0.value %}
+
+  {% block paragraph_content %}
+    <div{{ attributes.addClass(classes) }}>
+      {% block content %}
+
+        {% block slide_image %}
+          {% if content.field_slide_nt_image['#items'] is not empty %}
+            <div class="slide-image position-relative">
+              {% block slide_image_ratio %}
+                {{ image|remora_image({'default': 'portrait_3_4', 'lg': 'landscape_21_9'}) }}
+              {% endblock %}
+
+              {% block image_caption %}
+                {% include '@remora_base_theme/templates/macros/caption.twig' with { 'imageCaption': captionSource } %}
+              {% endblock %}
+            </div>
+          {% endif %}
+        {% endblock %}
+
+        {% block slide_caption %}
+          {% if content.field_slide_nt_title['#items'] is not empty or
+            content.field_slide_nt_summary['#items'] is not empty or
+            content.field_slide_nt_link['#items'] is not empty %}
+            <div class="container position-relative">
+              <div class="carousel-caption d-flex flex-column">
+
+                {% block slide_title %}
+                  {% if content.field_slide_nt_title['#items'] is not empty %}
+                    <div class="caption-title">
+                      {{ content.field_slide_nt_title }}
+                    </div>
+                  {% endif %}
+                {% endblock %}
+
+                {% block slide_summary %}
+                  {% if content.field_slide_nt_summary['#items'] is not empty %}
+                    <div class="caption-subtitle">
+                      {{ content.field_slide_nt_summary }}
+                    </div>
+                  {% endif %}
+                {% endblock %}
+
+                {% block slide_link %}
+                  {% if content.field_slide_nt_link['#items'] is not empty %}
+                    <div class="caption-link">
+                      {% if slideshow_link %}
+                        <a href="{{ slideshow_link.getUrl() }}" class="btn btn-primary">
+                          {{ slideshow_link.title }}
+                        </a>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                {% endblock %}
+
+              </div>
+            </div>
+          {% endif %}
+        {% endblock %}
+
+      {% endblock %}
+    </div>
+  {% endblock %}
+{% endblock paragraph %}

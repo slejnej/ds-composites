@@ -1,0 +1,27 @@
+dependencies:
+  module:
+    - taxonomy
+
+editor:
+  - 'access taxonomy overview'
+  - 'create terms in departments'
+  - 'create terms in honorific_titles'
+  - 'create terms in organisations'
+  - 'delete terms in departments'
+  - 'delete terms in honorific_titles'
+  - 'delete terms in organisations'
+  - 'edit terms in departments'
+  - 'edit terms in honorific_titles'
+  - 'edit terms in organisations'
+  - 'administer nodes'
+  - 'create person content'
+  - 'delete any person content'
+  - 'view person revisions'
+  - 'edit any person content'
+  - 'revert person revisions'
+
+anonymous:
+  - 'view person revisions'
+
+authenticated:
+  - 'view person revisions'

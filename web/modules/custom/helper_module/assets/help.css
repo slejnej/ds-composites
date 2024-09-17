@@ -1,0 +1,130 @@
+:root {
+  --primary-bg: #868e96;
+  --light-bg: #dee2e6;
+  --bd-violet-rgb: 112, 44, 249;
+}
+
+.placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+}
+
+.snippet {
+  border: 1px solid var(--light-bg);
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.snippet-code {
+  background-color: var(--light-bg);
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.snippet-code .line {
+  display: block;
+}
+
+.popover.custom-popover {
+  --bs-popover-max-width: 200px !important;
+  --bs-popover-border-color: var(--bs-primary);
+  --bs-popover-header-bg: var(--bs-primary);
+  --bs-popover-header-color: var(--bs-white);
+  --bs-popover-body-padding-x: 1rem;
+  --bs-popover-body-padding-y: .5rem;
+}
+
+.progress {
+  margin-bottom: 1.5rem !important;
+}
+
+.scrollspy-example {
+  height: 200px;
+  overflow: auto;
+}
+
+.scrollspy-example-2 {
+  height: 350px;
+  overflow: auto;
+}
+
+.simple-list-example-scrollspy .active {
+  background-color: rgba(var(--bd-violet-rgb), 0.15);
+}
+
+.toast-img {
+  width: 20px;
+  height: 20px;
+}
+
+.bd-example-toasts {
+  min-height: 240px;
+}
+
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-primary);
+}
+
+/*******************
+/*  Tree view menu
+ *******************/
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+  .dropdown-menu li {
+    position: relative;
+  }
+
+  .nav-item .submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+  }
+
+  .nav-item .submenu-left {
+    right: 100%;
+    left: auto;
+  }
+
+  .dropdown-menu > li:hover {
+    background-color: #f1f1f1
+  }
+
+  .dropdown-menu > li:hover > .submenu {
+    display: block;
+  }
+}
+
+/* ============ desktop view .end// ============ */
+
+/* ============ small devices ============ */
+@media (max-width: 991px) {
+  .dropdown-menu .dropdown-menu {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    margin-bottom: .5rem;
+  }
+}
+
+/* ============ small devices .end// ============ */
+
+/**
+Bootstrap classes
+ */
+.bd-placeholder-img-lg {
+  font-size: calc(1.475rem + 2.7vw);
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  text-anchor: middle;
+}
+
+@media (min-width: 1200px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}

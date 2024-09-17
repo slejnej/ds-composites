@@ -1,0 +1,61 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.cards.field_cards_nt_arrows
+    - field.field.paragraph.cards.field_cards_nt_autoplay
+    - field.field.paragraph.cards.field_cards_nt_card
+    - field.field.paragraph.cards.field_cards_nt_loop
+    - field.field.paragraph.cards.field_cards_nt_markers
+    - field.field.paragraph.cards.field_cards_nt_slides_per_page
+    - field.field.paragraph.cards.field_display_title
+    - field.field.paragraph.cards.field_editor_title
+    - field.field.paragraph.cards.field_items_per_row
+    - field.field.paragraph.cards.field_presentation
+    - field.field.paragraph.cards.field_view_more_link
+    - paragraphs.paragraphs_type.cards
+  module:
+    - entity_reference_revisions
+    - layout_builder
+  enforced:
+    module:
+      - cards_nugget
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.cards.preview
+targetEntityType: paragraph
+bundle: cards
+mode: preview
+content:
+  field_cards_nt_card:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_cards_nt_arrows: true
+  field_cards_nt_autoplay: true
+  field_cards_nt_loop: true
+  field_cards_nt_markers: true
+  field_cards_nt_slides_per_page: true
+  field_display_title: true
+  field_items_per_row: true
+  field_presentation: true
+  field_view_more_link: true
+  search_api_excerpt: true

@@ -1,0 +1,10 @@
+uuid: null
+langcode: en-gb
+status: false
+dependencies:
+  module:
+    - media
+id: media.full
+label: 'Full content'
+targetEntityType: media
+cache: true

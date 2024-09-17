@@ -1,0 +1,16 @@
+diff --git a/site_settings.routing.yml b/site_settings.routing.yml
+index fa64942..5d75cb1 100755
+--- a/site_settings.routing.yml
++++ b/site_settings.routing.yml
+@@ -26,3 +26,11 @@ site_settings.site_setting_replicate_form:
+     setting: ^[a-zA-Z0-9_]+
+   options:
+     _admin_route: TRUE
++
++entity.site_setting_entity_type.canonical:
++  path: '/admin/structure/site_setting_entity_type/'
++  defaults:
++    _entity_view: 'site_setting_entity_type'
++    _title: 'Site setting type'
++  requirements:
++    _permission: 'administer site configuration'

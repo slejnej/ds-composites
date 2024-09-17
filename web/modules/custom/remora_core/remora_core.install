@@ -1,0 +1,125 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Handle all the permissions for this module since it the _modules_installed hook won't be triggered
+ *
+ * @return void
+ */
+function remora_core_install(): void
+{
+  remora_core_modules_installed(['remora_core'], false);
+  Drupal::service('theme_installer')->install(['tonic']);
+
+  // install these modules because they depend on remora_core and hook_install is triggered after remora_core is installed and its config imported
+  // we need cards_nugget on install of remora because remora_base_theme is dependent on it and themes can't install dependencies like modules do :)
+  Drupal::service('module_installer')->install(['cards_nugget', 'remora_gdpr']);
+}
+
+/**
+ * Install dblog and admin_toolbar_tools, added after the initial release
+ *
+ * @return void
+ */
+function remora_core_update_9001(): void
+{
+  Drupal::service('module_installer')->install(['dblog', 'admin_toolbar_tools', 'admin_toolbar_links_access_filter']);
+}
+
+/**
+ * Install gin_toolbar
+ * Enable the option to allow users to override gin theme settings
+ *
+ * @return void
+ */
+function remora_core_update_9004(): void
+{
+  Drupal::service('module_installer')->install(['gin_toolbar', 'datetime', 'views_bulk_operations', 'views_bulk_edit']);
+  Drupal::configFactory()->getEditable('gin.settings')
+    ->set('show_user_theme_settings', true)
+    ->save();
+}
+
+/**
+ * Install seckit and permissionspolicy
+ *
+ * @return void
+ */
+function remora_core_update_10005(): void
+{
+  Drupal::service('module_installer')->install(['security']);
+}
+
+/**
+ * Install captcha, recaptcha and honeypot and add newest config_ignore
+ *
+ * @return void
+ */
+function remora_core_update_10006(): void
+{
+  Drupal::service('module_installer')->install(['honeypot', 'captcha', 'recaptcha', 'raven']);
+
+  try {
+    /** @var ConfigIgnoreManager $configIgnoreManager */
+    $permissionsManager = Drupal::service('remora_core.manager.config_ignore');
+    $permissionsManager->addToConfigIgnore('remora_core');
+  } catch(Exception $e) {
+    Drupal::service('remora_core.logger')->error($e->getMessage());
+  }
+}
+
+/**
+ * Install remora_gdpr and recaptcha_v3 with config_ignore
+ *
+ * @return void
+ */
+function remora_core_update_10007(): void
+{
+  $moduleHandler = Drupal::service('module_handler');
+  if ($moduleHandler->moduleExists('eu_cookie_compliance')) {
+    Drupal::service('module_installer')->install(['remora_gdpr']);
+  }
+
+  Drupal::service('module_installer')->install(['recaptcha_v3']);
+
+  try {
+    /** @var ConfigIgnoreManager $configIgnoreManager */
+    $permissionsManager = Drupal::service('remora_core.manager.config_ignore');
+    $permissionsManager->addToConfigIgnore('remora_core');
+  } catch(Exception $e) {
+    Drupal::service('remora_core.logger')->error($e->getMessage());
+  }
+}
+
+/**
+ * copy value from field_image_caption to field_image_caption_formatted and delete field_image_caption
+ *
+ * @return void
+ */
+function remora_core_update_10008(): void
+{
+  $connection = Database::getConnection();
+  $results = $connection->query("SELECT * FROM {media__field_image_caption}");
+
+  if ($results) {
+    while ($row = $results->fetchAssoc()) {
+      // format the dates
+      $row['field_image_caption_formatted_value'] = $row['field_image_caption_value'];
+      unset($row['field_image_caption_value']);
+      $connection->insert('media__field_image_caption_formatted')
+        ->fields($row)
+        ->execute();
+    }
+  }
+
+  drupal_flush_all_caches();
+
+  Drupal::configFactory()->getEditable('gin.settings')
+        ->set('logo.use_default', false)
+        ->set('favicon.use_default', false)
+        ->set('features.favicon', true)
+        ->set('logo.path', str_replace(DRUPAL_ROOT, '', Drupal::service('file_system')->realpath('tonic://logo.png')))
+        ->set('favicon.path', str_replace(DRUPAL_ROOT, '', Drupal::service('file_system')->realpath('tonic://favicon.ico')))
+        ->save();
+}

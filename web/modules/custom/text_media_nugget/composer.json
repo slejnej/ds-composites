@@ -1,0 +1,17 @@
+{
+  "name": "mrm-remora/text_media_nugget",
+  "type": "drupal-custom-module",
+  "description": "Text/media nugget - contains functionalities to enable text/media nugget",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Dilwar Hussain",
+      "email": "dilwar@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "drupal/field_group": "^3.4"
+  }
+}

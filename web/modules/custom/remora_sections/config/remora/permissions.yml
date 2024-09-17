@@ -1,0 +1,34 @@
+dependencies:
+  module:
+    - paragraphs_type_permissions
+    - site_settings
+
+anonymous:
+  - 'view paragraph content flexible_layout'
+  - 'view paragraph content footer_section'
+  - 'view paragraph content section'
+  - 'view published site setting entities'
+
+authenticated:
+  - 'view paragraph content flexible_layout'
+  - 'view paragraph content footer_section'
+  - 'view paragraph content section'
+  - 'view published site setting entities'
+
+editor:
+  - 'access site settings overview'
+  - 'create paragraph content footer_section'
+  - 'delete paragraph content footer_section'
+  - 'update paragraph content footer_section'
+  - 'view unpublished site setting entities'
+  - 'edit site setting entities'
+  - 'delete paragraph content flexible_layout'
+  - 'delete paragraph content footer_section'
+  - 'delete paragraph content section'
+  - 'create paragraph content flexible_layout'
+  - 'create paragraph content footer_section'
+  - 'create paragraph content section'
+  - 'update paragraph content flexible_layout'
+  - 'update paragraph content footer_section'
+  - 'update paragraph content section'
+

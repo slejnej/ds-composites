@@ -1,0 +1,14 @@
+uuid: ed47be2b-f590-4acf-b44f-86dd45c7bbe9
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: CYpXA2lFoUJSpdBooHDjICJM44rWuNcc6gmhoiZD9xg
+id: original_size
+label: 'Original size'
+description: ''
+aspect_ratio: ''
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

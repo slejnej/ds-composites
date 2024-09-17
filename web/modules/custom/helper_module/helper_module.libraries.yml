@@ -1,0 +1,15 @@
+help_styles:
+  version: 1.x
+  css:
+    theme:
+      assets/help.css: { }
+
+  js:
+    assets/help.js: { }
+
+  dependencies:
+    - core/jquery
+    - bootstrap5/base
+    - bootstrap5/dialog
+    - bootstrap5/progress
+    - bootstrap5/dropbutton

@@ -1,0 +1,12 @@
+name: 'Remora'
+type: profile
+description: 'Install the Remora base'
+version: VERSION
+install:
+  - node
+dependencies:
+  - remora_core
+themes:
+  - remora_base_theme
+core_version_requirement: ^9 || ^10
+keep_english: true

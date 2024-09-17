@@ -1,0 +1,11 @@
+.palette-alt-2 {
+  &.tooltip,
+  .tooltip {
+    --bs-tooltip-max-width: #{$alt-2-tooltip-max-width};
+    --bs-tooltip-padding-x: #{$alt-2-tooltip-padding-x};
+    --bs-tooltip-padding-y: #{$alt-2-tooltip-padding-y};
+    --bs-tooltip-color: #{$alt-2-tooltip-color};
+    --bs-tooltip-bg: #{$alt-2-tooltip-bg};
+    --bs-tooltip-border-radius: #{$alt-2-tooltip-border-radius};
+  }
+}

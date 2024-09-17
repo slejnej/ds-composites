@@ -1,0 +1,25 @@
+uuid: d5f8beef-797a-43ce-b605-d6b49f86f642
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - remora_base_theme
+_core:
+  default_config_hash: RywjuYLBWxf35EiO12VWBO2jmr6bOFCVTbLuCvrkotQ
+id: remora_base_theme_branding
+theme: remora_base_theme
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

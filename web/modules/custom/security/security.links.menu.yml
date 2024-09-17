@@ -1,0 +1,19 @@
+security.settings:
+  title: 'Security config'
+  route_name: security.settings
+  parent: system.admin_config_system
+
+security.settings.seckit:
+    title: 'Security Kit'
+    route_name: seckit.settings
+    parent: security.settings
+
+security.settings.permissionspolicy:
+    title: 'Permissions Policy'
+    route_name: permissionspolicy.settings
+    parent: security.settings
+
+security.settings.obfuscate_versions:
+  title: 'Obfuscate versions config'
+  route_name: security.settings.obfuscate_versions
+  parent: security.settings

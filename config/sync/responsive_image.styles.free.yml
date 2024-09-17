@@ -1,0 +1,50 @@
+uuid: 110b6432-2dd6-4dd0-88a6-9fdc372e5d05
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - image.style.free_lg
+    - image.style.free_md
+    - image.style.free_sm
+    - image.style.free_xl
+    - image.style.free_xs
+    - image.style.free_xxl
+  theme:
+    - remora_base_theme
+_core:
+  default_config_hash: y5SW3VGXRi82vw0s4tn_WuqRT6kVbNpTI-znOO7I3ks
+id: free
+label: Free
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: free_xxl
+    breakpoint_id: remora_base_theme.xxl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: free_xl
+    breakpoint_id: remora_base_theme.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: free_lg
+    breakpoint_id: remora_base_theme.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: free_md
+    breakpoint_id: remora_base_theme.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: free_sm
+    breakpoint_id: remora_base_theme.sm
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: free_xs
+    breakpoint_id: remora_base_theme.xs
+    multiplier: 1x
+breakpoint_group: remora_base_theme
+fallback_image_style: free_xxl

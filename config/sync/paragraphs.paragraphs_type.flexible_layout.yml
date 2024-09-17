@@ -1,0 +1,24 @@
+uuid: 1d19d349-f743-43e8-a588-b492048db18d
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+_core:
+  default_config_hash: LZPgbzY7mfzy5dfxpeG4xi9-Mh8mJnkdmWkbiU6o6j4
+id: flexible_layout
+label: 'Flexible layout'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      layout_onecol: 'One column'
+      layout_twocol_section: 'Two column'
+      layout_twocol: 'Two column'
+      layout_twocol_bricks: 'Two column bricks'
+      layout_threecol_section: 'Three column'
+      layout_threecol_25_50_25: 'Three column 25/50/25'
+      layout_threecol_33_34_33: 'Three column 33/34/33'

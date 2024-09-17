@@ -1,0 +1,26 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards_nt_markers
+    - paragraphs.paragraphs_type.cards
+  enforced:
+    module:
+      - cards_nugget
+id: paragraph.cards.field_cards_nt_markers
+field_name: field_cards_nt_markers
+entity_type: paragraph
+bundle: cards
+label: Markers
+description: 'Enable to show clickable markers which jump to a particular slide.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

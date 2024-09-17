@@ -1,0 +1,11 @@
+editor:
+  - 'create paragraph content tagline'
+  - 'delete paragraph content tagline'
+  - 'update paragraph content tagline'
+  - 'view paragraph content tagline'
+
+anonymous:
+  - 'view paragraph content tagline'
+
+authenticated:
+  - 'view paragraph content tagline'

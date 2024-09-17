@@ -1,0 +1,26 @@
+uuid: 0d9b0c1d-d049-4e18-aa3b-943e6c40cb97
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - administerusersbyrole
+    - paragraphs_type_permissions
+    - system
+    - toolbar
+_core:
+  default_config_hash: sIBQgydVrjneDWcn58UJUTnHWsIIhOKk-e5AreE6hjk
+id: web_admin
+label: 'Web admin'
+weight: -10
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'access users overview'
+  - 'allow empty user mail'
+  - 'cancel users by role'
+  - 'create users'
+  - 'edit users by role'
+  - 'role-assign users by role'
+  - 'view paragraph content attachments'
+  - 'view the administration theme'
+  - 'view users by role'

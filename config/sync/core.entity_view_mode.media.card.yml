@@ -1,0 +1,13 @@
+uuid: e2822d99-27bb-4b94-872f-3922b4370919
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: OKmYgx8s-QI4Z5ORyTTQ3WSt1FadvnNBiwFGnlXIK6I
+id: media.card
+label: Card
+description: ''
+targetEntityType: media
+cache: true

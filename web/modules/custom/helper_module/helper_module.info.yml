@@ -1,0 +1,5 @@
+name: Remora Helper module
+type: module
+description: Help section for Remora product
+package: 'MRM'
+core_version_requirement: ^9 || ^10

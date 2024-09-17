@@ -1,0 +1,17 @@
+{
+  "name": "mrm-remora/promo_nugget",
+  "type": "drupal-custom-module",
+  "description": "Promo nugget - contains functionalities to enable Promo nugget",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Nelle Cutler",
+      "email": "nelle@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "drupal/field_group": "^3.4"
+  }
+}

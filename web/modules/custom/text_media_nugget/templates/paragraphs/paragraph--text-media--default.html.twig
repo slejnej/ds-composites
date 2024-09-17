@@ -1,0 +1,106 @@
+{% block paragraph %}
+
+  {% set classes = [
+    'paragraph',
+    'paragraph--type--text-media',
+  ] %}
+
+  {% block paragraph_content %}
+    <div{{ attributes.addClass(classes) }}>
+      {% block content %}
+
+        {% set presentation  = content.field_text_media_nt_presentation['#items'].0.value %}
+        {% set presentationStyle = presentation in ['feature_left', 'feature_right'] ? 'feature' : 'article' %}
+
+        {% if presentation ends with 'left' %}
+          {% set imageStyle  = 'image-left' %}
+        {% elseif presentation ends with 'right' %}
+          {% set imageStyle  = 'image-right' %}
+        {% elseif presentation == 'centre' %}
+          {% set imageStyle  = 'image-centre' %}
+        {% endif %}
+
+        {# ARTICLE #}
+        {% block article %}
+          {% if presentationStyle == 'article' %}
+            <div class="article-wrapper container-xxl">
+              <div class="article d-inline-block w-100">
+                {% block article_media %}
+                  {% if (presentation != 'text_only' and content.field_text_media_nt_media['#items'] is not empty) %}
+                    <div class="image-wrapper mb-3
+                      {% if imageStyle == 'image-left' %} float-md-start me-md-3 col-md-6
+                        {% elseif imageStyle == 'image-right' %} float-md-end ms-md-3 col-md-6
+                        {% elseif imageStyle == 'image-centre' %} col-md-8 mx-auto
+                      {% endif %}">
+                      {{ content.field_text_media_nt_media }}
+                    </div>
+                  {% endif %}
+                {% endblock %}
+
+                {% block article_text %}
+                  {% if content.field_display_title['#items'] is not empty or content.field_text_media_nt_text['#items'] is not empty %}
+                    <div class="text-wrapper">
+                      {% block article_title %}
+                        {% if content.field_display_title['#items'] is not empty %}
+                          <div class="h3 paragraph-title">{{ content.field_display_title.0 }}</div>
+                        {% endif %}
+                      {% endblock %}
+
+                      {% block article_media_text %}
+                        {% if content.field_text_media_nt_text['#items'] is not empty %}
+                          <div class="text-body">{{ content.field_text_media_nt_text }}</div>
+                        {% endif %}
+                      {% endblock %}
+                    </div>
+                  {% endif %}
+                {% endblock %}
+              </div>
+            </div>
+          {% endif %}
+        {% endblock %}
+
+
+        {# FEATURE #}
+        {% block feature %}
+          {% if presentationStyle == 'feature' %}
+            <div class="feature-wrapper {{ imageStyle }}">
+              <div class="feature container-xxl d-flex flex-wrap flex-column justify-content-center align-items-center
+                {% if imageStyle == 'image-left' %} flex-md-row
+                {% elseif imageStyle == 'image-right' %} flex-md-row-reverse
+                {% endif %}">
+
+                {% block feature_media %}
+                  {% if (content.field_text_media_nt_media['#items'] is not empty) %}
+                    <div class="image-wrapper w-100 flex-md-5 flex-lg-6 flex-xl-7">
+                      {{ content.field_text_media_nt_media }}
+                    </div>
+                  {% endif %}
+                {% endblock %}
+
+                {% block feature_text %}
+                  {% if content.field_display_title['#items'] is not empty or content.field_text_media_nt_text['#items'] is not empty %}
+                    <div class="text-wrapper position-relative flex-md-7 flex-lg-6 flex-xl-5">
+                      {% block feature_title %}
+                        {% if content.field_display_title['#items'] is not empty %}
+                          <div class="h3 paragraph-title">{{ content.field_display_title.0 }}</div>
+                        {% endif %}
+                      {% endblock %}
+
+                      {% block feature_media_text %}
+                        {% if content.field_text_media_nt_text['#items'] is not empty %}
+                          <div class="text-content">{{ content.field_text_media_nt_text }}</div>
+                        {% endif %}
+                      {% endblock %}
+                    </div>
+                  {% endif %}
+                {% endblock %}
+
+              </div>
+            </div>
+          {% endif %}
+        {% endblock %}
+
+      {% endblock %}
+    </div>
+  {% endblock %}
+{% endblock paragraph %}

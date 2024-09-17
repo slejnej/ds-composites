@@ -1,0 +1,39 @@
+.navbar-content {
+  @extend .p-0;
+}
+
+nav.navbar .navbar-nav .nav-item {
+  a.nav-link:not(.dropdown-item) {
+    padding-left: 24px;
+    padding-right: 24px;
+    font-weight: 400;
+    font-size: 1.375rem;
+  }
+  .dropdown-menu {
+    @extend .border-0;
+  }
+}
+
+.top-menu a.nav-link {
+  color: white;
+  padding: 0 $global-spacing-05;
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  &:hover {
+    color: $global-color-primary-primary-400;
+  }
+}
+
+.header-search-wrapper .header-search-icon {
+  margin-right: 10px;
+
+  @media(min-width: 992px) {
+    background: $navbar-search-bg;
+    svg {
+      fill: $global-color-warning-warning-500;
+    }
+  }
+}

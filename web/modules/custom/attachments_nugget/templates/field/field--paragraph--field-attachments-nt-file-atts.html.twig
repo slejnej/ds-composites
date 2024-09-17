@@ -1,0 +1,46 @@
+{% block field %}
+
+  {% set paragraph = element['#object'] %}
+  {% set items_per_row = paragraph.field_items_per_row.value %}
+  {% set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+    'items-per-row',
+    'row-max-' ~ items_per_row
+  ] %}
+
+  {% set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ] %}
+
+  {% if not label_hidden %}
+    <div{{ attributes.addClass(classes) }}>
+    {% block field_label %}
+      <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    {% endblock %}
+  {% endif %}
+
+  {% block field_content_wrapper %}
+
+    {% if multiple %}
+      <div{{ attributes.addClass(classes, 'field__items') }}>
+    {% endif %}
+
+    {% block field_content %}
+      {% remora_include 'includes/attachments-loop.html.twig' %}
+    {% endblock %}
+
+    {% if multiple %}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {% if not label_hidden %}
+    </div>
+  {% endif %}
+{% endblock %}
+

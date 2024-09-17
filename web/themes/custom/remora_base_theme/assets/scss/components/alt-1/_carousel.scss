@@ -1,0 +1,69 @@
+.palette-alt-1 {
+  &.carousel,
+  .carousel {
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      color: $alt-1-carousel-control-color;
+      width: $alt-1-carousel-control-width;
+
+      &:hover,
+      &:focus {
+        color: $alt-1-carousel-control-color;
+      }
+
+      // actual arrow
+      span {
+        height: $alt-1-carousel-control-arrow-height;
+        width: $alt-1-carousel-control-arrow-width;
+        background-color: $alt-1-carousel-control-arrow-bg-color;
+        border-radius: $alt-1-carousel-control-arrow-border-radius;
+      }
+    }
+
+    .carousel-indicators [data-bs-target] {
+      background-color: $alt-1-carousel-indicator-color;
+      width: $alt-1-carousel-indicator-width;
+      height: $alt-1-carousel-indicator-height;
+      border-radius: #{$alt-1-carousel-indicator-border-radius};
+      border-top-width: $alt-1-carousel-indicator-hit-area-height;
+      border-bottom-width: $alt-1-carousel-indicator-hit-area-height;
+      margin-left: $alt-1-carousel-indicator-spacer;
+      margin-right: $alt-1-carousel-indicator-spacer;
+
+      &.active {
+        background-color: $alt-1-carousel-indicator-active-bg;
+      }
+    }
+
+    .carousel-caption {
+      padding: $alt-1-carousel-caption-padding-y $alt-1-carousel-caption-padding-x;
+      color: $alt-1-carousel-caption-color;
+      background-color: $alt-1-carousel-caption-bg;
+      border-radius: $alt-1-carousel-caption-border-radius;
+      bottom: $alt-1-carousel-caption-bottom;
+      left: $alt-1-carousel-caption-left;
+      right: $alt-1-carousel-caption-right;
+      max-width: $alt-1-carousel-caption-max-width;
+      text-align: $alt-1-carousel-caption-text-align;
+
+      h5 {
+        margin-bottom: $alt-1-carousel-caption-spacer;
+      }
+
+      p {
+        color: $alt-1-carousel-caption-color-subtitle;
+      }
+    }
+
+    .carousel-item:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: $alt-1-carousel-bg;
+    }
+  }
+}

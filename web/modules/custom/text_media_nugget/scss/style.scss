@@ -1,0 +1,220 @@
+// Overwrites template styles to ensure image is full width when the container is too small to style as a feature
+// Used in Sidebar / Postscript (three col layout)
+#sidebar-nuggets,
+.layout-threecol {
+  .feature-wrapper .image-wrapper {
+    flex: 100%;
+  }
+}
+
+// Custom variables for nugget margins
+section:not(#sidebar-nuggets) .layout__region .paragraph.paragraph--type--text-media {
+  &:first-child {
+    margin-top: $layout-feature-article-margin-y;
+  }
+
+  //Half the margins in between nuggets to avoid large gaps
+  margin-top: calc($layout-feature-article-margin-y / 2);
+  margin-bottom: calc($layout-feature-article-margin-y / 2);
+
+  &:last-child {
+    margin-bottom: $layout-feature-article-margin-y;
+  }
+}
+
+section#sidebar-nuggets .layout__region .paragraph.paragraph--type--text-media {
+  margin-bottom: calc($layout-feature-article-margin-y / 2);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .feature-wrapper.image-right .text-wrapper {
+    padding: 1em 0 0;
+  }
+}
+
+@mixin text-media-feature-spacing($padding-y, $padding-x, $margin-left: 0, $margin-right: 0) {
+  padding: $padding-y $padding-x;
+
+  @if $margin-left != 0 {
+    margin-left: $margin-left;
+  }
+
+  @if $margin-right != 0 {
+    margin-right: $margin-right;
+  }
+}
+
+// Mixin to apply variables per palette
+@mixin text-media-feature($feature-bg, $text-bg, $text-padding-y, $text-padding-x, $text-spacer, $title-color,
+$text-color, $subtitle-color, $link-color, $link-hover-color, $text-margin-left: 0, $text-margin-right: 0) {
+  background-color: $feature-bg;
+  .text-wrapper {
+    background-color: $text-bg;
+    @include text-media-feature-spacing($global-spacing-05, 0);
+
+    @include media-breakpoint-up('sm') {
+      @include text-media-feature-spacing($global-spacing-1, $global-spacing-1);
+    }
+
+    @include media-breakpoint-up('md') {
+      @include text-media-feature-spacing($text-padding-y, $text-padding-x, $text-margin-left, $text-margin-right);
+    }
+
+    .paragraph-title {
+      color: $title-color;
+      margin-bottom: $text-spacer;
+    }
+
+    .text-content {
+      color: $text-color;
+
+      a:not(.btn) {
+        color: $link-color;
+
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+
+      p {
+        margin-bottom: $text-spacer;
+
+        &.text-larger {
+          color: $subtitle-color;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// DEFAULT (Palette-default and node content)
+
+.feature-wrapper {
+  &.image-left {
+    @include text-media-feature(
+      $featured-article-image-left-color-bg,
+      $featured-article-image-left-content-bg,
+      $featured-article-image-left-padding-y,
+      $featured-article-image-left-padding-x,
+      $featured-article-image-left-text-spacer,
+      $featured-article-image-left-title,
+      $featured-article-image-left-text,
+      $featured-article-image-left-subtitle,
+      $featured-article-image-left-link-color,
+      $featured-article-image-left-link-hover-color,
+      $featured-article-image-left-spacer-left,
+      0
+    );
+  }
+
+  &.image-right {
+    @include text-media-feature(
+      $featured-article-image-right-color-bg,
+      $featured-article-image-right-content-bg,
+      $featured-article-image-right-padding-y,
+      $featured-article-image-right-padding-x,
+      $featured-article-image-right-text-spacer,
+      $featured-article-image-right-title,
+      $featured-article-image-right-text,
+      $featured-article-image-right-subtitle,
+      $featured-article-image-right-link-color,
+      $featured-article-image-right-link-hover-color,
+      0,
+      $featured-article-image-right-spacer-right
+    );
+  }
+}
+
+// PALETTE-ALT-1
+
+.palette-alt-1 {
+  &.feature-wrapper,
+  .feature-wrapper {
+    &.image-left {
+      @include text-media-feature(
+        $alt-1-featured-article-image-left-color-bg,
+        $alt-1-featured-article-image-left-content-bg,
+        $alt-1-featured-article-image-left-padding-y,
+        $alt-1-featured-article-image-left-padding-x,
+        $alt-1-featured-article-image-left-text-spacer,
+        $alt-1-featured-article-image-left-title,
+        $alt-1-featured-article-image-left-text,
+        $alt-1-featured-article-image-left-subtitle,
+        $alt-1-featured-article-image-left-link-color,
+        $alt-1-featured-article-image-left-link-hover-color,
+        $alt-1-featured-article-image-left-spacer-left,
+        0
+      );
+    }
+
+    &.image-right {
+      @include text-media-feature(
+        $alt-1-featured-article-image-right-color-bg,
+        $alt-1-featured-article-image-right-content-bg,
+        $alt-1-featured-article-image-right-padding-y,
+        $alt-1-featured-article-image-right-padding-x,
+        $alt-1-featured-article-image-right-text-spacer,
+        $alt-1-featured-article-image-right-title,
+        $alt-1-featured-article-image-right-text,
+        $alt-1-featured-article-image-right-subtitle,
+        $alt-1-featured-article-image-right-link-color,
+        $alt-1-featured-article-image-right-link-hover-color,
+        0,
+        $alt-1-featured-article-image-right-spacer-right
+      );
+    }
+  }
+}
+
+// PALETTE-ALT-2
+
+.palette-alt-2 {
+  &.feature-wrapper,
+  .feature-wrapper {
+    &.image-left {
+      @include text-media-feature(
+        $alt-2-featured-article-image-left-color-bg,
+        $alt-2-featured-article-image-left-content-bg,
+        $alt-2-featured-article-image-left-padding-y,
+        $alt-2-featured-article-image-left-padding-x,
+        $alt-2-featured-article-image-left-text-spacer,
+        $alt-2-featured-article-image-left-title,
+        $alt-2-featured-article-image-left-text,
+        $alt-2-featured-article-image-left-subtitle,
+        $alt-2-featured-article-image-left-link-color,
+        $alt-2-featured-article-image-left-link-hover-color,
+        $alt-2-featured-article-image-left-spacer-left,
+        0
+      );
+    }
+
+    &.image-right {
+      @include text-media-feature(
+        $alt-2-featured-article-image-right-color-bg,
+        $alt-2-featured-article-image-right-content-bg,
+        $alt-2-featured-article-image-right-padding-y,
+        $alt-2-featured-article-image-right-padding-x,
+        $alt-2-featured-article-image-right-text-spacer,
+        $alt-2-featured-article-image-right-title,
+        $alt-2-featured-article-image-right-text,
+        $alt-2-featured-article-image-right-subtitle,
+        $alt-2-featured-article-image-right-link-color,
+        $alt-2-featured-article-image-right-link-hover-color,
+        0,
+        $alt-2-featured-article-image-right-spacer-right
+      );
+    }
+  }
+}
+
+// SIDEBARS
+
+#sidebar-nuggets {
+  .paragraph--type--text-media .article-wrapper .image-wrapper {
+    @extend .float-none, .col-md-12, .m-0;
+  }
+}

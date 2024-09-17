@@ -1,0 +1,61 @@
+{% block accordion_facet_wrapper %}
+
+  <div class="accordion-item facet-item mb-3">
+
+    {% set accordion_id = 'accordion_'~facet.originalID %}
+
+    {% block accordion_facet_header %}
+      {%- if title is not empty -%}
+        <div class="accordion-header facet-title" id="{{ accordion_id }}-heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{ accordion_id }}" aria-expanded="false" aria-controls="{{ accordion_id }}">
+            {{ title }}
+          </button>
+        </div>
+      {%- endif -%}
+    {% endblock %}
+
+    {% block accordion_facet_content %}
+      <div id="{{ accordion_id }}" class="accordion-collapse collapse" aria-labelledby="{{ accordion_id }}-heading">
+        <div class="accordion-body facet-body">
+
+          {% block facet_search %}
+            {% if items|length > 20 %}
+              <div class="facet-search mb-3">
+                <input type="text" class="filter-search w-100 fs-14 form-control" placeholder="Text search" aria-label="Search" data-filter-content="filter-list">
+              </div>
+            {% endif %}
+          {% endblock %}
+
+          {% block facet_list %}
+            <div class="filter-list">
+              <div class="facets-widget-{{- facet.widget.type -}}">
+                {% if facet.widget.type %}
+                  {%- set attributes = attributes.addClass('item-list__' ~ facet.widget.type) %}
+                {% endif %}
+
+                {% if items or empty %}
+                  {%- if items -%}
+                    <{{ list_type }}{{ attributes }}>
+                      {%- for item in items -%}
+                        <li{{ item.attributes }}>{{ item.value }}</li>
+                      {%- endfor -%}
+                    </{{ list_type }}>
+                  {%- else -%}
+                    {{- empty -}}
+                  {%- endif -%}
+                {%- endif %}
+
+                {% if facet.widget.type == "dropdown" %}
+                  <label id="facet_{{ facet.id }}_label">{{ 'Facet'|t }} {{ facet.label }}</label>
+                {%- endif %}
+              </div>
+            </div>
+          {% endblock %}
+
+        </div>
+      </div>
+    {% endblock %}
+
+  </div>
+{% endblock %}
+

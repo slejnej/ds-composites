@@ -1,0 +1,16 @@
+{
+  "name": "mrm-remora/slideshow_nugget",
+  "type": "drupal-custom-module",
+  "description": "Slideshow nugget - contains functionalities to enable slideshow nugget paragraphs. Also provides Slide nugglet",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Dilwar Hussain",
+      "email": "dilwar@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1"
+  }
+}

@@ -1,0 +1,12 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies: {  }
+label: 'Landscape: 21x9'
+id: landscape_21x9
+description: ''
+aspect_ratio: '21:9'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

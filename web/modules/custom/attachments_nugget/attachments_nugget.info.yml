@@ -1,0 +1,12 @@
+name: Attachments nugget module
+type: module
+description: 'Contains functionalities for attachments nugget'
+version: 0.0.1
+core_version_requirement: ^9 || ^10
+package: Remora
+dependencies:
+  - drupal:media
+  - drupal:field_group
+  - drupal:media_library
+  - drupal:paragraphs
+  - drupal:remora_core

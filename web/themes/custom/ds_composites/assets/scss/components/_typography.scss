@@ -1,0 +1,20 @@
+section:not(#sidebar-nuggets) .section-title-wrapper .section-title {
+  &::before {
+    $width: 45px;
+    $margin-right: 2rem;
+
+    background: url('../assets/images/blob.svg') center center / cover;
+    content: '';
+    display: inline-block;
+    height: 40px;
+    margin-right: $margin-right;
+    vertical-align: middle;
+    width: $width;
+
+    @media (min-width: 1700px) {
+      margin-left: #{calc(0px - $margin-right - $width)};
+      position: absolute;
+    }
+  }
+}
+

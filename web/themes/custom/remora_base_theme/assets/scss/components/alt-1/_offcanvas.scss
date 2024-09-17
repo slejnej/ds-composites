@@ -1,0 +1,11 @@
+.palette-alt-1 {
+  &.offcanvas,
+  .offcanvas {
+    --bs-offcanvas-width: #{$alt-1-offcanvas-horizontal-width};
+    --bs-offcanvas-padding-x: #{$alt-1-offcanvas-padding-x};
+    --bs-offcanvas-padding-y: #{$alt-1-offcanvas-padding-y};
+    --bs-offcanvas-color: #{$alt-1-offcanvas-color};
+    --bs-offcanvas-bg: #{$alt-1-offcanvas-bg-color};
+    --bs-offcanvas-border-color: #{$alt-1-offcanvas-border-color};
+  }
+}

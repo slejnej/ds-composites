@@ -1,0 +1,13 @@
+uuid: 81d1df0a-2380-49fa-a574-3352cc587908
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tags
+_core:
+  default_config_hash: FGcVaCe7fMOpXHLPxMFYrWtdk9ei_85mBLXVl7jMcAs
+id: taxonomy_term.tags
+target_entity_type_id: taxonomy_term
+target_bundle: tags
+default_langcode: site_default
+language_alterable: false

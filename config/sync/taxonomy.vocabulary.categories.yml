@@ -1,0 +1,10 @@
+uuid: 1cab2aca-fd9a-46a7-892d-2c958f0ba87d
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xr7_T64WcTqL4R0_xtMZVsHrtEWwhR9DrxeeKtS1FKA
+name: Categories
+vid: categories
+description: ''
+weight: 0

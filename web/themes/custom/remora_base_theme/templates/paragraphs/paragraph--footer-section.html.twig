@@ -1,0 +1,26 @@
+{% block paragraph %}
+
+  {%
+    set classes = [
+    'paragraph-section',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'layout-' ~ content.regions['#theme']|split("__")|last|split("_")|first,
+    'layout-cols-' ~ content.regions['#settings'].column_widths
+  ]
+  %}
+
+  {% block paragraph_content %}
+    <div{{ attributes.addClass(classes) }}>
+      {% block content %}
+
+        {% block section_content %}
+          {{ content }}
+        {% endblock %}
+
+      {% endblock %}
+    </div>
+  {% endblock %}
+
+{% endblock %}

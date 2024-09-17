@@ -1,0 +1,10 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.search_rendered_output
+label: 'Search rendered output'
+targetEntityType: node
+cache: true

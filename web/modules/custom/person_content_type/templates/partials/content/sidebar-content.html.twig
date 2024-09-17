@@ -1,0 +1,28 @@
+{% if any_fields_not_empty(content, ['field_social_media', 'field_photo']) %}
+  <aside id="content-sidebar-fields" class="col-12 col-md-3">
+    <div class="sidebar-fields-wrapper d-flex flex-column">
+      {% block sidebar_details %}
+        <div class="left-sidebar-section sidebar-details d-flex flex-column border-0">
+
+          {% block photo %}
+            {% if content.field_photo['#items'] is not empty %}
+              <div class="media-wrapper">
+                {% set media_entity = content.field_photo['#items'].entity %}
+                {{ media_entity|view('portrait_3_4') }}
+              </div>
+            {% endif %}
+          {% endblock %}
+
+          {% block social %}
+            {% if content.field_social_media['#items'] is not empty %}
+              <div class="node-social d-flex justify-content-center">
+                {{ content.field_social_media }}
+              </div>
+            {% endif %}
+          {% endblock %}
+
+        </div>
+      {% endblock %}
+    </div>
+  </aside>
+{% endif %}

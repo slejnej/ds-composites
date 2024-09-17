@@ -1,0 +1,22 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  module:
+    - administerusersbyrole
+    - system
+    - toolbar
+id: web_admin
+label: 'Web admin'
+weight: -10
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'access users overview'
+  - 'allow empty user mail'
+  - 'cancel users by role'
+  - 'create users'
+  - 'edit users by role'
+  - 'role-assign users by role'
+  - 'view the administration theme'
+  - 'view users by role'

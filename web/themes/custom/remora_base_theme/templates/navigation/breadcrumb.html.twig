@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+{% block breadcrumbs %}
+  {% if breadcrumb %}
+    <nav aria-label="breadcrumb">
+      <div class="breadcrumb-wrapper">
+        <div id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</div>
+        <div class="container-xxl">
+
+          {% block breadcrumb_items %}
+            <ol class="breadcrumb overflow-hidden mb-0">
+              {% for item in breadcrumb %}
+                {% set text = item.text|truncate(80, true, "...")|check_markup('title') %}
+
+                {% block item %}
+                  <li class="breadcrumb-item overflow-hidden d-block">
+                    {% if item.url %}
+                      <a href="{{ item.url }}" {% if loop.first %}aria-label="Navigate home"{% endif %}>
+                        {% if loop.first %}
+                          <div class="breadcrumb-home">
+                            {% block home_icon %}
+                              <svg class="bi text-primary" width="16" height="16">
+                                <use xlink:href="{{ get_bs_icon_path('house') }}"/>
+                              </svg>
+                            {% endblock %}
+                          </div>
+                        {% else %}
+                          {{ text }}
+                        {% endif %}
+                      </a>
+                    {% else %}
+                      {{ text }}
+                    {% endif %}
+                  </li>
+                {% endblock %}
+
+              {% endfor %}
+            </ol>
+          {% endblock %}
+
+        </div>
+      </div>
+    </nav>
+  {% endif %}
+{% endblock %}

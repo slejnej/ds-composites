@@ -1,0 +1,114 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\remora_core\Manager\ModulePermissionsManager;
+
+/**
+ *  Automatically registers all the templates in the templates/ directory
+ * @return array The theme containing the theme implementations (templates)
+ */
+function text_media_nugget_theme(): array
+{
+  return Drupal::service('remora_core.service.module_template')->generateThemesFromTemplates('text_media_nugget');
+}
+
+/**
+ * Validation and conditional fields for text/media nugget forms
+ *
+ * Implements hook_form_alter().
+ */
+function text_media_nugget_form_alter(array &$form, FormStateInterface &$form_state, string $form_id): void
+{
+
+  // Bit of a pants way to check if text_media paragraph form, but because rendered through layout_paragaphs it's all I can see
+  if(!isset($form['field_text_media_nt_text'])) {
+    return;
+  }
+
+  // Add conditional logic for showing/hiding fields based on the value of the 'presentation' field
+  $form['field_text_media_nt_text']['#states'] = [
+    'visible' => [
+      ':input[name="field_text_media_nt_presentation"]' => [
+        ['value' => 'text_only'],
+        ['value' => 'article_left'],
+        ['value' => 'article_right'],
+        ['value' => 'feature_left'],
+        ['value' => 'feature_right'],
+        ['value' => 'centre'],
+      ],
+    ],
+  ];
+
+  $form['field_text_media_nt_media']['#states'] = [
+    'visible' => [
+      ':input[name="field_text_media_nt_presentation"]' => [
+        ['value' => 'media_only'],
+        ['value' => 'article_left'],
+        ['value' => 'article_right'],
+        ['value' => 'feature_left'],
+        ['value' => 'feature_right'],
+        ['value' => 'centre'],
+      ],
+    ],
+  ];
+
+  // Validate if Media or Text nugget are populated based on Presentation field
+  $form['#validate'][] = 'text_media_nugget_custom_validation';
+
+}
+
+/**
+ * Validate the text/media fields are filled in according to presentation field value
+ *
+ * @param FormStateInterface $form_state
+ * @return void
+ */
+function text_media_nugget_custom_validation(array $form, FormStateInterface $form_state): void
+{
+
+  $values = $form_state->getValues();
+
+  $presentation_value = $values['field_text_media_nt_presentation'][0]['value'];
+  $media_value = $values['field_text_media_nt_media']['selection'] ?? null;
+  $text_value = $values['field_text_media_nt_text'][0]['value'] ?? null;
+
+  // Check the value of the 'presentation' field and set error status accordingly
+  if($presentation_value === 'text_only' && empty($text_value)) {
+    $form_state->setErrorByName('field_text_media_nt_text', t('With this presentation selected the Text field must be populated.'));
+  } else if($presentation_value === 'media_only' && empty($media_value)) {
+    $form_state->setErrorByName('field_text_media_nt_media', t('With this presentation selected the Media field must be populated.'));
+  } else if(empty($media_value) && empty($text_value)) {
+    $form_state->setErrorByName('field_text_media_nt_media', t('Either the Media or Text field must be populated.'));
+    $form_state->setErrorByName('field_text_media_nt_text', t('Either the Media or Text field must be populated.'));
+  }
+
+}
+
+function text_media_nugget_preprocess_paragraph__text_media_nugget_paragraph__default(array &$variables): void
+{
+  $variables['#attached']['library'][] = 'text_media_nugget/nugget-styling';
+}
+
+/**
+ * Added viewing permissions for authenticated and anonymous users
+ */
+function text_media_nugget_update_10005(): void
+{
+  try {
+    /** @var ModulePermissionsManager $permissionsManager */
+    $permissionsManager = Drupal::service('remora_core.manager.module_permissions');
+    $permissionsManager->handleModulePermissions('text_media_nugget');
+  } catch(Exception $e) {
+    Drupal::service('remora_core.logger')->error($e->getMessage());
+  }
+}
+
+function text_media_nugget_page_attachments(array &$attachments): void
+{
+  if (!isset($attachments['#attached']['library'])) {
+    $attachments['#attached']['library'] = [];
+  }
+  if (Drupal::service('router.admin_context')->isAdminRoute()) {
+    $attachments['#attached']['library'][] = 'text_media_nugget/styles';
+  }
+}

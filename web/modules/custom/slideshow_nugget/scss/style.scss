@@ -1,0 +1,313 @@
+// Custom variables for slideshow margins
+section:not(#sidebar-nuggets) .layout__region .paragraph.paragraph--type--slideshow {
+  &:first-child {
+    margin-top: $layout-carousel-margin-y;
+  }
+
+  //Half the margins in between nuggets to avoid large gaps
+  margin-top: calc($layout-carousel-margin-y / 2);
+  margin-bottom: calc($layout-carousel-margin-y / 2);
+
+  &:last-child {
+    margin-bottom: $layout-carousel-margin-y;
+  }
+}
+
+section:not(#sidebar-nuggets) .layout__region .paragraph.paragraph--type--slide-nugglet {
+  margin: 0;
+}
+
+.paragraph--type--slideshow {
+
+  .slide-image img {
+    max-height: 800px;
+  }
+
+  .carousel-caption {
+    background: $carousel-caption-bg;
+    border-radius: $carousel-caption-border-radius;
+    color: $carousel-caption-color;
+    gap: calc($carousel-caption-spacer / 2);
+    padding: $carousel-caption-mobile-padding-y $carousel-caption-mobile-padding-x $carousel-caption-mobile-padding-y $carousel-caption-mobile-padding-x;
+    max-width: $carousel-caption-max-width;
+    text-align: $carousel-caption-text-align;
+    bottom: calc($carousel-caption-bottom-mobile + $carousel-indicator-hit-area-height + $carousel-caption-bottom-mobile);
+    left: $carousel-caption-left-mobile;
+    right: $carousel-caption-right-mobile;
+
+    @include media-breakpoint-up('sm') {
+      gap: $carousel-caption-spacer;
+      padding: $carousel-caption-padding-y $carousel-caption-padding-x $carousel-caption-padding-y $carousel-caption-padding-x;
+      bottom: calc($carousel-caption-bottom-tablet + $carousel-indicator-hit-area-height + $carousel-caption-bottom-tablet);
+      left: $carousel-caption-left-tablet;
+      right: $carousel-caption-right-tablet;
+    }
+
+    @include media-breakpoint-up('lg') {
+      padding: $carousel-caption-padding-y $carousel-caption-padding-x;
+      right: $carousel-caption-right;
+      bottom: $carousel-caption-bottom;
+      left: $carousel-caption-left;
+    }
+
+    .caption-title {
+      @include typography-mobile($text-mobile-title-slideshow-font, $text-mobile-title-slideshow-size, $text-mobile-title-slideshow-weight, $text-mobile-title-slideshow-line-height);
+      @include typography-desktop($text-desktop-title-slideshow-font, $text-desktop-title-slideshow-size, $text-desktop-title-slideshow-weight, $text-desktop-title-slideshow-line-height);
+    }
+
+    .caption-subtitle p {
+      color: $carousel-caption-color-subtitle;
+      @include typography-mobile($text-mobile-title-slideshow-sub-font, $text-mobile-title-slideshow-sub-size, $text-mobile-title-slideshow-sub-weight, $text-mobile-title-slideshow-sub-line-height);
+      @include typography-desktop($text-desktop-title-slideshow-sub-font, $text-desktop-title-slideshow-sub-size, $text-desktop-title-slideshow-sub-weight, $text-desktop-title-slideshow-sub-line-height);
+    }
+
+  }
+
+  .slideshow-controls {
+    // Arrows
+    button.arrow {
+      height: $carousel-control-arrow-height;
+      width: $carousel-control-arrow-width;
+      background: $carousel-control-arrow-bg-color;
+      border-radius: $carousel-control-arrow-border-radius;
+      opacity: 0.5;
+      border-color: $carousel-control-default-border;
+      border-width: $carousel-control-border-width;
+      top: calc(50% - ($carousel-control-arrow-height / 2));
+      margin: $carousel-control-margin-y $carousel-control-margin-x $carousel-control-margin-y $carousel-control-margin-x;
+
+      svg {
+        fill: $carousel-control-color;
+
+        &:hover {
+          fill: $carousel-control-hover-color;
+        }
+      }
+
+      &:hover {
+        background: $carousel-control-arrow-bg-hover-color;
+        border-color: $carousel-control-hover-border;
+      }
+
+      &.slideshow-prev {
+        left: 0;
+      }
+
+      &.slideshow-next {
+        right: 0;
+      }
+    }
+
+    // Markers
+
+    .slideshow-dots {
+      bottom: 0;
+
+      ul.slick-dots {
+        @extend .list-unstyled, .d-flex;
+        height: $carousel-indicator-hit-area-height;
+        gap: $carousel-indicator-spacer;
+        bottom: 0;
+
+        li {
+          display: flex;
+
+          button {
+            width: $carousel-indicator-width;
+            height: $carousel-indicator-height;
+            border-radius: $carousel-indicator-border-radius;
+            background: $carousel-indicator-color;
+            border: none;
+            text-indent: -9999px;
+            transition: width 150ms ease-in-out;
+          }
+
+          &.slick-active button {
+            background: $carousel-indicator-active-bg;
+            width: calc($carousel-indicator-width + 10px);
+            height: $carousel-indicator-active-height;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//// Mixin to apply variables per palette
+@mixin slideshow_caption($slideshow-bg, $slideshow-caption-border-radius, $slideshow-caption-spacer, $slideshow-caption-max-width,
+$slideshow-caption-text-align, $slideshow-caption-bg, $slideshow-caption-color, $carousel-caption-padding-y,
+$slideshow-caption-padding-x, $slideshow-caption-right, $slideshow-caption-bottom, $slideshow-caption-left,
+$slideshow-caption-color-subtitle ) {
+  .carousel-caption {
+    background: $slideshow-caption-bg;
+    border-radius: $slideshow-caption-border-radius;
+    gap: calc($slideshow-caption-spacer / 2);
+    max-width: $slideshow-caption-max-width;
+    text-align: $slideshow-caption-text-align;
+    color: $slideshow-caption-color;
+
+    .caption-subtitle {
+      color: $slideshow-caption-color-subtitle;
+    }
+
+    @include media-breakpoint-up('md') {
+      gap: $slideshow-caption-spacer;
+    }
+
+    @include media-breakpoint-up('xl') {
+      padding: $carousel-caption-padding-y $slideshow-caption-padding-x;
+      right: $slideshow-caption-right;
+      bottom: $slideshow-caption-bottom;
+      left: $slideshow-caption-left;
+    }
+
+
+  }
+}
+
+
+@mixin slideshow_controls($slideshow-control-arrow-height, $slideshow-control-arrow-width, $slideshow-control-arrow-bg-color,
+$slideshow-control-arrow-border-radius, $slideshow-control-color, $slideshow-indicator-hit-area-height, $slideshow-indicator-spacer,
+$slideshow-indicator-width, $slideshow-indicator-height, $slideshow-indicator-border-radius, $slideshow-indicator-color,
+ $slideshow-indicator-active-bg) {
+  .slideshow-controls {
+    // Arrows
+    button.arrow {
+      height: $slideshow-control-arrow-height;
+      width: $slideshow-control-arrow-width;
+      background: $slideshow-control-arrow-bg-color;
+      border-radius: $slideshow-control-arrow-border-radius;
+      top: calc(50% - ($slideshow-control-arrow-height / 2));
+
+      svg {
+        fill: $slideshow-control-color;
+      }
+    }
+
+    // Markers
+
+    .slideshow-dots {
+
+      ul.slick-dots {
+        @extend .list-unstyled, .d-flex;
+        height: $slideshow-indicator-hit-area-height;
+        gap: $slideshow-indicator-spacer;
+
+        li {
+          button {
+            width: $slideshow-indicator-width;
+            height: $slideshow-indicator-height;
+            border-radius: $slideshow-indicator-border-radius;
+            background: $slideshow-indicator-color;
+          }
+
+          &.slick-active button {
+            background: $slideshow-indicator-active-bg;
+            width: calc($slideshow-indicator-width + 10px);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// DEFAULT
+
+.slick-slideshow {
+  @include slideshow_caption(
+                  $carousel-bg,
+                  $carousel-caption-border-radius,
+                  $carousel-caption-spacer,
+                  $carousel-caption-max-width,
+                  $carousel-caption-text-align,
+                  $carousel-caption-bg,
+                  $carousel-caption-color,
+                  $carousel-caption-padding-y,
+                  $carousel-caption-padding-x,
+                  $carousel-caption-right,
+                  $carousel-caption-bottom,
+                  $carousel-caption-left,
+                  $carousel-caption-color-subtitle);
+
+  @include slideshow_controls(
+                  $carousel-control-arrow-height,
+                  $carousel-control-arrow-width,
+                  $carousel-control-arrow-bg-color,
+                  $carousel-control-arrow-border-radius,
+                  $carousel-control-color,
+                  $carousel-indicator-hit-area-height,
+                  $carousel-indicator-spacer,
+                  $carousel-indicator-width,
+                  $carousel-indicator-height,
+                  $carousel-indicator-border-radius,
+                  $carousel-indicator-color,
+                  $carousel-indicator-active-bg);
+}
+
+// PALETTE-ALT-1
+
+.palette-alt-1 .slick-slideshow {
+  @include slideshow_caption(
+                  $alt-1-carousel-bg,
+                  $alt-1-carousel-caption-border-radius,
+                  $alt-1-carousel-caption-spacer,
+                  $alt-1-carousel-caption-max-width,
+                  $alt-1-carousel-caption-text-align,
+                  $alt-1-carousel-caption-bg,
+                  $alt-1-carousel-caption-color,
+                  $alt-1-carousel-caption-padding-y,
+                  $alt-1-carousel-caption-padding-x,
+                  $alt-1-carousel-caption-right,
+                  $alt-1-carousel-caption-bottom,
+                  $alt-1-carousel-caption-left,
+                  $alt-1-carousel-caption-color-subtitle);
+
+  @include slideshow_controls(
+                  $alt-1-carousel-control-arrow-height,
+                  $alt-1-carousel-control-arrow-width,
+                  $alt-1-carousel-control-arrow-bg-color,
+                  $alt-1-carousel-control-arrow-border-radius,
+                  $alt-1-carousel-control-color,
+                  $alt-1-carousel-indicator-hit-area-height,
+                  $alt-1-carousel-indicator-spacer,
+                  $alt-1-carousel-indicator-width,
+                  $alt-1-carousel-indicator-height,
+                  $alt-1-carousel-indicator-border-radius,
+                  $alt-1-carousel-indicator-color,
+                  $alt-1-carousel-indicator-active-bg);
+}
+
+// PALETTE-ALT-2
+
+.palette-alt-2 .slick-slideshow {
+  @include slideshow_caption(
+                  $alt-2-carousel-bg,
+                  $alt-2-carousel-caption-border-radius,
+                  $alt-2-carousel-caption-spacer,
+                  $alt-2-carousel-caption-max-width,
+                  $alt-2-carousel-caption-text-align,
+                  $alt-2-carousel-caption-bg,
+                  $alt-2-carousel-caption-color,
+                  $alt-2-carousel-caption-padding-y,
+                  $alt-2-carousel-caption-padding-x,
+                  $alt-2-carousel-caption-right,
+                  $alt-2-carousel-caption-bottom,
+                  $alt-2-carousel-caption-left,
+                  $alt-2-carousel-caption-color-subtitle);
+
+  @include slideshow_controls(
+                  $alt-2-carousel-control-arrow-height,
+                  $alt-2-carousel-control-arrow-width,
+                  $alt-2-carousel-control-arrow-bg-color,
+                  $alt-2-carousel-control-arrow-border-radius,
+                  $alt-2-carousel-control-color,
+                  $alt-2-carousel-indicator-hit-area-height,
+                  $alt-2-carousel-indicator-spacer,
+                  $alt-2-carousel-indicator-width,
+                  $alt-2-carousel-indicator-height,
+                  $alt-2-carousel-indicator-border-radius,
+                  $alt-2-carousel-indicator-color,
+                  $alt-2-carousel-indicator-active-bg);
+}

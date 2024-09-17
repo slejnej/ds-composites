@@ -1,0 +1,10 @@
+<?php
+
+/**
+ *  Automatically registers all the templates in the templates/ directory
+ * @return array The theme containing the theme implementations (templates)
+ */
+function person_content_type_theme(): array
+{
+  return Drupal::service('remora_core.service.module_template')->generateThemesFromTemplates('person_content_type');
+}

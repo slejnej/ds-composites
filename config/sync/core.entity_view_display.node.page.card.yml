@@ -1,0 +1,94 @@
+uuid: 5801ce53-144a-4593-a5fd-d656586d1add
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.page.field_alternative_title
+    - field.field.node.page.field_body
+    - field.field.node.page.field_categories
+    - field.field.node.page.field_countries
+    - field.field.node.page.field_diseases
+    - field.field.node.page.field_hero_content
+    - field.field.node.page.field_image
+    - field.field.node.page.field_landing
+    - field.field.node.page.field_main_nuggets
+    - field.field.node.page.field_media
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_postscript_nuggets
+    - field.field.node.page.field_seo_description
+    - field.field.node.page.field_seo_title
+    - field.field.node.page.field_sidebar_nuggets
+    - field.field.node.page.field_summary
+    - field.field.node.page.field_tags
+    - field.field.node.page.field_topics
+    - node.type.page
+  module:
+    - field_layout
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: ho2oJlhSP94ptDyYqi9l31ean09PlUQ2rQAKy7Vy4Bw
+id: node.page.card
+targetEntityType: node
+bundle: page
+mode: card
+content:
+  field_alternative_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_categories:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: card
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_countries: true
+  field_diseases: true
+  field_hero_content: true
+  field_landing: true
+  field_main_nuggets: true
+  field_media: true
+  field_meta_tags: true
+  field_postscript_nuggets: true
+  field_seo_description: true
+  field_seo_title: true
+  field_sidebar_nuggets: true
+  field_summary: true
+  field_tags: true
+  field_topics: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

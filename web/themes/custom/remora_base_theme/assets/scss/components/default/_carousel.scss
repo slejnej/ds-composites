@@ -1,0 +1,66 @@
+div.carousel {
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    color: $carousel-control-color;
+    width: $carousel-control-width;
+
+    &:hover,
+    &:focus {
+      color: $carousel-control-color;
+    }
+
+    // actual arrow
+    span {
+      height: $carousel-control-arrow-height;
+      width: $carousel-control-arrow-width;
+      background-color: $carousel-control-arrow-bg-color;
+      border-radius: $carousel-control-arrow-border-radius;
+    }
+  }
+
+  .carousel-indicators [data-bs-target] {
+    background-color: $carousel-indicator-color;
+    width: $carousel-indicator-width;
+    height: $carousel-indicator-height;
+    border-radius: #{$carousel-indicator-border-radius};
+    border-top-width: $carousel-indicator-hit-area-height;
+    border-bottom-width: $carousel-indicator-hit-area-height;
+    margin-left: $carousel-indicator-spacer;
+    margin-right: $carousel-indicator-spacer;
+
+    &.active {
+      background-color: $carousel-indicator-active-bg;
+    }
+  }
+
+  .carousel-caption {
+    padding: $carousel-caption-padding-y $carousel-caption-padding-x;
+    color: $carousel-caption-color;
+    background-color: $carousel-caption-bg;
+    border-radius: $carousel-caption-border-radius;
+    bottom: $carousel-caption-bottom;
+    left: $carousel-caption-left;
+    right: $carousel-caption-right;
+    max-width: $carousel-caption-max-width;
+    text-align: $carousel-caption-text-align;
+
+    h5 {
+      margin-bottom: $carousel-caption-spacer;
+    }
+
+    p {
+      color: $carousel-caption-color-subtitle;
+    }
+  }
+
+  .carousel-item:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $carousel-bg;
+  }
+}

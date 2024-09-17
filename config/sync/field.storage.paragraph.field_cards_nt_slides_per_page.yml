@@ -1,0 +1,41 @@
+uuid: b93d0862-8cb7-4e97-9f13-9ba84ba83c5f
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+  enforced:
+    module:
+      - cards_nugget
+_core:
+  default_config_hash: 2pbyFwbnSQTVfYI0wRHZ7IWegXeRw2i9aCFvCXzqiaQ
+id: paragraph.field_cards_nt_slides_per_page
+field_name: field_cards_nt_slides_per_page
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: One
+    -
+      value: '2'
+      label: Two
+    -
+      value: '3'
+      label: Three
+    -
+      value: '4'
+      label: Four
+    -
+      value: '6'
+      label: Six
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

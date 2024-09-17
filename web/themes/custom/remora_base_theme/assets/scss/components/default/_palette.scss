@@ -1,0 +1,20 @@
+.palette-default-bg {
+  background-color: $surface-primary;
+
+  h2, h3, h4, h5, h6 {
+    color: $text-primary;
+  }
+
+  .text-body,
+  .body-wrapper {
+    color: $text-secondary!important;
+
+    a {
+      color: $text-link;
+
+      &:hover {
+        color: $text-link-hover;
+      }
+    }
+  }
+}

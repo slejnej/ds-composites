@@ -1,0 +1,24 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_nuggets
+    - node.type.page
+  module:
+    - entity_reference_revisions
+id: node.page.field_sidebar_nuggets
+field_name: field_sidebar_nuggets
+entity_type: node
+bundle: page
+label: 'Sidebar nuggets'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_paragraph_types_sidebar
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference_revisions

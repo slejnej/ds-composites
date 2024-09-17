@@ -1,0 +1,51 @@
+uuid: 80f1b637-9aae-4e8b-8d96-b5eb3501d6a7
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards_nt_card
+    - paragraphs.paragraphs_type.card_nugglet
+    - paragraphs.paragraphs_type.cards
+  module:
+    - entity_reference_revisions
+  enforced:
+    module:
+      - cards_nugget
+_core:
+  default_config_hash: vj9mUMkYZCA8U7zr3xtFtt0IKzxeI0e2_p9Ud74lbME
+id: paragraph.cards.field_cards_nt_card
+field_name: field_cards_nt_card
+entity_type: paragraph
+bundle: cards
+label: Card
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      card_nugglet: card_nugglet
+    negate: 0
+    target_bundles_drag_drop:
+      card_nugglet:
+        weight: 8
+        enabled: true
+      cards:
+        weight: 7
+        enabled: false
+      flexible_layout:
+        weight: 9
+        enabled: false
+      section:
+        weight: 10
+        enabled: false
+      test:
+        weight: 11
+        enabled: false
+      text_media:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

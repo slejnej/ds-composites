@@ -1,0 +1,335 @@
+// move all the links inside the card-body above the stretched link
+.card-text a {
+  position: relative;
+  z-index: 2;
+}
+
+// if the card has a footer (e.g. summary/tags) hide the border separating the footer and body to make em look like 1
+html body .card {
+  border: none;
+
+  .card-footer {
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  // hide a stretched button but let it stretch still
+  .btn-stretched-hidden {
+    max-height: 0 !important;
+    max-width: 0 !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+    min-width: 0 !important;
+    border: none !important;
+  }
+}
+
+// If a card has a header, overlap the image, if no image, position header at top of card
+.card-with-image .card-header {
+  @extend .position-absolute;
+  bottom: 0;
+}
+
+// Sliders
+
+.card-slider {
+  .slick-cards {
+    .slick-list {
+      margin-bottom: $global-spacing-2;
+      @include media-breakpoint-up('sm') {
+        margin-left: - (calc($global-spacing-2 / 2));
+        margin-right: - (calc($global-spacing-2 / 2));
+      }
+
+      .slide {
+        @include media-breakpoint-up('sm') {
+          padding: 0 calc($global-spacing-2 / 2);
+        }
+      }
+    }
+  }
+
+  .slider-controls {
+    gap: 20px;
+
+    // Arrows
+    button.arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 16px;
+        height: 16px
+      }
+
+      &.slide-cards-next {
+        right: 0;
+      }
+    }
+
+    // Markers
+    .slide-cards-dots {
+      ul.slick-dots {
+        @extend .list-unstyled, .d-flex, .align-items-center, .m-0;
+        bottom: 0;
+
+        li {
+          button {
+            border: none;
+            text-indent: -9999px;
+            transition: width 150ms ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// ONE AND TWO IN A ROW in ONE COL SECTION
+
+.layout-onecol {
+  .row-max-1 .card-body-image-wrapper.card-with-image {
+    @include media-breakpoint-up('sm') {
+      flex-direction: row !important;
+      .image-header {
+        flex: 6;
+        align-items: center;
+        display: flex;
+      }
+      .card-body {
+        flex: 6;
+      }
+    }
+    @include media-breakpoint-up('lg') {
+      .image-header {
+        flex: 4;
+      }
+      .card-body {
+        flex: 8;
+      }
+    }
+  }
+
+  .row-max-2 .card-body-image-wrapper.card-with-image {
+    @include media-breakpoint-up('xl') {
+      flex-direction: row !important;
+      .image-header {
+        flex: 6;
+        align-items: center;
+        display: flex;
+      }
+      .card-body {
+        flex: 6;
+      }
+    }
+  }
+}
+
+@mixin slider_controls($slider-control-arrow-height, $slider-control-arrow-width, $slider-control-arrow-bg, $slider-border-width,
+$slider-border-color, $slider-control-arrow-radius, $slider-control-arrow-color, $slider-control-arrow-bg-hover, $slider-border-color-hover,
+$layout-nugget-carousel-hover-color, $slider-indicator-hit-area-height, $slider-indicator-spacer, $slider-indicator-width,
+ $slider-indicator-height, $slider-indicator-border-radius, $slider-indicator-color, $slider-indicator-active-bg) {
+  .slider-controls {
+    // Arrows
+    button.arrow {
+      height: $slider-control-arrow-height;
+      width: $slider-control-arrow-width;
+      background-color: $slider-control-arrow-bg;
+      border: $slider-border-width solid $slider-border-color;
+      border-radius: $slider-control-arrow-radius;
+
+      svg {
+        fill: $slider-control-arrow-color;
+      }
+
+      &:hover {
+        background-color: $slider-control-arrow-bg-hover;
+        border-color: $slider-border-color-hover;
+
+        svg {
+          fill: $layout-nugget-carousel-hover-color;
+        }
+
+      }
+    }
+
+    // Markers
+    .slide-cards-dots {
+      bottom: calc(0% - ($global-spacing-2 + $slider-indicator-height));
+
+      ul.slick-dots {
+        height: $slider-indicator-hit-area-height;
+        gap: $slider-indicator-spacer;
+
+        li {
+          display: flex;
+          button {
+            width: $slider-indicator-width;
+            height: $slider-indicator-height;
+            border-radius: $slider-indicator-border-radius;
+            background: $slider-indicator-color;
+          }
+
+          &.slick-active button {
+            background: $slider-indicator-active-bg;
+            width: calc($slider-indicator-width + 10px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin view-more($view-more-bg, $view-more-radius, $view-more-color, $view-more-icon, $view-more-bg-hover,
+$view-more-color-hover, $view-more-icon-hover) {
+  a.view-more {
+    background-color: $view-more-bg;
+    border-radius: $view-more-radius;
+    color: $view-more-color;
+
+    .button-icon svg {
+      fill:$view-more-icon;
+    }
+
+    &:hover {
+      background: $view-more-bg-hover;
+      color: $view-more-color-hover;
+      .button-icon svg {
+        fill: $view-more-icon-hover;
+      }
+    }
+  }
+}
+
+
+// DEFAULT
+
+.card-slider {
+  @include slider_controls(
+                  $layout-nugget-carousel-height,
+                  $layout-nugget-carousel-width,
+                  $layout-nugget-carousel-default-bg,
+                  $layout-nugget-carousel-border-width,
+                  $layout-nugget-carousel-default-border,
+                  $layout-nugget-carousel-border-radius,
+                  $layout-nugget-carousel-default-color,
+                  $layout-nugget-carousel-hover-bg,
+                  $layout-nugget-carousel-hover-border,
+                  $layout-nugget-carousel-hover-color,
+                  $carousel-indicator-card-hit-area-height,
+                  $carousel-indicator-card-spacer,
+                  $carousel-indicator-card-width,
+                  $carousel-indicator-card-height,
+                  $carousel-indicator-card-border-radius,
+                  $carousel-indicator-card-color,
+                  $carousel-indicator-card-active-bg
+  );
+}
+
+.view-more-wrapper {
+  @include view-more(
+                  $layout-nugget-carousel-default-bg,
+                  $layout-nugget-carousel-border-radius,
+                  $layout-nugget-carousel-default-color,
+                  $layout-nugget-carousel-default-color,
+                  $layout-nugget-carousel-hover-bg,
+                  $layout-nugget-carousel-hover-color,
+                  $layout-nugget-carousel-hover-color,
+  );
+}
+
+// PALETTE-ALT-1
+
+.palette-alt-1 {
+  .card-slider {
+    @include slider_controls(
+                    $alt-1-layout-nugget-carousel-height,
+                    $alt-1-layout-nugget-carousel-width,
+                    $alt-1-layout-nugget-carousel-default-bg,
+                    $alt-1-layout-nugget-carousel-border-width,
+                    $alt-1-layout-nugget-carousel-default-border,
+                    $alt-1-layout-nugget-carousel-border-radius,
+                    $alt-1-layout-nugget-carousel-default-color,
+                    $alt-1-layout-nugget-carousel-hover-bg,
+                    $alt-1-layout-nugget-carousel-hover-border,
+                    $alt-1-layout-nugget-carousel-hover-color,
+                    $alt-1-carousel-indicator-card-hit-area-height,
+                    $alt-1-carousel-indicator-card-spacer,
+                    $alt-1-carousel-indicator-card-width,
+                    $alt-1-carousel-indicator-card-height,
+                    $alt-1-carousel-indicator-card-border-radius,
+                    $alt-1-carousel-indicator-card-color,
+                    $alt-1-carousel-indicator-card-active-bg
+    );
+  }
+  .view-more-wrapper {
+    @include view-more(
+                    $alt-1-layout-nugget-carousel-default-bg,
+                    $alt-1-layout-nugget-carousel-border-radius,
+                    $alt-1-layout-nugget-carousel-default-color,
+                    $alt-1-layout-nugget-carousel-default-color,
+                    $alt-1-layout-nugget-carousel-hover-bg,
+                    $alt-1-layout-nugget-carousel-hover-color,
+                    $alt-1-layout-nugget-carousel-hover-color,
+    );
+  }
+}
+
+// PALETTE-ALT-2
+
+.palette-alt-2 {
+  .card-slider {
+    @include slider_controls(
+                    $alt-2-layout-nugget-carousel-height,
+                    $alt-2-layout-nugget-carousel-width,
+                    $alt-2-layout-nugget-carousel-default-bg,
+                    $alt-2-layout-nugget-carousel-border-width,
+                    $alt-2-layout-nugget-carousel-default-border,
+                    $alt-2-layout-nugget-carousel-border-radius,
+                    $alt-2-layout-nugget-carousel-default-color,
+                    $alt-2-layout-nugget-carousel-hover-bg,
+                    $alt-2-layout-nugget-carousel-hover-border,
+                    $alt-2-layout-nugget-carousel-hover-color,
+                    $alt-2-carousel-indicator-card-hit-area-height,
+                    $alt-2-carousel-indicator-card-spacer,
+                    $alt-2-carousel-indicator-card-width,
+                    $alt-2-carousel-indicator-card-height,
+                    $alt-2-carousel-indicator-card-border-radius,
+                    $alt-2-carousel-indicator-card-color,
+                    $alt-2-carousel-indicator-card-active-bg
+    );
+  }
+  .view-more-wrapper {
+    @include view-more(
+                    $alt-2-layout-nugget-carousel-default-bg,
+                    $alt-2-layout-nugget-carousel-border-radius,
+                    $alt-2-layout-nugget-carousel-default-color,
+                    $alt-2-layout-nugget-carousel-default-color,
+                    $alt-2-layout-nugget-carousel-hover-bg,
+                    $alt-2-layout-nugget-carousel-hover-color,
+                    $alt-2-layout-nugget-carousel-hover-color,
+    );
+  }
+}
+
+#sidebar-nuggets .card-slider {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  .slider-controls button.arrow {
+    top: auto;
+    bottom: calc(0% - ($layout-nugget-carousel-height / 2));
+
+    &.slide-cards-prev {
+      right: auto;
+      left: 0;
+    }
+  }
+}

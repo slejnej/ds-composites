@@ -1,0 +1,42 @@
+uuid: 98d6d7b9-2e71-4a7d-abc0-5d52f607cd84
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flexible_layout.field_display_title
+    - field.field.paragraph.flexible_layout.field_editor_title
+    - field.field.paragraph.flexible_layout.field_palette
+    - paragraphs.paragraphs_type.flexible_layout
+  module:
+    - options
+    - text
+_core:
+  default_config_hash: ir4dXBBHMoHoqXq4qEKiSkmGII8OPIz2Aa8c0MeRVHs
+id: paragraph.flexible_layout.default
+targetEntityType: paragraph
+bundle: flexible_layout
+mode: default
+content:
+  field_display_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_palette:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

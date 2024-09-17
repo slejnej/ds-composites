@@ -1,0 +1,55 @@
+$footer-gap: 10px;
+
+.footer-primary {
+  background: $footer-color-bg;
+
+  .paragraph-title,
+  .nugget-title {
+    color: $footer-title;
+  }
+
+  p {
+    color: $footer-title;
+  }
+
+  a {
+    color: $footer-link-color;
+
+    &:hover {
+      color: $footer-link-hover;
+    }
+  }
+
+  .layout {
+    row-gap: $global-spacing-2;
+  }
+}
+
+.footer-secondary {
+  font-size: 0.875rem;
+  background: $footer-bar-color;
+  color: $footer-bar-content;
+
+  a {
+    color: $footer-bar-content-link;
+
+    &:hover {
+      color: $btn-link-hover-color;
+    }
+  }
+
+  ul {
+    gap: 0 $footer-gap;
+
+    li {
+      padding: $btn-padding-y $btn-padding-x;
+
+      span {
+        display: inline-block;
+        right: calc(0px - $footer-gap / 2);
+        position: absolute;
+        color: $divider-color;
+      }
+    }
+  }
+}

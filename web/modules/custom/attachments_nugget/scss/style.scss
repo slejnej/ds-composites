@@ -1,0 +1,205 @@
+// FILE TYPES
+// Lists for each file type category
+$file-types-image: ('png', 'svg', 'gif', 'jpg', 'jpeg', 'fodg', 'odg', 'webp', 'tiff');
+$file-types-document: ('txt', 'rtf', 'pdf', 'odf', 'odp', 'pages', 'word', 'doc', 'docx', 'fodt', 'odt');
+$file-types-office: ('numbers', 'csv', 'xlsm', 'xlsx', 'xls', 'ods', 'fods', 'ppt', 'pptx', 'fodp', 'key');
+$file-types-archive: ('zip', '7z', 'tar', 'gz', 'rar');
+$file-types-media: ('mp3', 'mp4');
+
+$style-image: ($attachment-file-type-image-file-bg, $attachment-file-type-image-file-color, $attachment-file-type-hover-image-file-bg, $attachment-file-type-hover-image-file-color);
+$style-document: ($attachment-file-type-document-file-bg, $attachment-file-type-document-file-color, $attachment-file-type-hover-document-file-bg, $attachment-file-type-hover-document-file-color);
+$style-office: ($attachment-file-type-office-file-bg, $attachment-file-type-office-file-color, $attachment-file-type-hover-office-file-bg, $attachment-file-type-hover-office-file-color);
+$style-archive: ($attachment-file-type-archive-file-bg, $attachment-file-type-archive-file-color, $attachment-file-type-hover-archive-file-bg, $attachment-file-type-hover-archive-file-color);
+$style-media: ($attachment-file-type-media-file-bg, $attachment-file-type-media-file-color, $attachment-file-type-hover-media-file-bg, $attachment-file-type-hover-media-file-color);
+
+$style-image-alt-1: ($alt-1-attachment-file-type-image-file-bg, $alt-1-attachment-file-type-image-file-color, $alt-1-attachment-file-type-hover-image-file-bg, $alt-1-attachment-file-type-hover-image-file-color);
+$style-document-alt-1: ($alt-1-attachment-file-type-document-file-bg, $alt-1-attachment-file-type-document-file-color, $alt-1-attachment-file-type-hover-document-file-bg, $alt-1-attachment-file-type-hover-document-file-color);
+$style-office-alt-1: ($alt-1-attachment-file-type-office-file-bg, $alt-1-attachment-file-type-office-file-color, $alt-1-attachment-file-type-hover-office-file-bg, $alt-1-attachment-file-type-hover-office-file-color);
+$style-archive-alt-1: ($alt-1-attachment-file-type-archive-file-bg, $alt-1-attachment-file-type-archive-file-color, $alt-1-attachment-file-type-hover-archive-file-bg, $alt-1-attachment-file-type-hover-archive-file-color);
+$style-media-alt-1: ($alt-1-attachment-file-type-media-file-bg, $alt-1-attachment-file-type-media-file-color, $alt-1-attachment-file-type-hover-media-file-bg, $alt-1-attachment-file-type-hover-media-file-color);
+
+$style-image-alt-2: ($alt-2-attachment-file-type-image-file-bg, $alt-2-attachment-file-type-image-file-color, $alt-2-attachment-file-type-hover-image-file-bg, $alt-2-attachment-file-type-hover-image-file-color);
+$style-document-alt-2: ($alt-2-attachment-file-type-document-file-bg, $alt-2-attachment-file-type-document-file-color, $alt-2-attachment-file-type-hover-document-file-bg, $alt-2-attachment-file-type-hover-document-file-color);
+$style-office-alt-2: ($alt-2-attachment-file-type-office-file-bg, $alt-2-attachment-file-type-office-file-color, $alt-2-attachment-file-type-hover-office-file-bg, $alt-2-attachment-file-type-hover-office-file-color);
+$style-archive-alt-2: ($alt-2-attachment-file-type-archive-file-bg, $alt-2-attachment-file-type-archive-file-color, $alt-2-attachment-file-type-hover-archive-file-bg, $alt-2-attachment-file-type-hover-archive-file-color);
+$style-media-alt-2: ($alt-2-attachment-file-type-media-file-bg, $alt-2-attachment-file-type-media-file-color, $alt-2-attachment-file-type-hover-media-file-bg, $alt-2-attachment-file-type-hover-media-file-color);
+
+// Function to generate classes for each file type group
+@mixin generate-attachment-bg($file-types, $style) {
+  @each $type in $file-types {
+    .file.file-#{$type} {
+      .file-details {
+        background-color: nth($style, 1);
+        color: nth($style, 2);
+
+        .icon svg {
+          fill: nth($style, 2);
+        }
+      }
+
+      &:hover {
+        .file-details {
+          background-color: nth($style, 3);
+          color: nth($style, 4);
+
+          .icon svg {
+            fill: nth($style, 4);
+          }
+        }
+      }
+    }
+  }
+}
+
+// FILE CARD
+@mixin attachments($attachment-bg, $attachment-padding-y, $attachment-padding-x, $attachment-border, $attachment-radius,
+$attachment-border-top, $attachment-border-right, $attachment-border-bottom, $attachment-border-left, $attachment-icon-padding-y,
+ $attachment-icon-padding-x, $attachment-icon-color, $attachment-file-type-padding-y, $attachment-file-type-padding-x,
+$attachment-file-type-radius, $attachment-content-spacer-y, $attachment-content-spacer-x, $attachment-file-name,
+$attachment-hover-bg, $attachment-hover-border, $attachment-hover-radius, $attachment-hover-icon-color, $attachment-hover-file-name) {
+  .btn.file-link {
+    background-color: $attachment-bg;
+    padding: $global-spacing-05 $global-spacing-05;
+    border-color: $attachment-border;
+    border-radius: $attachment-radius;
+    border-width: $attachment-border-top $attachment-border-right $attachment-border-bottom $attachment-border-left;
+
+    @include media-breakpoint-up('sm') {
+      padding: $attachment-padding-y $attachment-padding-x;
+    }
+
+    .icon {
+      width: 1rem;
+      padding: $attachment-icon-padding-y $attachment-icon-padding-x;
+    }
+
+    .file-details {
+      font-size: 0.688rem;
+      padding: $attachment-file-type-padding-y $attachment-file-type-padding-x;
+      border-radius: $attachment-file-type-radius;
+      width: fit-content;
+    }
+
+    .text-wrapper {
+      gap: $attachment-content-spacer-y;
+    }
+
+    .file-title {
+      font-size: 0.875rem;
+      color: $attachment-file-name;
+    }
+
+    &:hover {
+      background-color: $attachment-hover-bg;
+      border-color: $attachment-hover-border;
+      border-radius: $attachment-hover-radius;
+
+      .file-title {
+        color: $attachment-hover-file-name;
+      }
+    }
+  }
+}
+
+
+// MIXINS
+// DEFAULT (Palette-default and node content)
+@include generate-attachment-bg($file-types-image, $style-image);
+@include generate-attachment-bg($file-types-document, $style-document);
+@include generate-attachment-bg($file-types-office, $style-office);
+@include generate-attachment-bg($file-types-archive, $style-archive);
+@include generate-attachment-bg($file-types-media, $style-media);
+@include attachments(
+                $attachment-bg,
+                $attachment-padding-y,
+                $attachment-padding-x,
+                $attachment-border,
+                $attachment-radius,
+                $attachment-border-top,
+                $attachment-border-right,
+                $attachment-border-bottom,
+                $attachment-border-left,
+                $attachment-icon-padding-y,
+                $attachment-icon-padding-x,
+                $attachment-icon-color,
+                $attachment-file-type-padding-y,
+                $attachment-file-type-padding-x,
+                $attachment-file-type-radius,
+                $attachment-content-spacer-y,
+                $attachment-content-spacer-x,
+                $attachment-file-name,
+                $attachment-hover-bg,
+                $attachment-hover-border,
+                $attachment-hover-radius,
+                $attachment-hover-icon-color,
+                $attachment-hover-file-name
+);
+
+
+// Apply classes alt-1
+.palette-alt-1 {
+  @include generate-attachment-bg($file-types-image, $style-image-alt-1);
+  @include generate-attachment-bg($file-types-document, $style-document-alt-1);
+  @include generate-attachment-bg($file-types-office, $style-office-alt-1);
+  @include generate-attachment-bg($file-types-archive, $style-archive-alt-1);
+  @include generate-attachment-bg($file-types-media, $style-media-alt-1);
+  @include attachments(
+                  $alt-1-attachment-bg,
+                  $alt-1-attachment-padding-y,
+                  $alt-1-attachment-padding-x,
+                  $alt-1-attachment-border,
+                  $alt-1-attachment-radius,
+                  $alt-1-attachment-border-top,
+                  $alt-1-attachment-border-right,
+                  $alt-1-attachment-border-bottom,
+                  $alt-1-attachment-border-left,
+                  $alt-1-attachment-icon-padding-y,
+                  $alt-1-attachment-icon-padding-x,
+                  $alt-1-attachment-icon-color,
+                  $alt-1-attachment-file-type-padding-y,
+                  $alt-1-attachment-file-type-padding-x,
+                  $alt-1-attachment-file-type-radius,
+                  $alt-1-attachment-content-spacer-y,
+                  $alt-1-attachment-content-spacer-x,
+                  $alt-1-attachment-file-name,
+                  $alt-1-attachment-hover-bg,
+                  $alt-1-attachment-hover-border,
+                  $alt-1-attachment-hover-radius,
+                  $alt-1-attachment-hover-icon-color,
+                  $alt-1-attachment-hover-file-name
+  );
+}
+
+// Apply classes alt-2
+.palette-alt-2 {
+  @include generate-attachment-bg($file-types-image, $style-image-alt-2);
+  @include generate-attachment-bg($file-types-document, $style-document-alt-2);
+  @include generate-attachment-bg($file-types-office, $style-office-alt-2);
+  @include generate-attachment-bg($file-types-archive, $style-archive-alt-2);
+  @include generate-attachment-bg($file-types-media, $style-media-alt-2);
+  @include attachments(
+                  $alt-2-attachment-bg,
+                  $alt-2-attachment-padding-y,
+                  $alt-2-attachment-padding-x,
+                  $alt-2-attachment-border,
+                  $alt-2-attachment-radius,
+                  $alt-2-attachment-border-top,
+                  $alt-2-attachment-border-right,
+                  $alt-2-attachment-border-bottom,
+                  $alt-2-attachment-border-left,
+                  $alt-2-attachment-icon-padding-y,
+                  $alt-2-attachment-icon-padding-x,
+                  $alt-2-attachment-icon-color,
+                  $alt-2-attachment-file-type-padding-y,
+                  $alt-2-attachment-file-type-padding-x,
+                  $alt-2-attachment-file-type-radius,
+                  $alt-2-attachment-content-spacer-y,
+                  $alt-2-attachment-content-spacer-x,
+                  $alt-2-attachment-file-name,
+                  $alt-2-attachment-hover-bg,
+                  $alt-2-attachment-hover-border,
+                  $alt-2-attachment-hover-radius,
+                  $alt-2-attachment-hover-icon-color,
+                  $alt-2-attachment-hover-file-name
+  );
+}

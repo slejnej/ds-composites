@@ -1,0 +1,34 @@
+{% block paragraph %}
+
+  {%
+    set classes = [
+      'paragraph-section',
+      'paragraph--type--' ~ paragraph.bundle|clean_class,
+      view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+      not paragraph.isPublished() ? 'paragraph--unpublished',
+      paragraph.field_palette.value,
+      paragraph.field_palette.value ~ '-bg',
+      'layout-' ~ content.regions['#theme']|split("__")|last|split("_")|first,
+      'layout-cols-' ~ content.regions['#settings'].column_widths,
+    ]
+  %}
+
+  {% block paragraph_content %}
+    <div{{ attributes.addClass(classes) }}>
+      {% block content %}
+
+        <div class="section-wrapper">
+          {% block section_title %}
+            {% remora_include 'partials/paragraphs/section-title.html.twig' %}
+          {% endblock %}
+
+          {% block section_content %}
+            {{ content|without('field_editor_title', 'field_palette', 'field_display_title')  }}
+          {% endblock %}
+        </div>
+
+      {% endblock %}
+    </div>
+  {% endblock %}
+
+{% endblock %}

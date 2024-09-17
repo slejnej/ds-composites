@@ -1,0 +1,457 @@
+uuid: 129b2c88-096d-4191-b304-46c0548b44bb
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - attachments_nugget
+id: config_sync.module.attachments_nugget
+snapshotSet: config_sync
+extensionType: module
+extensionName: attachments_nugget
+items:
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.attachments.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.attachments.field_attachments_nt_file_atts
+          - field.field.paragraph.attachments.field_display_title
+          - field.field.paragraph.attachments.field_editor_title
+          - field.field.paragraph.attachments.field_items_per_row
+          - paragraphs.paragraphs_type.attachments
+        module:
+          - field_group
+          - field_layout
+          - layout_discovery
+          - media_library
+          - text
+        enforced:
+          module:
+            - attachments_nugget
+      third_party_settings:
+        field_layout:
+          id: layout_onecol
+          settings:
+            label: ''
+        field_group:
+          group_nugget_title_properties:
+            children:
+              - field_editor_title
+              - field_display_title
+              - field_items_per_row
+            label: 'Nugget title & properties'
+            region: content
+            parent_name: ''
+            weight: 0
+            format_type: details
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              open: true
+              description: ''
+              required_fields: true
+          group_nugget_content:
+            children:
+              - field_attachments_nt_file_atts
+            label: 'Nugget content'
+            region: content
+            parent_name: ''
+            weight: 1
+            format_type: details
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              open: true
+              description: ''
+              required_fields: true
+      id: paragraph.attachments.default
+      targetEntityType: paragraph
+      bundle: attachments
+      mode: default
+      content:
+        field_attachments_nt_file_atts:
+          type: media_library_widget
+          weight: 2
+          region: content
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+        field_display_title:
+          type: text_textfield
+          weight: 3
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_editor_title:
+          type: string_textfield
+          weight: 2
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_items_per_row:
+          type: options_select
+          weight: 4
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        status:
+          type: boolean_checkbox
+          weight: 2
+          region: content
+          settings:
+            display_label: true
+          third_party_settings: {  }
+      hidden:
+        created: true
+      _core:
+        default_config_hash: iczpeDHH64EYBG3z5m4c9zgJPfJKBJ6O17PFs8YIJo4
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.attachments.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.attachments.field_attachments_nt_file_atts
+          - field.field.paragraph.attachments.field_display_title
+          - field.field.paragraph.attachments.field_editor_title
+          - field.field.paragraph.attachments.field_items_per_row
+          - paragraphs.paragraphs_type.attachments
+        module:
+          - options
+          - text
+        enforced:
+          module:
+            - attachments_nugget
+      id: paragraph.attachments.default
+      targetEntityType: paragraph
+      bundle: attachments
+      mode: default
+      content:
+        field_attachments_nt_file_atts:
+          type: entity_reference_entity_view
+          label: hidden
+          settings:
+            view_mode: default
+            link: false
+          third_party_settings: {  }
+          weight: 2
+          region: content
+        field_display_title:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 1
+          region: content
+        field_editor_title:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 0
+          region: content
+        field_items_per_row:
+          type: list_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 3
+          region: content
+      hidden: {  }
+      _core:
+        default_config_hash: rQBpqDFXwguB-A84_nwu8lH__EG5URxqTCr2j8N2ENc
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.attachments.preview
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.paragraph.preview
+          - field.field.paragraph.attachments.field_attachments_nt_file_atts
+          - field.field.paragraph.attachments.field_display_title
+          - field.field.paragraph.attachments.field_editor_title
+          - field.field.paragraph.attachments.field_items_per_row
+          - paragraphs.paragraphs_type.attachments
+        module:
+          - layout_builder
+        enforced:
+          module:
+            - attachments_nugget
+      third_party_settings:
+        layout_builder:
+          enabled: false
+          allow_custom: false
+      id: paragraph.attachments.preview
+      targetEntityType: paragraph
+      bundle: attachments
+      mode: preview
+      content:
+        field_editor_title:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        field_attachments_nt_file_atts: true
+        field_display_title: true
+        field_items_per_row: true
+      _core:
+        default_config_hash: fA4n4izvp5s5O1SvRIZPj0nFDVdjPvrgRFSuwIXFEIE
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.attachments.search_rendered_output
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.paragraph.search_rendered_output
+          - field.field.paragraph.attachments.field_attachments_nt_file_atts
+          - field.field.paragraph.attachments.field_display_title
+          - field.field.paragraph.attachments.field_editor_title
+          - field.field.paragraph.attachments.field_items_per_row
+          - paragraphs.paragraphs_type.attachments
+        module:
+          - layout_builder
+          - text
+        enforced:
+          module:
+            - attachments_nugget
+      third_party_settings:
+        layout_builder:
+          enabled: false
+          allow_custom: false
+      id: paragraph.attachments.search_rendered_output
+      targetEntityType: paragraph
+      bundle: attachments
+      mode: search_rendered_output
+      content:
+        field_attachments_nt_file_atts:
+          type: entity_reference_label
+          label: hidden
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 2
+          region: content
+        field_display_title:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 1
+          region: content
+      hidden:
+        field_editor_title: true
+        field_items_per_row: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: aG3duO3uvMrAK5d5hkkcz2zNq9_e2rJiHyhUcOZCuz4
+  -
+    collection: ''
+    name: field.field.paragraph.attachments.field_attachments_nt_file_atts
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_attachments_nt_file_atts
+          - media.type.document
+          - paragraphs.paragraphs_type.attachments
+        module:
+          - attachments_nugget
+        enforced:
+          module:
+            - attachments_nugget
+      id: paragraph.attachments.field_attachments_nt_file_atts
+      field_name: field_attachments_nt_file_atts
+      entity_type: paragraph
+      bundle: attachments
+      label: 'File attachments'
+      description: ''
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:media'
+        handler_settings:
+          target_bundles:
+            document: document
+          sort:
+            field: _none
+            direction: ASC
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: 9_xuH9JcPiPt7LyIfg3sC2W9-O9AboUJplLjfsIrovI
+  -
+    collection: ''
+    name: field.field.paragraph.attachments.field_display_title
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_display_title
+          - filter.format.title
+          - paragraphs.paragraphs_type.attachments
+        module:
+          - text
+          - attachments_nugget
+        enforced:
+          module:
+            - attachments_nugget
+      id: paragraph.attachments.field_display_title
+      field_name: field_display_title
+      entity_type: paragraph
+      bundle: attachments
+      label: 'Display title'
+      description: 'This title is displayed on the page above the content of this nugget.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        allowed_formats:
+          - title
+      field_type: text
+      _core:
+        default_config_hash: 1syl4zAvykjmi2H2hWHnfXlDC2_e2w257c2OLNURJV0
+  -
+    collection: ''
+    name: field.field.paragraph.attachments.field_editor_title
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_editor_title
+          - paragraphs.paragraphs_type.attachments
+        module:
+          - attachments_nugget
+        enforced:
+          module:
+            - attachments_nugget
+      id: paragraph.attachments.field_editor_title
+      field_name: field_editor_title
+      entity_type: paragraph
+      bundle: attachments
+      label: 'Editor title'
+      description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: tCK9bIF5OKIH6fFoF8mIBeHy4bM6bCmDklPxpt6GrdQ
+  -
+    collection: ''
+    name: field.field.paragraph.attachments.field_items_per_row
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_items_per_row
+          - paragraphs.paragraphs_type.attachments
+        module:
+          - options
+      id: paragraph.attachments.field_items_per_row
+      field_name: field_items_per_row
+      entity_type: paragraph
+      bundle: attachments
+      label: 'Items per row'
+      description: 'Select number of items to display per row.'
+      required: true
+      translatable: false
+      default_value:
+        -
+          value: '1'
+      default_value_callback: ''
+      settings: {  }
+      field_type: list_string
+      _core:
+        default_config_hash: nZl7lRwgAh6cSWBlycLj7NvJRo3ysZQgeSRvPleODhc
+  -
+    collection: ''
+    name: field.storage.paragraph.field_attachments_nt_file_atts
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - media
+          - paragraphs
+          - attachments_nugget
+        enforced:
+          module:
+            - attachments_nugget
+      id: paragraph.field_attachments_nt_file_atts
+      field_name: field_attachments_nt_file_atts
+      entity_type: paragraph
+      type: entity_reference
+      settings:
+        target_type: media
+      module: core
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: gIi1ppZxCdCeuuqIgWd8ba-bEC7dUNRR7ixw4tie5b0
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.attachments
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - layout_paragraphs
+        enforced:
+          module:
+            - attachments_nugget
+      id: attachments
+      label: Attachments
+      icon_uuid: null
+      icon_default: null
+      description: ''
+      behavior_plugins:
+        layout_paragraphs:
+          enabled: false
+          available_layouts: {  }
+      _core:
+        default_config_hash: cRv1YxNf7cecbZ1XN2x4vi6AYNTn3Im1ETXaKCzo764

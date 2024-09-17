@@ -1,0 +1,7 @@
+tagging.configuration_form:
+  path: '/admin/config/tagging'
+  defaults:
+    _form: '\Drupal\tagging\Form\TaggingConfigurationForm'
+    _title: 'Install Tagging Fields'
+  requirements:
+    _permission: 'administer site configuration'

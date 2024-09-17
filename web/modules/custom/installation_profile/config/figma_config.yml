@@ -1,0 +1,17 @@
+figma_prefixes:
+  config:
+    dedupe: true
+    singularize: true
+
+  mapping:
+    alerts: ''
+    buttons: ''
+    components: ''
+    global-background: ''
+
+    # Prevent EnglishInflector::singularize from messing up proper words, mapped words wont be singularized
+    offcanvas: 'offcanvas'
+    progress: 'progress'
+    success: 'success'
+    btn-success: 'btn-success'
+    btn-outline-success: 'btn-outline-success'

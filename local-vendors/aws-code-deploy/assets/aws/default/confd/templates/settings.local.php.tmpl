@@ -1,0 +1,77 @@
+<?php
+
+$settings['hash_salt'] = '{{getv "/ds-composites/conf/hash-salt"}}';
+
+$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+
+if ('{{getv "/ds-composites/conf/dev-services"}}' === 'yes') {
+  $settings['container_yamls'][] = $app_root . '/' . $site_path . '/development.services.yml';
+}
+
+$settings['entity_update_batch_size'] = 50;
+# instruct the Entity Update API to remove the backup tables at the end of a successful update process
+$settings['entity_update_backup'] = TRUE;
+
+$settings['config_sync_directory'] = '../config/sync';
+$databases['default']['default'] = array (
+  'database' => '{{getv "/ds-composites/db/database"}}',
+  'username' => '{{getv "/ds-composites/db/username"}}',
+  'password' => '{{getv "/ds-composites/db/password"}}',
+  'prefix' => '',
+  'host' => '{{getv "/ds-composites/db/host"}}',
+  'port' => '{{getv "/ds-composites/db/port"}}',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'driver' => 'mysql',
+);
+
+// This is an important addition to all database queries.
+// It helps to avoid MySQL deadlocks by providing different isolation of transactions.
+// @see https://www.drupal.org/project/drupal/issues/1650930
+$databases['default']['default']['init_commands'] = [
+  'isolation' => "SET SESSION tx_isolation='READ-COMMITTED'",
+];
+
+$settings['file_private_path'] = '{{getv "/ds-composites/private-files"}}';
+$settings['file_temp_path'] = '{{getv "/ds-composites/temp-files"}}';
+
+# the config file permissions are checked and warnings will be issued as a reminder if problems are found. No attempt to fix the permissions is made
+$settings['skip_permissions_hardening'] = {{getv "/ds-composites/conf/permissions-hardening"}};
+
+# for ELB on AWS we need to configure proxy to respect https
+$settings['reverse_proxy'] = TRUE;
+$settings['reverse_proxy_addresses'] = array($_SERVER['REMOTE_ADDR']);
+$settings['reverse_proxy_trusted_headers'] = \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_FOR | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PROTO | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PORT;
+
+# define all domains used for project (replace NAME and org at the end)!!!!!
+$settings['trusted_host_patterns'] = [{{getv "/ds-composites/host-patterns"}}];
+
+# empty on all environments EXCEPT production
+$settings['simple_sitemap_engines.index_now.key'] = '{{getv "/ds-composites/indexnow-key"}}';
+
+# these variables will override solr config. If the project does not have SOLR, remove these
+# server is __machine name__ for SOLR server in search API (inside admin drupal)
+$settings['{{getv "/ds-composites/search/server"}}'] = [
+  'solr_server' => [
+    'scheme' => '{{getv "/ds-composites/search/scheme"}}',
+    'host' => '{{getv "/ds-composites/search/host"}}',
+    'port' => {{getv "/ds-composites/search/port"}},
+    'path' => '{{getv "/ds-composites/search/path"}}',
+    'core' => '{{getv "/ds-composites/search/core"}}'
+  ]
+];
+
+# reduce cache tables in DB from 5000
+$settings['database_cache_max_rows']['bins']['page'] = 1000;
+
+# Remora project settings
+$settings['remora_core'] = [
+  'sentry' => [
+    'dsn' => '{{getv "/ds-composites/sentry/dsn" ""}}',
+    'env' => '{{getv "/ds-composites/sentry/env" ""}}'
+  ]
+];
+
+if(file_exists(__DIR__ . '/settings.ds-composites.php')) {
+  include __DIR__ . '/settings.ds-composites.php';
+}
+// EOF

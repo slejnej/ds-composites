@@ -1,0 +1,39 @@
+<?php
+
+use Drupal\security\Form\ObfuscateVersionsForm;
+use Drupal\security\Cache\ConfigCache;
+
+/**
+ * Removes the configured meta tags from the <head> section.
+ *
+ * @code
+ * <head>
+ *    <meta name="Generator" content="Drupal 10 (https://www.drupal.org)">
+ * </head>
+ * @endcode
+ * @see ObfuscateVersionsForm
+ */
+function security_page_attachments_alter(array &$attachments): void
+{
+  $metatagsToRemove = ConfigCache::get(
+    'security.settings.obfuscate_versions.metatags',
+    function(): array {
+
+      $configuredTags = Drupal::config(ObfuscateVersionsForm::CONFIG_ID)->get('remove_metatags');
+      $configuredTags = preg_split('/\r\n|\r|\n/', $configuredTags ?? '');
+      return array_map('strtolower', $configuredTags);
+    }
+  );
+
+  foreach($attachments['#attached']['html_head'] as $key => $attachment) {
+    $name = $attachment[0]['#attributes']['name'] ?? null;
+    if(!is_string($name)) {
+      continue;
+    }
+
+    if(in_array(strtolower($name), $metatagsToRemove)) {
+      unset($attachments['#attached']['html_head'][$key]);
+    }
+  }
+}
+

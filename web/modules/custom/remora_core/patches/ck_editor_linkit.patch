@@ -1,0 +1,13 @@
+diff --git a/core/modules/ckeditor5/css/editor.css b/core/modules/ckeditor5/css/editor.css
+index f0b2422..e2493d8 100644
+--- a/core/modules/ckeditor5/css/editor.css
++++ b/core/modules/ckeditor5/css/editor.css
+@@ -24,3 +24,8 @@
+ .ck-editor__main > .ck-source-editing-area textarea {
+   overflow: auto;
+ }
++
++/** @see https://www.drupal.org/project/drupal/issues/3351603#comment-15010199 */
++.ck.ck-balloon-panel {
++  z-index: 1300 !important;
++}

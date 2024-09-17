@@ -1,0 +1,17 @@
+{
+  "name": "mrm-remora/cards_nugget",
+  "type": "drupal-custom-module",
+  "description": "Cards nugget - contains functionalities to enable cards nugget paragraphs. Also provides Card nuglets",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Dilwar Hussain",
+      "email": "dilwar@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "drupal/field_group": "^3.0"
+  }
+}

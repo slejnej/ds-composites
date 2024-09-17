@@ -1,0 +1,30 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_palette
+field_name: field_palette
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: palette-default
+      label: Default
+    -
+      value: palette-alt-1
+      label: 'Alt 1'
+    -
+      value: palette-alt-2
+      label: 'Alt 2'
+  allowed_values_function: remora_core_get_palettes
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

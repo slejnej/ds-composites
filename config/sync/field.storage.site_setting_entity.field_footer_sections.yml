@@ -1,0 +1,23 @@
+uuid: 5c4cee57-7e9d-4b11-ac27-7e14559003ab
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - site_settings
+_core:
+  default_config_hash: WuAdROnEZMy8SlRlebupum9V6EYzb6CJ0MA0lSbLGTg
+id: site_setting_entity.field_footer_sections
+field_name: field_footer_sections
+entity_type: site_setting_entity
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,152 @@
+.palette-alt-2 {
+  &.card,
+  .card {
+    --bs-card-title-spacer-y: #{$alt-2-card-title-spacer-y};
+    --bs-card-border-width: #{$alt-2-card-border-width};
+    --bs-card-border-color: #{$alt-2-card-border-color};
+    --bs-card-border-radius: #{$alt-2-card-border-radius};
+    --bs-card-bg: transparent;
+
+
+    .card-header {
+      --bs-card-cap-color: #{$alt-2-card-header-primary-color};
+      background-color: #{$alt-2-card-header-primary-bg};
+      border-radius: #{$alt-2-card-header-border-radius};
+      border: var(--bs-card-border-width) solid #{$alt-2-card-header-border-color};
+      text-align: #{$alt-2-card-header-text-align};
+      width: #{$alt-2-card-header-width};
+      min-width: #{$alt-2-card-header-min-width};
+      max-width: #{$alt-2-card-header-max-width};
+    }
+
+    .card-footer {
+      --bs-card-cap-bg: #{$alt-2-card-footer-primary-color};
+      background-color: #{$alt-2-card-footer-primary-bg};
+      border-radius: #{$alt-2-card-footer-border-radius};
+      border: var(--bs-card-border-width) solid #{$alt-2-card-footer-border-color};
+      text-align: #{$alt-2-card-footer-text-align};
+      width: #{$alt-2-card-footer-width};
+      min-width: #{$alt-2-card-footer-min-width};
+      max-width: #{$alt-2-card-footer-max-width};
+    }
+
+    .card-body {
+      --bs-card-spacer-y: #{$global-spacing-05};
+      --bs-card-spacer-x: #{$global-spacing-05};
+      background-color: #{$alt-2-card-bg-color};
+      border-top: $alt-2-card-body-border-top-width solid $alt-2-card-body-border-top-color;
+      border-right: $alt-2-card-body-border-right-width solid $alt-2-card-body-border-right-color;
+      border-bottom: $alt-2-card-body-border-bottom-width solid $alt-2-card-body-border-bottom-color;
+      border-left: $alt-2-card-body-border-left-width solid $alt-2-card-body-border-left-color;
+      color: #{$alt-2-card-summary-color};
+
+      @media(min-width: 576px) {
+        --bs-card-spacer-y: #{$alt-2-card-padding-y};
+        --bs-card-spacer-x: #{$alt-2-card-padding-x};
+      }
+
+      .card-title {
+        color: #{$alt-2-card-title-color};
+      }
+
+      .card-text {
+        padding-bottom: #{$alt-2-card-text-padding-bottom};
+        color: #{$alt-2-card-summary-color};
+
+        a {
+          color: #{$alt-2-btn-link-color};
+
+          &:hover {
+            color: #{$alt-2-btn-link-hover-color};
+          }
+        }
+      }
+
+      .card-subtitle {
+        color: #{$alt-2-card-date-color};
+      }
+
+      .card-date {
+        margin-bottom: $alt-2-card-title-spacer-y;
+      }
+
+      .card-type {
+        margin-bottom: $global-spacing-1;
+      }
+
+      .btn {
+        margin-top: $alt-2-card-button-margin-top;
+        width: $alt-2-card-button-width;
+        min-width: $alt-2-card-button-min-width;
+        max-width: $alt-2-card-button-max-width;
+      }
+    }
+
+    .card-footer {
+      padding: #{$global-spacing-05} #{$global-spacing-05};
+      background-color: #{$alt-2-card-footer-primary-bg};
+      border-radius: #{$alt-2-card-footer-border-radius};
+      border-color: #{$alt-2-card-footer-border-color};
+      color: #{$alt-2-card-footer-primary-color};
+      text-align: #{$alt-2-card-footer-text-align};
+      width: #{$alt-2-card-footer-width};
+      min-width: #{$alt-2-card-footer-min-width};
+      max-width: #{$alt-2-card-footer-max-width};
+
+      @media(min-width: 576px) {
+        padding: #{$alt-2-card-footer-cap-padding-x} #{$alt-2-card-footer-cap-padding-y};
+      }
+
+      a {
+        color: #{$alt-2-btn-link-color};
+
+        &:hover {
+          color: #{$alt-2-btn-link-hover-color};
+        }
+      }
+    }
+
+    .card-tag {
+      background-color: #{$alt-2-card-tag-bg};
+      color: #{$alt-2-card-tag-content};
+      border-color: #{$alt-2-card-tag-border};
+      padding: $global-spacing-02 $global-spacing-05;
+    }
+  }
+
+  &.card,
+  .card {
+    &:has(a.stretched-link:hover) {
+      --bs-card-border-color: #{$alt-2-card-border-color-hover};
+
+      .card-body {
+        background-color: #{$alt-2-card-bg-color-hover};
+        --bs-card-border-color: #{$alt-2-card-border-color-hover};
+        color: #{$alt-2-card-summary-color-hover};
+
+        .card-title {
+          color: #{$alt-2-card-title-color-hover};
+        }
+
+        .card-text {
+          color: #{$alt-2-card-summary-color-hover};
+        }
+
+        .card-subtitle {
+          color: #{$alt-2-card-date-color-hover};
+        }
+      }
+
+      .card-footer {
+        background-color: #{$alt-2-card-footer-primary-bg};
+        color: #{$alt-2-card-summary-color-hover};
+      }
+
+      .card-tag {
+        background-color: #{$alt-2-card-tag-bg-hover};
+        color: #{$alt-2-card-tag-content-hover};
+        border-color: #{$alt-2-card-tag-content-hover};
+      }
+    }
+  }
+}

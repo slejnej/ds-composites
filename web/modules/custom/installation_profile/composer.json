@@ -1,0 +1,10 @@
+{
+    "name": "mrm-remora/installation_profile",
+    "description": "Provides installation profile called Remora",
+    "type": "drupal-custom-module",
+    "require": {
+        "php": ">=8.1",
+        "drupal/core": "^10"
+    },
+    "minimum-stability": "stable"
+}

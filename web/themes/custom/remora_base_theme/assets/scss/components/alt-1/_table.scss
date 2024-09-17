@@ -1,0 +1,3 @@
+.palette-alt-2 table {
+  @include table-styles($alt-2-table-title-color, $alt-2-table-title-bg, $alt-2-table-title-border, $alt-2-table-body-color, $alt-2-table-body-bg, $alt-2-table-body-border, $alt-2-table-border);
+}

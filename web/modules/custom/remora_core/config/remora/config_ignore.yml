@@ -1,0 +1,6 @@
+ignore:
+  - 'system.site'
+  - 'google_tag.settings'
+  - 'captcha.settings'
+  - 'recaptcha.settings'
+  - 'recaptcha_v3.settings'

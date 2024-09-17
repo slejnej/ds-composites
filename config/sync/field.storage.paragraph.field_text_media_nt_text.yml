@@ -1,0 +1,24 @@
+uuid: 20077bcd-29ed-4ff0-bb6c-c36d82b34e5d
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+  enforced:
+    module:
+      - text_media_nugget
+_core:
+  default_config_hash: '-lsH6wFeFiZvWhbeR8eBEQu5R6QSlXfFDz3lsP57YZ8'
+id: paragraph.field_text_media_nt_text
+field_name: field_text_media_nt_text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

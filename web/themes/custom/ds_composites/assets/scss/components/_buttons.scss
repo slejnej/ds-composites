@@ -1,0 +1,85 @@
+// This can be removed when card view more variables/templates are sorted/updated :(
+
+@mixin custom-button($button-bg, $button-color, $button-icon, $button-bg-hover, $button-color-hover, $button-icon-hover) {
+  text-transform: inherit !important;
+  background-color: $button-bg;
+  color: $button-color;
+
+  .button-icon svg, &.icon svg {
+    fill: $button-icon;
+  }
+
+  &:hover {
+    background: $button-bg-hover;
+    color: $button-color-hover;
+
+    .button-icon svg, &.icon svg {
+      fill: $button-icon-hover;
+    }
+  }
+}
+
+a.view-more {
+  padding: 0;
+}
+
+.paragraph .view-more-wrapper a.view-more.btn {
+  @include custom_button(
+  transparent,
+  $btn-link-color,
+  $btn-link-color,
+  transparent,
+  $btn-link-hover-color,
+  $btn-link-hover-color,
+  );
+}
+
+.palette-alt-1 .paragraph .view-more-wrapper a.view-more.btn {
+  @include custom_button(
+  transparent,
+  $btn-link-color,
+  $btn-link-color,
+  transparent,
+  $btn-link-hover-color,
+  $btn-link-hover-color,
+  );
+}
+
+.palette-alt-2 .paragraph .view-more-wrapper a.view-more.btn {
+  @include custom_button(
+  transparent,
+  $alt-2-btn-link-color,
+  $alt-2-btn-link-color,
+  transparent,
+  $alt-2-btn-link-hover-color,
+  $alt-2-btn-link-hover-color,
+  );
+}
+
+footer {
+  .social-links-wrapper a .btn,
+  a.btn-primary {
+    @include custom_button(
+    $alt-2-btn-outline-warning-background,
+    $alt-2-btn-outline-warning-color,
+    $alt-2-btn-outline-warning-color,
+    $alt-2-btn-outline-warning-hover-background,
+    $alt-2-btn-outline-warning-hover-color,
+    $alt-2-btn-outline-warning-hover-color,
+    );
+  }
+
+  .social-links-wrapper a .btn {
+    @extend .border-0;
+  }
+}
+
+.footer-secondary .footer-menu {
+  padding: 4px 0;
+  ul {
+    gap: 20px;
+    li {
+      padding: 0 16px 0 0;
+    }
+  }
+}

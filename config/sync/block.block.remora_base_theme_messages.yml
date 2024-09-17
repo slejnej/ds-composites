@@ -1,0 +1,22 @@
+uuid: cfb3f73f-0ab3-4197-93d0-cdf533e5a597
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - remora_base_theme
+_core:
+  default_config_hash: hR6ozrSRpBcMuKLX7EMCLxPOpBRCgDkL3m3Zm8FFDDA
+id: remora_base_theme_messages
+theme: remora_base_theme
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

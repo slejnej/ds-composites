@@ -1,0 +1,32 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.landscape_21x9
+  module:
+    - crop
+name: landscape_21_9_lg
+label: 'Landscape: 21x9 - LG'
+effects:
+  a705efed-559e-40d1-896d-9455049ebaac:
+    uuid: a705efed-559e-40d1-896d-9455049ebaac
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: landscape_21x9
+      automatic_crop_provider: null
+  e38abba6-5cef-4fb9-b763-29a3a60d9755:
+    uuid: e38abba6-5cef-4fb9-b763-29a3a60d9755
+    id: image_scale
+    weight: 2
+    data:
+      width: 1200
+      height: null
+      upscale: true
+  a248cc12-201d-4955-bd0a-427bc1fbe8fa:
+    uuid: a248cc12-201d-4955-bd0a-427bc1fbe8fa
+    id: image_convert
+    weight: 3
+    data:
+      extension: webp

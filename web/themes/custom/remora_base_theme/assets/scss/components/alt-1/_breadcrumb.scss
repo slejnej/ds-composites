@@ -1,0 +1,19 @@
+.palette-alt-1 {
+  &.breadcrumb,
+  .breadcrumb {
+    --bs-breadcrumb-padding-x: #{$alt-1-breadcrumb-padding-x};
+    --bs-breadcrumb-padding-y: #{$alt-1-breadcrumb-padding-y};
+    --bs-breadcrumb-margin-bottom: #{$alt-1-breadcrumb-margin-bottom};
+    --bs-breadcrumb-bg: $alt-1-breadcrumb-bg;
+    --bs-breadcrumb-divider-color: #{$alt-1-breadcrumb-divider-color};
+    --bs-breadcrumb-item-padding-x: #{$alt-1-breadcrumb-item-padding-x};
+    --bs-breadcrumb-item-active-color: #{$alt-1-breadcrumb-active};
+
+    max-width: $alt-1-breadcrumb-max-width;
+    .breadcrumb-item {
+      a {
+        color: $alt-1-breadcrumb-item;
+      }
+    }
+  }
+}

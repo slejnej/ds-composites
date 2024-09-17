@@ -1,0 +1,128 @@
+<div class="container">
+  {{ include('@helper_module/includes/menu-back.html.twig') }}
+
+  <h1 class="mb-0" id="content">Progress</h1>
+  <p>Custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.</p>
+
+  <div class="row">
+    <h2 class="mt-4">Width</h2>
+    <p><small>Various ways of setting the width.</small></p>
+
+    <div class="snippet">
+      <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0"
+           aria-valuemax="100">
+        <div class="progress-bar" style="width: 50%"></div>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0"
+           aria-valuemax="100">
+        <div class="progress-bar w-75"></div>
+      </div>
+    </div>
+
+    <h2 class="mt-4">Height</h2>
+    <p><small>You only set a <code>height</code> value on the <code>.progress</code> container, so if you change that
+      value, the inner <code>.progress-bar</code> will automatically resize accordingly.</small></p>
+
+    <div class="snippet">
+      <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0"
+           aria-valuemax="100" style="height: 1px">
+        <div class="progress-bar" style="width: 25%"></div>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0"
+           aria-valuemax="100" style="height: 20px">
+        <div class="progress-bar" style="width: 25%"></div>
+      </div>
+    </div>
+
+    <h2 class="mt-4">Labels</h2>
+    <p><small>Add labels to your progress bars by placing text within the <code>.progress-bar</code>.</small></p>
+
+    <div class="snippet">
+      <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0"
+           aria-valuemax="100">
+        <div class="progress-bar" style="width: 25%">25%</div>
+      </div>
+    </div>
+
+    <h2 class="mt-4">Backgrounds</h2>
+    <p><small>Use background utility classes to change the appearance of individual progress bars.</small></p>
+
+    <div class="snippet">
+      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
+           aria-valuemax="100">
+        <div class="progress-bar bg-success" style="width: 25%"></div>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0"
+           aria-valuemax="100">
+        <div class="progress-bar bg-info" style="width: 50%"></div>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0"
+           aria-valuemax="100">
+        <div class="progress-bar bg-warning" style="width: 75%"></div>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0"
+           aria-valuemax="100">
+        <div class="progress-bar bg-danger" style="width: 100%"></div>
+      </div>
+    </div>
+
+    <h2 class="mt-4">Multiple bars</h2>
+    <p><small>You can include multiple progress components inside a container with <code>.progress-stacked</code> to
+      create a single stacked progress bar.</small></p>
+
+    <div class="snippet">
+      <div class="progress-stacked">
+        <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0"
+             aria-valuemax="100" style="width: 15%">
+          <div class="progress-bar"></div>
+        </div>
+        <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0"
+             aria-valuemax="100" style="width: 30%">
+          <div class="progress-bar bg-success"></div>
+        </div>
+        <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0"
+             aria-valuemax="100" style="width: 20%">
+          <div class="progress-bar bg-info"></div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="mt-4">Striped</h2>
+    <p><small>Add <code>.progress-bar-striped</code> to any <code>.progress-bar</code> to apply a stripe via CSS
+      gradient over the progress bar’s background color.</small></p>
+
+    <div class="snippet">
+      <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0"
+           aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped" style="width: 10%"></div>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Success striped example" aria-valuenow="25" aria-valuemin="0"
+           aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped bg-success" style="width: 25%"></div>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Info striped example" aria-valuenow="50" aria-valuemin="0"
+           aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped bg-info" style="width: 50%"></div>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0"
+           aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped bg-warning" style="width: 75%"></div>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Danger striped example" aria-valuenow="100" aria-valuemin="0"
+           aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped bg-danger" style="width: 100%"></div>
+      </div>
+    </div>
+
+    <h2 class="mt-4">Animated stripes</h2>
+    <p><small>The striped gradient can also be animated. Add <code>.progress-bar-animated</code> to
+      <code>.progress-bar</code> to animate the stripes.</small></p>
+
+    <div class="snippet">
+      <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+           aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+      </div>
+    </div>
+  </div>
+</div>

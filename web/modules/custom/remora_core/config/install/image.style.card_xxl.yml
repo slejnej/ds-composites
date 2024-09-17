@@ -1,0 +1,32 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.card
+  module:
+    - crop
+name: card_xxl
+label: 'Card - XXL'
+effects:
+  aa045400-6217-4e03-afb7-e852a816a4ab:
+    uuid: aa045400-6217-4e03-afb7-e852a816a4ab
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: card
+      automatic_crop_provider: null
+  b1efac69-b215-4fc7-ba96-462191be4257:
+    uuid: b1efac69-b215-4fc7-ba96-462191be4257
+    id: image_scale
+    weight: 2
+    data:
+      width: 800
+      height: null
+      upscale: true
+  1ce9826f-3dfc-4fe1-b9ef-77b6afa8e5c8:
+    uuid: 1ce9826f-3dfc-4fe1-b9ef-77b6afa8e5c8
+    id: image_convert
+    weight: 3
+    data:
+      extension: webp

@@ -1,0 +1,42 @@
+.breadcrumb-wrapper {
+  background-color: $breadcrumb-bg; // to allow full width background
+
+  .breadcrumb {
+    flex-wrap: nowrap !important;
+    --bs-breadcrumb-padding-x: #{$breadcrumb-padding-x};
+    --bs-breadcrumb-bg: $breadcrumb-bg;
+    --bs-breadcrumb-padding-y: #{$breadcrumb-padding-y};
+    --bs-breadcrumb-margin-bottom: #{$breadcrumb-margin-bottom};
+    --bs-breadcrumb-divider-color: #{$breadcrumb-divider-color};
+    --bs-breadcrumb-item-padding-x: #{$breadcrumb-item-padding-x};
+    --bs-breadcrumb-item-active-color: #{$breadcrumb-active};
+    color: $breadcrumb-active;
+    max-width: $breadcrumb-max-width;
+
+    .breadcrumb-item {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex-shrink: 0;
+
+      a {
+        color: $breadcrumb-item;
+
+        svg {
+          fill: $breadcrumb-item;
+        }
+
+        &:hover {
+          color: $breadcrumb-active;
+
+          svg {
+            fill: $breadcrumb-active;
+          }
+        }
+      }
+
+      &:last-child {
+        flex-shrink: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+services:
+  remora_core.logger:
+    parent: logger.channel_base
+    arguments: [ 'remora_core' ]
+
+  # remora_core.logger.raven:
+  #  see: Drupal\remora_core\RemoraCoreServiceProvider::registerRavenDecorator()
+
+  #remora_core.linkchecker:
+  # see: Drupal\remora_core\RemoraCoreServiceProvider::registerLinkExtractors()
+
+  remora_core.builder.remora_image:
+    class: \Drupal\remora_core\Builder\RemoraImageBuilder
+    arguments: [ '@breakpoint.manager', '@remora_core.logger' ]
+
+  remora_core.service.module_template:
+    class: \Drupal\remora_core\Service\ModuleTemplateService
+
+  remora_core.service.referenceable_content_type:
+    class: \Drupal\remora_core\Service\ReferenceableEntity\ReferenceableContentTypeService
+
+  remora_core.service.referenceable_paragraph_type:
+    class: \Drupal\remora_core\Service\ReferenceableEntity\ReferenceableParagraphTypeService
+
+  remora_core.service.referenceable_media_type:
+    class: \Drupal\remora_core\Service\ReferenceableEntity\ReferenceableMediaTypeService
+
+  remora_core.service.install_dependencies:
+    class: Drupal\remora_core\Service\InstallDependenciesService
+
+  remora_core.repository.search_api.node:
+    class: Drupal\remora_core\Repository\SearchAPI\SolrNodeRepository
+
+  remora_core.repository.file:
+    class: Drupal\remora_core\Repository\FileRepository
+
+  remora_core.repository.media:
+    class: Drupal\remora_core\Repository\MediaRepository
+    arguments: [ '@remora_core.repository.file' ]
+
+  remora_core.repository.node:
+    class: \MantaRayMedia\BaseRepository\NodeRepository
+
+  remora_core.repository.taxonomy_term:
+    class: \MantaRayMedia\BaseRepository\TaxonomyTermRepository
+
+  remora_core.repository.user:
+    class: \MantaRayMedia\BaseRepository\UserRepository
+
+  remora_core.twig.extension.array:
+    class: Drupal\remora_core\Twig\Extension\ArrayExtension
+    tags:
+      - { name: twig.extension }
+
+  remora_core.twig.extension.image:
+    class: Drupal\remora_core\Twig\Extension\ImageExtension
+    arguments: [ '@remora_core.builder.remora_image', '@remora_core.repository.media' ]
+    tags:
+      - { name: twig.extension }
+
+  remora_core.twig.extension.math:
+    class: Drupal\remora_core\Twig\Extension\MathExtension
+    tags:
+      - { name: twig.extension }
+
+  remora_core.twig.extension.string:
+    class: Drupal\remora_core\Twig\Extension\StringExtension
+    tags:
+      - { name: twig.extension }
+
+  remora_core.twig.extension.template:
+    class: Drupal\remora_core\Twig\Extension\RemoraIncludeNode
+    tags:
+      - { name: twig.extension }
+
+  remora_core.twig.extension.user:
+    class: Drupal\remora_core\Twig\Extension\UserExtension
+    tags:
+      - { name: twig.extension }
+
+  remora_core.twig.extension.bsicons:
+    class: Drupal\remora_core\Twig\Extension\BootstrapIconExtension
+    tags:
+      - { name: twig.extension }
+
+  remora_core.twig.extension.fieldcheck:
+    class: Drupal\remora_core\Twig\Extension\FieldCheckExtension
+    tags:
+      - { name: twig.extension }
+
+  remora_core.twig.extension.modulecheck:
+    class: Drupal\remora_core\Twig\Extension\ModuleCheckExtension
+    arguments: ['@module_handler']
+    tags:
+      - { name: twig.extension }
+
+  remora_core.manager.module_permissions:
+    class: Drupal\remora_core\Manager\ModulePermissionsManager
+    arguments:
+      - '@file_system'
+      - '@remora_core.logger'
+      - '@user.permissions'
+
+  remora_core.manager.config_ignore:
+    class: Drupal\remora_core\Manager\ConfigIgnoreManager
+    arguments:
+      - '@file_system'
+      - '@remora_core.logger'
+
+  remora_core.event_subscriber.referenceable_entity:
+    class: '\Drupal\remora_core\EventSubscriber\ReferenceableEntitySubscriber'
+    tags:
+      - { name: 'event_subscriber' }
+
+  remora_core.event_subscriber.paragraphs_allowed_list:
+    class: '\Drupal\remora_core\EventSubscriber\LayoutParagraphsAllowedTypeSubscriber'
+    arguments: [ '@plugin.manager.entity_reference_selection' ]
+    tags:
+      - { name: 'event_subscriber' }
+
+  remora_core.event_subscriber.media_library_allowed_list:
+    class: '\Drupal\remora_core\EventSubscriber\MediaLibraryBuildUISubscriber'
+    arguments: [ '@plugin.manager.entity_reference_selection' ]
+    tags:
+      - { name: 'event_subscriber' }
+
+  remora_core.event_subscriber.raven_options:
+    class: '\Drupal\remora_core\EventSubscriber\RavenOptionsSubscriber'
+    tags:
+      - { name: 'event_subscriber' }
+
+  remora_core.delete_component_text:
+    class: 'Drupal\remora_core\Routing\DeleteComponentText'
+    tags:
+      - { name: 'event_subscriber' }
+
+  remora_core.service.add_new_field:
+    class: Drupal\remora_core\Service\AddNewField
+    arguments: [ '@entity_type.manager' ]

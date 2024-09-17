@@ -1,0 +1,183 @@
+nav.navbar {
+
+  --bs-navbar-brand-padding-y: #{$navbar-default-brand-padding-y};
+
+  //--bs-navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x};
+
+  --bs-navbar-toggler-padding-y: #{$navbar-default-toggler-padding-y};
+  --bs-navbar-toggler-padding-x: #{$navbar-default-toggler-padding-x};
+  --bs-navbar-toggler-font-size: #{$navbar-default-toggler-font-size};
+  --bs-navbar-toggler-border-color: #{$navbar-default-toggler-border-color};
+  --bs-navbar-toggler-border-radius: #{$navbar-default-toggler-border-radius};
+  --bs-border-width: 2px;
+  padding: $navbar-default-padding-top $navbar-default-padding-right $navbar-default-padding-bottom $navbar-default-padding-left;
+
+  .offcanvas {
+    @include media-breakpoint-down(lg) {
+      background-color: $navbar-default-link-color-bg;
+      nav.menu--main {
+        overflow-y: scroll;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    background-color: $navbar-default-toggler-bg-color;
+
+    &:hover {
+      --bs-navbar-toggler-border-color: #{$navbar-default-toggler-border-hover-color};
+      --bs-navbar-toggler-border-radius: #{$navbar-default-toggler-border-radius};
+      --bs-border-width: 2px;
+    }
+  }
+
+  .navbar-toggler-icon {
+    $stroke-color-encoded: "%23" + str-slice("#{$navbar-default-toggler-icon-color}", 2);
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='#{$stroke-color-encoded}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .navbar-nav {
+    --bs-nav-link-padding-x: #{$navbar-default-link-padding-x};
+    --bs-nav-link-padding-y: #{$navbar-default-link-padding-y};
+    --bs-nav-link-color: #{$navbar-default-link-color};
+    --bs-nav-link-hover-color: #{$navbar-default-link-hover-color};
+    --bs-nav-link-disabled-color: #{$navbar-default-link-disabled-color};
+
+    .nav-link {
+      background-color: $navbar-default-link-color-bg;
+
+      &:hover {
+        background-color: $navbar-default-link-hover-color-bg;
+      }
+
+      &.active {
+        background-color: $navbar-default-link-active-color-bg;
+        color: $navbar-default-link-active-color;
+      }
+
+      &.disabled {
+        background-color: $navbar-default-link-disabled-color-bg;
+      }
+    }
+
+    // first level menu only!
+    & > .nav-item {
+      & > .nav-link {
+        display: flex;
+        align-items: center; // this is vertical
+      }
+    }
+
+    .nav-item .dropdown-menu {
+      margin: 0;
+      padding: 0;
+      min-width: $dropdown-min-width;
+    }
+  }
+
+  // dark
+  &[data-bs-theme=dark] {
+    --bs-navbar-color: #{$navbar-dark-color};
+    --bs-navbar-hover-color: #{$navbar-dark-hover-color};
+    --bs-navbar-disabled-color: #{$navbar-dark-disabled-color};
+    --bs-navbar-active-color: #{$navbar-dark-active-color};
+    --bs-navbar-toggler-border-color: #{$navbar-default-toggler-border-color};
+
+    padding: $navbar-dark-bar-padding-y $navbar-dark-bar-padding-x;
+
+    @include media-breakpoint-up(lg) {
+      background-color: $navbar-dark-color-bg;
+    }
+
+    .offcanvas {
+      @include media-breakpoint-down(lg) {
+        background-color: $navbar-dark-color-bg;
+      }
+    }
+
+    .navbar-toggler-icon {
+      $stroke-color-encoded: "%23" + str-slice("#{$navbar-default-toggler-icon-color}", 2);
+      --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='#{$stroke-color-encoded}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .navbar-toggler {
+      background-color: $navbar-default-toggler-bg-color;
+
+      &:hover {
+        background-color: $navbar-default-toggler-bg-hover-color;
+      }
+    }
+
+    .navbar-nav {
+      --bs-nav-link-padding-x: #{$navbar-dark-link-padding-x};
+      --bs-nav-link-padding-y: #{$navbar-dark-link-padding-y};
+      --bs-nav-link-color: #{$navbar-dark-color};
+      --bs-nav-link-hover-color: #{$navbar-dark-hover-color};
+      --bs-nav-link-disabled-color: #{$navbar-dark-disabled-color};
+
+      .nav-link {
+        background-color: $navbar-dark-link-color-bg;
+        color: $navbar-dark-link-color;
+
+        &.title {
+          background-color: $navbar-dark-link-title-bg;
+          color: $navbar-dark-link-title-color;
+          padding: $navbar-dark-link-title-padding-y $navbar-dark-link-title-padding-x;
+          border-bottom: $navbar-dark-link-title-border-bottom solid;
+          border-color: $navbar-dark-link-title-border-color;
+
+          &:hover {
+            background-color: $navbar-dark-link-hover-title-bg;
+            color: $navbar-dark-link-hover-title-color;
+          }
+
+          &.is-active {
+            background-color: $navbar-dark-link-active-color-bg;
+            color: $navbar-dark-link-active-color;
+          }
+        }
+
+        &:hover {
+          background-color: $navbar-dark-link-hover-color-bg;
+          color: $navbar-dark-link-hover-color;
+        }
+
+        &.active {
+          background-color: $navbar-dark-link-active-color-bg;
+          color: $navbar-dark-link-active-color;
+        }
+
+        &.disabled {
+          background-color: $navbar-dark-link-disabled-color-bg;
+          color: $navbar-dark-link-disabled-color;
+        }
+      }
+
+      // first level menu only!
+      & > .nav-item {
+        & > .nav-link {
+          background-color: $navbar-dark-color-bg;
+          color: $navbar-dark-color;
+          padding-left: $navbar-dark-link-padding-x;
+          padding-right: $navbar-dark-link-padding-x;
+          height: $navbar-dark-height;
+
+          &:hover {
+            background-color: $navbar-dark-hover-color-bg;
+            color: $navbar-dark-hover-color;
+          }
+
+          &.active {
+            background-color: $navbar-dark-active-color-bg;
+            color: $navbar-dark-active-color;
+          }
+
+          &.disabled {
+            background-color: $navbar-dark-disabled-color-bg;
+            color: $navbar-dark-disabled-color;
+          }
+        }
+      }
+    }
+  }
+}

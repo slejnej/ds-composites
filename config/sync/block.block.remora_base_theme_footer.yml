@@ -1,0 +1,27 @@
+uuid: f978862d-8906-4d87-964d-8133381d68c1
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - remora_base_theme
+_core:
+  default_config_hash: cTL6Wef4wPy1qkSQKKO3LufXdFDOA7W5IgORlZe21iA
+id: remora_base_theme_footer
+theme: remora_base_theme
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,10 @@
+{# Sidebar fields with an inline divider fields #}
+{% macro sidebar_field(value, label) %}
+  {% if (value['#items'] ?? []) is not empty %}
+    <dt class="d-flex align-items-center">
+      <span>{{ label }}</span>
+      <span class="divider flex-grow-1 d-inline-block"></span>
+    </dt>
+    <dd>{{ value }}</dd>
+  {% endif %}
+{% endmacro %}

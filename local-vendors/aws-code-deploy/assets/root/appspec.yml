@@ -1,0 +1,31 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /tmp/ds-composites
+hooks:
+  BeforeInstall:
+    - location: vendor/mrm-remora/aws-code-deploy/assets/aws/hooks/BeforeInstall.sh
+      timeout: 30
+      runas: root
+  AfterInstall:
+    - location: vendor/mrm-remora/aws-code-deploy/assets/aws/hooks/AfterInstall.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: vendor/mrm-remora/aws-code-deploy/assets/aws/hooks/ApplicationStart.sh
+      timeout: 300
+      runas: ubuntu
+  ValidateService:
+    - location: vendor/mrm-remora/aws-code-deploy/assets/aws/hooks/ValidateService.sh
+      timeout: 30
+      runas: root
+
+permissions:
+  - object: /tmp/ds-composites/vendor/mrm-remora/aws-code-deploy/assets/aws/
+    pattern: "*.sh"
+    owner: root
+    group: root
+    mode: 500
+    type:
+      - file

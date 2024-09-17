@@ -1,0 +1,21 @@
+{% block card_image_wrapper %}
+
+  {% if image %}
+    {% set card_image = 'card-with-image' %}
+  {% endif %}
+
+  <div class="image-header position-relative {{ card_image }}">
+    {% if image %}
+      {% block card_image %}
+        <div class="card-img-top">
+          {{ drupal_image(image, 'card', responsive=true) }}
+        </div>
+      {% endblock %}
+    {% endif %}
+
+    {% block card_header %}
+    {% endblock %}
+  </div>
+
+{% endblock %}
+

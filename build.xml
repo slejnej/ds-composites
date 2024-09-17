@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="ds-composites" default="build">
+
+  <property name="version" value="0.0" />
+
+  <property environment="env" />
+
+  <property name="remora_base.dir" value="${basedir}/web/themes/custom/remora_base_theme"/>
+  <property name="tonic.dir" value="${basedir}/web/themes/custom/tonic"/>
+  <property name="dsc.dir" value="${basedir}/web/themes/custom/ds_composites"/>
+  <property name="composer.path" value="${basedir}/bin/composer.phar"/>
+
+  <available property="composer.exists" file="${composer.path}"/>
+
+  <target name="build" depends="prepare,versions,phploc,phpspec,assets,release"/>
+
+  <target name="clean" description="Cleanup build artifacts">
+    <delete dir="${basedir}/build/api"/>
+    <delete dir="${basedir}/build/code-browser"/>
+    <delete dir="${basedir}/build/coverage"/>
+    <delete dir="${basedir}/build/logs"/>
+    <delete dir="${basedir}/build/pdepend"/>
+    <delete dir="${basedir}/build/phpdox"/>
+  </target>
+
+  <target name="prepare" depends="clean,vendors" description="Prepare for build">
+    <mkdir dir="${basedir}/build/api"/>
+    <mkdir dir="${basedir}/build/code-browser"/>
+    <mkdir dir="${basedir}/build/coverage"/>
+    <mkdir dir="${basedir}/build/logs"/>
+    <mkdir dir="${basedir}/build/pdepend"/>
+    <mkdir dir="${basedir}/build/phpdox"/>
+  </target>
+
+  <target name="versions" description="Prints software versions" depends="composer">
+    <exec executable="php" failonerror="true">
+      <arg value="-v"/>
+    </exec>
+    <exec executable="${basedir}/bin/composer.phar" failonerror="true">
+      <arg value="show"/>
+    </exec>
+  </target>
+
+  <target name="lint" description="Perform syntax check of sourcecode files">
+    <apply executable="php" failonerror="true">
+      <arg value="-l"/>
+
+      <fileset dir="${basedir}/web">
+        <include name="**/*.php"/>
+        <modified/>
+      </fileset>
+    </apply>
+  </target>
+
+  <target name="phploc" description="Measure project size using PHPLOC">
+    <exec executable="${basedir}/bin/phploc">
+      <arg value="--log-csv"/>
+      <arg value="${basedir}/build/logs/phploc.csv"/>
+      <arg path="${basedir}/web/modules"/>
+      <arg path="${basedir}/web/themes"/>
+      <arg path="${basedir}/web/libraries"/>
+    </exec>
+  </target>
+
+  <target name="pdepend" description="Calculate software metrics using PHP_Depend">
+    <exec executable="${basedir}/bin/pdepend">
+      <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml"/>
+      <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg"/>
+      <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg"/>
+      <arg path="${basedir}/web"/>
+    </exec>
+  </target>
+
+  <target name="phpmd"
+          description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
+    <exec executable="${basedir}/bin/phpmd">
+      <arg path="${basedir}/web"/>
+      <arg value="xml"/>
+      <arg value="codesize,design,unusedcode"/>
+      <arg value="--reportfile" />
+      <arg value="${basedir}/build/logs/pmd.xml" />
+    </exec>
+  </target>
+
+  <target name="phpcpd" description="Find duplicate code using PHPCPD">
+    <exec executable="${basedir}/bin/phpcpd">
+      <arg value="--log-pmd"/>
+      <arg value="${basedir}/build/logs/pmd-cpd.xml"/>
+      <arg path="${basedir}/web"/>
+    </exec>
+  </target>
+
+  <target name="phpspec" description="Run phpspecs">
+    <exec executable="/bin/bash" failonerror="true" output="${basedir}/build/logs/junit.xml">
+      <arg value="-c" />
+      <arg value="${basedir}/bin/phpspec run -fjunit" />
+    </exec>
+  </target>
+
+  <target name="phpcb" description="Aggregate tool output with PHP_CodeBrowser">
+    <exec executable="${basedir}/bin/phpcb">
+      <arg value="--log"/>
+      <arg path="${basedir}/build/logs"/>
+      <arg value="--source"/>
+      <arg path="${basedir}/web"/>
+      <arg value="--output"/>
+      <arg path="${basedir}/build/code-browser"/>
+    </exec>
+  </target>
+
+  <target name="vendors" depends="composer">
+    <exec executable="${basedir}/bin/composer.phar" failonerror="true">
+      <arg value="install"/>
+      <arg value="--ignore-platform-reqs" />
+    </exec>
+  </target>
+
+  <target name="composer" unless="composer.exists">
+    <mkdir dir="${basedir}/bin"/>
+    <get src="https://getcomposer.org/download/latest-stable/composer.phar" dest="${composer.path}"/>
+    <chmod file="${composer.path}" perm="775"/>
+  </target>
+
+  <target name="behat" description="Run cucumber scenarios with Behat">
+
+    <exec executable="${basedir}/bin/behat" failonerror="true">
+      <arg value="--profile=jenkins"/>
+    </exec>
+  </target>
+
+  <target name="assets" depends="npm-remora_base, npm-tonic, npm-dsc">
+  </target>
+
+  <target name="npm-remora_base" depends="vendors">
+    <exec executable="npm" failonerror="true">
+      <arg value="install" />
+      <arg value="--unsafe-perm" />
+      <arg value="--prefix" />
+      <arg value="${remora_base.dir}" />
+    </exec>
+  </target>
+
+  <target name="npm-tonic" depends="vendors">
+    <exec executable="npm" failonerror="true">
+      <arg value="install" />
+      <arg value="--unsafe-perm" />
+      <arg value="--prefix" />
+      <arg value="${tonic.dir}" />
+    </exec>
+  </target>
+
+  <target name="npm-dsc" depends="vendors">
+    <exec executable="npm" failonerror="true">
+      <arg value="install" />
+      <arg value="--unsafe-perm" />
+      <arg value="--prefix" />
+      <arg value="${dsc.dir}" />
+    </exec>
+  </target>
+
+  <target name="release" if="${env.RELEASE}">
+    <exec executable="${basedir}/release.sh" failonerror="true">
+      <arg value="${version}" />
+      <arg value="${env.BUILD_NUMBER}" />
+      <arg value="${env.BRANCH}" />
+    </exec>
+  </target>
+
+</project>

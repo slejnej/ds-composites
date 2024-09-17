@@ -1,0 +1,9 @@
+[template]
+src = "ds-composites/backup-s3.sh.tmpl"
+dest = "/home/ubuntu/apps/ds-composites/current/bin/backup-s3.sh"
+keys = [
+    "/ds-composites",
+]
+uid = 1000
+gid = 1000
+mode = "0755"

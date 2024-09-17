@@ -1,0 +1,28 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_title
+    - filter.format.title
+    - paragraphs.paragraphs_type.attachments
+  module:
+    - text
+    - attachments_nugget
+  enforced:
+    module:
+      - attachments_nugget
+id: paragraph.attachments.field_display_title
+field_name: field_display_title
+entity_type: paragraph
+bundle: attachments
+label: 'Display title'
+description: 'This title is displayed on the page above the content of this nugget.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - title
+field_type: text

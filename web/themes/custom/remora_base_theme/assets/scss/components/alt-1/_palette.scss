@@ -1,0 +1,20 @@
+.palette-alt-1 {
+  background-color: $alt-1-surface-primary;
+
+  h2, h3, h4, h5, h6 {
+    color: $alt-1-text-primary;
+  }
+
+  .text-body,
+  .body-wrapper {
+    color: $alt-1-text-secondary!important;
+
+    a {
+      color: $alt-1-text-link;
+
+      &:hover {
+        color: $alt-1-text-link-hover;
+      }
+    }
+  }
+}

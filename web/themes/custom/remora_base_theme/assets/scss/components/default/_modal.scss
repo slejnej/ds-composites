@@ -1,0 +1,44 @@
+@import "../../variables_bootstrap";
+@import "../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+div.modal {
+  --bs-modal-width: #{$modal-md};
+  --bs-modal-color: #{$modal-content-color};
+  --bs-modal-bg: #{$modal-content-bg};
+  --bs-modal-border-color: #{$modal-content-border-color};
+  --bs-modal-header-border-color: #{$modal-header-border-color};
+  --bs-modal-footer-border-color: #{$modal-footer-border-color};
+
+  --bs-modal-border-radius: #{$modal-border-radius};
+  --bs-modal-inner-border-radius: #{$modal-inner-border-radius}; // effect only if header or footer has different color than modal
+  --bs-modal-header-padding-x: #{$modal-header-padding-x};
+  --bs-modal-header-padding-y: #{$modal-header-padding-y};
+  --bs-modal-title-line-height: #{$modal-title-line-height};
+  --bs-modal-footer-bg: #{$modal-footer-bg};
+
+  .modal-header {
+    background-color: #{$modal-header-bg};
+  }
+  .modal-body {
+    padding: $modal-inner-padding-y $modal-inner-padding-x;
+  }
+
+  @include media-breakpoint-up(sm, $grid-breakpoints) {
+    .modal-sm {
+      --bs-modal-width: #{$modal-sm};
+    }
+  }
+
+  @include media-breakpoint-up(lg, $grid-breakpoints) {
+    .modal-lg,
+    .modal-xl {
+      --bs-modal-width: #{$modal-lg};
+    }
+  }
+
+  @include media-breakpoint-up(xl, $grid-breakpoints) {
+    .modal-xl {
+      --bs-modal-width: #{$modal-xl};
+    }
+  }
+}

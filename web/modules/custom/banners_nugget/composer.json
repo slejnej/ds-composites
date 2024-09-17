@@ -1,0 +1,21 @@
+{
+  "name": "mrm-remora/banners_nugget",
+  "type": "drupal-custom-module",
+  "description": "Banners nugget - contains functionalities to enable Banners nugget",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Ivan Solić",
+      "email": "ivan@mantaraymedia.co.uk"
+    },
+    {
+      "name": "Jernej Slejko",
+      "email": "jernej@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "drupal/field_group": "^3.4"
+  }
+}

@@ -1,0 +1,187 @@
+// global-background
+$primary: #0087cc;
+$secondary: #083554;
+$success: #aebacb;
+$danger: #ff2727;
+$warning: #fbba00;
+$info: #eb850c;
+$light: #d4dae3;
+$dark: #162027;
+$default: #ffffff;
+$alt-1: #f0f9ff;
+$alt-2: #072e4a;
+
+// global-spacing
+$global-spacing-0: 0px;
+$global-spacing-1: 16px;
+$global-spacing-2: 32px;
+$global-spacing-3: 48px;
+$global-spacing-4: 64px;
+$global-spacing-5: 80px;
+$global-spacing-6: 96px;
+$global-spacing-8: 128px;
+$global-spacing-10: 160px;
+$global-spacing-01: 1.6000000238419px;
+$global-spacing-015: 2px;
+$global-spacing-02: 3px;
+$global-spacing-05: 8px;
+$global-spacing-border-radius-sm: 4px;
+$global-spacing-border-radius-m: 10px;
+$global-spacing-border-radius-lg: 18px;
+$global-spacing-border-radius-xlg: 27px;
+$global-spacing-border-radius-xxlg: 54px;
+$global-spacing-border-radius-pill: 800px;
+
+// global-color
+
+// primary
+$global-color-primary-primary-100: #e0f2fe;
+$global-color-primary-primary-200: #b9e6fe;
+$global-color-primary-primary-300: #7cd3fd;
+$global-color-primary-primary-400: #36befa;
+$global-color-primary-primary-500: #0ca6eb;
+$global-color-primary-primary-600: #0087cc;
+$global-color-primary-primary-700: #0169a3;
+$global-color-primary-primary-800: #065986;
+$global-color-primary-primary-900: #072f4a;
+
+// secondary
+$global-color-secondary-secondary-100: #b9e5fe;
+$global-color-secondary-secondary-200: #7bd3fe;
+$global-color-secondary-secondary-300: #35bcfb;
+$global-color-secondary-secondary-400: #0ba4ec;
+$global-color-secondary-secondary-500: #0083ca;
+$global-color-secondary-secondary-600: #0169a3;
+$global-color-secondary-secondary-700: #055987;
+$global-color-secondary-secondary-800: #0b496f;
+$global-color-secondary-secondary-900: #083554;
+
+// success
+$global-color-success-success-100: #f6f7f9;
+$global-color-success-success-200: #eceef2;
+$global-color-success-success-300: #d4dae3;
+$global-color-success-success-400: #aebacb;
+$global-color-success-success-500: #8294ae;
+$global-color-success-success-600: #637894;
+$global-color-success-success-700: #4e607b;
+$global-color-success-success-800: #404d64;
+$global-color-success-success-900: #394456;
+
+// danger
+$global-color-danger-danger-100: #ffdddd;
+$global-color-danger-danger-200: #ffc1c1;
+$global-color-danger-danger-300: #ff9696;
+$global-color-danger-danger-400: #ff5a5a;
+$global-color-danger-danger-500: $danger;
+$global-color-danger-danger-600: #d40101;
+$global-color-danger-danger-700: #ae0606;
+$global-color-danger-danger-800: #900c0c;
+$global-color-danger-danger-900: #6b0000;
+
+// warning
+$global-color-warning-warning-100: #fffeea;
+$global-color-warning-warning-200: #fff785;
+$global-color-warning-warning-300: #ffec46;
+$global-color-warning-warning-400: #ffdd1b;
+$global-color-warning-warning-500: #fbba00;
+$global-color-warning-warning-600: #e29100;
+$global-color-warning-warning-700: #bb6702;
+$global-color-warning-warning-800: #984f08;
+$global-color-warning-warning-900: #482100;
+
+// info
+$global-color-info-info-100: #fdeec8;
+$global-color-info-info-200: #fcdb8b;
+$global-color-info-info-300: #fac34f;
+$global-color-info-info-400: #f9ac26;
+$global-color-info-info-500: #eb850c;
+$global-color-info-info-600: #d76508;
+$global-color-info-info-700: #b2450b;
+$global-color-info-info-800: #91350f;
+$global-color-info-info-900: #772c10;
+
+// light
+$global-color-light-light-100: #f6f7f9;
+$global-color-light-light-200: #eceef2;
+$global-color-light-light-300: #d4dae3;
+$global-color-light-light-400: #aebacb;
+$global-color-light-light-500: #8294ae;
+$global-color-light-light-600: #637894;
+$global-color-light-light-700: #4e607b;
+$global-color-light-light-800: #404d64;
+$global-color-light-light-900: #323a48;
+
+// dark
+$global-color-dark-dark-100: #2c75aa;
+$global-color-dark-dark-200: #266c9e;
+$global-color-dark-dark-300: #216291;
+$global-color-dark-dark-400: #1c5a87;
+$global-color-dark-dark-500: #17517b;
+$global-color-dark-dark-600: #134970;
+$global-color-dark-dark-700: #0e4064;
+$global-color-dark-dark-800: #0a3757;
+$global-color-dark-dark-900: #072e4a;
+
+// black
+$global-color-black-white: #ffffff;
+$global-color-black-black-100: #e0e2e4;
+$global-color-black-black-200: #cdced0;
+$global-color-black-balck-300: #c2c5c9;
+$global-color-black-black-400: #a4aaaf;
+$global-color-black-black-500: #777879;
+$global-color-black-black-600: #41464a;
+$global-color-black-black-700: #2d3032;
+$global-color-black-black-800: #1a1b1c;
+$global-color-black-black: #000000;
+
+// global-text
+$global-text-primary-font: Noto Sans;
+$global-text-secondary-font: Noto Sans;
+$global-text-tertiary-font: Noto Sans;
+$global-text-font-size-2xs: 12px;
+$global-text-font-size-xs: 13px;
+$global-text-font-size-s: 14px;
+$global-text-font-size-m: 16px;
+$global-text-font-size-l: 18px;
+$global-text-font-size-xl: 20px;
+$global-text-font-size-2xl: 24px;
+$global-text-font-size-3xl: 28px;
+$global-text-font-size-4xl: 32px;
+$global-text-font-size-5xl: 36px;
+$global-text-font-size-6xl: 42px;
+$global-text-font-size-7xl: 44px;
+$global-text-font-size-8xl: 48px;
+$global-text-font-size-9xl: 50px;
+$global-text-font-size-10xl: 56px;
+$global-text-font-size-11xl: 64px;
+$global-text-font-size-12xl: 72px;
+$global-text-font-size-13xl: 75px;
+$global-text-font-size-14xl: 80px;
+$global-text-line-height-base: 27px;
+$global-text-line-height-sm: 22.5px;
+$global-text-line-height-lg: 32px;
+$global-text-font-weight-lighter: 100;
+$global-text-font-weight-light: 300;
+$global-text-font-weight-normal: 400;
+$global-text-font-weight-medium: 500;
+$global-text-font-weight-semibold: 600;
+$global-text-font-weight-bold: 700;
+$global-text-font-weight-bolder: 800;
+$global-text-primary: $global-color-dark-dark-900;
+$global-text-secondary: $global-color-dark-dark-800;
+$global-text-info: $global-color-primary-primary-800;
+$global-text-date: $global-color-primary-primary-800;
+$global-text-invert: $global-color-black-white;
+$global-text-link: $global-color-primary-primary-700;
+$global-text-link-hover: $global-color-primary-primary-800;
+$global-text-font-headings: Noto Sans;
+
+// global-border
+$global-border-border-width: 0.80000001192093px;
+$global-border-border-color: $global-color-secondary-secondary-200;
+$global-border-border-radius-sm: 8px;
+$global-border-border-radius: 16px;
+$global-border-border-radius-lg: 32px;
+$global-border-border-radius-xl: 48px;
+$global-border-border-radius-xxl: 64px;
+$global-border-border-radius-xxl-2: 800px;

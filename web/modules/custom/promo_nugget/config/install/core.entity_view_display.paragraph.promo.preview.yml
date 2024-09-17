@@ -1,0 +1,32 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.promo.field_display_title
+    - field.field.paragraph.promo.field_editor_title
+    - field.field.paragraph.promo.field_promo_link
+    - field.field.paragraph.promo.field_promo_media
+    - field.field.paragraph.promo.field_promo_text
+    - field.field.paragraph.promo.field_promo_title
+    - paragraphs.paragraphs_type.promo
+id: paragraph.promo.preview
+targetEntityType: paragraph
+bundle: promo
+mode: preview
+content:
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_display_title: true
+  field_promo_link: true
+  field_promo_media: true
+  field_promo_text: true
+  field_promo_title: true

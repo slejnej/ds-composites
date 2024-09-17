@@ -1,0 +1,162 @@
+uuid: aa5c0550-ed4b-4d22-b647-5c74834cb660
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - security
+id: config_sync.module.security
+snapshotSet: config_sync
+extensionType: module
+extensionName: security
+items:
+  -
+    collection: ''
+    name: permissionspolicy.settings
+    data:
+      langcode: en-gb
+      enforce:
+        enable: true
+        features:
+          accelerometer:
+            base: none
+          ambient-light-sensor:
+            base: none
+          autoplay:
+            base: none
+          battery:
+            base: none
+          bluetooth:
+            base: none
+          camera:
+            base: none
+          ch-ua:
+            base: none
+          ch-ua-arch:
+            base: none
+          ch-ua-bitness:
+            base: none
+          ch-ua-full-version:
+            base: none
+          ch-ua-full-version-list:
+            base: none
+          ch-ua-mobile:
+            base: none
+          ch-ua-model:
+            base: none
+          ch-ua-platform:
+            base: none
+          ch-ua-platform-version:
+            base: none
+          ch-ua-wow64:
+            base: none
+          cross-origin-isolated:
+            base: none
+          display-capture:
+            base: none
+          encrypted-media:
+            base: none
+          execution-while-not-rendered:
+            base: any
+          execution-while-out-of-viewport:
+            base: any
+          fullscreen:
+            base: any
+          geolocation:
+            base: none
+          gyroscope:
+            base: none
+          hid:
+            base: none
+          idle-detection:
+            base: none
+          keyboard-map:
+            base: none
+          magnetometer:
+            base: none
+          microphone:
+            base: none
+          midi:
+            base: none
+          navigation-override:
+            base: none
+          payment:
+            base: none
+          picture-in-picture:
+            base: any
+          publickey-credentials-get:
+            base: none
+          screen-wake-lock:
+            base: none
+          serial:
+            base: none
+          sync-xhr:
+            base: none
+          usb:
+            base: none
+          web-share:
+            base: any
+          xr-spatial-tracking:
+            base: none
+      _core:
+        default_config_hash: 3GDkbNHAOZWc3UcDH_tfIbTiyLLz44FmxK0Uyt5Qn_M
+  -
+    collection: ''
+    name: seckit.settings
+    data:
+      langcode: en-gb
+      seckit_xss:
+        csp:
+          checkbox: true
+          vendor-prefix:
+            x: false
+            webkit: false
+          report-only: false
+          default-src: "'self' 'unsafe-inline'"
+          script-src: "'self' 'unsafe-inline' 'unsafe-eval' https://*.google-analytics.com https://*.gstatic.com https://*.googleapis.com https://*.google.com https://*.fontawesome.com https://*.doubleclick.net https://*.googleadservices.com https://www.googletagmanager.com https://www.recaptcha.net https://code.highcharts.com https://script.crazyegg.com https://www.youtube.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://cdn.userway.org"
+          object-src: "'unsafe-eval' data:"
+          style-src: "'self' 'unsafe-inline' https://*.gstatic.com https://*.googleapis.com https://*.fontawesome.com https://*.typekit.net https://cdnjs.cloudflare.com https://fast.fonts.net"
+          img-src: "'self' 'unsafe-inline' https: data:"
+          media-src: ''
+          frame-src: "'self' 'unsafe-inline' https://*.doubleclick.net https://*.googleapis.com https://www.recaptcha.net https://youtube.com https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com https://vimeo.com https://www.google.com https://block.opendns.com"
+          frame-ancestors: ''
+          child-src: ''
+          font-src: "'self' 'unsafe-inline' https://*.gstatic.com https://*.typekit.net https://*.fontawesome.com https://themes.googleusercontent.com"
+          connect-src: "'self' 'unsafe-inline' https://*.google.com https://*.googleapis.com https://*.google-analytics.com https://*.googleadservices.com https://*.g.doubleclick.net https://*.doubleclick.net https://*.fontawesome.com https://www.youtube.com"
+          report-uri: /report-csp-violation
+          upgrade-req: false
+          policy-uri: ''
+        x_xss:
+          seckit_x_xss_option_disable: Disabled
+          seckit_x_xss_option_0: '0'
+          seckit_x_xss_option_1: 1;
+          seckit_x_xss_option_1_block: '1; mode=block'
+          select: 0
+      seckit_csrf:
+        origin: false
+        origin_whitelist: ''
+      seckit_clickjacking:
+        js_css_noscript: false
+        noscript_message: 'Sorry, you need to enable JavaScript to visit this website.'
+        x_frame: '1'
+        x_frame_allow_from: ''
+      seckit_ssl:
+        hsts: true
+        hsts_subdomains: false
+        hsts_max_age: 1000
+        hsts_preload: false
+      seckit_ct:
+        expect_ct: false
+        max_age: 86400
+        report_uri: ''
+        enforce: false
+      seckit_fp:
+        feature_policy: false
+        feature_policy_policy: ''
+      seckit_various:
+        from_origin: false
+        from_origin_destination: same
+        referrer_policy: true
+        referrer_policy_policy: no-referrer-when-downgrade
+        disable_autocomplete: false
+      _core:
+        default_config_hash: fpcBuAXb8-6iYS5QkNwCVXlmbmWrBBq1In2dUpDbk2Q

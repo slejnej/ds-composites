@@ -1,0 +1,43 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - image.style.original_size
+  theme:
+    - remora_base_theme
+id: original_size
+label: 'Original size'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: original_size
+    breakpoint_id: remora_base_theme.xxl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: original_size
+    breakpoint_id: remora_base_theme.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: original_size
+    breakpoint_id: remora_base_theme.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: original_size
+    breakpoint_id: remora_base_theme.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: original_size
+    breakpoint_id: remora_base_theme.sm
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: original_size
+    breakpoint_id: remora_base_theme.xs
+    multiplier: 1x
+breakpoint_group: remora_base_theme
+fallback_image_style: original_size

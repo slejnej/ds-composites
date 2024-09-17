@@ -1,0 +1,83 @@
+// Custom variables for promo margins
+section:not(#sidebar-nuggets) .layout__region .paragraph.paragraph--type--promo {
+  &:first-child {
+    margin-top: $layout-carousel-margin-y;
+  }
+
+  //Half the margins in between nuggets to avoid large gaps
+  margin-top: calc($layout-carousel-margin-y / 2);
+  margin-bottom: calc($layout-carousel-margin-y / 2);
+
+  &:last-child {
+    margin-bottom: $layout-carousel-margin-y;
+  }
+}
+
+// Promos have one design for now and no figma variables
+// Overwrite these variables manually in the Subtheme _components-overrides.scss
+// Add any svg/pngs to subtheme/assets/images
+
+$promo-bg: $global-color-info-info-100 !default;
+$promo-title-color: $text-primary !default;
+$promo-text-color: $text-primary !default;
+$promo-link-color: $text-link !default;
+$promo-link-color-hover: $text-link-hover !default;
+$promo-deco-height: 100px !default;
+$promo-deco-width: 100px !default;
+
+.paragraph--type--promo {
+  @include media-breakpoint-down('sm') {
+    padding: 54px 0;
+  }
+  padding: 24px 54px;
+  background: $promo-bg;
+
+  .promo-wrapper {
+    gap: 54px;
+
+    .promo-image-wrapper {
+      @include media-breakpoint-down('sm') {
+        margin: 0 -80px;
+      }
+
+      .promo-image {
+        img {
+          border-radius: 50%;
+          position: relative;
+          z-index: 1;
+        }
+
+        .promo-deco {
+          height: calc(100% + $promo-deco-height);
+          width: calc(100% + $promo-deco-width);
+          top: calc(0px - $promo-deco-height / 2);
+          left: calc(0px - $promo-deco-width / 2);
+        }
+      }
+    }
+
+
+    .promo-text-wrapper {
+      gap: 1em;
+
+      .promo-title {
+        color: $promo-title-color;
+        @include typography-mobile($text-mobile-title-promo-font, $text-mobile-title-promo-size, $text-mobile-title-promo-weight, $text-mobile-title-promo-line-height);
+        @include typography-desktop($text-desktop-title-promo-font, $text-desktop-title-promo-size, $text-desktop-title-promo-weight, $text-desktop-title-promo-line-height);
+      }
+
+      .promo-body {
+        color: $promo-text-color;
+
+        a {
+          color: $promo-link-color;
+
+          &:hover {
+            color: $promo-link-color-hover;
+          }
+        }
+      }
+    }
+  }
+}
+

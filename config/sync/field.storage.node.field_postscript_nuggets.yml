@@ -1,0 +1,23 @@
+uuid: 46a641ca-29a1-4745-908e-a508d050a89f
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+_core:
+  default_config_hash: AEiNZwIG8vRrUmS7g2yuk4YAbq159vDPtY7nha_ML40
+id: node.field_postscript_nuggets
+field_name: field_postscript_nuggets
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

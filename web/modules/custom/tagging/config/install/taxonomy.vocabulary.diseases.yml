@@ -1,0 +1,8 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies: {  }
+name: Diseases
+vid: diseases
+description: ''
+weight: 0

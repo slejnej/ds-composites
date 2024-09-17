@@ -1,0 +1,32 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.landscape_4x3
+  module:
+    - crop
+name: landscape_4_3_xxl
+label: 'Landscape: 4x3 - XXL'
+effects:
+  93f6292c-0c50-4448-80c9-cb61c3950131:
+    uuid: 93f6292c-0c50-4448-80c9-cb61c3950131
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: landscape_4x3
+      automatic_crop_provider: null
+  c63b382c-ea4a-45c4-ac9b-b00fa58bc300:
+    uuid: c63b382c-ea4a-45c4-ac9b-b00fa58bc300
+    id: image_scale
+    weight: 2
+    data:
+      width: 1920
+      height: null
+      upscale: true
+  4253f6cd-d571-4c0f-9e43-78732be2506b:
+    uuid: 4253f6cd-d571-4c0f-9e43-78732be2506b
+    id: image_convert
+    weight: 3
+    data:
+      extension: webp

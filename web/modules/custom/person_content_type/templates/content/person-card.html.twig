@@ -1,0 +1,47 @@
+{% extends '@cards_nugget/partials/card-body.html.twig' %}
+{% import '@cards_nugget/macros/card-macros.twig' as macros %}
+
+{% block card_body %}
+
+  {% set content = referencedNode ?? content %}
+
+  <div class="card-body-wrapper">
+    <div class="card-text-wrapper">
+
+      {% block card_person_title %}
+        {{ block('card_title') }}
+      {% endblock %}
+
+      {% block card_date %}
+        <span class="card-rp;e d-block">
+          {% if content.field_role is not empty %}
+            {{ macros.field_text(content, 'field_role') }}
+          {% endif %}
+        </span>
+      {% endblock %}
+
+      {% block card_employment %}
+        {% if content.field_department.0 is not empty or content.field_person_organisation.0 is not empty  %}
+          <span class="card-employment d-inline-block">
+            {% if content.field_department.0 is not empty %}
+              <span>
+              {{ macros.field_type(content, 'field_department') }}
+                {% if content.field_person_organisation.0 is not empty  %}<span class="comma">,</span>{% endif %}
+              </span>
+            {% endif %}
+
+            {% if content.field_person_organisation.0 is not empty %}
+              <span>{{ macros.field_type(content, 'field_person_organisation') }}</span>
+            {% endif %}
+          </span>
+        {% endif %}
+      {% endblock %}
+
+      {% block card_person_text %}
+        {{ block('card_text') }}
+      {% endblock %}
+    </div>
+  </div>
+{% endblock %}
+
+

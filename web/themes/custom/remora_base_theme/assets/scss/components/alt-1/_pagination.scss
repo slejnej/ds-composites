@@ -1,0 +1,38 @@
+.palette-alt-1 {
+  &.pagination,
+  .pagination {
+    --bs-pagination-padding-x: #{$alt-1-pagination-padding-x};
+    --bs-pagination-padding-y: #{$alt-1-pagination-padding-y};
+    --bs-pagination-color: #{$alt-1-pagination-color};
+    --bs-pagination-bg: #{$alt-1-pagination-bg};
+    --bs-pagination-border-color: #{$alt-1-pagination-border-color};
+    --bs-pagination-border-radius: #{$alt-1-pagination-border-radius};
+    --bs-pagination-hover-color: #{$alt-1-pagination-hover-color};
+    --bs-pagination-hover-bg: #{$alt-1-pagination-hover-bg};
+    --bs-pagination-hover-border-color: #{$alt-1-pagination-hover-border-color};
+    --bs-pagination-focus-color: #{$alt-1-pagination-focus-color};
+    --bs-pagination-focus-bg: #{$alt-1-pagination-focus-bg};
+    --bs-pagination-active-color: #{$alt-1-pagination-active-color};
+    --bs-pagination-active-bg: #{$alt-1-pagination-active-bg};
+    --bs-pagination-active-border-color: #{$alt-1-pagination-active-border-color};
+    --bs-pagination-disabled-color: #{$alt-1-pagination-disabled-color};
+    --bs-pagination-disabled-bg: #{$alt-1-pagination-disabled-bg};
+    --bs-pagination-disabled-border-color: #{$alt-1-pagination-disabled-border-color};
+
+    .page-link:focus {
+      border-color: $alt-1-pagination-focus-border-color;
+    }
+    &.pagination-sm {
+      --bs-pagination-padding-x: #{$alt-1-pagination-padding-x-sm};
+      --bs-pagination-padding-y: #{$alt-1-pagination-padding-y-sm};
+    }
+    &.pagination-lg {
+      --bs-pagination-padding-x: #{$alt-1-pagination-padding-x-lg};
+      --bs-pagination-padding-y: #{$alt-1-pagination-padding-y-lg};
+    }
+    .page-item {
+      text-align: center;
+      min-width: #{$alt-1-pagination-min-width};
+    }
+  }
+}

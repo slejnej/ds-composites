@@ -1,0 +1,39 @@
+uuid: d49622ed-721f-4817-841a-259e9be4885c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.attachments.field_attachments_nt_file_atts
+    - field.field.paragraph.attachments.field_display_title
+    - field.field.paragraph.attachments.field_editor_title
+    - field.field.paragraph.attachments.field_items_per_row
+    - paragraphs.paragraphs_type.attachments
+  module:
+    - layout_builder
+  enforced:
+    module:
+      - attachments_nugget
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: fA4n4izvp5s5O1SvRIZPj0nFDVdjPvrgRFSuwIXFEIE
+id: paragraph.attachments.preview
+targetEntityType: paragraph
+bundle: attachments
+mode: preview
+content:
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_attachments_nt_file_atts: true
+  field_display_title: true
+  field_items_per_row: true

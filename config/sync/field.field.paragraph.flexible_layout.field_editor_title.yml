@@ -1,0 +1,21 @@
+uuid: 6ecaddbd-0489-425a-81c7-b95b71f42c01
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_editor_title
+    - paragraphs.paragraphs_type.flexible_layout
+_core:
+  default_config_hash: ohBshXNq6OcIrly31-dR2G0SMsK8CpOLtjanOaid9KI
+id: paragraph.flexible_layout.field_editor_title
+field_name: field_editor_title
+entity_type: paragraph
+bundle: flexible_layout
+label: 'Editor title'
+description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,10 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies: {  }
+id: tagline
+label: Tagline
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

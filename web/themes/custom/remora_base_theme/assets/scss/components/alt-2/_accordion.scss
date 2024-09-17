@@ -1,0 +1,26 @@
+.palette-alt-2 {
+  &.accordion,
+  .accordion {
+    padding: $alt-2-accordion-padding-y $alt-2-accordion-padding-x;
+    --bs-accordion-color: #{$alt-2-accordion-body-color}; // used for accordion-body
+    --bs-accordion-bg: #{$alt-2-accordion-bg-color};
+    --bs-accordion-border-color: #{$alt-2-accordion-border-color};
+    --bs-accordion-border-width: #{$alt-2-accordion-border-width};
+    --bs-accordion-border-radius: #{$alt-2-accordion-border-radius};
+    --bs-accordion-btn-padding-x: #{$global-spacing-05};
+    --bs-accordion-btn-padding-y: #{$global-spacing-05};
+    --bs-accordion-btn-color: #{$alt-2-accordion-button-color};
+    --bs-accordion-btn-bg: #{$alt-2-accordion-button-bg};
+    --bs-accordion-body-padding-x: #{$global-spacing-05};
+    --bs-accordion-body-padding-y: #{$global-spacing-05};
+    --bs-accordion-active-color: #{$alt-2-accordion-button-active-color};
+    --bs-accordion-active-bg: #{$alt-2-accordion-button-active-bg};
+
+    @media(min-width: 576px) {
+      --bs-accordion-body-padding-x: #{$alt-2-accordion-body-padding-x};
+      --bs-accordion-body-padding-y: #{$alt-2-accordion-body-padding-y};
+      --bs-accordion-btn-padding-x: #{$alt-2-accordion-button-padding-x};
+      --bs-accordion-btn-padding-y: #{$alt-2-accordion-button-padding-y};
+    }
+  }
+}

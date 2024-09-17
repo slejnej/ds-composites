@@ -1,0 +1,46 @@
+{% block field %}
+
+  {%
+    set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    label_display == 'inline' ? 'clearfix',
+  ] %}
+
+  {%
+    set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ] %}
+
+  {% if not label_hidden %}
+    <div{{ attributes.addClass(classes) }}>
+    {% block field_label %}
+      <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    {% endblock %}
+  {% endif %}
+
+  {% block field_content_wrapper %}
+
+    {% if multiple %}
+      <div{{ attributes.addClass(classes, 'field__items  d-flex') }}>
+    {% endif %}
+
+    {% block field_content %}
+      {% for item in items %}
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      {% endfor %}
+    {% endblock %}
+
+    {% if multiple %}
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {% if not label_hidden %}
+    </div>
+  {% endif %}
+
+{% endblock %}

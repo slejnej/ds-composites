@@ -1,0 +1,32 @@
+remora_core.settings:
+  title: 'Remora admin'
+  route_name: remora_core.settings
+  parent: system.admin_config_system
+
+remora_core.settings.security:
+  title: 'Security'
+  route_name: security.settings
+  parent: remora_core.settings
+
+remora_core.settings.palettes:
+  title: 'Remora palettes'
+  route_name: remora_core.settings.palettes
+  parent: remora_core.settings
+
+remora_core.settings.error_logging:
+  title: 'Error logging'
+  route_name: system.logging_settings
+  parent: remora_core.settings
+
+remora_core.permissions.reimport:
+  title: 'Reimport module permissions'
+  description: "Re-import all remora config permissions from modules. <b>Overwrites existing permissions. Use with caution!</b>"
+  route_name: remora_core.permissions.reimport
+  parent: remora_core.settings
+
+remora_config.remora_settings:
+  title: 'Remora settings'
+  parent: system.admin_config
+  route_name: remora_config_page.remora_settings
+  description: 'Manage Remora settings'
+  weight: -9

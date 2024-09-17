@@ -1,0 +1,6 @@
+# this one should be overridden by the subtheme, since the subtheme inherits all the styles from base
+global-styling:
+  version: 0.0.2
+  css:
+    theme:
+      build/css/style.min.css: { minified: true }

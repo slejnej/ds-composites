@@ -1,0 +1,24 @@
+// SUBTHEME VARIABLES
+@import "variables/components";
+@import "variables/alt-1";
+@import "variables/alt-2";
+@import "variables/text-mobile";
+@import "variables/text-desktop";
+@import "variables/custom";
+
+// SUBTHEME STYLES
+@import "../../../../custom/remora_base_theme/assets/scss/variables_drupal/grid";
+@import "../../../../custom/remora_base_theme/assets/scss/variables_drupal/typography";
+@import "../../../../custom/remora_base_theme/assets/scss/variables_drupal/node";
+@import "../../../../custom/remora_base_theme/assets/scss/variables_drupal/node-title";
+@import "../../../../custom/remora_base_theme/assets/scss/variables_drupal/components";
+@import "../../../../custom/remora_base_theme/assets/scss/utilities/_functions.scss";
+
+// override here as drupal is unsetting everything!
+body .progress {
+  display: flex;
+  height: var(--bs-progress-height);
+  overflow: hidden;
+  font-size: var(--bs-progress-font-size);
+  background-color: var(--bs-progress-bg);
+}

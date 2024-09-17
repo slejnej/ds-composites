@@ -1,0 +1,29 @@
+uuid: 9fd9da3b-b070-4c6d-b11b-53814b447fba
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_title
+    - filter.format.title
+    - paragraphs.paragraphs_type.text_media
+  module:
+    - text
+  enforced:
+    module:
+      - text_media_nugget
+_core:
+  default_config_hash: O1vY4glThR56QXblB5JzXnCGzJWi48dSt05KYKYYocU
+id: paragraph.text_media.field_display_title
+field_name: field_display_title
+entity_type: paragraph
+bundle: text_media
+label: 'Display title'
+description: 'This title is displayed on the page above the content of this nugget.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - title
+field_type: text

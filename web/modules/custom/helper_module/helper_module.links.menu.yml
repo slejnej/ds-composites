@@ -1,0 +1,160 @@
+helper.main.components:
+  title: 'Components'
+  description: 'Theme BS components examples'
+  expanded: TRUE
+  route_name: helper.theme.components
+  parent: help.main
+
+helper.main.components.accordion:
+  title: 'Accordion'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'accordion'
+  parent: helper.main.components
+
+helper.main.components.alerts:
+  title: 'Alerts'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'alerts'
+  parent: helper.main.components
+
+helper.main.components.badge:
+  title: 'Badge'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'badge'
+  parent: helper.main.components
+
+helper.main.components.breadcrumb:
+  title: 'Breadcrumb'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'breadcrumb'
+  parent: helper.main.components
+
+helper.main.components.button_group:
+  title: 'Button group'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'button-group'
+  parent: helper.main.components
+
+helper.main.components.buttons:
+  title: 'Buttons'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'buttons'
+  parent: helper.main.components
+
+helper.main.components.cards:
+  title: 'Cards'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'cards'
+  parent: helper.main.components
+
+helper.main.components.carousel:
+  title: 'Carousel'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'carousel'
+  parent: helper.main.components
+
+helper.main.components.collapse:
+  title: 'Collapse'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'collapse'
+  parent: helper.main.components
+
+helper.main.components.dropdowns:
+  title: 'Dropdowns'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'dropdowns'
+  parent: helper.main.components
+
+helper.main.components.list_group:
+  title: 'List group'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'list-group'
+  parent: helper.main.components
+
+helper.main.components.modals:
+  title: 'Modals'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'modals'
+  parent: helper.main.components
+
+helper.main.components.navbar:
+  title: 'Navbar'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'navbar'
+  parent: helper.main.components
+
+helper.main.components.offcanvas:
+  title: 'Offcanvas'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'offcanvas'
+  parent: helper.main.components
+
+helper.main.components.pagination:
+  title: 'Pagination'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'pagination'
+  parent: helper.main.components
+
+helper.main.components.placeholders:
+  title: 'Placeholders'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'placeholders'
+  parent: helper.main.components
+
+helper.main.components.popovers:
+  title: 'Popovers'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'popovers'
+  parent: helper.main.components
+
+helper.main.components.progress:
+  title: 'Progress'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'progress'
+  parent: helper.main.components
+
+helper.main.components.scrollspy:
+  title: 'Scrollspy'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'scrollspy'
+  parent: helper.main.components
+
+helper.main.components.spinners:
+  title: 'Spinners'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'spinners'
+  parent: helper.main.components
+
+helper.main.components.toasts:
+  title: 'Toasts'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'toasts'
+  parent: helper.main.components
+
+helper.main.components.tooltips:
+  title: 'Tooltips'
+  route_name: helper.theme.components.component
+  route_parameters:
+    component: 'tooltips'
+  parent: helper.main.components

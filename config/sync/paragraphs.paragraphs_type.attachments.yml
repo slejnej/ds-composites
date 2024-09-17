@@ -1,0 +1,20 @@
+uuid: 60fd0a1b-ab6a-4395-bd65-15b3ab76f073
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+  enforced:
+    module:
+      - attachments_nugget
+_core:
+  default_config_hash: cRv1YxNf7cecbZ1XN2x4vi6AYNTn3Im1ETXaKCzo764
+id: attachments
+label: Attachments
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

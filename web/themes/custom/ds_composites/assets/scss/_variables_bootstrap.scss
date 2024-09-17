@@ -1,0 +1,10 @@
+// @see https://getbootstrap.com/docs/5.2/customize/sass/#variable-defaults.
+// these are imported form Figma generated variables
+@import "variables/components";
+@import "variables/alt-1";
+@import "variables/alt-2";
+
+// import the components per palette. This is where all the BS variables are overriden!
+@import "../../../../custom/remora_base_theme/assets/scss/components/default/components";
+@import "../../../../custom/remora_base_theme/assets/scss/components/alt-1/components";
+@import "../../../../custom/remora_base_theme/assets/scss/components/alt-2/components";

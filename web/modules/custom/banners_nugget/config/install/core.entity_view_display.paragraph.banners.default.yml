@@ -1,0 +1,43 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banners.field_banner_nt_banners
+    - field.field.paragraph.banners.field_display_title
+    - field.field.paragraph.banners.field_editor_title
+    - paragraphs.paragraphs_type.banners
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.banners.default
+targetEntityType: paragraph
+bundle: banners
+mode: default
+content:
+  field_banner_nt_banners:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_display_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

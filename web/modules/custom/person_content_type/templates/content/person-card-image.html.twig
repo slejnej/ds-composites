@@ -1,0 +1,8 @@
+{% extends '@cards_nugget/partials/card-image.html.twig' %}
+{% import '@cards_nugget/macros/card-macros.twig' as macros %}
+
+{% block card_image %}
+  <div class="card-img-top">
+    {{ drupal_image(image, 'portrait_3_4', responsive=true) }}
+  </div>
+{% endblock %}

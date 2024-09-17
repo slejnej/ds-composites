@@ -1,0 +1,14 @@
+uuid: fb1cfbc9-b413-407f-8b15-99a94f562d9d
+langcode: en-gb
+status: true
+dependencies:
+  enforced:
+    module:
+      - remora_core
+_core:
+  default_config_hash: avLqhteVHCsg9xaFHJZwZRazufBariLFeFS1GzLq8SU
+id: administrator
+label: Administrator
+weight: 2
+is_admin: true
+permissions: {  }

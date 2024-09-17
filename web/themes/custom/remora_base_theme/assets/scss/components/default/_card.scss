@@ -1,0 +1,146 @@
+.card {
+  --bs-card-title-spacer-y: #{$card-title-spacer-y};
+  --bs-card-border-width: #{$card-border-width};
+  --bs-card-border-color: #{$card-border-color};
+  --bs-card-border-radius: #{$card-border-radius};
+  --bs-card-bg: transparent;
+
+
+  .card-header {
+    --bs-card-cap-color: #{$card-header-primary-color};
+    background-color: #{$card-header-primary-bg};
+    border-radius: #{$card-header-border-radius};
+    border: var(--bs-card-border-width) solid #{$card-header-border-color};
+    text-align: #{$card-header-text-align};
+    width: #{$card-header-width};
+    min-width: #{$card-header-min-width};
+    max-width: #{$card-header-max-width};
+  }
+
+  .card-footer {
+    --bs-card-cap-bg: #{$card-footer-primary-color};
+    background-color: #{$card-footer-primary-bg};
+    border-radius: #{$card-footer-border-radius};
+    border: var(--bs-card-border-width) solid #{$card-footer-border-color};
+    text-align: #{$card-footer-text-align};
+    width: #{$card-footer-width};
+    min-width: #{$card-footer-min-width};
+    max-width: #{$card-footer-max-width};
+  }
+
+  .card-body {
+    --bs-card-spacer-x: #{$global-spacing-05};
+    --bs-card-spacer-y: #{$global-spacing-05};
+    background-color: #{$card-bg-color};
+    border-top: $card-body-border-top-width solid $card-body-border-top-color;
+    border-right: $card-body-border-right-width solid $card-body-border-right-color;
+    border-bottom: $card-body-border-bottom-width solid $card-body-border-bottom-color;
+    border-left: $card-body-border-left-width solid $card-body-border-left-color;
+    color: #{$card-summary-color};
+
+    @media(min-width: 576px) {
+      --bs-card-spacer-x: #{$card-padding-x};
+      --bs-card-spacer-y: #{$card-padding-y};
+    }
+
+    .card-title {
+      color: #{$card-title-color};
+    }
+
+    .card-text {
+      padding-bottom: #{$card-text-padding-bottom};
+      color: #{$card-summary-color};
+
+      a {
+        color: #{$btn-link-color};
+
+        &:hover {
+          color: #{$btn-link-hover-color};
+        }
+      }
+    }
+
+    .card-subtitle {
+      color: #{$card-date-color};
+    }
+
+    .card-date {
+      margin-bottom: $card-title-spacer-y;
+    }
+
+    .card-type {
+      margin-bottom: $global-spacing-1;
+    }
+
+    .btn {
+      margin-top: $card-button-margin-top;
+      width: $card-button-width;
+      min-width: $card-button-min-width;
+      max-width: $card-button-max-width;
+    }
+  }
+
+  .card-footer {
+    padding: #{$global-spacing-05} #{$global-spacing-05};
+    background-color: #{$card-footer-primary-bg};
+    border-radius: #{$card-footer-border-radius};
+    border-color: #{$card-footer-border-color};
+    color: #{$card-footer-primary-color};
+    text-align: #{$card-footer-text-align};
+    width: #{$card-footer-width};
+    min-width: #{$card-footer-min-width};
+    max-width: #{$card-footer-max-width};
+
+    @media(min-width: 576px) {
+      padding: #{$card-footer-cap-padding-x} #{$card-footer-cap-padding-y};
+    }
+
+    a {
+      color: #{$btn-link-color};
+
+      &:hover {
+        color: #{$btn-link-hover-color};
+      }
+    }
+  }
+
+  .card-tag {
+    background-color: #{$card-tag-bg};
+    color: #{$card-tag-content};
+    border-color: #{$card-tag-border};
+    padding: $global-spacing-02 $global-spacing-05;
+  }
+}
+
+.card:has(a.stretched-link:hover) {
+  --bs-card-border-color: #{$card-border-color-hover};
+
+  .card-body {
+    background-color: #{$card-bg-color-hover};
+    --bs-card-border-color: #{$card-border-color-hover};
+    color: #{$card-summary-color-hover};
+
+    .card-title {
+      color: #{$card-title-color-hover};
+    }
+
+    .card-text {
+      color: #{$card-summary-color-hover};
+    }
+
+    .card-subtitle {
+      color: #{$card-date-color-hover};
+    }
+  }
+
+  .card-footer {
+    background-color: #{$card-footer-primary-bg};
+    color: #{$card-summary-color-hover};
+  }
+
+  .card-tag {
+    background-color: #{$card-tag-bg-hover};
+    color: #{$card-tag-content-hover};
+    border-color: #{$card-tag-content-hover};
+  }
+}

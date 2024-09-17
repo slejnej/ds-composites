@@ -1,0 +1,48 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - image.style.square_1_1_lg
+    - image.style.square_1_1_md
+    - image.style.square_1_1_sm
+    - image.style.square_1_1_xl
+    - image.style.square_1_1_xs
+    - image.style.square_1_1_xxl
+  theme:
+    - remora_base_theme
+id: square_1_1
+label: 'Square: 1x1'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: square_1_1_xxl
+    breakpoint_id: remora_base_theme.xxl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: square_1_1_xl
+    breakpoint_id: remora_base_theme.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: square_1_1_lg
+    breakpoint_id: remora_base_theme.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: square_1_1_md
+    breakpoint_id: remora_base_theme.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: square_1_1_sm
+    breakpoint_id: remora_base_theme.sm
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: square_1_1_xs
+    breakpoint_id: remora_base_theme.xs
+    multiplier: 1x
+breakpoint_group: remora_base_theme
+fallback_image_style: square_1_1_xxl

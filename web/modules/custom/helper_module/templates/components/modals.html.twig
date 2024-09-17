@@ -1,0 +1,454 @@
+<div class="container">
+  {{ include('@helper_module/includes/menu-back.html.twig') }}
+
+  <h1 class="mb-0" id="content">Modals</h1>
+  <ul>
+    <li>Modals are built with HTML, CSS, and JavaScript. They’re positioned over everything else in the document and remove scroll from the <code>&lt;body&gt;</code> so that modal content scrolls instead.</li>
+    <li>Clicking on the modal “backdrop” will automatically close the modal.</li>
+    <li>Only one modal window at a time is supported. Nested modals aren’t supported as we believe them to be poor user experiences.</li>
+    <li>Modals use <code>position: fixed</code>, which can sometimes be a bit particular about its rendering. Whenever possible, place your modal HTML in a top-level position to avoid potential interference from other elements. You’ll likely run into issues when nesting a <code>.modal</code> within another fixed element.</li>
+    <li>Due to how HTML5 defines its semantics, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus">the <code>autofocus</code> HTML attribute</a> has no effect in modals. To achieve the same effect, use some custom JavaScript:</li>
+  </ul>
+
+  <div class="snippet-code">
+    <code class="language-js" data-lang="js">
+      <span class="line">
+        <span class="cl">
+          <span class="kr">const</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myModal'</span><span class="p">)</span>
+        </span>
+      </span>
+      <span class="line">
+        <span class="cl">
+          <span class="kr">const</span> <span class="nx">myInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myInput'</span><span class="p">)</span>
+        </span>
+      </span>
+      <p></p>
+      <span class="line">
+        <span class="cl">
+          <span class="nx">myModal</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'shown.bs.modal'</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        </span>
+      </span>
+      <span class="line">
+        <span class="cl">
+          &nbsp;&nbsp;<span class="nx">myInput</span><span class="p">.</span><span class="nx">focus</span><span class="p">()</span>
+        </span>
+      </span>
+      <span class="line">
+        <span class="cl">
+          <span class="p">})</span>
+        </span>
+      </span>
+    </code>
+  </div>
+
+  <div class="row">
+    <h2 class="mt-4">Example 1 - basic</h2>
+    <p>
+      <small>Toggle a working modal demo by clicking the button below. It will slide down and fade in
+        from the top of the page.</small>
+    </p>
+
+    <div class="snippet">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch example 1
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <h2 class="mt-4">Example 2 - static backdrop</h2>
+    <p>
+      <small>The modal will not close when clicking outside of it.</small>
+    </p>
+
+    <div class="snippet">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch example 2
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <h2 class="mt-4">Scrolling and centered</h2>
+    <p>
+      <small>There are two ways of scrolling. First you scroll the viewport of the device, second you scroll the content inside the modal.</small>
+    </p>
+
+    <div class="snippet">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
+        Scroll viewport
+      </button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable">
+        Scroll modal content
+      </button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCentered">
+        Scroll modal centered
+      </button>
+
+      <!-- scrolling - Modal 1 -->
+      <div class="modal fade" id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLongTitle">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p style="min-height: 1500px">This is some placeholder content to show the scrolling behavior for modals. Instead of repeating the text the modal, we use an inline style set a minimum height, thereby extending the length of the overall modal and demonstrating the overflow scrolling. When content becomes longer than the height of the viewport, scrolling will move the modal as needed.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- scrolling - Modal 2 -->
+      <div class="modal fade" id="exampleModalScrollable" tabindex="-1" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalScrollableTitle">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p style="min-height: 1500px">This is some placeholder content to show the scrolling behavior for modals. Instead of repeating the text the modal, we use an inline style set a minimum height, thereby extending the length of the overall modal and demonstrating the overflow scrolling. When content becomes longer than the height of the viewport, scrolling will move the modal as needed.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- centered - Modal 2 -->
+      <div class="modal fade" id="exampleModalCentered" tabindex="-1" aria-labelledby="exampleModalCenteredTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalCenteredTitle">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p style="min-height: 700px">Make the screen smaller to trigger scrolling.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <h2 class="mt-4">Tooltips & Pop-overs inside modal</h2>
+    <p>
+      <small>When modals are closed, any tooltips and popovers within are also automatically dismissed.</small>
+    </p>
+
+    <div class="snippet">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalPopovers">
+        Modal with tooltips
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalPopovers" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalPopoversTitle" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalPopoversTitle">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h2 class="fs-5">Popover in a modal</h2>
+              <button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+              <hr>
+              <h2 class="fs-5">Tooltips in a modal</h2>
+              <p><a href="#" data-bs-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" data-bs-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <h2 class="mt-4">Varying modal content</h2>
+    <p>
+      <small>Single modal content driven by <code>data-bs-*</code> attributes.</small>
+    </p>
+
+    <div class="snippet">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#varyingModal" data-bs-whatever="@manta">Open modal for @manta</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#varyingModal" data-bs-whatever="@ray">Open modal for @ray</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#varyingModal" data-bs-whatever="@media">Open modal for @media</button>
+
+      <div class="modal fade" id="varyingModal" tabindex="-1" aria-labelledby="varyingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="varyingModalLabel">New message</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Recipient:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Message:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <h2 class="mt-4">Toggle between modals</h2>
+    <p>
+      <small>With some clever placement of the <code>data-bs-target</code> and <code>data-bs-toggle</code> attributes. <b>Please note multiple modals cannot be open at the same time!</b></small>
+    </p>
+
+    <div class="snippet">
+      <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button>
+
+      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Show a second modal and hide this one with the button below.
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Hide this modal and show the first with the button below.
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+            </div>
+          </div>
+        </div>
+      </div>      </div>
+  </div>
+
+  <div class="row">
+    <h2 class="mt-4">Sizing and fullscreen</h2>
+
+    <div class="snippet">
+      <h3 class="mt-4">Optional sizes</h3>
+      <div class="snippet">
+        <button class="btn btn-primary" data-bs-target="#exampleSize1" data-bs-toggle="modal">Extra large modal</button>
+        <button class="btn btn-primary" data-bs-target="#exampleSize2" data-bs-toggle="modal">Large modal</button>
+        <button class="btn btn-primary" data-bs-target="#exampleSize3" data-bs-toggle="modal">Small modal</button>
+
+        <div class="modal fade" id="exampleSize1" aria-hidden="true" aria-labelledby="exampleSizeLabel1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleSizeLabel1">Modal 1</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleSize2" aria-hidden="true" aria-labelledby="exampleSizeLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleSizeLabel2">Modal 2</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleSize3" aria-hidden="true" aria-labelledby="exampleSizeLabel3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleSizeLabel3">Modal 3</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p></p>
+
+      <h3 class="mt-4">Fullscreen</h3>
+      <div class="snippet">
+        <button class="btn btn-primary" data-bs-target="#exampleFull1" data-bs-toggle="modal">Full screen</button>
+        <button class="btn btn-primary" data-bs-target="#exampleFull2" data-bs-toggle="modal">Full screen below sm</button>
+        <button class="btn btn-primary" data-bs-target="#exampleFull3" data-bs-toggle="modal">Full screen below md</button>
+        <button class="btn btn-primary" data-bs-target="#exampleFull4" data-bs-toggle="modal">Full screen below lg</button>
+        <button class="btn btn-primary" data-bs-target="#exampleFull5" data-bs-toggle="modal">Full screen below xl</button>
+        <button class="btn btn-primary" data-bs-target="#exampleFull6" data-bs-toggle="modal">Full screen below xxl</button>
+
+        <div class="modal fade" id="exampleFull1" aria-hidden="true" aria-labelledby="exampleFullLabel1" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleFullLabel1">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleFull2" aria-hidden="true" aria-labelledby="exampleFullLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleFullLabel2">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleFull3" aria-hidden="true" aria-labelledby="exampleFullLabel3" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-fullscreen-md-down">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleFullLabel3">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleFull4" aria-hidden="true" aria-labelledby="exampleFullLabel4" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleFullLabel4">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleFull5" aria-hidden="true" aria-labelledby="exampleFullLabel5" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-fullscreen-xl-down">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleFullLabel5">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleFull6" aria-hidden="true" aria-labelledby="exampleFullLabel6" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-fullscreen-xxl-down">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleFullLabel6">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <p></p>
+</div>

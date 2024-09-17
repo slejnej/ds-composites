@@ -1,0 +1,9 @@
+{% if (content.field_display_title['#items'] is not empty) %}
+  {% block nugget_title_wrapper %}
+    <div class="nugget-title-wrapper container-xxl">
+      {% block nugget_title %}
+        <div class="h3 nugget-title">{{ content.field_display_title.0 }}</div>
+      {% endblock %}
+    </div>
+  {% endblock %}
+{% endif %}

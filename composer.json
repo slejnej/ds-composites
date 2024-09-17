@@ -1,0 +1,264 @@
+{
+  "name": "slejnej/ds-composites",
+  "description": "Custom website with shared base modules",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://www.drupal.org/project/drupal",
+  "support": {
+    "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+    "chat": "https://www.drupal.org/node/314178"
+  },
+  "require": {
+    "php": ">=8.1",
+    "composer/installers": "^1.9",
+    "drupal/bootstrap5": "^4.0",
+    "drupal/core-composer-scaffold": "10.2.7",
+    "drupal/core-project-message": "10.2.7",
+    "drupal/core-recommended": "10.2.7",
+    "drupal/gin": "^3.0@RC",
+    "drush/drush": "^12.4",
+    "mantaraymedia/base_repository": "*",
+    "mantaraymedia/cache_service": "*",
+    "mrm-remora/attachments_nugget": "*",
+    "mrm-remora/aws-code-deploy": "*",
+    "mrm-remora/aws-plugin-installer": "*",
+    "mrm-remora/cards_nugget": "*",
+    "mrm-remora/countries_info": "*",
+    "mrm-remora/helper_module": "*",
+    "mrm-remora/installation_profile": "*",
+    "mrm-remora/page_content_type": "*",
+    "mrm-remora/remora_base_theme": "*",
+    "mrm-remora/remora_core": "*",
+    "mrm-remora/remora_sections": "*",
+    "mrm-remora/security": "*",
+    "mrm-remora/tagging": "*",
+    "mrm-remora/text_media_nugget": "*",
+    "mrm-remora/tonic": "*",
+    "mrm-remora/banners_nugget": "*",
+    "mrm-remora/news_content_type": "*",
+    "mrm-remora/person_content_type": "*",
+    "mrm-remora/promo_nugget": "*",
+    "mrm-remora/slideshow_nugget": "*",
+    "mrm-remora/organisations_taxonomy": "*",
+    "mrm-remora/tagline_nugget": "*"
+  },
+  "require-dev": {
+    "pdepend/pdepend": "^2.12",
+    "phploc/phploc": "^7.0.2",
+    "phpmd/phpmd": "^2.13.0",
+    "phpspec/phpspec": "^7.3.0",
+    "phpunit/php-code-coverage": "^9.2.24",
+    "sebastian/phpcpd": "^6.0.3"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "bin-dir": "bin",
+    "allow-plugins": {
+      "composer/installers": true,
+      "cweagans/composer-patches": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "drupal/core-composer-scaffold": true,
+      "drupal/core-project-message": true,
+      "mrm-remora/aws-code-deploy": true,
+      "mrm-remora/aws-plugin-installer": true
+    },
+    "sort-packages": true
+  },
+  "extra": {
+    "enable-patching": true,
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "web/"
+      }
+    },
+    "installer-paths": {
+      "web/core": [
+        "type:drupal-core"
+      ],
+      "web/libraries/{$name}": [
+        "type:drupal-library"
+      ],
+      "web/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "web/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "web/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "drush/Commands/contrib/{$name}": [
+        "type:drupal-drush"
+      ],
+      "web/modules/custom/{$name}": [
+        "type:drupal-custom-module"
+      ],
+      "web/profiles/custom/{$name}": [
+        "type:drupal-custom-profile"
+      ],
+      "web/themes/custom/{$name}": [
+        "type:drupal-custom-theme"
+      ]
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "name": "mrm-remora/remora_core",
+      "type": "path",
+      "url": "web/modules/custom/remora_core",
+      "no-api": true
+    },
+    {
+      "name": "mantaraymedia/cache_service",
+      "type": "path",
+      "url": "local-vendors/cache_service",
+      "no-api": true
+    },
+    {
+      "name": "mantaraymedia/base_repository",
+      "type": "path",
+      "url": "local-vendors/base_repository",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/installation_profile",
+      "type": "path",
+      "url": "web/modules/custom/installation_profile",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/remora_base_theme",
+      "type": "path",
+      "url": "web/themes/custom/remora_base_theme",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/aws-plugin-installer",
+      "type": "path",
+      "url": "local-vendors/aws-plugin-installer",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/aws-code-deploy",
+      "type": "path",
+      "url": "local-vendors/aws-code-deploy",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/tonic",
+      "type": "path",
+      "url": "web/themes/custom/tonic",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/helper_module",
+      "type": "path",
+      "url": "web/modules/custom/helper_module",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/attachments_nugget",
+      "type": "path",
+      "url": "web/modules/custom/attachments_nugget",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/cards_nugget",
+      "type": "path",
+      "url": "web/modules/custom/cards_nugget",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/countries_info",
+      "type": "path",
+      "url": "web/modules/custom/countries_info",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/page_content_type",
+      "type": "path",
+      "url": "web/modules/custom/page_content_type",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/remora_sections",
+      "type": "path",
+      "url": "web/modules/custom/remora_sections",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/security",
+      "type": "path",
+      "url": "web/modules/custom/security",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/remora_gdpr",
+      "type": "path",
+      "url": "web/modules/custom/remora_gdpr",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/tagging",
+      "type": "path",
+      "url": "web/modules/custom/tagging",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/text_media_nugget",
+      "type": "path",
+      "url": "web/modules/custom/text_media_nugget",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/news_content_type",
+      "type": "path",
+      "url": "web/modules/custom/news_content_type",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/person_content_type",
+      "type": "path",
+      "url": "web/modules/custom/person_content_type",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/promo_nugget",
+      "type": "path",
+      "url": "web/modules/custom/promo_nugget",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/slideshow_nugget",
+      "type": "path",
+      "url": "web/modules/custom/slideshow_nugget",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/banners_nugget",
+      "type": "path",
+      "url": "web/modules/custom/banners_nugget",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/organisations_taxonomy",
+      "type": "path",
+      "url": "web/modules/custom/organisations_taxonomy",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/tagline_nugget",
+      "type": "path",
+      "url": "web/modules/custom/tagline_nugget",
+      "no-api": true
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+uuid: 40475fb9-1811-4cc7-8c35-d5ea8d464e9e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - filter.format.title
+    - node.type.page
+    - taxonomy.vocabulary.categories
+    - taxonomy.vocabulary.cit_countries_information
+    - taxonomy.vocabulary.diseases
+    - taxonomy.vocabulary.regions
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.topics
+  module:
+    - contextual
+    - crop
+    - filter
+    - linkchecker
+    - media
+    - menu_admin_per_menu
+    - node
+    - paragraphs_type_permissions
+    - path
+    - redirect
+    - remora_core
+    - site_settings
+    - system
+    - taxonomy
+    - toolbar
+_core:
+  default_config_hash: SxUxVz2MNL7cZCn3Ro3w_Awlosquo-yx8OowEhg3U8c
+id: editor
+label: Editor
+weight: 2
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access broken links report'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access media overview'
+  - 'access own broken links report'
+  - 'access site settings overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'administer crop types'
+  - 'administer footer menu items'
+  - 'administer header menu items'
+  - 'administer main menu items'
+  - 'administer nodes'
+  - 'administer redirect settings'
+  - 'administer redirects'
+  - 'administer remora settings'
+  - 'create media'
+  - 'create page content'
+  - 'create paragraph content attachments'
+  - 'create paragraph content card_nugglet'
+  - 'create paragraph content cards'
+  - 'create paragraph content flexible_layout'
+  - 'create paragraph content footer_section'
+  - 'create paragraph content section'
+  - 'create paragraph content text_media'
+  - 'create terms in categories'
+  - 'create terms in cit_countries_information'
+  - 'create terms in diseases'
+  - 'create terms in regions'
+  - 'create terms in tags'
+  - 'create terms in topics'
+  - 'create url aliases'
+  - 'delete any media'
+  - 'delete any page content'
+  - 'delete paragraph content attachments'
+  - 'delete paragraph content card_nugglet'
+  - 'delete paragraph content cards'
+  - 'delete paragraph content flexible_layout'
+  - 'delete paragraph content footer_section'
+  - 'delete paragraph content section'
+  - 'delete paragraph content text_media'
+  - 'delete terms in categories'
+  - 'delete terms in cit_countries_information'
+  - 'delete terms in diseases'
+  - 'delete terms in regions'
+  - 'delete terms in tags'
+  - 'delete terms in topics'
+  - 'edit any page content'
+  - 'edit site setting entities'
+  - 'edit terms in categories'
+  - 'edit terms in cit_countries_information'
+  - 'edit terms in diseases'
+  - 'edit terms in regions'
+  - 'edit terms in tags'
+  - 'edit terms in topics'
+  - 'revert page revisions'
+  - 'update any media'
+  - 'update paragraph content attachments'
+  - 'update paragraph content card_nugglet'
+  - 'update paragraph content cards'
+  - 'update paragraph content flexible_layout'
+  - 'update paragraph content footer_section'
+  - 'update paragraph content section'
+  - 'update paragraph content text_media'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'use text format title'
+  - 'view own unpublished media'
+  - 'view page revisions'
+  - 'view paragraph content attachments'
+  - 'view paragraph content card_nugglet'
+  - 'view paragraph content cards'
+  - 'view paragraph content text_media'
+  - 'view the administration theme'
+  - 'view unpublished site setting entities'

@@ -1,0 +1,23 @@
+uuid: f78e3f4a-cb47-45ce-9641-57e7d4fb0ef7
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+  enforced:
+    module:
+      - cards_nugget
+_core:
+  default_config_hash: JIHtFdfVZuk-xB-hUwZxkda0Kc-v2i_56LwbEHjePMc
+id: paragraph.field_card_nt_customise_card
+field_name: field_card_nt_customise_card
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

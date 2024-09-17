@@ -1,0 +1,22 @@
+{%
+  set classes = [
+  'preview-wrapper',
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+]
+%}
+{% if content.field_card_nt_display_title.0 %}
+  {% set title = content.field_card_nt_display_title.0 %}
+{% else %}
+  {% set title = content.field_card_nt_link.0['#url_title'] %}
+{% endif %}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="field__label">{{ title }} [{{ human_readable_name }}]</div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

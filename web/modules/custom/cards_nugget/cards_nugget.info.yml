@@ -1,0 +1,13 @@
+name: Cards nugget
+type: module
+description: 'Remora cards nugget. Also provides card nugglets'
+package: Remora
+version: 1.0.1
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:field_group
+  - drupal:layout_paragraphs
+  - drupal:link
+  - drupal:media
+  - drupal:media_library
+  - drupal:remora_core

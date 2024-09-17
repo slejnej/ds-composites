@@ -1,0 +1,99 @@
+<div class="container">
+  {{ include('@helper_module/includes/menu-back.html.twig') }}
+
+  <h1 class="mb-0" id="content">Toasts</h1>
+  <p>Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.</p>
+  <p>
+    Dynamic content which updates without a page reload is generally either a region or a widget. Simple content changes which are not interactive should be marked as live regions. A live region is explicitly denoted using the <code>aria-live</code> attribute.
+  </p>
+  <p>
+    The <code>aria-live=POLITENESS_SETTING</code> is used to set the priority with which screen reader should treat updates to live regions - the possible settings are: <code>off</code>, <code>polite</code> or <code>assertive</code>. The default setting is off. This attribute is by far the most important.
+  </p>
+  <p>
+    Normally, only <code>aria-live="polite"</code> is used. Any region which receives updates that are important for the user to receive, but not so rapid as to be annoying, should receive this attribute. The screen reader will speak changes whenever the user is idle.
+  </p>
+  <p>
+    <code>aria-live="assertive"</code> should only be used for <b>time-sensitive/critical</b> notifications that absolutely require the user's immediate attention. Generally, a change to an assertive live region will interrupt any announcement a screen reader is currently making. As such, it can be extremely annoying and disruptive and should only be used sparingly.
+  </p>
+  <p>
+    As <code>aria-live="off"</code> is the assumed default for elements, it should not be necessary to set this explicitly, unless you're trying to suppress the announcement of elements which have an implicit live region role (such as <code>role="alert"</code>).
+  </p>
+  <p>
+    <b>To sum it up:</b> If it’s an important message like an error, use <code>role="alert" aria-live="assertive"</code>, otherwise use <code>role="status" aria-live="polite"</code> attributes.
+  </p>
+
+  <div class="row">
+    <h2 class="mt-4">Basic example</h2>
+    <p><small>Click the buttons below to se toasts single or stacked.</small></p>
+
+    <div class="snippet">
+      <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+      <button type="button" class="btn btn-primary" id="liveToastBtnStacked">Show stacked toasts</button>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToastStacked" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="/{{ module_path }}/assets/remora.png" class="rounded toast-img" alt="MRM">
+            <strong class="me-auto">Notification</strong>
+            <small>just now</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            I am stacked :)
+          </div>
+        </div>
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="/{{ module_path }}/assets/remora.png" class="rounded toast-img" alt="MRM">
+            <strong class="me-auto">Notification</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Hello, world! This is a toast message. Will auto disappear.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="mt-4">Position</h2>
+    <p><small>Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you’re only ever going to show one toast at a time, put the positioning styles right on the <code>.toast</code>.</small></p>
+
+    <div class="snippet">
+      <div class="col-12 col-lg-8">
+      <form>
+        <div class="mb-3">
+          <label for="selectToastPlacement">Toast placement</label>
+          <select class="form-select mt-2" id="selectToastPlacement">
+            <option value="" selected>Select a position...</option>
+            <option value="top-0 start-0">Top left</option>
+            <option value="top-0 start-50 translate-middle-x">Top center</option>
+            <option value="top-0 end-0">Top right</option>
+            <option value="top-50 start-0 translate-middle-y">Middle left</option>
+            <option value="top-50 start-50 translate-middle">Middle center</option>
+            <option value="top-50 end-0 translate-middle-y">Middle right</option>
+            <option value="bottom-0 start-0">Bottom left</option>
+            <option value="bottom-0 start-50 translate-middle-x">Bottom center</option>
+            <option value="bottom-0 end-0">Bottom right</option>
+          </select>
+        </div>
+      </form>
+      <div aria-live="polite" aria-atomic="true" class="bg-body-secondary position-relative bd-example-toasts rounded-3">
+        <div class="toast-container p-3" id="toastPlacement">
+          <div class="toast fade show">
+            <div class="toast-header">
+              <img src="/{{ module_path }}/assets/remora.png" class="rounded toast-img" alt="MRM">
+              <strong class="me-auto">Message</strong>
+              <small>11 mins ago</small>
+            </div>
+            <div class="toast-body">
+              Hello, world! This is a toast message.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

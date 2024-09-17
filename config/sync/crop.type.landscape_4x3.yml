@@ -1,0 +1,14 @@
+uuid: 69e302f6-759d-40c4-90e0-75201bdba699
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: p85XjPQXF6p_X6BG2gfs2drOBHkWSjCaYT8HMYaDxqA
+id: landscape_4x3
+label: 'Landscape: 4x3'
+description: ''
+aspect_ratio: '4:3'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

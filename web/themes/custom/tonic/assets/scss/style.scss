@@ -1,0 +1,241 @@
+@import "var_colors";
+
+// Always show 'Add section/nugget' buttons
+.js-lpb-component > .lpb-btn,
+.js-lpb-component .lpb-btn--add,
+.js-lpb-region .lpb-btn--add {
+  opacity: 1;
+  background: white;
+  color: var(--color-text);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--gin-color-primary);
+    background: var(--color-bgblue-hover);
+  }
+}
+
+// 'Add nugget' button
+.lpb-btn--add {
+  min-width: 90px;
+  padding: 6px 10px;
+  border: 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .15);
+  text-align: center;
+  text-decoration: none;
+
+
+  &::after {
+    content: "Add nugget";
+  }
+
+}
+
+// Button positioning (Add nugget)
+.lpb-btn--add.before {
+  top: -50px;
+}
+
+.lpb-btn--add.after {
+  bottom: -50px;
+}
+
+// Button positioning (Add section)
+.lpb-btn.before {
+  top: -40px;
+}
+
+.lpb-btn.after {
+  bottom: -42px;
+}
+
+// Display only top and bottom 'Add nugget' buttons
+.lpb-btn--add:not(.center) {
+  display: none;
+}
+
+.js-lpb-region .js-lpb-component:first-child {
+  .lpb-btn--add.before {
+    display: block;
+  }
+}
+
+.js-lpb-region .js-lpb-component:last-of-type {
+  .lpb-btn--add.after {
+    display: block;
+  }
+}
+
+// Layout styles for each 'Section'
+.lpb-layout {
+  padding: 20px;
+  background-color: $athens-gray;
+  margin: 50px 0;
+}
+
+// Have to specify fieldset styling as it affects all fieldsets in edit form
+#edit-field-main-nuggets,
+#edit-field-hero-content,
+#edit-field-postscript-nuggets,
+#edit-field-sidebar-nuggets {
+  border: none;
+
+  .fieldset__legend {
+    display: none;
+  }
+
+  .fieldset__wrapper {
+    margin: 0;
+  }
+}
+
+// Section region
+.js-lpb-region {
+  outline: 1px dashed $slate-gray;
+  padding: 60px 10px;
+  background-color: $geyser;
+}
+
+// previews and that
+.section-title {
+  margin-bottom: 1rem;
+}
+
+.preview-wrapper {
+  background: $geyser-alt-1;
+  border: 2px solid $elm;
+  padding: 20px;
+  margin: 10px 0;
+  .lpb-controls {
+    left: auto;
+    right: 0;
+    top: calc(50% - 20px);
+  }
+  &.paragraph--unpublished {
+    background: $geyser-alt-2;
+    border: 2px solid $patina;
+    .field__label {
+      color: $oslo-gray;
+    }
+  }
+}
+
+// SECTIONS
+
+// Hide 'Layout options' on Flexible layout nugget
+#layout-paragraphs-layout-options {
+  display: none;
+}
+
+// Hide 'Choose a layout' and 'Palette' options on Section nugget
+.layout-paragraphs-component-form.paragraph-type-section {
+  .field--name-field-palette,
+  #layout-paragraphs-element {
+    display: none;
+  }
+}
+
+// Hide all text format filter help links
+.filter-help {
+  display: none;
+}
+
+
+// ADD NUGGETS
+
+.ui-dialog .ui-dialog-titlebar {
+  background: #2C3F4D !important;
+}
+
+.ui-dialog:not(.ui-dialog-off-canvas) {
+  width: 100% !important;
+  left: calc(50% - 640px)!important;
+  .lpb-component-list__group {
+    margin-top: 30px;
+  }
+  .lpb-component-list__group--content {
+    grid-column-gap: 40px;
+    grid-row-gap: 57px;
+    padding-bottom: 40px;
+
+    .lpb-component-list__item {
+      width: calc(100% / 3 - 30px);
+
+      a {
+        width: 100%;
+        justify-content: center;
+        border: 3px solid #F5F5F5;
+        position: relative;
+        flex-direction: column;
+        grid-row-gap: 20px;
+        min-height: 160px;
+
+        .nugget-label {
+          background: #fff;
+          padding: 10px 20px;
+          text-transform: uppercase;
+          color: #2c3f4d;
+          position: absolute;
+          top: -22px;
+        }
+
+        .nugget-add {
+          border-radius: 8px;
+          color: #2C3F4D;
+          border: solid 1px #687b89;
+          text-transform: uppercase;
+          padding: 6px 16px;
+          font-size: 1em;
+          position: absolute;
+          background-color: white;
+          bottom: -20px;
+        }
+
+        .nugget-icon {
+          // Icons are added via their modules/css/admin.css
+          height: 90px;
+          width: 90px;
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+
+        &:hover {
+          border-color: #FF6D61;
+
+          .nugget-add {
+            background-color: #FF6D61;
+            border-color: #FF6D61;
+          }
+        }
+      }
+    }
+  }
+}
+
+// admin view two or more in a row
+// just needs wrapper with row-auto class
+.row-auto {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    flex: 1 1 250px;
+    max-width: 100%;
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    input, select {
+      width: 100%;
+    }
+  }
+}
+
+// civicrm logo in toolbar
+.gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab a {
+  &.toolbar-icon-civicrm::before {
+    mask-image: url("../assets/images/civicrm_icon.svg");
+  }
+}

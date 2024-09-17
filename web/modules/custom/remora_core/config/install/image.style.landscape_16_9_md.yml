@@ -1,0 +1,32 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.landscape_16x9
+  module:
+    - crop
+name: landscape_16_9_md
+label: 'Landscape: 16x9 - MD'
+effects:
+  d7c5bd39-a8d4-49ee-9b4e-057cf1a2eacc:
+    uuid: d7c5bd39-a8d4-49ee-9b4e-057cf1a2eacc
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: landscape_16x9
+      automatic_crop_provider: null
+  401f3f8f-30ef-430b-a9ce-71a5dd28cd55:
+    uuid: 401f3f8f-30ef-430b-a9ce-71a5dd28cd55
+    id: image_scale
+    weight: 2
+    data:
+      width: 992
+      height: null
+      upscale: true
+  52a42e6b-6ebf-4a45-b20f-eaf4744fc71c:
+    uuid: 52a42e6b-6ebf-4a45-b20f-eaf4744fc71c
+    id: image_convert
+    weight: 3
+    data:
+      extension: webp

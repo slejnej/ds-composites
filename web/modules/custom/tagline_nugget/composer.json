@@ -1,0 +1,17 @@
+{
+  "name": "mrm-remora/tagline_nugget",
+  "type": "drupal-custom-module",
+  "description": "Tagline nugget - contains functionalities to enable tagline nugget paragraphs",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Esli Stavenga",
+      "email": "esli@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "drupal/field_group": "^3.0"
+  }
+}

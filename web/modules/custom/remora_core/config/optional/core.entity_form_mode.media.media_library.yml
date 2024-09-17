@@ -1,0 +1,13 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+  enforced:
+    module:
+      - media_library
+id: media.media_library
+label: 'Media library'
+targetEntityType: media
+cache: true

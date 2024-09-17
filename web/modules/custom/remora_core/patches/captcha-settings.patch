@@ -1,0 +1,67 @@
+diff --git a/config/install/captcha.settings.yml b/config/install/captcha.settings.yml
+deleted file mode 100755
+index 7b7e624..0000000
+--- a/config/install/captcha.settings.yml
++++ /dev/null
+@@ -1,13 +0,0 @@
+-enable_globally: 0
+-enable_globally_on_admin_routes: FALSE
+-default_challenge: 'captcha/Math'
+-description: 'This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
+-title: 'CAPTCHA'
+-administration_mode: FALSE
+-administration_mode_on_admin_routes: FALSE
+-whitelist_ips: ''
+-wrong_captcha_response_message: 'The answer you entered for the CAPTCHA was not correct.'
+-default_validation: 1
+-persistence: 1
+-enable_stats: FALSE
+-log_wrong_responses: FALSE
+diff --git a/config/install/captcha.captcha_point.contact_message_personal_form.yml b/config/install/captcha.captcha_point.contact_message_personal_form.yml
+deleted file mode 100644
+index f89ec2d..0000000
+--- a/config/install/captcha.captcha_point.contact_message_personal_form.yml
++++ /dev/null
+@@ -1,6 +0,0 @@
+-langcode: en
+-status: false
+-dependencies: {  }
+-formId: contact_message_personal_form
+-captchaType: default
+-label: contact_message_personal_form
+diff --git a/config/install/captcha.captcha_point.user_login_form.yml b/config/install/captcha.captcha_point.user_login_form.yml
+deleted file mode 100644
+index 4a32320..0000000
+--- a/config/install/captcha.captcha_point.user_login_form.yml
++++ /dev/null
+@@ -1,6 +0,0 @@
+-langcode: en
+-status: false
+-dependencies: {  }
+-formId: user_login_form
+-captchaType: default
+-label: user_login_form
+diff --git a/config/install/captcha.captcha_point.user_pass.yml b/config/install/captcha.captcha_point.user_pass.yml
+deleted file mode 100644
+index 9af65db..0000000
+--- a/config/install/captcha.captcha_point.user_pass.yml
++++ /dev/null
+@@ -1,6 +0,0 @@
+-langcode: en
+-status: false
+-dependencies: {  }
+-formId: user_pass
+-captchaType: default
+-label: user_pass
+diff --git a/config/install/captcha.captcha_point.user_register_form.yml b/config/install/captcha.captcha_point.user_register_form.yml
+deleted file mode 100644
+index b37fe06..0000000
+--- a/config/install/captcha.captcha_point.user_register_form.yml
++++ /dev/null
+@@ -1,6 +0,0 @@
+-langcode: en
+-status: false
+-dependencies: {  }
+-formId: user_register_form
+-captchaType: default
+-label: user_register_form

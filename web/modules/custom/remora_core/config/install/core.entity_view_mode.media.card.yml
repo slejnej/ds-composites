@@ -1,0 +1,10 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+id: media.card
+label: Card
+targetEntityType: media
+cache: true

@@ -1,0 +1,34 @@
+{
+  "name": "mrm-remora/remora_sections",
+  "type": "drupal-custom-module",
+  "description": "Remora sections - contains the sections for the remora",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Esli Stavenga",
+      "email": "esli@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "drupal/site_settings": "^1.20"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "enable-patching": true,
+    "patches": {
+      "drupal/site_settings": {
+        "Drupal 10.2 compatibility - PLEASE REMOVE ASAP": "web/modules/custom/remora_sections/patches/site_settings_10_2.patch"
+      }
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ]
+}

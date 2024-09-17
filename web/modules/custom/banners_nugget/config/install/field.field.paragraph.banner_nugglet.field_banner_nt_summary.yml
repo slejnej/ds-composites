@@ -1,0 +1,24 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_nt_summary
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.banner_nugglet
+  module:
+    - text
+id: paragraph.banner_nugglet.field_banner_nt_summary
+field_name: field_banner_nt_summary
+entity_type: paragraph
+bundle: banner_nugglet
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

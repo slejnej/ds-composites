@@ -1,0 +1,64 @@
+.palette-alt-2 {
+  &.spinner-border,
+  .spinner-border {
+    --bs-spinner-width: #{$alt-2-spinner-width};
+    --bs-spinner-height: #{$alt-2-spinner-height};
+    --bs-spinner-animation-speed: #{$alt-2-spinner-animation-speed};
+
+    &.text-primary {
+      border-color: $alt-2-spinner-color-primary transparent $alt-2-spinner-color-primary $alt-2-spinner-color-primary;
+    }
+    &.text-secondary {
+      border-color: $alt-2-spinner-color-secondary transparent $alt-2-spinner-color-secondary $alt-2-spinner-color-secondary;
+    }
+    &.text-success {
+      border-color: $alt-2-spinner-color-success transparent $alt-2-spinner-color-success $alt-2-spinner-color-success;
+    }
+    &.text-danger {
+      border-color: $alt-2-spinner-color-danger transparent $alt-2-spinner-color-danger $alt-2-spinner-color-danger;
+    }
+    &.text-warning {
+      border-color: $alt-2-spinner-color-warning transparent $alt-2-spinner-color-warning $alt-2-spinner-color-warning;
+    }
+    &.text-info {
+      border-color: $alt-2-spinner-color-info transparent $alt-2-spinner-color-info $alt-2-spinner-color-info;
+    }
+    &.text-light {
+      border-color: $alt-2-spinner-color-light transparent $alt-2-spinner-color-light $alt-2-spinner-color-light;
+    }
+    &.text-dark {
+      border-color: $alt-2-spinner-color-dark transparent $alt-2-spinner-color-dark $alt-2-spinner-color-dark;
+    }
+  }
+  &.spinner-grow,
+  .spinner-grow {
+    --bs-spinner-width: #{$alt-2-spinner-width};
+    --bs-spinner-height: #{$alt-2-spinner-height};
+    --bs-spinner-animation-speed: #{$alt-2-spinner-animation-speed};
+
+    &.text-primary {
+      color: $alt-2-spinner-color-primary;
+    }
+    &.text-secondary {
+      color: $alt-2-spinner-color-secondary;
+    }
+    &.text-success {
+      color: $alt-2-spinner-color-success;
+    }
+    &.text-danger {
+      color: $alt-2-spinner-color-danger;
+    }
+    &.text-warning {
+      color: $alt-2-spinner-color-warning;
+    }
+    &.text-info {
+      color: $alt-2-spinner-color-info;
+    }
+    &.text-light {
+      color: $alt-2-spinner-color-light;
+    }
+    &.text-dark {
+      color: $alt-2-spinner-color-dark;
+    }
+  }
+}

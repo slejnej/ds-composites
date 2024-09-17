@@ -1,0 +1,29 @@
+//
+// Items per row
+//
+
+$items-per-row: 1, 2, 3, 4, 6 !default;
+$grid-gap: $global-spacing-2 !default;
+$grid-min-width: 200px !default;
+
+.items-per-row {
+
+  --grid-layout-gap: #{$grid-gap};
+  --grid-item--min-width: #{$grid-min-width};
+  --grid-column-count: 1;
+
+  --gap-count: calc(var(--grid-column-count) - 1);
+  --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+  --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+  grid-gap: var(--grid-layout-gap);
+
+
+  @each $i in $items-per-row {
+    &.row-max-#{$i} {
+      --grid-column-count: #{$i};
+    }
+  }
+}

@@ -1,0 +1,15 @@
+security.settings.obfuscate_versions:
+  path: '/admin/config/remora/security/obfuscate-versions'
+  defaults:
+    _form: 'Drupal\security\Form\ObfuscateVersionsForm'
+    _title: 'Obfuscate versions config'
+  requirements:
+    _permission: 'administer site configuration'
+
+security.settings:
+  path: '/admin/config/remora/security'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Security'
+  requirements:
+    _permission: 'access administration pages'

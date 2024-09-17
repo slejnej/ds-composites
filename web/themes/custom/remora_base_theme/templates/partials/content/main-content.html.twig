@@ -1,0 +1,50 @@
+{% block main_wrapper %}
+  {# only show div if there is at least 1 item being rendered #}
+  {% set fields = content.field_media|merge_safe(content.field_body, content.field_main_nuggets) %}
+  {% if fields['#items'] is not empty %}
+
+    {% block content_main %}
+      <section id="content-main" class="col g-0">
+        <div class="content-main-container">
+          <div id="content-main-fields" class="col">
+            <div{{ content_attributes.addClass('node__content') }}>{% apply spaceless %}
+
+                {% block media %}
+                  {% if content.field_media['#items'] is not empty %}
+                    <div class="media-wrapper">
+                      {# media entity of field_media field #}
+                      {% set media_entity = content.field_media['#items'].entity %}
+
+                      {% if media_entity.bundle() == 'image' %}
+                        {{ media_entity|view('landscape_16_9') }}
+                      {% elseif media_entity.bundle() == 'remote_video' %}
+                        {{ content.field_media }}
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                {% endblock media %}
+
+                {% block body %}
+                  {% if content.field_body['#items'] is not empty %}
+                    <div class="body-wrapper">
+                      {{ content.field_body }}
+                    </div>
+                  {% endif %}
+                {% endblock body %}
+
+                {% block main_content_nuggets %}
+                  {% if content.field_main_nuggets['#items'] is not empty %}
+                    <section id="main-content-nuggets">
+                      {{ content.field_main_nuggets }}
+                    </section>
+                  {% endif %}
+                {% endblock %}
+
+              {% endapply %}</div>
+          </div>
+        </div>
+      </section>
+    {% endblock %}
+
+  {% endif %}
+{% endblock %}

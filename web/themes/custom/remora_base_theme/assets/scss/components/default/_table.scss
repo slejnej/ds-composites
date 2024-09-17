@@ -1,0 +1,30 @@
+@mixin table-styles($title-color, $title-bg, $title-border-color, $data-color, $data-bg, $data-border-color, $border-width) {
+
+  th {
+    color: $title-color;
+    background: $title-bg;
+    border: $border-width solid $title-border-color;
+  }
+
+  td {
+    color: $data-color;
+    background: $data-bg;
+    border: $border-width solid $data-border-color;
+  }
+}
+
+table {
+  @include table-styles($table-title-color, $table-title-bg, $table-title-border, $table-body-color, $table-body-bg, $table-body-border, $table-border);
+  display: block;
+  overflow-x: auto;
+
+  th, td {
+    padding: $global-spacing-1;
+  }
+
+  th {
+    @include media-breakpoint-down(sm) {
+      text-wrap: nowrap;
+    }
+  }
+}

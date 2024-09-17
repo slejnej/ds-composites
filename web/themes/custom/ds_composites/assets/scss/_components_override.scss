@@ -1,0 +1,24 @@
+// everything after line below will be deleted on import.
+// Anything general needed can put inside _variables_drupal.scss
+// custom code below this line
+
+/** ================= [Custom components] ================= **/
+@import "components/banner";
+@import "components/buttons";
+@import "components/card";
+@import "components/header";
+@import "components/menu";
+@import "components/node";
+@import "components/promo";
+@import 'components/tagline';
+@import 'components/typography';
+
+
+/** ================= [ FONTS ] ================= **/
+
+@font-face {
+  font-family: 'Noto sans';
+  src: url("../assets/fonts/NotoSans-VariableFont_wdth,wght.woff2") format('woff2'),
+  url("../assets/fonts/NotoSans-VariableFont_wdth,wght.woff") format('woff'),
+  url("../assets/fonts/NotoSans-VariableFont_wdth,wght.ttf") format('truetype');
+}

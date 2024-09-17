@@ -1,0 +1,12 @@
+<?php
+
+function tagging_update_10002(): void
+{
+  try {
+    /** @var ModulePermissionsManager $permissionsManager */
+    $permissionsManager = Drupal::service('remora_core.manager.module_permissions');
+    $permissionsManager->handleModulePermissions('tagging');
+  } catch (Exception $e) {
+    Drupal::service('remora_core.logger')->error($e->getMessage());
+  }
+}

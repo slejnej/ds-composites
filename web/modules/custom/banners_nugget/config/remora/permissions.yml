@@ -1,0 +1,17 @@
+editor:
+  - 'create paragraph content banners'
+  - 'delete paragraph content banners'
+  - 'update paragraph content banners'
+  - 'view paragraph content banners'
+  - 'create paragraph content banner_nugglet'
+  - 'delete paragraph content banner_nugglet'
+  - 'update paragraph content banner_nugglet'
+  - 'view paragraph content banner_nugglet'
+
+anonymous:
+  - 'view paragraph content banners'
+  - 'view paragraph content banner_nugglet'
+
+authenticated:
+  - 'view paragraph content banners'
+  - 'view paragraph content banner_nugglet'

@@ -1,0 +1,10 @@
+name: Tagline nugget
+type: module
+description: 'Tagline nugget'
+package: Remora
+version: 0.0.1
+core_version_requirement: ^10
+dependencies:
+  - drupal:field_group
+  - drupal:layout_paragraphs
+  - drupal:remora_core

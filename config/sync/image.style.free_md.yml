@@ -1,0 +1,34 @@
+uuid: 0d5da303-fe81-4466-9b8c-a66979053d34
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.free
+  module:
+    - crop
+_core:
+  default_config_hash: f1nXT034nPaMVAVxx3sj-GHPfjYLmtPByWD6qqF81ww
+name: free_md
+label: 'Free - MD'
+effects:
+  2e769280-b246-4d7f-9e29-105d6b5d48ce:
+    uuid: 2e769280-b246-4d7f-9e29-105d6b5d48ce
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: free
+      automatic_crop_provider: null
+  82840288-1287-4474-aa1e-c6def7fba117:
+    uuid: 82840288-1287-4474-aa1e-c6def7fba117
+    id: image_scale
+    weight: 2
+    data:
+      width: 992
+      height: null
+      upscale: true
+  1511b00d-baa5-4160-9b6c-8f7a771a8bba:
+    uuid: 1511b00d-baa5-4160-9b6c-8f7a771a8bba
+    id: image_convert
+    weight: 3
+    data:
+      extension: webp

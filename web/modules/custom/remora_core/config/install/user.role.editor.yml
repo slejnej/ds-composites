@@ -1,0 +1,46 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - filter.format.title
+  module:
+    - crop
+    - filter
+    - media
+    - menu_admin_per_menu
+    - paragraphs_type_permissions
+    - path
+    - redirect
+    - system
+    - toolbar
+id: editor
+label: Editor
+weight: 2
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'administer crop types'
+  - 'create media'
+  - 'delete any media'
+  - 'update any media'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'use text format title'
+  - 'view own unpublished media'
+  - 'view the administration theme'
+  - 'administer redirect settings'
+  - 'administer redirects'
+  - 'create url aliases'
+  - 'administer nodes'
+  - 'administer main menu items'
+  - 'administer footer menu items'
+  - 'administer header menu items'

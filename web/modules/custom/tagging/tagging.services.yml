@@ -1,0 +1,4 @@
+services:
+  tagging.service.install_fields:
+    class: Drupal\tagging\Service\InstallTaggingFieldsService
+    arguments: ['@entity_type.manager']

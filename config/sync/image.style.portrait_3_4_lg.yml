@@ -1,0 +1,34 @@
+uuid: 58a2a50d-022c-44b4-b6d1-1667dd4988f5
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.portrait_3x4
+  module:
+    - crop
+_core:
+  default_config_hash: gLEul3-izJyvvD6lIOlHQu48lzW9UhqMcyCUcGy0oF4
+name: portrait_3_4_lg
+label: 'Portrait: 3x4 - LG'
+effects:
+  e450236a-0779-47eb-af85-5a32ca2d6620:
+    uuid: e450236a-0779-47eb-af85-5a32ca2d6620
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: portrait_3x4
+      automatic_crop_provider: null
+  541a4de0-f229-48dd-a571-8e366d8f5a39:
+    uuid: 541a4de0-f229-48dd-a571-8e366d8f5a39
+    id: image_scale
+    weight: 2
+    data:
+      width: 600
+      height: null
+      upscale: true
+  0dc50fc2-3beb-4722-9fe5-cf89a52ce34d:
+    uuid: 0dc50fc2-3beb-4722-9fe5-cf89a52ce34d
+    id: image_convert
+    weight: 3
+    data:
+      extension: webp

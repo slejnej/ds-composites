@@ -1,0 +1,24 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.original_size
+  module:
+    - crop
+name: original_size
+label: 'Original size'
+effects:
+  fff181cb-bce3-451b-8786-dedd6580ba3d:
+    uuid: fff181cb-bce3-451b-8786-dedd6580ba3d
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: original_size
+      automatic_crop_provider: null
+  4ff9324b-22c7-4abc-93a0-bbbf6ec9e7b5:
+    uuid: 4ff9324b-22c7-4abc-93a0-bbbf6ec9e7b5
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

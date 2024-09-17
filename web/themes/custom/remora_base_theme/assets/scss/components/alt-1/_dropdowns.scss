@@ -1,0 +1,39 @@
+.palette-alt-1 {
+  &.dropdown,
+  .dropdown {
+    .dropdown-menu {
+      --bs-dropdown-min-width: #{$alt-1-dropdown-min-width};
+      --bs-dropdown-padding-x: #{$alt-1-dropdown-padding-x};
+      --bs-dropdown-padding-y: #{$alt-1-dropdown-padding-y};
+      --bs-dropdown-spacer: #{$alt-1-dropdown-spacer};
+      --bs-dropdown-color: #{$alt-1-dropdown-color};
+      --bs-dropdown-bg: #{$alt-1-dropdown-bg};
+      --bs-dropdown-border-color: #{$alt-1-dropdown-border-color};
+      --bs-dropdown-border-radius: #{$alt-1-dropdown-border-radius}x;
+      --bs-dropdown-divider-bg: #{$alt-1-dropdown-divider-bg};
+      --bs-dropdown-link-color: #{$alt-1-dropdown-link-color};
+      --bs-dropdown-link-hover-color: #{$alt-1-dropdown-link-hover-color};
+      --bs-dropdown-link-hover-bg: #{$alt-1-dropdown-link-hover-bg};
+      --bs-dropdown-link-active-color: #{$alt-1-dropdown-link-active-color};
+      --bs-dropdown-link-active-bg: #{$alt-1-dropdown-link-active-bg};
+      --bs-dropdown-link-disabled-color: #{$alt-1-dropdown-link-disabled-color};
+      --bs-dropdown-item-padding-x: #{$alt-1-dropdown-item-padding-x};
+      --bs-dropdown-item-padding-y: #{$alt-1-dropdown-item-padding-y};
+      --bs-dropdown-header-color: #{$alt-1-dropdown-header-color};
+    }
+
+    .dropdown-menu-dark {
+      --bs-dropdown-color: #{$alt-1-dropdown-dark-color};
+      --bs-dropdown-bg: #{$alt-1-dropdown-dark-bg};
+      --bs-dropdown-border-color: #{$alt-1-dropdown-dark-border-color};
+      --bs-dropdown-link-color: #{$alt-1-dropdown-dark-link-color};
+      --bs-dropdown-link-hover-color: #{$alt-1-dropdown-dark-link-hover-color};
+      --bs-dropdown-divider-bg: #{$alt-1-dropdown-dark-divider-bg};
+      --bs-dropdown-link-hover-bg: #{$alt-1-dropdown-dark-link-hover-bg};
+      --bs-dropdown-link-active-color: #{$alt-1-dropdown-dark-link-active-color};
+      --bs-dropdown-link-active-bg: #{$alt-1-dropdown-dark-link-active-bg};
+      --bs-dropdown-link-disabled-color: #{$alt-1-dropdown-dark-link-disabled-color};
+      --bs-dropdown-header-color: #{$alt-1-dropdown-dark-header-color};
+    }
+  }
+}

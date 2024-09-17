@@ -1,0 +1,18 @@
+//GENERAL
+img {
+  width: 100%;
+}
+
+// Oembed video styles
+// Adds styles to make oembed iframes full width
+.media-oembed-video {
+  padding: 30% 0;
+
+  .media-oembed-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+}

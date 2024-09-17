@@ -1,0 +1,35 @@
+entity_reference_selection.remora_referenceable_content_types:
+  type: entity_reference_selection.default
+  label: 'Remora Referenceable Content Types handler settings'
+
+entity_reference_selection.paragraph_type.remora_referenceable_postscript:
+  type: entity_reference_selection.default
+  label: 'Remora Referenceable Paragraph Types handler settings'
+
+entity_reference_selection.remora_referenceable_paragraph_types_main_content:
+  type: entity_reference_selection.default
+  label: 'Remora Referenceable Paragraph Types handler settings'
+
+entity_reference_selection.remora_referenceable_paragraph_types_footer:
+  type: entity_reference_selection.default
+  label: 'Remora Referenceable Paragraph Types handler settings'
+  
+entity_reference_selection.remora_referenceable_paragraph_types_hero_content:
+  type: entity_reference_selection.default
+  label: 'Remora Referenceable Paragraph Types handler settings'
+
+entity_reference_selection.remora_referenceable_paragraph_types_sidebar:
+  type: entity_reference_selection.default
+  label: 'Remora Referenceable Paragraph Types handler settings'
+
+# Create new configuration for Remora settings
+remora_core.remora_settings:
+  type: config_object
+  label: 'Remora settings'
+  mapping:
+    card_settings:
+      type: label
+      label: 'Card settings'
+    card_button_text:
+      type: label
+      label: 'Default card button text'

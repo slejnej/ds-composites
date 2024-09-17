@@ -1,0 +1,22 @@
+dependencies:
+  module:
+    - media
+    - system
+    - linkchecker
+
+anonymous:
+  - 'access content'
+  - 'view media'
+
+authenticated:
+  - 'access content'
+  - 'view media'
+
+editor:
+  - 'access contextual links'
+  - 'administer remora settings'
+  - 'access broken links report'
+  - 'access own broken links report'
+
+web_admin:
+  - 'administer google_tag_container'

@@ -1,0 +1,121 @@
+///
+// NODE TITLE
+//
+
+//// Mixin to apply variables per palette
+@mixin title(
+  $caption-wrapper-bg,
+  $caption-color-bg,
+  $caption-color,
+  $caption-text-padding-y,
+  $caption-text-padding-x,
+  $caption-padding-top,
+  $caption-padding-bottom,
+  $caption-padding-left,
+  $caption-padding-right,
+  $caption-type-padding-bottom,
+  $caption-title-padding-bottom,
+  $caption-date-padding-bottom,
+  $caption-author-padding-bottom,
+  $caption-radius,
+  $caption-text-align,
+  $caption-align,
+  $caption-max-width,
+  $caption-border,
+  $caption-border-top,
+  $caption-border-right,
+  $caption-border-bottom,
+  $caption-border-left,
+  $hero-wrapper-border-color,
+  $hero-wrapper-border-top,
+  $hero-wrapper-border-right,
+  $hero-wrapper-border-bottom,
+  $hero-wrapper-border-left,
+  $hero-wrapper-radius,
+  $hero-wrapper-margin-top,
+  $hero-wrapper-margin-bottom,
+) {
+  background-color: $caption-wrapper-bg;
+  text-align: $caption-align;
+  border-color: $hero-wrapper-border-color;
+  border-style: solid;
+  border-top-width: $hero-wrapper-border-top;
+  border-right-width: $hero-wrapper-border-right;
+  border-bottom-width: $hero-wrapper-border-bottom;
+  border-left-width: $hero-wrapper-border-left;
+  border-radius: $hero-wrapper-radius;
+  padding: $caption-padding-top $caption-padding-right $caption-padding-bottom $caption-padding-left;
+  margin: $hero-wrapper-margin-top 0 $hero-wrapper-margin-bottom;
+
+  .title-inner {
+    background-color: $caption-color-bg;
+    color: $caption-color;
+    border-radius: $caption-radius;
+    text-align: $caption-text-align;
+    max-width: $caption-max-width;
+    border-color: $caption-border;
+    border-style: solid;
+    border-top-width: $caption-border-top;
+    border-right-width: $caption-border-right;
+    border-bottom-width: $caption-border-bottom;
+    border-left-width: $caption-border-left;
+    padding: calc($caption-text-padding-y / 2) 0;
+
+    @media(min-width: 576px) {
+      padding: $caption-text-padding-y $caption-text-padding-x;
+    }
+
+
+    h1 {
+      padding-bottom: $caption-title-padding-bottom;
+    }
+
+    .type {
+      padding-bottom: $caption-type-padding-bottom;
+    }
+
+    .date {
+      padding-bottom: $caption-date-padding-bottom;
+    }
+
+    .author {
+      padding-bottom: $caption-author-padding-bottom;
+    }
+
+  }
+
+}
+.title-wrapper {
+  @include title(
+    $hero-caption-wrapper-bg,
+    $hero-caption-color-bg,
+    $hero-caption-color,
+    $hero-caption-text-padding-y,
+    $hero-caption-text-padding-x,
+    $hero-caption-padding-top,
+    $hero-caption-padding-bottom,
+    $hero-caption-padding-left,
+    $hero-caption-padding-right,
+    $hero-caption-type-padding-bottom,
+    $hero-caption-title-padding-bottom,
+    $hero-caption-date-padding-bottom,
+    $hero-caption-author-padding-bottom,
+    $hero-caption-radius,
+    $hero-caption-text-align,
+    $hero-caption-text-align,
+    $hero-caption-max-width,
+    $hero-caption-border,
+    $hero-caption-border-top,
+    $hero-caption-border-right,
+    $hero-caption-border-bottom,
+    $hero-caption-border-left,
+    $hero-image-border,
+    $hero-image-border-top,
+    $hero-image-border-right,
+    $hero-image-border-bottom,
+    $hero-image-border-left,
+    $hero-image-radius,
+    $layout-hero-margin-top,
+    $layout-hero-margin-bottom,
+  );
+}

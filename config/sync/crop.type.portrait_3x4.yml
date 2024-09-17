@@ -1,0 +1,14 @@
+uuid: 3bef49fa-fc77-44e1-ab6d-b34546679b92
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: iqrC2v4viX26kREa7ZlAXVAaFej_o2zgcr8OaoHq6cA
+id: portrait_3x4
+label: 'Portrait: 3x4'
+description: ''
+aspect_ratio: '3:4'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

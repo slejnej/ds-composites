@@ -1,0 +1,33 @@
+{% block slideshow_controls %}
+  <div class="slideshow-controls slick d-flex align-items-center justify-content-center">
+
+    {% block arrow_prev %}
+      {% if show_arrows == 'true' %}
+        <button type="button" class="arrow slideshow-prev position-absolute d-none d-md-block" aria-label="Previous slide">
+          {% block arrow_prev_icon %}
+            <svg class="bi" width="32" height="32">
+              <use xlink:href="{{ get_bs_icon_path('chevron-left') }}"/>
+            </svg>
+          {% endblock %}
+        </button>
+      {% endif %}
+    {% endblock %}
+
+    {% block markers %}
+      <div class="slideshow-dots position-absolute"></div>
+    {% endblock %}
+
+    {% block arrow_next %}
+      {% if show_arrows == 'true' %}
+        <button type="button" class="arrow slideshow-next position-absolute d-none d-md-block" aria-label="Next slide">
+          {% block arrow_next_icon %}
+            <svg class="bi" width="32" height="32">
+              <use xlink:href="{{ get_bs_icon_path('chevron-right') }}"/>
+            </svg>
+          {% endblock %}
+        </button>
+      {% endif %}
+    {% endblock %}
+
+  </div>
+{% endblock %}

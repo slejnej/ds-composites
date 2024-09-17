@@ -1,0 +1,11 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.honorific_titles
+id: taxonomy_term.honorific_titles
+target_entity_type_id: taxonomy_term
+target_bundle: honorific_titles
+default_langcode: site_default
+language_alterable: false

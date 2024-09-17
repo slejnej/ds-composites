@@ -1,0 +1,42 @@
+.alt-1 {
+  &.pagination,
+  .pagination {
+    --bs-pagination-padding-x: #{$pagination-padding-x};
+    --bs-pagination-padding-y: #{$pagination-padding-y};
+    --bs-pagination-color: #{$pagination-color};
+    --bs-pagination-bg: #{$pagination-bg};
+    --bs-pagination-border-color: #{$pagination-border-color};
+    --bs-pagination-border-radius: #{$pagination-border-radius};
+    --bs-pagination-hover-color: #{$pagination-hover-color};
+    --bs-pagination-hover-bg: #{$pagination-hover-bg};
+    --bs-pagination-hover-border-color: #{$pagination-hover-border-color};
+    --bs-pagination-focus-color: #{$pagination-focus-color};
+    --bs-pagination-focus-bg: #{$pagination-focus-bg};
+    --bs-pagination-active-color: #{$pagination-active-color};
+    --bs-pagination-active-bg: #{$pagination-active-bg};
+    --bs-pagination-active-border-color: #{$pagination-active-border-color};
+    --bs-pagination-disabled-color: #{$pagination-disabled-color};
+    --bs-pagination-disabled-bg: #{$pagination-disabled-bg};
+    --bs-pagination-disabled-border-color: #{$pagination-disabled-border-color};
+
+    .page-link:focus {
+      border-color: $pagination-focus-border-color;
+    }
+    &.pagination-sm {
+      --bs-pagination-padding-x: #{$pagination-padding-x-sm};
+      --bs-pagination-padding-y: #{$pagination-padding-y-sm};
+    }
+    &.pagination-lg {
+      --bs-pagination-padding-x: #{$pagination-padding-x-lg};
+      --bs-pagination-padding-y: #{$pagination-padding-y-lg};
+    }
+    .page-item {
+      text-align: center;
+      min-width: #{$pagination-min-width};
+    }
+  }
+  .page-item {
+    text-align: center;
+    min-width: #{$pagination-min-width};
+  }
+}

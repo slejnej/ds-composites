@@ -1,0 +1,28 @@
+uuid: 956d865b-a520-4fb8-9c27-b05e30a7eb34
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards_nt_loop
+    - paragraphs.paragraphs_type.cards
+  enforced:
+    module:
+      - cards_nugget
+_core:
+  default_config_hash: HdvgXDswk72Ud_nf9HlzoyiDmN_pyKb1YQVb7_npIKg
+id: paragraph.cards.field_cards_nt_loop
+field_name: field_cards_nt_loop
+entity_type: paragraph
+bundle: cards
+label: Loop
+description: 'Enable to advance from the last slide to the first and vice versa.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

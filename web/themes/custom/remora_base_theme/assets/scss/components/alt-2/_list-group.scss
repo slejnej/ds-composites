@@ -1,0 +1,26 @@
+.palette-alt-2 {
+  &.list-group,
+  .list-group {
+    --bs-list-group-color: #{$alt-2-list-group-color};
+    --bs-list-group-bg: #{$alt-2-list-group-bg};
+    --bs-list-group-border-color: #{$alt-2-list-group-border-color};
+    --bs-list-group-item-padding-x: #{$alt-2-list-group-item-padding-x};
+    --bs-list-group-item-padding-y: #{$alt-2-list-group-item-padding-y};
+    --bs-list-group-action-color: #{$alt-2-list-group-action-color};
+    --bs-list-group-action-hover-color: #{$alt-2-list-group-hover-color};
+    --bs-list-group-action-hover-bg: #{$alt-2-list-group-action-bg};
+    --bs-list-group-action-active-color: #{$alt-2-list-group-active-color};
+    --bs-list-group-action-active-bg: #{$alt-2-list-group-action-bg};
+    --bs-list-group-disabled-color: #{$alt-2-list-group-disabled-color};
+    --bs-list-group-disabled-bg: #{$alt-2-list-group-disabled-bg};
+    --bs-list-group-active-bg: #{$alt-2-list-group-active-bg};
+    --bs-list-group-active-border-color: #{$alt-2-list-group-active-border-color};
+
+    .list-group-item {
+      border-bottom-color: #{$alt-2-list-group-action-border-color};
+      &.disabled {
+        border-bottom-color: #{$alt-2-list-group-disabled-border-color};
+      }
+    }
+  }
+}

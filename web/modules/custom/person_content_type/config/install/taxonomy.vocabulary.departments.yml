@@ -1,0 +1,8 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies: {  }
+name: Departments
+vid: departments
+description: ''
+weight: 0

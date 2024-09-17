@@ -1,0 +1,22 @@
+.palette-alt-2 {
+  .card .btn.btn-outline-primary {
+    background: $btn-outline-primary-background;
+    color: $btn-outline-primary-color;
+
+    &:hover {
+      background: $btn-outline-primary-hover-background;
+      color: $btn-outline-primary-hover-color;
+    }
+  }
+}
+
+.card {
+  // Remove when cards nugget is >= 1.0.2
+  .card-text-wrapper, .card-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn.btn-outline-primary {
+    @extend .border-0;
+  }
+}

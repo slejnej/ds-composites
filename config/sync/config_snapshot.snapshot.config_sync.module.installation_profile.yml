@@ -1,0 +1,32 @@
+uuid: c2d9d8ef-308f-4f98-a6f7-508a63a8822d
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - installation_profile
+id: config_sync.module.installation_profile
+snapshotSet: config_sync
+extensionType: module
+extensionName: installation_profile
+items:
+  -
+    collection: ''
+    name: administerusersbyrole.settings
+    data:
+      langcode: en-gb
+      roles:
+        web_admin: unsafe
+        editor: safe
+      _core:
+        default_config_hash: gcSFYnONIZ2HD4yWJ5ujPNKH7YYdsWWZDyY3g6CFT08
+  -
+    collection: ''
+    name: config_ignore.settings
+    data:
+      uuid: null
+      langcode: en-gb
+      mode: simple
+      ignored_config_entities:
+        - system.site
+      _core:
+        default_config_hash: 9O9cB-DKI5YqdkPtvZ-kiBQXXoUspp2qSZAzs0orwd0

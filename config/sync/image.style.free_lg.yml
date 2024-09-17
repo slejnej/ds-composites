@@ -1,0 +1,34 @@
+uuid: 4304aa4e-be21-4a1e-9de2-c88335172ba5
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.free
+  module:
+    - crop
+_core:
+  default_config_hash: x4e27J0Fqjze__fUVOaD5v-6sjQ2pHWxHUsM7Xu4W48
+name: free_lg
+label: 'Free - LG'
+effects:
+  0e041e05-da8f-4a93-9781-275845dd7874:
+    uuid: 0e041e05-da8f-4a93-9781-275845dd7874
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: free
+      automatic_crop_provider: null
+  6dd92a59-3442-45eb-9fb6-5cb22d06c107:
+    uuid: 6dd92a59-3442-45eb-9fb6-5cb22d06c107
+    id: image_scale
+    weight: 2
+    data:
+      width: 1200
+      height: null
+      upscale: true
+  3b7b5e44-eb2f-4d88-ac06-0f25e6a20ca6:
+    uuid: 3b7b5e44-eb2f-4d88-ac06-0f25e6a20ca6
+    id: image_convert
+    weight: 3
+    data:
+      extension: webp

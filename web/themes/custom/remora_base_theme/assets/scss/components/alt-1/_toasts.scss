@@ -1,0 +1,178 @@
+.palette-alt-1 {
+  &.toast,
+  .toast {
+    --bs-toast-padding-x: #{$alt-1-toast-default-padding-x};
+    --bs-toast-padding-y: #{$alt-1-toast-default-padding-y};
+    --bs-toast-color: #{$alt-1-toast-default-color};
+    --bs-toast-bg: #{$alt-1-toast-default-background-color};
+    --bs-toast-border-color: #{$alt-1-toast-default-border-color};
+    --bs-toast-border-radius: #{$alt-1-toast-default-border-radius};
+    --bs-toast-header-color: #{$alt-1-toast-default-header-color};
+    --bs-toast-header-bg: #{$alt-1-toast-default-header-background-color};
+    --bs-toast-header-border-color: #{$alt-1-toast-default-header-border-color};
+
+    .toast-header {
+      padding: $alt-1-toast-default-header-padding-y $alt-1-toast-default-header-padding-x;
+    }
+
+    &.text-bg-primary {
+      --bs-toast-padding-x: #{$alt-1-toast-primary-padding-x};
+      --bs-toast-padding-y: #{$alt-1-toast-primary-padding-y};
+      --bs-toast-color: #{$alt-1-toast-primary-color};
+      --bs-toast-bg: #{$alt-1-toast-primary-background-color};
+      --bs-toast-border-color: #{$alt-1-toast-primary-border-color};
+      --bs-toast-border-radius: #{$alt-1-toast-primary-border-radius};
+      --bs-toast-header-color: #{$alt-1-toast-primary-header-color};
+      --bs-toast-header-bg: #{$alt-1-toast-primary-header-background-color};
+      --bs-toast-header-border-color: #{$alt-1-toast-primary-header-border-color};
+
+      // in bootstrap is important
+      color: var(--bs-toast-color) !important;
+      background-color: var(--bs-toast-bg) !important;
+
+      .toast-header {
+        padding: $alt-1-toast-primary-header-padding-y $alt-1-toast-primary-header-padding-x;
+      }
+    }
+
+    &.text-bg-secondary {
+      --bs-toast-padding-x: #{$alt-1-toast-secondary-padding-x};
+      --bs-toast-padding-y: #{$alt-1-toast-secondary-padding-y};
+      --bs-toast-color: #{$alt-1-toast-secondary-color};
+      --bs-toast-bg: #{$alt-1-toast-secondary-background-color};
+      --bs-toast-border-color: #{$alt-1-toast-secondary-border-color};
+      --bs-toast-border-radius: #{$alt-1-toast-secondary-border-radius};
+      --bs-toast-header-color: #{$alt-1-toast-secondary-header-color};
+      --bs-toast-header-bg: #{$alt-1-toast-secondary-header-background-color};
+      --bs-toast-header-border-color: #{$alt-1-toast-secondary-header-border-color};
+
+      // in bootstrap is important
+      color: var(--bs-toast-color) !important;
+      background-color: var(--bs-toast-bg) !important;
+
+      .toast-header {
+        padding: $alt-1-toast-secondary-header-padding-y $alt-1-toast-secondary-header-padding-x;
+      }
+    }
+
+    &.text-bg-success {
+      --bs-toast-padding-x: #{$alt-1-toast-success-padding-x};
+      --bs-toast-padding-y: #{$alt-1-toast-success-padding-y};
+      --bs-toast-color: #{$alt-1-toast-success-color};
+      --bs-toast-bg: #{$alt-1-toast-success-background-color};
+      --bs-toast-border-color: #{$alt-1-toast-success-border-color};
+      --bs-toast-border-radius: #{$alt-1-toast-success-border-radius};
+      --bs-toast-header-color: #{$alt-1-toast-success-header-color};
+      --bs-toast-header-bg: #{$alt-1-toast-success-header-background-color};
+      --bs-toast-header-border-color: #{$alt-1-toast-success-header-border-color};
+
+      // in bootstrap is important
+      color: var(--bs-toast-color) !important;
+      background-color: var(--bs-toast-bg) !important;
+
+      .toast-header {
+        padding: $alt-1-toast-success-header-padding-y $alt-1-toast-success-header-padding-x;
+      }
+    }
+
+    &.text-bg-danger {
+      --bs-toast-padding-x: #{$alt-1-toast-danger-padding-x};
+      --bs-toast-padding-y: #{$alt-1-toast-danger-padding-y};
+      --bs-toast-color: #{$alt-1-toast-danger-color};
+      --bs-toast-bg: #{$alt-1-toast-danger-background-color};
+      --bs-toast-border-color: #{$alt-1-toast-danger-border-color};
+      --bs-toast-border-radius: #{$alt-1-toast-danger-border-radius};
+      --bs-toast-header-color: #{$alt-1-toast-danger-header-color};
+      --bs-toast-header-bg: #{$alt-1-toast-danger-header-background-color};
+      --bs-toast-header-border-color: #{$alt-1-toast-danger-header-border-color};
+
+      // in bootstrap is important
+      color: var(--bs-toast-color) !important;
+      background-color: var(--bs-toast-bg) !important;
+
+      .toast-header {
+        padding: $alt-1-toast-danger-header-padding-y $alt-1-toast-danger-header-padding-x;
+      }
+    }
+
+    &.text-bg-warning {
+      --bs-toast-padding-x: #{$alt-1-toast-warning-padding-x};
+      --bs-toast-padding-y: #{$alt-1-toast-warning-padding-y};
+      --bs-toast-color: #{$alt-1-toast-warning-color};
+      --bs-toast-bg: #{$alt-1-toast-warning-background-color};
+      --bs-toast-border-color: #{$alt-1-toast-warning-border-color};
+      --bs-toast-border-radius: #{$alt-1-toast-warning-border-radius};
+      --bs-toast-header-color: #{$alt-1-toast-warning-header-color};
+      --bs-toast-header-bg: #{$alt-1-toast-warning-header-background-color};
+      --bs-toast-header-border-color: #{$alt-1-toast-warning-header-border-color};
+
+      // in bootstrap is important
+      color: var(--bs-toast-color) !important;
+      background-color: var(--bs-toast-bg) !important;
+
+      .toast-header {
+        padding: $alt-1-toast-warning-header-padding-y $alt-1-toast-warning-header-padding-x;
+      }
+    }
+
+    &.text-bg-info {
+      --bs-toast-padding-x: #{$alt-1-toast-info-padding-x};
+      --bs-toast-padding-y: #{$alt-1-toast-info-padding-y};
+      --bs-toast-color: #{$alt-1-toast-info-color};
+      --bs-toast-bg: #{$alt-1-toast-info-background-color};
+      --bs-toast-border-color: #{$alt-1-toast-info-border-color};
+      --bs-toast-border-radius: #{$alt-1-toast-info-border-radius};
+      --bs-toast-header-color: #{$alt-1-toast-info-header-color};
+      --bs-toast-header-bg: #{$alt-1-toast-info-header-background-color};
+      --bs-toast-header-border-color: #{$alt-1-toast-info-header-border-color};
+
+      // in bootstrap is important
+      color: var(--bs-toast-color) !important;
+      background-color: var(--bs-toast-bg) !important;
+
+      .toast-header {
+        padding: $alt-1-toast-info-header-padding-y $alt-1-toast-info-header-padding-x;
+      }
+    }
+
+    &.text-bg-light {
+      --bs-toast-padding-x: #{$alt-1-toast-light-padding-x};
+      --bs-toast-padding-y: #{$alt-1-toast-light-padding-y};
+      --bs-toast-color: #{$alt-1-toast-light-color};
+      --bs-toast-bg: #{$alt-1-toast-light-background-color};
+      --bs-toast-border-color: #{$alt-1-toast-light-border-color};
+      --bs-toast-border-radius: #{$alt-1-toast-light-border-radius};
+      --bs-toast-header-color: #{$alt-1-toast-light-header-color};
+      --bs-toast-header-bg: #{$alt-1-toast-light-header-background-color};
+      --bs-toast-header-border-color: #{$alt-1-toast-light-header-border-color};
+
+      // in bootstrap is important
+      color: var(--bs-toast-color) !important;
+      background-color: var(--bs-toast-bg) !important;
+
+      .toast-header {
+        padding: $alt-1-toast-light-header-padding-y $alt-1-toast-light-header-padding-x;
+      }
+    }
+
+    &.text-bg-dark {
+      --bs-toast-padding-x: #{$alt-1-toast-dark-padding-x};
+      --bs-toast-padding-y: #{$alt-1-toast-dark-padding-y};
+      --bs-toast-color: #{$alt-1-toast-dark-color};
+      --bs-toast-bg: #{$alt-1-toast-dark-background-color};
+      --bs-toast-border-color: #{$alt-1-toast-dark-border-color};
+      --bs-toast-border-radius: #{$alt-1-toast-dark-border-radius};
+      --bs-toast-header-color: #{$alt-1-toast-dark-header-color};
+      --bs-toast-header-bg: #{$alt-1-toast-dark-header-background-color};
+      --bs-toast-header-border-color: #{$alt-1-toast-dark-header-border-color};
+
+      // in bootstrap is important
+      color: var(--bs-toast-color) !important;
+      background-color: var(--bs-toast-bg) !important;
+
+      .toast-header {
+        padding: $alt-1-toast-dark-header-padding-y $alt-1-toast-dark-header-padding-x;
+      }
+    }
+  }
+}

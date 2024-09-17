@@ -1,0 +1,18 @@
+uuid: bafe79a6-46c5-46ae-8588-648db1c2967d
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cit_countries_information
+_core:
+  default_config_hash: dLGUtlq-18HuIWGzdld7SO7_qRxAc2DlVZCmyTyiiQ0
+id: taxonomy_term.cit_countries_information
+targetEntityType: taxonomy_term
+bundle: cit_countries_information
+action: page_redirect
+no_bypass: false
+bypass_message: true
+configuration:
+  redirect: '<front>'
+  redirect_code: 301
+  redirect_fallback_action: access_denied

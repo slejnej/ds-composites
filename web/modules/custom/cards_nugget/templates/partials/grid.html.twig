@@ -1,0 +1,22 @@
+<div class="card-grid">
+  {# Determine the column class dynamically based on the number of items per row #}
+  {% set columnClass = 'row-max-' ~ (items_per_row) %}
+  <div class="items-per-row {{ columnClass }}">
+    {% block cards %}
+      {% for card in cards %}
+        {% if card.entity.isPublished() %}
+          <div class="col">
+            {{ drupal_entity('paragraph', card.entity.id.value) }}
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% endblock %}
+  </div>
+
+  {% block view_more %}
+    {% if paragraph.field_view_more_link is not empty %}
+      {% include '@cards_nugget/templates/partials/view-more.html.twig'%}
+    {% endif %}
+  {% endblock %}
+
+</div>

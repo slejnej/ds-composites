@@ -1,0 +1,18 @@
+settings:
+  allowed_values:
+    -
+      label: Africa
+    -
+      label: Antarctica
+    -
+      label: Asia
+    -
+      label: Europe
+    -
+      label: 'Latin America and the Caribbean'
+    -
+      label: 'Northern America'
+    -
+      label: Oceania
+    -
+      label: Unknown

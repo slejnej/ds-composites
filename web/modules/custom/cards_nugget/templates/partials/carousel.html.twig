@@ -1,0 +1,97 @@
+{#
+Required parameters:
+  - paragraph_id: the id of the paragraph being rendered to create a unique ID
+  - items_per_slide: the number of items to show at once
+  - do_loop: whether to loop the carousel
+  - do_autoplay: whether to autoplay the carousel
+  - show_arrows: whether to show arrows
+  - show_markers: whether to show markers (dots)
+
+Optional parameters:
+  - cards: an EntrityReferenceList of card entities to render
+#}
+
+{% set carousel_id = 'carousel-' ~ paragraph_id %}
+
+{# items to show per slide per breakpoint #}
+{% set items_per_slide_768 = items_per_slide|clamp(0, 2) %}
+{% set items_per_slide_992 = items_per_slide|clamp(0, 3) %}
+{% set items_per_slide_1200 = items_per_slide|clamp(0, 4) %}
+{% set items_per_slide_1600 = items_per_slide %}
+{% set cards = cards ?? [] %}
+
+<div id="{{ carousel_id }}" class="slick-carousel slider card-slider position-relative" data-interval="false">
+  <div id="{{ carousel_id }}" class="slick-cards" data-interval="false"
+   data-slick='{% block slick_settings %}{
+    "slidesToShow": {{ items_per_slide }},
+    "slidesToScroll": {{ items_per_slide }},
+    "pauseOnHover": true,
+    "pauseOnFocus": true,
+    "pauseOnDotsHover": true,
+    "infinite": {{ do_loop ? 'true' : 'false' }},
+    "autoplay": {{ do_autoplay ? 'true, "autoplaySpeed": 5000' : 'false' }},
+    "arrows": {{ show_arrows ? 'true' : 'false' }},
+    "dots": {{ show_markers ? 'true' : 'false' }},
+    "responsive": [
+      {
+        "breakpoint": 576,
+        "settings": {
+          "slidesToShow": 1,
+          "slidesToScroll": 1
+        }
+      },
+      {
+        "breakpoint": 768,
+        "settings": {
+          "slidesToShow": {{ items_per_slide_768 }},
+          "slidesToScroll": {{ items_per_slide_768 }}
+        }
+      },
+      {
+        "breakpoint": 992,
+        "settings": {
+          "slidesToShow": {{ items_per_slide_992 }},
+          "slidesToScroll": {{ items_per_slide_992 }}
+        }
+      },
+      {
+        "breakpoint": 1200,
+        "settings": {
+          "slidesToShow": {{ items_per_slide_1200 }},
+          "slidesToScroll": {{ items_per_slide_1200 }}
+        }
+      },
+      {
+        "breakpoint": 1600,
+        "settings": {
+          "slidesToShow": {{ items_per_slide_1600 }},
+          "slidesToScroll": {{ items_per_slide_1600 }}
+        }
+      }
+    ]
+   }{% endblock %}'
+  >
+    {% block slides %}
+      {% for card in cards %}
+        {% if card.entity.isPublished() %}
+          <div class="slide">
+            {% block slide %}
+              {{ drupal_entity('paragraph', card.entity.id.value) }}
+            {% endblock %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% endblock %}
+  </div>
+
+  {% block view_more %}
+    {% if paragraph.field_view_more_link is not empty %}
+      {% include '@cards_nugget/templates/partials/view-more.html.twig'%}
+    {% endif %}
+  {% endblock %}
+
+  {% block carousel_controls %}
+    <!-- Controls -->
+    {% include '@cards_nugget/templates/partials/carousel-controls.html.twig' with { 'show_arrows': show_arrows, 'show_dots': show_markers } %}
+  {% endblock %}
+</div>

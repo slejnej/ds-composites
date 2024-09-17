@@ -1,0 +1,16 @@
+{% set caption_id = 'caption-'~paragraph.id.0.value %}
+
+{% if imageCaption %}
+  <div class="caption-wrapper d-flex position-absolute">
+    <button class="btn btn-primary btn-caption position-relative collapsed ms-0" type="button" data-bs-toggle="collapse" data-bs-target="#{{ caption_id }}" aria-expanded="false" aria-controls="{{ caption_id }}">
+      <svg class="bi position-absolute" width="16" height="16">
+        <use xlink:href="{{ get_bs_icon_path('info-circle') }}"/>
+      </svg>
+    </button>
+
+    <div id="{{ caption_id }}" class="caption-collapse collapse palette-default-bg px-2 me-2" aria-labelledby="{{ caption_id }}">
+      {{ imageCaption|raw }}
+    </div>
+  </div>
+
+{% endif %}

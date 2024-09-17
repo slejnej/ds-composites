@@ -1,0 +1,46 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+    - text_media_nugget
+  enforced:
+    module:
+      - text_media_nugget
+id: paragraph.field_text_media_nt_presentation
+field_name: field_text_media_nt_presentation
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: text_only
+      label: 'Text only'
+    -
+      value: media_only
+      label: 'Media only'
+    -
+      value: article_left
+      label: 'Article left (text & media)'
+    -
+      value: article_right
+      label: 'Article right (text & media)'
+    -
+      value: feature_left
+      label: 'Feature left (text & media)'
+    -
+      value: feature_right
+      label: 'Feature right (text & media)'
+    -
+      value: centre
+      label: 'Centre (text & media)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

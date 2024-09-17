@@ -1,0 +1,27 @@
+{
+  "name": "mrm-remora/tagging",
+  "type": "drupal-custom-module",
+  "description": "Remora tagging - Contains all taxonomy vocabularies required for tagging content",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Esli Stavenga",
+      "email": "esli@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "drupal/cshs": "^4.0",
+    "drupal/rabbit_hole": "^2.0@alpha"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ]
+}

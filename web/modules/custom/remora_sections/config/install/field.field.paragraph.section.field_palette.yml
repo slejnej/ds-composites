@@ -1,0 +1,23 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_palette
+    - paragraphs.paragraphs_type.section
+  module:
+    - options
+id: paragraph.section.field_palette
+field_name: field_palette
+entity_type: paragraph
+bundle: section
+label: Palette
+description: 'Select a pre-configured palette to change the styling of this section.'
+required: true
+translatable: false
+default_value:
+  -
+    value: palette-default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

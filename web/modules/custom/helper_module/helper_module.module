@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @return array
+ *
+ */
+function helper_module_theme(): array
+{
+  $module_handler = \Drupal::service('module_handler');
+  $templates_path = sprintf('%s/templates', $module_handler->getModule('helper_module')->getPath());
+
+  $templates = \Drupal::service('file_system')->scanDirectory($templates_path, '/\.html.twig$/');
+  $theme = [];
+
+  foreach ($templates as $template) {
+    $template_name = str_replace('.html', '', $template->name);
+    $theme_hook = str_replace('-', '_', $template_name);
+    $path_to_template = str_replace(sprintf('/%s', $template->filename), '', $template->uri);
+    $theme[$theme_hook] = [
+      'base hook' => 'base_hook',
+      'template' => $template_name,
+      'path' => $path_to_template,
+      'variables' => [
+        'module_path' => $module_handler->getModule('helper_module')->getPath(),
+        'selected_template' => NULL
+      ]
+    ];
+  }
+
+  return $theme;
+}
+
+function helper_module_page_attachments(&$variables) {
+  $variables['#attached']['library'][] = 'helper_module/help_styles';
+}

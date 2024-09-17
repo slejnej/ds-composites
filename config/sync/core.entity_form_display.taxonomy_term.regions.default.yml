@@ -1,0 +1,42 @@
+uuid: d20d8fb8-4de5-4cb6-a253-3aa88d861533
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.regions
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: 6VUgBgYylmSio2e41Rkk3zFMNjixgtlUXvO7dncMhag
+id: taxonomy_term.regions.default
+targetEntityType: taxonomy_term
+bundle: regions
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  simple_sitemap: true
+  simple_sitemap_index_now: true
+  status: true

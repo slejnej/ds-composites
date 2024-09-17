@@ -1,0 +1,26 @@
+uuid: 27a2da5a-5227-4d28-b439-965b65c34ae6
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs_type_permissions
+    - site_settings
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'view media'
+  - 'view paragraph content attachments'
+  - 'view paragraph content card_nugglet'
+  - 'view paragraph content cards'
+  - 'view paragraph content flexible_layout'
+  - 'view paragraph content footer_section'
+  - 'view paragraph content section'
+  - 'view paragraph content text_media'
+  - 'view published site setting entities'

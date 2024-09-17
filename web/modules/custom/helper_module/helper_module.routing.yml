@@ -1,0 +1,13 @@
+helper.theme.components:
+  path: '/help/components'
+  defaults:
+    _controller: '\Drupal\helper_module\Controller\NoDataController::displayList'
+  requirements:
+    _permission: 'access content'
+
+helper.theme.components.component:
+  path: '/help/components/{component}'
+  defaults:
+    _controller: '\Drupal\helper_module\Controller\NoDataController::display'
+  requirements:
+    _permission: 'access content'

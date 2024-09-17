@@ -1,0 +1,19 @@
+uuid: d30a7ddf-5785-471c-aedb-4adfdc934fd9
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - site_settings
+id: config_sync.module.site_settings
+snapshotSet: config_sync
+extensionType: module
+extensionName: site_settings
+items:
+  -
+    collection: ''
+    name: site_settings.config
+    data:
+      template_key: site_settings
+      disable_auto_loading: false
+      _core:
+        default_config_hash: d-bH3--ktq6mwN7d37KW59P77RS2YPh2ybgA7kAwfTU

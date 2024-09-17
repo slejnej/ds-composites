@@ -1,0 +1,34 @@
+uuid: 70288162-8389-4bae-a987-f34a74ecf687
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.landscape_4x3
+  module:
+    - crop
+_core:
+  default_config_hash: s5gdvTUhJeZj5FsFTFqpqSMRmTgZuuuVNNVD7xIzPBs
+name: landscape_4_3_md
+label: 'Landscape: 4x3 - MD'
+effects:
+  c5ed7e0b-c000-4301-9f92-bccc77b5fbe3:
+    uuid: c5ed7e0b-c000-4301-9f92-bccc77b5fbe3
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: landscape_4x3
+      automatic_crop_provider: null
+  26b09033-6f44-4197-a247-422f28f9c328:
+    uuid: 26b09033-6f44-4197-a247-422f28f9c328
+    id: image_scale
+    weight: 2
+    data:
+      width: 992
+      height: null
+      upscale: true
+  e1347d72-ef13-4429-afdf-a7657c2de2ea:
+    uuid: e1347d72-ef13-4429-afdf-a7657c2de2ea
+    id: image_convert
+    weight: 3
+    data:
+      extension: webp

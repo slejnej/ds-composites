@@ -1,0 +1,28 @@
+// Fancy captions
+.caption-wrapper {
+  top: 10px;
+  left: 10px;
+  .btn-caption {
+    height: 32px;
+    width: 32px;
+    svg {
+      fill: $btn-primary-color;
+      top: calc(50% - 8px);
+      left: calc(50% - 8px);
+    }
+
+    &:hover svg {
+      fill: $btn-primary-hover-color;
+    }
+  }
+  .caption-collapse {
+    align-content: center;
+    transition: none;
+    p {
+      font-size: 14px;
+      &:last-child {
+        @extend .mb-0;
+      }
+    }
+  }
+}

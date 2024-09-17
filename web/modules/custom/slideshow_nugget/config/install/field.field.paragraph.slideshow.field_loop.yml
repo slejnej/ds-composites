@@ -1,0 +1,24 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_loop
+    - paragraphs.paragraphs_type.slideshow
+  enforced:
+    module:
+      - slideshow_nugget
+id: paragraph.slideshow.field_loop
+field_name: field_loop
+entity_type: paragraph
+bundle: slideshow
+label: Loop
+description: 'Enable to advance from the last slide to the first and vice versa.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

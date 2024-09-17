@@ -1,0 +1,143 @@
+.tagline-content {
+  .field--name-field-display-title {
+    @include typography-mobile($text-mobile-title-tagline-font, $text-mobile-title-tagline-size, $text-mobile-title-tagline-weight, $text-mobile-title-tagline-line-height);
+    @include typography-desktop($text-desktop-title-tagline-font, $text-desktop-title-tagline-size, $text-desktop-title-tagline-weight, $text-desktop-title-tagline-line-height);
+  }
+
+  p.text-larger {
+    @include typography-mobile($text-mobile-title-tagline-sub-font, $text-mobile-title-tagline-sub-size, $text-mobile-title-tagline-sub-weight, $text-mobile-title-tagline-sub-line-height);
+    @include typography-desktop($text-desktop-title-tagline-sub-font, $text-desktop-title-tagline-sub-size, $text-desktop-title-tagline-sub-weight, $text-desktop-title-tagline-sub-line-height);
+  }
+}
+
+//// Mixins to apply variables per palette
+@mixin tagline( $layout-tagline-margin-y, $tagline-padding-x, $tagline-padding-y, $tagline-color-bg, $tagline-content-bg,
+$tagline-text-color, $tagline-text-padding-y, $tagline-text-padding-x, $tagline-text-spacer, $tagline-mobile-padding-y,
+$tagline-mobile-padding-x, $tagline-radius-top-left, $tagline-radius-top-right, $tagline-radius-bottom-right,
+$tagline-radius-bottom-left,$tagline-border-color,$tagline-border-top, $tagline-border-right, $tagline-border-bottom,
+$tagline-border-left) {
+
+  background-color: $tagline-color-bg;
+  margin: $layout-tagline-margin-y 0;
+  padding: $tagline-mobile-padding-y $tagline-mobile-padding-x;
+
+  @include media-breakpoint-up('md') {
+    padding: $tagline-padding-y $tagline-padding-x;
+  }
+
+  .tagline-content {
+    background-color: $tagline-content-bg;
+    color: $tagline-text-color;
+    padding: 8px;
+    gap: $tagline-text-spacer;
+    border-radius: $tagline-radius-top-left $tagline-radius-top-right $tagline-radius-bottom-right $tagline-radius-bottom-left;
+    border-color: $tagline-border-color;
+    border-style: solid;
+    border-width: $tagline-border-top $tagline-border-right $tagline-border-bottom $tagline-border-left;
+
+    @include media-breakpoint-up('sm') {
+      padding: $tagline-text-padding-y $tagline-text-padding-x;
+    }
+
+    .field--name-field-display-title {
+      @extend .m-0;
+      color: $tagline-text-color!important;
+    }
+
+    h2, h3, h4, h5, h6 {
+      color: $tagline-text-color;
+    }
+  }
+}
+
+// Custom variables for nugget margins
+section:not(#sidebar-nuggets) .layout__region .paragraph.paragraph--type--tagline {
+  margin-bottom: calc($layout-intro-margin-y / 2);
+
+  //Half the margins in between nuggets to avoid large gaps
+  margin-top: calc($layout-intro-margin-y / 2);
+  &:first-child {
+    margin-top: $layout-intro-margin-y;
+  }
+
+  &:last-child {
+    margin-bottom: $layout-intro-margin-y;
+  }
+}
+
+body, .palette-default-bg {
+  .paragraph--type--tagline {
+    @include tagline(
+      $layout-intro-margin-y,
+      $intro-padding-x,
+      $intro-padding-y,
+      $intro-color-bg,
+      $intro-content-bg,
+      $intro-text-color,
+      $intro-text-padding-y,
+      $intro-text-padding-x,
+      $intro-text-spacer,
+      $intro-mobile-padding-y,
+      $intro-mobile-padding-x,
+      $intro-top-left,
+      $intro-top-right,
+      $intro-bottom-right,
+      $intro-bottom-left,
+      $intro-border-color,
+      $intro-border-top,
+      $intro-border-right,
+      $intro-border-bottom,
+      $intro-border-left
+    )
+  }
+}
+
+.palette-alt-1 .paragraph--type--tagline {
+  @include tagline(
+    $alt-1-layout-intro-margin-y,
+    $alt-1-intro-padding-x,
+    $alt-1-intro-padding-y,
+    $alt-1-intro-color-bg,
+    $alt-1-intro-content-bg,
+    $alt-1-intro-text-color,
+    $alt-1-intro-text-padding-y,
+    $alt-1-intro-text-padding-x,
+    $alt-1-intro-text-spacer,
+    $alt-1-intro-mobile-padding-y,
+    $alt-1-intro-mobile-padding-x,
+    $alt-1-intro-top-left,
+    $alt-1-intro-top-right,
+    $alt-1-intro-bottom-right,
+    $alt-1-intro-bottom-left,
+    $alt-1-intro-border-color,
+    $alt-1-intro-border-top,
+    $alt-1-intro-border-right,
+    $alt-1-intro-border-bottom,
+    $alt-1-intro-border-left
+  )
+}
+
+.palette-alt-2 .paragraph--type--tagline {
+  @include tagline(
+    $alt-2-layout-intro-margin-y,
+    $alt-2-intro-padding-x,
+    $alt-2-intro-padding-y,
+    $alt-2-intro-color-bg,
+    $alt-2-intro-content-bg,
+    $alt-2-intro-text-color,
+    $alt-2-intro-text-padding-y,
+    $alt-2-intro-text-padding-x,
+    $alt-2-intro-text-spacer,
+    $alt-2-intro-mobile-padding-y,
+    $alt-2-intro-mobile-padding-x,
+    $alt-2-intro-top-left,
+    $alt-2-intro-top-right,
+    $alt-2-intro-bottom-right,
+    $alt-2-intro-bottom-left,
+    $alt-2-intro-border-color,
+    $alt-2-intro-border-top,
+    $alt-2-intro-border-right,
+    $alt-2-intro-border-bottom,
+    $alt-2-intro-border-left
+  )
+}

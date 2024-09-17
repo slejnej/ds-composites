@@ -1,0 +1,9 @@
+styles:
+  css:
+    theme:
+      css/admin.css: {}
+
+cards:
+  version: 1.0.0
+  js:
+    js/cards.js: {}

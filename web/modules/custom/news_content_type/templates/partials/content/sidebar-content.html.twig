@@ -1,0 +1,76 @@
+{% import '@remora_base_theme/templates/macros/sidebar-field-macro.twig' as macros %}
+
+{% if any_fields_not_empty(content, ['field_categories', 'field_news_authors', 'field_date', 'field_news_display_date', 'field_news_link', 'field_news_attachments']) %}
+  <aside id="content-sidebar-fields" class="col-12 col-md-3 col-lg-2">
+    <div class="sidebar-fields-wrapper d-flex flex-column">
+      {% block sidebar_details %}
+        <div class="left-sidebar-section sidebar-details">
+          <div class="layout">
+            <dl class="mb-0">
+              {% block date %}
+                {% block date_label %}
+                  <dt class="d-flex align-items-center">
+                    <span>Date</span>
+                    <span class="divider flex-grow-1 d-inline-block"></span>
+                  </dt>
+                {% endblock %}
+                <dd>
+                  {% block date_content %}
+                    {% if content.field_news_display_date['#items'] is not empty %}
+                      {{ content.field_news_display_date }}
+                    {% else %}
+                      {{ content.field_date }}
+                    {% endif %}
+                  {% endblock %}
+                </dd>
+              {% endblock %}
+
+              {% block type %}
+                {% block type_label %}
+                  <dt class="d-flex align-items-center">
+                    <span>Type</span>
+                    <span class="divider flex-grow-1 d-inline-block"></span>
+                  </dt>
+                {% endblock %}
+                <dd>
+                  {% block type_content %}
+                    {% if content.field_categories['#items'] is not empty %}
+                      {{ content.field_categories }}
+                    {% else %}
+                      {{ content_type }}
+                    {% endif %}
+                  {% endblock %}
+                </dd>
+              {% endblock %}
+
+              {% block authors %}
+                {{ macros.sidebar_field(content.field_news_authors, 'Author(s)') }}
+              {% endblock %}
+
+            </dl>
+
+            {% block link %}
+              {% if content.field_news_link['#items'] is not empty %}
+                {{ content.field_news_link }}
+              {% endif %}
+            {% endblock %}
+          </div>
+        </div>
+      {% endblock %}
+
+      {% block sidebar_downloads %}
+        {% if content.field_news_attachments['#items'] is not empty %}
+          <div class="left-sidebar-section sidebar-downloads">
+            {% block downloads_label %}<h2 class="section-title">Downloads</h2>{% endblock %}
+            {% block downloads_content %}
+              <div class="layout attachments">
+                {{ content.field_news_attachments }}
+              </div>
+            {% endblock %}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+    </div>
+  </aside>
+{% endif %}

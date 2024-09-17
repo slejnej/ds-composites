@@ -1,0 +1,38 @@
+diff --git a/src/ConfigMerger.php b/src/ConfigMerger.php
+index f69d652..f07a59e 100644
+--- a/src/ConfigMerger.php
++++ b/src/ConfigMerger.php
+@@ -138,15 +138,19 @@ class ConfigMerger {
+               $result[$key] = $value;
+               $operation = static::OPERATION_UPDATE;
+             }
+-            self::$logs[$operation][] = [
+-              'name' => $key,
+-              'state' => [
+-                'active' => $active[$key],
+-                'previous' => $previous[$key],
+-                'new' => $value,
+-              ],
+-              'parents' => $parent_keys,
+-            ];
++
++            // check for _core key before adding to supress warning because of MRM modules
++            if (isset($active[$key])) {
++              self::$logs[$operation][] = [
++                'name' => $key,
++                'state' => [
++                  'active' => $active[$key],
++                  'previous' => $previous[$key],
++                  'new' => $value,
++                ],
++                'parents' => $parent_keys,
++              ];
++            }
+           }
+         }
+       }
+@@ -178,3 +182,4 @@ class ConfigMerger {
+   }
+ 
+ }
++

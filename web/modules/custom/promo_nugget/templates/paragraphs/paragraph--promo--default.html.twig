@@ -1,0 +1,81 @@
+{% block paragraph %}
+
+  {% set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'overflow-hidden'
+  ] %}
+
+  {% block paragraph_content %}
+    <div{{ attributes.addClass(classes) }}>
+      {% block content %}
+
+        {% set image = paragraph.field_promo_media.entity.field_media_image.entity.uri.value %}
+        {% set promo_nugget_link = paragraph.field_promo_link|first %}
+        {% set promo_link_url = promo_nugget_link.getUrl() %}
+        {% set captionSource = paragraph.field_promo_media.entity.field_image_caption_formatted.0.value %}
+
+
+        {% block promo_content %}
+
+          <div class="promo-wrapper position-relative container-xxl d-flex flex-column flex-lg-row align-items-center justify-content-between">
+
+            {% block image_caption %}
+              {% if captionSource %}
+                <div class="promo-caption container-xxl">
+                  {% include '@remora_base_theme/templates/macros/caption.twig' with { 'imageCaption': captionSource } %}
+                </div>
+              {% endif %}
+            {% endblock %}
+
+            <div class="promo-text-wrapper d-flex flex-column col-lg-8">
+
+              {% block promo_title %}
+                {% if content.field_promo_title['#items'] is not empty %}
+                  <div class="promo-title">
+                    {{ content.field_promo_title }}
+                  </div>
+                {% endif %}
+              {% endblock %}
+
+              {% block promo_body %}
+                {% if content.field_promo_text['#items'] is not empty %}
+                  <div class="promo-body">
+                    {{ content.field_promo_text }}
+                  </div>
+                {% endif %}
+              {% endblock %}
+
+              {% block promo_link %}
+                {% if content.field_promo_link['#items'] is not empty %}
+                  <div class="promo-link">
+                    {% if promo_link_url %}
+                      <a href="{{ promo_link_url }}" class="btn btn-primary">
+                        {{ promo_nugget_link.value['title'] }}
+                      </a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              {% endblock %}
+            </div>
+
+            {% block promo_image %}
+              <div class="promo-image-wrapper col-md-10 col-lg-3">
+                <div class="promo-image position-relative">
+                  {{ image|remora_image({'default': 'square_1_1'}) }}
+                  {% block promo_image_deco %}
+                    <div class="promo-deco position-absolute"></div>
+                  {% endblock %}
+                </div>
+              </div>
+            {% endblock %}
+
+          </div>
+        {% endblock %}
+
+      {% endblock %}
+    </div>
+  {% endblock %}
+{% endblock %}

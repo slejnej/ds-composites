@@ -1,0 +1,22 @@
+{
+  "name": "mrm-remora/news_content_type",
+  "type": "drupal-custom-module",
+  "description": "News content type - contains functionalities for News CT",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Dilwar Hussain",
+      "email": "dilwar@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ]
+}

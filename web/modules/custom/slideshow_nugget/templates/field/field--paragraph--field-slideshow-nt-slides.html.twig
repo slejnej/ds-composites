@@ -1,0 +1,30 @@
+{% block field %}
+
+  {% set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display
+  ] %}
+
+  {% block field_content_wrapper %}
+
+    {% if multiple %}
+
+      {% for item in items %}
+        <div{{ item.attributes.addClass('slide') }}>
+          <div class="overflow-hidden">{{ item.content }}</div>
+        </div>
+      {% endfor %}
+
+    {% else %}
+
+      {% for item in items %}
+        {{ item.content }}
+      {% endfor %}
+
+    {% endif %}
+
+  {% endblock %}
+
+{% endblock %}

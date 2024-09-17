@@ -1,0 +1,10 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+id: node.card
+label: Card
+targetEntityType: node
+cache: true

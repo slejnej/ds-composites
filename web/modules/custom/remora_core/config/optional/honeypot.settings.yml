@@ -1,0 +1,12 @@
+langcode: en-gb
+protect_all_forms: false
+unprotected_forms:
+  - honeypot_settings_form
+log: true
+element_name: url
+time_limit: 5
+expire: 300
+form_settings:
+  user_register_form: true
+  user_pass: true
+  user_login_form: true

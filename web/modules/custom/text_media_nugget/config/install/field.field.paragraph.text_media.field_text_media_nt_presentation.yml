@@ -1,0 +1,27 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_media_nt_presentation
+    - paragraphs.paragraphs_type.text_media
+  module:
+    - options
+    - text_media_nugget
+  enforced:
+    module:
+      - text_media_nugget
+id: paragraph.text_media.field_text_media_nt_presentation
+field_name: field_text_media_nt_presentation
+entity_type: paragraph
+bundle: text_media
+label: Presentation
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: text_only
+default_value_callback: ''
+settings: {  }
+field_type: list_string

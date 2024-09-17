@@ -1,0 +1,16 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.regions
+id: taxonomy_term.regions
+targetEntityType: taxonomy_term
+bundle: regions
+action: page_redirect
+no_bypass: false
+bypass_message: true
+configuration:
+  redirect: '<front>'
+  redirect_code: 301
+  redirect_fallback_action: access_denied

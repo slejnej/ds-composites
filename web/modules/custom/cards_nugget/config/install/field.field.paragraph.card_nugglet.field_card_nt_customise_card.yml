@@ -1,0 +1,24 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_nt_customise_card
+    - paragraphs.paragraphs_type.card_nugglet
+  enforced:
+    module:
+      - cards_nugget
+id: paragraph.card_nugglet.field_card_nt_customise_card
+field_name: field_card_nt_customise_card
+entity_type: paragraph
+bundle: card_nugglet
+label: 'Customise the content of this card'
+description: 'If you link to an external website you should toggle this to customise your card.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

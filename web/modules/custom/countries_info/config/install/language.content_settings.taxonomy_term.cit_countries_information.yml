@@ -1,0 +1,11 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cit_countries_information
+id: taxonomy_term.cit_countries_information
+target_entity_type_id: taxonomy_term
+target_bundle: cit_countries_information
+default_langcode: site_default
+language_alterable: false

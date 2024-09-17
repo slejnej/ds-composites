@@ -1,0 +1,357 @@
+// SECTIONS + 2/3 COL LAYOUTS
+
+$layout-content-gap: 30px;
+
+// Explicitly setting #content-main width when sidebars are present
+@media(min-width: 768px) {
+  .main-content-wrapper .row:has(#sidebar-nuggets):has(#content-sidebar-fields) #content-main {
+    width: calc(50% - 2 * #{$layout-content-gap});
+  }
+}
+
+@media(min-width: 992px) {
+  .main-content-wrapper .row:has(#sidebar-nuggets) #content-main {
+    width: calc(75% - #{$layout-content-gap});
+  }
+  .main-content-wrapper .row:has(#sidebar-nuggets):has(#content-sidebar-fields) #content-main {
+    width: calc(58.33% - 2 * #{$layout-content-gap});
+  }
+}
+
+.paragraph-section {
+  @extend .d-flex, .flex-column, .m-0;
+
+  .layout__region {
+    @extend .d-flex, .flex-column;
+  }
+
+  &.layout-twocol,
+  &.layout-threecol {
+    .section-wrapper {
+      @extend .container-xxl, .px-0;
+    }
+  }
+
+  .layout {
+    column-gap: 1.5rem;
+
+    @media(min-width: 992px) {
+      column-gap: $layout-content-gap;
+    }
+
+    .layout__region {
+      &.layout-50 {
+        flex: 0 1 100%;
+
+        @media(min-width: 768px) {
+          flex: 0 1 calc(50% - ($layout-content-gap / 2));
+        }
+      }
+
+      &.layout-25 {
+        flex: 0 1 100%;
+
+        @media(min-width: 1200px) {
+          flex: 0 1 calc(25% - 23px);
+        }
+      }
+
+      &.layout-33 {
+        flex: 0 1 100%;
+
+        @media(min-width: 1200px) {
+          flex: 0 1 calc(100% / 3 - 20px);
+        }
+      }
+    }
+  }
+}
+
+/* if two sidebars, push right sidebar beneath below lg screens */
+#content-sidebar-fields ~ #sidebar-nuggets {
+  @extend .col-md-auto, .col-lg-3;
+}
+
+// PARAGRAPHS
+// Default margins for nuggets. Specific margins are applied per nugget module
+
+section:not(#sidebar-nuggets) {
+  .paragraph {
+    &:first-child {
+      margin-top: $layout-nugget-margin-y;
+    }
+
+    //Half the margins in between nuggets to avoid large gaps
+    margin-top: calc($layout-nugget-margin-y / 2);
+    margin-bottom: calc($layout-nugget-margin-y / 2);
+
+    &:last-child {
+      margin-bottom: $layout-nugget-margin-y;
+    }
+  }
+}
+
+// You can thank Dave for this hot mess :3
+#page-content:has(#content-main)+#postscript .field--name-field-postscript-nuggets.field__item:first-child .paragraph-section.palette-default:first-child  {
+  .section-title-wrapper {
+    margin-top: 0 !important;
+    margin-bottom: calc($layout-nugget-margin-y / 2);
+  }
+  .paragraph:first-child {
+    @extend .mt-0;
+  }
+}
+
+#main-content-nuggets .field__item:first-child {
+  .section-title-wrapper {
+    margin-top: 0 !important;
+    margin-bottom: calc($layout-nugget-margin-y / 2);
+  }
+
+  .paragraph {
+    @extend .mt-0;
+  }
+}
+
+
+
+// MAIN CONTENT
+
+
+.main-content-wrapper .row {
+  column-gap: 1.5rem;
+
+  @media(min-width: 992px) {
+    column-gap: $layout-content-gap;
+  }
+
+  .content-main-container {
+    margin-bottom: $layout-hero-margin-bottom;
+
+    @media(min-width: 992px) {
+      max-width: $layout-content-node-max-width;
+      padding-left: $layout-content-padding-left;
+    }
+
+    .body-wrapper, .media-wrapper {
+      margin-bottom: $layout-hero-margin-bottom;
+    }
+  }
+
+  /* Remove main padding if left sidebar */
+  #content-sidebar-fields + #content-main {
+    .content-main-container {
+      padding-left: 0 !important;
+    }
+  }
+
+  #main-content-nuggets {
+    margin-bottom: -$layout-content-gap;
+
+    .paragraph {
+      .container-xxl,
+      &.container-xxl {
+        @extend .g-0;
+      }
+    }
+  }
+}
+
+.field--type-text-long p:last-child {
+  margin-bottom: 0;
+}
+
+// SIDEBARS
+
+/* Right sidebar */
+
+$layout-sidebar-gap: 30px;
+
+#sidebar-nuggets {
+  padding: $left-sidebar-right-sidebar-item-padding-y $left-sidebar-right-sidebar-item-padding-x;
+  margin-bottom: $layout-hero-margin-bottom;
+
+  .field--name-field-sidebar-nuggets {
+    @extend .d-flex, .flex-column;
+
+    gap: $layout-sidebar-gap;
+
+    .paragraph-section {
+      @extend .p-0, .overflow-hidden;
+      border: solid $left-sidebar-right-sidebar-border-width $left-sidebar-right-sidebar-border-color;
+      border-radius: $left-sidebar-right-sidebar-radius;
+
+      &.palette-alt-1 {
+        background: none;
+      }
+
+      .paragraph {
+        .container-xxl,
+        &.container-xxl {
+          @extend .g-0;
+        }
+      }
+
+      .layout {
+        background: $left-sidebar-right-sidebar-bg;
+        padding: $global-spacing-05 $global-spacing-05;
+
+        @media(min-width: 576px) {
+          padding: $left-sidebar-right-sidebar-body-padding-y $left-sidebar-right-sidebar-body-padding-x;
+        }
+
+        .layout__region {
+          gap: $layout-sidebar-gap;
+          @extend .d-flex, .flex-column;
+        }
+      }
+    }
+
+    .section-title-container.container-xxl {
+      @extend .g-0;
+
+      .section-title-wrapper h2.section-title {
+        background: $left-sidebar-right-sidebar-title-bg;
+        border-bottom: solid $left-sidebar-right-sidebar-title-border-bottom $left-sidebar-right-sidebar-title-border;
+        color: $left-sidebar-title-color;
+        padding: $global-spacing-05 $global-spacing-05;
+        @extend .m-0, .text-center;
+
+        @media(min-width: 576px) {
+          padding: $left-sidebar-right-sidebar-title-padding-y $left-sidebar-right-sidebar-title-padding-x;
+        }
+      }
+    }
+  }
+}
+
+/* Left sidebar */
+
+#content-sidebar-fields {
+  padding: $left-sidebar-item-padding-y $left-sidebar-item-padding-x;
+  margin-bottom: $layout-hero-margin-bottom;
+
+  .sidebar-fields-wrapper {
+    @extend .d-flex, .flex-column;
+    gap: $layout-sidebar-gap;
+
+    .left-sidebar-section {
+      @extend .p-0, .overflow-hidden;
+      border: solid $left-sidebar-border-width $left-sidebar-border-color;
+      border-radius: $left-sidebar-radius;
+
+      .layout {
+        @extend .d-flex, .flex-column;
+        background: $left-sidebar-bg;
+        padding: $global-spacing-05 $global-spacing-05;
+        gap: $global-spacing-05;
+
+        @media(min-width: 576px) {
+          padding: $left-sidebar-body-padding-y $left-sidebar-body-padding-x;
+        }
+      }
+    }
+
+    .container {
+      @extend .g-0;
+    }
+
+    h2.section-title {
+      background: $left-sidebar-title-bg;
+      border-bottom: solid $left-sidebar-title-border-bottom $left-sidebar-title-border;
+      color: $left-sidebar-title-color;
+      padding: $global-spacing-05 $global-spacing-05;
+      @extend .m-0, .text-center;
+
+      @media(min-width: 576px) {
+        padding: $left-sidebar-title-padding-y $left-sidebar-title-padding-x;
+      }
+    }
+
+    .attachments {
+      .field__items {
+        display: flex;
+        flex-direction: column;
+        gap: $left-sidebar-body-spacer;
+      }
+    }
+
+
+    /* Node details */
+    dd:has(> svg:first-child) {
+      gap: .3rem;
+    }
+
+    * + dt + dd.dd-border-top {
+      border-top: solid 1px $left-sidebar-body-divider;
+      padding-top: 0.5rem;
+    }
+
+    dt {
+      @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size, $text-mobile-body-bold-weight, $text-mobile-body-regular-line-height);
+      @include typography-desktop($text-desktop-body-regular-font, $text-mobile-body-regular-size, $text-desktop-body-bold-weight, $text-desktop-body-regular-line-height);
+      gap: 16px;
+      margin-bottom: $global-spacing-05;
+
+      .divider {
+        height: 1px;
+        background: $divider-color;
+      }
+    }
+
+    dd {
+      @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size, $text-mobile-body-regular-weight, $text-mobile-body-regular-line-height);
+      @include typography-desktop($text-desktop-body-regular-font, $text-mobile-body-regular-size, $text-desktop-body-regular-weight, $text-desktop-body-regular-line-height);
+      margin-bottom: $left-sidebar-body-spacer;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    hr {
+      color: $divider-color;
+      opacity: 1;
+    }
+  }
+}
+
+// FOOTER
+
+footer {
+  .paragraph-section .layout {
+    @extend .p-0;
+  }
+}
+
+
+// USER PAGES
+
+.user-logo {
+  background: $navbar-default-bg;
+}
+
+.user-form {
+  background: $alt-1-surface-primary;
+  color: $alt-1-text-primary;
+
+  h2 {
+    margin-bottom: $global-spacing-2;
+  }
+
+  label {
+    font-size: $text-desktop-body-regular-size;
+  }
+
+  .btn.btn-primary {
+    @extend .w-100;
+  }
+}
+
+// IMAGES
+
+.media-wrapper, p {
+  img {
+    border-radius: $imag-top-left $imag-top-right $imag-bottom-right $imag-bottom-left;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "mantaraymedia/cache_service",
+  "description": "A cache service to serve as a base for other caching services. PSR-6 compliant",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Esli Stavenga",
+      "email": "esli@mantaraymedia.co.uk"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "MantaRayMedia\\CacheService\\": "src"
+    }
+  }
+}

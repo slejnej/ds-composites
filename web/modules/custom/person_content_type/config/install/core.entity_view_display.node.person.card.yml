@@ -1,0 +1,126 @@
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.person.field_alternative_title
+    - field.field.node.person.field_body
+    - field.field.node.person.field_department
+    - field.field.node.person.field_first_name
+    - field.field.node.person.field_hero_content
+    - field.field.node.person.field_honorific_title
+    - field.field.node.person.field_image
+    - field.field.node.person.field_last_name
+    - field.field.node.person.field_main_nuggets
+    - field.field.node.person.field_meta_tags
+    - field.field.node.person.field_person_organisation
+    - field.field.node.person.field_photo
+    - field.field.node.person.field_postscript_nuggets
+    - field.field.node.person.field_role
+    - field.field.node.person.field_seo_description
+    - field.field.node.person.field_seo_title
+    - field.field.node.person.field_sidebar_nuggets
+    - field.field.node.person.field_social_media
+    - field.field.node.person.field_suffix
+    - field.field.node.person.field_summary
+    - node.type.person
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.person.card
+targetEntityType: node
+bundle: person
+mode: card
+content:
+  field_department:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_first_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_honorific_title:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_last_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_person_organisation:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_photo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: portrait_3_4
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_role:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_suffix:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_summary:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_alternative_title: true
+  field_body: true
+  field_hero_content: true
+  field_image: true
+  field_main_nuggets: true
+  field_meta_tags: true
+  field_postscript_nuggets: true
+  field_seo_description: true
+  field_seo_title: true
+  field_sidebar_nuggets: true
+  field_social_media: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

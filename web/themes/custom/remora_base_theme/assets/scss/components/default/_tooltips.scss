@@ -1,0 +1,8 @@
+div.tooltip {
+  --bs-tooltip-max-width: #{$tooltip-max-width};
+  --bs-tooltip-padding-x: #{$tooltip-padding-x};
+  --bs-tooltip-padding-y: #{$tooltip-padding-y};
+  --bs-tooltip-color: #{$tooltip-color};
+  --bs-tooltip-bg: #{$tooltip-bg};
+  --bs-tooltip-border-radius: #{$tooltip-border-radius};
+}

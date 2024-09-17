@@ -1,0 +1,22 @@
+{
+    "name": "mrm-remora/aws-plugin-installer",
+    "description": "Installer for mrm plugins that need folders somewhere else than vendor",
+    "type": "composer-plugin",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "extra": {
+        "class": "awsPluginInstaller\\Composer\\Plugin"
+    },
+    "require": {
+        "php": ">8.0",
+        "composer-plugin-api": "^2.0"
+    },
+    "require-dev": {
+        "composer/composer": "^2.0"
+    }
+}

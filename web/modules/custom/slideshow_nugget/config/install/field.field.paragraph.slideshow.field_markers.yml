@@ -1,0 +1,24 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_markers
+    - paragraphs.paragraphs_type.slideshow
+  enforced:
+    module:
+      - slideshow_nugget
+id: paragraph.slideshow.field_markers
+field_name: field_markers
+entity_type: paragraph
+bundle: slideshow
+label: Markers
+description: 'Enable to show clickable markers which jump to a particular slide.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

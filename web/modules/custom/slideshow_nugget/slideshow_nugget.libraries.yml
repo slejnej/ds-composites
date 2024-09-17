@@ -1,0 +1,8 @@
+admin_styles:
+  css:
+    theme:
+      css/admin.css: {}
+slideshow:
+  version: 1.0.0
+  js:
+    js/slideshow.js: {}

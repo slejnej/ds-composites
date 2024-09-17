@@ -1,0 +1,24 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_editor_title
+    - paragraphs.paragraphs_type.text_media
+  module:
+    - text_media_nugget
+  enforced:
+    module:
+      - text_media_nugget
+id: paragraph.text_media.field_editor_title
+field_name: field_editor_title
+entity_type: paragraph
+bundle: text_media
+label: 'Editor title'
+description: 'This title is used to describe the content within this nugget for web editors. This title is not displayed on the page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

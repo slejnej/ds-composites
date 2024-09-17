@@ -1,0 +1,16 @@
+{
+  "name": "mrm-remora/countries_info",
+  "type": "drupal-custom-module",
+  "description": "Countries taxonomy - contains Countries and Regions taxonomy",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Ivan Solic",
+      "email": "ivan@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1"
+  }
+}

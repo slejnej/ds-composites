@@ -1,0 +1,106 @@
+$banner-height-mobile: 400px !default;
+$banner-height-desktop: 600px !default;
+$layout-banner-margin-y: 0 !default;
+$banner-gap-mobile: 40px !default;
+$banner-gap-desktop: 130px !default;
+$banner-padding-desktop: 130px !default;
+$banner-padding-mobile: 20px !default;
+$banner-image-margin: -60px !default;
+
+// Custom variables for banner margins
+section:not(#sidebar-nuggets) .layout__region .paragraph.paragraph--type--banners {
+  &:first-child {
+    margin-top: $layout-banner-margin-y;
+  }
+
+  //Half the margins in between nuggets to avoid large gaps
+  margin-top: calc($layout-banner-margin-y / 2);
+  margin-bottom: calc($layout-banner-margin-y / 2);
+
+  &:last-child {
+    margin-bottom: $layout-banner-margin-y;
+  }
+}
+
+// Basic banner styles
+.paragraph--type--banners {
+  @media(min-width: 1200px) {
+    height: $banner-height-desktop;
+  }
+
+  .banner-wrapper {
+    gap: $banner-gap-mobile;
+    animation: fadeIn 500ms;
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @media(min-width: 1400px) {
+      gap: $banner-gap-desktop;
+      padding: 0 $banner-padding-desktop;
+    }
+
+    .banner-caption-wrapper {
+      z-index: 1;
+      padding: $banner-padding-mobile;
+
+      .caption-title p {
+        @include typography-mobile($text-mobile-title-slideshow-font, $text-mobile-title-slideshow-size, $text-mobile-title-slideshow-weight, $text-mobile-title-slideshow-line-height);
+        @include typography-desktop($text-desktop-title-slideshow-font, $text-desktop-title-slideshow-size, $text-desktop-title-slideshow-weight, $text-desktop-title-slideshow-line-height);
+      }
+
+      .caption-subtitle p {
+        @include typography-mobile($text-mobile-title-slideshow-sub-font, $text-mobile-title-slideshow-sub-size, $text-mobile-title-slideshow-sub-weight, $text-mobile-title-slideshow-sub-line-height);
+        @include typography-desktop($text-desktop-title-slideshow-sub-font, $text-desktop-title-slideshow-sub-size, $text-desktop-title-slideshow-sub-weight, $text-desktop-title-slideshow-sub-line-height);
+      }
+    }
+
+    .banner-image-wrapper {
+      @media(min-width: 568px) and (max-width: 991px) {
+        margin-right: $banner-image-margin;
+      }
+
+      .banner-image {
+        max-height: $banner-height-desktop;
+        z-index: 1;
+
+        img {
+          max-height: $banner-height-mobile;
+          @media(min-width: 768px) {
+            max-height: $banner-height-desktop;
+          }
+        }
+      }
+    }
+    .caption-wrapper {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+//// Mixin to apply variables per palette
+@mixin banner($banner-bg, $banner-title-color, $banner-body-color) {
+  background: $banner-bg;
+
+  .banner-wrapper {
+    .caption-title p {
+      color: $banner-title-color;
+    }
+
+    .caption-subtitle {
+      p, h2, h3, h4, h5, h6 {
+        color: $banner-body-color;
+      }
+    }
+  }
+}
+
+.paragraph--type--banners {
+  @include banner(
+      $global-color-info-info-100,
+      $text-primary,
+      $text-primary,
+  );
+}

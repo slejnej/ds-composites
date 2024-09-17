@@ -1,0 +1,50 @@
+uuid: 42bb3c3b-2bf4-4372-a854-9b7efe4a762e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - image.style.portrait_3_4_lg
+    - image.style.portrait_3_4_md
+    - image.style.portrait_3_4_sm
+    - image.style.portrait_3_4_xl
+    - image.style.portrait_3_4_xs
+    - image.style.portrait_3_4_xxl
+  theme:
+    - remora_base_theme
+_core:
+  default_config_hash: NdDdQ3RVDU1YT_46HKHKiV2sShqsHoM1k12BkU6hLro
+id: portrait_3_4
+label: 'Portrait: 3x4'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: portrait_3_4_xxl
+    breakpoint_id: remora_base_theme.xxl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: portrait_3_4_xl
+    breakpoint_id: remora_base_theme.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: portrait_3_4_lg
+    breakpoint_id: remora_base_theme.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: portrait_3_4_md
+    breakpoint_id: remora_base_theme.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: portrait_3_4_sm
+    breakpoint_id: remora_base_theme.sm
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: portrait_3_4_xs
+    breakpoint_id: remora_base_theme.xs
+    multiplier: 1x
+breakpoint_group: remora_base_theme
+fallback_image_style: portrait_3_4_xxl

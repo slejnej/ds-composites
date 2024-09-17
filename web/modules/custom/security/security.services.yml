@@ -1,0 +1,5 @@
+services:
+  security.middleware.remove_http_headers:
+    class: Drupal\security\Middleware\RemoveHttpHeadersMiddleware
+    tags:
+      - { name: http_middleware, priority: 1000, responder: true }

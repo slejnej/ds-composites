@@ -1,0 +1,32 @@
+{% block header %}
+
+  <header class="header-wrapper d-flex flex-lg-column align-items-end p-0">
+
+    {% block header_logo_menu %}
+      <div class="header-logo-menu d-flex flex-column-reverse flex-md-row container-xxl justify-content-between py-3">
+
+        {% block logo %}
+          <div class="logo d-flex">
+            {% remora_include 'partials/layout/header-logo.html.twig' %}
+          </div>
+        {% endblock %}
+
+        {% block top_menu %}
+          <div class="top-menu d-flex flex-column">
+            {% remora_include 'partials/navigation/top-menu.html.twig' %}
+          </div>
+        {% endblock %}
+
+      </div>
+    {% endblock %}
+
+    {% block header_main_menu %}
+      <div class="main-menu container-fluid g-0 d-flex d-lg-block justify-content-end py-3 py-lg-0">
+        {% block main_menu %}
+          {% remora_include 'partials/navigation/main-menu.html.twig' %}
+        {% endblock %}
+      </div>
+    {% endblock %}
+
+  </header>
+{% endblock %}

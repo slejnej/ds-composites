@@ -1,0 +1,7 @@
+{% block hero %}
+  {% if content.field_hero_content['#items'] is not empty %}
+    <section id="hero-nuggets" class="container-fluid g-0">
+      {{ content.field_hero_content }}
+    </section>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,9 @@
+name: Countries Info
+type: module
+description: This module provides a taxonomy of the countries (Countries information) which contains information like ISO2 code, ISO3 code, name, official name, numcode.
+dependencies:
+  - drupal:taxonomy
+  - drupal:rabbit_hole
+  - drupal:remora_core
+package: Taxonomy
+core_version_requirement: ^9 || ^10

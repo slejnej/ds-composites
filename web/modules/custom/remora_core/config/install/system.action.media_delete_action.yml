@@ -1,0 +1,11 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+id: media_delete_action
+label: 'Delete media'
+type: media
+plugin: 'entity:delete_action:media'
+configuration: {  }

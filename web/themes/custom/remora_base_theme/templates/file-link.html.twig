@@ -1,0 +1,50 @@
+{% block file %}
+
+  {% set fileType = file.filename.value|split('.')|last %}
+  {% set fileSize = file_link_display.file_size %}
+
+  {% set classes = [
+    'btn',
+    'file-link',
+    'd-flex',
+    'file-' ~ fileType
+  ] %}
+
+  {% set display_name = display_name ?? file.filename.value|split('.')|first %}
+
+  {% block file_link %}
+
+    <a href="{{ link['#url'] }}" download="{{ display_name }}" {{ attributes.addClass(classes) }}>
+      <span class="text-wrapper w-100 d-flex flex-column">
+
+        {% block file_details %}
+          <span class="file-details d-flex flex-row align-items-center text-start">
+
+            {% block file_icon %}
+              <span class="icon d-flex align-items-center me-1">
+                <svg class="bi" width="16" height="16">
+                  <use xlink:href="{{ get_bs_icon_path('download') }}"/>
+                </svg>
+              </span>
+            {% endblock %}
+
+            {% block file_type %}
+              <span class="file-type text-uppercase pe-1">{{ fileType }}</span>|
+            {% endblock %}
+
+            {% block file_size %}
+              <span class="file-size text-uppercase ps-1">{{ fileSize|replace({' ': ''}) }}</span>
+            {% endblock %}
+
+          </span>
+        {% endblock %}
+
+        {% block file_name %}
+          <span class="file-title text-break text-start">{{ display_name }}</span>
+        {% endblock %}
+
+      </span>
+    </a>
+  {% endblock %}
+
+{% endblock %}

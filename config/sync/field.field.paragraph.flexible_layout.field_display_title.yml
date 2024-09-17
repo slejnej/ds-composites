@@ -1,0 +1,26 @@
+uuid: b799c070-ec6e-47ba-b0c3-8ac757d974f3
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_title
+    - filter.format.title
+    - paragraphs.paragraphs_type.flexible_layout
+  module:
+    - text
+_core:
+  default_config_hash: b-zwH1RAY2-e_2mnglwx6LVpsQxdW_HiU--8FITAmCo
+id: paragraph.flexible_layout.field_display_title
+field_name: field_display_title
+entity_type: paragraph
+bundle: flexible_layout
+label: 'Display title'
+description: "This title is displayed on the page above the content of this section.\r\nAllowed HTML tags: <em> <i> <sup> <sub>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - title
+field_type: text

@@ -1,0 +1,4 @@
+langcode: en-gb
+roles:
+  web_admin: unsafe
+  editor: safe

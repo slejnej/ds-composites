@@ -1,0 +1,31 @@
+{% block paragraph %}
+
+  {%
+    set classes = [
+      'paragraph',
+      'paragraph--type--' ~ paragraph.bundle|clean_class,
+      view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+      not paragraph.isPublished() ? 'paragraph--unpublished'
+    ]
+  %}
+
+  {% block paragraph_content %}
+    <div{{ attributes.addClass(classes) }}>
+      {% block content %}
+
+        <div class="tagline-content container-xxl d-flex flex-column">
+
+          {% block title %}
+            {{ content.field_display_title }}
+          {% endblock %}
+
+          {% block text %}
+            {{ content.field_tagline_nt_text }}
+          {% endblock %}
+
+        </div>
+
+      {% endblock %}
+    </div>
+  {% endblock %}
+{% endblock %}

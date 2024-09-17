@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: fXZCGvF8zA-iDV0PtZKDDcc996W7AU5V-2bI2Y8g5qg
+remove_http_headers: "x-generator\r\nx-drupal-cache\r\nx-drupal-dynamic-cache\r\nserver\r\nx-drupal-cache-contexts\r\nx-drupal-cache-max-age\r\nx-drupal-cache-tags"
+remove_metatags: Generator
+langcode: en-gb

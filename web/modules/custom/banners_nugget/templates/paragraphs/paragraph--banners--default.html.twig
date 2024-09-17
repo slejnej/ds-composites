@@ -1,0 +1,33 @@
+{{ attach_library('banners_nugget/banners_nugget_js') }}
+
+{% block paragraph %}
+
+  {% set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'overflow-hidden'
+  ] %}
+
+  {% block paragraph_content %}
+    <div{{ attributes.addClass(classes) }}>
+      {% block content %}
+
+        {% block nugget_title %}
+          {% if content.field_display_title['#items'] is not empty %}
+            <div class="container">
+              <h3 class="paragraph-title">{{ content.field_display_title.0 }}</h3>
+            </div>
+          {% endif %}
+        {% endblock %}
+
+        {% block nugget_content %}
+          {{ content.field_banner_nt_banners }}
+        {% endblock %}
+
+      {% endblock %}
+    </div>
+  {% endblock %}
+
+{% endblock %}

@@ -1,0 +1,61 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow_nt_slides
+    - paragraphs.paragraphs_type.slide_nugglet
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - entity_reference_revisions
+  enforced:
+    module:
+      - slideshow_nugget
+id: paragraph.slideshow.field_slideshow_nt_slides
+field_name: field_slideshow_nt_slides
+entity_type: paragraph
+bundle: slideshow
+label: Slides
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      slide_nugglet: slide_nugglet
+    negate: 0
+    target_bundles_drag_drop:
+      attachments:
+        weight: 11
+        enabled: false
+      card_nugglet:
+        weight: 13
+        enabled: false
+      cards:
+        weight: 12
+        enabled: false
+      flexible_layout:
+        weight: 14
+        enabled: false
+      footer_section:
+        weight: 15
+        enabled: false
+      section:
+        weight: 16
+        enabled: false
+      slide_nugglet:
+        weight: 18
+        enabled: true
+      slideshow:
+        weight: 17
+        enabled: false
+      test:
+        weight: 19
+        enabled: false
+      text_media:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

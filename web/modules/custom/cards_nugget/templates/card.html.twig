@@ -1,0 +1,47 @@
+{#
+Card block requires the following variables:
+  - classes: array of css classes for card wrapper
+  - link: url for card destination
+  - button_text: text for card button
+  - display_title: title of the card
+  - image: image of the card
+  - summary: card summary
+  - id: card id
+#}
+
+{% if image %}
+  {% set card_image = 'card-with-image' %}
+{% endif %}
+
+{% block card %}
+  <div {{ attributes.addClass(classes) }}>
+    {% block content %}
+      {# used to limit the stretched link #}
+      <div class="card-body-image-wrapper position-relative h-100 d-flex align-items-stretch flex-column {{ card_image }}">
+
+        {% block card_image_wrapper %}
+          {% include '@cards_nugget/templates/partials/card-image.html.twig' %}
+        {% endblock %}
+
+        {% block card_body_wrapper %}
+          {% include '@cards_nugget/templates/partials/card-body.html.twig' %}
+        {% endblock %}
+
+      </div>
+
+      {% block card_footer %}
+        {# spaceless so we can hide empty footers using SCSS #}
+        <div class="card-footer">{% apply spaceless %}
+
+            {% block card_footer_text %}
+
+            {% endblock %}
+
+            {% block card_tags %}
+            {% endblock %}
+
+          {% endapply %}</div>
+      {% endblock %}
+    {% endblock %}
+  </div>
+{% endblock card %}

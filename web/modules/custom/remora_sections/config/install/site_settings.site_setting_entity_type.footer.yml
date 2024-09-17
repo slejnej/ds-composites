@@ -1,0 +1,8 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies: {  }
+id: footer
+label: Footer
+fieldset: Global
+multiple: false
