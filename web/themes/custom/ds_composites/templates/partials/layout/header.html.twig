@@ -14,6 +14,12 @@
         </div>
       {% endblock %}
 
+      {% block language_switcher %}
+        <div class="language-switcher">
+          {{ drupal_entity('block', 'site_language_switcher') }}
+        </div>
+      {% endblock %}
+
       {% block header_main_menu %}
         <div class="header-menus container-xxl d-flex flex-column align-items-end py-3 py-lg-0">
 

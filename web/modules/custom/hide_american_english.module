@@ -1,0 +1,63 @@
+<?php
+
+//hook_preprocess_table
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
+/**
+ * Removes American english from the translate pagee
+ *
+ * @param array $variables
+ * @return void
+ */
+function hide_american_english_preprocess_table(array &$variables): void
+{
+  // Only hide the American English language option if the table is the language selection table.
+  if(Drupal::routeMatch()->getRouteName() !== 'entity.node.content_translation_overview') {
+    return;
+  }
+
+  // Loop through the rows of the table.
+  foreach ($variables['rows'] as $key => $row) {
+    $languageString = $row['cells'][0]['content'];
+
+    if($languageString instanceof TranslatableMarkup) {
+      $languageString = $languageString->getUntranslatedString();
+    } else if(!is_string($languageString)) {
+      continue;
+    }
+
+    // If the row contains the American English language option, hide it.
+    if (str_contains($languageString, 'English') && !str_contains($languageString, '(Original language)')) {
+      unset($variables['rows'][$key]);
+    }
+  }
+}
+
+/**
+ * Removes American english from the translate select on node edit pages
+ *
+ * @param array $variables
+ * @return void
+ */
+function hide_american_english_preprocess_select(array &$variables): void
+{
+  // Only hide the American English language option if the table is the language selection table.
+  if(($variables['element']['#type'] ?? null) !== 'language_select' || !isset($variables['element']['#options'])) {
+    return;
+  }
+
+  // remove american english from the language select on the node-edit page
+  $options = &$variables['element']['#options'];
+  if(isset($options['en'])) {
+    unset($options['en']);
+  }
+
+  foreach($variables['options'] ?? [] as $key => $option) {
+    if($option['value'] === 'en') {
+      unset($variables['options'][$key]);
+    }
+
+  }
+}
+
+

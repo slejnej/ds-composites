@@ -239,3 +239,8 @@
     mask-image: url("../assets/images/civicrm_icon.svg");
   }
 }
+
+// remove translate change in admin
+.form-type--language-select {
+  display: none;
+}

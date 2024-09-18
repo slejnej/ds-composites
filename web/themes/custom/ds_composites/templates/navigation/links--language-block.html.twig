@@ -1,0 +1,20 @@
+{% if links -%}
+  <ul{{ attributes.addClass('hidden') }}>
+    {%- for item in links -%}
+      <li{{ item.attributes }}>
+        {{ item.link }}
+      </li>
+    {%- endfor -%}
+  </ul>
+  <select id="language-switcher" class="form-select text-dark" onchange="location = this.value;">
+    {%- for item in links -%}
+      {% set item_language_code = item.link['#url'].getOption('language').getId() %}
+      {% set is_active = item_language_code == current_language_code %}
+      {% if item_language_code != 'en' %}
+        <option value="{{ item.link['#url'] }}" {{ item.attributes }} {% if is_active %}selected{% endif %}>
+          {{ item.text }}
+        </option>
+      {% endif %}
+    {%- endfor -%}
+  </select>
+{%- endif %}
