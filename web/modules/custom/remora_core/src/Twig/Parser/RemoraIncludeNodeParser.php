@@ -23,13 +23,13 @@ use Twig\TokenParser\IncludeTokenParser;
  *   - directory ~ path ~ '--' ~ bundle ~ '.html.twig'
  *   - '@module_name' ~ path ~ '.html.twig'
  *   - directory ~ path ~ '.html.twig'
- *   - '@remora_base_theme' ~ path ~ '.html.twig'
+ *   - '@barrio_base_theme' ~ path ~ '.html.twig'
  *
  */
 class RemoraIncludeNodeParser extends IncludeTokenParser
 {
   private const FILE_EXT = '.html.twig';
-  private const FALLBACK_THEME = '@remora_base_theme';
+  private const FALLBACK_THEME = '@barrio_base_theme';
 
   /**
    * Gets the tag name associated with this token parser.
@@ -86,7 +86,7 @@ class RemoraIncludeNodeParser extends IncludeTokenParser
     // ct ~ '/templates/' ~ path ~ '/' ~ filename ~ '.html.twig'
     // '@module_name' ~ path ~ '.html.twig'
     // directory ~ path ~ '.html.twig'
-    // '@remora_base_theme' ~ path ~ '.html.twig'
+    // '@barrio_base_theme' ~ path ~ '.html.twig'
     $directoryExpr = new NameExpression('directory', $lineNo);
     $objectBeingRendered = new NullCoalesceExpression(
       new GetAttrExpression(new NameExpression('element', $lineNo), new ConstantExpression('#object', $lineNo), new ArrayExpression([], $lineNo), 'property', $lineNo),

@@ -1,4 +1,4 @@
-uuid: 4aa4075a-1519-4b15-bc21-d3ca41940562
+uuid: 7502b904-679c-4bcf-8340-eb4af1b5d777
 langcode: en-gb
 status: true
 dependencies:
@@ -17,7 +17,7 @@ bundle: card_nugglet
 label: Image
 description: 'Upload a new image or select an existing one from your media library.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

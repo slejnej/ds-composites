@@ -1,4 +1,4 @@
-uuid: d1cdcae9-c091-48fb-8ccd-55774f36420e
+uuid: 1a485f8c-06f9-4d15-a124-e76ccacc8913
 langcode: en-gb
 status: true
 dependencies:
@@ -10,41 +10,41 @@ dependencies:
     - image.style.square_1_1_xs
     - image.style.square_1_1_xxl
   theme:
-    - remora_base_theme
+    - barrio_base_theme
 _core:
-  default_config_hash: XLc_hHMZyq8p7FRi23ZSdz3U-iNwGmTnamC2172I6QM
+  default_config_hash: 3CFt7lRsSdaW5og9vdVjANDjslhaIC2CSMBiDuGfl-I
 id: square_1_1
 label: 'Square: 1x1'
 image_style_mappings:
   -
     image_mapping_type: image_style
     image_mapping: square_1_1_xxl
-    breakpoint_id: remora_base_theme.xxl
+    breakpoint_id: barrio_base_theme.xxl
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: square_1_1_xl
-    breakpoint_id: remora_base_theme.xl
+    breakpoint_id: barrio_base_theme.xl
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: square_1_1_lg
-    breakpoint_id: remora_base_theme.lg
+    breakpoint_id: barrio_base_theme.lg
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: square_1_1_md
-    breakpoint_id: remora_base_theme.md
+    breakpoint_id: barrio_base_theme.md
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: square_1_1_sm
-    breakpoint_id: remora_base_theme.sm
+    breakpoint_id: barrio_base_theme.sm
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: square_1_1_xs
-    breakpoint_id: remora_base_theme.xs
+    breakpoint_id: barrio_base_theme.xs
     multiplier: 1x
-breakpoint_group: remora_base_theme
+breakpoint_group: barrio_base_theme
 fallback_image_style: square_1_1_xxl

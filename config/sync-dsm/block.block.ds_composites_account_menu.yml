@@ -1,0 +1,27 @@
+uuid: 11f708b0-8dff-464c-9887-d92fda0a8786
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - ds_composites
+_core:
+  default_config_hash: a6SRwKw98jsXlthIcvGryfp7HO6dk6qxr7J1v6lth-I
+id: ds_composites_account_menu
+theme: ds_composites
+region: nav_additional
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

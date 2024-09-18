@@ -1,0 +1,22 @@
+uuid: d6b10cb4-d500-43a1-afc6-83d50d7ad5fe
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: cHZ46-9cAEpkcrykvSpmeerN1DyVZi--69E9ws60cQo
+id: paragraph.field_promo_title
+field_name: field_promo_title
+entity_type: paragraph
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

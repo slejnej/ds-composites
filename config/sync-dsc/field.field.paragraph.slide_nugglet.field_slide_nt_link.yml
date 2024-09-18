@@ -1,5 +1,5 @@
-uuid: 8f45e39e-3d32-4548-a96e-ea1896284093
-langcode: en-gb
+uuid: bda1c3b5-4688-482d-875b-c3206b60bad2
+langcode: en
 status: true
 dependencies:
   config:
@@ -19,7 +19,7 @@ bundle: slide_nugglet
 label: Link
 description: 'This text is displayed for the hyperlink and is required if a URL is added.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

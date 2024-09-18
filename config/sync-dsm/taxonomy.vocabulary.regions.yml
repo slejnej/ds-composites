@@ -1,0 +1,10 @@
+uuid: 72229d24-dd0e-4ff7-a378-bbfd3240decf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: x7EPO-sUNpsuqyEnsYoDD7Ttg10Xi9AbcvRTC_mBRc8
+name: Regions
+vid: regions
+description: ''
+weight: 0

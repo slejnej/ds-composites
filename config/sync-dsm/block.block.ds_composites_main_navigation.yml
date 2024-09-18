@@ -1,0 +1,27 @@
+uuid: 85f1950a-9a21-474c-8b91-2fd731cf3d97
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - ds_composites
+_core:
+  default_config_hash: Ujyyk08eq0kFsiKVMldTXQPpFqS17Yf9V0mOFqTAy1Y
+id: ds_composites_main_navigation
+theme: ds_composites
+region: nav_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

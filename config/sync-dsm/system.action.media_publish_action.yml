@@ -1,11 +1,11 @@
-uuid: 89cd4681-cfe3-45d8-8e94-18d5093ebfea
+uuid: 587918db-4fb1-434b-8503-dcc98563e5a7
 langcode: en-gb
 status: true
 dependencies:
   module:
     - media
 _core:
-  default_config_hash: nh83qNNrmWE-CDdHz2MdFOAk60T9mzv3R-MaKfZR2jw
+  default_config_hash: f4XjqzLjhrCEO8LHwsUfb_InXWxLO4EE80pb3Myidik
 id: media_publish_action
 label: 'Publish media'
 type: media

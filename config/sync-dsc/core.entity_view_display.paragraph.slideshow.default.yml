@@ -1,4 +1,4 @@
-uuid: ce970467-5188-41cd-acbe-5f87a2bc8780
+uuid: 0857d1f8-74fe-45f0-bda7-e2311bad8093
 langcode: en-gb
 status: true
 dependencies:
@@ -82,4 +82,3 @@ content:
     region: content
 hidden:
   field_editor_title: true
-  search_api_excerpt: true

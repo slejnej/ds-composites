@@ -1,4 +1,4 @@
-uuid: cfb21d4e-cfbe-448c-9be9-4efb8849b56b
+uuid: 6113dba0-8cb8-44a3-9030-29d0d1f15d3f
 langcode: en-gb
 status: true
 dependencies:
@@ -32,4 +32,3 @@ hidden:
   field_promo_media: true
   field_promo_text: true
   field_promo_title: true
-  search_api_excerpt: true

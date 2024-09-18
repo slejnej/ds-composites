@@ -1,10 +1,9 @@
-uuid: d46a102a-e2fe-4df0-850a-6e8a4f857c6f
-langcode: en-gb
+uuid: de507188-4fac-49b0-9991-2dd09fd4f43b
+langcode: en
 status: true
 dependencies:
   module:
     - administerusersbyrole
-    - eu_cookie_compliance
     - paragraphs_type_permissions
     - system
     - toolbar
@@ -20,7 +19,6 @@ permissions:
   - 'allow empty user mail'
   - 'cancel users by role'
   - 'create users'
-  - 'display eu cookie compliance popup'
   - 'edit users by role'
   - 'role-assign users by role'
   - 'view paragraph content attachments'

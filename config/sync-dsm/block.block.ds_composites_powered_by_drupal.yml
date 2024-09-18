@@ -1,0 +1,22 @@
+uuid: d3c4a9f6-5716-4685-987b-97e96652406c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ds_composites
+_core:
+  default_config_hash: Bfs2TjvY8TlFtXA3Hv_sOFoJJMgKK74_82qE20f22YQ
+id: ds_composites_powered_by_drupal
+theme: ds_composites
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

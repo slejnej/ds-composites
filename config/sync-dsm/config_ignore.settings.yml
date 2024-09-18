@@ -1,5 +1,5 @@
 _core:
-  default_config_hash: IgOVnECx6lbVt6JVFnadoEEugneDf3UblPZnOzov43Q
+  default_config_hash: 9O9cB-DKI5YqdkPtvZ-kiBQXXoUspp2qSZAzs0orwd0
 langcode: en-gb
 mode: simple
 ignored_config_entities:
@@ -8,3 +8,4 @@ ignored_config_entities:
   - recaptcha.settings
   - recaptcha_v3.settings
   - system.site
+uuid: null

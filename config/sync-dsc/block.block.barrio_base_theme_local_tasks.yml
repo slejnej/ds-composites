@@ -1,0 +1,22 @@
+uuid: 68df8054-2223-4159-ae58-465c6e86386f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - barrio_base_theme
+_core:
+  default_config_hash: P1KC8UVE5Y_phU95Xf-K0zbVEAX1v1F2uV8jo3y6aRM
+id: barrio_base_theme_local_tasks
+theme: barrio_base_theme
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,5 +1,5 @@
-uuid: d8d6fced-9872-46cb-b7a8-33a9216e672a
-langcode: en-gb
+uuid: 96c9e997-912c-4f32-b839-5370810b4fb6
+langcode: en
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ bundle: cit_countries_information
 label: 'Official name'
 description: 'Specify an unique official name for this country.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -6,7 +6,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import postcss from 'gulp-postcss';
 import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
-import cleanCss from './../../custom/remora_base_theme/.gulp/mrm-clean-css.mjs';
+import cleanCss from './../../custom/barrio_base_theme/.gulp/mrm-clean-css.mjs';
 import browserSync from 'browser-sync';
 import uglify from 'gulp-uglify';
 import minimist from 'minimist';

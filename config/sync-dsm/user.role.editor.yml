@@ -1,4 +1,4 @@
-uuid: 36c5fbf5-a86e-43ec-b084-9bf541243983
+uuid: 63405316-5224-42cb-9ce4-6740043d0f50
 langcode: en-gb
 status: true
 dependencies:
@@ -16,21 +16,19 @@ dependencies:
     - taxonomy.vocabulary.diseases
     - taxonomy.vocabulary.honorific_titles
     - taxonomy.vocabulary.organisations
+    - taxonomy.vocabulary.regions
     - taxonomy.vocabulary.tags
     - taxonomy.vocabulary.topics
   module:
     - contextual
     - crop
-    - eu_cookie_compliance
     - filter
-    - linkchecker
     - media
     - menu_admin_per_menu
     - node
     - paragraphs_type_permissions
     - path
     - redirect
-    - remora_core
     - site_settings
     - system
     - taxonomy
@@ -43,11 +41,9 @@ weight: 2
 is_admin: null
 permissions:
   - 'access administration pages'
-  - 'access broken links report'
   - 'access content overview'
   - 'access contextual links'
   - 'access media overview'
-  - 'access own broken links report'
   - 'access site settings overview'
   - 'access taxonomy overview'
   - 'access toolbar'
@@ -58,15 +54,19 @@ permissions:
   - 'administer nodes'
   - 'administer redirect settings'
   - 'administer redirects'
-  - 'administer remora settings'
   - 'create media'
   - 'create news content'
   - 'create page content'
   - 'create paragraph content attachments'
-  - 'create paragraph content card_nugglet'
-  - 'create paragraph content cards'
+  - 'create paragraph content banner_nugglet'
+  - 'create paragraph content banners'
+  - 'create paragraph content flexible_layout'
+  - 'create paragraph content footer_section'
+  - 'create paragraph content promo'
+  - 'create paragraph content section'
   - 'create paragraph content slide_nugglet'
   - 'create paragraph content slideshow'
+  - 'create paragraph content tagline'
   - 'create paragraph content text_media'
   - 'create person content'
   - 'create terms in categories'
@@ -75,6 +75,7 @@ permissions:
   - 'create terms in diseases'
   - 'create terms in honorific_titles'
   - 'create terms in organisations'
+  - 'create terms in regions'
   - 'create terms in tags'
   - 'create terms in topics'
   - 'create url aliases'
@@ -83,10 +84,15 @@ permissions:
   - 'delete any page content'
   - 'delete any person content'
   - 'delete paragraph content attachments'
-  - 'delete paragraph content card_nugglet'
-  - 'delete paragraph content cards'
+  - 'delete paragraph content banner_nugglet'
+  - 'delete paragraph content banners'
+  - 'delete paragraph content flexible_layout'
+  - 'delete paragraph content footer_section'
+  - 'delete paragraph content promo'
+  - 'delete paragraph content section'
   - 'delete paragraph content slide_nugglet'
   - 'delete paragraph content slideshow'
+  - 'delete paragraph content tagline'
   - 'delete paragraph content text_media'
   - 'delete terms in categories'
   - 'delete terms in cit_countries_information'
@@ -94,9 +100,9 @@ permissions:
   - 'delete terms in diseases'
   - 'delete terms in honorific_titles'
   - 'delete terms in organisations'
+  - 'delete terms in regions'
   - 'delete terms in tags'
   - 'delete terms in topics'
-  - 'display eu cookie compliance popup'
   - 'edit any news content'
   - 'edit any page content'
   - 'edit any person content'
@@ -107,6 +113,7 @@ permissions:
   - 'edit terms in diseases'
   - 'edit terms in honorific_titles'
   - 'edit terms in organisations'
+  - 'edit terms in regions'
   - 'edit terms in tags'
   - 'edit terms in topics'
   - 'revert news revisions'
@@ -114,10 +121,15 @@ permissions:
   - 'revert person revisions'
   - 'update any media'
   - 'update paragraph content attachments'
-  - 'update paragraph content card_nugglet'
-  - 'update paragraph content cards'
+  - 'update paragraph content banner_nugglet'
+  - 'update paragraph content banners'
+  - 'update paragraph content flexible_layout'
+  - 'update paragraph content footer_section'
+  - 'update paragraph content promo'
+  - 'update paragraph content section'
   - 'update paragraph content slide_nugglet'
   - 'update paragraph content slideshow'
+  - 'update paragraph content tagline'
   - 'update paragraph content text_media'
   - 'use text format basic_html'
   - 'use text format full_html'
@@ -127,10 +139,12 @@ permissions:
   - 'view own unpublished media'
   - 'view page revisions'
   - 'view paragraph content attachments'
-  - 'view paragraph content card_nugglet'
-  - 'view paragraph content cards'
+  - 'view paragraph content banner_nugglet'
+  - 'view paragraph content banners'
+  - 'view paragraph content promo'
   - 'view paragraph content slide_nugglet'
   - 'view paragraph content slideshow'
+  - 'view paragraph content tagline'
   - 'view paragraph content text_media'
   - 'view person revisions'
   - 'view the administration theme'

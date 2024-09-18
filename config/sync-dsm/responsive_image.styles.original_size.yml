@@ -1,0 +1,45 @@
+uuid: 4ea5c85f-3536-4d52-83c1-bf4d4012eebb
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - image.style.original_size
+  theme:
+    - barrio_base_theme
+_core:
+  default_config_hash: 1NC7c6cBOSddrpCKE9AHBvCUtPGKVZ0N54yPBtv9YwQ
+id: original_size
+label: 'Original size'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: original_size
+    breakpoint_id: barrio_base_theme.xxl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: original_size
+    breakpoint_id: barrio_base_theme.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: original_size
+    breakpoint_id: barrio_base_theme.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: original_size
+    breakpoint_id: barrio_base_theme.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: original_size
+    breakpoint_id: barrio_base_theme.sm
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: original_size
+    breakpoint_id: barrio_base_theme.xs
+    multiplier: 1x
+breakpoint_group: barrio_base_theme
+fallback_image_style: original_size

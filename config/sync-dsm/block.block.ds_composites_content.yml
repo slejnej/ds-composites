@@ -1,0 +1,22 @@
+uuid: 535f9b66-b2da-4b48-b415-9917196805fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ds_composites
+_core:
+  default_config_hash: jgD5_rxtkqR8ShF-0JBUXsBspWTlE6e999BhEG2Gs7g
+id: ds_composites_content
+theme: ds_composites
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

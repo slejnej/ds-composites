@@ -1,6 +1,5 @@
 _core:
   default_config_hash: FzFKuqOuk667AkDorrqvXkc_-M4D-Ac1XeGGusxS1JU
-langcode: en-gb
 check_links_types: 1
 default_url_scheme: 'http://'
 base_path: ''
@@ -42,6 +41,6 @@ error:
     304
     401
     403
-  impersonate_account: admin
+  impersonate_account: placeholder-for-uid-1
 logging:
   level: 6

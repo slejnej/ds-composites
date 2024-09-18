@@ -1,5 +1,5 @@
-uuid: 5bc39392-1004-43e6-a6f6-ce943aeb7228
-langcode: en-gb
+uuid: 409dd1ad-7bb8-4baf-b340-4e68ba1eb53e
+langcode: en
 status: true
 dependencies:
   config:
@@ -35,4 +35,3 @@ hidden:
   field_slide_nt_link: true
   field_slide_nt_summary: true
   field_slide_nt_title: true
-  search_api_excerpt: true

@@ -246,7 +246,7 @@ The remora include tag will (when provided with a string and only a string) look
 - `bundle ~ '_content_type' ~ path ~ '.html.twig'` (Check the CT module supplies the template)
 - `'@module_name' ~ path ~ '.html.twig'` (Check the module has the template)
 - `directory ~ path ~ '.html.twig'` (Check the subtheme has a generic override for the template)
-- `'@remora_base_theme' ~ path ~ '.html.twig'` (Check the base theme has the template)
+- `'@barrio_base_theme' ~ path ~ '.html.twig'` (Check the base theme has the template)
 
 Where `bundle` is the node's bundle, and `path` is the path provided excluding the ".html.twig" extension. Example:
 ```twig
@@ -256,7 +256,7 @@ will look for the following templates, given that the subtheme is called `remora
 1. `themes/custom/remora_subtheme/templates/partials/content/hero--page.html.twig`
 2. `web/modules/page_content_type/templates/partials/content/hero.html.twig`
 3. `themes/custom/remora_subtheme/templates/partials/content/hero.html.twig`
-4. `themes/custom/remora_base_theme/templates/partials/content/hero.html.twig`
+4. `themes/custom/barrio_base_theme/templates/partials/content/hero.html.twig`
 
 ## Image styles
 | Name            | Aspect ratio | Responsive image style | image style    |
@@ -388,4 +388,4 @@ Available Drush commands
 
 ## Theme dependencies on modules
 
-In case like we had with remora_base_theme where it depends on module cards_nugget, we have problematic situation since Drupal themes on install don't automatically install their dependencies. In that case, dpendency should be added to the remora_core which is installation profile, but if the dpendency that we are adding is dependent on the remora_core (cause it holds all the field storages), we have to manually install the module in install function of remora_core since that one is triggered after the configuration is imported and all dependencies from remora_core.info installed.
+In case like we had with barrio_base_theme where it depends on module cards_nugget, we have problematic situation since Drupal themes on install don't automatically install their dependencies. In that case, dpendency should be added to the remora_core which is installation profile, but if the dpendency that we are adding is dependent on the remora_core (cause it holds all the field storages), we have to manually install the module in install function of remora_core since that one is triggered after the configuration is imported and all dependencies from remora_core.info installed.

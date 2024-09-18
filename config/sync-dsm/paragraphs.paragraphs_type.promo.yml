@@ -1,0 +1,12 @@
+uuid: 4af93c61-2ab4-42b1-ab55-891c644f2998
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: WRF5xMrr1IbpUUcJpAOholGc_BQLSHbeJm6vvD_Vz8g
+id: promo
+label: Promo
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

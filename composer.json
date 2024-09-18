@@ -11,6 +11,7 @@
   "require": {
     "php": ">=8.1",
     "composer/installers": "^1.9",
+    "drupal/advanced_language_selector": "^1.4",
     "drupal/bootstrap5": "^4.0",
     "drupal/core-composer-scaffold": "10.2.7",
     "drupal/core-project-message": "10.2.7",
@@ -25,6 +26,7 @@
     "mrm-remora/aws-code-deploy": "*",
     "mrm-remora/aws-plugin-installer": "*",
     "mrm-remora/banners_nugget": "*",
+    "mrm-remora/barrio_base_theme": "*",
     "mrm-remora/cards_nugget": "*",
     "mrm-remora/countries_info": "*",
     "mrm-remora/helper_module": "*",
@@ -34,7 +36,6 @@
     "mrm-remora/page_content_type": "*",
     "mrm-remora/person_content_type": "*",
     "mrm-remora/promo_nugget": "*",
-    "mrm-remora/remora_base_theme": "*",
     "mrm-remora/remora_core": "*",
     "mrm-remora/remora_sections": "*",
     "mrm-remora/security": "*",
@@ -137,9 +138,9 @@
       "no-api": true
     },
     {
-      "name": "mrm-remora/remora_base_theme",
+      "name": "mrm-remora/barrio_base_theme",
       "type": "path",
-      "url": "web/themes/custom/remora_base_theme",
+      "url": "web/themes/custom/barrio_base_theme",
       "no-api": true
     },
     {

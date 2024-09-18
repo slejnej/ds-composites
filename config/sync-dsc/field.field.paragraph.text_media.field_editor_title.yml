@@ -1,4 +1,4 @@
-uuid: e9e24fea-25a2-4688-a2c8-66f93667035b
+uuid: ed415b52-64d4-4231-bad4-1d6fa9497dab
 langcode: en-gb
 status: true
 dependencies:
@@ -17,7 +17,7 @@ bundle: text_media
 label: 'Editor title'
 description: 'This title is used to describe the content within this nugget for web editors. This title is not displayed on the page.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

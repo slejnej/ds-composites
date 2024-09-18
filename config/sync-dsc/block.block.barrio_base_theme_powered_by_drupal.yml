@@ -1,0 +1,22 @@
+uuid: adec5176-c88d-45f5-9720-038018951c50
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - barrio_base_theme
+_core:
+  default_config_hash: Bfs2TjvY8TlFtXA3Hv_sOFoJJMgKK74_82qE20f22YQ
+id: barrio_base_theme_powered_by_drupal
+theme: barrio_base_theme
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

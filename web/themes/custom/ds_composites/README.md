@@ -1,5 +1,5 @@
 # DS Composites theme
-This subtheme is based off of Remora's base theme. An extended documentation is available [here](https://www.github.com/MRM-Remora/remora_base_theme/tree/master/README.md)
+This subtheme is based off of Remora's base theme. An extended documentation is available [here](https://www.github.com/MRM-Remora/barrio_base_theme/tree/master/README.md)
 
 ## Gulp
 Gulp is used to compile the SCSS to CSS, and run minifiers against the various asset files.  

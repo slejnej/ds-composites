@@ -1,5 +1,5 @@
-uuid: 45a19fdd-be81-4401-a20c-f3c84fffd78d
-langcode: en-gb
+uuid: 35af7cb0-b3af-43cc-a5f7-aa98a4d8ba8b
+langcode: en
 status: true
 dependencies:
   config:
@@ -20,7 +20,7 @@ bundle: slideshow
 label: Slides
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

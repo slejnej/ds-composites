@@ -1,8 +1,0 @@
-third_party_settings:
-  field_group:
-    group_slideshow_settings:
-      label: 'Slideshow settings'
-    group_nugget_title_properties:
-      label: 'Nugget title & properties'
-    group_nugget_content:
-      label: 'Nugget content'

@@ -1,4 +1,4 @@
-uuid: f2c03da8-fffd-4cef-bc3a-fc5fac07e4a0
+uuid: 366095bc-b9da-4986-8dd5-d161e773e76d
 langcode: en-gb
 status: true
 dependencies:
@@ -55,14 +55,6 @@ content:
     weight: 2
     region: content
   field_categories:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  field_countries:
     type: entity_reference_label
     label: hidden
     settings:
@@ -198,6 +190,7 @@ content:
     weight: 17
     region: content
 hidden:
+  field_countries: true
   field_diseases: true
   field_meta_tags: true
   field_tags: true

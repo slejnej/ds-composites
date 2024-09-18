@@ -1,5 +1,5 @@
-uuid: f49f0d9d-899f-4d9a-8a6a-a8fe8da0408f
-langcode: en-gb
+uuid: bc50806f-60e9-438d-923c-c0798ffa4535
+langcode: en
 status: true
 dependencies:
   config:
@@ -17,7 +17,7 @@ bundle: slide_nugglet
 label: 'Editor title'
 description: 'This title is used to describe the content within this nugget for web editors. This title is not displayed on the page.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -1,4 +1,4 @@
-uuid: db110c0c-a9d2-4ccd-87a4-db62c4bceeeb
+uuid: ec541199-e531-4f42-a3e6-38cdcab05931
 langcode: en-gb
 status: true
 dependencies:
@@ -19,7 +19,7 @@ bundle: card_nugglet
 label: Link
 description: 'Start typing the title of your page to select it. You can also enter an internal path such as /search or an external URL such as https://remora.media.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

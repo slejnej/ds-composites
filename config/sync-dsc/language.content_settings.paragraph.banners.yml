@@ -1,5 +1,5 @@
-uuid: 9f4ea394-a9a3-4358-9cb9-caf516afd2e5
-langcode: en-gb
+uuid: 85e21ad2-3390-488c-858c-c3c4eee5fcd8
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,11 +8,11 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
 id: paragraph.banners
 target_entity_type_id: paragraph
 target_bundle: banners
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

@@ -1,5 +1,5 @@
-uuid: 5eddd455-149d-4f37-9e29-e06a9a9f808f
-langcode: en-gb
+uuid: b83d55f5-93da-4659-bca9-1750ef43082c
+langcode: en
 status: true
 dependencies:
   theme:
@@ -59,6 +59,31 @@ items:
       visibility: {  }
       _core:
         default_config_hash: a0Yyx1GeyKarZ4T_yXQBR_ZFKnXiFLtxAb6gWLd8nr0
+  -
+    collection: ''
+    name: block.block.claro_help
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - help
+        theme:
+          - claro
+      id: claro_help
+      theme: claro
+      region: help
+      weight: 0
+      provider: null
+      plugin: help_block
+      settings:
+        id: help_block
+        label: Help
+        label_display: '0'
+        provider: help
+      visibility: {  }
+      _core:
+        default_config_hash: jccFSSVqV0WCDb6NtML1VWAWTtDbZ-zn5YgTRMgMrIM
   -
     collection: ''
     name: block.block.claro_local_actions

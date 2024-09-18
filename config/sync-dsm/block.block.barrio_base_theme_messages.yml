@@ -1,0 +1,22 @@
+uuid: a47eaaaa-78aa-4d83-a0dc-3b1b578f4f49
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - barrio_base_theme
+_core:
+  default_config_hash: VGPBINciJRZZDBFweK68b6VjJOXW_MZgzw62FI4YtyE
+id: barrio_base_theme_messages
+theme: barrio_base_theme
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

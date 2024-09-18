@@ -1,0 +1,47 @@
+barrio_base_theme.xs:
+  label: XS
+  mediaQuery: '(max-width: 575.98px)'
+  weight: 1
+  group: barrio_base_theme
+  multipliers:
+    - 1x
+
+barrio_base_theme.sm:
+  label: SM
+  mediaQuery: 'all and (min-width: 576px) and (max-width: 767.98px)'
+  weight: 2
+  group: barrio_base_theme
+  multipliers:
+    - 1x
+
+barrio_base_theme.md:
+  label: MD
+  mediaQuery: 'all and (min-width: 768px) and (max-width: 991.98px)'
+  weight: 4
+  group: barrio_base_theme
+  multipliers:
+    - 1x
+
+barrio_base_theme.lg:
+  label: LG
+  mediaQuery: 'all and (min-width: 992px) and (max-width: 1199.98px)'
+  weight: 6
+  group: barrio_base_theme
+  multipliers:
+    - 1x
+
+barrio_base_theme.xl:
+  label: XL
+  mediaQuery: 'all and (min-width: 1200px) and (max-width: 1599.98px)'
+  weight: 8
+  group: barrio_base_theme
+  multipliers:
+    - 1x
+
+barrio_base_theme.xxl:
+  label: XXL
+  mediaQuery: 'all and (min-width: 1600px)'
+  weight: 10
+  group: barrio_base_theme
+  multipliers:
+    - 1x

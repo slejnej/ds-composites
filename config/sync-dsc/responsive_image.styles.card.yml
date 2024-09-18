@@ -1,4 +1,4 @@
-uuid: 6ece0010-3c7f-4c86-a724-1f06ab67f258
+uuid: 3e0034bb-3591-4032-ac63-8773940de4ee
 langcode: en-gb
 status: true
 dependencies:
@@ -10,41 +10,41 @@ dependencies:
     - image.style.card_xs
     - image.style.card_xxl
   theme:
-    - remora_base_theme
+    - barrio_base_theme
 _core:
-  default_config_hash: MGBWN8qI1ldNwYsmsBxmg_P6KjL6Gj0wPMSwHfz9ogI
+  default_config_hash: mqlMzlxlZU_bZmz8YZKMLwGYqSabtDK1MKiNLnnYrvQ
 id: card
 label: Card
 image_style_mappings:
   -
     image_mapping_type: image_style
     image_mapping: card_xxl
-    breakpoint_id: remora_base_theme.xxl
+    breakpoint_id: barrio_base_theme.xxl
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: card_xl
-    breakpoint_id: remora_base_theme.xl
+    breakpoint_id: barrio_base_theme.xl
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: card_lg
-    breakpoint_id: remora_base_theme.lg
+    breakpoint_id: barrio_base_theme.lg
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: card_md
-    breakpoint_id: remora_base_theme.md
+    breakpoint_id: barrio_base_theme.md
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: card_sm
-    breakpoint_id: remora_base_theme.sm
+    breakpoint_id: barrio_base_theme.sm
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: card_xs
-    breakpoint_id: remora_base_theme.xs
+    breakpoint_id: barrio_base_theme.xs
     multiplier: 1x
-breakpoint_group: remora_base_theme
+breakpoint_group: barrio_base_theme
 fallback_image_style: card_xxl

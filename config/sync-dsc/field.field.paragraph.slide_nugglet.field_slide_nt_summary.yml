@@ -1,5 +1,5 @@
-uuid: 9253e4df-10d5-488d-82ca-aa29652b67ed
-langcode: en-gb
+uuid: c9f14f34-675c-413b-a7c9-37f591b2e756
+langcode: en
 status: true
 dependencies:
   config:
@@ -20,7 +20,7 @@ bundle: slide_nugglet
 label: Summary
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

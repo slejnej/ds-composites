@@ -1,5 +1,5 @@
-uuid: 481234e4-4cee-4107-8fb0-06060eba2a3e
-langcode: en-gb
+uuid: 849b1e34-03d3-48da-bcb4-788b4b1fb45b
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,11 +8,11 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
 id: paragraph.slide_nugglet
 target_entity_type_id: paragraph
 target_bundle: slide_nugglet
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

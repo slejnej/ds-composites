@@ -1,5 +1,5 @@
-uuid: fb61cf92-a948-4142-bae9-af9270ec21fe
-langcode: en-gb
+uuid: 6031be5e-308b-43a6-9046-713679d87fad
+langcode: en
 status: true
 dependencies:
   module:
@@ -7,16 +7,16 @@ dependencies:
   theme:
     - ds_composites
 _core:
-  default_config_hash: aeqlWs7HwctZeZC7ADcbxfqehJzBRfZKmuZz3DsH3_4
+  default_config_hash: VGPBINciJRZZDBFweK68b6VjJOXW_MZgzw62FI4YtyE
 id: ds_composites_messages
 theme: ds_composites
-region: header
-weight: 0
+region: content
+weight: -7
 provider: null
 plugin: system_messages_block
 settings:
   id: system_messages_block
-  label: 'Status messages'
+  label: Messages
   label_display: '0'
   provider: system
 visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 8e08fade-ef68-4cf9-bb50-366c09cf1b5d
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_palette
+    - paragraphs.paragraphs_type.section
+  module:
+    - options
+_core:
+  default_config_hash: R04edMq6NUmaTT1G6-QNRDScfq3glx27jwJfkPeTLDE
+id: paragraph.section.field_palette
+field_name: field_palette
+entity_type: paragraph
+bundle: section
+label: Palette
+description: 'Select a pre-configured palette to change the styling of this section.'
+required: true
+translatable: false
+default_value:
+  -
+    value: palette-default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

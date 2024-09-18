@@ -1,5 +1,5 @@
-uuid: 0b5ed2a9-4376-4c7d-aff0-7432f16d1576
-langcode: en-gb
+uuid: 6acc917e-f3c6-4e70-ab22-decc216988e0
+langcode: en
 status: true
 dependencies:
   module:
@@ -9,6 +9,21 @@ snapshotSet: config_sync
 extensionType: module
 extensionName: person_content_type
 items:
+  -
+    collection: ''
+    name: auto_entitylabel.settings.node.person
+    data:
+      status: 1
+      pattern: '[node:field_honorific_title] [node:field_first_name] [node:field_last_name]'
+      escape: false
+      preserve_titles: false
+      save: false
+      chunk: 50
+      dependencies:
+        config:
+          - node.type.person
+      _core:
+        default_config_hash: 7h0XSHDNplRQssa6PjXRg8DsnXNv7khqgd0kN-oDi3o
   -
     collection: ''
     name: core.base_field_override.node.person.promote

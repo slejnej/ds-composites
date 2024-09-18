@@ -1,0 +1,21 @@
+uuid: 030ea8e3-9f3a-4bae-a824-9ab834a01fcb
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: bixckGqNpmOpKpzGYwb-MfD__QulNFMXymadaLaea-Y
+id: taxonomy_term.field_cit_region
+field_name: field_cit_region
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

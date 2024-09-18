@@ -1,0 +1,27 @@
+uuid: 74d2d44d-c99a-49d0-8b0f-4db1bdca2c0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - barrio_base_theme
+_core:
+  default_config_hash: a6SRwKw98jsXlthIcvGryfp7HO6dk6qxr7J1v6lth-I
+id: barrio_base_theme_account_menu
+theme: barrio_base_theme
+region: nav_additional
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

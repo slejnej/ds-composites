@@ -1,4 +1,4 @@
-uuid: 7bb50966-3112-401f-99fc-e1df8965b46a
+uuid: 56d13fc7-2393-46ab-b7b0-abca8526eaff
 langcode: en-gb
 status: true
 dependencies:
@@ -248,8 +248,8 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 13
             additional: {  }
-          d8dd3d6a-092e-417a-a633-50235262ec30:
-            uuid: d8dd3d6a-092e-417a-a633-50235262ec30
+          8285329e-956b-41f0-b915-d5eac6710f2a:
+            uuid: 8285329e-956b-41f0-b915-d5eac6710f2a
             region: content
             configuration:
               id: 'field_block:node:page:field_categories'

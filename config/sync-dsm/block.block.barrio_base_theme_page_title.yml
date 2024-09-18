@@ -1,0 +1,20 @@
+uuid: 23e0bcfd-ea8a-44c7-959f-392a109dde5d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - barrio_base_theme
+_core:
+  default_config_hash: UEwoX-C0AgEdyeYWljq7HNLXoLLY-VQT53191QDDTmE
+id: barrio_base_theme_page_title
+theme: barrio_base_theme
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

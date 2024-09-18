@@ -1,0 +1,31 @@
+uuid: d376a267-2cd6-4c8f-b68c-1cc3998b4c71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_cit_region
+    - taxonomy.vocabulary.cit_countries_information
+    - taxonomy.vocabulary.regions
+_core:
+  default_config_hash: Ftoa_17UKYJ-FKEbGNTSyq0HlSgyojndzSFVixpwTVk
+id: taxonomy_term.cit_countries_information.field_cit_region
+field_name: field_cit_region
+entity_type: taxonomy_term
+bundle: cit_countries_information
+label: Region
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      regions: regions
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

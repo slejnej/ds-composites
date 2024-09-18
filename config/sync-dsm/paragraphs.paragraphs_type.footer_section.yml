@@ -1,0 +1,24 @@
+uuid: c54bd058-7e91-4489-8bad-40a471588c53
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+_core:
+  default_config_hash: 58A1Mid-oqPu7g1l_9-go2LbMwmDxOYTLtGKwIAuZiE
+id: footer_section
+label: 'Footer section'
+icon_uuid: null
+icon_default: null
+description: 'Layout paragraph for footer'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      layout_onecol: 'One column'
+      layout_twocol_section: 'Two column'
+      layout_twocol: 'Two column'
+      layout_twocol_bricks: 'Two column bricks'
+      layout_threecol_section: 'Three column'
+      layout_threecol_25_50_25: 'Three column 25/50/25'
+      layout_threecol_33_34_33: 'Three column 33/34/33'

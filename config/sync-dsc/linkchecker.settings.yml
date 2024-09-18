@@ -1,34 +1,28 @@
 _core:
-  default_config_hash: ZhIl6m8EWHJQFZEAzV6jBaR6a-1Fwas0dZ5_PfjgobI
-langcode: en-gb
-scan_blocks: null
+  default_config_hash: FzFKuqOuk667AkDorrqvXkc_-M4D-Ac1XeGGusxS1JU
 check_links_types: 1
 default_url_scheme: 'http://'
 base_path: ''
-search_published_contents_only: false
 extract:
   from_a: true
-  from_audio: true
+  from_audio: false
   from_embed: false
-  from_iframe: true
+  from_iframe: false
   from_img: false
   from_object: false
   from_video: false
   filter_blacklist:
-    editor_file_reference: '0'
-    filter_align: '0'
-    filter_url: '0'
-    filter_html_escape: '0'
-    filter_htmlcorrector: '0'
-    filter_html_image_secure: '0'
-    filter_autop: '0'
-    filter_image_lazy_load: '0'
-    filter_caption: '0'
-    filter_html: '0'
-    linkit: '0'
-    media_embed: '0'
+    filter_align: filter_align
+    filter_autop: filter_autop
+    filter_caption: filter_caption
+    insert_block: insert_block
+    insert_view: insert_view
+    smiley: smiley
+    smileys: smileys
+    weblinks_embed: weblinks_embed
+    weblinks_filter: weblinks_filter
 check:
-  connections_max: 4
+  connections_max: 8
   connections_max_per_domain: 2
   disable_link_check_for_urls: |-
     example.com
@@ -36,11 +30,17 @@ check:
     example.org
   library: core
   interval: 2419200
-  useragent: 'Drupal (+https://drupal.org/)'
+  useragent: 'Drupal (+http://drupal.org/)'
 error:
   action_status_code_301: 0
   action_status_code_404: 0
-  ignore_response_codes: "200\r\n206\r\n302\r\n304\r\n401\r\n403"
-  impersonate_account: admin
+  ignore_response_codes: |-
+    200
+    206
+    302
+    304
+    401
+    403
+  impersonate_account: placeholder-for-uid-1
 logging:
   level: 6

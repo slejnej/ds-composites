@@ -1,5 +1,5 @@
-uuid: 46a94e77-89d3-45a4-b711-19c3139dd318
-langcode: en-gb
+uuid: e3911523-3890-4ab3-ab4e-8f4f0e9f407e
+langcode: en
 status: true
 dependencies:
   module:
@@ -17,7 +17,7 @@ matchers:
       metadata: '[node:content-type:name] #[node:nid] | [node:created:medium] by [node:author]'
       bundles: {  }
       group_by_bundle: false
+      include_unpublished: false
       substitution_type: canonical
       limit: 100
-      include_unpublished: false
     weight: 0

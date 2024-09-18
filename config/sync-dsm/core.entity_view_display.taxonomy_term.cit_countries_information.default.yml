@@ -1,8 +1,9 @@
-uuid: 8f2b7e26-eed8-44b8-988d-ffd91e58f12e
-langcode: en-gb
+uuid: bfd28626-fe68-42ff-80cf-434d85532db7
+langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.cit_countries_information.field_cit_region
     - field.field.taxonomy_term.cit_countries_information.field_citf_continent
     - field.field.taxonomy_term.cit_countries_information.field_citf_iso2_code
     - field.field.taxonomy_term.cit_countries_information.field_citf_iso3_code

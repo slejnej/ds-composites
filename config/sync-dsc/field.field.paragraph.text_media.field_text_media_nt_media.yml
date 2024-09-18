@@ -1,4 +1,4 @@
-uuid: b1559b7c-6ab7-48ff-9d5a-fdb5117c6145
+uuid: 8ad645f4-a6ee-4c3e-9be4-a75f18a9596a
 langcode: en-gb
 status: true
 dependencies:
@@ -19,7 +19,7 @@ bundle: text_media
 label: Media
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

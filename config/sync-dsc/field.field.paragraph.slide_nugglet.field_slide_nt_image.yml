@@ -1,5 +1,5 @@
-uuid: 383c549e-81df-4caf-bd2a-601316d38b7e
-langcode: en-gb
+uuid: d4c3c679-cadd-4ab3-b583-d555cb87348b
+langcode: en
 status: true
 dependencies:
   config:
@@ -17,7 +17,7 @@ bundle: slide_nugglet
 label: Image
 description: 'Upload a new image or select an existing one from your media library.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

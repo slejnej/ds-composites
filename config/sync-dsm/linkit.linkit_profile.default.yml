@@ -1,11 +1,11 @@
-uuid: 17c58330-0a99-4b95-a9c1-237d812f62bf
-langcode: en-gb
+uuid: ec067d62-d5d8-46e2-9895-f9900fc733b2
+langcode: en
 status: true
 dependencies:
   module:
     - node
 _core:
-  default_config_hash: 0Jw_BFJCCtWk187tIYvME58VFpYwPaAdrc4eRtAyHH0
+  default_config_hash: Zw2zIU4HpyiAnBokQJazpbkztwsdRYe1CZZus2yrfeQ
 label: Default
 id: default
 description: 'A default Linkit profile'
@@ -17,7 +17,7 @@ matchers:
       metadata: '[node:content-type:name] #[node:nid] | [node:created:medium] by [node:author]'
       bundles: {  }
       group_by_bundle: false
+      include_unpublished: false
       substitution_type: canonical
       limit: 100
-      include_unpublished: false
     weight: 0

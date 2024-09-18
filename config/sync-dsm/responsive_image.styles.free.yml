@@ -1,0 +1,50 @@
+uuid: e9219c90-e5ff-45a3-9a23-e97517549dec
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - image.style.free_lg
+    - image.style.free_md
+    - image.style.free_sm
+    - image.style.free_xl
+    - image.style.free_xs
+    - image.style.free_xxl
+  theme:
+    - barrio_base_theme
+_core:
+  default_config_hash: vkrVrNjjobYEXKyuQOhyWn3n81B723CE5amEwcAxkmE
+id: free
+label: Free
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: free_xxl
+    breakpoint_id: barrio_base_theme.xxl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: free_xl
+    breakpoint_id: barrio_base_theme.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: free_lg
+    breakpoint_id: barrio_base_theme.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: free_md
+    breakpoint_id: barrio_base_theme.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: free_sm
+    breakpoint_id: barrio_base_theme.sm
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: free_xs
+    breakpoint_id: barrio_base_theme.xs
+    multiplier: 1x
+breakpoint_group: barrio_base_theme
+fallback_image_style: free_xxl

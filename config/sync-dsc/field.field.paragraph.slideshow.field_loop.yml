@@ -1,5 +1,5 @@
-uuid: e60f3d93-17f4-420f-a526-9381847bb1e9
-langcode: en-gb
+uuid: 7069f411-33cb-4f32-9fc0-4d9c5a4339c3
+langcode: en
 status: true
 dependencies:
   config:
@@ -17,7 +17,7 @@ bundle: slideshow
 label: Loop
 description: 'Enable to advance from the last slide to the first and vice versa.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

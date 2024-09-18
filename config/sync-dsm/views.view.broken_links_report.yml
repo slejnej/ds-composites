@@ -1,4 +1,4 @@
-uuid: 97355a94-c4a9-4410-af5e-b22972fdf477
+uuid: c06a4fdf-2651-4123-b645-8ccf378adf39
 langcode: en-gb
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
     - linkchecker
     - user
 _core:
-  default_config_hash: G19NgTMdwaqUb6hm1fXazGVwr0N2GRkmKCiNhpTkB4o
+  default_config_hash: Og4u-tX_7BUGgFEjnkNCuDEiGDLU_9wI_Pv2kYMFnjw
 id: broken_links_report
 label: 'Broken links report'
 module: views
@@ -620,7 +620,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<b>Entity:</b> {{ linkcheckerlink_page_entity_label }}<br />\r\n<b>Field:</b> {{ entity_field }}<br />\r\n<b>Language:</b> {{ entity_langcode }}"
+            text: "<b>Entity:</b> {{ linkcheckerlink_page_entity_label }}<br />\r\n{% if entity_field != 'nid' %} <b>Field:</b> {{ entity_field }}<br /> {% endif %}\r\n<b>Language:</b> {{ entity_langcode }}"
             make_link: false
             path: ''
             absolute: false

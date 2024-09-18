@@ -1,4 +1,4 @@
-uuid: 441982e0-729b-45f6-9ef8-f65f6be05886
+uuid: 4d60e024-31f3-47b4-a2e7-70776999eaf4
 langcode: en-gb
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
 _core:
@@ -17,4 +17,4 @@ id: taxonomy_term.honorific_titles
 target_entity_type_id: taxonomy_term
 target_bundle: honorific_titles
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

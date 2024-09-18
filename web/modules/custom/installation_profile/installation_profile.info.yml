@@ -7,6 +7,6 @@ install:
 dependencies:
   - remora_core
 themes:
-  - remora_base_theme
+  - barrio_base_theme
 core_version_requirement: ^9 || ^10
 keep_english: true

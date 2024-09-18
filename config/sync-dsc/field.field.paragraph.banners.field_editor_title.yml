@@ -1,4 +1,4 @@
-uuid: af9357be-99b9-43c5-8d39-4b4cb6bda99f
+uuid: 4f927300-efe6-48ab-aaf6-3353d360565e
 langcode: en-gb
 status: true
 dependencies:
@@ -14,7 +14,7 @@ bundle: banners
 label: 'Editor title'
 description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

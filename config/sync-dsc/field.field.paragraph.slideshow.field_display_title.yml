@@ -1,5 +1,5 @@
-uuid: 6e01ea74-58dc-45d7-be2d-46b3705394c8
-langcode: en-gb
+uuid: 98a205c9-8e60-4286-8a4c-8eab81138fa5
+langcode: en
 status: true
 dependencies:
   config:
@@ -20,7 +20,7 @@ bundle: slideshow
 label: 'Display title'
 description: 'This title is displayed on the page above the content of this nugget.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

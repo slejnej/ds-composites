@@ -1,0 +1,22 @@
+uuid: 072cfe48-45c1-4651-8616-5b298b83fe02
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - ds_composites
+_core:
+  default_config_hash: XO2vcazO-gx0BAKwDVeRhzPVTmRkja3PPP2A9jOEwi0
+id: ds_composites_help
+theme: ds_composites
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,4 +1,4 @@
-uuid: 9fd9da3b-b070-4c6d-b11b-53814b447fba
+uuid: fcb82233-1066-4de5-b02b-7e233949d490
 langcode: en-gb
 status: true
 dependencies:
@@ -20,7 +20,7 @@ bundle: text_media
 label: 'Display title'
 description: 'This title is displayed on the page above the content of this nugget.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

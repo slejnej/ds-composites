@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" media="all" href="/themes/custom/remora_base_theme/build/css/style.min.css">
+  <link rel="stylesheet" media="all" href="/themes/custom/barrio_base_theme/build/css/style.min.css">
   <title>Maintenance</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
         <div class="block block-system block-system-branding-block">
           <div class="navbar-brand d-flex align-items-center">
             <a href="/" title="Home" rel="home" class="site-logo d-block">
-              <img src="/themes/custom/remora_base_theme/logo.svg" alt="Home" fetchpriority="high">
+              <img src="/themes/custom/barrio_base_theme/logo.svg" alt="Home" fetchpriority="high">
             </a>
           </div>
         </div>

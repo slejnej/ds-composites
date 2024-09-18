@@ -1,0 +1,18 @@
+uuid: 4b846070-0bf7-4150-86b6-77dd3a1b823b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.regions
+_core:
+  default_config_hash: UTNm4ByyBr3mgcy9FusZTLGpT4LzsSalc1MXpeVDeKQ
+id: taxonomy_term.regions
+targetEntityType: taxonomy_term
+bundle: regions
+action: page_redirect
+no_bypass: false
+bypass_message: true
+configuration:
+  redirect: '<front>'
+  redirect_code: 301
+  redirect_fallback_action: access_denied

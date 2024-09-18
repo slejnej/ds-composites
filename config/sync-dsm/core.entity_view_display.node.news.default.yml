@@ -1,4 +1,4 @@
-uuid: b504130c-0322-4824-b61f-df98a01cc32f
+uuid: e188a783-a939-4385-b296-07cf9d659d33
 langcode: en-gb
 status: true
 dependencies:
@@ -55,15 +55,6 @@ content:
     weight: 104
     region: content
   field_categories:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  field_countries:
     type: entity_reference_entity_view
     label: above
     settings:
@@ -198,6 +189,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_countries: true
   field_diseases: true
   field_hero_content: true
   field_tags: true

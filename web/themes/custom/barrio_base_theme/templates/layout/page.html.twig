@@ -1,0 +1,38 @@
+{% block page %}
+
+  {% block header %}
+    {% remora_include 'partials/layout/header.html.twig' %}
+  {% endblock %}
+
+  {% block main %}
+    <main class="flex-grow-1">
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+      {% set sidebar_first_classes = (page.sidebar_first and page.sidebar_second) ? 'col-12 col-sm-6 col-lg-3' : 'col-12 col-lg-3' %}
+      {% set sidebar_second_classes = (page.sidebar_first and page.sidebar_second) ? 'col-12 col-sm-6 col-lg-3' : 'col-12 col-lg-3' %}
+      {% set content_classes = (page.sidebar_first and page.sidebar_second) ? 'col-12 col-lg-6' : ((page.sidebar_first or page.sidebar_second) ? 'col-12 col-lg-9' : 'col-12' ) %}
+
+      {# two blocks so CTs can add their hero in pre_content before or after breadcrumbs, whenever they please #}
+      {# use {{ block('breadcrumbs') }} to add breadcrumbs if overriding the pre_content block #}
+      {% block breadcrumbs %}
+        {{ drupal_entity('block', 'barrio_base_theme_breadcrumbs') }}
+      {% endblock %}
+
+      <div class="{{ b5_top_container }}">
+        <div class="row g-0">
+          {% block page_content %}
+            <div class="order-1 order-lg-2 {{ content_classes }}">
+              {{ page.content }}
+            </div>
+          {% endblock %}
+        </div>
+      </div>
+
+    </main>
+  {% endblock %}
+
+  {% block footer %}
+    {% remora_include 'partials/layout/footer.html.twig' %}
+  {% endblock %}
+
+{% endblock %}

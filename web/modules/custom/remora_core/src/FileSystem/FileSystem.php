@@ -86,7 +86,7 @@ class FileSystem extends BaseFileSystem
   /**
    * Returns the realpath to the URI given the theme exists
    *
-   * @param string $uri The URI for the file, e.g. remora_base_theme://README.md
+   * @param string $uri The URI for the file, e.g. barrio_base_theme://README.md
    * @return string|false The absolute path to the file
    */
   private function getThemeRealpath(string $uri): string|false

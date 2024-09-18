@@ -1,0 +1,24 @@
+name: 'Barrio base theme'
+type: theme
+description: 'Barrio base theme is a subtheme based on Bootstrap 5 theme.'
+version: 1.0.0
+core_version_requirement:  ^10
+'base theme': bootstrap5
+libraries:
+  - barrio_base_theme/global-styling
+  - barrio_base_theme/global-javascript
+  - barrio_base_theme/custom-navbar
+
+libraries-override:
+  bootstrap5/global-styling: false
+
+regions:
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer

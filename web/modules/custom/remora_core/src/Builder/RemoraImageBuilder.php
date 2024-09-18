@@ -14,7 +14,7 @@ use Psr\Log\LoggerInterface;
 
 class RemoraImageBuilder
 {
-  private const BREAKPOINT_DEFINITION_THEME = 'remora_base_theme';
+  private const BREAKPOINT_DEFINITION_THEME = 'barrio_base_theme';
   private const DEFAULT_BREAKPOINT = 'default';
   private const BREAKPOINTS_ORDER = ['default' => null, 'xs' => null, 'sm' => null, 'md' => null, 'lg' => null, 'xl' => null, 'xxl' => null];
 

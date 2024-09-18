@@ -1,0 +1,13 @@
+uuid: 7ad2646e-d685-41a0-9527-e44f33dd7002
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.regions
+_core:
+  default_config_hash: 9jPwb6AfqaR4lHX9haYYXqKXaR1YcVudxsNLEvRo7oM
+id: taxonomy_term.regions
+target_entity_type_id: taxonomy_term
+target_bundle: regions
+default_langcode: site_default
+language_alterable: false

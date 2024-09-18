@@ -1,5 +1,5 @@
-uuid: 75da4b30-5307-45b3-8495-54a4b9fafe14
-langcode: en-gb
+uuid: 3da18e4b-90f4-493b-b768-a77890f628a3
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,11 +8,11 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
 id: paragraph.tagline
 target_entity_type_id: paragraph
 target_bundle: tagline
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

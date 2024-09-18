@@ -1,5 +1,0 @@
-label: Loop
-description: 'Enable to advance from the last slide to the first and vice versa.'
-settings:
-  on_label: 'On'
-  off_label: 'Off'

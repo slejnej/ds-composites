@@ -1,0 +1,26 @@
+uuid: c9935680-a09d-4857-806c-37f8e6b6f6e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ds_composites
+_core:
+  default_config_hash: GB9w29zJCk6iS48hFTE_DhUy-iv1e4TgLefVtfhJQGM
+id: ds_composites_breadcrumbs
+theme: ds_composites
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

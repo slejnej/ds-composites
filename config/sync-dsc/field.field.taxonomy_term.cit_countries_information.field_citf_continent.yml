@@ -1,5 +1,5 @@
-uuid: 38c76001-7850-4bd1-aae2-9f4b5d4cfe84
-langcode: en-gb
+uuid: 0fb4f17c-70e3-4059-a63d-c985b1fdae9e
+langcode: en
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ bundle: cit_countries_information
 label: Continent
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

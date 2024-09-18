@@ -1,4 +1,4 @@
-uuid: 40475fb9-1811-4cc7-8c35-d5ea8d464e9e
+uuid: aa2db922-5b66-42ee-83b1-2f33881f5221
 langcode: en-gb
 status: true
 dependencies:
@@ -22,6 +22,7 @@ dependencies:
   module:
     - contextual
     - crop
+    - eu_cookie_compliance
     - filter
     - linkchecker
     - media
@@ -65,8 +66,6 @@ permissions:
   - 'create paragraph content attachments'
   - 'create paragraph content banner_nugglet'
   - 'create paragraph content banners'
-  - 'create paragraph content card_nugglet'
-  - 'create paragraph content cards'
   - 'create paragraph content flexible_layout'
   - 'create paragraph content footer_section'
   - 'create paragraph content promo'
@@ -93,8 +92,6 @@ permissions:
   - 'delete paragraph content attachments'
   - 'delete paragraph content banner_nugglet'
   - 'delete paragraph content banners'
-  - 'delete paragraph content card_nugglet'
-  - 'delete paragraph content cards'
   - 'delete paragraph content flexible_layout'
   - 'delete paragraph content footer_section'
   - 'delete paragraph content promo'
@@ -112,6 +109,7 @@ permissions:
   - 'delete terms in regions'
   - 'delete terms in tags'
   - 'delete terms in topics'
+  - 'display eu cookie compliance popup'
   - 'edit any news content'
   - 'edit any page content'
   - 'edit any person content'
@@ -132,8 +130,6 @@ permissions:
   - 'update paragraph content attachments'
   - 'update paragraph content banner_nugglet'
   - 'update paragraph content banners'
-  - 'update paragraph content card_nugglet'
-  - 'update paragraph content cards'
   - 'update paragraph content flexible_layout'
   - 'update paragraph content footer_section'
   - 'update paragraph content promo'
@@ -152,8 +148,6 @@ permissions:
   - 'view paragraph content attachments'
   - 'view paragraph content banner_nugglet'
   - 'view paragraph content banners'
-  - 'view paragraph content card_nugglet'
-  - 'view paragraph content cards'
   - 'view paragraph content promo'
   - 'view paragraph content slide_nugglet'
   - 'view paragraph content slideshow'

@@ -1,0 +1,48 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - image.style.card_lg
+    - image.style.card_md
+    - image.style.card_sm
+    - image.style.card_xl
+    - image.style.card_xs
+    - image.style.card_xxl
+  theme:
+    - barrio_base_theme
+id: card
+label: Card
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: card_xxl
+    breakpoint_id: barrio_base_theme.xxl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: card_xl
+    breakpoint_id: barrio_base_theme.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: card_lg
+    breakpoint_id: barrio_base_theme.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: card_md
+    breakpoint_id: barrio_base_theme.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: card_sm
+    breakpoint_id: barrio_base_theme.sm
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: card_xs
+    breakpoint_id: barrio_base_theme.xs
+    multiplier: 1x
+breakpoint_group: barrio_base_theme
+fallback_image_style: card_xxl

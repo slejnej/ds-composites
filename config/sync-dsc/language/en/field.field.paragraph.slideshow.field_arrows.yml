@@ -1,5 +1,0 @@
-label: Arrows
-description: 'Enable to show navigation arrows on your slideshow.'
-settings:
-  on_label: 'On'
-  off_label: 'Off'

@@ -1,12 +1,13 @@
-uuid: 37242e85-c5f8-4f29-bcf3-0e7312a4dfb1
+uuid: 16653350-fc89-4258-ba34-537a63dc1cfa
 langcode: en-gb
 status: true
 dependencies:
   module:
     - node
     - user
+    - views_bulk_operations
 _core:
-  default_config_hash: 3ELwBpDb9lzqW5-daqjZYsC5lNcwbDS_i_-LKba12Lw
+  default_config_hash: Oozsflez02FlNj8PskUmEFWbK7CqvaGbCtaH4KBBp94
 id: content
 label: Content
 module: node
@@ -23,22 +24,89 @@ display:
     display_options:
       title: Content
       fields:
-        node_bulk_form:
-          id: node_bulk_form
-          table: node
-          field: node_bulk_form
-          entity_type: node
-          plugin_id: node_bulk_form
-          label: ''
+        views_bulk_operations_bulk_form:
+          id: views_bulk_operations_bulk_form
+          table: views
+          field: views_bulk_operations_bulk_form
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: views_bulk_operations_bulk_form
+          label: 'Views bulk operations'
           exclude: false
           alter:
             alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
           element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+          batch: true
+          batch_size: 10
+          form_step: true
+          ajax_loader: false
+          buttons: false
+          action_title: Action
+          clear_on_exposed: true
+          force_selection_info: false
+          selected_actions:
+            6:
+              action_id: views_bulk_edit
+              preconfiguration:
+                add_confirmation: false
+                label_override: 'Edit content'
+                get_bundles_from_results: true
+            7:
+              action_id: views_bulk_operations_delete_entity
+              preconfiguration:
+                label_override: 'Delete content'
+            8:
+              action_id: 'entity:publish_action:node'
+              preconfiguration:
+                add_confirmation: false
+                label_override: 'Publish content'
+            9:
+              action_id: 'entity:save_action:node'
+              preconfiguration:
+                add_confirmation: false
+                label_override: 'Save content'
+            10:
+              action_id: 'entity:unpublish_action:node'
+              preconfiguration:
+                add_confirmation: false
+                label_override: 'Unpublish content '
         title:
           id: title
           table: node_field_data
@@ -249,12 +317,24 @@ display:
       pager:
         type: full
         options:
+          offset: 0
           items_per_page: 50
+          total_pages: null
+          id: 0
           tags:
             next: 'Next ›'
             previous: '‹ Previous'
             first: '« First'
             last: 'Last »'
+          expose:
+            items_per_page: true
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '50, 100, 200'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
       exposed_form:
         type: basic
         options:
@@ -306,12 +386,15 @@ display:
             operator_list: {  }
             identifier: title
             required: false
-            remember: false
+            remember: true
             multiple: false
             remember_roles:
               authenticated: authenticated
+              web_admin: '0'
               anonymous: '0'
               administrator: '0'
+              editor: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -348,12 +431,14 @@ display:
             operator_list: {  }
             identifier: type
             required: false
-            remember: false
+            remember: true
             multiple: false
             remember_roles:
               authenticated: authenticated
+              web_admin: '0'
               anonymous: '0'
               administrator: '0'
+              editor: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -439,12 +524,14 @@ display:
             operator_list: {  }
             identifier: langcode
             required: false
-            remember: false
+            remember: true
             multiple: false
             remember_roles:
               authenticated: authenticated
+              web_admin: '0'
               anonymous: '0'
               administrator: '0'
+              editor: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -470,6 +557,51 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: uid
+          plugin_id: user_name
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: uid_op
+            label: 'Authored by'
+            description: ''
+            use_operator: false
+            operator: uid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: uid
+            required: false
+            remember: true
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              web_admin: '0'
+              anonymous: '0'
+              administrator: '0'
+              editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       filter_groups:
         operator: AND
         groups:
@@ -580,6 +712,17 @@ display:
           plugin_id: standard
           required: true
       show_admin_links: false
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: 'Displaying @start - @end of @total'
       display_extenders: {  }
     cache_metadata:
       max-age: 0

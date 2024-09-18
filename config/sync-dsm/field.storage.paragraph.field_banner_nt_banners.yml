@@ -1,0 +1,22 @@
+uuid: 2de0593f-aee8-4e78-b2cf-77ea5df87000
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+_core:
+  default_config_hash: Mgsee2wj4bZzQy1oflpfkpCBZDXXiRuF_563BthHczE
+id: paragraph.field_banner_nt_banners
+field_name: field_banner_nt_banners
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,5 +1,5 @@
-uuid: 394c266f-cf52-47b2-b86c-847b7cf40bbd
-langcode: en-gb
+uuid: 05b95c03-0475-452f-8242-d9e7bdce383d
+langcode: en
 status: true
 dependencies:
   module:
@@ -386,10 +386,10 @@ items:
         comment_user_picture: true
         comment_user_verification: true
         favicon: true
-        node_user_picture: false
+        node_user_picture: true
       logo:
         path: ''
         url: null
         use_default: true
       _core:
-        default_config_hash: 3qY7PfXvJcCtBPQpb9FxxBgXtUGFzx8JVakfWiNNYzw
+        default_config_hash: KZiV2LB312xgJBphfq5BTjmp16xiR5KM8InBJ-pff7Y

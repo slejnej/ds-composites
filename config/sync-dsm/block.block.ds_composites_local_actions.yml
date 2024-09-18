@@ -1,15 +1,15 @@
-uuid: 2590c177-d3b7-4d78-92d5-d36dcaffa61a
-langcode: en-gb
+uuid: 00e32e68-417b-48bb-ad0f-3f65289f252f
+langcode: en
 status: true
 dependencies:
   theme:
     - ds_composites
 _core:
-  default_config_hash: ABoKnlk20KHqZRw_2Qr4EvaFvH4lnQ2nuhunHeE1JIU
+  default_config_hash: d8cpgPYfvPYCoDByJzSQnPhXBHQpgGoI0Lske8AKZcE
 id: ds_composites_local_actions
 theme: ds_composites
 region: content
-weight: -10
+weight: -2
 provider: null
 plugin: local_actions_block
 settings:

@@ -1,5 +1,5 @@
-uuid: 4cdab378-f497-4b81-8398-999d16614705
-langcode: en-gb
+uuid: 9e187dcb-6757-42ac-84a0-586186a00fad
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: true
+    enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
 id: paragraph.slideshow

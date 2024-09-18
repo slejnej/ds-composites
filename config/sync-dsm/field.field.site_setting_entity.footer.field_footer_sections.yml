@@ -1,0 +1,26 @@
+uuid: a2aaf596-3ce4-485a-a6e4-37b48a3d09c7
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.site_setting_entity.field_footer_sections
+    - site_settings.site_setting_entity_type.footer
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: Z9AkHKXF6iyQjfg_4HSGwqe4WPW6bdM5WKCHNVeGskQ
+id: site_setting_entity.footer.field_footer_sections
+field_name: field_footer_sections
+entity_type: site_setting_entity
+bundle: footer
+label: Section
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_paragraph_types_footer
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference_revisions

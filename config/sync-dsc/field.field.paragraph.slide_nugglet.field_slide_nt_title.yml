@@ -1,5 +1,5 @@
-uuid: 432d8a09-0364-49c3-97de-65b8c690b420
-langcode: en-gb
+uuid: 47aeb594-ca5c-4550-98b6-aa64cda4c5e7
+langcode: en
 status: true
 dependencies:
   config:
@@ -20,7 +20,7 @@ bundle: slide_nugglet
 label: Title
 description: 'This title is displayed on the Slide.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

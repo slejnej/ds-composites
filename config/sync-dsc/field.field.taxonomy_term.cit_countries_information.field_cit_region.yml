@@ -1,5 +1,5 @@
-uuid: e5786986-4893-4aa8-bcea-3570b4f1502f
-langcode: en-gb
+uuid: adbce0f6-acca-4b49-a033-771552109b33
+langcode: en
 status: true
 dependencies:
   config:
@@ -15,7 +15,7 @@ bundle: cit_countries_information
 label: Region
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

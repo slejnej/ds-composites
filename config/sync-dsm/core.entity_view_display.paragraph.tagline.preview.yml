@@ -1,0 +1,28 @@
+uuid: 84eb8e0c-ebf2-4d01-b539-d0d03f4aa0af
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.tagline.field_display_title
+    - field.field.paragraph.tagline.field_editor_title
+    - field.field.paragraph.tagline.field_tagline_nt_text
+    - paragraphs.paragraphs_type.tagline
+_core:
+  default_config_hash: 2_9KX6gaV2HgyTxR6D3zuHjiLN5NY9Ml7YvgWgaeqd8
+id: paragraph.tagline.preview
+targetEntityType: paragraph
+bundle: tagline
+mode: preview
+content:
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_display_title: true
+  field_tagline_nt_text: true

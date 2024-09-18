@@ -13,7 +13,7 @@ use Drupal\installation_profile\Util\StringUtil;
 class ThemeManager
 {
 
-  private const BASE_THEME_MACHINE_NAME = 'remora_base_theme';
+  private const BASE_THEME_MACHINE_NAME = 'barrio_base_theme';
   private const BASE_THEME_NAME = 'Remora base theme';
 
   private readonly FileSystemInterface $fileSystem;
@@ -112,7 +112,7 @@ class ThemeManager
   {
     $this->files['README.md'] = <<<EOT
 # $this->humanReadableName theme
-This subtheme is based off of Remora's base theme. An extended documentation is available [here](https://www.github.com/MRM-Remora/remora_base_theme/tree/master/README.md)
+This subtheme is based off of Remora's base theme. An extended documentation is available [here](https://www.github.com/MRM-Remora/barrio_base_theme/tree/master/README.md)
 
 ## Gulp
 Gulp is used to compile the SCSS to CSS, and run minifiers against the various asset files.  

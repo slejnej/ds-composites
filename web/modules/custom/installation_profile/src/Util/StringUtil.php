@@ -50,7 +50,7 @@ class StringUtil
    * E.g. if $from = '/app/web/modules/contrib' and $to = '/app/web/themes/custom'
    * Result will be '../../themes/custom'
    *
-   * If $from = '/app/web/themes/custom/remora_base_theme/assets' and $to = '/app/web/modules/custom/test/scss/style.scss'
+   * If $from = '/app/web/themes/custom/barrio_base_theme/assets' and $to = '/app/web/modules/custom/test/scss/style.scss'
    * Result will be '../../../../modules/custom/test/scss/style.scss'
    *
    * @param string $from The path to create a relative path from

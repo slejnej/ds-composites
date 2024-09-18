@@ -1,5 +1,5 @@
-uuid: cb075500-bfa3-492b-a9fb-7b8514ee4d62
-langcode: en-gb
+uuid: 944a4733-8a1e-42b6-a97f-98bd70e57386
+langcode: en
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ bundle: person
 label: Published
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 1

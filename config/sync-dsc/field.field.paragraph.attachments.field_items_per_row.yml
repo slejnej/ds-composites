@@ -1,4 +1,4 @@
-uuid: 5ce62ee8-24a5-43d6-b644-43f2121810fe
+uuid: 0bb7935a-df4e-4c5f-85f6-ad4a491bc4c8
 langcode: en-gb
 status: true
 dependencies:
@@ -16,7 +16,7 @@ bundle: attachments
 label: 'Items per row'
 description: 'Select number of items to display per row.'
 required: true
-translatable: true
+translatable: false
 default_value:
   -
     value: '1'

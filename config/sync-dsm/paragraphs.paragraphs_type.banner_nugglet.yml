@@ -1,0 +1,12 @@
+uuid: 8da77e05-50da-4371-aa15-312abc60c7d2
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: mjhfgg1zpiahJx3nTiEJGe-3HamWrtNPXsh6ZNsWcys
+id: banner_nugglet
+label: Banner
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

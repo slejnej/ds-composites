@@ -1,0 +1,26 @@
+uuid: e00c2f50-cd5a-41b0-a8c4-b79ba76c9cb8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - barrio_base_theme
+_core:
+  default_config_hash: GB9w29zJCk6iS48hFTE_DhUy-iv1e4TgLefVtfhJQGM
+id: barrio_base_theme_breadcrumbs
+theme: barrio_base_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

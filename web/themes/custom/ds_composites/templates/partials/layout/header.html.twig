@@ -1,9 +1,16 @@
-{% extends '@remora_base_theme/partials/layout/header.html.twig' %}
+{% extends '@barrio_base_theme/partials/layout/header.html.twig' %}
 
 {% block header %}
 
   <header class="header-wrapper ">
 
+    <div class="container-xxl d-flex justify-content-end py-0 w-100">
+      {% block language_switcher %}
+        <div class="language-switcher">
+          {{ drupal_entity('block', 'site_language_switcher') }}
+        </div>
+      {% endblock %}
+    </div>
     <div class="container-xxl d-flex align-items-center py-0">
 
       {% block header_logo_menu %}
@@ -14,11 +21,6 @@
         </div>
       {% endblock %}
 
-      {% block language_switcher %}
-        <div class="language-switcher">
-          {{ drupal_entity('block', 'site_language_switcher') }}
-        </div>
-      {% endblock %}
 
       {% block header_main_menu %}
         <div class="header-menus container-xxl d-flex flex-column align-items-end py-3 py-lg-0">

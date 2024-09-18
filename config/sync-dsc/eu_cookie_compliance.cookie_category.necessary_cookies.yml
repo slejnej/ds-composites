@@ -1,0 +1,11 @@
+uuid: 5b92951d-053f-4769-8fcd-f75842323ad1
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ESyhPQjtPGripoae1llj9c0DFHZUd19xKtz78PcMR2k
+id: necessary_cookies
+label: 'Necessary cookies'
+description: 'Necessary cookies enable core functionality such as security, network management, and accessibility. You may disable these by changing your browser settings, but this may affect how the website functions.'
+checkbox_default_state: required
+weight: -9

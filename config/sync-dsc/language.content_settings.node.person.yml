@@ -1,4 +1,4 @@
-uuid: 7a64af93-1fda-472e-a76d-bd88152e92db
+uuid: 8dfb0fba-4fcb-449f-b1d7-9b6b9c0fd81b
 langcode: en-gb
 status: true
 dependencies:
@@ -16,5 +16,5 @@ _core:
 id: node.person
 target_entity_type_id: node
 target_bundle: person
-default_langcode: site_default
+default_langcode: en
 language_alterable: true

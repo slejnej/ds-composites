@@ -1,5 +1,5 @@
-uuid: 2957285c-6b91-4772-b6e8-ca9160f2340c
-langcode: en-gb
+uuid: 291719fa-2af7-4e0c-ba67-52b18cf11e58
+langcode: en
 status: true
 dependencies:
   config:
@@ -8,11 +8,11 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
 id: site_setting_entity.footer
 target_entity_type_id: site_setting_entity
 target_bundle: footer
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

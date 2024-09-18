@@ -1,4 +1,4 @@
-uuid: 42bb3c3b-2bf4-4372-a854-9b7efe4a762e
+uuid: 99089041-9c19-4b32-84a6-292efb7cbd8c
 langcode: en-gb
 status: true
 dependencies:
@@ -10,41 +10,41 @@ dependencies:
     - image.style.portrait_3_4_xs
     - image.style.portrait_3_4_xxl
   theme:
-    - remora_base_theme
+    - barrio_base_theme
 _core:
-  default_config_hash: NdDdQ3RVDU1YT_46HKHKiV2sShqsHoM1k12BkU6hLro
+  default_config_hash: TmoCZJCY30rScaAJ12eQGAPv6HbdHV4o0uPthsjvIr0
 id: portrait_3_4
 label: 'Portrait: 3x4'
 image_style_mappings:
   -
     image_mapping_type: image_style
     image_mapping: portrait_3_4_xxl
-    breakpoint_id: remora_base_theme.xxl
+    breakpoint_id: barrio_base_theme.xxl
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: portrait_3_4_xl
-    breakpoint_id: remora_base_theme.xl
+    breakpoint_id: barrio_base_theme.xl
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: portrait_3_4_lg
-    breakpoint_id: remora_base_theme.lg
+    breakpoint_id: barrio_base_theme.lg
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: portrait_3_4_md
-    breakpoint_id: remora_base_theme.md
+    breakpoint_id: barrio_base_theme.md
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: portrait_3_4_sm
-    breakpoint_id: remora_base_theme.sm
+    breakpoint_id: barrio_base_theme.sm
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: portrait_3_4_xs
-    breakpoint_id: remora_base_theme.xs
+    breakpoint_id: barrio_base_theme.xs
     multiplier: 1x
-breakpoint_group: remora_base_theme
+breakpoint_group: barrio_base_theme
 fallback_image_style: portrait_3_4_xxl

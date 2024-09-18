@@ -1,4 +1,4 @@
-uuid: 5cb99ef1-64c2-4db6-91e9-acd47d4e8129
+uuid: 4e0a35a6-9353-4ba3-9eed-9370e500f582
 langcode: en-gb
 status: true
 dependencies:
@@ -16,7 +16,7 @@ bundle: footer
 label: Section
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

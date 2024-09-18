@@ -1,4 +1,4 @@
-uuid: 110b6432-2dd6-4dd0-88a6-9fdc372e5d05
+uuid: 3eee8c1e-43a0-4d03-9f4c-ee36695453e5
 langcode: en-gb
 status: true
 dependencies:
@@ -10,41 +10,41 @@ dependencies:
     - image.style.free_xs
     - image.style.free_xxl
   theme:
-    - remora_base_theme
+    - barrio_base_theme
 _core:
-  default_config_hash: y5SW3VGXRi82vw0s4tn_WuqRT6kVbNpTI-znOO7I3ks
+  default_config_hash: vkrVrNjjobYEXKyuQOhyWn3n81B723CE5amEwcAxkmE
 id: free
 label: Free
 image_style_mappings:
   -
     image_mapping_type: image_style
     image_mapping: free_xxl
-    breakpoint_id: remora_base_theme.xxl
+    breakpoint_id: barrio_base_theme.xxl
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: free_xl
-    breakpoint_id: remora_base_theme.xl
+    breakpoint_id: barrio_base_theme.xl
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: free_lg
-    breakpoint_id: remora_base_theme.lg
+    breakpoint_id: barrio_base_theme.lg
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: free_md
-    breakpoint_id: remora_base_theme.md
+    breakpoint_id: barrio_base_theme.md
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: free_sm
-    breakpoint_id: remora_base_theme.sm
+    breakpoint_id: barrio_base_theme.sm
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: free_xs
-    breakpoint_id: remora_base_theme.xs
+    breakpoint_id: barrio_base_theme.xs
     multiplier: 1x
-breakpoint_group: remora_base_theme
+breakpoint_group: barrio_base_theme
 fallback_image_style: free_xxl

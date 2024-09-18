@@ -1,0 +1,924 @@
+uuid: b615ae90-f003-4950-9d90-0d13b10ed66b
+langcode: en
+status: true
+dependencies:
+  module:
+    - banners_nugget
+id: config_sync.module.banners_nugget
+snapshotSet: config_sync
+extensionType: module
+extensionName: banners_nugget
+items:
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.banner_nugglet.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.banner_nugglet.field_banner_nt_image
+          - field.field.paragraph.banner_nugglet.field_banner_nt_link
+          - field.field.paragraph.banner_nugglet.field_banner_nt_summary
+          - field.field.paragraph.banner_nugglet.field_banner_nt_title
+          - field.field.paragraph.banner_nugglet.field_editor_title
+          - paragraphs.paragraphs_type.banner_nugglet
+        module:
+          - field_layout
+          - layout_discovery
+          - link
+          - media_library
+          - text
+      third_party_settings:
+        field_layout:
+          id: layout_onecol
+          settings:
+            label: ''
+      id: paragraph.banner_nugglet.default
+      targetEntityType: paragraph
+      bundle: banner_nugglet
+      mode: default
+      content:
+        field_banner_nt_image:
+          type: media_library_widget
+          weight: 3
+          region: content
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+        field_banner_nt_link:
+          type: link_default
+          weight: 4
+          region: content
+          settings:
+            placeholder_url: ''
+            placeholder_title: ''
+          third_party_settings: {  }
+        field_banner_nt_summary:
+          type: text_textarea
+          weight: 2
+          region: content
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+        field_banner_nt_title:
+          type: text_textfield
+          weight: 1
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_editor_title:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        status:
+          type: boolean_checkbox
+          weight: 5
+          region: content
+          settings:
+            display_label: true
+          third_party_settings: {  }
+      hidden:
+        created: true
+      _core:
+        default_config_hash: lZFdEKivefJDLJINVduwl7VpU2DsypDRoYiV57oiOPs
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.banners.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.banners.field_banner_nt_banners
+          - field.field.paragraph.banners.field_display_title
+          - field.field.paragraph.banners.field_editor_title
+          - paragraphs.paragraphs_type.banners
+        module:
+          - field_group
+          - field_layout
+          - layout_discovery
+          - layout_paragraphs
+          - text
+      third_party_settings:
+        field_layout:
+          id: layout_onecol
+          settings:
+            label: ''
+        field_group:
+          group_nugget_title_properties:
+            children:
+              - field_editor_title
+              - field_display_title
+            label: 'Nugget title & properties'
+            region: content
+            parent_name: ''
+            weight: 0
+            format_type: details
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              open: true
+              description: ''
+              required_fields: true
+          group_nugget_content:
+            children:
+              - field_banner_nt_banners
+            label: 'Nugget content'
+            region: content
+            parent_name: ''
+            weight: 1
+            format_type: details
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              open: true
+              description: ''
+              required_fields: true
+      id: paragraph.banners.default
+      targetEntityType: paragraph
+      bundle: banners
+      mode: default
+      content:
+        field_banner_nt_banners:
+          type: layout_paragraphs
+          weight: 2
+          region: content
+          settings:
+            preview_view_mode: preview
+            nesting_depth: 0
+            require_layouts: 0
+            empty_message: ''
+          third_party_settings: {  }
+        field_display_title:
+          type: text_textfield
+          weight: 1
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_editor_title:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        status:
+          type: boolean_checkbox
+          weight: 2
+          region: content
+          settings:
+            display_label: true
+          third_party_settings: {  }
+      hidden:
+        created: true
+      _core:
+        default_config_hash: tz0VKUkk5Mr1uhU5RkAqw7zUinBQD-6kGObzvRzj9QQ
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.banner_nugglet.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.banner_nugglet.field_banner_nt_image
+          - field.field.paragraph.banner_nugglet.field_banner_nt_link
+          - field.field.paragraph.banner_nugglet.field_banner_nt_summary
+          - field.field.paragraph.banner_nugglet.field_banner_nt_title
+          - field.field.paragraph.banner_nugglet.field_editor_title
+          - paragraphs.paragraphs_type.banner_nugglet
+        module:
+          - link
+          - text
+      id: paragraph.banner_nugglet.default
+      targetEntityType: paragraph
+      bundle: banner_nugglet
+      mode: default
+      content:
+        field_banner_nt_image:
+          type: entity_reference_entity_view
+          label: hidden
+          settings:
+            view_mode: default
+            link: false
+          third_party_settings: {  }
+          weight: 3
+          region: content
+        field_banner_nt_link:
+          type: link
+          label: hidden
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: ''
+            target: ''
+          third_party_settings: {  }
+          weight: 4
+          region: content
+        field_banner_nt_summary:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 2
+          region: content
+        field_banner_nt_title:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 1
+          region: content
+        field_editor_title:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        search_api_excerpt: true
+      _core:
+        default_config_hash: O8DVf8CboRKpCqrHQP9bQyfoumC166vpdY47atkXgJA
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.banner_nugglet.preview
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.paragraph.preview
+          - field.field.paragraph.banner_nugglet.field_banner_nt_image
+          - field.field.paragraph.banner_nugglet.field_banner_nt_link
+          - field.field.paragraph.banner_nugglet.field_banner_nt_summary
+          - field.field.paragraph.banner_nugglet.field_banner_nt_title
+          - field.field.paragraph.banner_nugglet.field_editor_title
+          - paragraphs.paragraphs_type.banner_nugglet
+      id: paragraph.banner_nugglet.preview
+      targetEntityType: paragraph
+      bundle: banner_nugglet
+      mode: preview
+      content:
+        field_editor_title:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        field_banner_nt_image: true
+        field_banner_nt_link: true
+        field_banner_nt_summary: true
+        field_banner_nt_title: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: JzHJkbyBeLYEP88w1_h5wqdfXP-ishqHOKpyNIsn5MA
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.banner_nugglet.search_rendered_output
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.paragraph.search_rendered_output
+          - field.field.paragraph.banner_nugglet.field_banner_nt_image
+          - field.field.paragraph.banner_nugglet.field_banner_nt_link
+          - field.field.paragraph.banner_nugglet.field_banner_nt_summary
+          - field.field.paragraph.banner_nugglet.field_banner_nt_title
+          - field.field.paragraph.banner_nugglet.field_editor_title
+          - paragraphs.paragraphs_type.banner_nugglet
+      id: paragraph.banner_nugglet.search_rendered_output
+      targetEntityType: paragraph
+      bundle: banner_nugglet
+      mode: search_rendered_output
+      content:
+        field_editor_title:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        field_banner_nt_image: true
+        field_banner_nt_link: true
+        field_banner_nt_summary: true
+        field_banner_nt_title: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: bY35uGigsD6brOyaQqunF2trFfdJDwxqDBDZdKeeTko
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.banners.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.banners.field_banner_nt_banners
+          - field.field.paragraph.banners.field_display_title
+          - field.field.paragraph.banners.field_editor_title
+          - paragraphs.paragraphs_type.banners
+        module:
+          - entity_reference_revisions
+          - text
+      id: paragraph.banners.default
+      targetEntityType: paragraph
+      bundle: banners
+      mode: default
+      content:
+        field_banner_nt_banners:
+          type: entity_reference_revisions_entity_view
+          label: hidden
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 0
+          region: content
+        field_display_title:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 1
+          region: content
+        field_editor_title:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        search_api_excerpt: true
+      _core:
+        default_config_hash: 1L3X5ltjc-nFQWtO9vhK0a5YwpqvOAdB7vaRFg2cQnU
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.banners.preview
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.paragraph.preview
+          - field.field.paragraph.banners.field_banner_nt_banners
+          - field.field.paragraph.banners.field_display_title
+          - field.field.paragraph.banners.field_editor_title
+          - paragraphs.paragraphs_type.banners
+      id: paragraph.banners.preview
+      targetEntityType: paragraph
+      bundle: banners
+      mode: preview
+      content:
+        field_editor_title:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        field_banner_nt_banners: true
+        field_display_title: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: qTLuy_Pn_n0cVj7_J2ANn5ughQM4sCAZMVdI4dV1GT8
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.banners.search_rendered_output
+    data:
+      uuid: null
+      langcode: en-gb
+      status: false
+      dependencies:
+        config:
+          - core.entity_view_mode.paragraph.search_rendered_output
+          - field.field.paragraph.banners.field_banner_nt_banners
+          - field.field.paragraph.banners.field_display_title
+          - field.field.paragraph.banners.field_editor_title
+          - paragraphs.paragraphs_type.banners
+        module:
+          - text
+      id: paragraph.banners.search_rendered_output
+      targetEntityType: paragraph
+      bundle: banners
+      mode: search_rendered_output
+      content:
+        field_display_title:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 1
+          region: content
+        field_editor_title:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        field_banner_nt_banners: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: jx60hVQ2smsFJ8-2d3fboNP4q6BnZDQnqvWTA7oXo5U
+  -
+    collection: ''
+    name: field.field.paragraph.banner_nugglet.field_banner_nt_image
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_banner_nt_image
+          - media.type.image
+          - paragraphs.paragraphs_type.banner_nugglet
+      id: paragraph.banner_nugglet.field_banner_nt_image
+      field_name: field_banner_nt_image
+      entity_type: paragraph
+      bundle: banner_nugglet
+      label: Image
+      description: ''
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:media'
+        handler_settings:
+          target_bundles:
+            image: image
+          sort:
+            field: _none
+            direction: ASC
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: T6_Yg79LGppbH46jp7v1AVEuHkO4Mb-ZbuYpp0LM2yg
+  -
+    collection: ''
+    name: field.field.paragraph.banner_nugglet.field_banner_nt_link
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_banner_nt_link
+          - paragraphs.paragraphs_type.banner_nugglet
+        module:
+          - link
+      id: paragraph.banner_nugglet.field_banner_nt_link
+      field_name: field_banner_nt_link
+      entity_type: paragraph
+      bundle: banner_nugglet
+      label: Link
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        title: 2
+        link_type: 17
+      field_type: link
+      _core:
+        default_config_hash: Gxrd-YXEE6HwYZNtbEmcQVMtPITrPo48rhECDTUnfBE
+  -
+    collection: ''
+    name: field.field.paragraph.banner_nugglet.field_banner_nt_summary
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_banner_nt_summary
+          - filter.format.restricted_html
+          - paragraphs.paragraphs_type.banner_nugglet
+        module:
+          - text
+      id: paragraph.banner_nugglet.field_banner_nt_summary
+      field_name: field_banner_nt_summary
+      entity_type: paragraph
+      bundle: banner_nugglet
+      label: Summary
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        allowed_formats:
+          - restricted_html
+      field_type: text_long
+      _core:
+        default_config_hash: fLXO8DKluA-vml-LU2VrGscS0C-UlA7RQafW7kjBUok
+  -
+    collection: ''
+    name: field.field.paragraph.banner_nugglet.field_banner_nt_title
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_banner_nt_title
+          - filter.format.basic_html
+          - paragraphs.paragraphs_type.banner_nugglet
+        module:
+          - text
+      id: paragraph.banner_nugglet.field_banner_nt_title
+      field_name: field_banner_nt_title
+      entity_type: paragraph
+      bundle: banner_nugglet
+      label: Title
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        allowed_formats:
+          - basic_html
+      field_type: text
+      _core:
+        default_config_hash: nRY_7Jm0sadwTNJ3yUEsyGIyEqAKkkNNNJwwB6G3nQo
+  -
+    collection: ''
+    name: field.field.paragraph.banner_nugglet.field_editor_title
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_editor_title
+          - paragraphs.paragraphs_type.banner_nugglet
+      id: paragraph.banner_nugglet.field_editor_title
+      field_name: field_editor_title
+      entity_type: paragraph
+      bundle: banner_nugglet
+      label: 'Editor title'
+      description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: _Lf01x2glK7OrNK3BORc3ihAg_3gMAUwYU9j7Esy_Uc
+  -
+    collection: ''
+    name: field.field.paragraph.banners.field_banner_nt_banners
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_banner_nt_banners
+          - paragraphs.paragraphs_type.banner_nugglet
+          - paragraphs.paragraphs_type.banners
+        module:
+          - entity_reference_revisions
+      id: paragraph.banners.field_banner_nt_banners
+      field_name: field_banner_nt_banners
+      entity_type: paragraph
+      bundle: banners
+      label: Banners
+      description: 'Banners appear randomly on page load if more than one is added.'
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:paragraph'
+        handler_settings:
+          target_bundles:
+            banner_nugglet: banner_nugglet
+          negate: 0
+          target_bundles_drag_drop:
+            accordion_nugglet:
+              weight: 24
+              enabled: false
+            accordions:
+              weight: 23
+              enabled: false
+            attachments:
+              weight: 25
+              enabled: false
+            banner_nugglet:
+              weight: 24
+              enabled: true
+            banners:
+              weight: 26
+              enabled: false
+            block:
+              weight: 27
+              enabled: false
+            card_nugglet:
+              weight: 29
+              enabled: false
+            cards:
+              weight: 28
+              enabled: false
+            chart:
+              weight: 30
+              enabled: false
+            event_feed:
+              weight: 31
+              enabled: false
+            flexible_layout:
+              weight: 32
+              enabled: false
+            footer_section:
+              weight: 33
+              enabled: false
+            map:
+              weight: 34
+              enabled: false
+            promo:
+              weight: 35
+              enabled: false
+            related_content:
+              weight: 36
+              enabled: false
+            search:
+              weight: 37
+              enabled: false
+            section:
+              weight: 38
+              enabled: false
+            slide_nugglet:
+              weight: 40
+              enabled: false
+            slideshow:
+              weight: 39
+              enabled: false
+            social_links:
+              weight: 41
+              enabled: false
+            tagline:
+              weight: 42
+              enabled: false
+            text_media:
+              weight: 43
+              enabled: false
+            webform_nugget:
+              weight: 44
+              enabled: false
+      field_type: entity_reference_revisions
+      _core:
+        default_config_hash: fbvSsLAMjCq1mJT5W8L-8TB4b2wDe-RpJieCYBo1cX8
+  -
+    collection: ''
+    name: field.field.paragraph.banners.field_display_title
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_display_title
+          - filter.format.title
+          - paragraphs.paragraphs_type.banners
+        module:
+          - text
+      _core:
+        default_config_hash: eKC-DsA1iTk0f7ux1qf9Jv48MVit_21Bm_cvvFTCMNA
+      id: paragraph.banners.field_display_title
+      field_name: field_display_title
+      entity_type: paragraph
+      bundle: banners
+      label: 'Display title'
+      description: 'This title is displayed on the page above the content of this nugget.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        allowed_formats:
+          - title
+      field_type: text
+  -
+    collection: ''
+    name: field.field.paragraph.banners.field_editor_title
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_editor_title
+          - paragraphs.paragraphs_type.banners
+      id: paragraph.banners.field_editor_title
+      field_name: field_editor_title
+      entity_type: paragraph
+      bundle: banners
+      label: 'Editor title'
+      description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: FOSNgbyq4t7lgQGFkCHbZ7i4BaB9L1ZrDP40kSzq9j4
+  -
+    collection: ''
+    name: field.storage.paragraph.field_banner_nt_banners
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - entity_reference_revisions
+          - paragraphs
+      id: paragraph.field_banner_nt_banners
+      field_name: field_banner_nt_banners
+      entity_type: paragraph
+      type: entity_reference_revisions
+      settings:
+        target_type: paragraph
+      module: entity_reference_revisions
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: Mgsee2wj4bZzQy1oflpfkpCBZDXXiRuF_563BthHczE
+  -
+    collection: ''
+    name: field.storage.paragraph.field_banner_nt_image
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - media
+          - paragraphs
+      id: paragraph.field_banner_nt_image
+      field_name: field_banner_nt_image
+      entity_type: paragraph
+      type: entity_reference
+      settings:
+        target_type: media
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: '-l8lB814tqSCh4ZWDFm1RjgffJ-aF7__NeMvn31SZkQ'
+  -
+    collection: ''
+    name: field.storage.paragraph.field_banner_nt_link
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - link
+          - paragraphs
+      id: paragraph.field_banner_nt_link
+      field_name: field_banner_nt_link
+      entity_type: paragraph
+      type: link
+      settings: {  }
+      module: link
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: Be_7zZEpKWHMa6txnaT4JgIEIjnI6XPIZXFdTEsIEpo
+  -
+    collection: ''
+    name: field.storage.paragraph.field_banner_nt_summary
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+          - text
+      id: paragraph.field_banner_nt_summary
+      field_name: field_banner_nt_summary
+      entity_type: paragraph
+      type: text_long
+      settings: {  }
+      module: text
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: w76UzuR_ulCV9qkOilD602b5IV--Xd2k9K9cKKFSQl0
+  -
+    collection: ''
+    name: field.storage.paragraph.field_banner_nt_title
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+          - text
+      id: paragraph.field_banner_nt_title
+      field_name: field_banner_nt_title
+      entity_type: paragraph
+      type: text
+      settings:
+        max_length: 500
+      module: text
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: MExREHNn3A-jl3COqfHZ0SGeF2dkgzVz9yfpIcsDs2c
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.banner_nugglet
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies: {  }
+      id: banner_nugglet
+      label: Banner
+      icon_uuid: null
+      icon_default: null
+      description: ''
+      behavior_plugins: {  }
+      _core:
+        default_config_hash: mjhfgg1zpiahJx3nTiEJGe-3HamWrtNPXsh6ZNsWcys
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.banners
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies: {  }
+      id: banners
+      label: Banners
+      icon_uuid: null
+      icon_default: null
+      description: ''
+      behavior_plugins: {  }
+      _core:
+        default_config_hash: Y0dpytXd-kHL4JovJyKMaw1JwSY-ambf7dzHLlA_6yg

@@ -1,0 +1,29 @@
+uuid: c750ebf5-3394-4a7d-954f-e8ab20230650
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.banners.field_banner_nt_banners
+    - field.field.paragraph.banners.field_display_title
+    - field.field.paragraph.banners.field_editor_title
+    - paragraphs.paragraphs_type.banners
+_core:
+  default_config_hash: qTLuy_Pn_n0cVj7_J2ANn5ughQM4sCAZMVdI4dV1GT8
+id: paragraph.banners.preview
+targetEntityType: paragraph
+bundle: banners
+mode: preview
+content:
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_banner_nt_banners: true
+  field_display_title: true
+  search_api_excerpt: true

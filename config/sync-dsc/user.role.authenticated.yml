@@ -1,10 +1,11 @@
-uuid: cf48a07b-2d55-4803-8ff9-f3de1f54774c
-langcode: en-gb
+uuid: 1fcc6cc4-567b-4864-a91f-cd2e2e2638fb
+langcode: en
 status: true
 dependencies:
   config:
     - node.type.person
   module:
+    - eu_cookie_compliance
     - media
     - node
     - paragraphs_type_permissions
@@ -18,12 +19,11 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
+  - 'display eu cookie compliance popup'
   - 'view media'
   - 'view paragraph content attachments'
   - 'view paragraph content banner_nugglet'
   - 'view paragraph content banners'
-  - 'view paragraph content card_nugglet'
-  - 'view paragraph content cards'
   - 'view paragraph content flexible_layout'
   - 'view paragraph content footer_section'
   - 'view paragraph content promo'

@@ -1,0 +1,21 @@
+uuid: 8ace454a-bcc2-41f8-80f5-e4868af9cb04
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: w76UzuR_ulCV9qkOilD602b5IV--Xd2k9K9cKKFSQl0
+id: paragraph.field_banner_nt_summary
+field_name: field_banner_nt_summary
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

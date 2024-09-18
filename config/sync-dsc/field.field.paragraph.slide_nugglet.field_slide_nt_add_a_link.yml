@@ -1,5 +1,5 @@
-uuid: f982411c-f54b-48ee-b9fc-d278232780dd
-langcode: en-gb
+uuid: d3071efa-1cff-41da-b79b-0c0b848f0eb3
+langcode: en
 status: true
 dependencies:
   config:
@@ -17,7 +17,7 @@ bundle: slide_nugglet
 label: 'Add a link?'
 description: 'Enable to add a link to your slide'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

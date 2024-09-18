@@ -1,5 +1,5 @@
-uuid: c4fdeb13-4db2-46ba-9340-7068438c28b3
-langcode: en-gb
+uuid: f39cf61d-65fb-4f2b-b51c-b9580f8bc8bd
+langcode: en
 status: true
 dependencies:
   module:
@@ -4645,7 +4645,8 @@ items:
     collection: ''
     name: language.content_settings.path_alias.path_alias
     data:
-      langcode: en
+      uuid: null
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -4656,11 +4657,12 @@ items:
       default_langcode: und
       language_alterable: true
       _core:
-        default_config_hash: dhjFABRzm52DkRXnYja5ZoHwjY0R3gEGic3KpDUXgRo
+        default_config_hash: mtBDKnvzD0K2F1IE1OnqqqztIIW8AOSTufrQxFP3zEI
   -
     collection: ''
     name: language.content_settings.redirect.redirect
     data:
+      uuid: null
       langcode: en
       status: true
       dependencies:
@@ -4672,57 +4674,7 @@ items:
       default_langcode: und
       language_alterable: true
       _core:
-        default_config_hash: y734AXEpjry1Ppff_hQQBFQGJvYjF0fk1JoWtp5q2JY
-  -
-    collection: ''
-    name: linkchecker.settings
-    data:
-      langcode: en-gb
-      scan_blocks: null
-      check_links_types: 1
-      default_url_scheme: 'http://'
-      base_path: ''
-      extract:
-        from_a: true
-        from_audio: true
-        from_embed: false
-        from_iframe: true
-        from_img: false
-        from_object: false
-        from_video: false
-        filter_blacklist:
-          editor_file_reference: '0'
-          entity_embed: '0'
-          filter_image_lazy_load: '0'
-          filter_autop: '0'
-          filter_align: '0'
-          filter_html_escape: '0'
-          filter_caption: '0'
-          filter_html_image_secure: '0'
-          filter_html: '0'
-          filter_htmlcorrector: '0'
-          filter_url: '0'
-          linkit: '0'
-          media_embed: '0'
-      check:
-        connections_max: 4
-        connections_max_per_domain: 2
-        disable_link_check_for_urls: |-
-          example.com
-          example.net
-          example.org
-        library: core
-        interval: 2419200
-        useragent: 'Drupal (+https://drupal.org/)'
-      error:
-        action_status_code_301: 0
-        action_status_code_404: 0
-        ignore_response_codes: "200\r\n206\r\n302\r\n304\r\n401\r\n403"
-        impersonate_account: admin
-      logging:
-        level: 6
-      _core:
-        default_config_hash: ZhIl6m8EWHJQFZEAzV6jBaR6a-1Fwas0dZ5_PfjgobI
+        default_config_hash: wOpix89WRHzoTG6PKmGG_UQOxbmTKG0KPz3cjYdK5pQ
   -
     collection: ''
     name: linkit.linkit_profile.default
@@ -5046,7 +4998,8 @@ items:
     collection: ''
     name: system.action.media_delete_action
     data:
-      langcode: en
+      uuid: null
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -5057,12 +5010,13 @@ items:
       plugin: 'entity:delete_action:media'
       configuration: {  }
       _core:
-        default_config_hash: FrZy1tmuXJcOxhXlBoI1Hsnen5TT-9OCC1iolWH84go
+        default_config_hash: 5gUOe2LMnXi1Bz4yRMwBlr4A6zSdufyfvVqtN9E6yPQ
   -
     collection: ''
     name: system.action.media_publish_action
     data:
-      langcode: en
+      uuid: null
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -5073,12 +5027,13 @@ items:
       plugin: 'entity:publish_action:media'
       configuration: {  }
       _core:
-        default_config_hash: nh83qNNrmWE-CDdHz2MdFOAk60T9mzv3R-MaKfZR2jw
+        default_config_hash: f4XjqzLjhrCEO8LHwsUfb_InXWxLO4EE80pb3Myidik
   -
     collection: ''
     name: system.action.media_save_action
     data:
-      langcode: en
+      uuid: null
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -5089,12 +5044,13 @@ items:
       plugin: 'entity:save_action:media'
       configuration: {  }
       _core:
-        default_config_hash: VVyUA6PIaVeGtcIbgEWqJ6SYDiJdReBeojFswURFpKs
+        default_config_hash: 3TYO6Vujk2QQgh3yzaIfakOozTOg6MbXnErsOIXjCMk
   -
     collection: ''
     name: system.action.media_unpublish_action
     data:
-      langcode: en
+      uuid: null
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -5105,45 +5061,47 @@ items:
       plugin: 'entity:unpublish_action:media'
       configuration: {  }
       _core:
-        default_config_hash: CsK6TseQ2DatEbZgbd30swOlZ28_HHwAESU2LvEnWq0
+        default_config_hash: yK7orWcuuFMEFE5HqSe6dONBvdSaJiwwnoLlI4tOYbM
   -
     collection: ''
     name: system.action.pathauto_update_alias_node
     data:
-      id: pathauto_update_alias_node
-      label: 'Update URL alias'
+      uuid: null
+      langcode: en-gb
       status: true
-      langcode: en
-      type: node
-      plugin: pathauto_update_alias
       dependencies:
+        module:
+          - pathauto
         enforced:
           module:
             - node
-        module:
-          - pathauto
+      id: pathauto_update_alias_node
+      label: 'Update URL alias'
+      type: node
+      plugin: pathauto_update_alias
       configuration: {  }
       _core:
-        default_config_hash: Cr0CsPUSuio4ClP7bOTqHBefJOLtN5KPyKyYj9E4qvQ
+        default_config_hash: T1WEu5qtO-kpC1xednBvuLjAq8hfZ5QzJAniBU2sJWY
   -
     collection: ''
     name: system.action.pathauto_update_alias_user
     data:
-      id: pathauto_update_alias_user
-      label: 'Update URL alias'
+      uuid: null
+      langcode: en-gb
       status: true
-      langcode: en
-      type: user
-      plugin: pathauto_update_alias
       dependencies:
+        module:
+          - pathauto
         enforced:
           module:
             - user
-        module:
-          - pathauto
+      id: pathauto_update_alias_user
+      label: 'Update URL alias'
+      type: user
+      plugin: pathauto_update_alias
       configuration: {  }
       _core:
-        default_config_hash: 6eiNWATGTd3lUEKuxNPNyDRDVMsUlM0HS90_R6JJLUI
+        default_config_hash: pwznBDVbsQGj0a4yhv2Zqwd8SsOA4zmwmZ4WrlhfkvE
   -
     collection: ''
     name: system.action.redirect_delete_action
@@ -6488,12 +6446,14 @@ items:
     collection: ''
     name: views.view.content
     data:
-      langcode: en
+      uuid: null
+      langcode: en-gb
       status: true
       dependencies:
         module:
           - node
           - user
+          - views_bulk_operations
       id: content
       label: Content
       module: node
@@ -6510,22 +6470,89 @@ items:
           display_options:
             title: Content
             fields:
-              node_bulk_form:
-                id: node_bulk_form
-                table: node
-                field: node_bulk_form
-                entity_type: node
-                plugin_id: node_bulk_form
-                label: ''
+              views_bulk_operations_bulk_form:
+                id: views_bulk_operations_bulk_form
+                table: views
+                field: views_bulk_operations_bulk_form
+                relationship: none
+                group_type: group
+                admin_label: ''
+                plugin_id: views_bulk_operations_bulk_form
+                label: 'Views bulk operations'
                 exclude: false
                 alter:
                   alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
                 element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
                 element_default_classes: true
                 empty: ''
                 hide_empty: false
                 empty_zero: false
                 hide_alter_empty: true
+                batch: true
+                batch_size: 10
+                form_step: true
+                ajax_loader: false
+                buttons: false
+                action_title: Action
+                clear_on_exposed: true
+                force_selection_info: false
+                selected_actions:
+                  6:
+                    action_id: views_bulk_edit
+                    preconfiguration:
+                      add_confirmation: false
+                      label_override: 'Edit content'
+                      get_bundles_from_results: true
+                  7:
+                    action_id: views_bulk_operations_delete_entity
+                    preconfiguration:
+                      label_override: 'Delete content'
+                  8:
+                    action_id: 'entity:publish_action:node'
+                    preconfiguration:
+                      add_confirmation: false
+                      label_override: 'Publish content'
+                  9:
+                    action_id: 'entity:save_action:node'
+                    preconfiguration:
+                      add_confirmation: false
+                      label_override: 'Save content'
+                  10:
+                    action_id: 'entity:unpublish_action:node'
+                    preconfiguration:
+                      add_confirmation: false
+                      label_override: 'Unpublish content '
               title:
                 id: title
                 table: node_field_data
@@ -6736,12 +6763,24 @@ items:
             pager:
               type: full
               options:
+                offset: 0
                 items_per_page: 50
+                total_pages: null
+                id: 0
                 tags:
                   next: 'Next ›'
                   previous: '‹ Previous'
                   first: '« First'
                   last: 'Last »'
+                expose:
+                  items_per_page: true
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options: '50, 100, 200'
+                  items_per_page_options_all: false
+                  items_per_page_options_all_label: '- All -'
+                  offset: false
+                  offset_label: Offset
+                quantity: 9
             exposed_form:
               type: basic
               options:
@@ -6793,12 +6832,15 @@ items:
                   operator_list: {  }
                   identifier: title
                   required: false
-                  remember: false
+                  remember: true
                   multiple: false
                   remember_roles:
                     authenticated: authenticated
+                    web_admin: '0'
                     anonymous: '0'
                     administrator: '0'
+                    editor: '0'
+                  placeholder: ''
                 is_grouped: false
                 group_info:
                   label: ''
@@ -6835,12 +6877,14 @@ items:
                   operator_list: {  }
                   identifier: type
                   required: false
-                  remember: false
+                  remember: true
                   multiple: false
                   remember_roles:
                     authenticated: authenticated
+                    web_admin: '0'
                     anonymous: '0'
                     administrator: '0'
+                    editor: '0'
                   reduce: false
                 is_grouped: false
                 group_info:
@@ -6926,12 +6970,14 @@ items:
                   operator_list: {  }
                   identifier: langcode
                   required: false
-                  remember: false
+                  remember: true
                   multiple: false
                   remember_roles:
                     authenticated: authenticated
+                    web_admin: '0'
                     anonymous: '0'
                     administrator: '0'
+                    editor: '0'
                   reduce: false
                 is_grouped: false
                 group_info:
@@ -6957,6 +7003,51 @@ items:
                 expose:
                   operator_limit_selection: false
                   operator_list: {  }
+              uid:
+                id: uid
+                table: node_field_data
+                field: uid
+                relationship: none
+                group_type: group
+                admin_label: ''
+                entity_type: node
+                entity_field: uid
+                plugin_id: user_name
+                operator: in
+                value: {  }
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: uid_op
+                  label: 'Authored by'
+                  description: ''
+                  use_operator: false
+                  operator: uid_op
+                  operator_limit_selection: false
+                  operator_list: {  }
+                  identifier: uid
+                  required: false
+                  remember: true
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                    web_admin: '0'
+                    anonymous: '0'
+                    administrator: '0'
+                    editor: '0'
+                  reduce: false
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
             filter_groups:
               operator: AND
               groups:
@@ -7067,6 +7158,17 @@ items:
                 plugin_id: standard
                 required: true
             show_admin_links: false
+            header:
+              result:
+                id: result
+                table: views
+                field: result
+                relationship: none
+                group_type: group
+                admin_label: ''
+                plugin_id: result
+                empty: false
+                content: 'Displaying @start - @end of @total'
             display_extenders: {  }
           cache_metadata:
             max-age: 0
@@ -7112,12 +7214,13 @@ items:
               - user.permissions
             tags: {  }
       _core:
-        default_config_hash: 3ELwBpDb9lzqW5-daqjZYsC5lNcwbDS_i_-LKba12Lw
+        default_config_hash: Oozsflez02FlNj8PskUmEFWbK7CqvaGbCtaH4KBBp94
   -
     collection: ''
     name: views.view.media
     data:
-      langcode: en
+      uuid: null
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -8034,7 +8137,7 @@ items:
               - user.permissions
             tags: {  }
       _core:
-        default_config_hash: 27loqXfECE8tWznkMVYi7qOU8oCYFgn5MEysgZQQOV8
+        default_config_hash: EMZt4HcCXsLwZfrJdy9eFuSWIFwWduQmE5nwAmhQwvA
   -
     collection: ''
     name: views.view.media_library

@@ -1,0 +1,27 @@
+uuid: 2f63b14b-cc0f-42cc-9aeb-c49e234884b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - barrio_base_theme
+_core:
+  default_config_hash: QZE134MdlUyKa-3HzAwnHWBf2n3sZn9vjSjZcJvDaEg
+id: barrio_base_theme_footer
+theme: barrio_base_theme
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

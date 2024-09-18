@@ -6,7 +6,7 @@
 
   <property environment="env" />
 
-  <property name="remora_base.dir" value="${basedir}/web/themes/custom/remora_base_theme"/>
+  <property name="barrio_base.dir" value="${basedir}/web/themes/custom/barrio_base_theme"/>
   <property name="tonic.dir" value="${basedir}/web/themes/custom/tonic"/>
   <property name="dsc.dir" value="${basedir}/web/themes/custom/ds_composites"/>
   <property name="composer.path" value="${basedir}/bin/composer.phar"/>
@@ -129,15 +129,15 @@
     </exec>
   </target>
 
-  <target name="assets" depends="npm-remora_base, npm-tonic, npm-dsc">
+  <target name="assets" depends="npm-barrio_base, npm-tonic, npm-dsc">
   </target>
 
-  <target name="npm-remora_base" depends="vendors">
+  <target name="npm-barrio_base" depends="vendors">
     <exec executable="npm" failonerror="true">
       <arg value="install" />
       <arg value="--unsafe-perm" />
       <arg value="--prefix" />
-      <arg value="${remora_base.dir}" />
+      <arg value="${barrio_base.dir}" />
     </exec>
   </target>
 

@@ -1,4 +1,4 @@
-uuid: a4bfa670-d310-49a8-bb68-fb2c39f5add0
+uuid: a4455f39-e510-4b6a-b69f-2f0a3b075df4
 langcode: en-gb
 status: true
 dependencies:
@@ -14,7 +14,7 @@ bundle: banner_nugglet
 label: 'Editor title'
 description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

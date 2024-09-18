@@ -1,4 +1,4 @@
-uuid: 05a4c935-e366-48f5-8a5f-85e772cebb7d
+uuid: e5f24268-50ec-42c0-bca7-0cb28955c825
 langcode: en-gb
 status: true
 dependencies:
@@ -17,7 +17,7 @@ bundle: tagline
 label: 'Display title'
 description: 'This title is displayed on the page above the content of this nugget.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

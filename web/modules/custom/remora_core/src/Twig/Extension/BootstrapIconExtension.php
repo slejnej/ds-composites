@@ -26,7 +26,7 @@ class BootstrapIconExtension extends AbstractExtension
    */
   public function getBSIconPath(string $iconName): string
   {
-    return sprintf('/themes/custom/remora_base_theme/node_modules/bootstrap-icons/bootstrap-icons.svg#%s', $iconName);
+    return sprintf('/themes/custom/barrio_base_theme/node_modules/bootstrap-icons/bootstrap-icons.svg#%s', $iconName);
   }
 
 }

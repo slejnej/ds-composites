@@ -1,5 +1,5 @@
-uuid: 962046dc-3a4b-4a98-953e-e0de82506069
-langcode: en-gb
+uuid: 2c882424-ba04-4a19-88a6-4ed3a2d63da3
+langcode: en
 status: true
 dependencies:
   theme:
@@ -59,6 +59,31 @@ items:
       visibility: {  }
       _core:
         default_config_hash: hBHXB7hC05XU7pDYzETt-GUcpFlogK1gkjyAsg0Ym58
+  -
+    collection: ''
+    name: block.block.gin_help
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - help
+        theme:
+          - gin
+      id: gin_help
+      theme: gin
+      region: help
+      weight: 0
+      provider: null
+      plugin: help_block
+      settings:
+        id: help_block
+        label: Help
+        provider: help
+        label_display: '0'
+      visibility: {  }
+      _core:
+        default_config_hash: 8nOAry2oKqJOr0zbrlJ3sZHDFJLIO6j-0vT0K_TYca4
   -
     collection: ''
     name: block.block.gin_local_actions

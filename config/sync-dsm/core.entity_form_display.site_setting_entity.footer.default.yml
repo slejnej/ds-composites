@@ -1,0 +1,51 @@
+uuid: b40d7bd5-7931-4da9-afe9-f045bd77edf4
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.site_setting_entity.footer.field_footer_sections
+    - site_settings.site_setting_entity_type.footer
+  module:
+    - field_layout
+    - layout_discovery
+    - layout_paragraphs
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: cfqrSUC1O7M7zK_0hmM48IjSFd5lnk6YvyUEa6MqO38
+id: site_setting_entity.footer.default
+targetEntityType: site_setting_entity
+bundle: footer
+mode: default
+content:
+  field_footer_sections:
+    type: layout_paragraphs
+    weight: 2
+    region: content
+    settings:
+      preview_view_mode: preview
+      nesting_depth: 0
+      require_layouts: 1
+      empty_message: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  fieldset: true
+  user_id: true

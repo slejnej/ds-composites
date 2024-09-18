@@ -1,0 +1,47 @@
+uuid: 8fae87b6-d417-44c7-8dbe-5e1e7aa56b6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - remora_gdpr
+id: config_sync.module.remora_gdpr
+snapshotSet: config_sync
+extensionType: module
+extensionName: remora_gdpr
+items:
+  -
+    collection: ''
+    name: eu_cookie_compliance.cookie_category.analytics_cookies
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - eu_cookie_compliance_gtm
+      third_party_settings:
+        eu_cookie_compliance_gtm:
+          gtm_data:
+            analytics_storage: '@status'
+      id: analytics_cookies
+      label: 'Analytics cookies'
+      description: "We'd like to set Google Analytics cookies (through GTM) to help us improve our website by collecting and reporting information on how you use it. The cookies collect information in a way that does not directly identify anyone. For more information on how these cookies work please see our 'Cookies page'."
+      checkbox_default_state: unchecked
+      weight: -8
+      _core:
+        default_config_hash: SsqV9DWkxUQFt1Fs4Cgs59Gl9GnobReuWmEfx1jc7vU
+  -
+    collection: ''
+    name: eu_cookie_compliance.cookie_category.necessary_cookies
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies: {  }
+      id: necessary_cookies
+      label: 'Necessary cookies'
+      description: 'Necessary cookies enable core functionality such as security, network management, and accessibility. You may disable these by changing your browser settings, but this may affect how the website functions.'
+      checkbox_default_state: required
+      weight: -9
+      _core:
+        default_config_hash: ESyhPQjtPGripoae1llj9c0DFHZUd19xKtz78PcMR2k

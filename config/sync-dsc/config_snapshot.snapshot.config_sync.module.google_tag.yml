@@ -1,0 +1,19 @@
+uuid: 49b938dc-9ff0-4fe4-8cc2-1ea2aa56cd1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - google_tag
+id: config_sync.module.google_tag
+snapshotSet: config_sync
+extensionType: module
+extensionName: google_tag
+items:
+  -
+    collection: ''
+    name: google_tag.settings
+    data:
+      use_collection: false
+      default_google_tag_entity: ''
+      _core:
+        default_config_hash: cvh7di-mJogXOBiv_AoDN22DXIg3-OtzE5iLCIFAQ1s

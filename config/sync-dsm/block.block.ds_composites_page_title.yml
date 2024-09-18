@@ -1,15 +1,15 @@
-uuid: 62f9f07d-db07-474d-9962-a9e922d604e6
-langcode: en-gb
+uuid: e6790189-e391-4082-a9d7-1bcb479bef92
+langcode: en
 status: true
 dependencies:
   theme:
     - ds_composites
 _core:
-  default_config_hash: Oh72CHUkp6cj6dbrXMK2hzCsM05w9cHVoD22rMLQUfk
+  default_config_hash: UEwoX-C0AgEdyeYWljq7HNLXoLLY-VQT53191QDDTmE
 id: ds_composites_page_title
 theme: ds_composites
 region: content
-weight: -30
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

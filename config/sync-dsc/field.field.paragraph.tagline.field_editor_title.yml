@@ -1,4 +1,4 @@
-uuid: 65ddda48-d8ed-433e-a730-b838b598a332
+uuid: 0ba8c616-236d-46d9-a0ad-6bc3f79e3f9d
 langcode: en-gb
 status: true
 dependencies:
@@ -14,7 +14,7 @@ bundle: tagline
 label: 'Editor title'
 description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

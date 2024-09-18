@@ -103,8 +103,8 @@ function cards_nugget_page_attachments(array &$attachments): void
   if (!in_array('cards_nugget/cards', $attachments['#attached']['library'])){
     $attachments['#attached']['library'][] = 'cards_nugget/cards';
   }
-  if (!in_array('remora_base_theme/slick-carousel', $attachments['#attached']['library'])){
-    $attachments['#attached']['library'][] = 'remora_base_theme/slick-carousel';
+  if (!in_array('barrio_base_theme/slick-carousel', $attachments['#attached']['library'])){
+    $attachments['#attached']['library'][] = 'barrio_base_theme/slick-carousel';
   }
 }
 

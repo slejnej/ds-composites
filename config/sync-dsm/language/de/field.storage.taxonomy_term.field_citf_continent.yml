@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    1:
+      label: Antarktis
+    7:
+      label: Unbekannt

@@ -1,5 +1,5 @@
-uuid: 674fb6de-fae3-4478-a9ae-ef42af5bd33e
-langcode: en-gb
+uuid: 8663393b-5c86-4419-933c-1dec472c0926
+langcode: en
 status: true
 dependencies:
   module:
@@ -13,7 +13,10 @@ items:
     collection: ''
     name: config_ignore.settings
     data:
+      uuid: null
+      langcode: en-gb
       mode: simple
-      ignored_config_entities: {  }
+      ignored_config_entities:
+        - system.site
       _core:
-        default_config_hash: IgOVnECx6lbVt6JVFnadoEEugneDf3UblPZnOzov43Q
+        default_config_hash: 9O9cB-DKI5YqdkPtvZ-kiBQXXoUspp2qSZAzs0orwd0

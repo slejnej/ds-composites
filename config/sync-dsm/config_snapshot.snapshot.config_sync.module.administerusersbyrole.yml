@@ -1,5 +1,5 @@
-uuid: 93cba592-e525-49c1-8569-09b86618b432
-langcode: en-gb
+uuid: 0a018ff8-55ec-489b-bd1a-3dc96caf078e
+langcode: en
 status: true
 dependencies:
   module:
@@ -13,9 +13,12 @@ items:
     collection: ''
     name: administerusersbyrole.settings
     data:
-      roles: {  }
+      langcode: en-gb
+      roles:
+        web_admin: unsafe
+        editor: safe
       _core:
-        default_config_hash: UiTY9bhUKWJOIWDlOKM3akeeyHuJJRspXETsv3SY6jw
+        default_config_hash: gcSFYnONIZ2HD4yWJ5ujPNKH7YYdsWWZDyY3g6CFT08
   -
     collection: ''
     name: views.view.administerusersbyrole_people

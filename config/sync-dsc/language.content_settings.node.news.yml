@@ -1,4 +1,4 @@
-uuid: 8594244a-1348-4949-8450-fc137042db69
+uuid: 998c8517-ab0f-4a3a-a490-8b35ddd558d5
 langcode: en-gb
 status: true
 dependencies:
@@ -16,5 +16,5 @@ _core:
 id: node.news
 target_entity_type_id: node
 target_bundle: news
-default_langcode: site_default
+default_langcode: en
 language_alterable: true

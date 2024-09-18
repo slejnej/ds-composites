@@ -1,5 +1,5 @@
 _core:
-  default_config_hash: UiTY9bhUKWJOIWDlOKM3akeeyHuJJRspXETsv3SY6jw
+  default_config_hash: gcSFYnONIZ2HD4yWJ5ujPNKH7YYdsWWZDyY3g6CFT08
 langcode: en-gb
 roles:
   web_admin: unsafe

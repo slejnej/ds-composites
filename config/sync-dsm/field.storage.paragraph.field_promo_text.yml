@@ -1,0 +1,21 @@
+uuid: ae94da97-8cd5-4d3b-a17e-8e5cbd2dc374
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: RuLy4Qt5wRu6JSCy-PZ1BnugXvtJfr11d2uHJv5YM7E
+id: paragraph.field_promo_text
+field_name: field_promo_text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

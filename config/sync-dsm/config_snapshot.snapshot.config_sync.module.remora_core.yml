@@ -1,5 +1,5 @@
-uuid: 03f4a26e-4632-47a2-bd65-20ab5f0c98a5
-langcode: en-gb
+uuid: fc1b8a5a-11c0-464d-b8bf-081546a58b83
+langcode: en
 status: true
 dependencies:
   module:
@@ -4625,56 +4625,6 @@ items:
       language_alterable: true
       _core:
         default_config_hash: wOpix89WRHzoTG6PKmGG_UQOxbmTKG0KPz3cjYdK5pQ
-  -
-    collection: ''
-    name: linkchecker.settings
-    data:
-      langcode: en-gb
-      scan_blocks: null
-      check_links_types: 1
-      default_url_scheme: 'http://'
-      base_path: ''
-      extract:
-        from_a: true
-        from_audio: true
-        from_embed: false
-        from_iframe: true
-        from_img: false
-        from_object: false
-        from_video: false
-        filter_blacklist:
-          editor_file_reference: '0'
-          entity_embed: '0'
-          filter_image_lazy_load: '0'
-          filter_autop: '0'
-          filter_align: '0'
-          filter_html_escape: '0'
-          filter_caption: '0'
-          filter_html_image_secure: '0'
-          filter_html: '0'
-          filter_htmlcorrector: '0'
-          filter_url: '0'
-          linkit: '0'
-          media_embed: '0'
-      check:
-        connections_max: 4
-        connections_max_per_domain: 2
-        disable_link_check_for_urls: |-
-          example.com
-          example.net
-          example.org
-        library: core
-        interval: 2419200
-        useragent: 'Drupal (+https://drupal.org/)'
-      error:
-        action_status_code_301: 0
-        action_status_code_404: 0
-        ignore_response_codes: "200\r\n206\r\n302\r\n304\r\n401\r\n403"
-        impersonate_account: admin
-      logging:
-        level: 6
-      _core:
-        default_config_hash: ZhIl6m8EWHJQFZEAzV6jBaR6a-1Fwas0dZ5_PfjgobI
   -
     collection: ''
     name: linkit.linkit_profile.default

@@ -1,5 +1,0 @@
-label: Autoplay
-description: 'Enable to automatically play and advance to subsequent slides.'
-settings:
-  on_label: 'On'
-  off_label: 'Off'

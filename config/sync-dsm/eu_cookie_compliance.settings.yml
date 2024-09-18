@@ -1,7 +1,7 @@
 _core:
   default_config_hash: zmkyvoZ03LGqfVeB0mtslC-pkWMOrGIU9lJl9_jqUkc
-langcode: en-gb
-uuid: 43fd2918-fb9e-4363-92f7-6504c3a34f3a
+langcode: en
+uuid: 855b435e-ead1-4b35-96cc-51cc753038d3
 popup_enabled: true
 popup_clicking_confirmation: true
 popup_scrolling_confirmation: false
@@ -12,10 +12,10 @@ popup_position: false
 fixed_top_position: true
 popup_info:
   value: '<h2>We use cookies on this site to enhance your user experience</h2><p>By clicking the Accept button, you agree to us doing so.</p>'
-  format: full_html
+  format: plain_text
 mobile_popup_info:
   value: '<h2>We use cookies on this site to enhance your user experience</h2><p>By tapping the Accept button, you agree to us doing so.</p>'
-  format: full_html
+  format: plain_text
 popup_info_template: new
 popup_agree_button_message: Accept
 popup_more_info_button_message: 'More info'
@@ -25,7 +25,7 @@ popup_hide_agreed: false
 disagree_button_label: 'No, thanks'
 popup_agreed:
   value: '<h2>Thank you for accepting cookies</h2><p>You can now hide this message or find out more about cookies.</p>'
-  format: full_html
+  format: plain_text
 popup_find_more_button_message: 'More info'
 popup_hide_button_message: Hide
 popup_link: '<front>'
@@ -65,7 +65,7 @@ allowed_cookies: ''
 consent_storage_method: do_not_store
 withdraw_message:
   value: '<h2>We use cookies on this site to enhance your user experience</h2><p>You have given your consent for us to set cookies.</p>'
-  format: full_html
+  format: plain_text
 withdraw_tab_button_label: 'Privacy settings'
 withdraw_action_button_label: 'Withdraw consent'
 withdraw_enabled: false

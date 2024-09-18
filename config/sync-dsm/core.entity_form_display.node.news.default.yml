@@ -1,4 +1,4 @@
-uuid: 6d01645f-c8bc-4e69-8481-bc97b9673ea2
+uuid: 403a835b-25e3-422e-9c9a-3061f625bc04
 langcode: en-gb
 status: true
 dependencies:
@@ -220,8 +220,7 @@ third_party_settings:
         description: 'Customise how this page may be indexed and displayed on search engine results, eg. Google.'
         required_fields: true
     group_tagging:
-      children:
-        - field_countries
+      children: {  }
       label: Tagging
       region: content
       parent_name: group_news_tabs
@@ -294,16 +293,6 @@ content:
       hierarchy_depth: 0
       required_depth: 0
       none_label: '- Please select -'
-    third_party_settings: {  }
-  field_countries:
-    type: entity_reference_autocomplete
-    weight: 6
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_date:
     type: datetime_default
@@ -488,6 +477,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_countries: true
   field_diseases: true
   field_meta_tags: true
   field_tags: true

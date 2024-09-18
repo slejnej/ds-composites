@@ -1,4 +1,4 @@
-uuid: c21b8524-cfbd-45b6-8108-5d77f0e7125e
+uuid: 45c1fcd8-1a07-4fbb-9ae3-e7aa0b43512a
 langcode: en-gb
 status: true
 dependencies:
@@ -16,7 +16,7 @@ bundle: banner_nugglet
 label: Link
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

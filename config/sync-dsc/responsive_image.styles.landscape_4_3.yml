@@ -1,4 +1,4 @@
-uuid: 420dbe5f-8002-4c0b-a823-1d24c5c239ef
+uuid: 528de35c-ed1d-4ea4-b89e-4278ead74048
 langcode: en-gb
 status: true
 dependencies:
@@ -10,41 +10,41 @@ dependencies:
     - image.style.landscape_4_3_xs
     - image.style.landscape_4_3_xxl
   theme:
-    - remora_base_theme
+    - barrio_base_theme
 _core:
-  default_config_hash: kWIR6BQrC5Zt87oQLQgd42Qlm3yWAaehgAxiqe5K7zs
+  default_config_hash: nEsae9_LURx7SGCgTa47AVtHeEG5_ave35d-4K9zPe0
 id: landscape_4_3
 label: 'Landscape: 4x3'
 image_style_mappings:
   -
     image_mapping_type: image_style
     image_mapping: landscape_4_3_xxl
-    breakpoint_id: remora_base_theme.xxl
+    breakpoint_id: barrio_base_theme.xxl
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: landscape_4_3_xl
-    breakpoint_id: remora_base_theme.xl
+    breakpoint_id: barrio_base_theme.xl
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: landscape_4_3_lg
-    breakpoint_id: remora_base_theme.lg
+    breakpoint_id: barrio_base_theme.lg
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: landscape_4_3_md
-    breakpoint_id: remora_base_theme.md
+    breakpoint_id: barrio_base_theme.md
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: landscape_4_3_sm
-    breakpoint_id: remora_base_theme.sm
+    breakpoint_id: barrio_base_theme.sm
     multiplier: 1x
   -
     image_mapping_type: image_style
     image_mapping: landscape_4_3_xs
-    breakpoint_id: remora_base_theme.xs
+    breakpoint_id: barrio_base_theme.xs
     multiplier: 1x
-breakpoint_group: remora_base_theme
+breakpoint_group: barrio_base_theme
 fallback_image_style: landscape_4_3_xl

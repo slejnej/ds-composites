@@ -1,5 +1,5 @@
-uuid: 9fe82324-975c-491b-9877-bedcd367e95a
-langcode: en-gb
+uuid: d7441f15-54d6-4559-a196-86d193e88894
+langcode: en
 status: true
 dependencies:
   config:
@@ -22,10 +22,15 @@ permissions:
   - 'display eu cookie compliance popup'
   - 'view media'
   - 'view paragraph content attachments'
-  - 'view paragraph content card_nugglet'
-  - 'view paragraph content cards'
+  - 'view paragraph content banner_nugglet'
+  - 'view paragraph content banners'
+  - 'view paragraph content flexible_layout'
+  - 'view paragraph content footer_section'
+  - 'view paragraph content promo'
+  - 'view paragraph content section'
   - 'view paragraph content slide_nugglet'
   - 'view paragraph content slideshow'
+  - 'view paragraph content tagline'
   - 'view paragraph content text_media'
   - 'view person revisions'
   - 'view published site setting entities'

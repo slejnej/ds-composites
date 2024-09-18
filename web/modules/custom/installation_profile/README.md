@@ -7,7 +7,7 @@ It will install all the default CTs and generate an appropriate subtheme.
 
 - Installs defined themes and modules during Drupal installation which are defined in info file.
 - Provides additional steps for setting up the subtheme.
-- Automatically generates remora_base_theme-based subtheme using Bootstrap 5.
+- Automatically generates barrio_base_theme-based subtheme using Bootstrap 5.
 - Generates boilerplate SCSS files containing all the relevant variables.
 
 ## Installation

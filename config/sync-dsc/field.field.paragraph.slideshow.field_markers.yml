@@ -1,5 +1,5 @@
-uuid: 5750543b-e534-455f-9e4e-95a95d37abf6
-langcode: en-gb
+uuid: c9358041-9e76-4f6b-9317-ce507065dee3
+langcode: en
 status: true
 dependencies:
   config:
@@ -17,7 +17,7 @@ bundle: slideshow
 label: Markers
 description: 'Enable to show clickable markers which jump to a particular slide.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

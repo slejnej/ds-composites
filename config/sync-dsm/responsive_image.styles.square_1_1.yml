@@ -1,0 +1,50 @@
+uuid: 3b40e4a4-5a73-4dc7-916c-9d3ea187a185
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - image.style.square_1_1_lg
+    - image.style.square_1_1_md
+    - image.style.square_1_1_sm
+    - image.style.square_1_1_xl
+    - image.style.square_1_1_xs
+    - image.style.square_1_1_xxl
+  theme:
+    - barrio_base_theme
+_core:
+  default_config_hash: 3CFt7lRsSdaW5og9vdVjANDjslhaIC2CSMBiDuGfl-I
+id: square_1_1
+label: 'Square: 1x1'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: square_1_1_xxl
+    breakpoint_id: barrio_base_theme.xxl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: square_1_1_xl
+    breakpoint_id: barrio_base_theme.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: square_1_1_lg
+    breakpoint_id: barrio_base_theme.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: square_1_1_md
+    breakpoint_id: barrio_base_theme.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: square_1_1_sm
+    breakpoint_id: barrio_base_theme.sm
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: square_1_1_xs
+    breakpoint_id: barrio_base_theme.xs
+    multiplier: 1x
+breakpoint_group: barrio_base_theme
+fallback_image_style: square_1_1_xxl

@@ -1,4 +1,4 @@
-uuid: 57cfb6b5-56b2-4db7-a05f-a802e8bec425
+uuid: cfea6861-bdef-4ac7-9bc6-e8907bd9e74b
 langcode: en-gb
 status: true
 dependencies:
@@ -16,7 +16,7 @@ bundle: topics
 label: 'Rabbit Hole settings'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
