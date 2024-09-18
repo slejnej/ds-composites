@@ -1,0 +1,10 @@
+{% set fields = content.field_media|merge_safe(content.field_body, content.field_main_nuggets) %}
+{% if fields['#items'] is empty %}
+  {% set page_style = 'swooshy-spacing' %}
+{% endif %}
+
+{% if content.field_postscript_nuggets['#items'] is not empty %}
+  <section id="postscript" class="container-fluid g-0 {{ page_style }}">
+    {{ content.field_postscript_nuggets }}
+  </section>
+{% endif %}

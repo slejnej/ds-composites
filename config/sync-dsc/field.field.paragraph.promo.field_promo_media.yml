@@ -1,0 +1,24 @@
+uuid: aef794fa-fa5a-4f9f-a2b4-643896a8d95e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_promo_media
+    - paragraphs.paragraphs_type.promo
+_core:
+  default_config_hash: GNN9mlHgx7a__uglRTL-EGiHA8jPOwqh4k16XXTBFCI
+id: paragraph.promo.field_promo_media
+field_name: field_promo_media
+entity_type: paragraph
+bundle: promo
+label: Media
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_media_types_image
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference

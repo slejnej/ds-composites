@@ -1,0 +1,13 @@
+uuid: ba3418f2-0f03-4d00-8b84-24d5c4383a44
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.honorific_titles
+_core:
+  default_config_hash: 3q6U9sQDJ-WLWm6B7fYJqUdnbFfYgRjmZT9Vg48-igk
+id: taxonomy_term.honorific_titles
+target_entity_type_id: taxonomy_term
+target_bundle: honorific_titles
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,31 @@
+uuid: 0384540f-9913-4d26-9055-ef07291829c7
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department
+    - node.type.person
+    - taxonomy.vocabulary.departments
+_core:
+  default_config_hash: bRA_Y_mIAK-wWbYx5Z62KdXXkBKQDbjGXl1LWWO9HIU
+id: node.person.field_department
+field_name: field_department
+entity_type: node
+bundle: person
+label: Department
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      departments: departments
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

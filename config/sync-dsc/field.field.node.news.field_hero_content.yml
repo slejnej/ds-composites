@@ -1,0 +1,26 @@
+uuid: 0bfeb667-5079-4c5c-a8e4-e3897af17a7c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_content
+    - node.type.news
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: yW-azsKFxTNbpLIBV0JVVe8r8RGI8u-SHxc0qNTPgg8
+id: node.news.field_hero_content
+field_name: field_hero_content
+entity_type: node
+bundle: news
+label: 'Hero content'
+description: 'These nuggets will be displayed at the top of your page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_paragraph_types_hero_content
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference_revisions

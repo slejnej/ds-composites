@@ -1,0 +1,24 @@
+uuid: 16511448-6686-48f6-bfae-490144adea9c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_nt_alt_button_text
+    - paragraphs.paragraphs_type.card_nugglet
+  enforced:
+    module:
+      - cards_nugget
+_core:
+  default_config_hash: f7ToMNAhQ6qjFPIloUTq2xroeWp5vCGtPmyVSCrjBTU
+id: paragraph.card_nugglet.field_card_nt_alt_button_text
+field_name: field_card_nt_alt_button_text
+entity_type: paragraph
+bundle: card_nugglet
+label: 'Alternative button text'
+description: 'Add a button title here if you wish to override the default button text or add a button to this card (if not already displayed).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

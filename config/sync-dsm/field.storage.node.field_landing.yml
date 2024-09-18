@@ -1,0 +1,20 @@
+uuid: 9f1b3741-6a44-4a14-93e7-b933af76d132
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Ed5FGZYzc8TInD9VNmZy5G7h8ZIaC8EtaF07MNEHEl0
+id: node.field_landing
+field_name: field_landing
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

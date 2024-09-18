@@ -1,0 +1,21 @@
+uuid: 2ea0b522-bdf6-43d9-aa9d-77de495e6e61
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_display_date
+    - node.type.news
+_core:
+  default_config_hash: lr5QnqsP5RAt_oEvgXrRLd0tSk_lJ5CykOhluvEQTOA
+id: node.news.field_news_display_date
+field_name: field_news_display_date
+entity_type: node
+bundle: news
+label: 'Display date'
+description: 'Override the default display of the news item.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

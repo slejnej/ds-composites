@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: IgOVnECx6lbVt6JVFnadoEEugneDf3UblPZnOzov43Q
+langcode: en-gb
+mode: simple
+ignored_config_entities:
+  - captcha.settings
+  - google_tag.settings
+  - recaptcha.settings
+  - recaptcha_v3.settings
+  - system.site

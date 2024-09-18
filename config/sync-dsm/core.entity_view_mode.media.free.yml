@@ -1,0 +1,13 @@
+uuid: 5201622c-6024-40e9-b34c-e77cedb751d0
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: FhQHDxbLW40H51l-zDpFS5oilfsbevQGO81mPubwZhU
+id: media.free
+label: Free
+description: ''
+targetEntityType: media
+cache: true

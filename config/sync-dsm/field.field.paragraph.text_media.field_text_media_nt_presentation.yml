@@ -1,0 +1,28 @@
+uuid: 196537c5-3957-43e3-b788-fb57fe98216f
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_media_nt_presentation
+    - paragraphs.paragraphs_type.text_media
+  module:
+    - options
+  enforced:
+    module:
+      - text_media_nugget
+_core:
+  default_config_hash: hcl3QFD7-MZ296JsYrvQlMLV4Vv1oWr6dG69Gh3y4CA
+id: paragraph.text_media.field_text_media_nt_presentation
+field_name: field_text_media_nt_presentation
+entity_type: paragraph
+bundle: text_media
+label: Presentation
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: text_only
+default_value_callback: ''
+settings: {  }
+field_type: list_string

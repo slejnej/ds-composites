@@ -1,0 +1,26 @@
+uuid: 287ffc06-82b6-4a5c-b66c-85e1cf96fe79
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_main_nuggets
+    - node.type.person
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: UNDeU_3WLTRUmLTvkWqpt2k8P8hQqPbPQ_MJRioIyA0
+id: node.person.field_main_nuggets
+field_name: field_main_nuggets
+entity_type: node
+bundle: person
+label: Nuggets
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_paragraph_types_main_content
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference_revisions

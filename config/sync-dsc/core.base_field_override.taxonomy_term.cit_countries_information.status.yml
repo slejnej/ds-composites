@@ -1,0 +1,22 @@
+uuid: 41c08b97-420a-4bd4-bb53-1c1291b2a5bf
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cit_countries_information
+id: taxonomy_term.cit_countries_information.status
+field_name: status
+entity_type: taxonomy_term
+bundle: cit_countries_information
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

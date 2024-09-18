@@ -1,0 +1,1264 @@
+uuid: e63f3857-d9d3-466d-9320-3efe5f1050f4
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - slideshow_nugget
+id: config_sync.module.slideshow_nugget
+snapshotSet: config_sync
+extensionType: module
+extensionName: slideshow_nugget
+items:
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.slide_nugglet.default
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.slide_nugglet.field_editor_title
+          - field.field.paragraph.slide_nugglet.field_slide_nt_add_a_link
+          - field.field.paragraph.slide_nugglet.field_slide_nt_image
+          - field.field.paragraph.slide_nugglet.field_slide_nt_link
+          - field.field.paragraph.slide_nugglet.field_slide_nt_summary
+          - field.field.paragraph.slide_nugglet.field_slide_nt_title
+          - paragraphs.paragraphs_type.slide_nugglet
+        module:
+          - field_layout
+          - layout_discovery
+          - link
+          - media_library
+          - text
+        enforced:
+          module:
+            - slideshow_nugget
+      third_party_settings:
+        field_layout:
+          id: layout_onecol
+          settings:
+            label: ''
+      id: paragraph.slide_nugglet.default
+      targetEntityType: paragraph
+      bundle: slide_nugglet
+      mode: default
+      content:
+        field_editor_title:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_slide_nt_add_a_link:
+          type: boolean_checkbox
+          weight: 4
+          region: content
+          settings:
+            display_label: true
+          third_party_settings: {  }
+        field_slide_nt_image:
+          type: media_library_widget
+          weight: 2
+          region: content
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+        field_slide_nt_link:
+          type: link_default
+          weight: 5
+          region: content
+          settings:
+            placeholder_url: ''
+            placeholder_title: ''
+          third_party_settings: {  }
+        field_slide_nt_summary:
+          type: text_textarea
+          weight: 3
+          region: content
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+        field_slide_nt_title:
+          type: text_textfield
+          weight: 1
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        status:
+          type: boolean_checkbox
+          weight: 6
+          region: content
+          settings:
+            display_label: true
+          third_party_settings: {  }
+      hidden:
+        created: true
+      _core:
+        default_config_hash: 9QA7QQZjzLmigyc5zpEjy0i2ScRJxE5XAhYACDUGREk
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.slideshow.default
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.slideshow.field_arrows
+          - field.field.paragraph.slideshow.field_autoplay
+          - field.field.paragraph.slideshow.field_display_title
+          - field.field.paragraph.slideshow.field_editor_title
+          - field.field.paragraph.slideshow.field_loop
+          - field.field.paragraph.slideshow.field_markers
+          - field.field.paragraph.slideshow.field_slideshow_nt_slides
+          - paragraphs.paragraphs_type.slideshow
+        module:
+          - field_group
+          - field_layout
+          - layout_discovery
+          - layout_paragraphs
+          - text
+        enforced:
+          module:
+            - slideshow_nugget
+      third_party_settings:
+        field_layout:
+          id: layout_onecol
+          settings:
+            label: ''
+        field_group:
+          group_slideshow_settings:
+            children:
+              - field_autoplay
+              - field_loop
+              - field_arrows
+              - field_markers
+            label: 'Slideshow settings'
+            region: content
+            parent_name: group_nugget_title_properties
+            weight: 4
+            format_type: fieldset
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              description: ''
+              required_fields: false
+          group_nugget_title_properties:
+            children:
+              - field_editor_title
+              - field_display_title
+              - group_slideshow_settings
+            label: 'Nugget title & properties'
+            region: content
+            parent_name: ''
+            weight: 0
+            format_type: details
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              open: true
+              description: ''
+              required_fields: true
+          group_nugget_content:
+            children:
+              - field_slideshow_nt_slides
+            label: 'Nugget content'
+            region: content
+            parent_name: ''
+            weight: 1
+            format_type: details
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              open: true
+              description: ''
+              required_fields: true
+      id: paragraph.slideshow.default
+      targetEntityType: paragraph
+      bundle: slideshow
+      mode: default
+      content:
+        field_arrows:
+          type: boolean_checkbox
+          weight: 6
+          region: content
+          settings:
+            display_label: true
+          third_party_settings: {  }
+        field_autoplay:
+          type: boolean_checkbox
+          weight: 4
+          region: content
+          settings:
+            display_label: true
+          third_party_settings: {  }
+        field_display_title:
+          type: text_textfield
+          weight: 3
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_editor_title:
+          type: string_textfield
+          weight: 2
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_loop:
+          type: boolean_checkbox
+          weight: 5
+          region: content
+          settings:
+            display_label: true
+          third_party_settings: {  }
+        field_markers:
+          type: boolean_checkbox
+          weight: 7
+          region: content
+          settings:
+            display_label: true
+          third_party_settings: {  }
+        field_slideshow_nt_slides:
+          type: layout_paragraphs
+          weight: 2
+          region: content
+          settings:
+            preview_view_mode: preview
+            nesting_depth: 0
+            require_layouts: 0
+            empty_message: ''
+          third_party_settings: {  }
+        status:
+          type: boolean_checkbox
+          weight: 2
+          region: content
+          settings:
+            display_label: true
+          third_party_settings: {  }
+      hidden:
+        created: true
+      _core:
+        default_config_hash: 6R-l0Dqikfz3YCSuxmqo2Ic3wxjoGEdNh7e_IfockhY
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.slide_nugglet.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.slide_nugglet.field_editor_title
+          - field.field.paragraph.slide_nugglet.field_slide_nt_add_a_link
+          - field.field.paragraph.slide_nugglet.field_slide_nt_image
+          - field.field.paragraph.slide_nugglet.field_slide_nt_link
+          - field.field.paragraph.slide_nugglet.field_slide_nt_summary
+          - field.field.paragraph.slide_nugglet.field_slide_nt_title
+          - paragraphs.paragraphs_type.slide_nugglet
+        module:
+          - link
+          - text
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slide_nugglet.default
+      targetEntityType: paragraph
+      bundle: slide_nugglet
+      mode: default
+      content:
+        field_slide_nt_add_a_link:
+          type: boolean
+          label: hidden
+          settings:
+            format: default
+            format_custom_false: ''
+            format_custom_true: ''
+          third_party_settings: {  }
+          weight: 2
+          region: content
+        field_slide_nt_image:
+          type: entity_reference_entity_view
+          label: hidden
+          settings:
+            view_mode: default
+            link: false
+          third_party_settings: {  }
+          weight: 1
+          region: content
+        field_slide_nt_link:
+          type: link
+          label: hidden
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: ''
+            target: ''
+          third_party_settings: {  }
+          weight: 3
+          region: content
+        field_slide_nt_summary:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 4
+          region: content
+        field_slide_nt_title:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        field_editor_title: true
+      _core:
+        default_config_hash: N8Wu5Agiq_psMOsqEbj0M_2Kw8ir2cZqUuU_pWHy5gY
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.slide_nugglet.preview
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.paragraph.preview
+          - field.field.paragraph.slide_nugglet.field_editor_title
+          - field.field.paragraph.slide_nugglet.field_slide_nt_add_a_link
+          - field.field.paragraph.slide_nugglet.field_slide_nt_image
+          - field.field.paragraph.slide_nugglet.field_slide_nt_link
+          - field.field.paragraph.slide_nugglet.field_slide_nt_summary
+          - field.field.paragraph.slide_nugglet.field_slide_nt_title
+          - paragraphs.paragraphs_type.slide_nugglet
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slide_nugglet.preview
+      targetEntityType: paragraph
+      bundle: slide_nugglet
+      mode: preview
+      content:
+        field_editor_title:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        field_slide_nt_add_a_link: true
+        field_slide_nt_image: true
+        field_slide_nt_link: true
+        field_slide_nt_summary: true
+        field_slide_nt_title: true
+      _core:
+        default_config_hash: mY_peq3JiTCvQ5SMZpcdll4A7Jtj_sUjQ5ayZWAxL2o
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.slide_nugglet.search_rendered_output
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.paragraph.search_rendered_output
+          - field.field.paragraph.slide_nugglet.field_editor_title
+          - field.field.paragraph.slide_nugglet.field_slide_nt_add_a_link
+          - field.field.paragraph.slide_nugglet.field_slide_nt_image
+          - field.field.paragraph.slide_nugglet.field_slide_nt_link
+          - field.field.paragraph.slide_nugglet.field_slide_nt_summary
+          - field.field.paragraph.slide_nugglet.field_slide_nt_title
+          - paragraphs.paragraphs_type.slide_nugglet
+        module:
+          - layout_builder
+          - text
+        enforced:
+          module:
+            - slideshow_nugget
+      third_party_settings:
+        layout_builder:
+          enabled: false
+          allow_custom: false
+      id: paragraph.slide_nugglet.search_rendered_output
+      targetEntityType: paragraph
+      bundle: slide_nugglet
+      mode: search_rendered_output
+      content:
+        field_slide_nt_summary:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 4
+          region: content
+        field_slide_nt_title:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        field_editor_title: true
+        field_slide_nt_add_a_link: true
+        field_slide_nt_image: true
+        field_slide_nt_link: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: 5JYycU4N85yKNNAta8L8bMSXNmrblRiOgNYczvzdhfk
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.slideshow.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.slideshow.field_arrows
+          - field.field.paragraph.slideshow.field_autoplay
+          - field.field.paragraph.slideshow.field_display_title
+          - field.field.paragraph.slideshow.field_editor_title
+          - field.field.paragraph.slideshow.field_loop
+          - field.field.paragraph.slideshow.field_markers
+          - field.field.paragraph.slideshow.field_slideshow_nt_slides
+          - paragraphs.paragraphs_type.slideshow
+        module:
+          - entity_reference_revisions
+          - text
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slideshow.default
+      targetEntityType: paragraph
+      bundle: slideshow
+      mode: default
+      content:
+        field_arrows:
+          type: boolean
+          label: hidden
+          settings:
+            format: default
+            format_custom_false: ''
+            format_custom_true: ''
+          third_party_settings: {  }
+          weight: 4
+          region: content
+        field_autoplay:
+          type: boolean
+          label: hidden
+          settings:
+            format: default
+            format_custom_false: ''
+            format_custom_true: ''
+          third_party_settings: {  }
+          weight: 2
+          region: content
+        field_display_title:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 1
+          region: content
+        field_loop:
+          type: boolean
+          label: hidden
+          settings:
+            format: default
+            format_custom_false: ''
+            format_custom_true: ''
+          third_party_settings: {  }
+          weight: 3
+          region: content
+        field_markers:
+          type: boolean
+          label: hidden
+          settings:
+            format: default
+            format_custom_false: ''
+            format_custom_true: ''
+          third_party_settings: {  }
+          weight: 5
+          region: content
+        field_slideshow_nt_slides:
+          type: entity_reference_revisions_entity_view
+          label: hidden
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        field_editor_title: true
+      _core:
+        default_config_hash: VeTyGw1k571Bp5Ib0lD0LZoEMD7hNDfUlMcKoEMOG2c
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.slideshow.preview
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.paragraph.preview
+          - field.field.paragraph.slideshow.field_arrows
+          - field.field.paragraph.slideshow.field_autoplay
+          - field.field.paragraph.slideshow.field_display_title
+          - field.field.paragraph.slideshow.field_editor_title
+          - field.field.paragraph.slideshow.field_loop
+          - field.field.paragraph.slideshow.field_markers
+          - field.field.paragraph.slideshow.field_slideshow_nt_slides
+          - paragraphs.paragraphs_type.slideshow
+        module:
+          - layout_builder
+        enforced:
+          module:
+            - slideshow_nugget
+      third_party_settings:
+        layout_builder:
+          enabled: false
+          allow_custom: false
+      id: paragraph.slideshow.preview
+      targetEntityType: paragraph
+      bundle: slideshow
+      mode: preview
+      content:
+        field_editor_title:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        field_arrows: true
+        field_autoplay: true
+        field_display_title: true
+        field_loop: true
+        field_markers: true
+        field_slideshow_nt_slides: true
+      _core:
+        default_config_hash: _EBuYmocTe7d1C3fH-lYCkQcv2M9mq2cw0zM2OGmPGo
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.slideshow.search_rendered_output
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.paragraph.search_rendered_output
+          - field.field.paragraph.slideshow.field_arrows
+          - field.field.paragraph.slideshow.field_autoplay
+          - field.field.paragraph.slideshow.field_display_title
+          - field.field.paragraph.slideshow.field_editor_title
+          - field.field.paragraph.slideshow.field_loop
+          - field.field.paragraph.slideshow.field_markers
+          - field.field.paragraph.slideshow.field_slideshow_nt_slides
+          - paragraphs.paragraphs_type.slideshow
+        module:
+          - entity_reference_revisions
+          - layout_builder
+          - text
+        enforced:
+          module:
+            - slideshow_nugget
+      third_party_settings:
+        layout_builder:
+          enabled: false
+          allow_custom: false
+      id: paragraph.slideshow.search_rendered_output
+      targetEntityType: paragraph
+      bundle: slideshow
+      mode: search_rendered_output
+      content:
+        field_display_title:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 1
+          region: content
+        field_slideshow_nt_slides:
+          type: entity_reference_revisions_entity_view
+          label: hidden
+          settings:
+            view_mode: search_rendered_output
+            link: ''
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        field_arrows: true
+        field_autoplay: true
+        field_editor_title: true
+        field_loop: true
+        field_markers: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: HFU2QmYONT2BMKeNGl58qwvrYkUPfeR8qLy3oplQCX0
+  -
+    collection: ''
+    name: field.field.paragraph.slide_nugglet.field_editor_title
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_editor_title
+          - paragraphs.paragraphs_type.slide_nugglet
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slide_nugglet.field_editor_title
+      field_name: field_editor_title
+      entity_type: paragraph
+      bundle: slide_nugglet
+      label: 'Editor title'
+      description: 'This title is used to describe the content within this nugget for web editors. This title is not displayed on the page.'
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: '-JCp3ETEfSHrWBlwWjMyYXQT6WPyAs4RQdYZmm35UR4'
+  -
+    collection: ''
+    name: field.field.paragraph.slide_nugglet.field_slide_nt_add_a_link
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_slide_nt_add_a_link
+          - paragraphs.paragraphs_type.slide_nugglet
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slide_nugglet.field_slide_nt_add_a_link
+      field_name: field_slide_nt_add_a_link
+      entity_type: paragraph
+      bundle: slide_nugglet
+      label: 'Add a link?'
+      description: 'Enable to add a link to your slide'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        on_label: 'On'
+        off_label: 'Off'
+      field_type: boolean
+      _core:
+        default_config_hash: GSAJETmfNgDH-Q2eB79f7VbABcUcZD7i_DvYv_mLjQU
+  -
+    collection: ''
+    name: field.field.paragraph.slide_nugglet.field_slide_nt_image
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_slide_nt_image
+          - paragraphs.paragraphs_type.slide_nugglet
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slide_nugglet.field_slide_nt_image
+      field_name: field_slide_nt_image
+      entity_type: paragraph
+      bundle: slide_nugglet
+      label: Image
+      description: 'Upload a new image or select an existing one from your media library.'
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: remora_referenceable_media_types_image
+        handler_settings:
+          target_bundles: null
+      field_type: entity_reference
+      _core:
+        default_config_hash: 0uoSQ7ljC0o1zu2Gt2joZBdWs_MgI5-GsbCNm_YX13E
+  -
+    collection: ''
+    name: field.field.paragraph.slide_nugglet.field_slide_nt_link
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_slide_nt_link
+          - paragraphs.paragraphs_type.slide_nugglet
+        module:
+          - link
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slide_nugglet.field_slide_nt_link
+      field_name: field_slide_nt_link
+      entity_type: paragraph
+      bundle: slide_nugglet
+      label: Link
+      description: 'This text is displayed for the hyperlink and is required if a URL is added.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        title: 2
+        link_type: 17
+      field_type: link
+      _core:
+        default_config_hash: kbSyCNuYlW41F7AnD4WeJAewT-v361VCT_envnULlvU
+  -
+    collection: ''
+    name: field.field.paragraph.slide_nugglet.field_slide_nt_summary
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_slide_nt_summary
+          - filter.format.restricted_html
+          - paragraphs.paragraphs_type.slide_nugglet
+        module:
+          - text
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slide_nugglet.field_slide_nt_summary
+      field_name: field_slide_nt_summary
+      entity_type: paragraph
+      bundle: slide_nugglet
+      label: Summary
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        allowed_formats:
+          - restricted_html
+      field_type: text_long
+      _core:
+        default_config_hash: hJDa8pOEXtf2F1tNshe-nEDiCqqJzaR4JFTxbpek60E
+  -
+    collection: ''
+    name: field.field.paragraph.slide_nugglet.field_slide_nt_title
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_slide_nt_title
+          - filter.format.title
+          - paragraphs.paragraphs_type.slide_nugglet
+        module:
+          - text
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slide_nugglet.field_slide_nt_title
+      field_name: field_slide_nt_title
+      entity_type: paragraph
+      bundle: slide_nugglet
+      label: Title
+      description: 'This title is displayed on the Slide.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        allowed_formats:
+          - title
+      field_type: text
+      _core:
+        default_config_hash: RDX6uzhHR7apidq14VDe3134vGw8Z0vRbTjZWUZmbGk
+  -
+    collection: ''
+    name: field.field.paragraph.slideshow.field_arrows
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_arrows
+          - paragraphs.paragraphs_type.slideshow
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slideshow.field_arrows
+      field_name: field_arrows
+      entity_type: paragraph
+      bundle: slideshow
+      label: Arrows
+      description: 'Enable to show navigation arrows on your slideshow.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        on_label: 'On'
+        off_label: 'Off'
+      field_type: boolean
+      _core:
+        default_config_hash: bYzpIxjfLXCMQBj7wsiPjyXmR39Ieokjilxl31-dgLg
+  -
+    collection: ''
+    name: field.field.paragraph.slideshow.field_autoplay
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_autoplay
+          - paragraphs.paragraphs_type.slideshow
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slideshow.field_autoplay
+      field_name: field_autoplay
+      entity_type: paragraph
+      bundle: slideshow
+      label: Autoplay
+      description: 'Enable to automatically play and advance to subsequent slides.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        on_label: 'On'
+        off_label: 'Off'
+      field_type: boolean
+      _core:
+        default_config_hash: 299Nc9aS4ZGL87NEVJNvX1AM4liHTU4bgU50sZBNaI4
+  -
+    collection: ''
+    name: field.field.paragraph.slideshow.field_display_title
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_display_title
+          - filter.format.title
+          - paragraphs.paragraphs_type.slideshow
+        module:
+          - text
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slideshow.field_display_title
+      field_name: field_display_title
+      entity_type: paragraph
+      bundle: slideshow
+      label: 'Display title'
+      description: 'This title is displayed on the page above the content of this nugget.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        allowed_formats:
+          - title
+      field_type: text
+      _core:
+        default_config_hash: 7chZgiAG3NF2KtmTKtTTI1YiH5mFV7MAUrSJAUedDu8
+  -
+    collection: ''
+    name: field.field.paragraph.slideshow.field_editor_title
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_editor_title
+          - paragraphs.paragraphs_type.slideshow
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slideshow.field_editor_title
+      field_name: field_editor_title
+      entity_type: paragraph
+      bundle: slideshow
+      label: 'Editor title'
+      description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: Q98Jp6jsb0fljOirQuu56YlSp5FK5Zl-J743Sqxo3tY
+  -
+    collection: ''
+    name: field.field.paragraph.slideshow.field_loop
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_loop
+          - paragraphs.paragraphs_type.slideshow
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slideshow.field_loop
+      field_name: field_loop
+      entity_type: paragraph
+      bundle: slideshow
+      label: Loop
+      description: 'Enable to advance from the last slide to the first and vice versa.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        on_label: 'On'
+        off_label: 'Off'
+      field_type: boolean
+      _core:
+        default_config_hash: s4KsBwcfGPG5Jta_mqhl5GzMhPKgiTLSm8k0o-CuFlo
+  -
+    collection: ''
+    name: field.field.paragraph.slideshow.field_markers
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_markers
+          - paragraphs.paragraphs_type.slideshow
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slideshow.field_markers
+      field_name: field_markers
+      entity_type: paragraph
+      bundle: slideshow
+      label: Markers
+      description: 'Enable to show clickable markers which jump to a particular slide.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        on_label: 'On'
+        off_label: 'Off'
+      field_type: boolean
+      _core:
+        default_config_hash: LM_y5GUiyy2FNZEpaWuS-NiHMqfPHUOgy9BUCMPAuVA
+  -
+    collection: ''
+    name: field.field.paragraph.slideshow.field_slideshow_nt_slides
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_slideshow_nt_slides
+          - paragraphs.paragraphs_type.slide_nugglet
+          - paragraphs.paragraphs_type.slideshow
+        module:
+          - entity_reference_revisions
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.slideshow.field_slideshow_nt_slides
+      field_name: field_slideshow_nt_slides
+      entity_type: paragraph
+      bundle: slideshow
+      label: Slides
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:paragraph'
+        handler_settings:
+          target_bundles:
+            slide_nugglet: slide_nugglet
+          negate: 0
+          target_bundles_drag_drop:
+            attachments:
+              weight: 11
+              enabled: false
+            card_nugglet:
+              weight: 13
+              enabled: false
+            cards:
+              weight: 12
+              enabled: false
+            flexible_layout:
+              weight: 14
+              enabled: false
+            footer_section:
+              weight: 15
+              enabled: false
+            section:
+              weight: 16
+              enabled: false
+            slide_nugglet:
+              weight: 18
+              enabled: true
+            slideshow:
+              weight: 17
+              enabled: false
+            test:
+              weight: 19
+              enabled: false
+            text_media:
+              weight: 20
+              enabled: false
+      field_type: entity_reference_revisions
+      _core:
+        default_config_hash: yn89ZrAwqQeWFVRw7SEmNENREbI_0ocrq1p7nMyJeXE
+  -
+    collection: ''
+    name: field.storage.paragraph.field_slide_nt_add_a_link
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.field_slide_nt_add_a_link
+      field_name: field_slide_nt_add_a_link
+      entity_type: paragraph
+      type: boolean
+      settings: {  }
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: elC8lyItFeNvLusiTkUvEjLYwsfsYBiQcEyKjMVKXzQ
+  -
+    collection: ''
+    name: field.storage.paragraph.field_slide_nt_image
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - media
+          - paragraphs
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.field_slide_nt_image
+      field_name: field_slide_nt_image
+      entity_type: paragraph
+      type: entity_reference
+      settings:
+        target_type: media
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: IAKSZGwoRrVk29tPB6s_xxsnFIOXeMzk7bZghaXmcmA
+  -
+    collection: ''
+    name: field.storage.paragraph.field_slide_nt_link
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - link
+          - paragraphs
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.field_slide_nt_link
+      field_name: field_slide_nt_link
+      entity_type: paragraph
+      type: link
+      settings: {  }
+      module: link
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: ZWFBRKwC3Y6Z9QekR8izYKgY6-agwszmYO_LfBUBHMQ
+  -
+    collection: ''
+    name: field.storage.paragraph.field_slide_nt_summary
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+          - text
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.field_slide_nt_summary
+      field_name: field_slide_nt_summary
+      entity_type: paragraph
+      type: text_long
+      settings: {  }
+      module: text
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: L5OUHz6kIa-U9zUSZpdAA2-yHAW5cUUt9_dv6liXh3M
+  -
+    collection: ''
+    name: field.storage.paragraph.field_slide_nt_title
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+          - text
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.field_slide_nt_title
+      field_name: field_slide_nt_title
+      entity_type: paragraph
+      type: text
+      settings:
+        max_length: 255
+      module: text
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: bZCPXybdr8oCU2s8w0oBVvQhhHpe8AJb0_7xrJdclOg
+  -
+    collection: ''
+    name: field.storage.paragraph.field_slideshow_nt_slides
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - entity_reference_revisions
+          - paragraphs
+        enforced:
+          module:
+            - slideshow_nugget
+      id: paragraph.field_slideshow_nt_slides
+      field_name: field_slideshow_nt_slides
+      entity_type: paragraph
+      type: entity_reference_revisions
+      settings:
+        target_type: paragraph
+      module: entity_reference_revisions
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: 31DwAuo3VTjQWwgyKeHUuS49kS8Jwmp5qhIPUUXNMf4
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.slide_nugglet
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - slideshow_nugget
+      id: slide_nugglet
+      label: Slide
+      icon_uuid: null
+      icon_default: null
+      description: ''
+      behavior_plugins: {  }
+      _core:
+        default_config_hash: 0DdZFeU6qWCFT8pQ6JLJixfJM689aBW79FyFh1GogFc
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.slideshow
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - slideshow_nugget
+      id: slideshow
+      label: Slideshow
+      icon_uuid: null
+      icon_default: null
+      description: ''
+      behavior_plugins: {  }
+      _core:
+        default_config_hash: 5Oc9UnMhvU6FUsmqHokXySPvIaCTT1PT7tk1LNFugts

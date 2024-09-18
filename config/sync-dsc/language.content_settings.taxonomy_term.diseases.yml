@@ -1,0 +1,20 @@
+uuid: b83eb664-6a2b-42f7-8954-b196860214e0
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.diseases
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: JcLf6AeKbeoUJqCmwxuSau0Yxn1yhfInTU47PjTardw
+id: taxonomy_term.diseases
+target_entity_type_id: taxonomy_term
+target_bundle: diseases
+default_langcode: site_default
+language_alterable: false

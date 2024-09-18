@@ -1,0 +1,26 @@
+uuid: 20b7c4b8-1d59-4992-a88e-f34e274bbe2c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alternative_title
+    - filter.format.title
+    - node.type.person
+  module:
+    - text
+_core:
+  default_config_hash: JXJtwCloka9a3olK67EvxUKanV9wEGNrcbsHxz9jWII
+id: node.person.field_alternative_title
+field_name: field_alternative_title
+entity_type: node
+bundle: person
+label: 'Alternative title'
+description: 'If you would like a different title to the main page title, add it here. This will also be used for SEO.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - title
+field_type: text

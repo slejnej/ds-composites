@@ -1,0 +1,18 @@
+{% extends '@organisation_content_type/partials/content/sidebar-content.html.twig' %}
+
+{% block logo %}
+    {% if content.field_logo['#items'] is not empty %}
+    <div class="media-wrapper position-relative {{ media_entity ? '' : 'mb-4' }}">
+      <div class="media position-relative">
+        {# media entity of field_media field #}
+        {% set media_entity = content.field_logo['#items'].entity %}
+        {{ media_entity|view('landscape_4_3') }}
+      </div>
+
+      <div class="img-blob position-absolute">
+        <img src="{{ directory }}/build/assets/images/blob.svg"/>
+      </div>
+
+    </div>
+  {% endif %}
+{% endblock %}

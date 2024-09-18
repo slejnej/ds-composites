@@ -1,0 +1,68 @@
+uuid: 8d1486b2-2657-4fa2-af8a-e09e02bf30a1
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news.field_alternative_title
+    - field.field.node.news.field_body
+    - field.field.node.news.field_categories
+    - field.field.node.news.field_countries
+    - field.field.node.news.field_date
+    - field.field.node.news.field_diseases
+    - field.field.node.news.field_hero_content
+    - field.field.node.news.field_image
+    - field.field.node.news.field_main_nuggets
+    - field.field.node.news.field_media
+    - field.field.node.news.field_meta_tags
+    - field.field.node.news.field_news_attachments
+    - field.field.node.news.field_news_authors
+    - field.field.node.news.field_news_display_date
+    - field.field.node.news.field_news_link
+    - field.field.node.news.field_postscript_nuggets
+    - field.field.node.news.field_seo_description
+    - field.field.node.news.field_seo_title
+    - field.field.node.news.field_sidebar_nuggets
+    - field.field.node.news.field_summary
+    - field.field.node.news.field_tags
+    - field.field.node.news.field_topics
+    - node.type.news
+  module:
+    - user
+_core:
+  default_config_hash: tuxRtG_7Y-XurU7iLuOnxJ5_jEXZH7PaFjZOQdFJXqE
+id: node.news.teaser
+targetEntityType: node
+bundle: news
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_alternative_title: true
+  field_body: true
+  field_categories: true
+  field_countries: true
+  field_date: true
+  field_diseases: true
+  field_hero_content: true
+  field_image: true
+  field_main_nuggets: true
+  field_media: true
+  field_meta_tags: true
+  field_news_attachments: true
+  field_news_authors: true
+  field_news_display_date: true
+  field_news_link: true
+  field_postscript_nuggets: true
+  field_seo_description: true
+  field_seo_title: true
+  field_sidebar_nuggets: true
+  field_summary: true
+  field_tags: true
+  field_topics: true
+  langcode: true
+  search_api_excerpt: true

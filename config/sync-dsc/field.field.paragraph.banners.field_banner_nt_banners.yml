@@ -1,0 +1,99 @@
+uuid: ada2899c-2c4a-4569-93db-4e59feb50ff4
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_nt_banners
+    - paragraphs.paragraphs_type.banner_nugglet
+    - paragraphs.paragraphs_type.banners
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: fbvSsLAMjCq1mJT5W8L-8TB4b2wDe-RpJieCYBo1cX8
+id: paragraph.banners.field_banner_nt_banners
+field_name: field_banner_nt_banners
+entity_type: paragraph
+bundle: banners
+label: Banners
+description: 'Banners appear randomly on page load if more than one is added.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      banner_nugglet: banner_nugglet
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_nugglet:
+        weight: 24
+        enabled: false
+      accordions:
+        weight: 23
+        enabled: false
+      attachments:
+        weight: 25
+        enabled: false
+      banner_nugglet:
+        weight: 24
+        enabled: true
+      banners:
+        weight: 26
+        enabled: false
+      block:
+        weight: 27
+        enabled: false
+      card_nugglet:
+        weight: 29
+        enabled: false
+      cards:
+        weight: 28
+        enabled: false
+      chart:
+        weight: 30
+        enabled: false
+      event_feed:
+        weight: 31
+        enabled: false
+      flexible_layout:
+        weight: 32
+        enabled: false
+      footer_section:
+        weight: 33
+        enabled: false
+      map:
+        weight: 34
+        enabled: false
+      promo:
+        weight: 35
+        enabled: false
+      related_content:
+        weight: 36
+        enabled: false
+      search:
+        weight: 37
+        enabled: false
+      section:
+        weight: 38
+        enabled: false
+      slide_nugglet:
+        weight: 40
+        enabled: false
+      slideshow:
+        weight: 39
+        enabled: false
+      social_links:
+        weight: 41
+        enabled: false
+      tagline:
+        weight: 42
+        enabled: false
+      text_media:
+        weight: 43
+        enabled: false
+      webform_nugget:
+        weight: 44
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,28 @@
+uuid: 20e5af11-d079-45cc-bcf6-08a793671783
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_items_per_row
+    - paragraphs.paragraphs_type.cards
+  module:
+    - options
+  enforced:
+    module:
+      - cards_nugget
+_core:
+  default_config_hash: yuQe2FEougUklG6PLODvUOO6Je6LE2PfoTztxT1onZ0
+id: paragraph.cards.field_items_per_row
+field_name: field_items_per_row
+entity_type: paragraph
+bundle: cards
+label: 'Items per row'
+description: 'Select number of items to display per row.'
+required: true
+translatable: false
+default_value:
+  -
+    value: '4'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

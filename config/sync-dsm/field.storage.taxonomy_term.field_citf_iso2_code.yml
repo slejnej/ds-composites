@@ -1,0 +1,23 @@
+uuid: d8e8dfc1-446c-4424-8701-d2ee30517d47
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: N8vtwMUGBvLRiictpP_pBDzhjVA6yWjs0QbDly8Rclg
+id: taxonomy_term.field_citf_iso2_code
+field_name: field_citf_iso2_code
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 6
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

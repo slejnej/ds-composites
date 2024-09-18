@@ -1,0 +1,22 @@
+uuid: 87c92f1d-4a3a-427f-98b7-394005af2f84
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.slide_nugglet
+id: paragraph.slide_nugglet.status
+field_name: status
+entity_type: paragraph
+bundle: slide_nugglet
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

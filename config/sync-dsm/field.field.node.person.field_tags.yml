@@ -1,0 +1,31 @@
+uuid: 395480df-dd92-462d-bcf9-22101a9559cc
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.person
+    - taxonomy.vocabulary.tags
+_core:
+  default_config_hash: nfmqmNeGwh7dmr0Zr7zBvmOVSVTr4hzybXQwfPb5Hd0
+id: node.person.field_tags
+field_name: field_tags
+entity_type: node
+bundle: person
+label: Tags
+description: 'Relate your content to one or multiple tags.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

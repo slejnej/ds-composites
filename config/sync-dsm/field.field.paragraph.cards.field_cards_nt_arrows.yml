@@ -1,0 +1,28 @@
+uuid: 6c6caa30-f293-4117-a81d-6a31082de83e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards_nt_arrows
+    - paragraphs.paragraphs_type.cards
+  enforced:
+    module:
+      - cards_nugget
+_core:
+  default_config_hash: _yGDplaK2eZTlsJZFUeEb_wWnwQXvwDOrVTkp0Z1kFI
+id: paragraph.cards.field_cards_nt_arrows
+field_name: field_cards_nt_arrows
+entity_type: paragraph
+bundle: cards
+label: Arrows
+description: 'Enable to show navigation arrows on your slideshow.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

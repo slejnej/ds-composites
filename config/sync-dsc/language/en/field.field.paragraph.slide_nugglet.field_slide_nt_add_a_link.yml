@@ -1,0 +1,5 @@
+label: 'Add a link?'
+description: 'Enable to add a link to your slide'
+settings:
+  on_label: 'On'
+  off_label: 'Off'

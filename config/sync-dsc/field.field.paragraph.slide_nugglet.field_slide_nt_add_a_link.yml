@@ -1,0 +1,26 @@
+uuid: f982411c-f54b-48ee-b9fc-d278232780dd
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_nt_add_a_link
+    - paragraphs.paragraphs_type.slide_nugglet
+  enforced:
+    module:
+      - slideshow_nugget
+_core:
+  default_config_hash: GSAJETmfNgDH-Q2eB79f7VbABcUcZD7i_DvYv_mLjQU
+id: paragraph.slide_nugglet.field_slide_nt_add_a_link
+field_name: field_slide_nt_add_a_link
+entity_type: paragraph
+bundle: slide_nugglet
+label: 'Add a link?'
+description: 'Enable to add a link to your slide'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

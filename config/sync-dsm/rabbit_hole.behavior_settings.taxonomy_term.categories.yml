@@ -1,0 +1,18 @@
+uuid: 643aa3e4-1b4e-4aa3-9e6c-66aff28d1e55
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categories
+_core:
+  default_config_hash: HZuVsnRuEfl6eEwZudjIobyIj4vxUJ2rh9S8HJiJQdk
+id: taxonomy_term.categories
+targetEntityType: taxonomy_term
+bundle: categories
+action: page_redirect
+no_bypass: false
+bypass_message: true
+configuration:
+  redirect: '<front>'
+  redirect_code: 301
+  redirect_fallback_action: access_denied

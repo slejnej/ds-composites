@@ -1,0 +1,24 @@
+uuid: f49f0d9d-899f-4d9a-8a6a-a8fe8da0408f
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_editor_title
+    - paragraphs.paragraphs_type.slide_nugglet
+  enforced:
+    module:
+      - slideshow_nugget
+_core:
+  default_config_hash: '-JCp3ETEfSHrWBlwWjMyYXQT6WPyAs4RQdYZmm35UR4'
+id: paragraph.slide_nugglet.field_editor_title
+field_name: field_editor_title
+entity_type: paragraph
+bundle: slide_nugglet
+label: 'Editor title'
+description: 'This title is used to describe the content within this nugget for web editors. This title is not displayed on the page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

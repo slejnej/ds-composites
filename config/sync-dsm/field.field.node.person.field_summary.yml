@@ -1,0 +1,26 @@
+uuid: a1158513-79ac-4c92-9d23-725c8966cf5a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - filter.format.restricted_html
+    - node.type.person
+  module:
+    - text
+_core:
+  default_config_hash: 9fz9E4V1SmTwwou_q5-GG-xx6sY4YvrnYsfEdgzP5M4
+id: node.person.field_summary
+field_name: field_summary
+entity_type: node
+bundle: person
+label: Summary
+description: 'This summary will be displayed on other pages on your website when referencing back to this page. It may also be used by social media platforms when this page is shared. If you want to have different copy for SEO, please edit the ‘Customised SEO’ section below.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

@@ -1,0 +1,26 @@
+uuid: a11b2066-c00a-487d-afbe-7dedddaaad01
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_postscript_nuggets
+    - node.type.person
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: LB6emfGsTZx8rMFcS8wX0tAyibp5cP8L50BjjBcsNec
+id: node.person.field_postscript_nuggets
+field_name: field_postscript_nuggets
+entity_type: node
+bundle: person
+label: Nuggets
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_paragraph_types_postscript
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference_revisions

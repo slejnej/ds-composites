@@ -1,0 +1,22 @@
+uuid: 1113b9c7-7d7e-40ce-99f9-70c5a3fcd738
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.honorific_titles
+id: taxonomy_term.honorific_titles.status
+field_name: status
+entity_type: taxonomy_term
+bundle: honorific_titles
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

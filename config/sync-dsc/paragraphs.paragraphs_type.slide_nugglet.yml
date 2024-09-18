@@ -1,0 +1,15 @@
+uuid: c6be633a-22c5-4b87-92ae-1fd438d2c9bf
+langcode: en-gb
+status: true
+dependencies:
+  enforced:
+    module:
+      - slideshow_nugget
+_core:
+  default_config_hash: 0DdZFeU6qWCFT8pQ6JLJixfJM689aBW79FyFh1GogFc
+id: slide_nugglet
+label: Slide
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

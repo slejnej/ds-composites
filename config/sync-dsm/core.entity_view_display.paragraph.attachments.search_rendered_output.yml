@@ -1,0 +1,47 @@
+uuid: c46e20ad-cd5b-47e4-affd-abcf8f61f7ae
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.search_rendered_output
+    - field.field.paragraph.attachments.field_attachments_nt_file_atts
+    - field.field.paragraph.attachments.field_display_title
+    - field.field.paragraph.attachments.field_editor_title
+    - field.field.paragraph.attachments.field_items_per_row
+    - paragraphs.paragraphs_type.attachments
+  module:
+    - layout_builder
+    - text
+  enforced:
+    module:
+      - attachments_nugget
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: aG3duO3uvMrAK5d5hkkcz2zNq9_e2rJiHyhUcOZCuz4
+id: paragraph.attachments.search_rendered_output
+targetEntityType: paragraph
+bundle: attachments
+mode: search_rendered_output
+content:
+  field_attachments_nt_file_atts:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_display_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_editor_title: true
+  field_items_per_row: true
+  search_api_excerpt: true

@@ -1,0 +1,29 @@
+uuid: 027c477a-1dfe-4f99-a3e8-4058dcab2a87
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: exANf4ct8t7-j17Rco8kZ7yaIOhFaqRSNWXa4eAUzPY
+id: paragraph.field_presentation
+field_name: field_presentation
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: grid
+      label: Grid
+    -
+      value: slideshow
+      label: Slideshow
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

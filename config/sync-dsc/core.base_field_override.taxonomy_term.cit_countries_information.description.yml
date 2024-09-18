@@ -1,0 +1,21 @@
+uuid: 227121fa-89ed-4134-8188-3b9d9527bea4
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cit_countries_information
+  module:
+    - text
+id: taxonomy_term.cit_countries_information.description
+field_name: description
+entity_type: taxonomy_term
+bundle: cit_countries_information
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,31 @@
+uuid: dd0ff619-455e-488c-b6aa-83b40114bf3a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_organisation
+    - node.type.person
+    - taxonomy.vocabulary.organisations
+_core:
+  default_config_hash: 7dU39ZlNZJL4zC9cOLdgx8BInpe6FssBOqr4sCl53wQ
+id: node.person.field_person_organisation
+field_name: field_person_organisation
+entity_type: node
+bundle: person
+label: Organisation
+description: 'This is typically used for external organisations.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      organisations: organisations
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,10 @@
+uuid: 5eef825b-1fd3-40c5-9eba-f206c52d2722
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: DEmkunMNk8gknE23-Q21jfnYIqEvIuoYYnt_T5dtiJo
+name: 'Honorific titles'
+vid: honorific_titles
+description: ''
+weight: 0

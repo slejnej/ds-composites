@@ -1,0 +1,23 @@
+uuid: 309ba0e6-b335-4360-a1cb-0b54e737f70c
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+  enforced:
+    module:
+      - slideshow_nugget
+_core:
+  default_config_hash: elC8lyItFeNvLusiTkUvEjLYwsfsYBiQcEyKjMVKXzQ
+id: paragraph.field_slide_nt_add_a_link
+field_name: field_slide_nt_add_a_link
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

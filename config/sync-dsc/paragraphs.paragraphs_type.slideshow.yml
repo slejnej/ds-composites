@@ -1,0 +1,15 @@
+uuid: a1e71803-69c7-4048-9dbf-90198cae7aa5
+langcode: en-gb
+status: true
+dependencies:
+  enforced:
+    module:
+      - slideshow_nugget
+_core:
+  default_config_hash: 5Oc9UnMhvU6FUsmqHokXySPvIaCTT1PT7tk1LNFugts
+id: slideshow
+label: Slideshow
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

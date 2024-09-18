@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "76b2bd6c9f9403a4200aa2443622b4e8",
+    "content-hash": "f1a5f3b6a6c19053db2aba1212a86b34",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3091,6 +3091,138 @@
             }
         },
         {
+            "name": "drupal/eu_cookie_compliance",
+            "version": "1.24.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/eu-cookie-compliance.git",
+                "reference": "8.x-1.24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/eu_cookie_compliance-8.x-1.24.zip",
+                "reference": "8.x-1.24",
+                "shasum": "ab8dcd866e5ad95cde6fdf9cbca509c7f399bd23"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.24",
+                    "datestamp": "1665158185",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Marcin Pajdzik",
+                    "homepage": "https://www.drupal.org/u/marcin-pajdzik",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Sven Berg Ryen",
+                    "homepage": "https://www.drupal.org/u/svenryen",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/1538032/committers"
+                },
+                {
+                    "name": "svenryen",
+                    "homepage": "https://www.drupal.org/user/667244"
+                }
+            ],
+            "description": "This module aims at making the website compliant with the new EU cookie regulation.",
+            "homepage": "https://drupal.org/project/eu_cookie_compliance",
+            "keywords": [
+                "Cookie",
+                "CookieCompliance",
+                "Drupal",
+                "GDPR"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/eu-cookie-compliance",
+                "docs": "https://www.drupal.org/docs/contributed-modules/eu-cookie-compliance",
+                "forum": "https://drupal.stackexchange.com/search?q=eu+cookie+compliance",
+                "issues": "https://www.drupal.org/project/issues/eu_cookie_compliance?version=8.x",
+                "slack": "https://app.slack.com/client/T06GX3JTS/C012XBTH81E"
+            }
+        },
+        {
+            "name": "drupal/eu_cookie_compliance_gtm",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/eu_cookie_compliance_gtm.git",
+                "reference": "2.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/eu_cookie_compliance_gtm-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "f02bfd13976a51fe47cf63d06bfd1a29ab6bf35b"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10",
+                "drupal/eu_cookie_compliance": "^1.24",
+                "drupal/google_tag": "^1.6 || ^2.0",
+                "php": ">=5.4"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.0",
+                    "datestamp": "1691746157",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "daften",
+                    "homepage": "https://www.drupal.org/user/176274"
+                },
+                {
+                    "name": "Nick_vh",
+                    "homepage": "https://www.drupal.org/user/122682"
+                },
+                {
+                    "name": "nielsaers",
+                    "homepage": "https://www.drupal.org/user/752444"
+                },
+                {
+                    "name": "reszli",
+                    "homepage": "https://www.drupal.org/user/710368"
+                }
+            ],
+            "description": "Extends EU Cookie Compliance module and allows pushing custom data to GTM for each cookie category.",
+            "homepage": "https://www.drupal.org/project/eu_cookie_compliance_gtm",
+            "support": {
+                "source": "https://git.drupalcode.org/project/eu_cookie_compliance_gtm"
+            }
+        },
+        {
             "name": "drupal/field_group",
             "version": "3.6.0",
             "source": {
@@ -3286,6 +3418,78 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ]
+        },
+        {
+            "name": "drupal/google_tag",
+            "version": "2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/google_tag.git",
+                "reference": "2.0.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/google_tag-2.0.6.zip",
+                "reference": "2.0.6",
+                "shasum": "c8f2895a81a7898ac909bdc693fcd25ffe6f62be"
+            },
+            "require": {
+                "drupal/core": "^9.5 || ^10 || ^11"
+            },
+            "require-dev": {
+                "drupal/commerce": "^2.0",
+                "drupal/commerce_wishlist": "^3.0@beta",
+                "drupal/csp": "^1.0",
+                "drupal/google_analytics": "^4.0",
+                "drupal/search_api": "^1.28.0",
+                "drupal/token": "^1.11.0",
+                "drupal/webform": "^6.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.6",
+                    "datestamp": "1721948116",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-main": "2.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "acquia",
+                    "homepage": "https://www.drupal.org/user/1231722"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "kaynen",
+                    "homepage": "https://www.drupal.org/user/733308"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
+                {
+                    "name": "solotandem",
+                    "homepage": "https://www.drupal.org/user/240748"
+                }
+            ],
+            "description": "Provides support for Google Tag and Google Tag Manager in Drupal.",
+            "homepage": "https://www.drupal.org/project/google_tag",
+            "support": {
+                "source": "https://git.drupalcode.org/project/google_tag"
+            }
         },
         {
             "name": "drupal/honeypot",
@@ -5775,7 +5979,7 @@
         },
         {
             "name": "mantaraymedia/base_repository",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "local-vendors/base_repository",
@@ -5804,7 +6008,7 @@
         },
         {
             "name": "mantaraymedia/cache_service",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "local-vendors/cache_service",
@@ -5948,7 +6152,7 @@
         },
         {
             "name": "mrm-remora/attachments_nugget",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/attachments_nugget",
@@ -5975,7 +6179,7 @@
         },
         {
             "name": "mrm-remora/aws-code-deploy",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "local-vendors/aws-code-deploy",
@@ -6026,7 +6230,7 @@
         },
         {
             "name": "mrm-remora/aws-plugin-installer",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "local-vendors/aws-plugin-installer",
@@ -6058,7 +6262,7 @@
         },
         {
             "name": "mrm-remora/banners_nugget",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/banners_nugget",
@@ -6089,7 +6293,7 @@
         },
         {
             "name": "mrm-remora/cards_nugget",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/cards_nugget",
@@ -6116,7 +6320,7 @@
         },
         {
             "name": "mrm-remora/countries_info",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/countries_info",
@@ -6142,7 +6346,7 @@
         },
         {
             "name": "mrm-remora/helper_module",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/helper_module",
@@ -6165,7 +6369,7 @@
         },
         {
             "name": "mrm-remora/installation_profile",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/installation_profile",
@@ -6183,7 +6387,7 @@
         },
         {
             "name": "mrm-remora/news_content_type",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/news_content_type",
@@ -6209,7 +6413,7 @@
         },
         {
             "name": "mrm-remora/organisations_taxonomy",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/organisations_taxonomy",
@@ -6236,7 +6440,7 @@
         },
         {
             "name": "mrm-remora/page_content_type",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/page_content_type",
@@ -6262,7 +6466,7 @@
         },
         {
             "name": "mrm-remora/person_content_type",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/person_content_type",
@@ -6283,7 +6487,7 @@
         },
         {
             "name": "mrm-remora/promo_nugget",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/promo_nugget",
@@ -6310,7 +6514,7 @@
         },
         {
             "name": "mrm-remora/remora_base_theme",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/themes/custom/remora_base_theme",
@@ -6338,7 +6542,7 @@
         },
         {
             "name": "mrm-remora/remora_core",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/remora_core",
@@ -6433,7 +6637,7 @@
         },
         {
             "name": "mrm-remora/remora_sections",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/remora_sections",
@@ -6468,7 +6672,7 @@
         },
         {
             "name": "mrm-remora/security",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/security",
@@ -6508,7 +6712,7 @@
         },
         {
             "name": "mrm-remora/slideshow_nugget",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/slideshow_nugget",
@@ -6534,7 +6738,7 @@
         },
         {
             "name": "mrm-remora/tagging",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/tagging",
@@ -6562,7 +6766,7 @@
         },
         {
             "name": "mrm-remora/tagline_nugget",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/tagline_nugget",
@@ -6589,7 +6793,7 @@
         },
         {
             "name": "mrm-remora/text_media_nugget",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/text_media_nugget",
@@ -6616,7 +6820,7 @@
         },
         {
             "name": "mrm-remora/tonic",
-            "version": "dev-main",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "web/themes/custom/tonic",

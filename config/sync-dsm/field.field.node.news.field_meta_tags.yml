@@ -1,0 +1,23 @@
+uuid: 207d4a6c-a8c8-48ac-bb21-8b3581de59a3
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.news
+  module:
+    - metatag
+_core:
+  default_config_hash: biZNIzA8AxJD8ryqJw1diJIJvGrv_ulx_9N7uoEDSBk
+id: node.news.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: news
+label: 'Meta tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

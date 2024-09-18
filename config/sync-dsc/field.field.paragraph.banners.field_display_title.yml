@@ -1,0 +1,26 @@
+uuid: 17ef710c-ef0e-429b-9e0a-fd7ef82c3302
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_title
+    - filter.format.title
+    - paragraphs.paragraphs_type.banners
+  module:
+    - text
+_core:
+  default_config_hash: rfbNV9TKHtQDYL84xn8WuwHD0thdpcyrlHSGjRAx1WM
+id: paragraph.banners.field_display_title
+field_name: field_display_title
+entity_type: paragraph
+bundle: banners
+label: 'Display title'
+description: 'This title is displayed on the page above the content of this nugget.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - title
+field_type: text

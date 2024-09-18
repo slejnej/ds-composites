@@ -1,0 +1,12 @@
+_core:
+  default_config_hash: 7h0XSHDNplRQssa6PjXRg8DsnXNv7khqgd0kN-oDi3o
+langcode: en-gb
+status: 1
+pattern: '[node:field_honorific_title] [node:field_first_name] [node:field_last_name]'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - node.type.person

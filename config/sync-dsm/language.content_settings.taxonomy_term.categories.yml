@@ -1,0 +1,13 @@
+uuid: 140fb3b9-3f75-4d9e-b154-7e0b418c0098
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categories
+_core:
+  default_config_hash: VfOs4MIwrKXhw25IX-VGy1CWgSahRxQp-lIEKwX5F24
+id: taxonomy_term.categories
+target_entity_type_id: taxonomy_term
+target_bundle: categories
+default_langcode: site_default
+language_alterable: false

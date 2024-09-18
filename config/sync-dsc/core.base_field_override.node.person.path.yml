@@ -1,0 +1,20 @@
+uuid: 56ef241c-6f0a-48ab-a3b2-7e61e39d33d6
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.person
+  module:
+    - path
+id: node.person.path
+field_name: path
+entity_type: node
+bundle: person
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

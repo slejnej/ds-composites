@@ -1,0 +1,26 @@
+uuid: ce967207-1a39-4ca0-9d81-3f77f9acd636
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_nuggets
+    - node.type.page
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: lDj0HolYdujgmL-jCLqLkOguxqb-2t-h5VPTjkBIk2s
+id: node.page.field_sidebar_nuggets
+field_name: field_sidebar_nuggets
+entity_type: node
+bundle: page
+label: 'Sidebar nuggets'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_paragraph_types_sidebar
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference_revisions

@@ -1,0 +1,71 @@
+{% extends '@banners_nugget/paragraphs/paragraph--banner-nugglet.html.twig' %}
+
+{% block content %}
+  <div
+    class="banner-wrapper mx-auto h-100 d-flex flex-column flex-lg-row align-items-stretch justify-content-between">
+
+    {{ block('image_caption') }}
+
+    {% block banner_caption %}
+      {% if content.field_banner_nt_title['#items'] is not empty or
+        content.field_banner_nt_summary['#items'] is not empty or
+        content.field_banner_nt_link['#items'] is not empty %}
+        <div
+          class="banner-caption-wrapper d-flex flex-column justify-content-center h-100 flex-lg-6 flex-xxl-5 position-relative">
+
+          {% block banner_title %}
+            {% if content.field_banner_nt_title['#items'] is not empty %}
+              <div class="caption-title display-6">
+                {{ content.field_banner_nt_title }}
+              </div>
+            {% endif %}
+          {% endblock %}
+
+          {{ block ('banner_summary') }}
+
+          {% block banner_link %}
+            {% if content.field_banner_nt_link['#items'] is not empty %}
+              <div class="caption-link">
+                {% if banner_link %}
+                  <a href="{{ banner_link.getUrl() }}" class="btn">
+                    {{ banner_link.title }}
+                  </a>
+                {% endif %}
+              </div>
+            {% endif %}
+          {% endblock %}
+
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block banner_image %}
+      {% if content.field_banner_nt_image['#items'] is not empty %}
+        <div class="banner-image-wrapper position-relative d-flex align-items-end justify-content-center flex-lg-6 flex-xxl-7">
+
+          <div class="banner-splat position-absolute">
+            {{ source(directory ~ '/assets/images/banner-splat.svg') }}
+          </div>
+
+          <div class="banner-splat-small position-absolute"></div>
+
+          <div class="banner-splat-medium position-absolute"></div>
+
+          {% block banner_image_ratio %}
+            <div class="banner-image position-relative">
+
+              <div class="image position-relative">
+                {{ image|remora_image({'default': 'free'}) }}
+              </div>
+
+              <div class="image-cutoff position-absolute"></div>
+
+            </div>
+          {% endblock %}
+
+        </div>
+      {% endif %}
+    {% endblock %}
+
+  </div>
+{% endblock %}

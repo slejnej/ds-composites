@@ -1,0 +1,22 @@
+uuid: 4b92f7f8-21fa-4d0c-bf8b-0449b465577c
+langcode: en-gb
+status: true
+dependencies:
+  theme:
+    - remora_base_theme
+_core:
+  default_config_hash: HWHJETxXEtPPiFBZcLJ4Au5-2P-zJEOOiKkkb079cOQ
+id: remora_base_theme_local_tasks
+theme: remora_base_theme
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

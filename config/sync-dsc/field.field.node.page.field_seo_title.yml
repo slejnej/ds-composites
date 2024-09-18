@@ -1,0 +1,23 @@
+uuid: cc032878-4d3b-444d-af60-716e7a923a2e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo_title
+    - node.type.page
+_core:
+  default_config_hash: BwFFfwGVDb-42frMByA6PPyn4w3ld-EvoeHYT5dCfmk
+id: node.page.field_seo_title
+field_name: field_seo_title
+entity_type: node
+bundle: page
+label: 'SEO Title'
+description: "Complete this field to specify the text to display in the title bar of a visitor's web browser when they view this page. It may also be displayed on search engine results. It is recommended that the title is no greater than 55 - 65 characters long, including spaces (and the site’s name which will automatically be added)."
+required: false
+translatable: true
+default_value:
+  -
+    value: '[remora:seo_title]'
+default_value_callback: ''
+settings: {  }
+field_type: string

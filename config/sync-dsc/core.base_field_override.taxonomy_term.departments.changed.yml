@@ -1,0 +1,18 @@
+uuid: 953148ed-1c31-480d-bb56-d76838843cba
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.departments
+id: taxonomy_term.departments.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: departments
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

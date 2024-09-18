@@ -1,0 +1,100 @@
+uuid: e0090403-b1d9-4f3c-a22e-5ff2dd24ea96
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - organisations_taxonomy
+id: config_sync.module.organisations_taxonomy
+snapshotSet: config_sync
+extensionType: module
+extensionName: organisations_taxonomy
+items:
+  -
+    collection: ''
+    name: core.entity_form_display.taxonomy_term.organisations.default
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.organisations
+        module:
+          - field_layout
+          - layout_discovery
+      third_party_settings:
+        field_layout:
+          id: layout_onecol
+          settings:
+            label: ''
+      id: taxonomy_term.organisations.default
+      targetEntityType: taxonomy_term
+      bundle: organisations
+      mode: default
+      content:
+        name:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+      hidden:
+        description: true
+        langcode: true
+        path: true
+        simple_sitemap: true
+        simple_sitemap_index_now: true
+        status: true
+      _core:
+        default_config_hash: H8Hn1C4qJyEf4ridDNo8P_PqdnqnmwlLPcSRpBAk5xg
+  -
+    collection: ''
+    name: language.content_settings.taxonomy_term.organisations
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.organisations
+      id: taxonomy_term.organisations
+      target_entity_type_id: taxonomy_term
+      target_bundle: organisations
+      default_langcode: site_default
+      language_alterable: false
+      _core:
+        default_config_hash: LfOeb2oNx7ERTHEUasZzsIfjN74-dLOQQJ4FW-BpiTg
+  -
+    collection: ''
+    name: rabbit_hole.behavior_settings.taxonomy_term.organisations
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.organisations
+      id: taxonomy_term.organisations
+      targetEntityType: taxonomy_term
+      bundle: organisations
+      action: page_redirect
+      no_bypass: true
+      bypass_message: false
+      configuration:
+        redirect: '<front>'
+        redirect_code: 302
+        redirect_fallback_action: access_denied
+      _core:
+        default_config_hash: g0TTJiXmqDbkMllotdZrtO89W40apro-8VLF-Cfvo1E
+  -
+    collection: ''
+    name: taxonomy.vocabulary.organisations
+    data:
+      langcode: en-gb
+      status: true
+      dependencies: {  }
+      name: Organisations
+      vid: organisations
+      description: ''
+      weight: 0
+      _core:
+        default_config_hash: 2ObztXQJvdvpaCi2UBrQXkzykKDw3aupr3IpbVbkIAU

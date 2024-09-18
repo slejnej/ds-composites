@@ -1,0 +1,5 @@
+label: Markers
+description: 'Enable to show clickable markers which jump to a particular slide.'
+settings:
+  on_label: 'On'
+  off_label: 'Off'

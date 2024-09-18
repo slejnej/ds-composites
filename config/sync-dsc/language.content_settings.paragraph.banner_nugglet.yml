@@ -1,0 +1,18 @@
+uuid: 8b1e8df5-c036-4764-9f95-a4bc4ee9dabe
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.banner_nugglet
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.banner_nugglet
+target_entity_type_id: paragraph
+target_bundle: banner_nugglet
+default_langcode: site_default
+language_alterable: true

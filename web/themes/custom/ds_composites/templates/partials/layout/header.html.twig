@@ -1,0 +1,37 @@
+{% extends '@remora_base_theme/partials/layout/header.html.twig' %}
+
+{% block header %}
+
+  <header class="header-wrapper ">
+
+    <div class="container-xxl d-flex align-items-center py-0">
+
+      {% block header_logo_menu %}
+        <div class="header-logo-menu py-3">
+
+          {{ block('logo') }}
+
+        </div>
+      {% endblock %}
+
+      {% block header_main_menu %}
+        <div class="header-menus container-xxl d-flex flex-column align-items-end py-3 py-lg-0">
+
+          {% block top_menu %}
+            <div class="top-menu d-none d-md-inline-block mb-md-3">
+              {% remora_include 'partials/navigation/top-menu.html.twig' %}
+            </div>
+          {% endblock %}
+
+          <div class="main-menu d-flex justify-content-end">
+
+            {{ block('main_menu') }}
+
+          </div>
+        </div>
+      {% endblock %}
+
+    </div>
+
+  </header>
+{% endblock %}

@@ -1,0 +1,51 @@
+uuid: b23b2d30-c491-46ee-9d19-673edc40b26a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.diseases.rabbit_hole__settings
+    - taxonomy.vocabulary.diseases
+  module:
+    - field_layout
+    - layout_discovery
+    - rabbit_hole
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: StcP-yYA2JRe_DpT_j_NLnk1EYmnDAhJoGUP-U7REn8
+id: taxonomy_term.diseases.default
+targetEntityType: taxonomy_term
+bundle: diseases
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  rabbit_hole__settings:
+    type: rabbit_hole_default
+    weight: 2
+    region: content
+    settings:
+      advanced: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  simple_sitemap: true
+  simple_sitemap_index_now: true
+  status: true

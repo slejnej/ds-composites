@@ -1,0 +1,22 @@
+uuid: 4d32982a-64dc-46e1-9e9f-3fc9cb140a64
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: GrpJ9uccTMyKB6NbHNmBPL_9WWc6lanjf02yQKu1Cq8
+id: node.field_person_organisation
+field_name: field_person_organisation
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: 46120fa4-9004-43eb-aba9-f6317e7fe21a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_nt_title
+    - filter.format.title
+    - paragraphs.paragraphs_type.slide_nugglet
+  module:
+    - text
+  enforced:
+    module:
+      - slideshow_nugget
+_core:
+  default_config_hash: RDX6uzhHR7apidq14VDe3134vGw8Z0vRbTjZWUZmbGk
+id: paragraph.slide_nugglet.field_slide_nt_title
+field_name: field_slide_nt_title
+entity_type: paragraph
+bundle: slide_nugglet
+label: Title
+description: 'This title is displayed on the Slide.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - title
+field_type: text

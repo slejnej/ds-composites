@@ -1,0 +1,26 @@
+uuid: 96ebb2e4-0309-4a64-8ebd-0c9160f48ad0
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - remora_base_theme
+_core:
+  default_config_hash: eLJETc5TWGffLOQH2q4witL4_ysRGUIl3avLhIIhs3M
+id: remora_base_theme_breadcrumbs
+theme: remora_base_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

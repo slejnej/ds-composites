@@ -1,0 +1,25 @@
+uuid: aaacf54f-c6fb-4a92-b1fa-71afc5e19518
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ds_composites
+_core:
+  default_config_hash: sG8t_FghbUscJ-GrnQ8zs_vx5YM4bJCfntrK-J5HcAY
+id: ds_composites_branding
+theme: ds_composites
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

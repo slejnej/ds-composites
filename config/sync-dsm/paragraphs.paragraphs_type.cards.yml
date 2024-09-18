@@ -1,0 +1,20 @@
+uuid: 1276a678-d1aa-442b-b857-eb5a1b568a73
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+  enforced:
+    module:
+      - cards_nugget
+_core:
+  default_config_hash: KSNh7OSyNl5e_fR28olBUHD0rKLwro4S1sADn5VfhjU
+id: cards
+label: Cards
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

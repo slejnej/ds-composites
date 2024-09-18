@@ -1,0 +1,21 @@
+uuid: a4bfa670-d310-49a8-bb68-fb2c39f5add0
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_editor_title
+    - paragraphs.paragraphs_type.banner_nugglet
+_core:
+  default_config_hash: _Lf01x2glK7OrNK3BORc3ihAg_3gMAUwYU9j7Esy_Uc
+id: paragraph.banner_nugglet.field_editor_title
+field_name: field_editor_title
+entity_type: paragraph
+bundle: banner_nugglet
+label: 'Editor title'
+description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

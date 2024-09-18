@@ -1,0 +1,31 @@
+uuid: aad90fa3-f158-4e3b-9ebf-4fbf6db247b1
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_honorific_title
+    - node.type.person
+    - taxonomy.vocabulary.honorific_titles
+_core:
+  default_config_hash: lLemAzKIRs1F9yPtsHwliitcKk-dSjA-ry1Tbtv1RiA
+id: node.person.field_honorific_title
+field_name: field_honorific_title
+entity_type: node
+bundle: person
+label: 'Honorific title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      honorific_titles: honorific_titles
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

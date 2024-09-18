@@ -1,0 +1,50 @@
+uuid: 5c1b2a95-28a2-47be-b9cc-8b5bb5403d5a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.honorific_titles
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: DZufLNibycYG-lLLQ0nJ-PD_gQIA7xBArlAFWn_IdBM
+id: taxonomy_term.honorific_titles.default
+targetEntityType: taxonomy_term
+bundle: honorific_titles
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  status: true

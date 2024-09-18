@@ -1,0 +1,31 @@
+uuid: 54d709e2-0251-4e6e-ab41-37101abbbbbb
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_diseases
+    - node.type.page
+    - taxonomy.vocabulary.diseases
+_core:
+  default_config_hash: K9hIE2eKDBEHYeQYdSGPjn8s9d3giQL9F4Y1vqhCk3I
+id: node.page.field_diseases
+field_name: field_diseases
+entity_type: node
+bundle: page
+label: Diseases
+description: 'Relate your content to one or multiple diseases.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      diseases: diseases
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

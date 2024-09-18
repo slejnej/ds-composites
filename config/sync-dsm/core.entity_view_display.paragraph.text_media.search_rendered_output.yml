@@ -1,0 +1,48 @@
+uuid: 79ecdcc5-71c8-4eca-b6fa-f0b351747ee7
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.search_rendered_output
+    - field.field.paragraph.text_media.field_display_title
+    - field.field.paragraph.text_media.field_editor_title
+    - field.field.paragraph.text_media.field_text_media_nt_media
+    - field.field.paragraph.text_media.field_text_media_nt_presentation
+    - field.field.paragraph.text_media.field_text_media_nt_text
+    - paragraphs.paragraphs_type.text_media
+  module:
+    - layout_builder
+    - text
+  enforced:
+    module:
+      - text_media_nugget
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: 1z2m0OR5JQ_9RWpS6O-jygzxZiFgyUJhoTvV3ebqqDE
+id: paragraph.text_media.search_rendered_output
+targetEntityType: paragraph
+bundle: text_media
+mode: search_rendered_output
+content:
+  field_display_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_text_media_nt_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_editor_title: true
+  field_text_media_nt_media: true
+  field_text_media_nt_presentation: true
+  search_api_excerpt: true

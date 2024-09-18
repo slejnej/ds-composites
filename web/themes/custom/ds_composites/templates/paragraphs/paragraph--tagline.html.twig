@@ -1,0 +1,22 @@
+{% extends '@tagline_nugget/paragraphs/paragraph--tagline.html.twig' %}
+
+{% block paragraph_content %}
+  <div{{ attributes.addClass(classes, 'position-relative') }}>
+    {% block content %}
+
+      <div class="tagline-content container-xxl d-flex flex-column position-relative">
+
+        {{ block('title') }}
+
+        {{ block('text') }}
+
+      </div>
+
+    {% endblock %}
+
+    <div class="tagline-bg position-absolute w-100 h-100"></div>
+
+    <div class="tagline-swoosh position-absolute w-100"></div>
+
+  </div>
+{% endblock %}

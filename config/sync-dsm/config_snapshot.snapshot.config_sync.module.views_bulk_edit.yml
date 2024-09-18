@@ -1,0 +1,79 @@
+uuid: c40c29af-cd6c-41b9-b60e-b902b51abc86
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - views_bulk_edit
+id: config_sync.module.views_bulk_edit
+snapshotSet: config_sync
+extensionType: module
+extensionName: views_bulk_edit
+items:
+  -
+    collection: ''
+    name: system.action.media_edit_action
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - views_bulk_edit
+          - media
+      id: media_edit_action
+      label: 'Edit media'
+      type: media
+      plugin: 'entity:edit_action:media'
+      configuration: {  }
+      _core:
+        default_config_hash: xN0kWpQZeiYp9xWNycp37rmLmAcnEyS9LDjPPTPce2w
+  -
+    collection: ''
+    name: system.action.node_edit_action
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - views_bulk_edit
+          - node
+      id: node_edit_action
+      label: 'Edit content'
+      type: node
+      plugin: 'entity:edit_action:node'
+      configuration: {  }
+      _core:
+        default_config_hash: 0vLpSGhoYOPeREkfW-7bDeJOwEfW3zeG3nUBwUgsKQI
+  -
+    collection: ''
+    name: system.action.taxonomy_term_edit_action
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - views_bulk_edit
+          - taxonomy
+      id: taxonomy_term_edit_action
+      label: 'Edit taxonomy terms'
+      type: taxonomy_term
+      plugin: 'entity:edit_action:taxonomy_term'
+      configuration: {  }
+      _core:
+        default_config_hash: b5BETc7ATggsTs4n0jHuPnUbl-QJ5Y4obwjOAsAjMU0
+  -
+    collection: ''
+    name: system.action.user_edit_action
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - views_bulk_edit
+          - user
+      id: user_edit_action
+      label: 'Edit users'
+      type: user
+      plugin: 'entity:edit_action:user'
+      configuration: {  }
+      _core:
+        default_config_hash: Bjz27y1Z8D8KsOY6XIy3E79Cl7VDXkWLpePx2NqCc1M

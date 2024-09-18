@@ -1,0 +1,26 @@
+uuid: 4d1db16b-22dc-4cd8-841f-1938b1feca18
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.topics.rabbit_hole__settings
+    - taxonomy.vocabulary.topics
+  module:
+    - text
+_core:
+  default_config_hash: 945RwkCe-7RgeGnsUEmGiaebCGIRWzmhS4JAtKGgh90
+id: taxonomy_term.topics.default
+targetEntityType: taxonomy_term
+bundle: topics
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  rabbit_hole__settings: true

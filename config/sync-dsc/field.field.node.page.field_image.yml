@@ -1,0 +1,24 @@
+uuid: ffab774b-4b16-4c74-a3a4-014cf7e423f1
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.page
+_core:
+  default_config_hash: NXDojwc8aLG9TxN3OHOySXDF7XKR-MSdO7eHdpYc9c4
+id: node.page.field_image
+field_name: field_image
+entity_type: node
+bundle: page
+label: Image
+description: 'This image will be displayed on other pages on this site when referencing back to this page. It may also be used by social media platforms when this page is shared.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_media_types_image
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference

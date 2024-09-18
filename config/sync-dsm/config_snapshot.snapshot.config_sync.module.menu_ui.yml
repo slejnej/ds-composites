@@ -1,0 +1,18 @@
+uuid: 6b6692c4-c428-4d13-8257-8c0a930df63c
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+id: config_sync.module.menu_ui
+snapshotSet: config_sync
+extensionType: module
+extensionName: menu_ui
+items:
+  -
+    collection: ''
+    name: menu_ui.settings
+    data:
+      override_parent_selector: false
+      _core:
+        default_config_hash: SqMarzIjxC3F8dZo9FEOxfqDKD_sdW1tbcFTV1BA2zU

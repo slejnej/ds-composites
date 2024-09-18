@@ -1,0 +1,23 @@
+uuid: 0280c226-6861-4e7c-bdfa-5b758f6a95c4
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+  enforced:
+    module:
+      - cards_nugget
+_core:
+  default_config_hash: MSj_KbkW8zHS9oMqRTcJ-oXj_X9PRwUNL9n5Zjz2_bM
+id: paragraph.field_cards_nt_loop
+field_name: field_cards_nt_loop
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

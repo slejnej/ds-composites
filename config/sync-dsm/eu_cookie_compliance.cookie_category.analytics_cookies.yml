@@ -1,0 +1,17 @@
+uuid: fd5b16b4-09dc-4e63-b8bd-4a7edeb9f56c
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - eu_cookie_compliance_gtm
+third_party_settings:
+  eu_cookie_compliance_gtm:
+    gtm_data:
+      analytics_storage: '@status'
+_core:
+  default_config_hash: SsqV9DWkxUQFt1Fs4Cgs59Gl9GnobReuWmEfx1jc7vU
+id: analytics_cookies
+label: 'Analytics cookies'
+description: "We'd like to set Google Analytics cookies (through GTM) to help us improve our website by collecting and reporting information on how you use it. The cookies collect information in a way that does not directly identify anyone. For more information on how these cookies work please see our 'Cookies page'."
+checkbox_default_state: unchecked
+weight: -8

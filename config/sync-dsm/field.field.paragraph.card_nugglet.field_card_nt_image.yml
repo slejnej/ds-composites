@@ -1,0 +1,27 @@
+uuid: b8fb3f57-d9a2-45b6-b3b8-ec040f4369b0
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_nt_image
+    - paragraphs.paragraphs_type.card_nugglet
+  enforced:
+    module:
+      - cards_nugget
+_core:
+  default_config_hash: UNC3vmAaAL0_YCS5hmbretBzpaalDCw-VZN2MbqMmdk
+id: paragraph.card_nugglet.field_card_nt_image
+field_name: field_card_nt_image
+entity_type: paragraph
+bundle: card_nugglet
+label: Image
+description: 'Upload a new image or select an existing one from your media library.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_media_types_image
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference

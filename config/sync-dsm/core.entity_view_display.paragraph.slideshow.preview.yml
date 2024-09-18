@@ -1,0 +1,45 @@
+uuid: bea9bb18-cb3e-4af3-9739-0e0ea7418727
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.slideshow.field_arrows
+    - field.field.paragraph.slideshow.field_autoplay
+    - field.field.paragraph.slideshow.field_display_title
+    - field.field.paragraph.slideshow.field_editor_title
+    - field.field.paragraph.slideshow.field_loop
+    - field.field.paragraph.slideshow.field_markers
+    - field.field.paragraph.slideshow.field_slideshow_nt_slides
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - layout_builder
+  enforced:
+    module:
+      - slideshow_nugget
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: _EBuYmocTe7d1C3fH-lYCkQcv2M9mq2cw0zM2OGmPGo
+id: paragraph.slideshow.preview
+targetEntityType: paragraph
+bundle: slideshow
+mode: preview
+content:
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_arrows: true
+  field_autoplay: true
+  field_display_title: true
+  field_loop: true
+  field_markers: true
+  field_slideshow_nt_slides: true

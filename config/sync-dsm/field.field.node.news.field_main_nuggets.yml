@@ -1,0 +1,26 @@
+uuid: af22a4ad-15bd-484a-9871-0ae4e3e064a0
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_main_nuggets
+    - node.type.news
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: 2qHmwHKP38X0gK2sV8si8062l7_rEmzSLQfFfX36lyc
+id: node.news.field_main_nuggets
+field_name: field_main_nuggets
+entity_type: node
+bundle: news
+label: Nuggets
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_paragraph_types_main_content
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference_revisions

@@ -1,0 +1,13 @@
+uuid: 309ca27c-8b15-4f44-b358-519e3399a3f3
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.departments
+_core:
+  default_config_hash: ILwk1RHK10XxD1HAOgVTcy_Gai4u8Wzt5j_rUpxSj5k
+id: taxonomy_term.departments
+target_entity_type_id: taxonomy_term
+target_bundle: departments
+default_langcode: site_default
+language_alterable: false

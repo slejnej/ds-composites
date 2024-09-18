@@ -1,0 +1,33 @@
+uuid: d69ca701-3a94-4c93-9cce-ddd830cc6636
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.banner_nugglet.field_banner_nt_image
+    - field.field.paragraph.banner_nugglet.field_banner_nt_link
+    - field.field.paragraph.banner_nugglet.field_banner_nt_summary
+    - field.field.paragraph.banner_nugglet.field_banner_nt_title
+    - field.field.paragraph.banner_nugglet.field_editor_title
+    - paragraphs.paragraphs_type.banner_nugglet
+_core:
+  default_config_hash: JzHJkbyBeLYEP88w1_h5wqdfXP-ishqHOKpyNIsn5MA
+id: paragraph.banner_nugglet.preview
+targetEntityType: paragraph
+bundle: banner_nugglet
+mode: preview
+content:
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_banner_nt_image: true
+  field_banner_nt_link: true
+  field_banner_nt_summary: true
+  field_banner_nt_title: true
+  search_api_excerpt: true

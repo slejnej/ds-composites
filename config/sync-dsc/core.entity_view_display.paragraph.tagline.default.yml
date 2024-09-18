@@ -1,0 +1,42 @@
+uuid: 2464d425-71e1-4a5d-8adc-43fa6ee29ba8
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tagline.field_display_title
+    - field.field.paragraph.tagline.field_editor_title
+    - field.field.paragraph.tagline.field_tagline_nt_text
+    - paragraphs.paragraphs_type.tagline
+  module:
+    - text
+_core:
+  default_config_hash: qhOQymUKwmAK_WjMgDtgXWU7xQ8ZfuS881RHV4xAAeo
+id: paragraph.tagline.default
+targetEntityType: paragraph
+bundle: tagline
+mode: default
+content:
+  field_display_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tagline_nt_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

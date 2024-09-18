@@ -1,0 +1,10 @@
+uuid: d5980299-b847-4d75-8c22-6b8b7ac631d6
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: C01IingJe9zgcNCKyT_Be2WagSZq10furhNmYtt3ys0
+id: header
+label: Header
+description: 'Header menu'
+locked: false

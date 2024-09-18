@@ -1,0 +1,198 @@
+uuid: c9c41f2c-f132-49a8-ab27-98e0f7bbbb81
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.news.field_alternative_title
+    - field.field.node.news.field_body
+    - field.field.node.news.field_categories
+    - field.field.node.news.field_countries
+    - field.field.node.news.field_date
+    - field.field.node.news.field_diseases
+    - field.field.node.news.field_hero_content
+    - field.field.node.news.field_image
+    - field.field.node.news.field_main_nuggets
+    - field.field.node.news.field_media
+    - field.field.node.news.field_meta_tags
+    - field.field.node.news.field_news_attachments
+    - field.field.node.news.field_news_authors
+    - field.field.node.news.field_news_display_date
+    - field.field.node.news.field_news_link
+    - field.field.node.news.field_postscript_nuggets
+    - field.field.node.news.field_seo_description
+    - field.field.node.news.field_seo_title
+    - field.field.node.news.field_sidebar_nuggets
+    - field.field.node.news.field_summary
+    - field.field.node.news.field_tags
+    - field.field.node.news.field_topics
+    - node.type.news
+  module:
+    - datetime
+    - entity_reference_revisions
+    - link
+    - metatag
+    - text
+    - user
+_core:
+  default_config_hash: 7jqkm9nxEP6rHWDeUb5DAk1bZYg9XQummlcJsMitTHE
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  field_alternative_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_categories:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: remora_ct_date
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_main_nuggets:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_media:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_news_attachments:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 120
+    region: content
+  field_news_authors:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 121
+    region: content
+  field_news_display_date:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 122
+    region: content
+  field_news_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 119
+    region: content
+  field_postscript_nuggets:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_seo_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  field_seo_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_sidebar_nuggets:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_summary:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_countries: true
+  field_diseases: true
+  field_hero_content: true
+  field_tags: true
+  field_topics: true
+  langcode: true
+  search_api_excerpt: true

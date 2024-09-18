@@ -1,0 +1,25 @@
+uuid: c21b8524-cfbd-45b6-8108-5d77f0e7125e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_nt_link
+    - paragraphs.paragraphs_type.banner_nugglet
+  module:
+    - link
+_core:
+  default_config_hash: Gxrd-YXEE6HwYZNtbEmcQVMtPITrPo48rhECDTUnfBE
+id: paragraph.banner_nugglet.field_banner_nt_link
+field_name: field_banner_nt_link
+entity_type: paragraph
+bundle: banner_nugglet
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

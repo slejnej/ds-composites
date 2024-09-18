@@ -1,0 +1,36 @@
+uuid: 478a6efe-2719-40db-a8e3-b803999e4db1
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.organisations
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: H8Hn1C4qJyEf4ridDNo8P_PqdnqnmwlLPcSRpBAk5xg
+id: taxonomy_term.organisations.default
+targetEntityType: taxonomy_term
+bundle: organisations
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true
+  simple_sitemap: true
+  simple_sitemap_index_now: true
+  status: true

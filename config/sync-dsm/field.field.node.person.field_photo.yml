@@ -1,0 +1,31 @@
+uuid: 84d23ba2-b3eb-4c25-b351-2b3d53a34f65
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_photo
+    - media.type.image
+    - node.type.person
+_core:
+  default_config_hash: UY60uqMuMx-CKgRRHIqnjZVX0wzacsKI8D7R7ohOz8Y
+id: node.person.field_photo
+field_name: field_photo
+entity_type: node
+bundle: person
+label: Photo
+description: 'Upload a new image or select an existing one from your media library.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

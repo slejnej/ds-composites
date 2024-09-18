@@ -1,0 +1,26 @@
+uuid: beb4c5c4-6d52-48e3-aeb7-b6ba67a93cc7
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tagline_nt_text
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.tagline
+  module:
+    - text
+_core:
+  default_config_hash: FTs3H3iYKZ_ya9ixuxgw70_F4Wcm7GXUtXgJf7IMxfc
+id: paragraph.tagline.field_tagline_nt_text
+field_name: field_tagline_nt_text
+entity_type: paragraph
+bundle: tagline
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

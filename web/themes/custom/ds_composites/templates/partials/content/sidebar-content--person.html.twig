@@ -1,0 +1,30 @@
+{% extends '@person_content_type/partials/content/sidebar-content.html.twig' %}
+
+{% block sidebar_details %}
+  <div class="left-sidebar-section sidebar-details d-flex flex-column border-0 overflow-visible">
+
+    {% block photo %}
+      {% if content.field_photo['#items'] is not empty %}
+        <div class="media-wrapper position-relative">
+
+          <div class="blob-top w-100 position-absolute">
+            <img src="{{ directory }}/build/assets/images/blob.svg"/>
+          </div>
+
+          <div class="media position-relative">
+            {% set media_entity = content.field_photo['#items'].entity %}
+            {{ media_entity|view('portrait_3_4') }}
+          </div>
+
+          <div class="blob-bottom w-100 position-absolute">
+            <img src="{{ directory }}/build/assets/images/blob.svg"/>
+          </div>
+
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {{ block('social') }}
+
+  </div>
+{% endblock %}

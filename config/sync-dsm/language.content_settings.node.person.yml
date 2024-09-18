@@ -1,0 +1,13 @@
+uuid: f1fb6a85-50b1-4ef7-a51b-2eda4b55f447
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.person
+_core:
+  default_config_hash: 95mz-n1B35IDe2yY_S3kovG_e0Nzi96ZiaCCQhnzB44
+id: node.person
+target_entity_type_id: node
+target_bundle: person
+default_langcode: site_default
+language_alterable: false

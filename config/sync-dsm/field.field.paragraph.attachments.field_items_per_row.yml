@@ -1,0 +1,25 @@
+uuid: 2ccded0c-c984-4aa2-b2ee-e4b01595bfc0
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_items_per_row
+    - paragraphs.paragraphs_type.attachments
+  module:
+    - options
+_core:
+  default_config_hash: nZl7lRwgAh6cSWBlycLj7NvJRo3ysZQgeSRvPleODhc
+id: paragraph.attachments.field_items_per_row
+field_name: field_items_per_row
+entity_type: paragraph
+bundle: attachments
+label: 'Items per row'
+description: 'Select number of items to display per row.'
+required: true
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

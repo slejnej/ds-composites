@@ -1,0 +1,23 @@
+uuid: b45097f7-2b16-43f6-94c9-88323e046a88
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seo_description
+    - node.type.news
+_core:
+  default_config_hash: QRCOmSd6ntv45BJok_QIPgbuHkTyOh-P-sUrbjCSw1k
+id: node.news.field_seo_description
+field_name: field_seo_description
+entity_type: node
+bundle: news
+label: 'SEO Description'
+description: "Complete this field to specify the text which may be displayed on search engine results.\r\nA brief and concise summary of the page's content that is a maximum of 160 characters in length. The description meta tag may be used by search engines to display a snippet about the page in search results."
+required: false
+translatable: false
+default_value:
+  -
+    value: '[remora:seo_description]'
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,23 @@
+uuid: 5b6aa2c0-12fe-4469-ba24-102dd65de8a2
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.person
+  module:
+    - metatag
+_core:
+  default_config_hash: Oa2ec_uC4kKCAyAbFM5H8NqbPsVkxR9Dol_v1rUar7A
+id: node.person.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: person
+label: 'Meta tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

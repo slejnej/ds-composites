@@ -1,0 +1,20 @@
+uuid: bddb405a-8350-44d1-8ed5-9efdb5df1304
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - site_settings.site_setting_entity_type.footer
+  module:
+    - metatag
+id: site_setting_entity.footer.metatag
+field_name: metatag
+entity_type: site_setting_entity
+bundle: footer
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

@@ -1,0 +1,27 @@
+uuid: 383c549e-81df-4caf-bd2a-601316d38b7e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_nt_image
+    - paragraphs.paragraphs_type.slide_nugglet
+  enforced:
+    module:
+      - slideshow_nugget
+_core:
+  default_config_hash: 0uoSQ7ljC0o1zu2Gt2joZBdWs_MgI5-GsbCNm_YX13E
+id: paragraph.slide_nugglet.field_slide_nt_image
+field_name: field_slide_nt_image
+entity_type: paragraph
+bundle: slide_nugglet
+label: Image
+description: 'Upload a new image or select an existing one from your media library.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_media_types_image
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference

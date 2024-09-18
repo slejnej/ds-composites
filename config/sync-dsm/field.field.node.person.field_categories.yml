@@ -1,0 +1,26 @@
+uuid: 58c5bf69-8565-4728-875c-cc34f496b11a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categories
+    - node.type.person
+    - taxonomy.vocabulary.categories
+_core:
+  default_config_hash: 6U98_OZlhrtoQ6nXqkhk9rRVmXSAP-rh-QBxJdNNncg
+id: node.person.field_categories
+field_name: field_categories
+entity_type: node
+bundle: person
+label: Categories
+description: 'Select the most suitable category for this content. This will display on the page and is used to filter search results.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categories: categories
+field_type: entity_reference

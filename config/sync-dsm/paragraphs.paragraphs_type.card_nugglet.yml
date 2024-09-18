@@ -1,0 +1,20 @@
+uuid: f54a345c-21cc-4d8f-8460-cc5d0d5d3ace
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+  enforced:
+    module:
+      - cards_nugget
+_core:
+  default_config_hash: hz5_Tv24WTLX5kF3kiRV758XGs_2uwsGeeDd2bJnF-M
+id: card_nugglet
+label: Card
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

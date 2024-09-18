@@ -1,0 +1,24 @@
+uuid: be6ef0d2-26d8-4b64-9e10-e3cad4d58428
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media
+    - node.type.news
+_core:
+  default_config_hash: WzwVz_TWojB-BsjOD_py77cF_cGf6GOg5KeOS1We_Qo
+id: node.news.field_media
+field_name: field_media
+entity_type: node
+bundle: news
+label: Media
+description: 'Upload a new image or video or select an existing one from your media library.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_media_types_image_video
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference

@@ -1,0 +1,18 @@
+uuid: 48d74c33-3eef-4cb9-91d4-ecc4777ee576
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.card_nugglet
+id: paragraph.card_nugglet.created
+field_name: created
+entity_type: paragraph
+bundle: card_nugglet
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

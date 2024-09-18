@@ -1,0 +1,18 @@
+uuid: 157914c3-32d2-4247-aa34-e5c73d279609
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - rabbit_hole
+id: config_sync.module.rabbit_hole
+snapshotSet: config_sync
+extensionType: module
+extensionName: rabbit_hole
+items:
+  -
+    collection: ''
+    name: rabbit_hole.settings
+    data:
+      enabled_entity_types: {  }
+      _core:
+        default_config_hash: op5zJk4bmDxEGOgAYNCkpAQOLG0YZhNMrxlSkdYSQIM

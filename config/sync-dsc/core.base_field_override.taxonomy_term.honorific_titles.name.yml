@@ -1,0 +1,18 @@
+uuid: 3a2994b2-5b06-4111-bce9-fcad3d97a3bc
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.honorific_titles
+id: taxonomy_term.honorific_titles.name
+field_name: name
+entity_type: taxonomy_term
+bundle: honorific_titles
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

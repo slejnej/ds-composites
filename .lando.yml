@@ -8,6 +8,11 @@ config:
   drush: "*"
   xdebug: false
 
+proxy:
+  appserver_nginx:
+    - ds-composites.lndo.site
+    - ds-machining.lndo.site
+
 services:
   appserver:
     install_dependencies_as_root:
@@ -24,6 +29,12 @@ services:
   database:
     type: mariadb:10.5.13
     portforward: 17906
+    creds:
+      user: drupal10
+      password: drupal10
+      database: drupal10
+    run_as_root:
+      - mysql -uroot -e "CREATE DATABASE IF NOT EXISTS dsm; GRANT ALL PRIVILEGES ON dsm.* TO 'drupal10'@'%' IDENTIFIED by 'drupal10';"
 
   mailhog:
     type: mailhog

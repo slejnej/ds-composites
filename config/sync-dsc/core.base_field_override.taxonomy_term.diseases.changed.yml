@@ -1,0 +1,18 @@
+uuid: 97e8d8b1-f528-4416-90ba-d6111bf9728e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.diseases
+id: taxonomy_term.diseases.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: diseases
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

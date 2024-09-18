@@ -1,0 +1,22 @@
+uuid: f15b3fe0-6f84-4636-bea8-ab0cdc322e12
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.card_nugglet
+id: paragraph.card_nugglet.status
+field_name: status
+entity_type: paragraph
+bundle: card_nugglet
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,13 @@
+uuid: 28eb6798-b9f9-4cf8-bd1a-98a2260cbee9
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: pPA7cWp05dBlHGRkQbOA3W77n4zbR2JSw8T0WV9RMNs
+id: media.landscape_4_3
+label: 'Landscape: 4x3'
+description: ''
+targetEntityType: media
+cache: true

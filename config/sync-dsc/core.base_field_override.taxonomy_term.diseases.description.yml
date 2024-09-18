@@ -1,0 +1,21 @@
+uuid: 3f2029ca-fc93-4d26-a917-08bd4448be1b
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.diseases
+  module:
+    - text
+id: taxonomy_term.diseases.description
+field_name: description
+entity_type: taxonomy_term
+bundle: diseases
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

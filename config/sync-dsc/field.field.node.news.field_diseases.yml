@@ -1,0 +1,31 @@
+uuid: f24625c7-4f3a-4cc7-89c5-6af40a79926e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_diseases
+    - node.type.news
+    - taxonomy.vocabulary.diseases
+_core:
+  default_config_hash: rZcgAiJtZ6wVP8lhu8GiwiQdHS8-YuajYqrjZCp_ZwA
+id: node.news.field_diseases
+field_name: field_diseases
+entity_type: node
+bundle: news
+label: Diseases
+description: 'Relate your content to one or multiple diseases.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      diseases: diseases
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

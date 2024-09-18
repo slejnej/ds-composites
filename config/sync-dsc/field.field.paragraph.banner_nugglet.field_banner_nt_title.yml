@@ -1,0 +1,26 @@
+uuid: 878bcd64-b02d-4c73-90a8-fb3a61015bbb
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_nt_title
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.banner_nugglet
+  module:
+    - text
+_core:
+  default_config_hash: nRY_7Jm0sadwTNJ3yUEsyGIyEqAKkkNNNJwwB6G3nQo
+id: paragraph.banner_nugglet.field_banner_nt_title
+field_name: field_banner_nt_title
+entity_type: paragraph
+bundle: banner_nugglet
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text

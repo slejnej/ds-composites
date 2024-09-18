@@ -1,0 +1,36 @@
+uuid: cf48a07b-2d55-4803-8ff9-f3de1f54774c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.person
+  module:
+    - media
+    - node
+    - paragraphs_type_permissions
+    - site_settings
+    - system
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'view media'
+  - 'view paragraph content attachments'
+  - 'view paragraph content banner_nugglet'
+  - 'view paragraph content banners'
+  - 'view paragraph content card_nugglet'
+  - 'view paragraph content cards'
+  - 'view paragraph content flexible_layout'
+  - 'view paragraph content footer_section'
+  - 'view paragraph content promo'
+  - 'view paragraph content section'
+  - 'view paragraph content slide_nugglet'
+  - 'view paragraph content slideshow'
+  - 'view paragraph content tagline'
+  - 'view paragraph content text_media'
+  - 'view person revisions'
+  - 'view published site setting entities'

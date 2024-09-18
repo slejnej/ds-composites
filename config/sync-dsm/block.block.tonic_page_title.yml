@@ -1,0 +1,20 @@
+uuid: 4a2ec75c-e776-4835-830d-702f75e37024
+langcode: en-gb
+status: true
+dependencies:
+  theme:
+    - tonic
+_core:
+  default_config_hash: Oh72CHUkp6cj6dbrXMK2hzCsM05w9cHVoD22rMLQUfk
+id: tonic_page_title
+theme: tonic
+region: content
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

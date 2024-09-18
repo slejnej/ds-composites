@@ -1,0 +1,25 @@
+uuid: d260d302-a53b-4a26-9320-34d8710b90b2
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_link
+    - node.type.news
+  module:
+    - link
+_core:
+  default_config_hash: JvG7z_55SUM14EUgA9JXlavcwhWuPfa7BK-Jll4c4Zw
+id: node.news.field_news_link
+field_name: field_news_link
+entity_type: node
+bundle: news
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

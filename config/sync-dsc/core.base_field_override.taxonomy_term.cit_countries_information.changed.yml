@@ -1,0 +1,18 @@
+uuid: 7d1ca49f-cff1-41a6-875f-254290989792
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cit_countries_information
+id: taxonomy_term.cit_countries_information.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: cit_countries_information
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,26 @@
+uuid: 3f558842-265e-49f2-bebf-e2d6452735bd
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_promo_text
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.promo
+  module:
+    - text
+_core:
+  default_config_hash: kMN8IB1DwwLIw-QbWzHZdTfN56FEt2Q0KpJ9jlRfOXg
+id: paragraph.promo.field_promo_text
+field_name: field_promo_text
+entity_type: paragraph
+bundle: promo
+label: 'Body text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

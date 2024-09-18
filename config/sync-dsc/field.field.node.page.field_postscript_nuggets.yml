@@ -1,0 +1,26 @@
+uuid: 0cd1b62d-1abf-492b-84b8-31a87a4c24d0
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_postscript_nuggets
+    - node.type.page
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: h6Z4Ey1douC0mRjrFtqwSg8J8sJ0yEEGIZNTS6dERjI
+id: node.page.field_postscript_nuggets
+field_name: field_postscript_nuggets
+entity_type: node
+bundle: page
+label: 'Postscript nuggets'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_paragraph_types_postscript
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference_revisions

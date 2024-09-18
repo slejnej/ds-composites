@@ -1,0 +1,31 @@
+uuid: 054153ce-bd6d-4087-a590-26bfa76e360b
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: config_sync.module.layout_paragraphs
+snapshotSet: config_sync
+extensionType: module
+extensionName: layout_paragraphs
+items:
+  -
+    collection: ''
+    name: layout_paragraphs.modal_settings
+    data:
+      width: 90%
+      height: auto
+      autoresize: true
+      _core:
+        default_config_hash: z9zmTNfo1bY0sbqYp1OAvqSynu_DXDRdJoZhi7oiS0I
+  -
+    collection: ''
+    name: layout_paragraphs.settings
+    data:
+      show_paragraph_labels: 0
+      show_layout_labels: 0
+      paragraph_behaviors_label: Behaviors
+      paragraph_behaviors_position: -99
+      empty_message: 'No components to add.'
+      _core:
+        default_config_hash: HBy2Jf-2HHsgvIjldhAl07r9vuy879dsx6Cm_LpbPrw

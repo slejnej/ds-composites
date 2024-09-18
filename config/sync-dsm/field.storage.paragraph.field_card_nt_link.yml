@@ -1,0 +1,24 @@
+uuid: d253109b-d24f-4741-a5f1-3c95293ef834
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+  enforced:
+    module:
+      - cards_nugget
+_core:
+  default_config_hash: MP-Dx34189qBQxsmNZmXKGYWzFyXI1Y7yrNnMjEt4jY
+id: paragraph.field_card_nt_link
+field_name: field_card_nt_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

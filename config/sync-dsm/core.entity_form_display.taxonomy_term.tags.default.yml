@@ -1,0 +1,51 @@
+uuid: 249aab4b-9155-4b70-bb1b-0158e396a0b2
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tags.rabbit_hole__settings
+    - taxonomy.vocabulary.tags
+  module:
+    - field_layout
+    - layout_discovery
+    - rabbit_hole
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: h4VZnGk3wmKNvLZNR4XuPRl6Q_SeBF5692mEyaHl6Y0
+id: taxonomy_term.tags.default
+targetEntityType: taxonomy_term
+bundle: tags
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  rabbit_hole__settings:
+    type: rabbit_hole_default
+    weight: 100
+    region: content
+    settings:
+      advanced: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
+  simple_sitemap: true
+  simple_sitemap_index_now: true
+  status: true

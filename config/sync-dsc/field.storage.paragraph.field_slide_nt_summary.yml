@@ -1,0 +1,24 @@
+uuid: c330a561-2d8b-4e98-8b66-6b2d9bca15cd
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+  enforced:
+    module:
+      - slideshow_nugget
+_core:
+  default_config_hash: L5OUHz6kIa-U9zUSZpdAA2-yHAW5cUUt9_dv6liXh3M
+id: paragraph.field_slide_nt_summary
+field_name: field_slide_nt_summary
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

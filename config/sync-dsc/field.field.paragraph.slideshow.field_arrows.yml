@@ -1,0 +1,26 @@
+uuid: 5fe7f686-5cc9-40ca-8def-eafe3a0266d3
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_arrows
+    - paragraphs.paragraphs_type.slideshow
+  enforced:
+    module:
+      - slideshow_nugget
+_core:
+  default_config_hash: bYzpIxjfLXCMQBj7wsiPjyXmR39Ieokjilxl31-dgLg
+id: paragraph.slideshow.field_arrows
+field_name: field_arrows
+entity_type: paragraph
+bundle: slideshow
+label: Arrows
+description: 'Enable to show navigation arrows on your slideshow.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

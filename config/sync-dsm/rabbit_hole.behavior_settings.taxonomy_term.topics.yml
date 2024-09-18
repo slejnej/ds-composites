@@ -1,0 +1,18 @@
+uuid: ddbd26cc-9f3b-431f-a75a-275442ccfe34
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.topics
+_core:
+  default_config_hash: 5YMck0tApW6FOIoU2wPqzZDvdvmYmMeJKfUJ0FIRipo
+id: taxonomy_term.topics
+targetEntityType: taxonomy_term
+bundle: topics
+action: page_redirect
+no_bypass: false
+bypass_message: true
+configuration:
+  redirect: '<front>'
+  redirect_code: 302
+  redirect_fallback_action: page_not_found

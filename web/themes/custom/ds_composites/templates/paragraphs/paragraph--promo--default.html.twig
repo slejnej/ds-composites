@@ -1,0 +1,40 @@
+{% extends '@promo_nugget/paragraphs/paragraph--promo--default.html.twig' %}
+
+{% block paragraph_content %}
+  <div{{ attributes.addClass(classes, 'position-relative') }}>
+    {% block content %}
+
+      {% set image = paragraph.field_promo_media.entity.field_media_image.entity.uri.value %}
+      {% set promo_nugget_link = paragraph.field_promo_link|first %}
+      {% set promo_link_url = promo_nugget_link.getUrl() %}
+
+      {% block promo_content %}
+
+        <div class="promo-wrapper container-xxl d-flex flex-column flex-lg-row align-items-center justify-content-between position-relative">
+          <div class="promo-text-wrapper d-flex flex-column col-lg-8">
+
+            {{ block('promo_title') }}
+
+            {{ block('promo_body') }}
+
+            {% if content.field_promo_link['#items'] is not empty %}
+              <div class="promo-link">
+                {% if promo_link_url %}
+                  <a href="{{ promo_link_url }}" class="btn btn-secondary border-0">
+                    {{ promo_nugget_link.value['title'] }}
+                  </a>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+
+          {{ block('promo_image') }}
+
+        </div>
+      {% endblock %}
+
+      <div class="promo-bg position-absolute w-100 h-100"></div>
+
+      {% endblock %}
+  </div>
+{% endblock %}

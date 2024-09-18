@@ -1,0 +1,10 @@
+uuid: c3d84c67-9925-48c4-9692-041ec2125dba
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: a52h2nezr0kdKNRMKRDIHuvViyuPN2_QUowNpzGlmbU
+name: Diseases
+vid: diseases
+description: ''
+weight: 0

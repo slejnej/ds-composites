@@ -1,0 +1,13 @@
+uuid: 9b841a2f-f9f7-4086-8608-2b5d91a2565d
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: OKmYgx8s-QI4Z5ORyTTQ3WSt1FadvnNBiwFGnlXIK6I
+id: media.card
+label: Card
+description: ''
+targetEntityType: media
+cache: true

@@ -1,0 +1,21 @@
+uuid: f1190fbe-73ca-42ec-ae1f-51737b06798f
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suffix
+    - node.type.person
+_core:
+  default_config_hash: 1Ky1i-Oh6VsJlzRkwCmACiye56q-2aQ8eCx9dd94VEA
+id: node.person.field_suffix
+field_name: field_suffix
+entity_type: node
+bundle: person
+label: Suffix
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

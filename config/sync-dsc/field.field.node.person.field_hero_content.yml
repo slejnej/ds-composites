@@ -1,0 +1,26 @@
+uuid: 7837d2e6-4fec-416b-9af6-2dd5c6faac0f
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_content
+    - node.type.person
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: eUZLV7j3hNdlCF5Pn3EZz4IoXNKDdCugzzeVdAN5Fq0
+id: node.person.field_hero_content
+field_name: field_hero_content
+entity_type: node
+bundle: person
+label: 'Hero content'
+description: 'These nuggets will be displayed at the top of your page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_paragraph_types_hero_content
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference_revisions

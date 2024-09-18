@@ -1,0 +1,23 @@
+uuid: f745406d-63a6-4e05-90e6-4f7b38159426
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: mqopvb2tCLySBD7d4oTo3HA-XQegkOFVkTRj8GdJlcU
+id: node.field_role
+field_name: field_role
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

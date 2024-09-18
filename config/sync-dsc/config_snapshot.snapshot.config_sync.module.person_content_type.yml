@@ -1,0 +1,2830 @@
+uuid: 4c50cf7d-0c0e-4620-b119-6ac9e3a9a9ae
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - person_content_type
+id: config_sync.module.person_content_type
+snapshotSet: config_sync
+extensionType: module
+extensionName: person_content_type
+items:
+  -
+    collection: ''
+    name: auto_entitylabel.settings.node.person
+    data:
+      status: 1
+      pattern: '[node:field_honorific_title] [node:field_first_name] [node:field_last_name]'
+      escape: false
+      preserve_titles: false
+      save: false
+      chunk: 50
+      dependencies:
+        config:
+          - node.type.person
+      _core:
+        default_config_hash: 7h0XSHDNplRQssa6PjXRg8DsnXNv7khqgd0kN-oDi3o
+  -
+    collection: ''
+    name: core.base_field_override.node.person.promote
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - node.type.person
+      id: node.person.promote
+      field_name: promote
+      entity_type: node
+      bundle: person
+      label: 'Promoted to front page'
+      description: ''
+      required: false
+      translatable: true
+      default_value:
+        -
+          value: 0
+      default_value_callback: ''
+      settings:
+        on_label: 'On'
+        off_label: 'Off'
+      field_type: boolean
+      _core:
+        default_config_hash: orXvoMsQB8p8_zOcXmf4dJsyFSDR-RFsq9g4OyVMy6s
+  -
+    collection: ''
+    name: core.entity_form_display.node.person.default
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.node.person.field_alternative_title
+          - field.field.node.person.field_body
+          - field.field.node.person.field_department
+          - field.field.node.person.field_first_name
+          - field.field.node.person.field_hero_content
+          - field.field.node.person.field_honorific_title
+          - field.field.node.person.field_image
+          - field.field.node.person.field_last_name
+          - field.field.node.person.field_main_nuggets
+          - field.field.node.person.field_meta_tags
+          - field.field.node.person.field_person_organisation
+          - field.field.node.person.field_photo
+          - field.field.node.person.field_postscript_nuggets
+          - field.field.node.person.field_role
+          - field.field.node.person.field_seo_description
+          - field.field.node.person.field_seo_title
+          - field.field.node.person.field_sidebar_nuggets
+          - field.field.node.person.field_social_media
+          - field.field.node.person.field_suffix
+          - field.field.node.person.field_summary
+          - node.type.person
+        module:
+          - field_group
+          - field_layout
+          - layout_discovery
+          - layout_paragraphs
+          - link
+          - media_library
+          - path
+          - text
+      third_party_settings:
+        field_layout:
+          id: layout_onecol
+          settings:
+            label: ''
+        field_group:
+          group_news_tabs:
+            children:
+              - group_hero_content
+              - group_main_content
+              - group_sidebar_content
+              - group_postscript_content
+              - group_tagging
+              - group_summary_seo
+            label: 'Person tabs'
+            region: content
+            parent_name: ''
+            weight: 0
+            format_type: tabs
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              direction: vertical
+              width_breakpoint: 640
+          group_main_content:
+            children:
+              - group_main_content_tabs
+            label: 'Main content'
+            region: content
+            parent_name: group_news_tabs
+            weight: 2
+            format_type: tab
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              formatter: open
+              description: ''
+              required_fields: true
+          group_main_content_tabs:
+            children:
+              - group_overview
+              - group_person_detaails
+              - group_nuggets
+            label: 'Main content tabs'
+            region: content
+            parent_name: group_main_content
+            weight: 1
+            format_type: tabs
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              direction: horizontal
+              width_breakpoint: 640
+          group_overview:
+            children:
+              - group_wrapper
+              - group_wrapper_2
+              - group_initial_content
+            label: Overview
+            region: content
+            parent_name: group_main_content_tabs
+            weight: 20
+            format_type: tab
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              formatter: closed
+              description: ''
+              required_fields: true
+          group_initial_content:
+            children:
+              - field_photo
+              - field_body
+            label: ''
+            region: content
+            parent_name: group_overview
+            weight: 24
+            format_type: fieldset
+            format_settings:
+              classes: ''
+              show_empty_fields: true
+              id: ''
+              description: 'This image and body will be displayed in a set location on this page. If you want to customise the layout, do not complete this section and use the Nuggets section below.'
+              required_fields: true
+          group_nuggets:
+            children:
+              - field_main_nuggets
+            label: Nuggets
+            region: content
+            parent_name: group_main_content_tabs
+            weight: 22
+            format_type: tab
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              formatter: closed
+              description: ''
+              required_fields: true
+          group_hero_content:
+            children:
+              - field_hero_content
+            label: 'Hero content'
+            region: content
+            parent_name: group_news_tabs
+            weight: 1
+            format_type: tab
+            format_settings:
+              classes: ''
+              show_empty_fields: true
+              id: ''
+              formatter: closed
+              description: ''
+              required_fields: true
+          group_sidebar_content:
+            children:
+              - field_sidebar_nuggets
+            label: 'Sidebar content'
+            region: content
+            parent_name: group_news_tabs
+            weight: 3
+            format_type: tab
+            format_settings:
+              classes: ''
+              show_empty_fields: true
+              id: ''
+              formatter: closed
+              description: 'These nuggets will be displayed on the right hand side of your page, but may also drop below the main content on smaller screen sizes.'
+              required_fields: true
+          group_postscript_content:
+            children:
+              - field_postscript_nuggets
+            label: 'Postscript content'
+            region: content
+            parent_name: group_news_tabs
+            weight: 4
+            format_type: tab
+            format_settings:
+              classes: ''
+              show_empty_fields: true
+              id: ''
+              formatter: closed
+              description: 'These nuggets will be displayed below all other content added to your page, above the footer and will usually fill the width of the page.'
+              required_fields: true
+          group_summary_seo:
+            children:
+              - field_alternative_title
+              - field_image
+              - field_summary
+              - group_customise_seo
+            label: 'Summary & SEO'
+            region: content
+            parent_name: group_news_tabs
+            weight: 50
+            format_type: tab
+            format_settings:
+              classes: ''
+              show_empty_fields: true
+              id: ''
+              formatter: closed
+              description: 'Customise how this page is presented when referenced from other pages on your website and how it might be displayed when sharing on social media, as well as SEO information.'
+              required_fields: true
+          group_customise_seo:
+            children:
+              - field_seo_title
+              - field_seo_description
+            label: 'Customise SEO'
+            region: content
+            parent_name: group_summary_seo
+            weight: 12
+            format_type: details
+            format_settings:
+              classes: ''
+              show_empty_fields: true
+              id: ''
+              open: false
+              description: 'Customise how this page may be indexed and displayed on search engine results, eg. Google.'
+              required_fields: true
+          group_tagging:
+            children: {  }
+            label: Tagging
+            region: content
+            parent_name: group_news_tabs
+            weight: 40
+            format_type: tab
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              formatter: closed
+              description: 'Tag this page to make it easier to find in the site search'
+              required_fields: true
+          group_person_detaails:
+            children:
+              - field_role
+              - field_department
+              - field_person_organisation
+              - group_social_media
+            label: 'Person details'
+            region: content
+            parent_name: group_main_content_tabs
+            weight: 21
+            format_type: tab
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              formatter: closed
+              description: ''
+              required_fields: true
+          group_social_media:
+            children:
+              - field_social_media
+            label: 'Social media'
+            region: content
+            parent_name: group_person_detaails
+            weight: 20
+            format_type: details
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              open: true
+              description: "Link to this person's social media"
+              required_fields: true
+          group_wrapper:
+            children:
+              - field_first_name
+              - field_last_name
+            label: Wrapper
+            region: content
+            parent_name: group_overview
+            weight: 20
+            format_type: html_element
+            format_settings:
+              classes: row-auto
+              show_empty_fields: false
+              id: ''
+              element: div
+              show_label: false
+              label_element: h3
+              label_element_classes: ''
+              attributes: ''
+              effect: none
+              speed: fast
+              required_fields: true
+          group_wrapper_2:
+            children:
+              - field_honorific_title
+              - field_suffix
+            label: 'Wrapper 2'
+            region: content
+            parent_name: group_overview
+            weight: 21
+            format_type: html_element
+            format_settings:
+              classes: row-auto
+              show_empty_fields: false
+              id: ''
+              element: div
+              show_label: false
+              label_element: h3
+              label_element_classes: ''
+              attributes: ''
+              effect: none
+              speed: fast
+              required_fields: true
+      id: node.person.default
+      targetEntityType: node
+      bundle: person
+      mode: default
+      content:
+        created:
+          type: datetime_timestamp
+          weight: 3
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        field_alternative_title:
+          type: text_textfield
+          weight: 8
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_body:
+          type: text_textarea
+          weight: 17
+          region: content
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+        field_date:
+          type: datetime_default
+          weight: 11
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        field_department:
+          type: entity_reference_autocomplete
+          weight: 18
+          region: content
+          settings:
+            match_operator: CONTAINS
+            match_limit: 10
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_first_name:
+          type: string_textfield
+          weight: 21
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_hero_content:
+          type: layout_paragraphs
+          weight: 21
+          region: content
+          settings:
+            preview_view_mode: preview
+            nesting_depth: 0
+            require_layouts: 1
+            empty_message: ''
+          third_party_settings: {  }
+        field_honorific_title:
+          type: options_select
+          weight: 22
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        field_image:
+          type: media_library_widget
+          weight: 9
+          region: content
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+        field_last_name:
+          type: string_textfield
+          weight: 22
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_main_nuggets:
+          type: layout_paragraphs
+          weight: 8
+          region: content
+          settings:
+            preview_view_mode: preview
+            nesting_depth: 0
+            require_layouts: 1
+            empty_message: ''
+          third_party_settings: {  }
+        field_media:
+          type: media_library_widget
+          weight: 3
+          region: content
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+        field_news_attachments:
+          type: media_library_widget
+          weight: 61
+          region: content
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+        field_news_authors:
+          type: string_textfield
+          weight: 59
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_news_display_date:
+          type: string_textfield
+          weight: 58
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_news_link:
+          type: link_default
+          weight: 60
+          region: content
+          settings:
+            placeholder_url: ''
+            placeholder_title: ''
+          third_party_settings: {  }
+        field_person_organisation:
+          type: entity_reference_autocomplete
+          weight: 19
+          region: content
+          settings:
+            match_operator: CONTAINS
+            match_limit: 10
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_photo:
+          type: media_library_widget
+          weight: 16
+          region: content
+          settings:
+            media_types: {  }
+          third_party_settings: {  }
+        field_postscript_nuggets:
+          type: layout_paragraphs
+          weight: 5
+          region: content
+          settings:
+            preview_view_mode: preview
+            nesting_depth: 0
+            require_layouts: 1
+            empty_message: ''
+          third_party_settings: {  }
+        field_role:
+          type: string_textfield
+          weight: 17
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_seo_description:
+          type: string_textarea
+          weight: 13
+          region: content
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+        field_seo_title:
+          type: string_textfield
+          weight: 12
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_sidebar_nuggets:
+          type: layout_paragraphs
+          weight: 16
+          region: content
+          settings:
+            preview_view_mode: preview
+            nesting_depth: 0
+            require_layouts: 1
+            empty_message: ''
+          third_party_settings: {  }
+        field_social_media:
+          type: link_default
+          weight: 19
+          region: content
+          settings:
+            placeholder_url: ''
+            placeholder_title: ''
+          third_party_settings: {  }
+        field_suffix:
+          type: string_textfield
+          weight: 23
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_summary:
+          type: text_textarea
+          weight: 11
+          region: content
+          settings:
+            rows: 5
+            placeholder: ''
+          third_party_settings: {  }
+        langcode:
+          type: language_select
+          weight: 1
+          region: content
+          settings:
+            include_locked: true
+          third_party_settings: {  }
+        path:
+          type: path
+          weight: 7
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        promote:
+          type: boolean_checkbox
+          weight: 5
+          region: content
+          settings:
+            display_label: true
+          third_party_settings: {  }
+        simple_sitemap:
+          weight: 4
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        simple_sitemap_index_now:
+          weight: 10
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        status:
+          type: boolean_checkbox
+          weight: 9
+          region: content
+          settings:
+            display_label: true
+          third_party_settings: {  }
+        sticky:
+          type: boolean_checkbox
+          weight: 6
+          region: content
+          settings:
+            display_label: true
+          third_party_settings: {  }
+        uid:
+          type: entity_reference_autocomplete
+          weight: 2
+          region: content
+          settings:
+            match_operator: CONTAINS
+            match_limit: 10
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        url_redirects:
+          weight: 8
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+      hidden:
+        field_meta_tags: true
+        title: true
+      _core:
+        default_config_hash: fxUepYrfakKq2Al-mj0XxVwX741nqbd1PV0Ks8jYAIk
+  -
+    collection: ''
+    name: core.entity_form_display.taxonomy_term.departments.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.departments
+        module:
+          - field_layout
+          - layout_discovery
+      third_party_settings:
+        field_layout:
+          id: layout_onecol
+          settings:
+            label: ''
+      id: taxonomy_term.departments.default
+      targetEntityType: taxonomy_term
+      bundle: departments
+      mode: default
+      content:
+        langcode:
+          type: language_select
+          weight: 1
+          region: content
+          settings:
+            include_locked: true
+          third_party_settings: {  }
+        name:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        simple_sitemap:
+          weight: 2
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        simple_sitemap_index_now:
+          weight: 3
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+      hidden:
+        description: true
+        path: true
+        status: true
+      _core:
+        default_config_hash: PccgnlcPQbbTcg1f6EQ_hDOE3dAK3sLjZaUrt3h-W0k
+  -
+    collection: ''
+    name: core.entity_form_display.taxonomy_term.honorific_titles.default
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.honorific_titles
+        module:
+          - field_layout
+          - layout_discovery
+      third_party_settings:
+        field_layout:
+          id: layout_onecol
+          settings:
+            label: ''
+      id: taxonomy_term.honorific_titles.default
+      targetEntityType: taxonomy_term
+      bundle: honorific_titles
+      mode: default
+      content:
+        langcode:
+          type: language_select
+          weight: 1
+          region: content
+          settings:
+            include_locked: true
+          third_party_settings: {  }
+        name:
+          type: string_textfield
+          weight: 0
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        simple_sitemap:
+          weight: 2
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+        simple_sitemap_index_now:
+          weight: 3
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+      hidden:
+        description: true
+        path: true
+        status: true
+      _core:
+        default_config_hash: DZufLNibycYG-lLLQ0nJ-PD_gQIA7xBArlAFWn_IdBM
+  -
+    collection: ''
+    name: core.entity_view_display.node.person.card
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.node.card
+          - field.field.node.person.field_alternative_title
+          - field.field.node.person.field_body
+          - field.field.node.person.field_department
+          - field.field.node.person.field_first_name
+          - field.field.node.person.field_hero_content
+          - field.field.node.person.field_honorific_title
+          - field.field.node.person.field_image
+          - field.field.node.person.field_last_name
+          - field.field.node.person.field_main_nuggets
+          - field.field.node.person.field_meta_tags
+          - field.field.node.person.field_person_organisation
+          - field.field.node.person.field_photo
+          - field.field.node.person.field_postscript_nuggets
+          - field.field.node.person.field_role
+          - field.field.node.person.field_seo_description
+          - field.field.node.person.field_seo_title
+          - field.field.node.person.field_sidebar_nuggets
+          - field.field.node.person.field_social_media
+          - field.field.node.person.field_suffix
+          - field.field.node.person.field_summary
+          - node.type.person
+        module:
+          - layout_builder
+          - text
+          - user
+      third_party_settings:
+        layout_builder:
+          enabled: false
+          allow_custom: false
+      id: node.person.card
+      targetEntityType: node
+      bundle: person
+      mode: card
+      content:
+        field_department:
+          type: entity_reference_label
+          label: above
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 7
+          region: content
+        field_first_name:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 2
+          region: content
+        field_honorific_title:
+          type: entity_reference_label
+          label: above
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 1
+          region: content
+        field_last_name:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 3
+          region: content
+        field_person_organisation:
+          type: entity_reference_label
+          label: above
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 8
+          region: content
+        field_photo:
+          type: entity_reference_entity_view
+          label: above
+          settings:
+            view_mode: portrait_3_4
+            link: false
+          third_party_settings: {  }
+          weight: 5
+          region: content
+        field_role:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 6
+          region: content
+        field_suffix:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 4
+          region: content
+        field_summary:
+          type: text_default
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        field_alternative_title: true
+        field_body: true
+        field_hero_content: true
+        field_image: true
+        field_main_nuggets: true
+        field_meta_tags: true
+        field_postscript_nuggets: true
+        field_seo_description: true
+        field_seo_title: true
+        field_sidebar_nuggets: true
+        field_social_media: true
+        langcode: true
+        links: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: 62ltVExzkXkJNC2NY-1pY27n3jrd0xhQtkWWFrag4sc
+  -
+    collection: ''
+    name: core.entity_view_display.node.person.default
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.node.person.field_alternative_title
+          - field.field.node.person.field_body
+          - field.field.node.person.field_department
+          - field.field.node.person.field_first_name
+          - field.field.node.person.field_hero_content
+          - field.field.node.person.field_honorific_title
+          - field.field.node.person.field_image
+          - field.field.node.person.field_last_name
+          - field.field.node.person.field_main_nuggets
+          - field.field.node.person.field_meta_tags
+          - field.field.node.person.field_person_organisation
+          - field.field.node.person.field_photo
+          - field.field.node.person.field_postscript_nuggets
+          - field.field.node.person.field_role
+          - field.field.node.person.field_seo_description
+          - field.field.node.person.field_seo_title
+          - field.field.node.person.field_sidebar_nuggets
+          - field.field.node.person.field_social_media
+          - field.field.node.person.field_suffix
+          - field.field.node.person.field_summary
+          - node.type.person
+        module:
+          - layout_paragraphs
+          - link
+          - metatag
+          - text
+          - user
+      id: node.person.default
+      targetEntityType: node
+      bundle: person
+      mode: default
+      content:
+        field_alternative_title:
+          type: text_default
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          weight: 112
+          region: content
+        field_body:
+          type: text_default
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          weight: 104
+          region: content
+        field_department:
+          type: entity_reference_label
+          label: above
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 124
+          region: content
+        field_first_name:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 119
+          region: content
+        field_honorific_title:
+          type: entity_reference_label
+          label: above
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 118
+          region: content
+        field_image:
+          type: entity_reference_entity_view
+          label: above
+          settings:
+            view_mode: default
+            link: false
+          third_party_settings: {  }
+          weight: 113
+          region: content
+        field_last_name:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 120
+          region: content
+        field_main_nuggets:
+          type: layout_paragraphs
+          label: above
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 109
+          region: content
+        field_meta_tags:
+          type: metatag_empty_formatter
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 17
+          region: content
+        field_person_organisation:
+          type: entity_reference_label
+          label: above
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 126
+          region: content
+        field_photo:
+          type: entity_reference_entity_view
+          label: above
+          settings:
+            view_mode: default
+            link: false
+          third_party_settings: {  }
+          weight: 122
+          region: content
+        field_postscript_nuggets:
+          type: layout_paragraphs
+          label: above
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 110
+          region: content
+        field_role:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 123
+          region: content
+        field_seo_description:
+          type: basic_string
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          weight: 116
+          region: content
+        field_seo_title:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 115
+          region: content
+        field_sidebar_nuggets:
+          type: layout_paragraphs
+          label: above
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 111
+          region: content
+        field_social_media:
+          type: link
+          label: above
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: ''
+            target: ''
+          third_party_settings: {  }
+          weight: 125
+          region: content
+        field_suffix:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 121
+          region: content
+        field_summary:
+          type: text_default
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          weight: 114
+          region: content
+        links:
+          settings: {  }
+          third_party_settings: {  }
+          weight: 100
+          region: content
+      hidden:
+        field_hero_content: true
+        langcode: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: oEv1J2B89xPCR4PPw6BeVU8q-o5HITSX8EWZZ5wFOu8
+  -
+    collection: ''
+    name: core.entity_view_display.node.person.full
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.node.full
+          - field.field.node.person.field_alternative_title
+          - field.field.node.person.field_body
+          - field.field.node.person.field_department
+          - field.field.node.person.field_first_name
+          - field.field.node.person.field_hero_content
+          - field.field.node.person.field_honorific_title
+          - field.field.node.person.field_image
+          - field.field.node.person.field_last_name
+          - field.field.node.person.field_main_nuggets
+          - field.field.node.person.field_meta_tags
+          - field.field.node.person.field_person_organisation
+          - field.field.node.person.field_photo
+          - field.field.node.person.field_postscript_nuggets
+          - field.field.node.person.field_role
+          - field.field.node.person.field_seo_description
+          - field.field.node.person.field_seo_title
+          - field.field.node.person.field_sidebar_nuggets
+          - field.field.node.person.field_social_media
+          - field.field.node.person.field_suffix
+          - field.field.node.person.field_summary
+          - node.type.person
+        module:
+          - layout_builder
+          - layout_paragraphs
+          - link
+          - text
+          - user
+      third_party_settings:
+        layout_builder:
+          enabled: false
+          allow_custom: false
+      id: node.person.full
+      targetEntityType: node
+      bundle: person
+      mode: full
+      content:
+        field_alternative_title:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 10
+          region: content
+        field_body:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 2
+          region: content
+        field_department:
+          type: entity_reference_label
+          label: hidden
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 21
+          region: content
+        field_first_name:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 16
+          region: content
+        field_hero_content:
+          type: layout_paragraphs
+          label: hidden
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 24
+          region: content
+        field_honorific_title:
+          type: entity_reference_label
+          label: hidden
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 15
+          region: content
+        field_image:
+          type: entity_reference_entity_view
+          label: hidden
+          settings:
+            view_mode: default
+            link: false
+          third_party_settings: {  }
+          weight: 11
+          region: content
+        field_last_name:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 17
+          region: content
+        field_main_nuggets:
+          type: layout_paragraphs
+          label: hidden
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 7
+          region: content
+        field_person_organisation:
+          type: entity_reference_label
+          label: hidden
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 23
+          region: content
+        field_photo:
+          type: entity_reference_entity_view
+          label: hidden
+          settings:
+            view_mode: default
+            link: false
+          third_party_settings: {  }
+          weight: 19
+          region: content
+        field_postscript_nuggets:
+          type: layout_paragraphs
+          label: hidden
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 8
+          region: content
+        field_role:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 20
+          region: content
+        field_seo_description:
+          type: basic_string
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 14
+          region: content
+        field_seo_title:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 13
+          region: content
+        field_sidebar_nuggets:
+          type: layout_paragraphs
+          label: hidden
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 9
+          region: content
+        field_social_media:
+          type: link
+          label: hidden
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: ''
+            target: ''
+          third_party_settings: {  }
+          weight: 22
+          region: content
+        field_suffix:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 18
+          region: content
+        field_summary:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 12
+          region: content
+        links:
+          settings: {  }
+          third_party_settings: {  }
+          weight: 1
+          region: content
+      hidden:
+        field_meta_tags: true
+        langcode: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: ZJlgMpVy8HEs0Q9BRx9igkXRd34JjHgjuxub6ofGiQg
+  -
+    collection: ''
+    name: core.entity_view_display.node.person.search_index
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.node.search_index
+          - field.field.node.person.field_alternative_title
+          - field.field.node.person.field_body
+          - field.field.node.person.field_department
+          - field.field.node.person.field_first_name
+          - field.field.node.person.field_hero_content
+          - field.field.node.person.field_honorific_title
+          - field.field.node.person.field_image
+          - field.field.node.person.field_last_name
+          - field.field.node.person.field_main_nuggets
+          - field.field.node.person.field_meta_tags
+          - field.field.node.person.field_person_organisation
+          - field.field.node.person.field_photo
+          - field.field.node.person.field_postscript_nuggets
+          - field.field.node.person.field_role
+          - field.field.node.person.field_seo_description
+          - field.field.node.person.field_seo_title
+          - field.field.node.person.field_sidebar_nuggets
+          - field.field.node.person.field_social_media
+          - field.field.node.person.field_suffix
+          - field.field.node.person.field_summary
+          - node.type.person
+        module:
+          - entity_reference_revisions
+          - layout_builder
+          - layout_paragraphs
+          - link
+          - text
+          - user
+      third_party_settings:
+        layout_builder:
+          enabled: false
+          allow_custom: false
+      id: node.person.search_index
+      targetEntityType: node
+      bundle: person
+      mode: search_index
+      content:
+        field_alternative_title:
+          type: text_default
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          weight: 10
+          region: content
+        field_body:
+          type: text_default
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          weight: 2
+          region: content
+        field_department:
+          type: entity_reference_label
+          label: above
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 21
+          region: content
+        field_first_name:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 16
+          region: content
+        field_hero_content:
+          type: entity_reference_revisions_entity_view
+          label: above
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 24
+          region: content
+        field_honorific_title:
+          type: entity_reference_label
+          label: above
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 15
+          region: content
+        field_image:
+          type: entity_reference_entity_view
+          label: above
+          settings:
+            view_mode: default
+            link: false
+          third_party_settings: {  }
+          weight: 11
+          region: content
+        field_last_name:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 17
+          region: content
+        field_main_nuggets:
+          type: layout_paragraphs
+          label: above
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 7
+          region: content
+        field_person_organisation:
+          type: entity_reference_label
+          label: above
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 23
+          region: content
+        field_photo:
+          type: entity_reference_entity_view
+          label: above
+          settings:
+            view_mode: default
+            link: false
+          third_party_settings: {  }
+          weight: 19
+          region: content
+        field_postscript_nuggets:
+          type: layout_paragraphs
+          label: above
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 8
+          region: content
+        field_role:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 20
+          region: content
+        field_seo_description:
+          type: basic_string
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          weight: 14
+          region: content
+        field_seo_title:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 13
+          region: content
+        field_sidebar_nuggets:
+          type: layout_paragraphs
+          label: above
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 9
+          region: content
+        field_social_media:
+          type: link
+          label: above
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: ''
+            target: ''
+          third_party_settings: {  }
+          weight: 22
+          region: content
+        field_suffix:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 18
+          region: content
+        field_summary:
+          type: text_default
+          label: above
+          settings: {  }
+          third_party_settings: {  }
+          weight: 12
+          region: content
+        links:
+          settings: {  }
+          third_party_settings: {  }
+          weight: 1
+          region: content
+      hidden:
+        field_meta_tags: true
+        langcode: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: 1w4ASEPtDaxSqVEHeaQ3Ft1Aj_nYh2uhKG2F0wArZD8
+  -
+    collection: ''
+    name: core.entity_view_display.node.person.search_rendered_output
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.node.search_rendered_output
+          - field.field.node.person.field_alternative_title
+          - field.field.node.person.field_body
+          - field.field.node.person.field_department
+          - field.field.node.person.field_first_name
+          - field.field.node.person.field_hero_content
+          - field.field.node.person.field_honorific_title
+          - field.field.node.person.field_image
+          - field.field.node.person.field_last_name
+          - field.field.node.person.field_main_nuggets
+          - field.field.node.person.field_meta_tags
+          - field.field.node.person.field_person_organisation
+          - field.field.node.person.field_photo
+          - field.field.node.person.field_postscript_nuggets
+          - field.field.node.person.field_role
+          - field.field.node.person.field_seo_description
+          - field.field.node.person.field_seo_title
+          - field.field.node.person.field_sidebar_nuggets
+          - field.field.node.person.field_social_media
+          - field.field.node.person.field_suffix
+          - field.field.node.person.field_summary
+          - node.type.person
+        module:
+          - entity_reference_revisions
+          - layout_builder
+          - layout_paragraphs
+          - text
+          - user
+      third_party_settings:
+        layout_builder:
+          enabled: false
+          allow_custom: false
+      id: node.person.search_rendered_output
+      targetEntityType: node
+      bundle: person
+      mode: search_rendered_output
+      content:
+        field_alternative_title:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 10
+          region: content
+        field_body:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 1
+          region: content
+        field_department:
+          type: entity_reference_label
+          label: hidden
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 17
+          region: content
+        field_first_name:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 13
+          region: content
+        field_hero_content:
+          type: entity_reference_revisions_entity_view
+          label: hidden
+          settings:
+            view_mode: search_rendered_output
+            link: ''
+          third_party_settings: {  }
+          weight: 6
+          region: content
+        field_honorific_title:
+          type: entity_reference_label
+          label: hidden
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 12
+          region: content
+        field_last_name:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 14
+          region: content
+        field_main_nuggets:
+          type: layout_paragraphs
+          label: hidden
+          settings:
+            view_mode: search_rendered_output
+            link: ''
+          third_party_settings: {  }
+          weight: 7
+          region: content
+        field_person_organisation:
+          type: entity_reference_label
+          label: hidden
+          settings:
+            link: false
+          third_party_settings: {  }
+          weight: 18
+          region: content
+        field_postscript_nuggets:
+          type: layout_paragraphs
+          label: hidden
+          settings:
+            view_mode: search_rendered_output
+            link: ''
+          third_party_settings: {  }
+          weight: 8
+          region: content
+        field_role:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 16
+          region: content
+        field_sidebar_nuggets:
+          type: layout_paragraphs
+          label: hidden
+          settings:
+            view_mode: search_rendered_output
+            link: ''
+          third_party_settings: {  }
+          weight: 9
+          region: content
+        field_suffix:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 15
+          region: content
+        field_summary:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 11
+          region: content
+      hidden:
+        field_image: true
+        field_meta_tags: true
+        field_photo: true
+        field_seo_description: true
+        field_seo_title: true
+        field_social_media: true
+        langcode: true
+        links: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: skPkhtwL2X960OkkB3iyvNeiLWUh6bYjEIwRi_djBuo
+  -
+    collection: ''
+    name: field.field.node.person.field_alternative_title
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_alternative_title
+          - filter.format.title
+          - node.type.person
+        module:
+          - text
+      id: node.person.field_alternative_title
+      field_name: field_alternative_title
+      entity_type: node
+      bundle: person
+      label: 'Alternative title'
+      description: 'If you would like a different title to the main page title, add it here. This will also be used for SEO.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        allowed_formats:
+          - title
+      field_type: text
+      _core:
+        default_config_hash: JXJtwCloka9a3olK67EvxUKanV9wEGNrcbsHxz9jWII
+  -
+    collection: ''
+    name: field.field.node.person.field_body
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_body
+          - filter.format.full_html
+          - node.type.person
+        module:
+          - text
+      id: node.person.field_body
+      field_name: field_body
+      entity_type: node
+      bundle: person
+      label: Body
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        allowed_formats:
+          - full_html
+      field_type: text_long
+      _core:
+        default_config_hash: P4SRt7twVVnDXf7qAEGOcKU7cRd_8-VZf9trQXbsOWo
+  -
+    collection: ''
+    name: field.field.node.person.field_categories
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_categories
+          - node.type.person
+          - taxonomy.vocabulary.categories
+      id: node.person.field_categories
+      field_name: field_categories
+      entity_type: node
+      bundle: person
+      label: Categories
+      description: 'Select the most suitable category for this content. This will display on the page and is used to filter search results.'
+      required: false
+      translatable: true
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:taxonomy_term'
+        handler_settings:
+          target_bundles:
+            categories: categories
+      field_type: entity_reference
+      _core:
+        default_config_hash: 6U98_OZlhrtoQ6nXqkhk9rRVmXSAP-rh-QBxJdNNncg
+  -
+    collection: ''
+    name: field.field.node.person.field_countries
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_countries
+          - node.type.person
+          - taxonomy.vocabulary.cit_countries_information
+      id: node.person.field_countries
+      field_name: field_countries
+      entity_type: node
+      bundle: person
+      label: Countries
+      description: 'Relate your content to one or multiple countries.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:taxonomy_term'
+        handler_settings:
+          target_bundles:
+            cit_countries_information: cit_countries_information
+          sort:
+            field: name
+            direction: asc
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: NSalXw1gqjit9aoVR5XaR2ux4nFCC12lvJTIhqvQtr4
+  -
+    collection: ''
+    name: field.field.node.person.field_department
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_department
+          - node.type.person
+          - taxonomy.vocabulary.departments
+      id: node.person.field_department
+      field_name: field_department
+      entity_type: node
+      bundle: person
+      label: Department
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:taxonomy_term'
+        handler_settings:
+          target_bundles:
+            departments: departments
+          sort:
+            field: name
+            direction: asc
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: bRA_Y_mIAK-wWbYx5Z62KdXXkBKQDbjGXl1LWWO9HIU
+  -
+    collection: ''
+    name: field.field.node.person.field_diseases
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_diseases
+          - node.type.person
+          - taxonomy.vocabulary.diseases
+      id: node.person.field_diseases
+      field_name: field_diseases
+      entity_type: node
+      bundle: person
+      label: Diseases
+      description: 'Relate your content to one or multiple diseases.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:taxonomy_term'
+        handler_settings:
+          target_bundles:
+            diseases: diseases
+          sort:
+            field: name
+            direction: asc
+          auto_create: true
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: WO0VTpmHQYrqqWNEpG-m-aFJM_c3akHMkRlcZx3jSj0
+  -
+    collection: ''
+    name: field.field.node.person.field_first_name
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_first_name
+          - node.type.person
+      id: node.person.field_first_name
+      field_name: field_first_name
+      entity_type: node
+      bundle: person
+      label: 'First name'
+      description: ''
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: jkXjcNqVhbiu-TOu8TH_mHe8lnl3VxgDeC5pIYWIOo8
+  -
+    collection: ''
+    name: field.field.node.person.field_hero_content
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_hero_content
+          - node.type.person
+        module:
+          - entity_reference_revisions
+      id: node.person.field_hero_content
+      field_name: field_hero_content
+      entity_type: node
+      bundle: person
+      label: 'Hero content'
+      description: 'These nuggets will be displayed at the top of your page.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: remora_referenceable_paragraph_types_hero_content
+        handler_settings:
+          target_bundles: null
+      field_type: entity_reference_revisions
+      _core:
+        default_config_hash: eUZLV7j3hNdlCF5Pn3EZz4IoXNKDdCugzzeVdAN5Fq0
+  -
+    collection: ''
+    name: field.field.node.person.field_honorific_title
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_honorific_title
+          - node.type.person
+          - taxonomy.vocabulary.honorific_titles
+      id: node.person.field_honorific_title
+      field_name: field_honorific_title
+      entity_type: node
+      bundle: person
+      label: 'Honorific title'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:taxonomy_term'
+        handler_settings:
+          target_bundles:
+            honorific_titles: honorific_titles
+          sort:
+            field: name
+            direction: asc
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: lLemAzKIRs1F9yPtsHwliitcKk-dSjA-ry1Tbtv1RiA
+  -
+    collection: ''
+    name: field.field.node.person.field_image
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_image
+          - node.type.person
+      id: node.person.field_image
+      field_name: field_image
+      entity_type: node
+      bundle: person
+      label: Image
+      description: 'This image will be displayed on other pages on this site when referencing back to this page. It may also be used by social media platforms when this page is shared.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: remora_referenceable_media_types_image
+        handler_settings:
+          target_bundles: null
+      field_type: entity_reference
+      _core:
+        default_config_hash: SBBj7MR6SvcBbPtElUGLcQhmvhzj5aZ8Vmbs8qkIaWo
+  -
+    collection: ''
+    name: field.field.node.person.field_last_name
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_last_name
+          - node.type.person
+      id: node.person.field_last_name
+      field_name: field_last_name
+      entity_type: node
+      bundle: person
+      label: 'Last name'
+      description: ''
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: bEOy69T_f8tkFsjv7YgkFjOhflVsE_IKXuQZhWpurK4
+  -
+    collection: ''
+    name: field.field.node.person.field_main_nuggets
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_main_nuggets
+          - node.type.person
+        module:
+          - entity_reference_revisions
+      id: node.person.field_main_nuggets
+      field_name: field_main_nuggets
+      entity_type: node
+      bundle: person
+      label: Nuggets
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: remora_referenceable_paragraph_types_main_content
+        handler_settings:
+          target_bundles: null
+      field_type: entity_reference_revisions
+      _core:
+        default_config_hash: UNDeU_3WLTRUmLTvkWqpt2k8P8hQqPbPQ_MJRioIyA0
+  -
+    collection: ''
+    name: field.field.node.person.field_meta_tags
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_meta_tags
+          - node.type.person
+        module:
+          - metatag
+      id: node.person.field_meta_tags
+      field_name: field_meta_tags
+      entity_type: node
+      bundle: person
+      label: 'Meta tags'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: metatag
+      _core:
+        default_config_hash: Oa2ec_uC4kKCAyAbFM5H8NqbPsVkxR9Dol_v1rUar7A
+  -
+    collection: ''
+    name: field.field.node.person.field_person_organisation
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_person_organisation
+          - node.type.person
+          - taxonomy.vocabulary.organisations
+      id: node.person.field_person_organisation
+      field_name: field_person_organisation
+      entity_type: node
+      bundle: person
+      label: Organisation
+      description: 'This is typically used for external organisations.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:taxonomy_term'
+        handler_settings:
+          target_bundles:
+            organisations: organisations
+          sort:
+            field: name
+            direction: asc
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: 7dU39ZlNZJL4zC9cOLdgx8BInpe6FssBOqr4sCl53wQ
+  -
+    collection: ''
+    name: field.field.node.person.field_photo
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_photo
+          - media.type.image
+          - node.type.person
+      id: node.person.field_photo
+      field_name: field_photo
+      entity_type: node
+      bundle: person
+      label: Photo
+      description: 'Upload a new image or select an existing one from your media library.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:media'
+        handler_settings:
+          target_bundles:
+            image: image
+          sort:
+            field: _none
+            direction: ASC
+          auto_create: false
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: UY60uqMuMx-CKgRRHIqnjZVX0wzacsKI8D7R7ohOz8Y
+  -
+    collection: ''
+    name: field.field.node.person.field_postscript_nuggets
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_postscript_nuggets
+          - node.type.person
+        module:
+          - entity_reference_revisions
+      id: node.person.field_postscript_nuggets
+      field_name: field_postscript_nuggets
+      entity_type: node
+      bundle: person
+      label: Nuggets
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: remora_referenceable_paragraph_types_postscript
+        handler_settings:
+          target_bundles: null
+      field_type: entity_reference_revisions
+      _core:
+        default_config_hash: LB6emfGsTZx8rMFcS8wX0tAyibp5cP8L50BjjBcsNec
+  -
+    collection: ''
+    name: field.field.node.person.field_role
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_role
+          - node.type.person
+      id: node.person.field_role
+      field_name: field_role
+      entity_type: node
+      bundle: person
+      label: 'Job title'
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: xEmOvOhWF4AX6Xuv36859jhAoz3twz8sN4Ee9ItqnBc
+  -
+    collection: ''
+    name: field.field.node.person.field_seo_description
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_seo_description
+          - node.type.person
+      id: node.person.field_seo_description
+      field_name: field_seo_description
+      entity_type: node
+      bundle: person
+      label: 'SEO Description'
+      description: "Complete this field to specify the text which may be displayed on search engine results.\r\nA brief and concise summary of the page's content that is a maximum of 160 characters in length. The description meta tag may be used by search engines to display a snippet about the page in search results."
+      required: false
+      translatable: false
+      default_value:
+        -
+          value: '[remora:seo_description]'
+      default_value_callback: ''
+      settings: {  }
+      field_type: string_long
+      _core:
+        default_config_hash: uSxr6Cy0b-pygP1BxGmOHYJffVMhh-uucUtQ_HxOPc0
+  -
+    collection: ''
+    name: field.field.node.person.field_seo_title
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_seo_title
+          - node.type.person
+      id: node.person.field_seo_title
+      field_name: field_seo_title
+      entity_type: node
+      bundle: person
+      label: 'SEO Title'
+      description: "Complete this field to specify the text to display in the title bar of a visitor's web browser when they view this page. It may also be displayed on search engine results. It is recommended that the title is no greater than 55 - 65 characters long, including spaces (and the site’s name which will automatically be added)."
+      required: false
+      translatable: false
+      default_value:
+        -
+          value: '[remora:seo_title]'
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: 6fr1HC0P-wjbZD91SNByuflfXRJwe1ZYIuNaGXiyZ6I
+  -
+    collection: ''
+    name: field.field.node.person.field_sidebar_nuggets
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_sidebar_nuggets
+          - node.type.person
+        module:
+          - entity_reference_revisions
+      id: node.person.field_sidebar_nuggets
+      field_name: field_sidebar_nuggets
+      entity_type: node
+      bundle: person
+      label: Nuggets
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: remora_referenceable_paragraph_types_sidebar
+        handler_settings:
+          target_bundles: null
+      field_type: entity_reference_revisions
+      _core:
+        default_config_hash: FmMKd0VqmuXjvNloyF93RG06SdTFkd3kf5CzewBnhac
+  -
+    collection: ''
+    name: field.field.node.person.field_social_media
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_social_media
+          - node.type.person
+        module:
+          - link
+      id: node.person.field_social_media
+      field_name: field_social_media
+      entity_type: node
+      bundle: person
+      label: Links
+      description: 'This must be an external URL such as https://example.com.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        title: 2
+        link_type: 16
+      field_type: link
+      _core:
+        default_config_hash: x68bFAYsR80W8wTspp4AeWbrSbyA8AYfuWXVTrUR7xs
+  -
+    collection: ''
+    name: field.field.node.person.field_suffix
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_suffix
+          - node.type.person
+      id: node.person.field_suffix
+      field_name: field_suffix
+      entity_type: node
+      bundle: person
+      label: Suffix
+      description: ''
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: 1Ky1i-Oh6VsJlzRkwCmACiye56q-2aQ8eCx9dd94VEA
+  -
+    collection: ''
+    name: field.field.node.person.field_summary
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_summary
+          - filter.format.restricted_html
+          - node.type.person
+        module:
+          - text
+      id: node.person.field_summary
+      field_name: field_summary
+      entity_type: node
+      bundle: person
+      label: Summary
+      description: 'This summary will be displayed on other pages on your website when referencing back to this page. It may also be used by social media platforms when this page is shared. If you want to have different copy for SEO, please edit the ‘Customised SEO’ section below.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        allowed_formats:
+          - restricted_html
+      field_type: text_long
+      _core:
+        default_config_hash: 9fz9E4V1SmTwwou_q5-GG-xx6sY4YvrnYsfEdgzP5M4
+  -
+    collection: ''
+    name: field.field.node.person.field_tags
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_tags
+          - node.type.person
+          - taxonomy.vocabulary.tags
+      id: node.person.field_tags
+      field_name: field_tags
+      entity_type: node
+      bundle: person
+      label: Tags
+      description: 'Relate your content to one or multiple tags.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:taxonomy_term'
+        handler_settings:
+          target_bundles:
+            tags: tags
+          sort:
+            field: name
+            direction: asc
+          auto_create: true
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: nfmqmNeGwh7dmr0Zr7zBvmOVSVTr4hzybXQwfPb5Hd0
+  -
+    collection: ''
+    name: field.field.node.person.field_topics
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.node.field_topics
+          - node.type.person
+          - taxonomy.vocabulary.topics
+      id: node.person.field_topics
+      field_name: field_topics
+      entity_type: node
+      bundle: person
+      label: Topics
+      description: 'Relate your content to a one or multiple topics.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:taxonomy_term'
+        handler_settings:
+          target_bundles:
+            topics: topics
+          sort:
+            field: name
+            direction: asc
+          auto_create: true
+          auto_create_bundle: ''
+      field_type: entity_reference
+      _core:
+        default_config_hash: tOR6Gmb8mYABVYe2scxAHoOOYvvaPojSiFFfEW_xlc8
+  -
+    collection: ''
+    name: field.storage.node.field_department
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - node
+          - taxonomy
+      id: node.field_department
+      field_name: field_department
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: taxonomy_term
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: kYg5Xo0H8qCXy5Z0QWL23ggXFhXcfwKsk1NTiA-Xzt8
+  -
+    collection: ''
+    name: field.storage.node.field_first_name
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - node
+      id: node.field_first_name
+      field_name: field_first_name
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+        case_sensitive: false
+        is_ascii: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: ZX0aLE0lL3zIsQN6mCeLYucRSVzqdid_VxNKE-ZOH_Y
+  -
+    collection: ''
+    name: field.storage.node.field_honorific_title
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - node
+          - taxonomy
+      id: node.field_honorific_title
+      field_name: field_honorific_title
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: taxonomy_term
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: VH3EOtNNaij7jdlqKhT8d1eO9hRq7efrOX4y64FWJNs
+  -
+    collection: ''
+    name: field.storage.node.field_last_name
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - node
+      id: node.field_last_name
+      field_name: field_last_name
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+        case_sensitive: false
+        is_ascii: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: _jF-qOPviZWHCSFIP3qXKmvyMn8WbF6083AsG1wb2SQ
+  -
+    collection: ''
+    name: field.storage.node.field_person_organisation
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - node
+          - taxonomy
+      id: node.field_person_organisation
+      field_name: field_person_organisation
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: taxonomy_term
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: GrpJ9uccTMyKB6NbHNmBPL_9WWc6lanjf02yQKu1Cq8
+  -
+    collection: ''
+    name: field.storage.node.field_photo
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - media
+          - node
+      id: node.field_photo
+      field_name: field_photo
+      entity_type: node
+      type: entity_reference
+      settings:
+        target_type: media
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: 63insT3COVzXjI6HZM-zqPInZ1Yhqq9hPO8c6T2Z6K0
+  -
+    collection: ''
+    name: field.storage.node.field_role
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - node
+      id: node.field_role
+      field_name: field_role
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+        case_sensitive: false
+        is_ascii: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: mqopvb2tCLySBD7d4oTo3HA-XQegkOFVkTRj8GdJlcU
+  -
+    collection: ''
+    name: field.storage.node.field_social_media
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - link
+          - node
+      id: node.field_social_media
+      field_name: field_social_media
+      entity_type: node
+      type: link
+      settings: {  }
+      module: link
+      locked: false
+      cardinality: -1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: eO7E9EA0qa6wUsL5GhKfenXKoesJ8sjNSnPQDEaRCvQ
+  -
+    collection: ''
+    name: field.storage.node.field_suffix
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - node
+      id: node.field_suffix
+      field_name: field_suffix
+      entity_type: node
+      type: string
+      settings:
+        max_length: 255
+        case_sensitive: false
+        is_ascii: false
+      module: core
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: JEA5eCG6WDZ1FJS86g_oG24SNCcHN2Q27o5mCQdVLxc
+  -
+    collection: ''
+    name: language.content_settings.node.person
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - node.type.person
+      id: node.person
+      target_entity_type_id: node
+      target_bundle: person
+      default_langcode: site_default
+      language_alterable: false
+      _core:
+        default_config_hash: 95mz-n1B35IDe2yY_S3kovG_e0Nzi96ZiaCCQhnzB44
+  -
+    collection: ''
+    name: language.content_settings.taxonomy_term.departments
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.departments
+      id: taxonomy_term.departments
+      target_entity_type_id: taxonomy_term
+      target_bundle: departments
+      default_langcode: site_default
+      language_alterable: false
+      _core:
+        default_config_hash: ILwk1RHK10XxD1HAOgVTcy_Gai4u8Wzt5j_rUpxSj5k
+  -
+    collection: ''
+    name: language.content_settings.taxonomy_term.honorific_titles
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.honorific_titles
+      id: taxonomy_term.honorific_titles
+      target_entity_type_id: taxonomy_term
+      target_bundle: honorific_titles
+      default_langcode: site_default
+      language_alterable: false
+      _core:
+        default_config_hash: 3q6U9sQDJ-WLWm6B7fYJqUdnbFfYgRjmZT9Vg48-igk
+  -
+    collection: ''
+    name: node.type.person
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - menu_ui
+          - node_title_help_text
+      third_party_settings:
+        menu_ui:
+          available_menus:
+            - main
+          parent: 'main:'
+        node_title_help_text:
+          title_help: ''
+      name: Person
+      type: person
+      description: ''
+      help: ''
+      new_revision: true
+      preview_mode: 0
+      display_submitted: false
+      _core:
+        default_config_hash: 8SSUHcTwqm8vw8fZABiS9HNmlJH6Ar23Nto4QXtkOE4
+  -
+    collection: ''
+    name: rabbit_hole.behavior_settings.taxonomy_term.departments
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.departments
+      id: taxonomy_term.departments
+      targetEntityType: taxonomy_term
+      bundle: departments
+      action: page_redirect
+      no_bypass: false
+      bypass_message: true
+      configuration:
+        redirect: '<front>'
+        redirect_code: 301
+        redirect_fallback_action: access_denied
+      _core:
+        default_config_hash: v1SdfFkUSZffvL9-1ny6YXlFZ7F7vH3B5S-B9hjujcc
+  -
+    collection: ''
+    name: rabbit_hole.behavior_settings.taxonomy_term.honorific_titles
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - taxonomy.vocabulary.honorific_titles
+      id: taxonomy_term.honorific_titles
+      targetEntityType: taxonomy_term
+      bundle: honorific_titles
+      action: page_redirect
+      no_bypass: false
+      bypass_message: true
+      configuration:
+        redirect: '<front>'
+        redirect_code: 301
+        redirect_fallback_action: access_denied
+      _core:
+        default_config_hash: llvhM0cZfYJNRfhJyM0qODhhzlIQDxKJ30aZ07Nz2Ho
+  -
+    collection: ''
+    name: taxonomy.vocabulary.departments
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies: {  }
+      name: Departments
+      vid: departments
+      description: ''
+      weight: 0
+      _core:
+        default_config_hash: Deoo3IPi5rKzpXozwriXygyN8b_k_QBRejmuJBy0kAw
+  -
+    collection: ''
+    name: taxonomy.vocabulary.honorific_titles
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies: {  }
+      name: 'Honorific titles'
+      vid: honorific_titles
+      description: ''
+      weight: 0
+      _core:
+        default_config_hash: DEmkunMNk8gknE23-Q21jfnYIqEvIuoYYnt_T5dtiJo

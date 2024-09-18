@@ -1,0 +1,11 @@
+uuid: 78436025-04d3-4359-a379-91f215570927
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.portrait_3x4
+id: crop.portrait_3x4
+target_entity_type_id: crop
+target_bundle: portrait_3x4
+default_langcode: site_default
+language_alterable: false

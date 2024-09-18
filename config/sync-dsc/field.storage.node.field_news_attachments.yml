@@ -1,0 +1,22 @@
+uuid: 80f9cafe-7d56-47e9-8ceb-f8ef15d0b1d2
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+    - node
+_core:
+  default_config_hash: gpf2QeTA58AX6OuaUAekrgVeKFVuO11eY5Xq5hIFpvg
+id: node.field_news_attachments
+field_name: field_news_attachments
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

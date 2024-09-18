@@ -1,0 +1,25 @@
+uuid: 5181a8d7-25cc-403d-9d51-bd0a9acddfa8
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_social_media
+    - node.type.person
+  module:
+    - link
+_core:
+  default_config_hash: x68bFAYsR80W8wTspp4AeWbrSbyA8AYfuWXVTrUR7xs
+id: node.person.field_social_media
+field_name: field_social_media
+entity_type: node
+bundle: person
+label: Links
+description: 'This must be an external URL such as https://example.com.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 16
+field_type: link
