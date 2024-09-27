@@ -88,13 +88,17 @@ $title-swoosh-height-desktop: 120px;
   }
 }
 
-#page-content {
-  margin-top: 32px;
-
-  section {
-    margin-top: 48px;
-    margin-bottom: 48px;
+#page-content .main-content-wrapper {
+  .node__content {
+    section {
+      margin-top: 48px;
+      margin-bottom: 48px;
+    }
+    & > section {
+      margin-top: 92px;
+    }
   }
+
 }
 
 #postscript {
