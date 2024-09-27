@@ -57,6 +57,8 @@ a.view-more {
 }
 
 footer {
+  margin-top: 1rem;
+
   .social-links-wrapper a .btn,
   a.btn-primary {
     @include custom_button(

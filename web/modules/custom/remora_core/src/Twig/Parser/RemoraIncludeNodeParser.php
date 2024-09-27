@@ -107,8 +107,16 @@ class RemoraIncludeNodeParser extends IncludeTokenParser
           new ConstantExpression(self::FILE_EXT, $lineNo), $lineNo
         ),
         $lineNo),
-      // the content type's template
+      // the subtheme's generic override template
       new ConstantExpression(1, $lineNo),
+      new ConcatBinary($directoryExpr,
+        new ConcatBinary(
+            new ConstantExpression('/templates/' . $path . '/' . $filename . '--oust', $lineNo),
+          new ConstantExpression(self::FILE_EXT, $lineNo), $lineNo
+        ),
+        $lineNo),
+      // the content type's template
+      new ConstantExpression(2, $lineNo),
       new ConcatBinary(
         new ConstantExpression('@', $lineNo),
         new ConcatBinary(
@@ -118,7 +126,7 @@ class RemoraIncludeNodeParser extends IncludeTokenParser
         $lineNo
       ),
       // the nugget's template
-      new ConstantExpression(2, $lineNo),
+      new ConstantExpression(3, $lineNo),
       new ConcatBinary(
         new ConstantExpression('@', $lineNo),
         new ConcatBinary(
@@ -128,7 +136,7 @@ class RemoraIncludeNodeParser extends IncludeTokenParser
         $lineNo
       ),
       // the module's template
-      new ConstantExpression(5, $lineNo),
+      new ConstantExpression(4, $lineNo),
       new ConcatBinary(
         new ConcatBinary(
           new ConstantExpression('@', $lineNo),
@@ -139,10 +147,10 @@ class RemoraIncludeNodeParser extends IncludeTokenParser
         $lineNo
       ),
       // the subtheme's generic template
-      new ConstantExpression(3, $lineNo),
+      new ConstantExpression(5, $lineNo),
       new ConcatBinary($directoryExpr, new ConstantExpression('/templates/' . $path . '/' . $filename . self::FILE_EXT, $lineNo), $lineNo),
-      // the base theme's template
-      new ConstantExpression(4, $lineNo),
+      // the base theme's generic template
+      new ConstantExpression(6, $lineNo),
       new ConstantExpression(self::FALLBACK_THEME . '/' . $path . '/' . $filename . self::FILE_EXT, $lineNo),
     ];
 
@@ -156,4 +164,3 @@ class RemoraIncludeNodeParser extends IncludeTokenParser
     );
   }
 }
-

@@ -1,5 +1,5 @@
 uuid: 5b1185ec-f749-495d-9f25-cfa31312aa1d
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -97,6 +97,11 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true

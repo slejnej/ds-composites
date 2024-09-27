@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Site\Settings;
 use Drupal\installation_profile\Form\ConfigureThemeForm;
 use Drupal\installation_profile\Manager\FigmaSassManager;
 use Drupal\installation_profile\Manager\ThemeManager;

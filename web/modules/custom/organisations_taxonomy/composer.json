@@ -1,6 +1,6 @@
 {
   "name": "mrm-remora/organisations_taxonomy",
-  "type": "drupal-module",
+  "type": "drupal-custom-module",
   "description": "Remora organisations - Contains organisation taxonomy",
   "minimum-stability": "stable",
   "license": "proprietary",

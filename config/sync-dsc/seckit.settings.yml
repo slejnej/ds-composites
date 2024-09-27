@@ -1,6 +1,6 @@
 _core:
   default_config_hash: fpcBuAXb8-6iYS5QkNwCVXlmbmWrBBq1In2dUpDbk2Q
-langcode: en-gb
+langcode: en
 seckit_xss:
   csp:
     checkbox: true

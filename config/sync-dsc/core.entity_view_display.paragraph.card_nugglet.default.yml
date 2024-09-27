@@ -1,5 +1,5 @@
 uuid: faca507b-c989-45fa-bfd8-645637d42805
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:

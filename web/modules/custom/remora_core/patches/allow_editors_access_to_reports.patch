@@ -1,0 +1,35 @@
+diff --git a/core/modules/dblog/dblog.routing.yml b/core/modules/dblog/dblog.routing.yml
+index 4322f67fa2..d2c76d2d72 100644
+--- a/core/modules/dblog/dblog.routing.yml
++++ b/core/modules/dblog/dblog.routing.yml
+@@ -29,7 +29,7 @@ dblog.page_not_found:
+     _controller: '\Drupal\dblog\Controller\DbLogController::topLogMessages'
+     type: 'page not found'
+   requirements:
+-    _permission: 'access site reports'
++    _permission: 'administer nodes'
+ 
+ dblog.access_denied:
+   path: '/admin/reports/access-denied'
+@@ -38,7 +38,7 @@ dblog.access_denied:
+     _controller: '\Drupal\dblog\Controller\DbLogController::topLogMessages'
+     type: 'access denied'
+   requirements:
+-    _permission: 'access site reports'
++    _permission: 'administer nodes'
+ 
+ dblog.search:
+   path: '/admin/reports/search'
+diff --git a/core/modules/system/system.routing.yml b/core/modules/system/system.routing.yml
+index 5a7c75e495..72d4ca1560 100644
+--- a/core/modules/system/system.routing.yml
++++ b/core/modules/system/system.routing.yml
+@@ -52,7 +52,7 @@ system.admin_reports:
+     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+     _title: 'Reports'
+   requirements:
+-    _permission: 'access site reports'
++    _permission: 'administer nodes'
+ 
+ system.admin_config_media:
+   path: '/admin/config/media'

@@ -14,7 +14,7 @@ items:
     name: core.entity_form_display.paragraph.card_nugglet.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -135,7 +135,7 @@ items:
     name: core.entity_form_display.paragraph.cards.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -335,7 +335,7 @@ items:
     name: core.entity_view_display.paragraph.card_nugglet.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -426,7 +426,7 @@ items:
     name: core.entity_view_display.paragraph.card_nugglet.preview
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -487,7 +487,7 @@ items:
     name: core.entity_view_display.paragraph.card_nugglet.search_rendered_output
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -543,7 +543,7 @@ items:
     name: core.entity_view_display.paragraph.cards.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -678,7 +678,7 @@ items:
     name: core.entity_view_display.paragraph.cards.preview
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -745,7 +745,7 @@ items:
     name: core.entity_view_display.paragraph.cards.search_rendered_output
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -812,7 +812,7 @@ items:
     name: field.field.paragraph.card_nugglet.field_card_nt_alt_button_text
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -840,7 +840,7 @@ items:
     name: field.field.paragraph.card_nugglet.field_card_nt_customise_card
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -870,7 +870,7 @@ items:
     name: field.field.paragraph.card_nugglet.field_card_nt_display_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -903,7 +903,7 @@ items:
     name: field.field.paragraph.card_nugglet.field_card_nt_footer
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -933,7 +933,7 @@ items:
     name: field.field.paragraph.card_nugglet.field_card_nt_image
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -964,7 +964,7 @@ items:
     name: field.field.paragraph.card_nugglet.field_card_nt_link
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -996,7 +996,7 @@ items:
     name: field.field.paragraph.card_nugglet.field_card_nt_summary
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1029,7 +1029,7 @@ items:
     name: field.field.paragraph.cards.field_cards_nt_arrows
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1061,7 +1061,7 @@ items:
     name: field.field.paragraph.cards.field_cards_nt_autoplay
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1093,7 +1093,7 @@ items:
     name: field.field.paragraph.cards.field_cards_nt_card
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1148,7 +1148,7 @@ items:
     name: field.field.paragraph.cards.field_cards_nt_loop
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1180,7 +1180,7 @@ items:
     name: field.field.paragraph.cards.field_cards_nt_markers
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1212,7 +1212,7 @@ items:
     name: field.field.paragraph.cards.field_cards_nt_slides_per_page
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1244,7 +1244,7 @@ items:
     name: field.field.paragraph.cards.field_display_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1277,7 +1277,7 @@ items:
     name: field.field.paragraph.cards.field_editor_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1305,7 +1305,7 @@ items:
     name: field.field.paragraph.cards.field_items_per_row
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1337,7 +1337,7 @@ items:
     name: field.field.paragraph.cards.field_presentation
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1369,7 +1369,7 @@ items:
     name: field.field.paragraph.cards.field_view_more_link
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1398,7 +1398,7 @@ items:
     name: field.storage.paragraph.field_card_nt_alt_button_text
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1428,7 +1428,7 @@ items:
     name: field.storage.paragraph.field_card_nt_customise_card
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1455,7 +1455,7 @@ items:
     name: field.storage.paragraph.field_card_nt_display_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1484,7 +1484,7 @@ items:
     name: field.storage.paragraph.field_card_nt_footer
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1509,7 +1509,7 @@ items:
     name: field.storage.paragraph.field_card_nt_image
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1538,7 +1538,7 @@ items:
     name: field.storage.paragraph.field_card_nt_link
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1566,7 +1566,7 @@ items:
     name: field.storage.paragraph.field_card_nt_summary
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1594,7 +1594,7 @@ items:
     name: field.storage.paragraph.field_cards_nt_arrows
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1621,7 +1621,7 @@ items:
     name: field.storage.paragraph.field_cards_nt_autoplay
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1648,7 +1648,7 @@ items:
     name: field.storage.paragraph.field_cards_nt_card
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1677,7 +1677,7 @@ items:
     name: field.storage.paragraph.field_cards_nt_loop
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1704,7 +1704,7 @@ items:
     name: field.storage.paragraph.field_cards_nt_markers
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1731,7 +1731,7 @@ items:
     name: field.storage.paragraph.field_cards_nt_slides_per_page
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1776,7 +1776,7 @@ items:
     name: paragraphs.paragraphs_type.card_nugglet
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1800,7 +1800,7 @@ items:
     name: paragraphs.paragraphs_type.cards
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:

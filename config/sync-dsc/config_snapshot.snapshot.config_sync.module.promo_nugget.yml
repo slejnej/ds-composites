@@ -14,7 +14,7 @@ items:
     name: core.entity_form_display.paragraph.promo.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -134,7 +134,7 @@ items:
     name: core.entity_view_display.paragraph.promo.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -211,7 +211,7 @@ items:
     name: core.entity_view_display.paragraph.promo.preview
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -249,7 +249,7 @@ items:
     name: field.field.paragraph.promo.field_display_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -279,7 +279,7 @@ items:
     name: field.field.paragraph.promo.field_editor_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -304,7 +304,7 @@ items:
     name: field.field.paragraph.promo.field_promo_link
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -333,7 +333,7 @@ items:
     name: field.field.paragraph.promo.field_promo_media
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -361,7 +361,7 @@ items:
     name: field.field.paragraph.promo.field_promo_text
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -391,7 +391,7 @@ items:
     name: field.field.paragraph.promo.field_promo_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -421,7 +421,7 @@ items:
     name: field.storage.paragraph.field_promo_link
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -446,7 +446,7 @@ items:
     name: field.storage.paragraph.field_promo_media
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -472,7 +472,7 @@ items:
     name: field.storage.paragraph.field_promo_text
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -497,7 +497,7 @@ items:
     name: field.storage.paragraph.field_promo_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -523,7 +523,7 @@ items:
     name: paragraphs.paragraphs_type.promo
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: promo

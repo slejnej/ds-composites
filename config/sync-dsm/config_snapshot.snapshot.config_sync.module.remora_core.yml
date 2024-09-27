@@ -13,7 +13,7 @@ items:
     collection: ''
     name: core.date_format.remora_ct_date
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: remora_ct_date
@@ -27,7 +27,7 @@ items:
     name: core.entity_form_display.media.audio.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -97,7 +97,7 @@ items:
     name: core.entity_form_display.media.audio.media_library
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -134,7 +134,7 @@ items:
     name: core.entity_form_display.media.document.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -214,7 +214,7 @@ items:
     name: core.entity_form_display.media.document.media_library
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -256,7 +256,7 @@ items:
     name: core.entity_form_display.media.remote_video.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -346,7 +346,7 @@ items:
     name: core.entity_form_mode.media.media_library
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -365,7 +365,7 @@ items:
     name: core.entity_view_display.media.audio.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -411,7 +411,7 @@ items:
     name: core.entity_view_display.media.audio.media_library
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -452,7 +452,7 @@ items:
     name: core.entity_view_display.media.document.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -486,7 +486,7 @@ items:
     name: core.entity_view_display.media.document.media_library
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -525,7 +525,7 @@ items:
     name: core.entity_view_display.media.image.media_library
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -572,7 +572,7 @@ items:
     name: core.entity_view_display.media.remote_video.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -611,7 +611,7 @@ items:
     name: core.entity_view_mode.block.token
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -627,7 +627,7 @@ items:
     name: core.entity_view_mode.file.token
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -643,7 +643,7 @@ items:
     name: core.entity_view_mode.media.card
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -659,7 +659,7 @@ items:
     name: core.entity_view_mode.media.free
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -675,7 +675,7 @@ items:
     name: core.entity_view_mode.media.full
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: false
       dependencies:
         module:
@@ -691,7 +691,7 @@ items:
     name: core.entity_view_mode.media.landscape_16_9
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -707,7 +707,7 @@ items:
     name: core.entity_view_mode.media.landscape_21_9
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -723,7 +723,7 @@ items:
     name: core.entity_view_mode.media.landscape_4_3
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -739,7 +739,7 @@ items:
     name: core.entity_view_mode.media.media_library
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -758,7 +758,7 @@ items:
     name: core.entity_view_mode.media.original_size
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -774,7 +774,7 @@ items:
     name: core.entity_view_mode.media.portrait_3_4
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -790,7 +790,7 @@ items:
     name: core.entity_view_mode.media.square_1_1
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -806,7 +806,7 @@ items:
     name: core.entity_view_mode.media.token
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -822,7 +822,7 @@ items:
     name: core.entity_view_mode.node.card
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -837,7 +837,7 @@ items:
     collection: ''
     name: core.entity_view_mode.node.content_specific_search_index
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -870,7 +870,7 @@ items:
     name: core.entity_view_mode.paragraph.preview
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -886,7 +886,7 @@ items:
     name: core.entity_view_mode.paragraph.search_rendered_output
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -903,7 +903,7 @@ items:
     name: core.entity_view_mode.path_alias.token
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -919,7 +919,7 @@ items:
     name: core.entity_view_mode.taxonomy_term.token
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -935,7 +935,7 @@ items:
     name: core.entity_view_mode.user.token
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -951,7 +951,7 @@ items:
     name: crop.type.card
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       label: Card
@@ -969,7 +969,7 @@ items:
     name: crop.type.free
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       label: Free
@@ -987,7 +987,7 @@ items:
     name: crop.type.landscape_16x9
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       label: 'Landscape: 16x9'
@@ -1005,7 +1005,7 @@ items:
     name: crop.type.landscape_21x9
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       label: 'Landscape: 21x9'
@@ -1023,7 +1023,7 @@ items:
     name: crop.type.landscape_4x3
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       label: 'Landscape: 4x3'
@@ -1041,7 +1041,7 @@ items:
     name: crop.type.original_size
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       label: 'Original size'
@@ -1059,7 +1059,7 @@ items:
     name: crop.type.portrait_3x4
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       label: 'Portrait: 3x4'
@@ -1077,7 +1077,7 @@ items:
     name: crop.type.square_1x1
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       label: 'Square: 1x1'
@@ -1095,7 +1095,7 @@ items:
     name: editor.editor.basic_html
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1140,7 +1140,7 @@ items:
     collection: ''
     name: editor.editor.full_html
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1255,7 +1255,7 @@ items:
     collection: ''
     name: editor.editor.restricted_html
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1360,7 +1360,7 @@ items:
     name: field.field.media.audio.field_media_audio_file
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1393,7 +1393,7 @@ items:
     name: field.field.media.audio.field_media_transcript
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1423,7 +1423,7 @@ items:
     name: field.field.media.document.field_media_file
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1456,7 +1456,7 @@ items:
     name: field.field.media.image.field_image_caption
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1480,7 +1480,7 @@ items:
     collection: ''
     name: field.field.media.image.field_image_caption_formatted
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1510,7 +1510,7 @@ items:
     name: field.field.media.image.field_media_image
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1554,7 +1554,7 @@ items:
     name: field.field.media.remote_video.field_media_oembed_video_1
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1579,7 +1579,7 @@ items:
     name: field.field.media.remote_video.field_media_transcript
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1609,7 +1609,7 @@ items:
     name: field.storage.media.field_image_caption
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1633,7 +1633,7 @@ items:
     collection: ''
     name: field.storage.media.field_image_caption_formatted
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1658,7 +1658,7 @@ items:
     name: field.storage.media.field_media_audio_file
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1687,7 +1687,7 @@ items:
     name: field.storage.media.field_media_file
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1716,7 +1716,7 @@ items:
     name: field.storage.media.field_media_image
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1752,7 +1752,7 @@ items:
     name: field.storage.media.field_media_oembed_video_1
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1779,7 +1779,7 @@ items:
     name: field.storage.media.field_media_transcript
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1804,7 +1804,7 @@ items:
     name: field.storage.node.body
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1829,7 +1829,7 @@ items:
     name: field.storage.node.field_alternative_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1855,7 +1855,7 @@ items:
     name: field.storage.node.field_body
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1880,7 +1880,7 @@ items:
     name: field.storage.node.field_date
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1906,7 +1906,7 @@ items:
     name: field.storage.node.field_hero_content
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1933,7 +1933,7 @@ items:
     name: field.storage.node.field_image
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1959,7 +1959,7 @@ items:
     name: field.storage.node.field_landing
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -1983,7 +1983,7 @@ items:
     name: field.storage.node.field_main_nuggets
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2010,7 +2010,7 @@ items:
     name: field.storage.node.field_media
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2036,7 +2036,7 @@ items:
     name: field.storage.node.field_meta_tags
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2061,7 +2061,7 @@ items:
     name: field.storage.node.field_postscript_nuggets
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2088,7 +2088,7 @@ items:
     name: field.storage.node.field_seo_description
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2113,7 +2113,7 @@ items:
     name: field.storage.node.field_seo_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2140,7 +2140,7 @@ items:
     name: field.storage.node.field_sidebar_nuggets
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2167,7 +2167,7 @@ items:
     name: field.storage.node.field_summary
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2240,7 +2240,7 @@ items:
     name: field.storage.paragraph.field_display_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2266,7 +2266,7 @@ items:
     name: field.storage.paragraph.field_editor_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2293,7 +2293,7 @@ items:
     name: field.storage.paragraph.field_items_per_row
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2383,7 +2383,7 @@ items:
     name: field.storage.paragraph.field_number_of_results
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2437,7 +2437,7 @@ items:
     name: field.storage.paragraph.field_palette
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2473,7 +2473,7 @@ items:
     name: field.storage.paragraph.field_presentation
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2506,7 +2506,7 @@ items:
     name: field.storage.paragraph.field_sort_by
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2539,7 +2539,7 @@ items:
     name: field.storage.paragraph.field_view_more_link
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2564,7 +2564,7 @@ items:
     name: filter.format.basic_html
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       name: 'Basic HTML'
@@ -2577,7 +2577,7 @@ items:
           status: true
           weight: -10
           settings:
-            allowed_html: '<br> <p> <h2> <h3> <h4> <h5> <h6> <strong> <em> <blockquote> <a href> <ul> <ol reversed start> <li>'
+            allowed_html: '<br> <p> <h2> <h3> <h4> <h5> <h6> <strong> <em> <blockquote> <a href> <ul> <ol reversed start> <li> <i class>'
             filter_html_help: true
             filter_html_nofollow: false
         filter_url:
@@ -2605,7 +2605,7 @@ items:
     collection: ''
     name: filter.format.full_html
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2654,7 +2654,7 @@ items:
           status: true
           weight: -49
           settings:
-            allowed_html: '<br> <p class="text-larger text-smaller text-align-left text-align-center text-align-right text-align-justify" id> <h2 id class="text-align-left text-align-center text-align-right text-align-justify"> <h3 id class="text-align-left text-align-center text-align-right text-align-justify"> <h4 id class="text-align-left text-align-center text-align-right text-align-justify"> <h5 id class="text-align-left text-align-center text-align-right text-align-justify"> <h6 id class="text-align-left text-align-center text-align-right text-align-justify"> <a class="btn btn-primary btn-outline-primary w-100 btn-warning btn-outline-warning" href data-entity-type data-entity-uuid data-entity-substitution> <table class="table-striped table-borderless"> <strong> <em> <u> <s> <sub> <sup> <blockquote> <ul> <ol reversed start> <li> <hr> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-view-mode data-align>'
+            allowed_html: '<br> <p class="text-larger text-smaller text-align-left text-align-center text-align-right text-align-justify" id> <h2 id class="text-align-left text-align-center text-align-right text-align-justify"> <h3 id class="text-align-left text-align-center text-align-right text-align-justify"> <h4 id class="text-align-left text-align-center text-align-right text-align-justify"> <h5 id class="text-align-left text-align-center text-align-right text-align-justify"> <h6 id class="text-align-left text-align-center text-align-right text-align-justify"> <a class="btn btn-primary btn-outline-primary w-100 btn-warning btn-outline-warning" href data-entity-type data-entity-uuid data-entity-substitution> <table class="table-striped table-borderless"> <strong> <em> <u> <s> <sub> <sup> <blockquote> <ul> <ol reversed start> <li> <hr> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-view-mode data-align> <i class>'
             filter_html_help: true
             filter_html_nofollow: false
         filter_html_escape:
@@ -2719,7 +2719,7 @@ items:
     collection: ''
     name: filter.format.restricted_html
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       name: 'Restricted HTML'
@@ -2738,7 +2738,7 @@ items:
           status: true
           weight: -10
           settings:
-            allowed_html: '<br> <p class="text-larger text-smaller text-align-left text-align-center text-align-right text-align-justify" id> <h2 id class="text-align-left text-align-center text-align-right text-align-justify"> <h3 id class="text-align-left text-align-center text-align-right text-align-justify"> <h4 id class="text-align-left text-align-center text-align-right text-align-justify"> <h5 id class="text-align-left text-align-center text-align-right text-align-justify"> <h6 id class="text-align-left text-align-center text-align-right text-align-justify"> <a class="btn btn-primary btn-outline-primary w-100 btn-warning btn-outline-warning" href data-entity-type data-entity-uuid data-entity-substitution> <strong> <em> <u> <s> <sub> <sup> <ul> <ol reversed start> <li> <hr>'
+            allowed_html: '<br> <p class="text-larger text-smaller text-align-left text-align-center text-align-right text-align-justify" id> <h2 id class="text-align-left text-align-center text-align-right text-align-justify"> <h3 id class="text-align-left text-align-center text-align-right text-align-justify"> <h4 id class="text-align-left text-align-center text-align-right text-align-justify"> <h5 id class="text-align-left text-align-center text-align-right text-align-justify"> <h6 id class="text-align-left text-align-center text-align-right text-align-justify"> <a class="btn btn-primary btn-outline-primary w-100 btn-warning btn-outline-warning" href data-entity-type data-entity-uuid data-entity-substitution> <strong> <em> <u> <s> <sub> <sup> <ul> <ol reversed start> <li> <hr> <i class>'
             filter_html_help: true
             filter_html_nofollow: false
         filter_htmlcorrector:
@@ -2790,7 +2790,7 @@ items:
     name: image.style.card_lg
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2828,7 +2828,7 @@ items:
     name: image.style.card_md
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2866,7 +2866,7 @@ items:
     name: image.style.card_sm
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2904,7 +2904,7 @@ items:
     name: image.style.card_xl
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2942,7 +2942,7 @@ items:
     name: image.style.card_xs
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2980,7 +2980,7 @@ items:
     name: image.style.card_xxl
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3018,7 +3018,7 @@ items:
     name: image.style.free_lg
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3056,7 +3056,7 @@ items:
     name: image.style.free_md
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3094,7 +3094,7 @@ items:
     name: image.style.free_sm
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3132,7 +3132,7 @@ items:
     name: image.style.free_xl
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3170,7 +3170,7 @@ items:
     name: image.style.free_xs
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3208,7 +3208,7 @@ items:
     name: image.style.free_xxl
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3246,7 +3246,7 @@ items:
     name: image.style.landscape_16_9_lg
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3284,7 +3284,7 @@ items:
     name: image.style.landscape_16_9_md
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3322,7 +3322,7 @@ items:
     name: image.style.landscape_16_9_sm
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3360,7 +3360,7 @@ items:
     name: image.style.landscape_16_9_xl
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3398,7 +3398,7 @@ items:
     name: image.style.landscape_16_9_xs
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3436,7 +3436,7 @@ items:
     name: image.style.landscape_16_9_xxl
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3474,7 +3474,7 @@ items:
     name: image.style.landscape_21_9_lg
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3512,7 +3512,7 @@ items:
     name: image.style.landscape_21_9_md
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3550,7 +3550,7 @@ items:
     name: image.style.landscape_21_9_sm
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3588,7 +3588,7 @@ items:
     name: image.style.landscape_21_9_xl
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3626,7 +3626,7 @@ items:
     name: image.style.landscape_21_9_xs
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3664,7 +3664,7 @@ items:
     name: image.style.landscape_21_9_xxl
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3702,7 +3702,7 @@ items:
     name: image.style.landscape_4_3_lg
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3740,7 +3740,7 @@ items:
     name: image.style.landscape_4_3_md
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3778,7 +3778,7 @@ items:
     name: image.style.landscape_4_3_sm
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3816,7 +3816,7 @@ items:
     name: image.style.landscape_4_3_xl
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3854,7 +3854,7 @@ items:
     name: image.style.landscape_4_3_xs
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3892,7 +3892,7 @@ items:
     name: image.style.landscape_4_3_xxl
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -3930,7 +3930,7 @@ items:
     name: image.style.large
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       name: large
@@ -3972,7 +3972,7 @@ items:
     name: image.style.media_library
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         enforced:
@@ -3996,7 +3996,7 @@ items:
     name: image.style.medium
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       name: medium
@@ -4017,7 +4017,7 @@ items:
     name: image.style.original_size
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4047,7 +4047,7 @@ items:
     name: image.style.portrait_3_4_lg
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4085,7 +4085,7 @@ items:
     name: image.style.portrait_3_4_md
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4123,7 +4123,7 @@ items:
     name: image.style.portrait_3_4_sm
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4161,7 +4161,7 @@ items:
     name: image.style.portrait_3_4_xl
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4199,7 +4199,7 @@ items:
     name: image.style.portrait_3_4_xs
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4237,7 +4237,7 @@ items:
     name: image.style.portrait_3_4_xxl
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4275,7 +4275,7 @@ items:
     name: image.style.square_1_1_lg
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4313,7 +4313,7 @@ items:
     name: image.style.square_1_1_md
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4351,7 +4351,7 @@ items:
     name: image.style.square_1_1_sm
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4389,7 +4389,7 @@ items:
     name: image.style.square_1_1_xl
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4427,7 +4427,7 @@ items:
     name: image.style.square_1_1_xs
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4465,7 +4465,7 @@ items:
     name: image.style.square_1_1_xxl
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4503,7 +4503,7 @@ items:
     name: image.style.thumbnail
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       name: thumbnail
@@ -4524,7 +4524,7 @@ items:
     name: image.style.wide
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       name: wide
@@ -4545,7 +4545,7 @@ items:
     name: language.content_settings.media.audio
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4562,7 +4562,7 @@ items:
     name: language.content_settings.media.document
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4579,7 +4579,7 @@ items:
     name: language.content_settings.media.image
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -4596,7 +4596,7 @@ items:
     name: language.content_settings.path_alias.path_alias
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -4657,7 +4657,7 @@ items:
     name: media.type.audio
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: audio
@@ -4677,7 +4677,7 @@ items:
     name: media.type.document
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: document
@@ -4697,7 +4697,7 @@ items:
     name: media.type.image
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: image
@@ -4716,7 +4716,7 @@ items:
     name: media.type.remote_video
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: remote_video
@@ -4737,7 +4737,7 @@ items:
     name: metatag.metatag_defaults.403
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: '403'
@@ -4753,7 +4753,7 @@ items:
     name: metatag.metatag_defaults.404
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: '404'
@@ -4768,7 +4768,7 @@ items:
     name: metatag.metatag_defaults.front
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: front
@@ -4783,7 +4783,7 @@ items:
     name: metatag.metatag_defaults.global
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: global
@@ -4798,7 +4798,7 @@ items:
     name: metatag.metatag_defaults.node
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: node
@@ -4815,7 +4815,7 @@ items:
     name: metatag.metatag_defaults.taxonomy_term
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: taxonomy_term
@@ -4831,7 +4831,7 @@ items:
     name: metatag.metatag_defaults.user
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: user
@@ -4847,7 +4847,7 @@ items:
     name: pathauto.pattern.default_by_menu_path
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -4867,7 +4867,7 @@ items:
     name: system.action.media_delete_action
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -4884,7 +4884,7 @@ items:
     name: system.action.media_publish_action
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -4901,7 +4901,7 @@ items:
     name: system.action.media_save_action
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -4918,7 +4918,7 @@ items:
     name: system.action.media_unpublish_action
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -5007,7 +5007,7 @@ items:
     name: user.role.administrator
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         enforced:
@@ -5025,7 +5025,7 @@ items:
     name: user.role.editor
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -5104,7 +5104,7 @@ items:
     collection: ''
     name: views.view.broken_links_report
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -6313,7 +6313,7 @@ items:
     name: views.view.content
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -7086,7 +7086,7 @@ items:
     name: views.view.media
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -8009,7 +8009,7 @@ items:
     name: views.view.media_library
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:

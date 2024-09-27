@@ -14,7 +14,7 @@ items:
     name: core.entity_form_display.paragraph.attachments.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -120,7 +120,7 @@ items:
     name: core.entity_view_display.paragraph.attachments.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -179,7 +179,7 @@ items:
     name: core.entity_view_display.paragraph.attachments.preview
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -222,7 +222,7 @@ items:
     name: core.entity_view_display.paragraph.attachments.search_rendered_output
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -273,7 +273,7 @@ items:
     name: field.field.paragraph.attachments.field_attachments_nt_file_atts
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -313,7 +313,7 @@ items:
     name: field.field.paragraph.attachments.field_display_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -347,7 +347,7 @@ items:
     name: field.field.paragraph.attachments.field_editor_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -377,7 +377,7 @@ items:
     name: field.field.paragraph.attachments.field_items_per_row
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -406,7 +406,7 @@ items:
     name: field.storage.paragraph.field_attachments_nt_file_atts
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -436,7 +436,7 @@ items:
     name: paragraphs.paragraphs_type.attachments
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:

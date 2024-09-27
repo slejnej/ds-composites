@@ -39,3 +39,8 @@ custom-navbar:
   dependencies:
     - core/jquery
     - core/drupal
+
+bootstrap-icons:
+  css:
+    theme:
+      node_modules/bootstrap-icons/font/bootstrap-icons.min.css: {}

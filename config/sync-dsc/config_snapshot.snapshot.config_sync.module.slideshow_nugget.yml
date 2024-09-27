@@ -257,7 +257,7 @@ items:
     name: core.entity_view_display.paragraph.slide_nugglet.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -374,7 +374,7 @@ items:
     name: core.entity_view_display.paragraph.slide_nugglet.search_rendered_output
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -428,7 +428,7 @@ items:
     name: core.entity_view_display.paragraph.slideshow.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -565,7 +565,7 @@ items:
     name: core.entity_view_display.paragraph.slideshow.search_rendered_output
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:

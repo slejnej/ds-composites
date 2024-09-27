@@ -1,5 +1,5 @@
 uuid: 78fb94c8-1326-49ba-ab42-419935bd9ba9
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -42,6 +42,11 @@ content:
     region: content
     settings:
       advanced: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   description: true

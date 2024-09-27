@@ -1,5 +1,5 @@
 uuid: 41295ec3-8220-48f5-9bb1-5c81a1156eac
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -26,6 +26,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   description: true

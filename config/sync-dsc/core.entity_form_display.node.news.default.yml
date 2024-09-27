@@ -1,5 +1,5 @@
 uuid: 6cef0d08-05b9-4bf9-a407-a3bcba450d52
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -460,6 +460,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

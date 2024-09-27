@@ -1,5 +1,5 @@
 uuid: d30792db-ec35-4831-b660-291ed38d7651
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -41,6 +41,11 @@ content:
     third_party_settings: {  }
   simple_sitemap_index_now:
     weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

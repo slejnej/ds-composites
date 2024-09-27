@@ -1,0 +1,30 @@
+{% extends '@barrio_base_theme/content/node.html.twig' %}
+
+{% block page_title %}
+  {% if not is_landing_page %}
+    <section id="content-title" class="title-wrapper container-fluid g-0 position-relative rounded-0 mb-3 pt-0">
+
+      <div class="container-xxl position-relative">
+        {{ block('title') }}
+      </div>
+
+      <div class="title-swoosh position-absolute w-100">
+        <img src="{{ asset('images/node-swoosh.svg') }}"/>
+      </div>
+
+    </section>
+  {% endif %}
+{% endblock %}
+
+{% block main_content_wrapper %}
+
+  <div class="main-content-wrapper container-xxl position-relative">
+    <div class="row g-0">
+
+      {{ block('sidebar_content') }}
+      {{ block('main_content') }}
+      {{ block('sidebar_nuggets') }}
+
+    </div>
+  </div>
+{% endblock %}

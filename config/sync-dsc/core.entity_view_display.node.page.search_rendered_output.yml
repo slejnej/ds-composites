@@ -1,5 +1,5 @@
 uuid: db824e60-6ddb-48bb-869a-ad6a108efcda
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:

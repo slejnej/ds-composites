@@ -1,6 +1,6 @@
 _core:
   default_config_hash: 3GDkbNHAOZWc3UcDH_tfIbTiyLLz44FmxK0Uyt5Qn_M
-langcode: en-gb
+langcode: en
 enforce:
   enable: true
   features:

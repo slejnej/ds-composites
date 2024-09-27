@@ -14,7 +14,7 @@ items:
     name: core.entity_form_display.taxonomy_term.categories.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -64,7 +64,7 @@ items:
     name: core.entity_form_display.taxonomy_term.diseases.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -119,7 +119,7 @@ items:
     name: core.entity_form_display.taxonomy_term.tags.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -174,7 +174,7 @@ items:
     name: core.entity_form_display.taxonomy_term.topics.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -229,7 +229,7 @@ items:
     name: core.entity_view_display.taxonomy_term.diseases.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -259,7 +259,7 @@ items:
     name: core.entity_view_display.taxonomy_term.tags.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -289,7 +289,7 @@ items:
     name: core.entity_view_display.taxonomy_term.topics.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -319,7 +319,7 @@ items:
     name: field.field.taxonomy_term.diseases.rabbit_hole__settings
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -346,7 +346,7 @@ items:
     name: field.field.taxonomy_term.tags.rabbit_hole__settings
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -373,7 +373,7 @@ items:
     name: field.field.taxonomy_term.topics.rabbit_hole__settings
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -400,7 +400,7 @@ items:
     name: field.storage.node.field_categories
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -426,7 +426,7 @@ items:
     name: field.storage.node.field_diseases
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -452,7 +452,7 @@ items:
     name: field.storage.node.field_tags
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -478,7 +478,7 @@ items:
     name: field.storage.node.field_topics
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -504,7 +504,7 @@ items:
     name: field.storage.taxonomy_term.rabbit_hole__settings
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -529,7 +529,7 @@ items:
     name: language.content_settings.taxonomy_term.categories
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -546,7 +546,7 @@ items:
     name: language.content_settings.taxonomy_term.diseases
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -563,7 +563,7 @@ items:
     name: language.content_settings.taxonomy_term.tags
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -580,7 +580,7 @@ items:
     name: language.content_settings.taxonomy_term.topics
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -597,7 +597,7 @@ items:
     name: rabbit_hole.behavior_settings.taxonomy_term.categories
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -619,7 +619,7 @@ items:
     name: rabbit_hole.behavior_settings.taxonomy_term.diseases
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -641,7 +641,7 @@ items:
     name: rabbit_hole.behavior_settings.taxonomy_term.tags
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -663,7 +663,7 @@ items:
     name: rabbit_hole.behavior_settings.taxonomy_term.topics
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -685,7 +685,7 @@ items:
     name: taxonomy.vocabulary.categories
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       name: Categories
@@ -699,7 +699,7 @@ items:
     name: taxonomy.vocabulary.diseases
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       name: Diseases
@@ -713,7 +713,7 @@ items:
     name: taxonomy.vocabulary.tags
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       name: Tags
@@ -727,7 +727,7 @@ items:
     name: taxonomy.vocabulary.topics
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       name: Topics

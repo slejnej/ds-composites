@@ -1,0 +1,10 @@
+langcode: en-gb
+site_key:
+secret_key:
+verify_hostname: false
+use_globally: true
+widget:
+  theme: light
+  type: image
+  size: ''
+  noscript: false

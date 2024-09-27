@@ -1,5 +1,5 @@
 uuid: ba647ff8-c09c-47a6-b67f-5f4382843b52
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -110,7 +110,7 @@ third_party_settings:
       label: 'Summary & SEO'
       region: content
       parent_name: group_page_tabs
-      weight: 50
+      weight: 6
       format_type: tab
       format_settings:
         classes: ''
@@ -162,7 +162,7 @@ third_party_settings:
       label: Tagging
       region: content
       parent_name: group_page_tabs
-      weight: 40
+      weight: 5
       format_type: tab
       format_settings:
         classes: ''

@@ -1,0 +1,14 @@
+langcode: en-gb
+enable_globally: 0
+enable_globally_on_admin_routes: false
+default_challenge: recaptcha_v3/default
+description: ''
+title: ''
+administration_mode: false
+administration_mode_on_admin_routes: false
+whitelist_ips: 172.16.0.0-172.31.255.255
+wrong_captcha_response_message: 'The answer you entered for the CAPTCHA was not correct.'
+default_validation: 1
+persistence: 1
+enable_stats: false
+log_wrong_responses: false

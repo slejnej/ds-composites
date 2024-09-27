@@ -2,7 +2,7 @@ name: 'DS Composites'
 type: theme
 version: 0.0.1
 description: 'DS Composites subtheme based on Remora base theme.'
-core_version_requirement: '^9.4 || ^10'
+core_version_requirement: '^10'
 'base theme': barrio_base_theme
 libraries:
   - ds_composites/global-styling

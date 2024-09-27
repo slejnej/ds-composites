@@ -1,11 +1,11 @@
 uuid: aae02e6d-341a-46aa-a4dc-ed094c10dbe5
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: CYpXA2lFoUJSpdBooHDjICJM44rWuNcc6gmhoiZD9xg
-id: original_size
 label: 'Original size'
+id: original_size
 description: ''
 aspect_ratio: ''
 soft_limit_width: null

@@ -19,9 +19,11 @@
     {% endblock %}
 
     {% block card_button %}
-      <a href="{{ link }}"
-         class="btn btn-outline-primary btn-block {% if button_text is empty %} btn-stretched-hidden {% endif %} m-0 w-100 stretched-link"
-          {% if button_text is empty %} aria-labelledby="card-title-{{ id }}" {% endif %}>{{ button_text }}</a>
+      {% if link %}
+        <a href="{{ link }}"
+           class="btn btn-outline-primary btn-block {% if button_text is empty %} btn-stretched-hidden {% endif %} m-0 w-100 stretched-link"
+            {% if button_text is empty %} aria-labelledby="card-title-{{ id }}" {% endif %}>{{ button_text }}</a>
+      {% endif %}
     {% endblock %}
 
   </div>

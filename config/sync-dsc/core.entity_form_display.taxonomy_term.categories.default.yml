@@ -1,5 +1,5 @@
 uuid: 63ddda09-188a-4b40-bf75-f9f4049190d7
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -36,6 +36,11 @@ content:
     third_party_settings: {  }
   simple_sitemap_index_now:
     weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

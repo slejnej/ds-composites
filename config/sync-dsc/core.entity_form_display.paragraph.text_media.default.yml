@@ -1,5 +1,5 @@
 uuid: 2dacc4ca-e2bc-4890-90fd-acaa45351b0e
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -107,6 +107,11 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true

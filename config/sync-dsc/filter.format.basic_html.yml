@@ -1,5 +1,5 @@
 uuid: faaeb55e-b118-4d65-bb67-bdbdee1bef87
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 _core:
@@ -20,7 +20,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p> <h2> <h3> <h4> <h5> <h6> <strong> <em> <blockquote> <a href> <ul> <ol reversed start> <li>'
+      allowed_html: '<br> <p> <h2> <h3> <h4> <h5> <h6> <i class> <strong> <em> <blockquote> <a href> <ul> <ol reversed start> <li>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_htmlcorrector:

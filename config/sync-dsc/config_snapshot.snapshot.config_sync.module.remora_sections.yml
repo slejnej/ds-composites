@@ -79,7 +79,7 @@ items:
     name: core.entity_form_display.paragraph.section.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -144,7 +144,7 @@ items:
     name: core.entity_form_display.site_setting_entity.footer.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -283,7 +283,7 @@ items:
     name: core.entity_view_display.paragraph.section.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -322,7 +322,7 @@ items:
     name: core.entity_view_display.paragraph.section.preview
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -360,7 +360,7 @@ items:
     name: core.entity_view_display.site_setting_entity.footer.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -428,7 +428,7 @@ items:
       entity_type: paragraph
       bundle: flexible_layout
       label: 'Display title'
-      description: "This title is displayed on the page above the content of this section.\r\nAllowed HTML tags: <em> <i> <sup> <sub>"
+      description: "This title is displayed on the page above the content of this section.\r\nAllowed HTML tags: <em> <i class> <sup> <sub>"
       required: false
       translatable: false
       default_value: {  }
@@ -498,7 +498,7 @@ items:
     name: field.field.paragraph.section.field_display_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -528,7 +528,7 @@ items:
     name: field.field.paragraph.section.field_editor_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -553,7 +553,7 @@ items:
     name: field.field.paragraph.section.field_palette
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -582,7 +582,7 @@ items:
     name: field.field.site_setting_entity.footer.field_footer_sections
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -612,7 +612,7 @@ items:
     name: field.storage.site_setting_entity.field_footer_sections
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -639,7 +639,7 @@ items:
     name: paragraphs.paragraphs_type.flexible_layout
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -667,7 +667,7 @@ items:
     name: paragraphs.paragraphs_type.footer_section
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -695,7 +695,7 @@ items:
     name: paragraphs.paragraphs_type.section
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -717,7 +717,7 @@ items:
     name: site_settings.site_setting_entity_type.footer
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: footer

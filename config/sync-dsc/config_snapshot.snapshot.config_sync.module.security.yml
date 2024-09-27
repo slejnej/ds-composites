@@ -13,7 +13,7 @@ items:
     collection: ''
     name: permissionspolicy.settings
     data:
-      langcode: en-gb
+      langcode: en
       enforce:
         enable: true
         features:
@@ -103,7 +103,7 @@ items:
     collection: ''
     name: seckit.settings
     data:
-      langcode: en-gb
+      langcode: en
       seckit_xss:
         csp:
           checkbox: true

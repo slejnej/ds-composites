@@ -1,5 +1,5 @@
 uuid: adc24321-b16d-4715-927b-0afe1b9505eb
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:

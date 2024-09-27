@@ -1,5 +1,5 @@
 uuid: 3b245c52-eb81-449c-a8ca-dec873f97f6b
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 _core:
@@ -20,7 +20,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="text-larger text-smaller text-align-left text-align-center text-align-right text-align-justify" id> <h2 id class="text-align-left text-align-center text-align-right text-align-justify"> <h3 id class="text-align-left text-align-center text-align-right text-align-justify"> <h4 id class="text-align-left text-align-center text-align-right text-align-justify"> <h5 id class="text-align-left text-align-center text-align-right text-align-justify"> <h6 id class="text-align-left text-align-center text-align-right text-align-justify"> <a class="btn btn-primary btn-outline-primary w-100 btn-warning btn-outline-warning" href data-entity-type data-entity-uuid data-entity-substitution> <strong> <em> <u> <s> <sub> <sup> <ul> <ol reversed start> <li> <hr>'
+      allowed_html: '<br> <p class="text-larger text-smaller text-align-left text-align-center text-align-right text-align-justify" id> <h2 id class="text-align-left text-align-center text-align-right text-align-justify"> <h3 id class="text-align-left text-align-center text-align-right text-align-justify"> <h4 id class="text-align-left text-align-center text-align-right text-align-justify"> <h5 id class="text-align-left text-align-center text-align-right text-align-justify"> <h6 id class="text-align-left text-align-center text-align-right text-align-justify"> <a class="btn btn-primary btn-outline-primary w-100 btn-warning btn-outline-warning" href data-entity-type data-entity-uuid data-entity-substitution> <i class> <strong> <em> <u> <s> <sub> <sup> <ul> <ol reversed start> <li> <hr>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_htmlcorrector:

@@ -14,7 +14,7 @@ items:
     name: eu_cookie_compliance.cookie_category.analytics_cookies
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -35,7 +35,7 @@ items:
     name: eu_cookie_compliance.cookie_category.necessary_cookies
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: necessary_cookies

@@ -1,0 +1,17 @@
+{% extends "block.html.twig" %}
+
+{% block content %}
+  <div class="navbar-brand d-flex align-items-center">
+    {% block site_logo %}
+      {% if site_logo %}
+        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo d-block">
+          <img src="/themes/custom/ds_composites/logo-{{ site_alias }}.svg" alt="{{ 'Home'|t }}" fetchpriority="high" />
+        </a>
+      {% endif %}
+    {% endblock %}
+
+    {% block site_slogan %}
+    {% endblock %}
+
+  </div>
+{% endblock %}

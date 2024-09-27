@@ -1,5 +1,5 @@
 uuid: 81bc9501-32d6-4ab8-84d1-f9ca55e4daf9
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -50,7 +50,7 @@ filters:
     status: true
     weight: -49
     settings:
-      allowed_html: '<br> <p class="text-larger text-smaller text-align-left text-align-center text-align-right text-align-justify" id> <h2 id class="text-align-left text-align-center text-align-right text-align-justify"> <h3 id class="text-align-left text-align-center text-align-right text-align-justify"> <h4 id class="text-align-left text-align-center text-align-right text-align-justify"> <h5 id class="text-align-left text-align-center text-align-right text-align-justify"> <h6 id class="text-align-left text-align-center text-align-right text-align-justify"> <a class="btn btn-primary btn-outline-primary w-100 btn-warning btn-outline-warning" href data-entity-type data-entity-uuid data-entity-substitution> <table class="table-striped table-borderless"> <strong> <em> <u> <s> <sub> <sup> <blockquote> <ul> <ol reversed start> <li> <hr> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-view-mode data-align>'
+      allowed_html: '<br> <p class="text-larger text-smaller text-align-left text-align-center text-align-right text-align-justify" id> <h2 id class="text-align-left text-align-center text-align-right text-align-justify"> <h3 id class="text-align-left text-align-center text-align-right text-align-justify"> <h4 id class="text-align-left text-align-center text-align-right text-align-justify"> <h5 id class="text-align-left text-align-center text-align-right text-align-justify"> <h6 id class="text-align-left text-align-center text-align-right text-align-justify"> <a class="btn btn-primary btn-outline-primary w-100 btn-warning btn-outline-warning" href data-entity-type data-entity-uuid data-entity-substitution> <table class="table-striped table-borderless"> <strong> <em> <u> <s> <sub> <sup> <blockquote> <ul> <ol reversed start> <li> <hr> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-view-mode data-align> <i class>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_html_escape:

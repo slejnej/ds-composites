@@ -15,6 +15,16 @@ function remora_core_install(): void
   // install these modules because they depend on remora_core and hook_install is triggered after remora_core is installed and its config imported
   // we need cards_nugget on install of remora because barrio_base_theme is dependent on it and themes can't install dependencies like modules do :)
   Drupal::service('module_installer')->install(['cards_nugget', 'remora_gdpr']);
+
+  // Set the Gin theme settings.
+  Drupal::configFactory()->getEditable('gin.settings')
+    ->set('show_user_theme_settings', true)
+    ->set('logo.use_default', false)
+    ->set('favicon.use_default', false)
+    ->set('features.favicon', true)
+    ->set('logo.path', str_replace(DRUPAL_ROOT, '', Drupal::service('file_system')->realpath('tonic://logo.png')))
+    ->set('favicon.path', str_replace(DRUPAL_ROOT, '', Drupal::service('file_system')->realpath('tonic://favicon.ico')))
+    ->save();
 }
 
 /**
@@ -36,9 +46,6 @@ function remora_core_update_9001(): void
 function remora_core_update_9004(): void
 {
   Drupal::service('module_installer')->install(['gin_toolbar', 'datetime', 'views_bulk_operations', 'views_bulk_edit']);
-  Drupal::configFactory()->getEditable('gin.settings')
-    ->set('show_user_theme_settings', true)
-    ->save();
 }
 
 /**
@@ -114,12 +121,4 @@ function remora_core_update_10008(): void
   }
 
   drupal_flush_all_caches();
-
-  Drupal::configFactory()->getEditable('gin.settings')
-        ->set('logo.use_default', false)
-        ->set('favicon.use_default', false)
-        ->set('features.favicon', true)
-        ->set('logo.path', str_replace(DRUPAL_ROOT, '', Drupal::service('file_system')->realpath('tonic://logo.png')))
-        ->set('favicon.path', str_replace(DRUPAL_ROOT, '', Drupal::service('file_system')->realpath('tonic://favicon.ico')))
-        ->save();
 }

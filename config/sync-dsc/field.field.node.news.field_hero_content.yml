@@ -1,5 +1,5 @@
 uuid: becabad4-3447-4507-8e42-a5814e4b9c56
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:

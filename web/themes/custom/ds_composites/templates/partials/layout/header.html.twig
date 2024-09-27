@@ -14,7 +14,7 @@
     <div class="container-xxl d-flex align-items-center py-0">
 
       {% block header_logo_menu %}
-        <div class="header-logo-menu py-3">
+        <div class="header-logo-menu">
 
           {{ block('logo') }}
 
@@ -23,10 +23,10 @@
 
 
       {% block header_main_menu %}
-        <div class="header-menus container-xxl d-flex flex-column align-items-end py-3 py-lg-0">
+        <div class="header-menus container-xxl d-flex flex-column align-items-end">
 
           {% block top_menu %}
-            <div class="top-menu d-none d-md-inline-block mb-md-3">
+            <div class="top-menu d-none d-md-inline-block">
               {% remora_include 'partials/navigation/top-menu.html.twig' %}
             </div>
           {% endblock %}

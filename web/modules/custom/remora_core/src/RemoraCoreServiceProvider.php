@@ -24,6 +24,9 @@ class RemoraCoreServiceProvider extends ServiceProviderBase implements ServicePr
   {
     $def = $container->getDefinition('file_system');
     $def->setClass(FileSystem::class);
+
+    $this->registerRavenDecorator($container);
+    $this->registerLinkExtractors($container);
   }
 
   /**
@@ -64,11 +67,11 @@ class RemoraCoreServiceProvider extends ServiceProviderBase implements ServicePr
    */
   private function overwriteServiceClass(ContainerBuilder $containerBuilder, string $serviceId, string $newClass): ?Definition
   {
-    if (!$containerBuilder->hasDefinition($serviceId)) {
+    if(!$containerBuilder->hasDefinition($serviceId)) {
       return null;
     }
 
     return $containerBuilder->getDefinition($serviceId)
-      ->setClass($newClass);
+                                   ->setClass($newClass);
   }
 }

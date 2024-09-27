@@ -1,5 +1,5 @@
 uuid: 3a1a6b69-18d7-4a5c-94b3-86edd646f6ed
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -15,7 +15,7 @@ field_name: field_display_title
 entity_type: paragraph
 bundle: section
 label: 'Display title'
-description: "This title is displayed on the page above the content of this section.\r\nAllowed HTML tags: <em> <i> <sup> <sub>"
+description: "This title is displayed on the page above the content of this section.\r\nAllowed HTML tags: <em> <i class> <sup> <sub>"
 required: false
 translatable: false
 default_value: {  }

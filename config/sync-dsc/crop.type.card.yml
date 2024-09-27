@@ -1,11 +1,11 @@
 uuid: 5281253c-882a-4f83-8c2a-9272fc5bb146
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: SD8GyFhZNKy3iQ-AysbyfhDRHIV-OqripgqlAI994WQ
-id: card
 label: Card
+id: card
 description: ''
 aspect_ratio: '4:3'
 soft_limit_width: null

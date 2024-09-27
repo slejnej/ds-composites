@@ -1,5 +1,5 @@
 uuid: baba515c-822b-4953-9a99-d5e872924418
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:

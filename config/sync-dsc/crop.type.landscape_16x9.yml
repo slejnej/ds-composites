@@ -1,11 +1,11 @@
 uuid: de99dda8-0dde-47a2-a5dc-ebe3cf0d6e72
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: veY_n3tr7Rybv52jJb1lVnQhhxZv--pBxnpQgo_Qt2o
-id: landscape_16x9
 label: 'Landscape: 16x9'
+id: landscape_16x9
 description: ''
 aspect_ratio: '16:9'
 soft_limit_width: null

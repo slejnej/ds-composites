@@ -1,5 +1,5 @@
 uuid: fda4cc0e-efeb-4af8-b89e-980c31fce331
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   module:

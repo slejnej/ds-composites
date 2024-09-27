@@ -13,7 +13,7 @@ items:
     collection: ''
     name: administerusersbyrole.settings
     data:
-      langcode: en-gb
+      langcode: en
       roles:
         web_admin: unsafe
         editor: safe

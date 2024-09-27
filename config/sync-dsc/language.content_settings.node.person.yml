@@ -1,5 +1,5 @@
 uuid: 8dfb0fba-4fcb-449f-b1d7-9b6b9c0fd81b
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:
@@ -17,4 +17,4 @@ id: node.person
 target_entity_type_id: node
 target_bundle: person
 default_langcode: en
-language_alterable: true
+language_alterable: false

@@ -1,11 +1,11 @@
 uuid: 721b3633-77b3-4f0d-bba6-ea49af915841
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: p85XjPQXF6p_X6BG2gfs2drOBHkWSjCaYT8HMYaDxqA
-id: landscape_4x3
 label: 'Landscape: 4x3'
+id: landscape_4x3
 description: ''
 aspect_ratio: '4:3'
 soft_limit_width: null

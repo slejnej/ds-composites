@@ -1,5 +1,5 @@
 uuid: 22feed25-ac56-4c95-bfd4-5a8c1d9b8abd
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:

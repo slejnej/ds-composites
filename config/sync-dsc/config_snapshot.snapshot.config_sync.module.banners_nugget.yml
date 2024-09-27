@@ -14,7 +14,7 @@ items:
     name: core.entity_form_display.paragraph.banner_nugglet.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -95,7 +95,7 @@ items:
     name: core.entity_form_display.paragraph.banners.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -193,7 +193,7 @@ items:
     name: core.entity_view_display.paragraph.banner_nugglet.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -263,7 +263,7 @@ items:
     name: core.entity_view_display.paragraph.banner_nugglet.preview
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -300,7 +300,7 @@ items:
     name: core.entity_view_display.paragraph.banner_nugglet.search_rendered_output
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -337,7 +337,7 @@ items:
     name: core.entity_view_display.paragraph.banners.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -386,7 +386,7 @@ items:
     name: core.entity_view_display.paragraph.banners.preview
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -419,7 +419,7 @@ items:
     name: core.entity_view_display.paragraph.banners.search_rendered_output
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: false
       dependencies:
         config:
@@ -460,7 +460,7 @@ items:
     name: field.field.paragraph.banner_nugglet.field_banner_nt_image
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -495,7 +495,7 @@ items:
     name: field.field.paragraph.banner_nugglet.field_banner_nt_link
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -524,7 +524,7 @@ items:
     name: field.field.paragraph.banner_nugglet.field_banner_nt_summary
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -554,7 +554,7 @@ items:
     name: field.field.paragraph.banner_nugglet.field_banner_nt_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -584,7 +584,7 @@ items:
     name: field.field.paragraph.banner_nugglet.field_editor_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -609,7 +609,7 @@ items:
     name: field.field.paragraph.banners.field_banner_nt_banners
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -712,7 +712,7 @@ items:
     name: field.field.paragraph.banners.field_display_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -742,7 +742,7 @@ items:
     name: field.field.paragraph.banners.field_editor_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -767,7 +767,7 @@ items:
     name: field.storage.paragraph.field_banner_nt_banners
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -793,7 +793,7 @@ items:
     name: field.storage.paragraph.field_banner_nt_image
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -819,7 +819,7 @@ items:
     name: field.storage.paragraph.field_banner_nt_link
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -844,7 +844,7 @@ items:
     name: field.storage.paragraph.field_banner_nt_summary
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -869,7 +869,7 @@ items:
     name: field.storage.paragraph.field_banner_nt_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -895,7 +895,7 @@ items:
     name: paragraphs.paragraphs_type.banner_nugglet
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: banner_nugglet
@@ -911,7 +911,7 @@ items:
     name: paragraphs.paragraphs_type.banners
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       id: banners

@@ -14,7 +14,7 @@ items:
     name: core.entity_form_display.taxonomy_term.cit_countries_information.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -403,7 +403,7 @@ items:
     name: field.storage.node.field_countries
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:

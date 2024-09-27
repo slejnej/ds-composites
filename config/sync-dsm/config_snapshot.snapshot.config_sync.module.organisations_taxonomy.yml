@@ -13,7 +13,7 @@ items:
     collection: ''
     name: core.entity_form_display.taxonomy_term.organisations.default
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -52,7 +52,7 @@ items:
     collection: ''
     name: language.content_settings.taxonomy_term.organisations
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -68,7 +68,7 @@ items:
     collection: ''
     name: rabbit_hole.behavior_settings.taxonomy_term.organisations
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -89,7 +89,7 @@ items:
     collection: ''
     name: taxonomy.vocabulary.organisations
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       name: Organisations

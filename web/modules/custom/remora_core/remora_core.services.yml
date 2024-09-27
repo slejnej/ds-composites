@@ -47,6 +47,12 @@ services:
   remora_core.repository.user:
     class: \MantaRayMedia\BaseRepository\UserRepository
 
+  remora_core.twig.extension.asset:
+    class: Drupal\remora_core\Twig\Extension\AssetsExtension
+    arguments: [ '@file_system', '@theme.manager' ]
+    tags:
+      - { name: twig.extension }
+
   remora_core.twig.extension.array:
     class: Drupal\remora_core\Twig\Extension\ArrayExtension
     tags:
@@ -65,6 +71,11 @@ services:
 
   remora_core.twig.extension.string:
     class: Drupal\remora_core\Twig\Extension\StringExtension
+    tags:
+      - { name: twig.extension }
+
+  remora_core.twig.extension.tests:
+    class: Drupal\remora_core\Twig\Extension\TestsExtension
     tags:
       - { name: twig.extension }
 

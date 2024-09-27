@@ -1,11 +1,11 @@
 uuid: bf0c4ea1-bb07-40a2-9705-a31f6ef170d8
-langcode: en-gb
+langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: iqrC2v4viX26kREa7ZlAXVAaFej_o2zgcr8OaoHq6cA
-id: portrait_3x4
 label: 'Portrait: 3x4'
+id: portrait_3x4
 description: ''
 aspect_ratio: '3:4'
 soft_limit_width: null

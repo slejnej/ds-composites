@@ -1,0 +1,88 @@
+uuid: 27109aba-88f8-4b71-83e4-49711e5dddbc
+langcode: en
+status: true
+dependencies:
+  module:
+    - simple_sitemap_engines
+id: config_sync.module.simple_sitemap_engines
+snapshotSet: config_sync
+extensionType: module
+extensionName: simple_sitemap_engines
+items:
+  -
+    collection: ''
+    name: simple_sitemap_engines.settings
+    data:
+      enabled: true
+      submission_interval: 24
+      index_now_enabled: true
+      index_now_preferred_engine: ''
+      index_now_on_entity_save: false
+      _core:
+        default_config_hash: 33gg8hVdxE7nTswwBBOY_d2rH3XjAbBa4rw0XyMRh6Y
+  -
+    collection: ''
+    name: simple_sitemap_engines.simple_sitemap_engine.bing
+    data:
+      id: bing
+      label: Bing
+      url: null
+      index_now_url: 'https://www.bing.com/indexnow?url=[url]&key=[key]'
+      sitemap_variants: {  }
+      _core:
+        default_config_hash: uOksGlB4ho0egmcvzWqkR0Gon2HxOILPRhHQYuvcQ_E
+  -
+    collection: ''
+    name: simple_sitemap_engines.simple_sitemap_engine.index_now
+    data:
+      id: index_now
+      label: IndexNow
+      url: null
+      index_now_url: 'https://api.indexnow.org/indexnow?url=[url]&key=[key]'
+      sitemap_variants: {  }
+      _core:
+        default_config_hash: CEvRzshIbGfbSDdfC3_RrIcyIACFbQzIqPK0W2l0LpY
+  -
+    collection: ''
+    name: simple_sitemap_engines.simple_sitemap_engine.naver
+    data:
+      id: naver
+      label: Naver
+      url: null
+      index_now_url: 'https://searchadvisor.naver.com/indexnow?url=[url]&key=[key]'
+      sitemap_variants: {  }
+      _core:
+        default_config_hash: oCsWl2tvWgytYORap-rUJCMkzKsFtICQt21uOtHGG_I
+  -
+    collection: ''
+    name: simple_sitemap_engines.simple_sitemap_engine.seznam
+    data:
+      id: seznam
+      label: Seznam
+      url: null
+      index_now_url: 'https://search.seznam.cz/indexnow?url=[url]&key=[key]'
+      sitemap_variants: {  }
+      _core:
+        default_config_hash: VVUUpnJomJ_zAlrcmzQCTAVLNHiZWbw4-e4rdaLHic4
+  -
+    collection: ''
+    name: simple_sitemap_engines.simple_sitemap_engine.yandex
+    data:
+      id: yandex
+      label: Yandex
+      url: null
+      index_now_url: 'https://yandex.com/indexnow?url=[url]&key=[key]'
+      sitemap_variants: {  }
+      _core:
+        default_config_hash: H5rVsTF_mIRdWj_oH26Hcc-U8aT3HU8A_mjbkZ_D27s
+  -
+    collection: ''
+    name: simple_sitemap_engines.simple_sitemap_engine.yep
+    data:
+      id: yep
+      label: Yep
+      url: null
+      index_now_url: 'https://indexnow.yep.com/indexnow?url=[url]&key=[key]'
+      sitemap_variants: {  }
+      _core:
+        default_config_hash: GtuDCiCWdrpa9bravGtmwQGVNTGToZx3RDZ5_IzS2Kk

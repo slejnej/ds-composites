@@ -59,5 +59,3 @@ function hide_american_english_preprocess_select(array &$variables): void
 
   }
 }
-
-

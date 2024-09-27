@@ -1,5 +1,5 @@
 uuid: 8f163120-dac3-4c8a-880e-71242ca11809
-langcode: en-gb
+langcode: en
 status: true
 dependencies:
   config:

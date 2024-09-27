@@ -1,18 +1,13 @@
-.block-system-branding-block {
-  .navbar-brand img {
-      }
-}
-
-.navbar-content {
-  @extend .p-0;
-}
-
-.header-wrapper {
+header {
   justify-content: flex-end;
   border-bottom: 5px solid #052136;
+  transition: all .5s ease-out;
 
   .language-switcher {
+    opacity: 1;
+    visibility: visible;
     align-self: flex-end;
+    transition: all .5s ease-out;
 
     .advanced-language-selector ul {
       list-style: none;
@@ -27,44 +22,96 @@
         & > span {
           color: $global-color-primary-primary-800;
         }
+
         a {
           text-decoration: none;
         }
       }
     }
   }
-}
 
-nav.navbar[data-bs-theme=dark] ul.navbar-nav li.nav-item > a.nav-link:not(.active) {
-  position:relative;
-  z-index: 1;
+  .header-logo-menu {
+    @extend .py-3;
+    transition: all .5s ease-out;
 
-  &:before,
-  &:after {
-    transition: all .5s;
+    .block-system-branding-block {
+      .navbar-brand img {
+        height: 48px;
+        transition: all .5s ease-out;
+      }
+    }
   }
-  &:after {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    width: 100%;
-    height: 1px;
-    content: '.';
-    color: transparent;
-    background: $global-color-primary-primary-800;
-    visibility: none;
-    opacity: 0;
-    z-index: -1;
+
+  .navbar-content {
+    @extend .p-0;
   }
-  &:hover {
-    &::after {
-      opacity: 1;
-      visibility: visible;
-      height: 100%;
+
+  // hover animation
+  nav.navbar[data-bs-theme=dark] ul.navbar-nav li.nav-item > a.nav-link:not(.active) {
+    position: relative;
+    z-index: 1;
+    transition: all .5s ease-out;
+
+    &:before,
+    &:after {
+      transition: all .5s;
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      height: 1px;
+      content: '.';
+      color: transparent;
+      background: $global-color-primary-primary-800;
+      visibility: none;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+        visibility: visible;
+        height: 100%;
+      }
+    }
+  }
+  .top-menu {
+    @extend .mb-md-3;
+  }
+
+  &.scrolled {
+    @extend .fixed-top;
+    .language-switcher {
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+    }
+    .header-logo-menu {
+      padding: 0 !important;
+      .block-system-branding-block {
+        .navbar-brand img {
+          height: 25px;
+        }
+      }
+    }
+    nav.navbar[data-bs-theme=dark] ul.navbar-nav li.nav-item > a.nav-link {
+      font-size: 0.8rem;
+      line-height: 0.8rem;
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 34px;
+    }
+
+    .top-menu {
+      margin-bottom: 0!important;
     }
   }
 }

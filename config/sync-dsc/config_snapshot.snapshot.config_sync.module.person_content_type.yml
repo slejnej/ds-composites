@@ -29,7 +29,7 @@ items:
     name: core.base_field_override.node.person.promote
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -56,7 +56,7 @@ items:
     collection: ''
     name: core.entity_form_display.node.person.default
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -645,7 +645,7 @@ items:
     name: core.entity_form_display.taxonomy_term.departments.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -699,7 +699,7 @@ items:
     name: core.entity_form_display.taxonomy_term.honorific_titles.default
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -752,7 +752,7 @@ items:
     collection: ''
     name: core.entity_view_display.node.person.card
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -884,7 +884,7 @@ items:
     collection: ''
     name: core.entity_view_display.node.person.default
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1091,7 +1091,7 @@ items:
     collection: ''
     name: core.entity_view_display.node.person.full
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1305,7 +1305,7 @@ items:
     collection: ''
     name: core.entity_view_display.node.person.search_index
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1520,7 +1520,7 @@ items:
     collection: ''
     name: core.entity_view_display.node.person.search_rendered_output
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1691,7 +1691,7 @@ items:
     name: field.field.node.person.field_alternative_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1721,7 +1721,7 @@ items:
     name: field.field.node.person.field_body
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1751,7 +1751,7 @@ items:
     name: field.field.node.person.field_categories
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1781,7 +1781,7 @@ items:
     name: field.field.node.person.field_countries
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1816,7 +1816,7 @@ items:
     name: field.field.node.person.field_department
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1851,7 +1851,7 @@ items:
     name: field.field.node.person.field_diseases
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1886,7 +1886,7 @@ items:
     name: field.field.node.person.field_first_name
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1911,7 +1911,7 @@ items:
     name: field.field.node.person.field_hero_content
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1941,7 +1941,7 @@ items:
     name: field.field.node.person.field_honorific_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1976,7 +1976,7 @@ items:
     name: field.field.node.person.field_image
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2004,7 +2004,7 @@ items:
     name: field.field.node.person.field_last_name
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2029,7 +2029,7 @@ items:
     name: field.field.node.person.field_main_nuggets
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2058,7 +2058,7 @@ items:
     collection: ''
     name: field.field.node.person.field_meta_tags
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2085,7 +2085,7 @@ items:
     name: field.field.node.person.field_person_organisation
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2120,7 +2120,7 @@ items:
     name: field.field.node.person.field_photo
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2155,7 +2155,7 @@ items:
     name: field.field.node.person.field_postscript_nuggets
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2185,7 +2185,7 @@ items:
     name: field.field.node.person.field_role
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2209,7 +2209,7 @@ items:
     collection: ''
     name: field.field.node.person.field_seo_description
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2235,7 +2235,7 @@ items:
     collection: ''
     name: field.field.node.person.field_seo_title
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2262,7 +2262,7 @@ items:
     name: field.field.node.person.field_sidebar_nuggets
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2292,7 +2292,7 @@ items:
     name: field.field.node.person.field_social_media
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2321,7 +2321,7 @@ items:
     name: field.field.node.person.field_suffix
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2346,7 +2346,7 @@ items:
     name: field.field.node.person.field_summary
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2376,7 +2376,7 @@ items:
     name: field.field.node.person.field_tags
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2411,7 +2411,7 @@ items:
     name: field.field.node.person.field_topics
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2446,7 +2446,7 @@ items:
     name: field.storage.node.field_department
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2472,7 +2472,7 @@ items:
     name: field.storage.node.field_first_name
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2499,7 +2499,7 @@ items:
     name: field.storage.node.field_honorific_title
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2525,7 +2525,7 @@ items:
     name: field.storage.node.field_last_name
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2552,7 +2552,7 @@ items:
     name: field.storage.node.field_person_organisation
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2578,7 +2578,7 @@ items:
     name: field.storage.node.field_photo
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2604,7 +2604,7 @@ items:
     name: field.storage.node.field_role
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2631,7 +2631,7 @@ items:
     name: field.storage.node.field_social_media
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2656,7 +2656,7 @@ items:
     name: field.storage.node.field_suffix
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2683,7 +2683,7 @@ items:
     name: language.content_settings.node.person
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2700,7 +2700,7 @@ items:
     name: language.content_settings.taxonomy_term.departments
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2717,7 +2717,7 @@ items:
     name: language.content_settings.taxonomy_term.honorific_titles
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2734,7 +2734,7 @@ items:
     name: node.type.person
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         module:
@@ -2761,7 +2761,7 @@ items:
     name: rabbit_hole.behavior_settings.taxonomy_term.departments
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2783,7 +2783,7 @@ items:
     name: rabbit_hole.behavior_settings.taxonomy_term.honorific_titles
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -2805,7 +2805,7 @@ items:
     name: taxonomy.vocabulary.departments
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       name: Departments
@@ -2819,7 +2819,7 @@ items:
     name: taxonomy.vocabulary.honorific_titles
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies: {  }
       name: 'Honorific titles'

@@ -1,0 +1,9 @@
+langcode: en-gb
+site_key:
+secret_key:
+hide_badge: false
+verify_hostname: true
+default_challenge: recaptcha/reCAPTCHA
+error_message: 'Antibot verification failed.'
+cacheable: false
+library_use_recaptcha_net: true

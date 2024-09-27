@@ -331,7 +331,7 @@ items:
     collection: ''
     name: core.entity_form_display.media.image.default
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -458,7 +458,7 @@ items:
     collection: ''
     name: core.entity_form_display.media.image.media_library
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -544,7 +544,7 @@ items:
     collection: ''
     name: core.entity_view_display.media.image.card
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -599,7 +599,7 @@ items:
     collection: ''
     name: core.entity_view_display.media.image.default
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -648,7 +648,7 @@ items:
     collection: ''
     name: core.entity_view_display.media.image.free
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -703,7 +703,7 @@ items:
     collection: ''
     name: core.entity_view_display.media.image.landscape_16_9
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -758,7 +758,7 @@ items:
     collection: ''
     name: core.entity_view_display.media.image.landscape_21_9
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -813,7 +813,7 @@ items:
     collection: ''
     name: core.entity_view_display.media.image.landscape_4_3
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -869,7 +869,7 @@ items:
     name: core.entity_view_display.media.image.media_library
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -915,7 +915,7 @@ items:
     collection: ''
     name: core.entity_view_display.media.image.original_size
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -970,7 +970,7 @@ items:
     collection: ''
     name: core.entity_view_display.media.image.portrait_3_4
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1025,7 +1025,7 @@ items:
     collection: ''
     name: core.entity_view_display.media.image.square_1_1
     data:
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1081,7 +1081,7 @@ items:
     name: responsive_image.styles.card
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1135,7 +1135,7 @@ items:
     name: responsive_image.styles.free
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1189,7 +1189,7 @@ items:
     name: responsive_image.styles.landscape_16_9
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1243,7 +1243,7 @@ items:
     name: responsive_image.styles.landscape_21_9
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1297,7 +1297,7 @@ items:
     name: responsive_image.styles.landscape_4_3
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1351,7 +1351,7 @@ items:
     name: responsive_image.styles.original_size
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1400,7 +1400,7 @@ items:
     name: responsive_image.styles.portrait_3_4
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
@@ -1454,7 +1454,7 @@ items:
     name: responsive_image.styles.square_1_1
     data:
       uuid: null
-      langcode: en-gb
+      langcode: en
       status: true
       dependencies:
         config:
