@@ -76,6 +76,11 @@
     "drupal-scaffold": {
       "locations": {
         "web-root": "web/"
+      },
+      "patches": {
+        "drupal/core": {
+          "Work with cPanel redirect": "https://www.drupal.org/files/issues/core-use-trustedredirect-2612160-17-d8.patch"
+        }
       }
     },
     "installer-paths": {

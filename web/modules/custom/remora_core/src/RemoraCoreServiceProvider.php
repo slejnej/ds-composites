@@ -25,8 +25,8 @@ class RemoraCoreServiceProvider extends ServiceProviderBase implements ServicePr
     $def = $container->getDefinition('file_system');
     $def->setClass(FileSystem::class);
 
-    $this->registerRavenDecorator($container);
-    $this->registerLinkExtractors($container);
+//    $this->registerRavenDecorator($container);
+//    $this->registerLinkExtractors($container);
   }
 
   /**

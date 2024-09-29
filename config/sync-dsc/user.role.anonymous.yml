@@ -24,6 +24,8 @@ permissions:
   - 'view paragraph content attachments'
   - 'view paragraph content banner_nugglet'
   - 'view paragraph content banners'
+  - 'view paragraph content card_nugglet'
+  - 'view paragraph content cards'
   - 'view paragraph content flexible_layout'
   - 'view paragraph content footer_section'
   - 'view paragraph content promo'

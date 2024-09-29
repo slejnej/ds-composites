@@ -1,7 +1,0 @@
-name: CKEditor 5 Dev tools
-type: module
-description: "Enables the CKEditor 5 Inspector and provides testing helpers."
-package: CKEditor 5
-core_version_requirement: ^9 || ^10
-dependencies:
-  - drupal:ckeditor5

@@ -107,3 +107,12 @@ $title-swoosh-height-desktop: 120px;
     margin-bottom: 48px;
   }
 }
+
+.maintenance-page {
+  background: $global-color-primary-primary-900;
+  color: white;
+
+ .name-and-slogan {
+   display: none;
+ }
+}
