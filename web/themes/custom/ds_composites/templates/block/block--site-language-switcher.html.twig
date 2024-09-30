@@ -1,0 +1,23 @@
+{% if content['#links'] %}
+  {% set current_langcode = current_language() %}
+  {% set classes = [ 'advanced-language-selector', configuration.general.css|clean_class ] %}
+  <div{{ attributes.addClass(classes) }}>
+    <ul>
+      {% for langcode, item in content['#links'] %}
+        <li>
+          {% if langcode != current_langcode %}
+            {% set uri = get_node_language_url(item.url, langcode) %}
+            <a href="{{ uri }}">
+          {% endif %}
+          <span>
+            {{ langcode|upper }}
+          </span>
+          {% if langcode != current_langcode %}
+            </a>
+          {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+  </div>
+
+{% endif %}

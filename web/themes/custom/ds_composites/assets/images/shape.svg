@@ -1,14 +1,14 @@
 <svg width="45" height="40" viewBox="0 0 45 40" fill="none" xmlns="http://www.w3.org/2000/svg">
     <!-- Mask for exclamation mark cutout -->
     <mask id="cutout">
-        <!-- White blob for the full shape -->
+        <!-- White shape for the full shape -->
         <path d="M8.0038 34.3923C25.0886 50.7308 59.5003 28.1418 38.3101 7.90301C16.0362 -13.3484 -14.7673 12.6283 8.0038 34.3923Z" fill="white"/>
         <!-- Black rectangle and square for the exclamation mark cutout -->
         <rect x="18" y="0" width="9" height="22" fill="black"/>
         <rect x="18" y="24" width="9" height="9" fill="black"/>
     </mask>
 
-    <!-- Blob Shape with the cutout applied -->
+    <!-- shape Shape with the cutout applied -->
     <path d="M8.0038 34.3923C25.0886 50.7308 59.5003 28.1418 38.3101 7.90301C16.0362 -13.3484 -14.7673 12.6283 8.0038 34.3923Z" fill="#FBBA00" mask="url(#cutout)"/>
     <rect x="20" y="26" width="5" height="5" fill="#ed1c24"/>
 </svg>

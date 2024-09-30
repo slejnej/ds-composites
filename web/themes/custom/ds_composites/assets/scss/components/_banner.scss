@@ -25,7 +25,7 @@ $banner-padding-desktop: 0;
       z-index: 3;
 
       .image-cutoff {
-        mask: url('../assets/images/banner-splat-cutoff.svg') no-repeat 0 0 / 100%, linear-gradient(#000 0 0);
+        mask: url('../assets/images/banner-bg-3.svg') no-repeat 0 0 / 100%, linear-gradient(#000 0 0);
         mask-composite: exclude;
         position: absolute;
         bottom: 0;
@@ -36,7 +36,7 @@ $banner-padding-desktop: 0;
       }
     }
 
-    .banner-splat {
+    .banner-bg-mixed {
       z-index: 2;
       bottom: -55px;
       left: calc(50% - 220px);
@@ -73,9 +73,9 @@ $banner-padding-desktop: 0;
       }
     }
 
-    .banner-splat-medium {
+    .banner-bg-mixed-medium {
       z-index: 1;
-      mask: url('../assets/images/banner-medium-splat.svg') no-repeat 50% 50% / 100%;
+      mask: url('../assets/images/banner-bg-2.svg') no-repeat 50% 50% / 100%;
       right: 140px;
       bottom: -100px;
       width: 591px;
@@ -106,9 +106,9 @@ $banner-padding-desktop: 0;
       }
     }
 
-    .banner-splat-small {
+    .banner-bg-mixed-small {
       z-index: 4;
-      mask: url('../assets/images/banner-little-splat.svg') no-repeat 50% 50% / 100%;
+      mask: url('../assets/images/banner-bg-1.svg') no-repeat 50% 50% / 100%;
       width: 395px;
       height: 254px;
       right: -250px;
@@ -146,7 +146,7 @@ $banner-padding-desktop: 0;
 
 @mixin banner_icon($banner-icon-color) {
   .banner-wrapper {
-    .banner-splat-small, .banner-splat-medium {
+    .banner-bg-mixed-small, .banner-bg-mixed-medium {
       background: $banner-icon-color;
     }
 

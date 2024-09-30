@@ -49,5 +49,3 @@
 /build/
 /web/private/
 /**/*.sql.gz
-
-settings.prod.php

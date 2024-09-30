@@ -1,14 +1,14 @@
 // Global title swoosh
-$title-swoosh-height-mobile: 60px;
-$title-swoosh-height-desktop: 120px;
+$under-title-height-mobile: 60px;
+$under-title-height-desktop: 120px;
 
-.title-swoosh img {
-  height: $title-swoosh-height-mobile;
-  bottom: -$title-swoosh-height-mobile;
+.under-title img {
+  height: $under-title-height-mobile;
+  bottom: -$under-title-height-mobile;
   z-index: 0;
   @media(min-width: 576px) {
-    height: $title-swoosh-height-desktop;
-    bottom: -$title-swoosh-height-desktop;
+    height: $under-title-height-desktop;
+    bottom: -$under-title-height-desktop;
   }
 }
 
@@ -50,7 +50,7 @@ $title-swoosh-height-desktop: 120px;
     }
   }
 
-  .img-blob {
+  .img-shape {
     max-width: 300px;
     width: 100%;
     bottom: -35px;
@@ -73,14 +73,14 @@ $title-swoosh-height-desktop: 120px;
     }
   }
 
-  .blob-top {
+  .shape-top {
     max-width: 215px;
     top: -20px;
     left: -40px;
     z-index: 0;
   }
 
-  .blob-bottom {
+  .shape-bottom {
     max-width: 135px;
     bottom: -15px;
     right: -27px;

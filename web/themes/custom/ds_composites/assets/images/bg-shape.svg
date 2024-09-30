@@ -1,0 +1,6 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 50 50 C 100 0, 200 0, 250 50 S 300 150, 150 200 Z" fill="white"/>
+    <path d="M 100 300 Q 200 200, 300 300 T 200 400 Z" fill="white"/>
+    <path d="M 300 50 C 280 80, 320 120, 340 100 Q 360 80, 300 50 Z" fill="white"/>
+    <path d="M 50 250 L 150 350 L 50 350 Z" fill="white"/>
+</svg>

@@ -43,13 +43,13 @@
       {% if content.field_banner_nt_image['#items'] is not empty %}
         <div class="banner-image-wrapper position-relative d-flex align-items-end justify-content-center flex-lg-6 flex-xxl-7">
 
-          <div class="banner-splat position-absolute">
-            {{ source(directory ~ '/assets/images/banner-splat.svg') }}
+          <div class="banner-bg-mixed position-absolute">
+            {{ source(directory ~ '/assets/images/banner-bg-mixed.svg') }}
           </div>
 
-          <div class="banner-splat-small position-absolute"></div>
+          <div class="banner-bg-mixed-small position-absolute"></div>
 
-          <div class="banner-splat-medium position-absolute"></div>
+          <div class="banner-bg-mixed-medium position-absolute"></div>
 
           {% block banner_image_ratio %}
             <div class="banner-image position-relative">

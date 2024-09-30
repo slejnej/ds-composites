@@ -1,0 +1,38 @@
+<svg width="922" height="646" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 922 646">
+    <defs>
+        <!-- Define the pill-like mask shape -->
+        <mask id="pillMask">
+            <path d="M485.883 76.4849C261.504 -144.903 -190.437 161.178 87.8606 435.414C380.391 723.371 784.944 371.386 485.883 76.4849Z" fill="white"/>
+        </mask>
+    </defs>
+
+    <!-- Pill Shape 1 with random rotation and scaling, masked -->
+    <g transform="translate(100,100) rotate(30) scale(0.6)" mask="url(#pillMask)">
+        <path d="M485.883 76.4849C261.504 -144.903 -190.437 161.178 87.8606 435.414C380.391 723.371 784.944 371.386 485.883 76.4849Z"
+              fill="#9696FF" fill-opacity="0.2"/>
+    </g>
+
+    <!-- Pill Shape 2 with random rotation and scaling, masked -->
+    <g transform="translate(400,200) rotate(-45) scale(0.8)" mask="url(#pillMask)">
+        <path d="M485.883 76.4849C261.504 -144.903 -190.437 161.178 87.8606 435.414C380.391 723.371 784.944 371.386 485.883 76.4849Z"
+              fill="#FF5733" fill-opacity="0.2"/>
+    </g>
+
+    <!-- Pill Shape 3 with random rotation and scaling, masked -->
+    <g transform="translate(250,350) rotate(60) scale(0.9)" mask="url(#pillMask)">
+        <path d="M485.883 76.4849C261.504 -144.903 -190.437 161.178 87.8606 435.414C380.391 723.371 784.944 371.386 485.883 76.4849Z"
+              fill="#65B4FF" fill-opacity="0.2"/>
+    </g>
+
+    <!-- Pill Shape 4 with random rotation and scaling, masked -->
+    <g transform="translate(550,100) rotate(15) scale(1.1)" mask="url(#pillMask)">
+        <path d="M485.883 76.4849C261.504 -144.903 -190.437 161.178 87.8606 435.414C380.391 723.371 784.944 371.386 485.883 76.4849Z"
+              fill="#F4D03F" fill-opacity="0.2"/>
+    </g>
+
+    <!-- Pill Shape 5 with random rotation and scaling, masked -->
+    <g transform="translate(150,500) rotate(-30) scale(0.7)" mask="url(#pillMask)">
+        <path d="M485.883 76.4849C261.504 -144.903 -190.437 161.178 87.8606 435.414C380.391 723.371 784.944 371.386 485.883 76.4849Z"
+              fill="#2E2EFF" fill-opacity="0.2"/>
+    </g>
+</svg>

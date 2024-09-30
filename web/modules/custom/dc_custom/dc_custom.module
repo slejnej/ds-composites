@@ -1,0 +1,75 @@
+<?php
+
+use Drupal\Core\Site\Settings;
+use Drupal\paragraphs\Entity\ParagraphsType;
+
+/**
+ * Add our custom styles library for Gin theme
+ *
+ * @param array $attachments
+ * @return void
+ */
+function dc_custom_page_attachments(array &$attachments): void
+{
+  // attach BS icons
+  $attachments['#attached']['library'][] = 'barrio_base_theme/bootstrap-icons';
+}
+
+/**
+ * Add human readable name of paragraph to render on templates
+ * @param array $variables
+ * @return void
+ */
+function dc_custom_preprocess_paragraph(array &$variables): void
+{
+  $paragraph = $variables['paragraph'];
+  $bundle = $paragraph->bundle();
+  $paragraph_type = ParagraphsType::load($bundle);
+
+  // Check if the paragraph type contains the field that uses CKEditor.
+  $available = ['card_nugglet', 'text_media'];
+  $availableNt = ['field_card_nt_summary', 'field_text_media_nt_text'];
+
+  if (in_array($bundle, $available)) {
+    $key = array_search($bundle, $available);
+    if (isset($variables['content'][$availableNt[$key]][0]['#text'])) {
+      // Get the content from the CKEditor field.
+      $text = $variables['content'][$availableNt[$key]][0]['#text'];
+
+      // Use a regular expression to find all instances of icon--{icon-name}.
+      $pattern = '/icon--([a-zA-Z0-9-_]+)/';
+
+      // Replace each occurrence of icon--{icon-name} with <i class="bi {icon-name}"></i>.
+      $text = preg_replace_callback($pattern, function ($matches) {
+        // $matches[1] contains the dynamic part of the icon class, e.g., "pin-map".
+        $icon_class = $matches[1];
+
+        // Return the replacement string, e.g., <i class="bi bi-pin-map"></i>.
+        return '<i class="bi bi-' . $icon_class . '"></i>';
+      }, $text);
+
+      // Update the markup with the replaced content.
+      $variables['content'][$availableNt[$key]][0]['#text'] = $text;
+    }
+  }
+}
+
+/**
+ * Preprocesses variables for blocks.
+ * Logs a notice with the block id.
+ * Sets the site logo path based on the current multisite.
+ *
+ * @param array $variables
+ *   The block variables.
+ *
+ * @return void
+ */
+function dc_custom_preprocess_block(array &$variables): void
+{
+  if ($variables['base_plugin_id'] == 'system_branding_block') {
+    $currSite = Settings::get('current_multisite');
+    if ($currSite) {
+      $variables['site_alias'] = $currSite;
+    }
+  }
+}

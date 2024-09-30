@@ -1,0 +1,50 @@
+footer {
+  margin-top: 1rem;
+
+  .social-links-wrapper a .btn,
+  a.btn-primary {
+    @include custom_button(
+                    $alt-2-btn-outline-warning-background,
+                    $alt-2-btn-outline-warning-color,
+                    $alt-2-btn-outline-warning-color,
+                    $alt-2-btn-outline-warning-hover-background,
+                    $alt-2-btn-outline-warning-hover-color,
+                    $alt-2-btn-outline-warning-hover-color,
+    );
+  }
+
+  .social-links-wrapper a .btn {
+    @extend .border-0;
+  }
+
+  br {
+    display: none;
+  }
+  p {
+    margin-bottom: 8px;
+  }
+
+  // Styles if there are more than 1 `.media--type-image`
+  .field--name-field-text-media-nt-text {
+    .media--type-image:nth-of-type(n+1) {
+      display: inline-flex;
+      width: calc(50% - 4px);
+
+      img {
+        border-radius: 10px 10px 10px 0;
+      }
+    }
+  }
+}
+
+.footer-secondary .footer-menu {
+  padding: 4px 0;
+
+  ul {
+    gap: 20px;
+
+    li {
+      padding: 0 16px 0 0;
+    }
+  }
+}

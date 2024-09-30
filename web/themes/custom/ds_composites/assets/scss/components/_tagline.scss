@@ -14,7 +14,7 @@
   }
 
   .tagline-bg {
-    mask: url('../assets/images/sun-shape.svg') no-repeat 45% 55%/150%;
+    mask: url('../assets/images/bg-shape.svg') no-repeat 45% 55%/150%;
     background: #FCC529;
     top: 0;
     left: 0;
@@ -24,7 +24,7 @@
   .tagline-swoosh {
     bottom: -1px;
     left: 0;
-    mask: url('../assets/images/under-swoosh.svg') no-repeat 50% 50%/100%;
+    mask: url('../assets/images/under-title-cutoff.svg') no-repeat 50% 50%/100%;
     height: 90px;
     background-color: $surface-primary;
   }

@@ -1,12 +1,12 @@
 .paragraph--type--promo {
   .promo-bg {
-    mask: url('../assets/images/sun-shape.svg') no-repeat 45% 55%/300%;
+    mask: url("../assets/images/bg-shape.svg") no-repeat 26% 19%/108%;
     background: #FCC529;
     top: 0;
     left: 0;
     z-index: 0;
     @media(min-width: 768px) {
-      mask: url('../assets/images/sun-shape.svg') no-repeat 45% 55%/150%;
+      mask: url("../assets/images/bg-shape.svg") no-repeat 26% 19%/59%;
     }
   }
 

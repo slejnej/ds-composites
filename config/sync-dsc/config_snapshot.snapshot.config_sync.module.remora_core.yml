@@ -4677,6 +4677,56 @@ items:
         default_config_hash: wOpix89WRHzoTG6PKmGG_UQOxbmTKG0KPz3cjYdK5pQ
   -
     collection: ''
+    name: linkchecker.settings
+    data:
+      langcode: en-gb
+      scan_blocks: null
+      check_links_types: 1
+      default_url_scheme: 'http://'
+      base_path: ''
+      extract:
+        from_a: true
+        from_audio: true
+        from_embed: false
+        from_iframe: true
+        from_img: false
+        from_object: false
+        from_video: false
+        filter_blacklist:
+          editor_file_reference: '0'
+          entity_embed: '0'
+          filter_image_lazy_load: '0'
+          filter_autop: '0'
+          filter_align: '0'
+          filter_html_escape: '0'
+          filter_caption: '0'
+          filter_html_image_secure: '0'
+          filter_html: '0'
+          filter_htmlcorrector: '0'
+          filter_url: '0'
+          linkit: '0'
+          media_embed: '0'
+      check:
+        connections_max: 4
+        connections_max_per_domain: 2
+        disable_link_check_for_urls: |-
+          example.com
+          example.net
+          example.org
+        library: core
+        interval: 2419200
+        useragent: 'Drupal (+https://drupal.org/)'
+      error:
+        action_status_code_301: 0
+        action_status_code_404: 0
+        ignore_response_codes: "200\r\n206\r\n302\r\n304\r\n401\r\n403"
+        impersonate_account: admin
+      logging:
+        level: 6
+      _core:
+        default_config_hash: ZhIl6m8EWHJQFZEAzV6jBaR6a-1Fwas0dZ5_PfjgobI
+  -
+    collection: ''
     name: linkit.linkit_profile.default
     data:
       uuid: null
@@ -4971,6 +5021,21 @@ items:
       database_tracing_args: false
       _core:
         default_config_hash: PpIJtNr2V7SUR5yx0c6ksIuRGDwT4kFY0XhykPuIi2w
+  -
+    collection: ''
+    name: recaptcha_v3.settings
+    data:
+      langcode: en-gb
+      site_key: null
+      secret_key: null
+      hide_badge: false
+      verify_hostname: true
+      default_challenge: recaptcha/reCAPTCHA
+      error_message: 'Antibot verification failed.'
+      cacheable: false
+      library_use_recaptcha_net: true
+      _core:
+        default_config_hash: 8k5KBhShv2Z2F4c6wzlRiCQz8req7CwFUnzHzEz8vIE
   -
     collection: ''
     name: remora_core.obfuscate_versions.settings

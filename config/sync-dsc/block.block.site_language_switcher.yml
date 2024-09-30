@@ -1,9 +1,9 @@
-uuid: ff9f736f-5134-4753-900e-3f0ef2a24697
+uuid: fa9266ac-fa2d-49e2-aab1-8956fb80ed52
 langcode: en
 status: true
 dependencies:
   module:
-    - advanced_language_selector
+    - language
   theme:
     - ds_composites
 id: site_language_switcher
@@ -11,150 +11,10 @@ theme: ds_composites
 region: header
 weight: 0
 provider: null
-plugin: advanced_language_selector_block
+plugin: 'language_block:language_interface'
 settings:
-  id: advanced_language_selector_block
-  label: 'Advanced language selector block'
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
   label_display: '0'
-  provider: advanced_language_selector
-  look_and_feel:
-    theme: plain_html_list
-  bootstrap_navigation:
-    general:
-      orientation: horizontal
-      style: nav-pills
-      css: ''
-      text_transformation: default
-      load_external_bootstrap: 0
-      external_bootstrap_library: advanced_language_selector/bootstrap
-    display:
-      items:
-        show:
-          icons: icons
-          lang_code: lang_code
-          lang_name: 0
-        icon_height: '25'
-        icon_alignment: left
-  plain_html:
-    general:
-      css: ''
-      uppercase: 1
-    display:
-      icons: 1
-      show:
-        lang_code: lang_code
-        lang_name: 0
-      icon_height: '25'
-      icon_alignment: right
-  bootstrap_dropdown:
-    general:
-      id: ''
-      css: ''
-      text_transformation: default
-      load_external_bootstrap: 0
-      external_bootstrap_library: advanced_language_selector/bootstrap
-    display:
-      selected_item:
-        css: btn-primary
-        show:
-          icons: icons
-          lang_code: lang_code
-          lang_name: 0
-        icon_height: '25'
-        icon_alignment: right
-      items:
-        show:
-          icons: icons
-          lang_code: lang_code
-          lang_name: 0
-        icon_height: '25'
-        icon_alignment: left
-  bootstrap_button_group:
-    general:
-      css: ''
-      text_transformation: default
-      load_external_bootstrap: 0
-      external_bootstrap_library: advanced_language_selector/bootstrap
-    display:
-      items:
-        css: btn-primary
-        show:
-          icons: icons
-          lang_code: lang_code
-          lang_name: 0
-        icon_height: '25'
-        icon_alignment: left
-  bootstrap_offcanvas:
-    general:
-      id: ''
-      position: offcanvas-start
-      css: ''
-      text_transformation: default
-      load_external_bootstrap: 0
-      external_bootstrap_library: advanced_language_selector/bootstrap
-    display:
-      selected_item:
-        css: btn-primary
-        show:
-          icons: icons
-          lang_code: lang_code
-          lang_name: 0
-        icon_height: '25'
-        icon_alignment: right
-      items:
-        show:
-          icons: icons
-          lang_code: lang_code
-          lang_name: 0
-        icon_height: '25'
-        icon_alignment: left
-  bootstrap_modal:
-    general:
-      id: ''
-      css: ''
-      text_transformation: default
-      load_external_bootstrap: 0
-      external_bootstrap_library: advanced_language_selector/bootstrap
-    display:
-      selected_item:
-        css: btn-primary
-        show:
-          icons: icons
-          lang_code: lang_code
-          lang_name: 0
-        icon_height: '25'
-        icon_alignment: right
-      items:
-        show:
-          icons: icons
-          lang_code: lang_code
-          lang_name: 0
-        icon_height: '25'
-        icon_alignment: left
-  bootstrap_list_group:
-    general:
-      css: ''
-      text_transformation: default
-      load_external_bootstrap: 0
-      external_bootstrap_library: advanced_language_selector/bootstrap
-    display:
-      items:
-        show:
-          icons: icons
-          lang_code: lang_code
-          lang_name: 0
-        icon_height: '25'
-        icon_alignment: left
-  plain_html_list:
-    general:
-      css: ''
-      text_transformation: upper
-    display:
-      items:
-        show:
-          lang_code: lang_code
-          icons: 0
-          lang_name: 0
-        icon_height: '25'
-        icon_alignment: left
+  provider: language
 visibility: {  }
