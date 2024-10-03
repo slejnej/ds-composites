@@ -1,0 +1,9 @@
+{% extends '@barrio_base_theme/layout/html.html.twig' %}
+
+{% block title %}
+  {% if home_title is defined %}
+    <title>{{ home_title }}</title>
+  {% else %}
+    <title>{{ head_title|safe_join(' | ') }}</title>
+  {% endif %}
+{% endblock %}

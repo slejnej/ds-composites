@@ -1,6 +1,6 @@
 {% if content['#links'] %}
   {% set current_langcode = current_language() %}
-  {% set classes = [ 'advanced-language-selector', configuration.general.css|clean_class ] %}
+  {% set classes = [ 'language-selector' ] %}
   <div{{ attributes.addClass(classes) }}>
     <ul>
       {% for langcode, item in content['#links'] %}

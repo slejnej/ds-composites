@@ -55,3 +55,13 @@ a.view-more {
   $alt-2-btn-link-hover-color,
   );
 }
+
+#sliding-popup .eu-cookie-compliance-banner {
+  background-color: $global-color-success-success-400;
+  h2, p, .eu-cookie-compliance-message button {
+    color: $dark;
+  }
+  .btn {
+    margin: 8px!important;
+  }
+}

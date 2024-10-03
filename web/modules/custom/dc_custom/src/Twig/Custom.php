@@ -44,9 +44,22 @@ class Custom extends AbstractExtension
    */
   public function getNodeLanguageUrl(Url $url, $language): string
   {
+    $languageManager = \Drupal::languageManager();
+
+    // Get an array of language objects.
+    $languages = $languageManager->getLanguages();
+
+    // Get the language codes from the language objects.
+    $languageCodes = [];
+    foreach ($languages as $lang) {
+      $languageCodes[] = $lang->getId();
+    }
+
     // Convert the Url object to a plain system path string.
     $system_path = $url->getInternalPath();
-    $system_path = empty($system_path) ? '/node/1' : $system_path;
+    $system_path = empty($system_path) ? 'node/1' : $system_path;
+
+    $system_path = ltrim($system_path, '/');
 
     list($entity_type, $nid) = explode('/', $system_path);
 
@@ -55,6 +68,11 @@ class Custom extends AbstractExtension
       if ($language === 'en') {
         return sprintf('%s', $alias);
       }
+
+      if (in_array(ltrim($alias, '/'), $languageCodes)) {
+        return sprintf('/%s', $language);
+      }
+
       return sprintf('/%s%s', $language, $alias);
     }
 
