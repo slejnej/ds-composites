@@ -63,17 +63,17 @@
 
                       <div class="cookie-toggle position-relative">
                         <input
-                          type="checkbox"
-                          name="cookie-categories"
-                          id="cookie-category-{{ key }}"
-                          value="{{ key }}"
-                          {% if category.checkbox_default_state in ['checked', 'required'] %} checked {% endif %}
-                          {% if category.checkbox_default_state == 'required' %} disabled {% endif %}
-                          class="position-absolute"
+                            type="checkbox"
+                            name="cookie-categories"
+                            id="cookie-category-{{ key }}"
+                            value="{{ key }}"
+                            {% if category.checkbox_default_state in ['checked', 'required'] %} checked {% endif %}
+                            {% if category.checkbox_default_state == 'required' %} disabled {% endif %}
+                            class="position-absolute"
                         >
                         <label for="cookie-category-{{ key }}" class="switch-toggle d-inline-block mb-0 position-relative">
-                          <i class="bi bi-x-circle toggle-icon-off"></i>
-                          <i class="bi bi-check-circle toggle-icon-on"></i>
+                          <i class="toggle-icon-off"></i>
+                          <i class="toggle-icon-on"></i>
                         </label>
                       </div>
 
