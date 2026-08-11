@@ -7,7 +7,7 @@ dependencies:
     - text
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
   default_config_hash: pBn56lU9UGPLsKMUQ0N2elCJXlqLC6jShdd66bBOlJE
 id: paragraph.field_card_nt_summary

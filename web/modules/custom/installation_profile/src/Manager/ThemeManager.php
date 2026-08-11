@@ -143,7 +143,7 @@ EOT;
     // The first character that is different between the two paths
     $overlappingPath = StringUtil::getOverlap($remoraBasePath, $this->themePath);
 
-    // make sure the path ends on a slash, so the c in 'contrib' and 'custom' doesn't mess up the algo
+    // make sure the path ends on a slash, so the c in 'custom' and 'custom' doesn't mess up the algo
     $overlappingPath = preg_replace('/[^\/]+$/', '', $overlappingPath);
     $overlapIndex = strlen($overlappingPath);
 
@@ -286,7 +286,7 @@ libraries:
   - $this->machineName/global-styling
   - $this->machineName/global-javascript
 libraries-override:
-  $baseThemeMachineName/global-styling: true
+  $baseThemeMachineName/global-styling: $this->machineName/global-styling
 regions:
   header: Header
   nav_branding: 'Navigation branding region'
@@ -302,6 +302,8 @@ EOT;
     $this->files[sprintf('%s.libraries.yml', $this->machineName)] = <<<EOT
 global-styling:
   css:
+    layout:
+      build/css/bootstrap.min.css: {}
     theme:
       build/css/style.min.css: {}
 

@@ -4,3 +4,7 @@ ignore:
   - 'captcha.settings'
   - 'recaptcha.settings'
   - 'recaptcha_v3.settings'
+  - 'smtp.settings'
+  - 'google_tag.container.*'
+  - 'user.mail'
+  - 'user.settings'

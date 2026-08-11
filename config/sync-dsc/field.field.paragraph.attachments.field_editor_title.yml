@@ -7,7 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.attachments
   enforced:
     module:
-      - attachments_nugget
+      - attachments_pod
 _core:
   default_config_hash: tCK9bIF5OKIH6fFoF8mIBeHy4bM6bCmDklPxpt6GrdQ
 id: paragraph.attachments.field_editor_title

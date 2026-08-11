@@ -1,0 +1,38 @@
+{% extends "block.html.twig" %}
+
+{% block content %}
+  <div class="navbar-brand d-flex align-items-center">
+
+    {% block site_logo %}
+      {% if site_logo %}
+        {% set logo_extension = site_logo|split('.')|last|lower %}
+
+        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo d-block">
+          {% if logo_extension == 'svg' %}
+            {# Check if it's an external URL or local #}
+            {% if site_logo starts with 'http' %}
+              {# External SVG - use object/embed #}
+              <embed src="{{ site_logo }}" type="image/svg+xml" class="site-logo-svg" />
+            {% else %}
+              {# Local SVG - try to include it inline #}
+              {% set svg_path = site_logo|replace({'/sites/default/files': 'public://'}) %}
+              {% set svg_content = svg_path|file_contents %}
+              {% if svg_content %}
+                {{ svg_content|raw }}
+              {% else %}
+                {# Fallback to img tag if can't get content #}
+                <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" fetchpriority="high" />
+              {% endif %}
+            {% endif %}
+          {% else %}
+            <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" fetchpriority="high" />
+          {% endif %}
+        </a>
+      {% endif %}
+    {% endblock %}
+
+    {% block site_slogan %}
+    {% endblock %}
+
+  </div>
+{% endblock %}

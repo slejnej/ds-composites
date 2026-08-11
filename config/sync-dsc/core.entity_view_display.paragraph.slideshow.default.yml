@@ -16,7 +16,7 @@ dependencies:
     - text
   enforced:
     module:
-      - slideshow_nugget
+      - slideshow_pod
 _core:
   default_config_hash: VeTyGw1k571Bp5Ib0lD0LZoEMD7hNDfUlMcKoEMOG2c
 id: paragraph.slideshow.default

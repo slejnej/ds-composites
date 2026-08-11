@@ -6,21 +6,21 @@ remora_core.settings.palettes:
   requirements:
     _permission: 'administer site configuration'
 
+remora_config_page.remora_settings:
+  path: '/admin/config/remora-settings'
+  defaults:
+    _form: '\Drupal\remora_core\Form\RemoraSettingsForm'
+    _title: 'Website Settings'
+  requirements:
+    _permission: 'administer remora settings'
+
 remora_core.settings:
   path: '/admin/config/remora'
   defaults:
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
     _title: 'Remora'
   requirements:
-    _permission: 'access administration pages'
-
-remora_config_page.remora_settings:
-  path: '/admin/config/remora-settings'
-  defaults:
-    _form: '\Drupal\remora_core\Form\RemoraSettingsForm'
-    _title: 'Remora Settings'
-  requirements:
-    _permission: 'administer remora settings'
+    _permission: 'administer remora admin settings'
 
 remora_core.permissions.reimport:
   path: '/admin/config/remora/permissions/reimport'
@@ -28,4 +28,12 @@ remora_core.permissions.reimport:
     _controller: '\Drupal\remora_core\Controller\Permission\ReimportController::update'
     _title: 'Importing all remora config permissions'
   requirements:
-    _permission: 'administer remora settings'
+    _permission: 'administer remora admin settings'
+
+remora_core.styles.link:
+  path: '/admin/config/remora/styles/link'
+  defaults:
+    _controller: '\Drupal\remora_core\Controller\Styles\LinkController::update'
+    _title: 'Link all remora styles'
+  requirements:
+    _permission: 'administer remora admin settings'

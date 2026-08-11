@@ -1,0 +1,66 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ *  Automatically registers all the templates in the templates/ directory
+ * @return array The theme containing the theme implementations (templates)
+ */
+function slideshow_pod_theme()
+{
+  return Drupal::service('remora_core.service.module_template')->generateThemesFromTemplates('slideshow_pod');
+}
+
+/**
+ *  Form conditionals
+ */
+function slideshow_pod_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void
+{
+
+  if ($form_id === 'layout_paragraphs_component_form' && isset($form['field_slide_nt_link'])) {
+    // only show link field if add a link checkbox is checked
+    $form['field_slide_nt_link']['#states'] = [
+      'visible' => [
+        ':input[name="field_slide_nt_add_a_link[value]"]' => ['checked' => true],
+      ]
+    ];
+  }
+
+}
+
+/**
+ * Add our custom styles for slideshows edit
+ *
+ * @param array $attachments
+ * @return void
+ */
+function slideshow_pod_page_attachments(array &$attachments): void
+{
+  if (!isset($attachments['#attached']['library'])) {
+    $attachments['#attached']['library'] = [];
+  }
+  if (Drupal::service('router.admin_context')->isAdminRoute()) {
+    $attachments['#attached']['library'][] = 'slideshow_pod/admin_styles';
+  }
+}
+
+function slideshow_pod_preprocess_paragraph(array &$variables): void
+{
+  $paragraph = $variables['paragraph'];
+  if ($paragraph->bundle() === 'slideshow') {
+    $variables['#attached']['library'][] = 'slideshow_pod/slideshow';
+    $variables['#attached']['library'][] = 'barrio_base_theme/slick-carousel';
+
+    if (empty($variables['content']['field_slideshow_nt_slides'])) {
+      return;
+    }
+
+    foreach ($variables['content']['field_slideshow_nt_slides'] as $delta => &$slide) {
+      if (!is_int($delta) || !is_array($slide)) {
+        continue;
+      }
+
+      $slide['#attributes']['data-slide-index'] = $delta;
+    }
+  }
+}

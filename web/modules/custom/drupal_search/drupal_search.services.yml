@@ -1,0 +1,12 @@
+services:
+  drupal_search.event_subscriber:
+    class: Drupal\drupal_search\EventSubscriber\DrupalSearchEventSubscriber
+    tags:
+      - { name: 'event_subscriber' }
+
+  drupal_search.cache_service:
+    class: Drupal\drupal_search\Service\ContentTypeCacheService
+
+  drupal_search.seo_exclusion_service:
+    class: Drupal\drupal_search\Service\SeoExclusionService
+    arguments: ['@database']

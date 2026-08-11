@@ -125,13 +125,13 @@ class RemoraIncludeNodeParser extends IncludeTokenParser
           $lineNo),
         $lineNo
       ),
-      // the nugget's template
+      // the pod's template
       new ConstantExpression(3, $lineNo),
       new ConcatBinary(
         new ConstantExpression('@', $lineNo),
         new ConcatBinary(
           $objectBundle,
-          new ConstantExpression('_nugget/templates/' . $path . '/' . $filename . self::FILE_EXT, $lineNo),
+          new ConstantExpression('_pod/templates/' . $path . '/' . $filename . self::FILE_EXT, $lineNo),
           $lineNo),
         $lineNo
       ),

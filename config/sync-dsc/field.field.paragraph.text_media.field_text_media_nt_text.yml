@@ -10,7 +10,7 @@ dependencies:
     - text
   enforced:
     module:
-      - text_media_nugget
+      - text_media_pod
 _core:
   default_config_hash: HUU22ggIg6lQyr95EAh4R_ulvOAl5Q7QUnMi3_3mzZo
 id: paragraph.text_media.field_text_media_nt_text

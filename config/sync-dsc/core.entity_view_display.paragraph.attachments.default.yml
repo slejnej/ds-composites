@@ -13,7 +13,7 @@ dependencies:
     - text
   enforced:
     module:
-      - attachments_nugget
+      - attachments_pod
 _core:
   default_config_hash: rQBpqDFXwguB-A84_nwu8lH__EG5URxqTCr2j8N2ENc
 id: paragraph.attachments.default

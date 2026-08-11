@@ -7,7 +7,7 @@ dependencies:
     - text
   enforced:
     module:
-      - slideshow_nugget
+      - slideshow_pod
 _core:
   default_config_hash: L5OUHz6kIa-U9zUSZpdAA2-yHAW5cUUt9_dv6liXh3M
 id: paragraph.field_slide_nt_summary

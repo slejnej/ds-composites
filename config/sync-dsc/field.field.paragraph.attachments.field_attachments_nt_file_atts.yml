@@ -8,7 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.attachments
   enforced:
     module:
-      - attachments_nugget
+      - attachments_pod
 _core:
   default_config_hash: 9_xuH9JcPiPt7LyIfg3sC2W9-O9AboUJplLjfsIrovI
 id: paragraph.attachments.field_attachments_nt_file_atts

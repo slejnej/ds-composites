@@ -7,7 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.slideshow
   enforced:
     module:
-      - slideshow_nugget
+      - slideshow_pod
 _core:
   default_config_hash: LM_y5GUiyy2FNZEpaWuS-NiHMqfPHUOgy9BUCMPAuVA
 id: paragraph.slideshow.field_markers

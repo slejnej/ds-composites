@@ -9,7 +9,7 @@ dependencies:
     - options
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
   default_config_hash: yn5UODZWQhU6kDIN7hUj1fPHVOP5Fx4Ect6Gk4gR1xI
 id: paragraph.cards.field_cards_nt_slides_per_page

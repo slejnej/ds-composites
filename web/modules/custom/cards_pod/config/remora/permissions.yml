@@ -1,0 +1,17 @@
+editor:
+  - 'create paragraph content card_pea'
+  - 'create paragraph content cards'
+  - 'delete paragraph content card_pea'
+  - 'delete paragraph content cards'
+  - 'update paragraph content card_pea'
+  - 'update paragraph content cards'
+  - 'view paragraph content card_pea'
+  - 'view paragraph content cards'
+
+anonymous:
+  - 'view paragraph content card_pea'
+  - 'view paragraph content cards'
+
+authenticated:
+  - 'view paragraph content card_pea'
+  - 'view paragraph content cards'

@@ -1,5 +1,5 @@
 {# only show div if there is at least 1 item being rendered #}
-{% set fields = content.field_photo|merge(content.field_body)|merge(content.field_main_nuggets) %}
+{% set fields = content.field_photo|merge_safe(content.field_body, content.field_main_pods) %}
 {% if fields['#items'] is not empty %}
 
   <section id="content-main" class="col g-0 overflow-hidden">
@@ -67,10 +67,10 @@
           {% endif %}
         {% endblock body %}
 
-        {% block main_content_nuggets %}
-          {% if content.field_main_nuggets['#items'] is not empty %}
-            <section id="main-content-nuggets">
-              {{ content.field_main_nuggets }}
+        {% block main_content_pods %}
+          {% if content.field_main_pods['#items'] is not empty %}
+            <section id="main-content-pods">
+              {{ content.field_main_pods }}
             </section>
           {% endif %}
         {% endblock %}

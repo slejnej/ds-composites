@@ -1,0 +1,193 @@
+// Pod previews
+.preview-wrapper {
+  background: var(--gin-color-primary-light);
+  border: 1px solid var(--gin-color-primary);
+  border-radius: $global-spacing-border-radius-m;
+  padding: $global-spacing-1;
+  box-shadow: $tonic-shadow;
+
+  .lpb-controls {
+    left: auto;
+    right: 0;
+    top: calc(50% - 20px);
+  }
+
+  &.paragraph--unpublished {
+    background: white;
+    border: 1px solid var(--gin-bg-section-layer);
+
+    .field__label {
+      color: var(--gin-color-text-light);
+    }
+  }
+
+  .preview-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $global-spacing-1;
+
+    .field__icon {
+      display: flex;
+      background: white;
+      padding: 2px;
+      border-radius: $global-spacing-border-radius-sm;
+    }
+  }
+}
+
+
+.js-lpb-component-list {
+  display: flex;
+  flex-direction: column;
+  gap: $global-spacing-1;
+}
+
+
+/* Pod Icons */
+.field__icon svg {
+  height: 32px;
+  width: 32px;
+
+  .accent-primary {
+    fill: $charade;
+  }
+
+  .accent-secondary {
+    fill: $mid-gray;
+  }
+}
+
+.js-lpb-component.preview-wrapper:not(.paragraph--unpublished) {
+  &:hover {
+    svg {
+      .accent-primary {
+        fill: var(--gin-color-primary);
+      }
+
+      .accent-secondary {
+        fill: var(--gin-color-primary-light);
+      }
+    }
+  }
+}
+
+.js-lpb-component.preview-wrapper.paragraph--unpublished {
+  svg {
+    opacity: 0.5;
+  }
+}
+
+
+// ADD NUGGETS
+
+.ui-dialog .ui-dialog-titlebar {
+  background: $pickled_bluewood !important;
+}
+
+.ui-dialog:not(.ui-dialog-off-canvas) {
+  width: 100% !important;
+  left: calc(50% - 640px) !important;
+
+  input.lpb-component-list-search-input {
+    border-radius: $global-spacing-border-radius-sm;
+    border: $input-box-border-solid;
+    padding: $global-spacing-05 $global-spacing-1;
+  }
+
+  .lpb-component-list__group {
+    margin-top: 30px;
+  }
+
+  .lpb-component-list__group--content {
+    grid-column-gap: 40px;
+    grid-row-gap: 57px;
+    padding-bottom: 40px;
+
+    .lpb-component-list__item {
+      width: calc(100% / 4 - 30px);
+
+      a {
+        width: 100%;
+        justify-content: center;
+        border: 2px solid #AAADB4;
+        border-radius: $global-spacing-border-radius-sm;
+        position: relative;
+        flex-direction: column;
+        grid-row-gap: 20px;
+        min-height: 160px;
+
+        .pod-label {
+          background: #fff;
+          padding: 10px 20px;
+          text-transform: uppercase;
+          color: $pickled_bluewood;
+          font-weight: 500;
+          position: absolute;
+          top: -22px;
+          border-radius: $global-spacing-border-radius-sm;
+        }
+
+        .pod-add {
+          border-radius: 8px;
+          text-transform: uppercase;
+          padding: 6px $global-spacing-1;
+          font-size: var(--gin-font-size-m);
+          font-weight: 500;
+          position: absolute;
+          bottom: -20px;
+          color: var(--gin-color-primary);
+          border: 2px solid var(--gin-color-primary);
+          background: white;
+        }
+
+        .pod-icon {
+          // Icons are added via their modules/css/admin.css
+          height: 90px;
+          width: 90px;
+          display: inline-block;
+          margin-bottom: 10px;
+          background: $shark;
+        }
+
+        &:hover {
+          border-color: var(--gin-color-primary);
+
+          .pod-add {
+            background-color: var(--gin-color-primary);
+            color: var(--gin-color-button-text);
+          }
+
+          .pod-icon {
+            background-color: var(--gin-color-primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+.lpb-component-list__item .pod-icon {
+  mask: url("../assets/images/icon-default.svg") no-repeat 50% 50% / 90px 90px;
+}
+
+.gin--dark-mode {
+  .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick {
+    background: var(--gin-color-button-text);
+  }
+
+  .ui-dialog:not(.ui-dialog-off-canvas) .lpb-component-list__group--content .lpb-component-list__item a {
+    .pod-add {
+      color: var(--gin-color-button-text);
+      border-color: var(--gin-bg-layer);
+    }
+
+    .pod-icon {
+      background-color: var(--gin-color-text-light);
+    }
+
+    &:hover .pod-icon {
+      background-color: var(--gin-color-primary);
+    }
+  }
+}

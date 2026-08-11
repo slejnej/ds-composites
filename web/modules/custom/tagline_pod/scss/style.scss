@@ -1,0 +1,133 @@
+// Custom variables for pod margins
+section:not(#sidebar-pods) .layout__region .paragraph.paragraph--type--tagline {
+  margin-bottom: calc($intro-margin-y / 2);
+
+  //Half the margins in between pods to avoid large gaps
+  margin-top: calc($intro-margin-y / 2);
+
+  &:first-child {
+    margin-top: $intro-margin-y;
+  }
+
+  &:last-child {
+    margin-bottom: $intro-margin-y;
+  }
+}
+
+.paragraph--type--tagline {
+  margin-left: 0;
+  margin-right: 0;
+
+  .tagline-content {
+    max-width: $intro-content-max-width;
+  }
+}
+
+
+/** ================= [ Mixins ] ================= **/
+
+@mixin tagline($tagline-padding-y, $tagline-padding-x, $tagline-color-bg, $tagline-content-bg, $tagline-text-color, $tagline-text-padding-y, $tagline-text-padding-x,
+$tagline-text-spacer, $tagline-mobile-padding-y, $tagline-mobile-padding-x, $tagline-radius-top-left, $tagline-radius-top-right,
+$tagline-radius-bottom-right, $tagline-radius-bottom-left,$tagline-border-color,$tagline-border-top, $tagline-border-right,
+$tagline-border-bottom, $tagline-border-left) {
+  background-color: $tagline-color-bg;
+  padding: $tagline-padding-y $tagline-padding-x;
+
+  .tagline-content {
+    background-color: $tagline-content-bg;
+    color: $tagline-text-color;
+    padding: 8px;
+    gap: $tagline-text-spacer;
+    border-radius: $tagline-radius-top-left $tagline-radius-top-right $tagline-radius-bottom-right $tagline-radius-bottom-left;
+    border-color: $tagline-border-color;
+    border-style: solid;
+    border-width: $tagline-border-top $tagline-border-right $tagline-border-bottom $tagline-border-left;
+
+    @include media-breakpoint-up('sm') {
+      padding: $tagline-text-padding-y $tagline-text-padding-x;
+    }
+
+    .field--name-field-display-title {
+      @extend .m-0;
+      color: $tagline-text-color !important;
+    }
+
+    h2, h3, h4, h5, h6 {
+      color: $tagline-text-color;
+    }
+  }
+}
+
+body, .palette-default-bg {
+  .paragraph--type--tagline {
+    @include tagline(
+                    $intro-padding-y,
+                    $intro-padding-x,
+                    $intro-color-bg,
+                    $intro-content-bg,
+                    $intro-text-color,
+                    $intro-text-padding-y,
+                    $intro-text-padding-x,
+                    $intro-text-spacer,
+                    $intro-mobile-padding-y,
+                    $intro-mobile-padding-x,
+                    $intro-top-left,
+                    $intro-top-right,
+                    $intro-bottom-right,
+                    $intro-bottom-left,
+                    $intro-border-color,
+                    $intro-border-top,
+                    $intro-border-right,
+                    $intro-border-bottom,
+                    $intro-border-left
+    )
+  }
+}
+
+.palette-alt-1 .paragraph--type--tagline {
+  @include tagline(
+                  $alt-1-intro-padding-y,
+                  $alt-1-intro-padding-x,
+                  $alt-1-intro-color-bg,
+                  $alt-1-intro-content-bg,
+                  $alt-1-intro-text-color,
+                  $alt-1-intro-text-padding-y,
+                  $alt-1-intro-text-padding-x,
+                  $alt-1-intro-text-spacer,
+                  $alt-1-intro-mobile-padding-y,
+                  $alt-1-intro-mobile-padding-x,
+                  $alt-1-intro-top-left,
+                  $alt-1-intro-top-right,
+                  $alt-1-intro-bottom-right,
+                  $alt-1-intro-bottom-left,
+                  $alt-1-intro-border-color,
+                  $alt-1-intro-border-top,
+                  $alt-1-intro-border-right,
+                  $alt-1-intro-border-bottom,
+                  $alt-1-intro-border-left
+  )
+}
+
+.palette-alt-2 .paragraph--type--tagline {
+  @include tagline(
+                  $alt-1-intro-padding-y,
+                  $alt-1-intro-padding-x,
+                  $alt-2-intro-color-bg,
+                  $alt-2-intro-content-bg,
+                  $alt-2-intro-text-color,
+                  $alt-2-intro-text-padding-y,
+                  $alt-2-intro-text-padding-x,
+                  $alt-2-intro-text-spacer,
+                  $alt-2-intro-mobile-padding-y,
+                  $alt-2-intro-mobile-padding-x,
+                  $alt-2-intro-top-left,
+                  $alt-2-intro-top-right,
+                  $alt-2-intro-bottom-right,
+                  $alt-2-intro-bottom-left,
+                  $alt-2-intro-border-color,
+                  $alt-2-intro-border-top,
+                  $alt-2-intro-border-right,
+                  $alt-2-intro-border-bottom,
+                  $alt-2-intro-border-left
+  )
+}

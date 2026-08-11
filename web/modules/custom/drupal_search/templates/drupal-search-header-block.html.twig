@@ -1,0 +1,55 @@
+<div class="header-search-wrapper order-md-3">
+    {% block header_search_icon %}
+        <button class="header-search-icon" aria-label="Search">
+            {% block search_icon %}
+                <svg class="bi text-primary search-icon icon" width="30" height="30">
+                    <use xlink:href="{{ get_bs_icon_path('search') }}"/>
+                </svg>
+            {% endblock %}
+            {% block close_icon %}
+                <svg class="bi text-primary close-icon icon" width="30" height="30">
+                    <use xlink:href="{{ get_bs_icon_path('x-lg') }}"/>
+                </svg>
+            {% endblock %}
+        </button>
+
+    {% endblock %}
+
+    {% block header_search_form %}
+        <div class="header-search-form d-none">
+
+            <div class="container text-center">
+                {% block header_search_form_title %}
+                    <div><label for="edit-search-api-fulltext--3">{{ 'What are you looking for?'|t }}</label></div>
+                {% endblock %}
+                {% block form %}
+                    {% set language_path = '' %}
+                    {% if language is defined and language not in ['en', 'en-gb'] %}
+                        {% set language_path = '/' ~ language %}
+                    {% endif %}
+
+                    <form data-block="sidebar_first" action="{{ language_path }}/search" method="get" id="views-exposed-form-search-search"
+                          accept-charset="UTF-8" data-once="exposed-form bef-auto-submit">
+                        <div class="form--inline clearfix d-flex g-3 justify-content-center">
+                            <div
+                                    class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-search-api-fulltext form-item-search-api-fulltext">
+                                <label for="edit-search-api-fulltext--3" class="visually-hidden">{{ 'Enter search terms'|t }}</label>
+                                <input class="form-text form-control search-input" placeholder="{{ 'Search terms'|t }}" data-bef-auto-submit-exclude=""
+                                       data-drupal-selector="edit-search-api-fulltext" type="text" id="edit-search-api-fulltext--3"
+                                       name="search_api_fulltext" value="" size="30" maxlength="128">
+                            </div>
+                            <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper"
+                                 id="edit-actions--3">
+                                <input data-bef-auto-submit-click="" data-drupal-selector="edit-submit-search-3" type="submit"
+                                       id="edit-submit-search--3" value="{{ 'Search'|t }}"
+                                       class="button js-form-submit form-submit btn btn-primary submit-search-processed">
+                            </div>
+                        </div>
+                    </form>
+                {% endblock %}
+            </div>
+
+        </div>
+    {% endblock %}
+
+</div>

@@ -6,7 +6,7 @@ dependencies:
     - layout_paragraphs
   enforced:
     module:
-      - attachments_nugget
+      - attachments_pod
 _core:
   default_config_hash: cRv1YxNf7cecbZ1XN2x4vi6AYNTn3Im1ETXaKCzo764
 id: attachments

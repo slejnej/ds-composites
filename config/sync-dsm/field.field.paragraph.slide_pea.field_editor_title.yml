@@ -1,0 +1,24 @@
+uuid: f1c50d9a-84fc-4a54-94d9-f6b07a288434
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_editor_title
+    - paragraphs.paragraphs_type.slide_pea
+  enforced:
+    module:
+      - slideshow_pod
+_core:
+  default_config_hash: '-JCp3ETEfSHrWBlwWjMyYXQT6WPyAs4RQdYZmm35UR4'
+id: paragraph.slide_pea.field_editor_title
+field_name: field_editor_title
+entity_type: paragraph
+bundle: slide_pea
+label: 'Editor title'
+description: 'This title is used to describe the content within this nugget for web editors. This title is not displayed on the page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

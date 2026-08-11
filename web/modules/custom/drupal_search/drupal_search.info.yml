@@ -1,0 +1,17 @@
+name: Drupal Search
+type: module
+description: Contains configuration for Drupal core Search functionality
+core_version_requirement: ^10
+package: Dc2
+version: 1.0.0
+
+dependencies:
+  - drupal:remora_core
+  - drupal:better_exposed_filters
+  - drupal:facets_block
+  - drupal:node
+  - drupal:search_api
+  - drupal:search_api_db
+  - drupal:views
+  - drupal:views_ui
+  - drupal:simple_sitemap_engines

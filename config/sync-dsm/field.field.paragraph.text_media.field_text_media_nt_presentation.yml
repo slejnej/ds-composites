@@ -7,10 +7,10 @@ dependencies:
     - paragraphs.paragraphs_type.text_media
   module:
     - options
-    - text_media_nugget
+    - text_media_pod
   enforced:
     module:
-      - text_media_nugget
+      - text_media_pod
 _core:
   default_config_hash: hcl3QFD7-MZ296JsYrvQlMLV4Vv1oWr6dG69Gh3y4CA
 id: paragraph.text_media.field_text_media_nt_presentation

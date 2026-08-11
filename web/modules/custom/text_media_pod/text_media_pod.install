@@ -1,0 +1,25 @@
+<?php
+
+use Drupal\remora_core\Manager\ModulePermissionsManager;
+
+/**
+ * Added viewing permissions for authenticated and anonymous users
+ */
+function text_media_pod_update_10005(): void
+{
+  try {
+    /** @var ModulePermissionsManager $permissionsManager */
+    $permissionsManager = Drupal::service('remora_core.manager.module_permissions');
+    $permissionsManager->handleModulePermissions('text_media_pod');
+  } catch(Exception $e) {
+    Drupal::service('remora_core.logger')->error($e->getMessage());
+  }
+}
+
+/**
+ * Added viewing permissions for authenticated and anonymous users
+ */
+function text_media_pod_update_10101(): void
+{
+  Drupal::service('installation_profile.manager.module_scss')->linkStyles('text_media_pod');
+}

@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_banner_nt_banners
-    - paragraphs.paragraphs_type.banner_nugglet
+    - paragraphs.paragraphs_type.banner_pea
     - paragraphs.paragraphs_type.banners
   module:
     - entity_reference_revisions
@@ -24,10 +24,10 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      banner_nugglet: banner_nugglet
+      banner_pea: banner_pea
     negate: 0
     target_bundles_drag_drop:
-      accordion_nugglet:
+      accordion_pea:
         weight: 24
         enabled: false
       accordions:
@@ -36,7 +36,7 @@ settings:
       attachments:
         weight: 25
         enabled: false
-      banner_nugglet:
+      banner_pea:
         weight: 24
         enabled: true
       banners:
@@ -45,7 +45,7 @@ settings:
       block:
         weight: 27
         enabled: false
-      card_nugglet:
+      card_pea:
         weight: 29
         enabled: false
       cards:
@@ -78,7 +78,7 @@ settings:
       section:
         weight: 38
         enabled: false
-      slide_nugglet:
+      slide_pea:
         weight: 40
         enabled: false
       slideshow:

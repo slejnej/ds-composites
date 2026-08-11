@@ -9,13 +9,13 @@ dependencies:
     - field.field.node.page.field_hero_content
     - field.field.node.page.field_image
     - field.field.node.page.field_landing
-    - field.field.node.page.field_main_nuggets
+    - field.field.node.page.field_main_pods
     - field.field.node.page.field_media
     - field.field.node.page.field_meta_tags
-    - field.field.node.page.field_postscript_nuggets
+    - field.field.node.page.field_postscript_pods
     - field.field.node.page.field_seo_description
     - field.field.node.page.field_seo_title
-    - field.field.node.page.field_sidebar_nuggets
+    - field.field.node.page.field_sidebar_pods
     - field.field.node.page.field_summary
     - node.type.page
   module:
@@ -80,7 +80,7 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_main_nuggets:
+  field_main_pods:
     type: layout_paragraphs
     label: hidden
     settings:
@@ -105,7 +105,7 @@ content:
     third_party_settings: {  }
     weight: 13
     region: content
-  field_postscript_nuggets:
+  field_postscript_pods:
     type: layout_paragraphs
     label: hidden
     settings:
@@ -129,7 +129,7 @@ content:
     third_party_settings: {  }
     weight: 11
     region: content
-  field_sidebar_nuggets:
+  field_sidebar_pods:
     type: layout_paragraphs
     label: hidden
     settings:

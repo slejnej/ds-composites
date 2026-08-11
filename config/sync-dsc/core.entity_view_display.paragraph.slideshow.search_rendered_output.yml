@@ -18,7 +18,7 @@ dependencies:
     - text
   enforced:
     module:
-      - slideshow_nugget
+      - slideshow_pod
 third_party_settings:
   layout_builder:
     enabled: false

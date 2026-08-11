@@ -6,7 +6,7 @@ dependencies:
     - paragraphs
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
   default_config_hash: iJOHpKfdpJthhfcUeYH-TQxU8MTHU6uuF1328wjRasY
 id: paragraph.field_cards_nt_autoplay

@@ -1,0 +1,11 @@
+editor:
+  - 'create paragraph content attachments'
+  - 'delete paragraph content attachments'
+  - 'update paragraph content attachments'
+  - 'view paragraph content attachments'
+web_admin:
+  - 'view paragraph content attachments'
+authenticated:
+  - 'view paragraph content attachments'
+anonymous:
+  - 'view paragraph content attachments'

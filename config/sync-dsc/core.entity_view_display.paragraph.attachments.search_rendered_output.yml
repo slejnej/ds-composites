@@ -14,7 +14,7 @@ dependencies:
     - text
   enforced:
     module:
-      - attachments_nugget
+      - attachments_pod
 third_party_settings:
   layout_builder:
     enabled: false

@@ -10,7 +10,7 @@ dependencies:
     - text
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
   default_config_hash: _jZPlfSTOiccGeMrE-GNbF9M0IH4epMEFphzOGU3Nqs
 id: paragraph.cards.field_display_title

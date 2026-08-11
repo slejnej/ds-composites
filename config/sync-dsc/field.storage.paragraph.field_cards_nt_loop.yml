@@ -6,7 +6,7 @@ dependencies:
     - paragraphs
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
   default_config_hash: MSj_KbkW8zHS9oMqRTcJ-oXj_X9PRwUNL9n5Zjz2_bM
 id: paragraph.field_cards_nt_loop

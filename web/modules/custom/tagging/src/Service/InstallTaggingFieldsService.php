@@ -22,8 +22,6 @@ class InstallTaggingFieldsService
 
   const FIELDS = [
     'field_categories',
-    'field_countries',
-    'field_diseases',
     'field_tags',
     'field_topics'
   ];
@@ -40,30 +38,6 @@ class InstallTaggingFieldsService
       'field_group_type' => 'details',
       'field_group_description' => '',
       'cardinality' => 1
-    ],
-    'field_countries' => [
-      'reference' => 'cit_countries_information',
-      'label' => 'Countries',
-      'description' => 'Relate your content to one or multiple countries.',
-      'form_widget' => 'entity_reference_autocomplete',
-      'parent' => 'group_tagging',
-      'weight' => 6,
-      'field_group_label' => 'Tagging',
-      'field_group_type' => 'tab',
-      'field_group_description' => 'Tag this page to make it easier to find in the site search.',
-      'cardinality' => -1
-    ],
-    'field_diseases' => [
-      'reference' => 'diseases',
-      'label' => 'Diseases',
-      'description' => 'Relate your content to one or multiple diseases.',
-      'form_widget' => 'entity_reference_autocomplete',
-      'parent' => 'group_tagging',
-      'weight' => 6,
-      'field_group_label' => 'Tagging',
-      'field_group_type' => 'tab',
-      'field_group_description' => 'Tag this page to make it easier to find in the site search.',
-      'cardinality' => -1
     ],
     'field_tags' => [
       'reference' => 'tags',

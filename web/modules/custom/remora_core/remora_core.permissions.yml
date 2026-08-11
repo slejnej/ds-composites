@@ -1,4 +1,9 @@
 administer remora settings:
   title: 'Administer Remora settings'
-  description: 'Administer Remora settings (footer content, cards button label,...)'
+  description: 'Administer Remora settings (footer content, cards button label, ...)'
+  restrict access: true
+
+administer remora admin settings:
+  title: 'Administer Remora Admin settings'
+  description: 'Administer Remora Admin settings (Re-link styles, change map pod cartography, ...)'
   restrict access: true

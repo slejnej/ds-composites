@@ -1,0 +1,257 @@
+$slideshow-aspect-ratio: calc(21/9) !default;
+
+// Custom variables for slideshow margins
+section:not(#sidebar-pods) .layout__region .paragraph.paragraph--type--slideshow {
+  margin-bottom: calc($carousel-layout-margin-y / 2);
+
+  //Half the margins in between pods to avoid large gaps
+  margin-top: calc($carousel-layout-margin-y / 2);
+
+  &:first-child {
+    margin-top: $carousel-layout-margin-y;
+  }
+
+  &:last-child {
+    margin-bottom: $carousel-layout-margin-y;
+  }
+}
+
+section:not(#sidebar-pods) .layout__region .paragraph.paragraph--type--slide-pea {
+  margin: 0;
+}
+
+.paragraph--type--slideshow {
+  .slick-carousel.slider {
+    max-width: $carousel-layout-max-width;
+  }
+
+  .slide-image img {
+    max-height: 800px;
+  }
+
+  .slide-image {
+    text-align: center;
+
+    picture img {
+      width: auto;
+      height: 100%;
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+  .carousel-caption {
+    background: $carousel-caption-bg;
+    border-radius: $carousel-caption-border-radius;
+    bottom: calc($carousel-caption-bottom-mobile + $carousel-indicator-hit-area-height + $carousel-caption-bottom-mobile);
+    color: $carousel-caption-color;
+    gap: calc($carousel-caption-spacer / 2);
+    left: $carousel-caption-left-mobile;
+    max-width: $carousel-caption-max-width;
+    padding: $carousel-caption-mobile-padding-y $carousel-caption-mobile-padding-x $carousel-caption-mobile-padding-y $carousel-caption-mobile-padding-x;
+    right: $carousel-caption-right-mobile;
+    text-align: $carousel-caption-text-align;
+    position: static;
+
+    @include media-breakpoint-up('sm') {
+      bottom: calc($carousel-caption-bottom-tablet + $carousel-indicator-hit-area-height + $carousel-caption-bottom-tablet);
+      gap: $carousel-caption-spacer;
+      left: $carousel-caption-left-tablet;
+      padding: $carousel-caption-padding-y $carousel-caption-padding-x $carousel-caption-padding-y $carousel-caption-padding-x;
+      right: $carousel-caption-right-tablet;
+      position: absolute;
+    }
+
+    @include media-breakpoint-up('lg') {
+      bottom: $carousel-caption-bottom;
+      left: $carousel-caption-left;
+      padding: $carousel-caption-padding-y $carousel-caption-padding-x;
+      right: $carousel-caption-right;
+    }
+  }
+
+  .slideshow-controls {
+    // Arrows
+    button.arrow {
+      background: $carousel-control-arrow-bg-color;
+      border-color: $carousel-control-default-border;
+      border-radius: $carousel-control-arrow-border-radius;
+      border-width: $carousel-control-border-width;
+      height: $carousel-control-arrow-height;
+      margin: $carousel-control-margin-y $carousel-control-margin-x $carousel-control-margin-y $carousel-control-margin-x;
+      top: calc(50% - ($carousel-control-arrow-height / 2));
+      width: $carousel-control-arrow-width;
+
+      svg {
+        fill: $carousel-control-color;
+
+        &:hover {
+          fill: $carousel-control-hover-color;
+        }
+      }
+
+      &:hover {
+        background: $carousel-control-arrow-bg-hover-color;
+        border-color: $carousel-control-hover-border;
+      }
+
+      &.slideshow-prev {
+        left: 16px;
+        @include media-breakpoint-up('lg') {
+          left: 50px;
+        }
+      }
+
+      &.slideshow-next {
+        right: 16px;
+        @include media-breakpoint-up('lg') {
+          right: 50px;
+        }
+      }
+    }
+
+    // Markers
+
+    .slideshow-dots {
+      top: 60px;
+
+      @include media-breakpoint-up('sm') {
+        top: auto;
+        bottom: 0;
+      }
+
+      ul.slick-dots {
+        bottom: 0;
+        display: flex;
+        gap: $carousel-indicator-spacer;
+        height: $carousel-indicator-hit-area-height;
+
+        li {
+          display: flex;
+
+          button {
+            background: $carousel-indicator-color;
+            border: none;
+            border-radius: $carousel-indicator-border-radius;
+            text-indent: -9999px;
+            transition: width 150ms ease-in-out;
+            width: $carousel-indicator-width;
+            height: $carousel-indicator-height;
+            opacity: 0.5;
+          }
+
+          &.slick-active button {
+            background: $carousel-indicator-active-bg;
+            height: $carousel-indicator-active-height;
+            width: calc($carousel-indicator-width + 10px);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//// Mixin to apply variables per palette
+@mixin slideshow_caption($slideshow-bg, $slideshow-caption-border-radius, $slideshow-caption-spacer, $slideshow-caption-max-width,
+$slideshow-caption-text-align, $slideshow-caption-bg, $slideshow-caption-color, $carousel-caption-padding-y,
+$slideshow-caption-padding-x, $slideshow-caption-right, $slideshow-caption-bottom, $slideshow-caption-left,
+$slideshow-caption-color-subtitle ) {
+  .carousel-caption {
+    background: $slideshow-caption-bg;
+    border-radius: $slideshow-caption-border-radius;
+    gap: calc($slideshow-caption-spacer / 2);
+    max-width: $slideshow-caption-max-width;
+    text-align: $slideshow-caption-text-align;
+    color: $slideshow-caption-color;
+
+    .caption-subtitle {
+      color: $slideshow-caption-color-subtitle;
+    }
+
+    @include media-breakpoint-up('md') {
+      gap: $slideshow-caption-spacer;
+    }
+
+    @include media-breakpoint-up('xl') {
+      padding: $carousel-caption-padding-y $slideshow-caption-padding-x;
+      right: $slideshow-caption-right;
+      bottom: $slideshow-caption-bottom;
+      left: $slideshow-caption-left;
+    }
+  }
+}
+
+.slick-slideshow {
+  .slide img.load-hidden {
+    height: 0;
+    opacity: 0;
+  }
+  &.slick-initialized {
+    .slide .slide-image img.load-hidden {
+      height: 100%;
+      opacity: 1;
+    }
+  }
+}
+
+// DEFAULT
+
+.slick-slideshow {
+  @include slideshow_caption(
+                  $carousel-bg,
+                  $carousel-caption-border-radius,
+                  $carousel-caption-spacer,
+                  $carousel-caption-max-width,
+                  $carousel-caption-text-align,
+                  $carousel-caption-bg,
+                  $carousel-caption-color,
+                  $carousel-caption-padding-y,
+                  $carousel-caption-padding-x,
+                  $carousel-caption-right,
+                  $carousel-caption-bottom,
+                  $carousel-caption-left,
+                  $carousel-caption-color-subtitle
+  );
+}
+
+// PALETTE-ALT-1
+
+.palette-alt-1 .slick-slideshow {
+  @include slideshow_caption(
+                  $alt-1-carousel-bg,
+                  $alt-1-carousel-caption-border-radius,
+                  $alt-1-carousel-caption-spacer,
+                  $alt-1-carousel-caption-max-width,
+                  $alt-1-carousel-caption-text-align,
+                  $alt-1-carousel-caption-bg,
+                  $alt-1-carousel-caption-color,
+                  $alt-1-carousel-caption-padding-y,
+                  $alt-1-carousel-caption-padding-x,
+                  $alt-1-carousel-caption-right,
+                  $alt-1-carousel-caption-bottom,
+                  $alt-1-carousel-caption-left,
+                  $alt-1-carousel-caption-color-subtitle
+  );
+}
+
+// PALETTE-ALT-2
+
+.palette-alt-2 .slick-slideshow {
+  @include slideshow_caption(
+                  $alt-2-carousel-bg,
+                  $alt-2-carousel-caption-border-radius,
+                  $alt-2-carousel-caption-spacer,
+                  $alt-2-carousel-caption-max-width,
+                  $alt-2-carousel-caption-text-align,
+                  $alt-2-carousel-caption-bg,
+                  $alt-2-carousel-caption-color,
+                  $alt-2-carousel-caption-padding-y,
+                  $alt-2-carousel-caption-padding-x,
+                  $alt-2-carousel-caption-right,
+                  $alt-2-carousel-caption-bottom,
+                  $alt-2-carousel-caption-left,
+                  $alt-2-carousel-caption-color-subtitle
+  );
+}

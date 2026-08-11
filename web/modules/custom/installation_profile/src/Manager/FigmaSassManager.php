@@ -13,6 +13,11 @@ use Symfony\Component\String\Inflector\InflectorInterface;
 class FigmaSassManager
 {
 
+  /** @var string Regex to match variable names containing font-size, padding and margin. Matching variables will be converted to rem */
+  private const PX_TO_REM_VARIABLES = '/.*(font-size|padding|margin).*/';
+  /** @var int 1 rem in pixels */
+  private const PX_TO_REM = 16;
+
   /** @var string The default palette name */
   private const DEFAULT_PALETTE = 'global';
   private const DEFAULT_UNIT = 'px';
@@ -22,6 +27,9 @@ class FigmaSassManager
   private readonly array $config;
   /** @var InflectorInterface Inflector used to singularize words */
   private readonly InflectorInterface $inflector;
+
+  /** @var array Mapping of SCSS variable names to their original JSON paths */
+  private array $variableMapping = [];
 
   /**
    * Processes the provided Figma JSON files
@@ -51,13 +59,18 @@ class FigmaSassManager
   /**
    * Returns an array of SCSS files, indexed by their filename (without suffix)
    *
-   * @return string[] Formatted as ['alt-1' => '...', ...]
+   * @return string[] Formatted as['scss' => [...], 'mapping' => [...]]
    */
   public function toScss(): array
   {
     $result = [];
     foreach($this->resultingVariables as $key => $variables) {
-      $scss = (in_array($key, ['components', 'global'])) ? $this->generateScssRecursively($variables) : $this->generateScssRecursively($variables, $key.'-');
+      $this->variableMapping[$key] = [];
+
+      $scss = (in_array($key, ['components', 'global'])) ?
+        $this->generateScssRecursively($variables, '', $key) :
+        $this->generateScssRecursively($variables, $key.'-', $key);
+
       if($key !== 'global') {
         $scss = "@import 'global';" . $scss;
       }
@@ -65,7 +78,10 @@ class FigmaSassManager
       $result[$key] = ltrim($scss, PHP_EOL);
     }
 
-    return $result;
+    return [
+      'scss' => $result,
+      'mapping' => $this->variableMapping
+    ];
   }
 
   /**
@@ -92,30 +108,41 @@ class FigmaSassManager
    * @param string $prefix The group's prefix, e.g. buttons-, accordion-
    * @return string An SCSS file
    */
-  private function generateScssRecursively(array $variables, string $prefix = ''): string
+  private function generateScssRecursively(array $variables, string $prefix = '', string $palette = '', array $jsonPath = []): string
   {
     $result = '';
 
-    // loop over all the variables
     foreach($variables as $key => $variable) {
+      $currentJsonPath = array_merge($jsonPath, [$key]);
 
-      // if this group contains more variables, add a comment to denote we are entering a group and then process the group
-      if(is_array($variable)) {
+      if(is_array($variable) && !isset($variable['value'])) {
+        // This is a group, not a variable
         $result .= sprintf('%2$s// %s%2$s', $key, PHP_EOL);
-        $key = $prefix . $this->sanitizeVariableName($key);
-        if(!empty($key)) {
-          $key .= '-';
+        $scssKey = $prefix . $this->sanitizeVariableName($key);
+
+        if(!empty($scssKey)) {
+          $scssKey .= '-';
         }
 
-        $result .= $this->generateScssRecursively($variable, $key);
-        // else, parse the variable and add it to the SCSS
+        $result .= $this->generateScssRecursively($variable, $scssKey, $palette, $currentJsonPath);
       } else {
-        // covert the entire variable name to lowercase and replace any non-alphanumeric values
-        $key = strtolower($prefix . $key);
-        $key = preg_replace('/[^\w-]/', '-', $key);
-        $key = $this->dedupeVariable($key);
+        // This is a variable with value and type
+        $scssVarName = strtolower($prefix . $key);
+        $scssVarName = preg_replace('/[^\w-]/', '-', $scssVarName);
+        $scssVarName = $this->dedupeVariable($scssVarName);
 
-        $result .= sprintf('$%s: %s;%s', $key, $variable, PHP_EOL);
+        // Store mapping with ORIGINAL type from JSON
+        $path = implode('.', $currentJsonPath);
+        $type = $variable['type']; // This is the original type from JSON
+
+        $this->variableMapping[$palette][$scssVarName] = [
+          'path' => $path,
+          'type' => $type
+        ];
+
+        // Get the value for SCSS
+        $scssValue = $this->cleanVariable($scssVarName, $variable['value']);
+        $result .= sprintf('$%s: %s;%s', $scssVarName, $scssValue, PHP_EOL);
       }
     }
 
@@ -144,6 +171,8 @@ class FigmaSassManager
 
       $resultArr = &$this->resultingVariables[$palette];
       $this->processFile($contents);
+
+
       $resultArr = array_merge($resultArr ?? [], $contents);
     }
 
@@ -152,7 +181,6 @@ class FigmaSassManager
       $this->replaceVariables($vars);
       $this->sortDependencies($vars);
     }
-
   }
 
   /**
@@ -177,14 +205,14 @@ class FigmaSassManager
   }
 
   /**
-   * Process a single variable and returns its value
-   *
-   * @param array $variableContents
-   * @return string|float|int
+   * Process a single variable and returns its value AND type
    */
-  private function processVariable(array $variableContents): string|float|int
+  private function processVariable(array $variableContents): array
   {
-    return $variableContents['$value'];
+    return [
+      'value' => $variableContents['$value'],
+      'type' => $variableContents['$type']
+    ];
   }
 
   /**
@@ -243,17 +271,62 @@ class FigmaSassManager
    * Dedupes a variable name if enabled in config and replacing -- with -
    * Else only replacing -- with -
    *
-   * @param string $variable The variable name to dedupe
+   * @param string $variableName The variable name to dedupe
    * @return string The dedupe variable
    */
-  private function dedupeVariable(string $variable): string
+  private function dedupeVariable(string $variableName): string
   {
     // if we want to dedupe variables, e.g. prevent $card-card-border, run it
     if($this->config['config']['dedupe'] === true) {
-      $variable = preg_replace('/^([^-]+?-)\1+/', '$1', $variable);
+      $variableName = preg_replace('/^([^-]+?-)\1+/', '$1', $variableName);
     }
 
-    return preg_replace('/--+/', '-', $variable);
+    return preg_replace('/--+/', '-', $variableName);
+  }
+
+  /**
+   * Cleans up the variable's value.
+   * Converts PX values to rem for font-size, padding and margin
+   * Removes px suffix for font-weights
+   *
+   * @template T of mixed
+   * @param string $key
+   * @param T $variableValue
+   * @return mixed
+   */
+  private function cleanVariable(string $key, mixed $variableValue): mixed
+  {
+    // only fix raw values
+    if(str_starts_with($variableValue, '$')) {
+      return $variableValue;
+    }
+
+    // if the variable is a font-weight variable, remove the px suffix
+    if (str_contains($key, 'font-weight')) {
+      return $this->cleanupFontWeight($variableValue);
+    } else if(preg_match(self::PX_TO_REM_VARIABLES, $key) === 1) {
+      return $this->convertPxToRem($variableValue);
+    } else {
+      return $variableValue;
+    }
+  }
+
+  private function cleanupFontWeight(string $variableValue): int|float
+  {
+    return str_replace('px', '', $variableValue);
+  }
+
+  private function convertPxToRem(string|float|int $variableValue): string
+  {
+    if(!is_numeric($variableValue)) {
+      $variableValue = (float) $variableValue;
+    }
+
+    if($variableValue === 0) {
+      return '0';
+    }
+
+    return ($variableValue / self::PX_TO_REM) . 'rem'; // 1 rem = 16px
   }
 
   /**
@@ -265,6 +338,10 @@ class FigmaSassManager
    */
   private function sanitizeVariableName(string $x): string
   {
+    if(preg_match('/.*-(xs|s|m|md|l|lg|xl|xxl)$/', $x) === 1) {
+      return $x; // don't singularize breakpoints
+    }
+
     if(isset($this->config['mapping'][$x])) {
       return $this->config['mapping'][$x];
     } else if($this->config['config']['singularize']) {
@@ -306,5 +383,46 @@ class FigmaSassManager
       // sort whoever mentions whom more
       return $cmp;
     });
+  }
+
+  /**
+   * Get the variable mapping for reverse conversion
+   */
+  public function getVariableMapping(): array
+  {
+    return $this->variableMapping;
+  }
+
+  /**
+   * Save variable mapping to a file
+   */
+  public function saveMapping(string $path): void
+  {
+    $yaml = Yaml::encode(['variable_mapping' => $this->variableMapping]);
+    file_put_contents($path, $yaml);
+  }
+
+  /**
+   * Determine variable type from value
+   */
+  private function determineVariableType($value): string
+  {
+    if (str_starts_with($value, '$')) {
+      return 'reference';
+    }
+
+    if (is_numeric($value)) {
+      return 'number';
+    }
+
+    if (str_starts_with($value, '#')) {
+      return 'color';
+    }
+
+    if (preg_match('/^(rgb|rgba|hsl|hsla)\(/', $value)) {
+      return 'color';
+    }
+
+    return 'string';
   }
 }

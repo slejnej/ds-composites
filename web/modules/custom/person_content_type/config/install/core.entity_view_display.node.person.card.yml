@@ -11,15 +11,15 @@ dependencies:
     - field.field.node.person.field_honorific_title
     - field.field.node.person.field_image
     - field.field.node.person.field_last_name
-    - field.field.node.person.field_main_nuggets
+    - field.field.node.person.field_main_pods
     - field.field.node.person.field_meta_tags
     - field.field.node.person.field_person_organisation
     - field.field.node.person.field_photo
-    - field.field.node.person.field_postscript_nuggets
+    - field.field.node.person.field_postscript_pods
     - field.field.node.person.field_role
     - field.field.node.person.field_seo_description
     - field.field.node.person.field_seo_title
-    - field.field.node.person.field_sidebar_nuggets
+    - field.field.node.person.field_sidebar_pods
     - field.field.node.person.field_social_media
     - field.field.node.person.field_suffix
     - field.field.node.person.field_summary
@@ -114,12 +114,12 @@ hidden:
   field_body: true
   field_hero_content: true
   field_image: true
-  field_main_nuggets: true
+  field_main_pods: true
   field_meta_tags: true
-  field_postscript_nuggets: true
+  field_postscript_pods: true
   field_seo_description: true
   field_seo_title: true
-  field_sidebar_nuggets: true
+  field_sidebar_pods: true
   field_social_media: true
   langcode: true
   links: true

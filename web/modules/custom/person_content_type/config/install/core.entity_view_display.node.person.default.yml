@@ -10,15 +10,15 @@ dependencies:
     - field.field.node.person.field_honorific_title
     - field.field.node.person.field_image
     - field.field.node.person.field_last_name
-    - field.field.node.person.field_main_nuggets
+    - field.field.node.person.field_main_pods
     - field.field.node.person.field_meta_tags
     - field.field.node.person.field_person_organisation
     - field.field.node.person.field_photo
-    - field.field.node.person.field_postscript_nuggets
+    - field.field.node.person.field_postscript_pods
     - field.field.node.person.field_role
     - field.field.node.person.field_seo_description
     - field.field.node.person.field_seo_title
-    - field.field.node.person.field_sidebar_nuggets
+    - field.field.node.person.field_sidebar_pods
     - field.field.node.person.field_social_media
     - field.field.node.person.field_suffix
     - field.field.node.person.field_summary
@@ -89,7 +89,7 @@ content:
     third_party_settings: {  }
     weight: 120
     region: content
-  field_main_nuggets:
+  field_main_pods:
     type: layout_paragraphs
     label: above
     settings:
@@ -122,7 +122,7 @@ content:
     third_party_settings: {  }
     weight: 122
     region: content
-  field_postscript_nuggets:
+  field_postscript_pods:
     type: layout_paragraphs
     label: above
     settings:
@@ -154,7 +154,7 @@ content:
     third_party_settings: {  }
     weight: 115
     region: content
-  field_sidebar_nuggets:
+  field_sidebar_pods:
     type: layout_paragraphs
     label: above
     settings:

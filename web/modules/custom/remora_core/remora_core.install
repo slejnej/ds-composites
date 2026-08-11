@@ -1,6 +1,8 @@
 <?php
 
 use Drupal\Core\Database\Database;
+use Drupal\user\Entity\Role;
+use Drupal\remora_core\Manager\ConfigIgnoreManager;
 
 /**
  * Handle all the permissions for this module since it the _modules_installed hook won't be triggered
@@ -13,8 +15,8 @@ function remora_core_install(): void
   Drupal::service('theme_installer')->install(['tonic']);
 
   // install these modules because they depend on remora_core and hook_install is triggered after remora_core is installed and its config imported
-  // we need cards_nugget on install of remora because barrio_base_theme is dependent on it and themes can't install dependencies like modules do :)
-  Drupal::service('module_installer')->install(['cards_nugget', 'remora_gdpr']);
+  // we need cards_pod on install of remora because barrio_base_theme is dependent on it and themes can't install dependencies like modules do :)
+  Drupal::service('module_installer')->install(['cards_pod', 'remora_gdpr']);
 
   // Set the Gin theme settings.
   Drupal::configFactory()->getEditable('gin.settings')
@@ -25,6 +27,27 @@ function remora_core_install(): void
     ->set('logo.path', str_replace(DRUPAL_ROOT, '', Drupal::service('file_system')->realpath('tonic://logo.png')))
     ->set('favicon.path', str_replace(DRUPAL_ROOT, '', Drupal::service('file_system')->realpath('tonic://favicon.ico')))
     ->save();
+
+  // Set Gin as default backend theme
+  Drupal::configFactory()->getEditable('system.theme')
+    ->set('admin', 'gin')
+    ->save();
+}
+
+/**
+ * Add this module's config ignore settings again
+ *
+ * @return void
+ */
+function remora_core_reapply_config_ignore(): void
+{
+  try {
+    /** @var ConfigIgnoreManager $configIgnoreManager */
+    $permissionsManager = Drupal::service('remora_core.manager.config_ignore');
+    $permissionsManager->addToConfigIgnore('remora_core');
+  } catch(Exception $e) {
+    Drupal::service('remora_core.logger')->error($e->getMessage());
+  }
 }
 
 /**
@@ -121,4 +144,117 @@ function remora_core_update_10008(): void
   }
 
   drupal_flush_all_caches();
+}
+
+/**
+ * Install smtp with config_ignore
+ *
+ * @return void
+ */
+function remora_core_update_10009(): void
+{
+  Drupal::service('module_installer')->install(['smtp']);
+
+  remora_core_reapply_config_ignore();
+}
+
+/**
+ * Install mail_login
+ *
+ * @return void
+ */
+function remora_core_update_10010(): void
+{
+  Drupal::service('module_installer')->install(['mail_login']);
+}
+
+/**
+ * Give editor bypass node access permission
+ *
+ * @return void
+ */
+function remora_core_update_10111(): void
+{
+  /** @var Drupal\remora_core\Manager\ModulePermissionsManager $permissionService */
+  $permissionService = Drupal::service('remora_core.manager.module_permissions');
+  $permissionService->handleModulePermissions('remora_core');
+}
+
+/**
+ * Remove audio media permission from editor
+ * Update linkit profile to use our remora matcher
+ * Add google_tag.container.* to config ignore
+ *
+ * @param array $attachments
+ * @return void
+ */
+function remora_core_update_10112(): void
+{
+  // Load the role by ID.
+  $roleName = 'editor';
+  $role = Role::load($roleName);
+  $permissions = [
+    'create media',
+    'create audio media',
+    'delete any audio media',
+    'edit any audio media',
+  ];
+
+  if ($role) {
+    foreach ($permissions as $permission) {
+      // Check if the permission exists and remove it.
+      if ($role->hasPermission($permission)) {
+        $role->revokePermission($permission);
+        Drupal::logger('remora_core')->info("Removed permission '{$permission}' from role '{$roleName}'.");
+      }
+    }
+    $role->save();
+  }
+
+  Drupal::service('remora_core.logger')->info('Updating default linkit profile');
+
+  $config = \Drupal::configFactory()->getEditable('linkit.linkit_profile.default');
+  $matchers = $config->get('matchers');
+  foreach($matchers as &$matcher) {
+    if($matcher['id'] === 'entity:node') {
+      $matcher['id'] = 'remora_core:linkit_node';
+    }
+  }
+
+  $config->set('matchers', $matchers)->save();
+  remora_core_reapply_config_ignore();
+}
+
+/**
+ * Install menu_item_role_access
+ *
+ * @return void
+ */
+function remora_core_update_10113(): void
+{
+  Drupal::service('module_installer')->install(['menu_item_role_access']);
+  
+  /** @var Drupal\remora_core\Manager\ModulePermissionsManager $permissionService */
+  $permissionService = Drupal::service('remora_core.manager.module_permissions');
+  $permissionService->handleModulePermissions('remora_core');
+}
+
+/**
+ * Install cloudfront_cache_path_invalidate
+ *
+ * @return void
+ */
+function remora_core_update_10133(): void
+{
+  Drupal::service('module_installer')->install(['cloudfront_cache_path_invalidate']);
+}
+
+/**
+ * Install cloudfront_cache_path_invalidate
+ *
+ * @return void
+ */
+function remora_core_update_10135(): void
+{
+  remora_core_reapply_config_ignore();
 }

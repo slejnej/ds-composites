@@ -1,0 +1,8 @@
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="field__label section-title">Section: {{ content.field_editor_title.0 }}</div>
+      {{ content|without('field_editor_title') }}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

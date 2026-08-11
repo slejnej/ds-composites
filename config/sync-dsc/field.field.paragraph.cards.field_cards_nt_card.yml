@@ -4,13 +4,13 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_cards_nt_card
-    - paragraphs.paragraphs_type.card_nugglet
+    - paragraphs.paragraphs_type.card_pea
     - paragraphs.paragraphs_type.cards
   module:
     - entity_reference_revisions
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
   default_config_hash: vj9mUMkYZCA8U7zr3xtFtt0IKzxeI0e2_p9Ud74lbME
 id: paragraph.cards.field_cards_nt_card
@@ -27,10 +27,10 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      card_nugglet: card_nugglet
+      card_pea: card_pea
     negate: 0
     target_bundles_drag_drop:
-      card_nugglet:
+      card_pea:
         weight: 8
         enabled: true
       cards:

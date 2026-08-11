@@ -25,8 +25,8 @@ $under-title-height-desktop: 120px;
   }
 }
 
-/* If there's no main content, add some spacing to the first section so swoosh doesn't overlap postscript nuggets */
-.swooshy-spacing .field--name-field-postscript-nuggets.field__item:first-child .paragraph-section {
+/* If there's no main content, add some spacing to the first section so swoosh doesn't overlap postscript pods */
+.swooshy-spacing .field--name-field-postscript-pods.field__item:first-child .paragraph-section {
   padding-top: 80px;
 }
 
@@ -102,7 +102,7 @@ $under-title-height-desktop: 120px;
 }
 
 #postscript {
-  .field--name-field-postscript-nuggets {
+  .field--name-field-postscript-pods {
     margin-top: 48px;
     margin-bottom: 48px;
   }

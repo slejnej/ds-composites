@@ -1,0 +1,43 @@
+@import "var_colors";
+@import "typography";
+@import "buttons";
+@import "form";
+@import "sections";
+@import "pods";
+@import "views";
+
+// admin view two or more in a row
+// just needs wrapper with row-auto class
+.row-auto {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    flex: 1 1 250px;
+    max-width: 100%;
+    margin-right: $global-spacing-1;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    input, select {
+      width: 100%;
+    }
+  }
+}
+
+// civicrm logo in toolbar
+.gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab a {
+  &.toolbar-icon-civicrm::before {
+    mask-image: url("../assets/images/civicrm_icon.svg");
+  }
+}
+
+// Toggles
+
+body {
+  :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content):not(.ajax-new-content):not(.tablesaw-cell-content) > .form-type--checkbox input:checked {
+    background-color: var(--gin-color-primary);
+  }
+}

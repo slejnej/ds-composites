@@ -19,7 +19,7 @@ dependencies:
     - text
   enforced:
     module:
-      - slideshow_nugget
+      - slideshow_pod
 third_party_settings:
   field_layout:
     id: layout_onecol

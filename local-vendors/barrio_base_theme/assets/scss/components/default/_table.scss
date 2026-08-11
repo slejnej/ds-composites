@@ -1,0 +1,15 @@
+table {
+  @include table-styles($table-title-color, $table-title-bg, $table-title-border, $table-body-color, $table-body-bg, $table-body-border, $table-border);
+  display: block;
+  overflow-x: auto;
+
+  th, td {
+    padding: $global-spacing-1;
+  }
+
+  th {
+    @include media-breakpoint-down(sm) {
+      text-wrap: nowrap;
+    }
+  }
+}

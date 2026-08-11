@@ -6,7 +6,7 @@ dependencies:
     - paragraphs
   enforced:
     module:
-      - slideshow_nugget
+      - slideshow_pod
 _core:
   default_config_hash: elC8lyItFeNvLusiTkUvEjLYwsfsYBiQcEyKjMVKXzQ
 id: paragraph.field_slide_nt_add_a_link

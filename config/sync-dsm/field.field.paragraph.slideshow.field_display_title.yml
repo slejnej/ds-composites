@@ -10,7 +10,7 @@ dependencies:
     - text
   enforced:
     module:
-      - slideshow_nugget
+      - slideshow_pod
 _core:
   default_config_hash: 7chZgiAG3NF2KtmTKtTTI1YiH5mFV7MAUrSJAUedDu8
 id: paragraph.slideshow.field_display_title

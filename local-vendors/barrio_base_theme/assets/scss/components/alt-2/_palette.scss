@@ -1,0 +1,27 @@
+.palette-alt-2 {
+  background-color: $alt-2-surface-primary;
+
+  .field--type-text-long {
+    h2, h3, h4, h5, h6 {
+      color: $alt-2-text-primary;
+    }
+  }
+
+  h3.paragraph-title, .paragraph-title,
+  h3.pod-title, .pod-title {
+    color: $alt-2-text-primary;
+  }
+
+  .text-body,
+  .body-wrapper {
+    color: $alt-2-text-secondary!important;
+
+    a:not(.btn) {
+      color: $alt-2-text-link;
+
+      &:hover {
+        color: $alt-2-text-link-hover;
+      }
+    }
+  }
+}

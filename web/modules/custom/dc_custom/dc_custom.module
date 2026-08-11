@@ -29,7 +29,7 @@ function dc_custom_preprocess_paragraph(array &$variables): void
   $paragraph_type = ParagraphsType::load($bundle);
 
   // Check if the paragraph type contains the field that uses CKEditor.
-  $available = ['card_nugglet', 'text_media'];
+  $available = ['card_pea', 'text_media'];
   $availableNt = ['field_card_nt_summary', 'field_text_media_nt_text'];
 
   if (in_array($bundle, $available)) {

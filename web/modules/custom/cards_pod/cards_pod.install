@@ -1,0 +1,30 @@
+<?php
+
+use Drupal\remora_core\Service\AddNewField;
+
+/**
+ * Link the cards pod styles
+ */
+function cards_pod_update_10001(): void
+{
+  Drupal::service('installation_profile.manager.module_scss')->linkStyles('cards_pod');
+}
+
+/**
+ * Link the cards pod styles
+ */
+function cards_pod_update_10101(): void
+{
+  Drupal::service('installation_profile.manager.module_scss')->linkStyles('cards_pod');
+}
+
+/**
+ * Add search field
+ */
+function cards_pod_update_10102(): void
+{
+  /** @var AddNewField $addNewFieldService */
+  $addNewFieldService = Drupal::service('remora_core.service.add_new_field');
+  $addNewFieldService->addToSearchIndex('field_card_nt_link', 'Card link', 'string');
+
+}

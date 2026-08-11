@@ -1,5 +1,0 @@
-services:
-  slideshow_nugget.event_subscriber.referenceable_entity:
-    class: \Drupal\slideshow_nugget\EventSubscriber\ReferenceableEntitySubscriber
-    tags:
-      - { name: 'event_subscriber' }

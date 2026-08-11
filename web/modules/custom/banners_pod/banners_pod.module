@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Banners pod module.
+ */
+
+use Drupal\entity_reference_revisions\EntityReferenceRevisionsFieldItemList;
+use Drupal\remora_core\Manager\LibraryManager;
+
+/**
+ *  Automatically registers all the templates in the templates/ directory
+ * @return array The theme containing the theme implementations (templates)
+ */
+function banners_pod_theme(): array
+{
+  return Drupal::service('remora_core.service.module_template')->generateThemesFromTemplates('banners_pod');
+}
+
+function banners_pod_page_attachments(array &$attachments): void
+{
+  LibraryManager::addAdminLibrary($attachments, 'banners_pod/admin_styles');
+}
+
+function banners_pod_preprocess_paragraph(array &$variables): void
+{
+  $paragraph = $variables['paragraph'];
+  if ($paragraph->bundle() === 'banners') {
+
+    if (empty($variables['content']['field_banner_nt_banners'])) {
+      return;
+    }
+
+    if (isset($variables['content']['field_banner_nt_banners']['#items'])) {
+
+      $items = &$variables['content']['field_banner_nt_banners']['#items'];
+      $count = count($items);
+      if ($count > 0) {
+        $variables['content']['field_banner_nt_banners']['#cache']['max-age'] = 0;
+
+        /** @var EntityReferenceRevisionsFieldItemList $item_list */
+        $item_list = $variables['content']['field_banner_nt_banners']['#items'];
+        $count = $item_list->count();
+
+        if ($count > 0) {
+          $random_index = random_int(0, $count - 1);
+
+          // Get the selected render array
+          $selected_render = $variables['content']['field_banner_nt_banners'][$random_index];
+
+          // Remove all numeric keys from the render array
+          foreach (array_keys($variables['content']['field_banner_nt_banners']) as $key) {
+            if (is_numeric($key)) {
+              unset($variables['content']['field_banner_nt_banners'][$key]);
+            }
+          }
+
+          // Add the selected render array at index 0
+          $variables['content']['field_banner_nt_banners'][0] = $selected_render;
+
+          // Remove all items from the field list except the selected one
+          for ($i = $count - 1; $i >= 0; $i--) {
+            if ($i != $random_index) {
+              $item_list->removeItem($i);
+            }
+          }
+
+//          dd($variables['content']['field_banner_nt_banners']);
+        }
+      }
+    }
+  }
+}

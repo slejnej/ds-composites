@@ -22,7 +22,7 @@ dependencies:
     - text
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 third_party_settings:
   layout_builder:
     enabled: false

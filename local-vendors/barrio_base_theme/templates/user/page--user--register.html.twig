@@ -1,0 +1,18 @@
+{% extends "@barrio_base_theme/user/page--user.html.twig" %}
+
+{% block form_content %}
+  <div class="register">
+    <h2 class="mb-0">Sign up</h2>
+    {{ page.content }}
+  </div>
+{% endblock %}
+
+{% block form_secondary_content %}
+
+  <div class="divider w-100"></div>
+
+  <div class="register-prompt">
+    <h3>Already have an account?</h3>
+    <a href="{{ url('user.login') }}" class="btn btn-secondary m-0" role="button">Sign in</a>
+  </div>
+{% endblock %}

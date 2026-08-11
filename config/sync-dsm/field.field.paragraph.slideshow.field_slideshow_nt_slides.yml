@@ -4,13 +4,13 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_slideshow_nt_slides
-    - paragraphs.paragraphs_type.slide_nugglet
+    - paragraphs.paragraphs_type.slide_pea
     - paragraphs.paragraphs_type.slideshow
   module:
     - entity_reference_revisions
   enforced:
     module:
-      - slideshow_nugget
+      - slideshow_pod
 _core:
   default_config_hash: yn89ZrAwqQeWFVRw7SEmNENREbI_0ocrq1p7nMyJeXE
 id: paragraph.slideshow.field_slideshow_nt_slides
@@ -27,13 +27,13 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      slide_nugglet: slide_nugglet
+      slide_pea: slide_pea
     negate: 0
     target_bundles_drag_drop:
       attachments:
         weight: 11
         enabled: false
-      card_nugglet:
+      card_pea:
         weight: 13
         enabled: false
       cards:
@@ -48,7 +48,7 @@ settings:
       section:
         weight: 16
         enabled: false
-      slide_nugglet:
+      slide_pea:
         weight: 18
         enabled: true
       slideshow:

@@ -13,6 +13,12 @@ $surface-primary: $global-color-black-white;
 $surface-secondary: $global-color-black-white;
 $surface-tertiary: $global-color-dark-dark-900;
 
+// images
+$image-top-left: $global-spacing-border-radius-sm;
+$image-top-right: $global-spacing-border-radius-sm;
+$image-bottom-right: $global-spacing-border-radius-sm;
+$image-bottom-left: $global-spacing-border-radius-sm;
+
 // borders
 $border-primary: $global-color-light-light-500;
 $border-secondary: $global-color-light-light-300;
@@ -24,29 +30,29 @@ $layout-content-max-width: 1900px;
 $layout-content-node-max-width: 1200px;
 $layout-content-padding-left: $global-spacing-3;
 
-// nugget
-$layout-nugget-margin-y: $global-spacing-4;
-$layout-nugget-mobile-margin-y: $global-spacing-1;
+// pod
+$layout-pod-margin-y: $global-spacing-4;
+$layout-pod-mobile-margin-y: $global-spacing-1;
 
 // title
-$layout-nugget-title-margin-bottom: 0px;
-$layout-nugget-title-margin-top: 0px;
+$layout-pod-title-margin-bottom: 0px;
+$layout-pod-title-margin-top: 0px;
 
 // carousel
-$layout-nugget-carousel-spacer: $global-spacing-4;
-$layout-nugget-carousel-height: 40px;
-$layout-nugget-carousel-width: 40px;
-$layout-nugget-carousel-border-width: 1px;
-$layout-nugget-carousel-border-radius: $global-spacing-0;
-$layout-nugget-carousel-default-bg: rgba(1, 105, 163, 0.1000);
-$layout-nugget-carousel-default-color: $global-color-primary-primary-900;
-$layout-nugget-carousel-default-border: rgba(1, 105, 163, 0.0000);
-$layout-nugget-carousel-hover-bg: $global-color-primary-primary-700;
-$layout-nugget-carousel-hover-color: $global-color-black-white;
-$layout-nugget-carousel-hover-border: $global-color-primary-primary-700;
-$layout-nugget-carousel-active-bg: $global-color-primary-primary-800;
-$layout-nugget-carousel-active-color: $global-color-black-white;
-$layout-nugget-carousel-active-border: $global-color-primary-primary-800;
+$layout-pod-carousel-spacer: $global-spacing-4;
+$layout-pod-carousel-height: 40px;
+$layout-pod-carousel-width: 40px;
+$layout-pod-carousel-border-width: 1px;
+$layout-pod-carousel-border-radius: $global-spacing-0;
+$layout-pod-carousel-default-bg: rgba(1, 105, 163, 0.1000);
+$layout-pod-carousel-default-color: $global-color-primary-primary-900;
+$layout-pod-carousel-default-border: rgba(1, 105, 163, 0.0000);
+$layout-pod-carousel-hover-bg: $global-color-primary-primary-700;
+$layout-pod-carousel-hover-color: $global-color-black-white;
+$layout-pod-carousel-hover-border: $global-color-primary-primary-700;
+$layout-pod-carousel-active-bg: $global-color-primary-primary-800;
+$layout-pod-carousel-active-color: $global-color-black-white;
+$layout-pod-carousel-active-border: $global-color-primary-primary-800;
 
 // carousel
 $layout-carousel-margin-y: $global-spacing-0;
@@ -72,11 +78,11 @@ $layout-promo-content-max-width: 1900px;
 $layout-promo-margin-y: $global-spacing-3;
 $promo-margin-y: $layout-promo-margin-y;
 
-// feature nugget
-$layout-feature-nugget-margin-top: $global-spacing-4;
-$layout-feature-nugget-margin-bottom: $global-spacing-0;
-$layout-feature-nugget-content-max-width: 1900px;
-$layout-feature-nugget-wrapper: 1900px;
+// feature pod
+$layout-feature-pod-margin-top: $global-spacing-4;
+$layout-feature-pod-margin-bottom: $global-spacing-0;
+$layout-feature-pod-content-max-width: 1900px;
+$layout-feature-pod-wrapper: 1900px;
 
 // section title
 $layout-section-title-spacer: $global-spacing-1;
@@ -622,15 +628,15 @@ $carousel-indicator-card-spacer: $global-spacing-05;
 $carousel-indicator-card-border-radius: $global-spacing-01;
 $carousel-indicator-card-active-bg: $global-color-primary-primary-700;
 
-// feature nugget
-$carousel-indicator-feature-nugget-color: $global-color-secondary-secondary-300;
-$carousel-indicator-feature-nugget-width: 20px;
-$carousel-indicator-feature-nugget-height: 3px;
-$carousel-indicator-feature-nugget-active-height: 3px;
-$carousel-indicator-feature-nugget-hit-area-height: 20px;
-$carousel-indicator-feature-nugget-spacer: $global-spacing-05;
-$carousel-indicator-feature-nugget-border-radius: $global-spacing-border-radius-pill;
-$carousel-indicator-feature-nugget-active-bg: $global-color-secondary-secondary-100;
+// feature pod
+$carousel-indicator-feature-pod-color: $global-color-secondary-secondary-300;
+$carousel-indicator-feature-pod-width: 20px;
+$carousel-indicator-feature-pod-height: 3px;
+$carousel-indicator-feature-pod-active-height: 3px;
+$carousel-indicator-feature-pod-hit-area-height: 20px;
+$carousel-indicator-feature-pod-spacer: $global-spacing-05;
+$carousel-indicator-feature-pod-border-radius: $global-spacing-border-radius-pill;
+$carousel-indicator-feature-pod-active-bg: $global-color-secondary-secondary-100;
 $carousel-bg: $global-color-primary-primary-900;
 
 // caption
@@ -1262,3 +1268,42 @@ $form-valid-border: $global-color-secondary-secondary-500;
 $form-invalid-border: $global-color-danger-danger-500;
 $form-color: $global-color-light-light-500;
 $form-color-filled: $global-color-light-light-900;
+
+// BANNER
+
+// banner-section
+$banner-section-padding-y: $global-spacing-0;
+$banner-section-padding-x: $global-spacing-0;
+$banner-section-max-width: 1920px;
+$banner-section-max-height: 1080px;
+
+// wrapper
+$banner-wrapper-bg: transparent;
+$banner-wrapper-padding-top: 0rem;
+$banner-wrapper-padding-right: 0rem;
+$banner-wrapper-padding-bottom: 0rem;
+$banner-wrapper-padding-left: 0;
+$banner-wrapper-gap: $global-spacing-2;
+$banner-wrapper-top-left: $image-top-left;
+$banner-wrapper-top-right: $image-top-right;
+$banner-wrapper-bottom-right: $image-bottom-right;
+$banner-wrapper-bottom-left: $image-bottom-left;
+
+// text
+$banner-text-bg: transparent;
+$banner-text-color: $global-text-primary;
+$banner-text-top-left: $image-top-left;
+$banner-text-top-right: $image-top-right;
+$banner-text-bottom-right: $image-bottom-right;
+$banner-text-bottom-left: $image-bottom-left;
+$banner-text-padding-x: $global-spacing-0;
+$banner-text-padding-y: $global-spacing-0;
+$banner-text-spacer: $global-spacing-1;
+
+// btn-close
+$btn-close-width: $global-spacing-1;
+$btn-close-height: $global-spacing-1;
+$btn-close-padding-x: $global-spacing-02;
+$btn-close-padding-y: $global-spacing-02;
+$btn-close-color: $global-color-secondary-secondary-900;
+$btn-close-white-filter: $global-color-black-white;

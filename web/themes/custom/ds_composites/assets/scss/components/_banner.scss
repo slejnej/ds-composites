@@ -142,7 +142,7 @@ $banner-padding-desktop: 0;
 
 // MIXINS
 
-@import '../../../../../../modules/custom/banners_nugget/scss/style.scss';
+@import '../../../../../../modules/custom/banners_pod/scss/style.scss';
 
 @mixin banner_icon($banner-icon-color) {
   .banner-wrapper {
@@ -162,7 +162,8 @@ $banner-padding-desktop: 0;
   @include banner(
     $global-color-primary-primary-900,
     white,
-    white
+    white,
+    transparent
   );
 
   @include banner_icon(

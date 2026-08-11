@@ -7,7 +7,7 @@ dependencies:
     - paragraphs
   enforced:
     module:
-      - text_media_nugget
+      - text_media_pod
 _core:
   default_config_hash: xcooFpCG4Z4mZ2NW7Qcl4Oe85iopkZi7kxBE7dpekgk
 id: paragraph.field_text_media_nt_media

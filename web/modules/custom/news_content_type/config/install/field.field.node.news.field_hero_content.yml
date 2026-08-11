@@ -12,7 +12,7 @@ field_name: field_hero_content
 entity_type: node
 bundle: news
 label: 'Hero content'
-description: 'These nuggets will be displayed at the top of your page.'
+description: 'These pods will be displayed at the top of your page.'
 required: false
 translatable: false
 default_value: {  }

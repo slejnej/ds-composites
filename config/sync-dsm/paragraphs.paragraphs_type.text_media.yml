@@ -6,7 +6,7 @@ dependencies:
     - layout_paragraphs
   enforced:
     module:
-      - text_media_nugget
+      - text_media_pod
 _core:
   default_config_hash: YFQjsPFYYp_Om7EVxmnpThTaxnr4G8Ws_dSyH-mLREY
 id: text_media

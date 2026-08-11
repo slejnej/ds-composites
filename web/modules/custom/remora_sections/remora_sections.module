@@ -8,7 +8,7 @@ use Drupal\paragraphs\ParagraphInterface;
 */
 function remora_sections_paragraph_presave(ParagraphInterface $entity): void
 {
-  if ($entity->hasField('parent_field_name') && $entity->hasField('field_palette') && $entity->get('parent_field_name')->value === 'field_sidebar_nuggets') {
+  if ($entity->hasField('parent_field_name') && $entity->hasField('field_palette') && $entity->get('parent_field_name')->value === 'field_sidebar_pods') {
     $entity->set('field_palette','palette-alt-1');
   }
 }

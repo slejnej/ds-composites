@@ -1,0 +1,201 @@
+<?php
+
+use Drupal\Core\Database\Query\AlterableInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\drupal_search\Service\ContentTypeCacheService;
+use Drupal\node\NodeInterface;
+use Drupal\search_api\Query\QueryInterface;
+use Drupal\views\ViewExecutable;
+
+/**
+ * attaches search js
+ *
+ * @param array $attachments
+ */
+function drupal_search_page_attachments_alter(array &$attachments): void {
+  $currentPath = Drupal::service('path.current')->getPath();
+
+  if ($currentPath === '/search' && !in_array('drupal_search/drupal_search', $attachments['#attached']['library'])){
+    $attachments['#attached']['library'][] = 'drupal_search/drupal_search';
+  }
+}
+
+/**
+ * sets display view for all CTs to the search_index in search view
+ *
+ * @param ViewExecutable $view
+ */
+function drupal_search_views_pre_render(ViewExecutable $view): void
+{
+  if ($view->id() === 'search') {
+    $contentTypes = ContentTypeCacheService::getCachedContentTypes();
+    $searchIndexDisplay = [];
+    foreach ($contentTypes as $contentType) {
+      $searchIndexDisplay[$contentType] = 'search_index';
+    }
+
+    $view->getDisplay()->view->rowPlugin->options['view_modes']['entity:node'] = $searchIndexDisplay;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function drupal_search_theme(): array
+{
+  return [
+      'drupal_search_selected_filters_block' => [
+        'variables' => [],
+        'template' => 'drupal-search-selected-filters-block',
+      ],
+      'drupal_search_header_block' => [
+        'variables' => [
+          'language' => null
+        ],
+        'template' => 'drupal-search-header-block',
+      ]] +
+    Drupal::service('remora_core.service.module_template')->generateThemesFromTemplates('drupal_search');
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for page templates.
+ */
+function drupal_search_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Check if the current route is displaying a view.
+  $route_match = Drupal::routeMatch();
+  $view_id = $route_match->getParameter('view_id');
+
+  if ($view_id) {
+    // Add a custom suggestion for all view pages.
+    $suggestions[] = 'page__view__search_page';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_block_alter().
+ */
+function drupal_search_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (($variables['elements']['#id'] ?? null) === 'main_search_exposed_form_custom') {
+    $suggestions[] = 'block__custom_sort_by';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for views_view.
+ */
+function drupal_search_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  if ($variables['view']->getDisplay()->display['display_plugin'] == 'page') {
+    $suggestions[] = 'views_view__custom_page';
+  }
+}
+
+function drupal_search_preprocess_block(array &$variables) {
+  $config = $variables['elements']['#configuration'] ?? [];
+  $plugin_id = $variables['elements']['#plugin_id'] ?? 'none';
+  $base_plugin_id = $variables['elements']['#base_plugin_id'] ?? 'none';
+
+  if (empty($config['provider'])) {
+    \Drupal::logger('missing_provider')->warning('Block missing provider. Plugin ID: @plugin_id, Base plugin: @base_plugin', [
+      '@plugin_id' => $plugin_id,
+      '@base_plugin' => $base_plugin_id,
+    ]);
+  }
+}
+
+/**
+ * Implements hook_form_node_form_alter().
+ */
+function drupal_search_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id): void
+{
+  $node = $form_state->getFormObject()->getEntity();
+
+  if (!$node instanceof NodeInterface) {
+    return;
+  }
+
+  $form['drupal_search_seo_settings'] = [
+    '#type' => 'details',
+    '#title' => t('Search engine'),
+    '#group' => 'advanced',
+    '#weight' => 20,
+  ];
+
+  $defaultValue = 0;
+  if (!$node->isNew()) {
+    $defaultValue = \Drupal::database()
+      ->select('drupal_search_exclude_from_index', 'e')
+      ->fields('e', ['nid'])
+      ->condition('nid', $node->id())
+      ->execute()
+      ->fetchField() ? 1 : 0;
+  }
+
+  if (
+    !$form_state->isSubmitted() &&
+    !$form_state->hasValue('drupal_search_exclude_from_search')
+  ) {
+    $form_state->setValue('drupal_search_exclude_from_search', $defaultValue);
+  }
+
+  $form['drupal_search_seo_settings']['drupal_search_exclude_from_search'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Exclude from internal and external search indexes'),
+    '#default_value' => $defaultValue,
+    '#return_value' => 1,
+  ];
+}
+
+
+/**
+ * Implements hook_entity_update().
+ */
+function drupal_search_entity_update(EntityInterface $entity): void
+{
+  if ($entity instanceof NodeInterface) {
+    $exclude = \Drupal::request()->request->get('drupal_search_exclude_from_search');
+    _drupal_search_handle_exclude_from_index($entity, $exclude, TRUE);
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function drupal_search_entity_insert(EntityInterface $entity): void
+{
+  if ($entity instanceof NodeInterface) {
+    $exclude = \Drupal::request()->request->get('drupal_search_exclude_from_search');
+    _drupal_search_handle_exclude_from_index($entity, $exclude, FALSE);
+  }
+}
+
+function _drupal_search_handle_exclude_from_index(NodeInterface $node, $exclude, bool $is_update): void
+{
+  $connection = \Drupal::database();
+
+  // For updates, always delete existing entry first
+  if ($is_update) {
+    $connection->delete('drupal_search_exclude_from_index')
+      ->condition('nid', $node->id())
+      ->execute();
+  }
+
+  // Insert only if checkbox is checked
+  if ($exclude) {
+    $connection->insert('drupal_search_exclude_from_index')
+      ->fields(['nid' => $node->id()])
+      ->execute();
+  }
+}
+
+/**
+ * Implements hook_entity_delete().
+ */
+function drupal_search_entity_delete(EntityInterface $entity): void
+{
+  if ($entity instanceof NodeInterface) {
+    \Drupal::database()->delete('drupal_search_exclude_from_index')
+      ->condition('nid', $entity->id())
+      ->execute();
+  }
+}

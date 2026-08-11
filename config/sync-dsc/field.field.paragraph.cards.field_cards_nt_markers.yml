@@ -7,7 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.cards
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
   default_config_hash: leKauKs0fj4d_L2mr2W5RjockhRjVdJXmnFPX5FZaU4
 id: paragraph.cards.field_cards_nt_markers

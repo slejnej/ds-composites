@@ -1,0 +1,23 @@
+// Blockquotes
+
+$blockquote-bg: white !default;
+$blockquote-heading-color: $text-primary !default;
+$blockquote-color: $text-secondary !default;
+$blockquote-icon-color: $global-color-secondary-secondary-600 !default;
+
+
+blockquote {
+  background: $blockquote-bg;
+
+  h2, h3, h4, h5, h6 {
+    color: $blockquote-heading-color;
+  }
+
+  p {
+    color: $blockquote-color;
+  }
+
+  &::before {
+    color: $blockquote-icon-color;
+  }
+}

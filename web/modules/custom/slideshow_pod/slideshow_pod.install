@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Added viewing permissions for authenticated and anonymous users
+ */
+function slideshow_pod_update_10101(): void
+{
+  Drupal::service('installation_profile.manager.module_scss')->linkStyles('slideshow_pod');
+}

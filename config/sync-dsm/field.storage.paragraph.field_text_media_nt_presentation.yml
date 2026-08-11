@@ -5,10 +5,10 @@ dependencies:
   module:
     - options
     - paragraphs
-    - text_media_nugget
+    - text_media_pod
   enforced:
     module:
-      - text_media_nugget
+      - text_media_pod
 _core:
   default_config_hash: L8pMGWi8W59-BdLgjP2pCsXbzaMCqKvv7luYqUjRUMc
 id: paragraph.field_text_media_nt_presentation

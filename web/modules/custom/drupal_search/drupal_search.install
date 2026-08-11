@@ -1,0 +1,91 @@
+<?php
+
+use Drupal\config_provider\ProxyClass\ConfigProviderConfigInstaller;
+use Drupal\remora_core\Service\AddNewField;
+use Symfony\Component\Yaml\Yaml;
+
+/**
+ * adds facet blocks to the active theme
+ *
+ * Implements hook_install().
+ */
+function drupal_search_install(): void
+{
+  $activeTheme = Drupal::config('system.theme')->get('default');
+
+  // Get the directory path where block configuration files are stored.
+  $configDirectory = Drupal::service('extension.list.module')->getPath('drupal_search');
+  $pattern = sprintf('%s/config/install/block.block.*facet*.yml', $configDirectory);
+  // Find all block configuration files that start with "block.block" and contain "facet" in the filename.
+  $blockConfigs = glob($pattern);
+  /** @var ConfigProviderConfigInstaller $configInstaller */
+  $configInstaller = Drupal::service('config.installer');
+
+  // Iterate through each block configuration file and update its theme field.
+  foreach ($blockConfigs as $blockConfigPath) {
+    // Check if the configuration exists in the active configuration.
+    $configName = basename($blockConfigPath, '.yml');
+    if (Drupal::config($configName)->getOriginal() === []) {
+      $blockConfig = Yaml::parse(file_get_contents($blockConfigPath));
+      $blockConfig['theme'] = $activeTheme;
+      $blockConfigYaml = Yaml::dump($blockConfig);
+      file_put_contents($blockConfigPath, $blockConfigYaml);
+      $configInstaller->installDefaultConfig('module','drupal_search');
+    } else {
+      $config = Drupal::configFactory()->getEditable($configName);
+      $config->set('theme', $activeTheme)->save();
+    }
+  }
+}
+
+/**
+ * Link the remora search styles
+ */
+function drupal_search_update_10001(): void
+{
+  /** @var AddNewField $addNewFieldService */
+  $addNewFieldService = Drupal::service('remora_core.service.add_new_field');
+
+  $addNewFieldService->addToSearchIndex('field_categories', 'Categories » Taxonomy term » Term ID', 'taxonomy_term', 'tid');
+  $addNewFieldService->addToSearchIndex('field_tags', 'Tags » Taxonomy term » Term ID', 'taxonomy_term', 'tid');
+  $addNewFieldService->addToSearchIndex('field_topics', 'Topics » Taxonomy term » Term ID', 'taxonomy_term', 'tid');
+  Drupal::service('installation_profile.manager.module_scss')->linkStyles('drupal_search');
+}
+
+/**
+ * Implements hook_schema().
+ */
+function drupal_search_schema(): array
+{
+  $schema['drupal_search_exclude_from_index'] = [
+    'description' => 'Stores node IDs that should be excluded from Search API indexing.',
+    'fields' => [
+      'nid' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'Node ID',
+      ],
+    ],
+    'primary key' => ['nid'],
+  ];
+
+  return $schema;
+}
+
+/**
+ * Adds new schema for the exclude from index table.
+ */
+function drupal_search_update_10103(): void
+{
+  $database = \Drupal::database();
+  $schema_handler = $database->schema();
+
+  if ($schema_handler->tableExists('drupal_search_exclude_from_index')) {
+    \Drupal::logger('drupal_search')->notice('Table drupal_search_exclude_from_index already exists. Schema definition added.');
+  } else {
+    // Create the table if it doesn't exist
+    $schema = drupal_search_schema();
+    $schema_handler->createTable('drupal_search_exclude_from_index', $schema['drupal_search_exclude_from_index']);
+    \Drupal::logger('drupal_search')->notice('Table drupal_search_exclude_from_index created.');
+  }
+}

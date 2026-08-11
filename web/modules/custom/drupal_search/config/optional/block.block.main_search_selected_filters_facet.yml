@@ -1,0 +1,25 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - drupal_search
+    - system
+  theme:
+    - barrio_base_theme
+id: main_search_selected_filters_facet
+theme: barrio_base_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: drupal_search_selected_filters_block
+settings:
+  id: drupal_search_selected_filters_block
+  label: 'Drupal Search selected filters Block'
+  label_display: '0'
+  provider: drupal_search
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search

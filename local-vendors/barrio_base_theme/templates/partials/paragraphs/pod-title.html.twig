@@ -1,0 +1,9 @@
+{% if (content.field_display_title['#items'] is not empty) %}
+  {% block pod_title_wrapper %}
+    <div class="pod-title-wrapper container-xxl">
+      {% block pod_title %}
+        <div class="h3 pod-title">{{ content.field_display_title.0 }}</div>
+      {% endblock %}
+    </div>
+  {% endblock %}
+{% endif %}

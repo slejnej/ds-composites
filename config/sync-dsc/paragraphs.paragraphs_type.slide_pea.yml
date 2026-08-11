@@ -1,0 +1,15 @@
+uuid: 6ada89e8-f5ae-48c5-96fe-42d35b4d955c
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - slideshow_pod
+_core:
+  default_config_hash: 0DdZFeU6qWCFT8pQ6JLJixfJM689aBW79FyFh1GogFc
+id: slide_pea
+label: Slide
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

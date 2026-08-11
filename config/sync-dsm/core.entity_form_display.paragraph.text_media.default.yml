@@ -15,10 +15,10 @@ dependencies:
     - layout_discovery
     - media_library
     - text
-    - text_media_nugget
+    - text_media_pod
   enforced:
     module:
-      - text_media_nugget
+      - text_media_pod
 third_party_settings:
   field_group:
     group_nugget_title_properties:

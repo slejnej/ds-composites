@@ -1,0 +1,21 @@
+uuid: null
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_audio_date
+    - media.type.audio
+  module:
+    - datetime
+id: media.audio.field_media_audio_date
+field_name: field_media_audio_date
+entity_type: media
+bundle: audio
+label: 'Published date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

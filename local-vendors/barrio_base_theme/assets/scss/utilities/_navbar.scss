@@ -1,0 +1,32 @@
+// Change behaviour of alignment when menu is at the end of screen
+.dropdown-menu [data-block="nav_main"] {
+  .dropdown-toggle {
+    &::after {
+      border-bottom: .3em solid transparent;
+      border-left: .3em solid;
+      border-right: 0;
+      border-top: .3em solid transparent;
+      content: "";
+      display: inline-block;
+      margin-left: 0.255em;
+      -webkit-transition: border 0.5s;
+      transition: border 0.5s;
+      vertical-align: 0.255em;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &.show::after {
+      border-bottom: 0;
+      border-left: .3em solid transparent;
+      border-right: .3em solid transparent;
+      border-top: .3em solid;
+    }
+  }
+}
+
+body ul.toolbar-menu {
+  font-size: 1em !important;
+}

@@ -1,0 +1,16 @@
+// Basic banner styles
+.paragraph--type--banners {
+  .banner-wrapper {
+    .banner-caption-wrapper {
+      .caption-title p {
+        @include typography-mobile($text-mobile-title-slideshow-font, $text-mobile-title-slideshow-size, $text-mobile-title-slideshow-weight, $text-mobile-title-slideshow-line-height);
+        @include typography-desktop($text-desktop-title-slideshow-font, $text-desktop-title-slideshow-size, $text-desktop-title-slideshow-weight, $text-desktop-title-slideshow-line-height);
+      }
+
+      .caption-subtitle p {
+        @include typography-mobile($text-mobile-title-slideshow-sub-font, $text-mobile-title-slideshow-sub-size, $text-mobile-title-slideshow-sub-weight, $text-mobile-title-slideshow-sub-line-height);
+        @include typography-desktop($text-desktop-title-slideshow-sub-font, $text-desktop-title-slideshow-sub-size, $text-desktop-title-slideshow-sub-weight, $text-desktop-title-slideshow-sub-line-height);
+      }
+    }
+  }
+}

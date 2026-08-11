@@ -7,7 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.slideshow
   enforced:
     module:
-      - slideshow_nugget
+      - slideshow_pod
 _core:
   default_config_hash: 299Nc9aS4ZGL87NEVJNvX1AM4liHTU4bgU50sZBNaI4
 id: paragraph.slideshow.field_autoplay

@@ -1,0 +1,37 @@
+external_links:
+  version: 1.0.0
+  js:
+    build/js/external_links.min.js: { attributes: { defer: true } }
+
+global-javascript:
+  version: 1.0.0
+  js:
+    node_modules/@popperjs/core/dist/umd/popper.min.js: { }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - barrio_base_theme/external_links
+
+slick-carousel:
+  version: 1.8.1
+  css:
+    theme:
+      node_modules/slick-carousel/slick/slick.css: {}
+  js:
+    node_modules/slick-carousel/slick/slick.min.js: {}
+  dependencies:
+    - core/jquery
+
+custom-navbar:
+  version: 1.0.0
+  js:
+    build/js/custom_navbar.min.js: { attributes: { async: true } }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+
+bootstrap-icons:
+  css:
+    theme:
+      node_modules/bootstrap-icons/font/bootstrap-icons.min.css: {}

@@ -1,0 +1,20 @@
+uuid: 8ed3d9b4-7150-41aa-8534-27e3784d78fd
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+  enforced:
+    module:
+      - cards_pod
+_core:
+  default_config_hash: hz5_Tv24WTLX5kF3kiRV758XGs_2uwsGeeDd2bJnF-M
+id: card_pea
+label: Card
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

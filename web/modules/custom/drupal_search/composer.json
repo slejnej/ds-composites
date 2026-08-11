@@ -1,0 +1,33 @@
+{
+  "name": "deux-cent-deux/drupal_search",
+  "type": "drupal-custom-module",
+  "description": "Drupal core search module configuration",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.1",
+    "drupal/better_exposed_filters": "^6.0",
+    "drupal/search_api": "^1.38",
+    "drupal/facets_block": "^2.0",
+    "drupal/facets": "^2.0.10"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "patches": {
+      "drupal/facets": {
+        "facets session fix on ajax view POST": "https://www.drupal.org/files/issues/2024-11-21/3466281-7.patch",
+        "Needed for AJAX blocks pt. 2": "web/modules/custom/drupal_search/patches/ajax-blocks-pt-2.patch",
+        "Needed for AJAX blocks pt. 3": "https://www.drupal.org/files/issues/2023-10-06/3168241-14.facets-plus-exposed-filters.patch"
+      }
+    },
+    "enable-patching": true
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ]
+}

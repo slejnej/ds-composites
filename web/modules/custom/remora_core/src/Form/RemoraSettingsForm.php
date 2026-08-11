@@ -29,6 +29,7 @@ class RemoraSettingsForm extends ConfigFormBase
   public function buildForm(array $form, FormStateInterface $form_state): array
   {
     $config = $this->config(self::CONFIG_ID);
+    $languages = \Drupal::languageManager()->getLanguages();
 
     // Add a field group for Footer settings.
     $form['footer_settings'] = [
@@ -60,27 +61,54 @@ class RemoraSettingsForm extends ConfigFormBase
       '#markup' => $footerMessage,
     ];
 
-    $form['card_settings'] = [
+    $form['global_settings'] = [
       '#type' => 'details',
-      '#title' => $this->t('Card settings'),
+      '#title' => $this->t('Global text settings'),
       '#open' => TRUE,
     ];
 
-    $form['card_settings']['card_button_text'] = [
-      '#type' => 'textfield',
-      '#title' => t('Default card button text'),
-      '#default_value' => $config->get('card_button_text'),
-      '#required' => false,
-      '#description' => t("If you would like to have buttons on your cards throughout this site, add your default button text here. You can override this default text on individual cards if needed."),
+    $form['global_settings']['show_breadcrumbs'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Show breadcrumbs'),
+      '#default_value' => $config->get('show_breadcrumbs') ?? TRUE,
+      '#description' => $this->t('Enable or disable breadcrumbs display across the site.'),
     ];
+
+    $form['global_settings']['card_button_text_group'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Default card button text'),
+      '#open' => FALSE,
+      '#tree' => TRUE,
+    ];
+
+    foreach ($languages as $langcode => $language) {
+      $stored = $config->get("card_button_text.$langcode");
+
+      $form['global_settings']['card_button_text_group'][$langcode] = [
+        '#type' => 'textfield',
+        '#title' => $language->getName(),     // clean and simple
+        '#default_value' => $stored ?: '',
+        '#description' => $this->t('Text shown when viewing the site in @lang.', [
+          '@lang' => $language->getName(),
+        ]),
+        '#prefix' => '<div class="remora-lang-field">',
+        '#suffix' => '</div>',
+      ];
+    }
+
 
     return parent::buildForm($form, $form_state);
   }
 
   public function submitForm(array &$form, FormStateInterface $form_state): void
   {
-    $this->configFactory()->getEditable(self::CONFIG_ID)
-      ->set('card_button_text', $form_state->getValue('card_button_text'))
+    $values = $form_state->getValue('card_button_text_group');
+    $show_breadcrumbs = $form_state->getValue('show_breadcrumbs');
+
+    $this->configFactory()
+      ->getEditable(self::CONFIG_ID)
+      ->set('card_button_text', $values)
+      ->set('show_breadcrumbs', $show_breadcrumbs)
       ->save();
 
     parent::submitForm($form, $form_state);

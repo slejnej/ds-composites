@@ -14,7 +14,7 @@ dependencies:
     - text
   enforced:
     module:
-      - text_media_nugget
+      - text_media_pod
 _core:
   default_config_hash: mFjvEt81flOOGgcc8Lrx3ryRsWKIUjxVENxIJ3zt0SI
 id: paragraph.text_media.default

@@ -17,6 +17,9 @@ settings:
     -
       value: slideshow
       label: Slideshow
+    -
+      value: fluid
+      label: Fluid
   allowed_values_function: ''
 module: options
 locked: false

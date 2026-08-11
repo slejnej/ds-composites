@@ -1,0 +1,16 @@
+
+.header-content-wrapper {
+  gap: $global-spacing-1;
+
+  .top-menu ul {
+    margin-bottom: 0;
+
+    a {
+      color: $text-link;
+
+      &:hover {
+        color: $text-link-hover;
+      }
+    }
+  }
+}

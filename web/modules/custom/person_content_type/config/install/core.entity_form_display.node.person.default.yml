@@ -10,15 +10,15 @@ dependencies:
     - field.field.node.person.field_honorific_title
     - field.field.node.person.field_image
     - field.field.node.person.field_last_name
-    - field.field.node.person.field_main_nuggets
+    - field.field.node.person.field_main_pods
     - field.field.node.person.field_meta_tags
     - field.field.node.person.field_person_organisation
     - field.field.node.person.field_photo
-    - field.field.node.person.field_postscript_nuggets
+    - field.field.node.person.field_postscript_pods
     - field.field.node.person.field_role
     - field.field.node.person.field_seo_description
     - field.field.node.person.field_seo_title
-    - field.field.node.person.field_sidebar_nuggets
+    - field.field.node.person.field_sidebar_pods
     - field.field.node.person.field_social_media
     - field.field.node.person.field_suffix
     - field.field.node.person.field_summary
@@ -76,7 +76,7 @@ third_party_settings:
       children:
         - group_overview
         - group_person_detaails
-        - group_nuggets
+        - group_pods
       label: 'Main content tabs'
       region: content
       parent_name: group_main_content
@@ -118,12 +118,12 @@ third_party_settings:
         classes: ''
         show_empty_fields: true
         id: ''
-        description: 'This image and body will be displayed in a set location on this page. If you want to customise the layout, do not complete this section and use the Nuggets section below.'
+        description: 'This image and body will be displayed in a set location on this page. If you want to customise the layout, do not complete this section and use the Pods section below.'
         required_fields: true
-    group_nuggets:
+    group_pods:
       children:
-        - field_main_nuggets
-      label: Nuggets
+        - field_main_pods
+      label: Pods
       region: content
       parent_name: group_main_content_tabs
       weight: 22
@@ -152,7 +152,7 @@ third_party_settings:
         required_fields: true
     group_sidebar_content:
       children:
-        - field_sidebar_nuggets
+        - field_sidebar_pods
       label: 'Sidebar content'
       region: content
       parent_name: group_news_tabs
@@ -163,11 +163,11 @@ third_party_settings:
         show_empty_fields: true
         id: ''
         formatter: closed
-        description: 'These nuggets will be displayed on the right hand side of your page, but may also drop below the main content on smaller screen sizes.'
+        description: 'These pods will be displayed on the right hand side of your page, but may also drop below the main content on smaller screen sizes.'
         required_fields: true
     group_postscript_content:
       children:
-        - field_postscript_nuggets
+        - field_postscript_pods
       label: 'Postscript content'
       region: content
       parent_name: group_news_tabs
@@ -178,7 +178,7 @@ third_party_settings:
         show_empty_fields: true
         id: ''
         formatter: closed
-        description: 'These nuggets will be displayed below all other content added to your page, above the footer and will usually fill the width of the page.'
+        description: 'These pods will be displayed below all other content added to your page, above the footer and will usually fill the width of the page.'
         required_fields: true
     group_summary_seo:
       children:
@@ -385,7 +385,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_main_nuggets:
+  field_main_pods:
     type: layout_paragraphs
     weight: 8
     region: content
@@ -450,7 +450,7 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_postscript_nuggets:
+  field_postscript_pods:
     type: layout_paragraphs
     weight: 5
     region: content
@@ -484,7 +484,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_sidebar_nuggets:
+  field_sidebar_pods:
     type: layout_paragraphs
     weight: 16
     region: content

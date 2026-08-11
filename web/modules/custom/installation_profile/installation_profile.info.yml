@@ -1,12 +1,13 @@
-name: 'Remora'
+name: 'Custom 202 profile'
 type: profile
-description: 'Install the Remora base'
-version: VERSION
+description: 'Install the base and some modules'
+version: 1.0.0
 install:
   - node
+  - metatag
 dependencies:
   - remora_core
 themes:
   - barrio_base_theme
-core_version_requirement: ^9 || ^10
+core_version_requirement:  ^10
 keep_english: true

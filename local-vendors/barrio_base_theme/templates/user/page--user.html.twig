@@ -1,0 +1,57 @@
+<div id="page-wrapper" class="min-vh-100">
+  {% block login_page %}
+    <main class="d-flex flex-column min-vh-100">
+      <a id="main-content" tabindex="-1"></a>
+
+      {% block login_logo %}
+        <section class="user-logo col-12 d-flex justify-content-center align-items-center p-3 p-lg-4">
+          {% remora_include 'partials/layout/header-logo.html.twig' %}
+        </section>
+      {% endblock%}
+
+      {% block login_form %}
+        <section class="user-form d-flex flex-grow-1 pt-5">
+          <div class="user-form-wrapper d-flex flex-column col-10 col-sm-6 col-lg-4 col-xxl-3 mx-auto mb-auto">
+
+            {% block form_content %}
+              <div class="login position-relative">
+                <h2 class="mb-0">Sign in</h2>
+                {{ page.content }}
+                <div class="forgot-password position-absolute">
+                  <p class="text-smaller mb-0">
+                    <a href="{{ url('user.pass') }}">Forgot password?</a>
+                  </p>
+                </div>
+              </div>
+            {% endblock %}
+
+            {% block form_secondary_content %}
+              {% if drupal_config('user.settings', 'register') != 'admin_only' %}
+                <div class="divider w-100"></div>
+
+                <div class="register-prompt">
+                  <h3>Don't have an account?</h3>
+                  <a href="{{ url('user.register') }}" class="btn btn-secondary m-0" role="button">Create an account</a>
+                </div>
+              {% endif %}
+            {% endblock %}
+
+          </div>
+        </section>
+      {% endblock%}
+
+      {% block footer_secondary %}
+        <div class="footer-secondary">
+          <div class="d-flex container-xl justify-content-center align-items-center p-3">
+            {% block footer_branding %}
+            <span></span>
+          </div>
+          {% endblock %}
+
+        </div>
+      {% endblock %}
+
+    </main>
+
+  {% endblock%}
+</div>

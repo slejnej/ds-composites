@@ -1,0 +1,17 @@
+// Sub theme styling.
+@import 'variables_bootstrap';
+
+// load all the variables including bootstrap overrides
+@import '../../../../contrib/barrio_base_theme/assets/scss/variables/variables_drupal';
+@import '../../../../contrib/barrio_base_theme/assets/scss/variables/variables_bootstrap';
+
+// load the bootstrap from the base theme
+@import "../../node_modules/bootstrap/scss/bootstrap-utilities";
+
+@import "../../../../contrib/barrio_base_theme/assets/scss/style";
+
+// load module specific styles
+@import 'modules/style';
+
+// load all the subtheme's components overrides
+@import "components_override";

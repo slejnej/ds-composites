@@ -85,7 +85,6 @@ class RemoraImageBuilder
       '#image_attributes' => $attributesObj,
     ];
 
-//    dd($build);
     // cache the render array, we can keep it as long as the media is valid for
     CacheableMetadata::createFromRenderArray($build)
       ->setCacheTags(['media:' . $media->id()])

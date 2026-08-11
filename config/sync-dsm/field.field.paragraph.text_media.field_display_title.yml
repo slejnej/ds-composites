@@ -8,10 +8,10 @@ dependencies:
     - paragraphs.paragraphs_type.text_media
   module:
     - text
-    - text_media_nugget
+    - text_media_pod
   enforced:
     module:
-      - text_media_nugget
+      - text_media_pod
 _core:
   default_config_hash: O1vY4glThR56QXblB5JzXnCGzJWi48dSt05KYKYYocU
 id: paragraph.text_media.field_display_title

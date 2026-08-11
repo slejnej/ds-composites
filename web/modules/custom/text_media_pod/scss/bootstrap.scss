@@ -1,0 +1,23 @@
+// Feature specific typography variables
+.feature-wrapper {
+  h3.paragraph-title {
+    @include typography-mobile($text-mobile-title-featured-article-font, $text-mobile-title-featured-article-size, $text-mobile-title-featured-article-weight, $text-mobile-title-featured-article-line-height);
+    @include typography-desktop($text-desktop-title-featured-article-font, $text-desktop-title-featured-article-size, $text-desktop-title-featured-article-weight, $text-desktop-title-featured-article-line-height);
+  }
+
+  p {
+    &.text-larger {
+      @include typography-mobile($text-mobile-title-featured-article-sub-font, $text-mobile-title-featured-article-sub-size, $text-mobile-title-featured-article-sub-weight, $text-mobile-title-featured-article-sub-line-height);
+      @include typography-desktop($text-desktop-title-featured-article-sub-font, $text-desktop-title-featured-article-sub-size, $text-desktop-title-featured-article-sub-weight, $text-desktop-title-featured-article-sub-line-height);
+    }
+
+    @include typography-mobile($text-mobile-title-featured-article-description-font, $text-mobile-title-featured-article-description-size, $text-mobile-title-featured-article-description-weight, $text-mobile-title-featured-article-description-line-height);
+    @include typography-desktop($text-desktop-title-featured-article-description-font, $text-desktop-title-featured-article-description-size, $text-desktop-title-featured-article-description-weight, $text-desktop-title-featured-article-description-line-height);
+  }
+}
+
+#sidebar-pods {
+  .paragraph--type--text-media .article-wrapper .image-wrapper {
+    @extend .float-none, .col-md-12, .m-0;
+  }
+}

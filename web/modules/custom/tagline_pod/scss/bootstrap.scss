@@ -1,0 +1,11 @@
+.tagline-content {
+  .field--name-field-display-title {
+    @include typography-mobile($text-mobile-title-tagline-font, $text-mobile-title-tagline-size, $text-mobile-title-tagline-weight, $text-mobile-title-tagline-line-height);
+    @include typography-desktop($text-desktop-title-tagline-font, $text-desktop-title-tagline-size, $text-desktop-title-tagline-weight, $text-desktop-title-tagline-line-height);
+  }
+
+  p.text-larger {
+    @include typography-mobile($text-mobile-title-tagline-sub-font, $text-mobile-title-tagline-sub-size, $text-mobile-title-tagline-sub-weight, $text-mobile-title-tagline-sub-line-height);
+    @include typography-desktop($text-desktop-title-tagline-sub-font, $text-desktop-title-tagline-sub-size, $text-desktop-title-tagline-sub-weight, $text-desktop-title-tagline-sub-line-height);
+  }
+}

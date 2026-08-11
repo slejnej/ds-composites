@@ -7,7 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.slideshow
   enforced:
     module:
-      - slideshow_nugget
+      - slideshow_pod
 _core:
   default_config_hash: bYzpIxjfLXCMQBj7wsiPjyXmR39Ieokjilxl31-dgLg
 id: paragraph.slideshow.field_arrows

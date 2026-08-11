@@ -6,7 +6,7 @@ dependencies:
     - paragraphs
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
   default_config_hash: sCwEqFhY7G025Py10Fgzb3etG1wDIR7z2_YwKy-Gs18
 id: paragraph.field_card_nt_alt_button_text

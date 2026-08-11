@@ -1,0 +1,18 @@
+uuid: 812073e7-ab15-40b0-9f39-feb89eb79c78
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.slide_pea
+id: paragraph.slide_pea.created
+field_name: created
+entity_type: paragraph
+bundle: slide_pea
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

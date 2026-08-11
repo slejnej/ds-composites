@@ -1,0 +1,15 @@
+{% block header_content %}
+
+  {% block gtranslate %}
+    {% set gtranslate = drupal_block('gtranslate_block') %}
+    {% if gtranslate['#plugin_id'] != 'broken' %}
+      <div id="gtranslate-desktop">
+        <div class="header-gtranslate">{{ gtranslate|raw }}</div>
+      </div>
+    {% endif %}
+  {% endblock %}
+
+  {% block social %}
+  {% endblock %}
+
+{% endblock %}

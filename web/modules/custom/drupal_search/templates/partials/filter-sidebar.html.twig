@@ -1,0 +1,43 @@
+{% block filter_sidebar %}
+	<div class="search-view-filters order-1 order-md-1 col-12 col-sm-6 col-lg-3">
+		<div class="container g-0">
+			<button id="showFilters" class="btn btn-primary d-lg-none w-100 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters" aria-controls="offcanvasFilters">
+				<svg class="bi" width="32" height="32" fill="white">
+					<use xlink:href="{{ get_bs_icon_path('funnel') }}"/>
+				</svg>
+				<span class="btn-text">{{ 'Show filters'|t }}</span>
+			</button>
+
+			<div class="offcanvas-lg offcanvas-start" tabindex="-1" id="offcanvasFilters" aria-labelledby="offcanvasFiltersLabel">
+				<div class="offcanvas-header">
+					<h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Filter</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasFilters" aria-label="{{ 'Close'|t }}"></button>
+				</div>
+				<div class="offcanvas-body">
+					<div class="region region-sidebar-first p-0 mt-0">
+						{% block filter_sidebar_facets %}
+
+							{% block filter_sidebar_text_search %}
+								{{ drupal_entity('block', 'main_search_exposed_form_facet') }}
+							{% endblock %}
+
+							<div class="remora-search-selected-filters-block d-flex flex-wrap">
+							</div>
+
+							{% block filter_sidebar_facet_blocks %}
+								<div class="accordion p-0">
+									{{ drupal_block('facet_block:main_search_content_type') }}
+									{{ drupal_block('facet_block:main_search_tags') }}
+									{{ drupal_block('facet_block:main_search_topics') }}
+								</div>
+							{% endblock %}
+
+						{% endblock %}
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+{% endblock %}

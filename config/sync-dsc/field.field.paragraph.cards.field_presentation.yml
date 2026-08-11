@@ -9,7 +9,7 @@ dependencies:
     - options
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
   default_config_hash: dSwiw4nczg_K4DuzpwNMg6qIOSP2bqgYlCHTbRpUDqA
 id: paragraph.cards.field_presentation
