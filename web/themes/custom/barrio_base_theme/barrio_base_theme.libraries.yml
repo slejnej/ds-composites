@@ -16,7 +16,7 @@ global-javascript:
   version: 1.0.0
   js:
     build/js/global.min.js: { }
-    node_modules/@popperjs/core/dist/umd/popper.min.js: { }
+#    node_modules/@popperjs/core/dist/umd/popper.min.js: { }
   dependencies:
     - core/jquery
     - core/drupal

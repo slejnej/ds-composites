@@ -35,7 +35,6 @@ $settings['file_temp_path'] = '/tmp';
 $settings['trusted_host_patterns'] = [
   '^localhost$',
   '127\.0\.0\.1',
-  '^ds-composites\.lndo\.site$',
-  '^ds-composites\.eu$',
+  '^ds-composites\.lndo\.site$'
 ];
 

@@ -6,6 +6,7 @@ module:
   admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
   administerusersbyrole: 0
+  advanced_language_selector: 0
   attachments_nugget: 0
   banners_nugget: 0
   block: 0

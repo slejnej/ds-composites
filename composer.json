@@ -18,6 +18,7 @@
     "drupal/eu_cookie_compliance": "^1.24",
     "drupal/eu_cookie_compliance_gtm": "^2.1",
     "drupal/gin": "^3.0@RC",
+    "drupal/remove_generator": "^2.0",
     "drush/drush": "^12.4",
     "mantaraymedia/base_repository": "*",
     "mantaraymedia/cache_service": "*",

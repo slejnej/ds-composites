@@ -25,13 +25,13 @@
   "extra": {
     "patches": {
       "drupal/eu_cookie_compliance": {
-        "Override eu_cookie_compliance settings with our own": "web/modules/contrib/remora_gdpr/patches/eu_cookie_compliance_settings.patch"
+        "Override eu_cookie_compliance settings with our own": "web/modules/custom/remora_gdpr/patches/eu_cookie_compliance_settings.patch"
       },
       "drupal/eu_cookie_compliance_gtm": {
         "GTM consent mode": "https://raw.githubusercontent.com/MantaRayMedia/gists/master/Patches/gtm_consent_mode.patch"
       },
       "drupal/google_tag": {
-        "Override google_tag settings with our own": "web/modules/contrib/remora_gdpr/patches/google_tag_settings.patch"
+        "Override google_tag settings with our own": "web/modules/custom/remora_gdpr/patches/google_tag_settings.patch"
       }
     },
     "enable-patching": true

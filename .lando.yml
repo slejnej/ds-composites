@@ -2,7 +2,7 @@ name: ds-composites
 recipe: drupal10
 
 config:
-  php: '8.1'
+  php: '8.3'
   via: nginx
   webroot: web
   drush: "*"
@@ -15,10 +15,16 @@ proxy:
 
 services:
   appserver:
-    install_dependencies_as_root:
-      - apt-get update && apt-get install -y openjdk-11-jdk && apt-get install -y ant && apt-get clean
-
     build_as_root:
+      - apt-get update && apt-get install -y wget apt-transport-https gnupg ca-certificates curl
+      - apt-get install xdg-utils fonts-liberation libasound2 libgbm1 libnspr4 libnss3 libxkbcommon-x11-0 -y
+      - mkdir -p /etc/apt/keyrings
+      - wget -qO- https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | tee /etc/apt/keyrings/adoptium.gpg > /dev/null
+      - echo "deb [signed-by=/etc/apt/keyrings/adoptium.gpg] https://packages.adoptium.net/artifactory/deb buster main" | tee /etc/apt/sources.list.d/adoptium.list
+      - apt-get update
+      - apt-get install -y temurin-21-jdk
+
+      - apt-get install -y ant
       - docker-php-ext-install pcntl
       - apt-get install -y ca-certificates curl gnupg
       - mkdir -p /etc/apt/keyrings
@@ -27,7 +33,7 @@ services:
       - apt-get update && apt-get install -y nodejs
 
   database:
-    type: mariadb:10.5.13
+    type: mariadb:10.6
     portforward: 17906
     creds:
       user: drupal10

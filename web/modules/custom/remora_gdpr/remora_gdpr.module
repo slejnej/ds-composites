@@ -71,3 +71,13 @@ function remora_gdpr_theme() {
         ],
     ];
 }
+
+/**
+ * Update policy version
+ *
+ * @return void
+ */
+function remora_gdpr_update_10101(): void
+{
+  \Drupal::configFactory()->getEditable('eu_cookie_compliance.settings')->set('cookie_policy_version', '1.0.1')->save();
+}

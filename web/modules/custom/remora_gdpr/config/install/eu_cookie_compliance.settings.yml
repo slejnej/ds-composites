@@ -1,5 +1,3 @@
-_core:
-  default_config_hash: bFn00nhJM0zldL370oHquoSrU8dUO3TnBNhBcqxuvq0
 uuid: null
 langcode: en-gb
 popup_enabled: true
@@ -11,14 +9,14 @@ eu_only_js: false
 popup_position: false
 fixed_top_position: true
 popup_info:
-  value: '<h2>We use cookies on this site to enhance your user experience</h2><p>By clicking the Accept button, you agree to us doing so.</p>'
+  value: "<h2>Our use of cookies</h2><p>We use the necessary cookies to make our site work. We'd also like to set analytics cookies that help us make improvements by measuring how you use the site. These will be set only if you accept.</p><p>For more detailed information about the cookies we use, see our</p>"
   format: full_html
 mobile_popup_info:
-  value: '<h2>We use cookies on this site to enhance your user experience</h2><p>By tapping the Accept button, you agree to us doing so.</p>'
+  value: ''
   format: full_html
 popup_info_template: new
 popup_agree_button_message: Accept
-popup_more_info_button_message: 'More info'
+popup_more_info_button_message: 'Cookies page'
 mobile_breakpoint: 768
 popup_agreed_enabled: false
 popup_hide_agreed: false
@@ -66,7 +64,7 @@ withdraw_tab_button_label: 'Privacy settings'
 withdraw_action_button_label: 'Withdraw consent'
 withdraw_enabled: false
 withdraw_button_on_info_popup: false
-save_preferences_button_label: 'Save preferences'
+save_preferences_button_label: 'Save and close'
 accept_all_categories_button_label: 'Accept all cookies'
 enable_save_preferences_button: true
 domain_all_sites: true
