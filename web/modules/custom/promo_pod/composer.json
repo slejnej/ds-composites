@@ -1,0 +1,17 @@
+{
+  "name": "mrm-remora/promo_pod",
+  "type": "drupal-custom-module",
+  "description": "Promo pod - contains functionalities to enable Promo pod",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Nelle Cutler",
+      "email": "nelle@mantaraymedia.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "drupal/field_group": "^3.4"
+  }
+}

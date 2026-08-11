@@ -1,14 +1,11 @@
-uuid: c55da1ca-fe71-4e3e-8e92-ffed4e0f923a
-langcode: en
+uuid: 2fd23f40-1e41-48d0-b374-99129417086e
+langcode: en-gb
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.field_alternative_title
     - field.field.node.page.field_body
-    - field.field.node.page.field_categories
-    - field.field.node.page.field_countries
-    - field.field.node.page.field_diseases
     - field.field.node.page.field_hero_content
     - field.field.node.page.field_image
     - field.field.node.page.field_landing
@@ -20,8 +17,6 @@ dependencies:
     - field.field.node.page.field_seo_title
     - field.field.node.page.field_sidebar_nuggets
     - field.field.node.page.field_summary
-    - field.field.node.page.field_tags
-    - field.field.node.page.field_topics
     - node.type.page
   module:
     - field_layout
@@ -67,8 +62,6 @@ content:
 hidden:
   field_alternative_title: true
   field_body: true
-  field_categories: true
-  field_countries: true
   field_diseases: true
   field_hero_content: true
   field_image: true

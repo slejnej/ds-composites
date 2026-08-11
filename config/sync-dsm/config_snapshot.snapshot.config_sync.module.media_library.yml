@@ -1,4 +1,4 @@
-uuid: 6fd9209e-9543-4989-a281-8a05ea9299fd
+uuid: 2e811e65-c76b-4642-9d2f-e049db5952ad
 langcode: en
 status: true
 dependencies:
@@ -68,8 +68,14 @@ items:
             width: 220
             height: 220
             upscale: false
+        1021da71-fc2a-43d0-be5d-efaf1c79e2ea:
+          uuid: 1021da71-fc2a-43d0-be5d-efaf1c79e2ea
+          id: image_convert
+          weight: 2
+          data:
+            extension: webp
       _core:
-        default_config_hash: 7qJqToD1OQLAyeswpmg7M0LRxQlw1URQkJDWUJCnmR8
+        default_config_hash: FxMdscEA4aDH0KPM73HIZtVn3zIAgC1kQ3CkBw26HYs
   -
     collection: ''
     name: media_library.settings
@@ -219,6 +225,7 @@ items:
               type: mini
               options:
                 offset: 0
+                pagination_heading_level: h4
                 items_per_page: 24
                 total_pages: null
                 id: 0
@@ -1480,4 +1487,4 @@ items:
               - user.permissions
             tags: {  }
       _core:
-        default_config_hash: iFhkNhGoobQ7V0PJEH_Io9Vlli35kiaeQfdqUttfQeU
+        default_config_hash: 9u9hwW-Q0-uQJz1vgenJTQhZGYN0FBZoOogwPD6kgkQ

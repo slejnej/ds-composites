@@ -1,10 +1,11 @@
-uuid: 9afa891b-0ab0-498f-967a-ec560ec4ac02
-langcode: en
+uuid: 924df47e-d063-48c7-a2a1-06dcf7b6abf4
+langcode: en-gb
 status: true
 dependencies: {  }
 _core:
   default_config_hash: DEmkunMNk8gknE23-Q21jfnYIqEvIuoYYnt_T5dtiJo
 name: 'Honorific titles'
 vid: honorific_titles
-description: ''
+description: null
 weight: 0
+new_revision: false

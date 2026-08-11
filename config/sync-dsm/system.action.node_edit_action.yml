@@ -1,10 +1,10 @@
-uuid: 71ed02ea-9322-4ef4-8ed7-137aa588c117
+uuid: 3c1fc17d-9e3e-4691-828e-dfbb5a6f3056
 langcode: en
 status: true
 dependencies:
   module:
-    - node
     - views_bulk_edit
+    - node
 _core:
   default_config_hash: 0vLpSGhoYOPeREkfW-7bDeJOwEfW3zeG3nUBwUgsKQI
 id: node_edit_action

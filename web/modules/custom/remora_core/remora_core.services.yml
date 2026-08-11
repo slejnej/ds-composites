@@ -60,7 +60,8 @@ services:
 
   remora_core.twig.extension.image:
     class: Drupal\remora_core\Twig\Extension\ImageExtension
-    arguments: [ '@remora_core.builder.remora_image', '@remora_core.repository.media' ]
+    arguments: [ '@remora_core.builder.remora_image', '@remora_core.repository.media', '@remora_core.logger', '@file_system' ]
+
     tags:
       - { name: twig.extension }
 

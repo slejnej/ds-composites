@@ -28,6 +28,9 @@ display:
         redirect_source__path:
           label: Von
           separator: ', '
+        enabled:
+          label: Aktiviert
+          separator: ', '
         created:
           label: Erstellt
       filters:

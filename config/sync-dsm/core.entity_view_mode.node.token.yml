@@ -1,9 +1,11 @@
-uuid: 082e121a-85ac-4cc9-8510-dc0dbacb97ad
-langcode: en
+uuid: 017419c3-7c53-46bd-bd65-e3abc734e4f7
+langcode: en-gb
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: PnCP1kou_VrhS-6wohWPfibfWm27Q-Wm4SXnDTfJ1SY
 id: node.token
 label: Token
 description: ''

@@ -1,4 +1,4 @@
-uuid: 6b081ea7-34db-4e35-b432-181cd034b978
+uuid: 08157db8-b65a-436f-b8c9-0648409fe16f
 langcode: en-gb
 status: true
 dependencies:
@@ -9,15 +9,15 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: Q6BzVs7kkpWpRc-Pbp3A8mQ6gSSaBB2AJqTKVzVayp8
+  default_config_hash: QiPB9rMMlAaECODsyDu6PklAC5TZO192yoJEkNl3BuM
 id: paragraph.promo.field_display_title
 field_name: field_display_title
 entity_type: paragraph
 bundle: promo
 label: 'Display title'
-description: 'This title is displayed on the page above the content of this nugget.'
+description: 'This title is displayed on the page above the content of this pod.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

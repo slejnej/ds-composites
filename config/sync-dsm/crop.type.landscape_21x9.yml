@@ -1,11 +1,11 @@
-uuid: d4b3121d-1a6a-4623-aa68-c852b8056ffa
-langcode: en
+uuid: 877257b0-e60a-4284-8277-8f22c2d0c03f
+langcode: en-gb
 status: true
 dependencies: {  }
 _core:
   default_config_hash: Y_nwcFXXYlfukKYe7F1YmIqsczeIjIz9i0Zs_qOVHjo
-id: landscape_21x9
 label: 'Landscape: 21x9'
+id: landscape_21x9
 description: ''
 aspect_ratio: '21:9'
 soft_limit_width: null

@@ -1,16 +1,9 @@
-uuid: d7441f15-54d6-4559-a196-86d193e88894
+uuid: 68d7ce27-26ec-4ffa-a0ea-60cfb3e41225
 langcode: en
 status: true
 dependencies:
-  config:
-    - node.type.person
   module:
     - eu_cookie_compliance
-    - media
-    - node
-    - paragraphs_type_permissions
-    - site_settings
-    - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -18,19 +11,4 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access content'
   - 'display eu cookie compliance popup'
-  - 'view media'
-  - 'view paragraph content attachments'
-  - 'view paragraph content banner_nugglet'
-  - 'view paragraph content banners'
-  - 'view paragraph content flexible_layout'
-  - 'view paragraph content footer_section'
-  - 'view paragraph content promo'
-  - 'view paragraph content section'
-  - 'view paragraph content slide_nugglet'
-  - 'view paragraph content slideshow'
-  - 'view paragraph content tagline'
-  - 'view paragraph content text_media'
-  - 'view person revisions'
-  - 'view published site setting entities'

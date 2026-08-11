@@ -1,4 +1,4 @@
-uuid: 0ca0540d-0d56-41b8-8f20-793976a778d0
+uuid: 2ad7d1da-c5da-46b2-b4ac-ba615344fc6c
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ items:
     name: core.entity_form_display.paragraph.tagline.default
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -109,7 +109,7 @@ items:
     name: core.entity_view_display.paragraph.tagline.default
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -154,7 +154,7 @@ items:
     name: core.entity_view_display.paragraph.tagline.preview
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -186,7 +186,7 @@ items:
     name: field.field.paragraph.tagline.field_display_title
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -216,7 +216,7 @@ items:
     name: field.field.paragraph.tagline.field_editor_title
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -241,7 +241,7 @@ items:
     name: field.field.paragraph.tagline.field_tagline_nt_text
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -271,7 +271,7 @@ items:
     name: field.storage.paragraph.field_tagline_nt_text
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -296,7 +296,7 @@ items:
     name: paragraphs.paragraphs_type.tagline
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies: {  }
       id: tagline

@@ -88,7 +88,10 @@ function remora_core_theme(): array
         'variables' => [
           'sources' => [],
           'default_image' => null,
-          'media' => null
+          'media' => null,
+          'shrink_image' => false,
+          'sizes' => null,
+          'image_attributes' => [],
         ]
       ]
     ];

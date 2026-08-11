@@ -1,10 +1,11 @@
-uuid: 9287dd71-1a4a-4d71-af2c-ff2270881ca8
-langcode: en
+uuid: bd19cec1-ae2e-4f1c-8f7b-f7c0f5b1ec18
+langcode: en-gb
 status: true
 dependencies: {  }
 _core:
   default_config_hash: 2ObztXQJvdvpaCi2UBrQXkzykKDw3aupr3IpbVbkIAU
 name: Organisations
 vid: organisations
-description: ''
+description: null
 weight: 0
+new_revision: false

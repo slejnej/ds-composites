@@ -67,7 +67,7 @@
               <div class="banner-image-wrapper position-relative flex-md-6 flex-lg-6 flex-xl-5 flex-xxl-6">
                 {% block banner_image_ratio %}
                   <div class="banner-image position-relative d-flex justify-content-center align-items-center">
-                    {{ image|remora_image({'default': 'free'}) }}
+                    {{ image|remora_image({'default': 'free'}, true, {}, shrink_image) }}
                   </div>
                 {% endblock %}
 

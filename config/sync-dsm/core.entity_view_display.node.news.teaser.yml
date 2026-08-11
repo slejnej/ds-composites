@@ -1,15 +1,12 @@
-uuid: da1f9790-f600-4ba0-9c66-89e1a2139014
-langcode: en
+uuid: 0b79a25f-930d-4141-9550-8eabaf6cebce
+langcode: en-gb
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.news.field_alternative_title
     - field.field.node.news.field_body
-    - field.field.node.news.field_categories
-    - field.field.node.news.field_countries
     - field.field.node.news.field_date
-    - field.field.node.news.field_diseases
     - field.field.node.news.field_hero_content
     - field.field.node.news.field_image
     - field.field.node.news.field_main_nuggets
@@ -24,8 +21,6 @@ dependencies:
     - field.field.node.news.field_seo_title
     - field.field.node.news.field_sidebar_nuggets
     - field.field.node.news.field_summary
-    - field.field.node.news.field_tags
-    - field.field.node.news.field_topics
     - node.type.news
   module:
     - user
@@ -44,8 +39,6 @@ content:
 hidden:
   field_alternative_title: true
   field_body: true
-  field_categories: true
-  field_countries: true
   field_date: true
   field_diseases: true
   field_hero_content: true

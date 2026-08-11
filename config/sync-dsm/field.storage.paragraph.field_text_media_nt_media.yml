@@ -1,10 +1,11 @@
-uuid: 1e2884ab-f8aa-4b89-b939-24aa6157b627
-langcode: en
+uuid: 0c2a3c08-da55-45ec-96bf-0251bb1575cc
+langcode: en-gb
 status: true
 dependencies:
   module:
     - media
     - paragraphs
+    - text_media_nugget
   enforced:
     module:
       - text_media_nugget

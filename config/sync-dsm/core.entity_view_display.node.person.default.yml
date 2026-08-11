@@ -1,14 +1,11 @@
-uuid: 52f0b517-c816-4ff7-ab9d-b889d2b27315
-langcode: en
+uuid: ec60097f-5a54-4924-8a92-abc0af410a01
+langcode: en-gb
 status: true
 dependencies:
   config:
     - field.field.node.person.field_alternative_title
     - field.field.node.person.field_body
-    - field.field.node.person.field_categories
-    - field.field.node.person.field_countries
     - field.field.node.person.field_department
-    - field.field.node.person.field_diseases
     - field.field.node.person.field_first_name
     - field.field.node.person.field_hero_content
     - field.field.node.person.field_honorific_title
@@ -26,8 +23,6 @@ dependencies:
     - field.field.node.person.field_social_media
     - field.field.node.person.field_suffix
     - field.field.node.person.field_summary
-    - field.field.node.person.field_tags
-    - field.field.node.person.field_topics
     - node.type.person
   module:
     - layout_paragraphs
@@ -205,7 +200,6 @@ content:
     region: content
 hidden:
   field_categories: true
-  field_countries: true
   field_diseases: true
   field_hero_content: true
   field_tags: true

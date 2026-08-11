@@ -1,0 +1,6 @@
+
+{% if url %}
+  <a href="{{ url }}">{{ responsive_image }}</a>
+{% else %}
+  {{ responsive_image['#uri']|remora_image({'default': 'free'}, true, responsive_image['#attributes'], shrink_image) }}
+{% endif %}

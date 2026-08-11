@@ -1,4 +1,4 @@
-uuid: 2932904c-a083-4d51-afce-194aea2c2e93
+uuid: 8988ce91-5d47-410d-a6dd-966b4098d76d
 langcode: en
 status: true
 dependencies:
@@ -6,12 +6,10 @@ dependencies:
     - system
   theme:
     - barrio_base_theme
-_core:
-  default_config_hash: Z9Jd8_KPk0aGn82WjsoAb5nrwQlPErinPS5TyGJKdng
 id: barrio_base_theme_branding
 theme: barrio_base_theme
 region: nav_branding
-weight: -6
+weight: 0
 provider: null
 plugin: system_branding_block
 settings:

@@ -1,5 +1,5 @@
-uuid: ff76dd44-bff6-4bad-b04b-fd00d87a3548
-langcode: en
+uuid: 1be863a4-2104-4401-94ce-e060285a2c27
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -8,7 +8,7 @@ dependencies:
     module:
       - media_library
 _core:
-  default_config_hash: 04_dAqpWYP1WmsXZ7IXJ7-yarCvNddD10EUkBDtIFy4
+  default_config_hash: r2GQZsqDdaQd3AkpSy5qUWnTrm63mHljY8WZsYkw1LQ
 id: media.media_library
 label: 'Media library'
 description: ''

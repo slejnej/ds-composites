@@ -1,4 +1,4 @@
-uuid: 4fb706d5-6646-4808-b2af-5ff9e45375b2
+uuid: bf955714-0c00-46a9-aa7c-78c848cd412a
 langcode: en-gb
 status: true
 dependencies:
@@ -17,7 +17,7 @@ bundle: promo
 label: 'Body text'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

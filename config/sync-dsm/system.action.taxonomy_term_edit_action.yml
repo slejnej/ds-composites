@@ -1,10 +1,10 @@
-uuid: 4ae63853-dae7-4290-9c3a-fb6ee972d268
+uuid: d5078e7f-353b-433a-a96c-fb7a73ea22da
 langcode: en
 status: true
 dependencies:
   module:
-    - taxonomy
     - views_bulk_edit
+    - taxonomy
 _core:
   default_config_hash: b5BETc7ATggsTs4n0jHuPnUbl-QJ5Y4obwjOAsAjMU0
 id: taxonomy_term_edit_action

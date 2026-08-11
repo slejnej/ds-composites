@@ -36,7 +36,7 @@
     "mrm-remora/organisations_taxonomy": "*",
     "mrm-remora/page_content_type": "*",
     "mrm-remora/person_content_type": "*",
-    "mrm-remora/promo_nugget": "*",
+    "mrm-remora/promo_pod": "*",
     "mrm-remora/remora_core": "*",
     "mrm-remora/remora_sections": "*",
     "mrm-remora/security": "*",
@@ -240,9 +240,9 @@
       "no-api": true
     },
     {
-      "name": "mrm-remora/promo_nugget",
+      "name": "mrm-remora/promo_pod",
       "type": "path",
-      "url": "web/modules/custom/promo_nugget",
+      "url": "web/modules/custom/promo_pod",
       "no-api": true
     },
     {

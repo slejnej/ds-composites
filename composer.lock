@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0af771e3ee692333252566cd64905b30",
+    "content-hash": "229361a3a43fd884ace0fe437d50f257",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6627,12 +6627,12 @@
             }
         },
         {
-            "name": "mrm-remora/promo_nugget",
+            "name": "mrm-remora/promo_pod",
             "version": "dev-upgrade",
             "dist": {
                 "type": "path",
-                "url": "web/modules/custom/promo_nugget",
-                "reference": "9bb304be76f537680b553583332de28120a28cf0"
+                "url": "web/modules/custom/promo_pod",
+                "reference": "6b6842776e3915bd85c8b11d31d7ce066cec5977"
             },
             "require": {
                 "drupal/field_group": "^3.4",
@@ -6648,7 +6648,7 @@
                     "email": "nelle@mantaraymedia.co.uk"
                 }
             ],
-            "description": "Promo nugget - contains functionalities to enable Promo nugget",
+            "description": "Promo pod - contains functionalities to enable Promo pod",
             "transport-options": {
                 "relative": true
             }

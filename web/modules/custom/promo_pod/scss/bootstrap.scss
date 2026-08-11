@@ -1,0 +1,4 @@
+.paragraph--type--promo .promo-text-wrapper .promo-title {
+  @include typography-mobile($text-mobile-title-promo-font, $text-mobile-title-promo-size, $text-mobile-title-promo-weight, $text-mobile-title-promo-line-height);
+  @include typography-desktop($text-desktop-title-promo-font, $text-desktop-title-promo-size, $text-desktop-title-promo-weight, $text-desktop-title-promo-line-height);
+}

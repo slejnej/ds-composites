@@ -3,13 +3,13 @@ _core:
 module:
   auto_entitylabel: -100
   admin_toolbar: 0
-  admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
   administerusersbyrole: 0
   advanced_language_selector: 0
   attachments_nugget: 0
   banners_nugget: 0
   block: 0
+  block_content: 0
   breakpoint: 0
   captcha: 0
   cards_nugget: 0
@@ -31,6 +31,7 @@ module:
   cshs: 0
   datetime: 0
   dblog: 0
+  dc_custom: 0
   dynamic_entity_reference: 0
   easy_breadcrumb: 0
   editor: 0
@@ -46,12 +47,14 @@ module:
   google_tag: 0
   help: 0
   helper_module: 0
+  hide_american_english: 0
   honeypot: 0
   image: 0
   image_widget_crop: 0
   installation_profile: 0
   language: 0
   layout_builder: 0
+  layout_builder_expose_all_field_blocks: 0
   layout_discovery: 0
   layout_paragraphs: 0
   link: 0
@@ -88,6 +91,7 @@ module:
   seckit: 0
   security: 0
   simple_sitemap: 0
+  simple_sitemap_engines: 0
   site_settings: 0
   site_settings_type_permissions: 0
   slideshow_nugget: 0

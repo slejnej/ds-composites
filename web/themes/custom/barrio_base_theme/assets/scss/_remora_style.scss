@@ -3,6 +3,11 @@ img {
   width: 100%;
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
 // Oembed video styles
 // Adds styles to make oembed iframes full width
 .media-oembed-video {

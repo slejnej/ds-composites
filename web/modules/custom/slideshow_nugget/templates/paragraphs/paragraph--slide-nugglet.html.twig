@@ -21,7 +21,14 @@
           {% if content.field_slide_nt_image['#items'] is not empty %}
             <div class="slide-image position-relative">
               {% block slide_image_ratio %}
-                {{ image|remora_image({'default': 'portrait_3_4', 'lg': 'landscape_21_9'}) }}
+                {% set slide_index = attributes['data-slide-index'] | render %}
+                {%  if slide_index == '0' %}
+                  {% set loading_attr = {'loading': 'eager', 'fetchpriority': 'high'} %}
+                {% else %}
+                  {% set loading_attr = {'loading': 'lazy', 'class': 'load-hidden'} %}
+                {% endif %}
+
+                {{ image|remora_image({'default': 'landscape_16_9'}, true, loading_attr) }}
               {% endblock %}
 
               {% block image_caption %}

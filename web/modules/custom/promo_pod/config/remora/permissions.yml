@@ -1,0 +1,11 @@
+editor:
+  - 'create paragraph content promo'
+  - 'delete paragraph content promo'
+  - 'update paragraph content promo'
+  - 'view paragraph content promo'
+
+anonymous:
+  - 'view paragraph content promo'
+
+authenticated:
+  - 'view paragraph content promo'

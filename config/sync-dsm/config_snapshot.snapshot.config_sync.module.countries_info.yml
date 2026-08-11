@@ -1,4 +1,4 @@
-uuid: 35ef15aa-9abf-4aca-8f5a-297abb2d4937
+uuid: d9d90b96-cd00-4b6d-af50-83d78d4e00a7
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ items:
     name: core.entity_form_display.taxonomy_term.cit_countries_information.default
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -403,7 +403,7 @@ items:
     name: field.storage.node.field_countries
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         module:

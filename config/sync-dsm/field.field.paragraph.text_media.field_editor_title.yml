@@ -1,10 +1,12 @@
-uuid: d57b520b-c7ce-45a8-9c7b-a6807927adc1
-langcode: en
+uuid: 5f53fe6f-f250-4b80-ae1b-2606f20168f1
+langcode: en-gb
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_editor_title
     - paragraphs.paragraphs_type.text_media
+  module:
+    - text_media_nugget
   enforced:
     module:
       - text_media_nugget

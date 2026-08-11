@@ -1,15 +1,12 @@
-uuid: b3f91fb9-9ebc-4cb5-997f-cc850a04ca0f
-langcode: en
+uuid: 72572e6d-28b5-4808-ae4e-7cc405d322f9
+langcode: en-gb
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.card
     - field.field.node.news.field_alternative_title
     - field.field.node.news.field_body
-    - field.field.node.news.field_categories
-    - field.field.node.news.field_countries
     - field.field.node.news.field_date
-    - field.field.node.news.field_diseases
     - field.field.node.news.field_hero_content
     - field.field.node.news.field_image
     - field.field.node.news.field_main_nuggets
@@ -24,15 +21,13 @@ dependencies:
     - field.field.node.news.field_seo_title
     - field.field.node.news.field_sidebar_nuggets
     - field.field.node.news.field_summary
-    - field.field.node.news.field_tags
-    - field.field.node.news.field_topics
     - node.type.news
   module:
     - datetime
     - text
     - user
 _core:
-  default_config_hash: Agjz3CT_YAU9eiUE7XPA5AoTrh9waGh_Woulp6z07cw
+  default_config_hash: n7_wpWoj0Qt-xaHR8BqPlqF2WvX1hy0gk_mY9mqLrm4
 id: node.news.card
 targetEntityType: node
 bundle: news
@@ -44,14 +39,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
-    region: content
-  field_categories:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 10
     region: content
   field_date:
     type: datetime_default
@@ -101,7 +88,6 @@ content:
     region: content
 hidden:
   field_body: true
-  field_countries: true
   field_diseases: true
   field_hero_content: true
   field_main_nuggets: true

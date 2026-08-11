@@ -1,10 +1,10 @@
-uuid: aaf7148d-1e1e-46f1-aaa5-ca0166d00e83
+uuid: aabab69e-2e6a-4fe5-9d74-d630c9d6f5c7
 langcode: en
 status: true
 dependencies:
   module:
-    - media
     - views_bulk_edit
+    - media
 _core:
   default_config_hash: xN0kWpQZeiYp9xWNycp37rmLmAcnEyS9LDjPPTPce2w
 id: media_edit_action

@@ -1,5 +1,5 @@
-uuid: d009f9fa-8050-4ce2-9514-5ca36bac8101
-langcode: en
+uuid: 4987744b-0d50-4d9d-86f3-6cbe9ba3464b
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -7,6 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.text_media
   module:
     - options
+    - text_media_nugget
   enforced:
     module:
       - text_media_nugget

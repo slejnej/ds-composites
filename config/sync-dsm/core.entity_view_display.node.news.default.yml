@@ -1,14 +1,11 @@
-uuid: e188a783-a939-4385-b296-07cf9d659d33
-langcode: en
+uuid: 28b7f5ca-4f87-45d2-a5f7-f38a34070acc
+langcode: en-gb
 status: true
 dependencies:
   config:
     - field.field.node.news.field_alternative_title
     - field.field.node.news.field_body
-    - field.field.node.news.field_categories
-    - field.field.node.news.field_countries
     - field.field.node.news.field_date
-    - field.field.node.news.field_diseases
     - field.field.node.news.field_hero_content
     - field.field.node.news.field_image
     - field.field.node.news.field_main_nuggets
@@ -23,8 +20,6 @@ dependencies:
     - field.field.node.news.field_seo_title
     - field.field.node.news.field_sidebar_nuggets
     - field.field.node.news.field_summary
-    - field.field.node.news.field_tags
-    - field.field.node.news.field_topics
     - node.type.news
   module:
     - datetime
@@ -53,15 +48,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 104
-    region: content
-  field_categories:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 10
     region: content
   field_date:
     type: datetime_default
@@ -189,7 +175,6 @@ content:
     weight: 100
     region: content
 hidden:
-  field_countries: true
   field_diseases: true
   field_hero_content: true
   field_tags: true

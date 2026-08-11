@@ -1,4 +1,4 @@
-uuid: 41568977-705b-4e71-a4e2-4714717fa01d
+uuid: b9b579dc-d7ae-4353-b818-96e03dcbe2ab
 langcode: en-gb
 status: true
 dependencies:
@@ -17,7 +17,7 @@ bundle: promo
 label: 'Promo title'
 description: 'Text added to ‘Title’ will display as the button text. '
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

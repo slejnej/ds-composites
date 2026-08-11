@@ -1,15 +1,12 @@
-uuid: 442ca5cf-ce61-4f16-82e1-bc036cc6d76a
-langcode: en
+uuid: b02b118c-e048-404b-a411-57217d0fd46b
+langcode: en-gb
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.person.field_alternative_title
     - field.field.node.person.field_body
-    - field.field.node.person.field_categories
-    - field.field.node.person.field_countries
     - field.field.node.person.field_department
-    - field.field.node.person.field_diseases
     - field.field.node.person.field_first_name
     - field.field.node.person.field_hero_content
     - field.field.node.person.field_honorific_title
@@ -27,8 +24,6 @@ dependencies:
     - field.field.node.person.field_social_media
     - field.field.node.person.field_suffix
     - field.field.node.person.field_summary
-    - field.field.node.person.field_tags
-    - field.field.node.person.field_topics
     - node.type.person
   module:
     - layout_builder
@@ -212,7 +207,6 @@ content:
     region: content
 hidden:
   field_categories: true
-  field_countries: true
   field_diseases: true
   field_meta_tags: true
   field_tags: true

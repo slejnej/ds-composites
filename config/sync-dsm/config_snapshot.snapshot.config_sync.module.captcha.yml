@@ -1,0 +1,79 @@
+uuid: 18bc546b-82e7-4638-8787-c9c80eba8593
+langcode: en
+status: true
+dependencies:
+  module:
+    - captcha
+id: config_sync.module.captcha
+snapshotSet: config_sync
+extensionType: module
+extensionName: captcha
+items:
+  -
+    collection: ''
+    name: captcha.captcha_point.contact_message_personal_form
+    data:
+      langcode: en
+      status: false
+      dependencies: {  }
+      formId: contact_message_personal_form
+      captchaType: default
+      label: contact_message_personal_form
+      _core:
+        default_config_hash: 7zUmOK1ti1l0bc78ieysHa3_57MOin7IgHpHhwbSugs
+  -
+    collection: ''
+    name: captcha.captcha_point.user_login_form
+    data:
+      langcode: en-gb
+      status: true
+      dependencies: {  }
+      formId: user_login_form
+      captchaType: default
+      label: user_login_form
+      _core:
+        default_config_hash: 1DHJ6Pf-WPwPpjF4Cr6dvNi7FZl1JFg-YdY3pa8w4O4
+  -
+    collection: ''
+    name: captcha.captcha_point.user_pass
+    data:
+      langcode: en-gb
+      status: false
+      dependencies: {  }
+      formId: user_pass
+      captchaType: default
+      label: user_pass
+      _core:
+        default_config_hash: vEy2OHrWUq1BqnvOiKjIiGomKFgMhF5QvlxHGmP9IXk
+  -
+    collection: ''
+    name: captcha.captcha_point.user_register_form
+    data:
+      langcode: en-gb
+      status: true
+      dependencies: {  }
+      formId: user_register_form
+      captchaType: default
+      label: user_register_form
+      _core:
+        default_config_hash: xv0roFGwFQhCiOQB-B62n22qPMtppaIpOJcuPmahMJc
+  -
+    collection: ''
+    name: captcha.settings
+    data:
+      langcode: en-gb
+      enable_globally: 0
+      enable_globally_on_admin_routes: false
+      default_challenge: recaptcha_v3/default
+      description: ''
+      title: ''
+      administration_mode: false
+      administration_mode_on_admin_routes: false
+      whitelist_ips: 172.16.0.0-172.31.255.255
+      wrong_captcha_response_message: 'The answer you entered for the CAPTCHA was not correct.'
+      default_validation: 1
+      persistence: 1
+      enable_stats: false
+      log_wrong_responses: false
+      _core:
+        default_config_hash: Wdb1AvfUwpHsQFp5MTFK7WJR7TgBS1obFtGVvrTN9hU

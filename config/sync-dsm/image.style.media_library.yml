@@ -1,12 +1,12 @@
-uuid: dec202e6-239a-45cc-8611-6ea21a578a14
-langcode: en
+uuid: e7c2009f-d391-4845-a32c-1cdc87777c3e
+langcode: en-gb
 status: true
 dependencies:
   enforced:
     module:
       - media_library
 _core:
-  default_config_hash: 7qJqToD1OQLAyeswpmg7M0LRxQlw1URQkJDWUJCnmR8
+  default_config_hash: rRukp1uZG81FsvnP9LNcN6uZpfUDFBpAJwHYjp1CeoQ
 name: media_library
 label: 'Media Library thumbnail (220×220)'
 effects:

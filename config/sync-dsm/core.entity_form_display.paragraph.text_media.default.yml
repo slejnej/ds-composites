@@ -1,5 +1,5 @@
-uuid: 8c545ee0-188d-412c-afe9-e1c545831f46
-langcode: en
+uuid: 204cc4d5-85e5-4bef-98b6-5143dad317cb
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -15,6 +15,7 @@ dependencies:
     - layout_discovery
     - media_library
     - text
+    - text_media_nugget
   enforced:
     module:
       - text_media_nugget
