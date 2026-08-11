@@ -1,4 +1,4 @@
-diff --git a/config/install/seckit.settings.yml b/web/modules/contrib/seckit/config/install/seckit.settings.yml
+diff --git a/config/install/seckit.settings.yml b/web/modules/custom/seckit/config/install/seckit.settings.yml
 deleted file mode 100644
 index 65618dd..0000000
 --- a/config/install/seckit.settings.yml

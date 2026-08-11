@@ -1,10 +1,11 @@
 uuid: 0eb87b2e-d601-45ac-a793-be3cfc13fd28
-langcode: en
+langcode: en-gb
 status: true
 dependencies: {  }
 _core:
   default_config_hash: KXwZQu_rjY1pTpIluyHOLCxvlUiWDcKp9IsibRy1KpM
 name: Topics
 vid: topics
-description: ''
+description: null
 weight: 0
+new_revision: false

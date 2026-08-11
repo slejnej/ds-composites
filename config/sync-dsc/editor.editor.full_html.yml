@@ -1,5 +1,5 @@
 uuid: f942063e-6093-4f54-b96b-5fd823f8f9cf
-langcode: en
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -110,4 +110,5 @@ settings:
       linkit_profile: default
     media_media:
       allow_view_mode_override: true
-image_upload: {  }
+image_upload:
+  status: false

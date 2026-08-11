@@ -1,5 +1,5 @@
 uuid: ec1848e1-6c3f-4112-b4ed-9aa52eddcdbf
-langcode: en
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -780,6 +780,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0

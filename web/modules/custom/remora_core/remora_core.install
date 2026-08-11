@@ -34,7 +34,7 @@ function remora_core_install(): void
  */
 function remora_core_update_9001(): void
 {
-  Drupal::service('module_installer')->install(['dblog', 'admin_toolbar_tools', 'admin_toolbar_links_access_filter']);
+  Drupal::service('module_installer')->install(['dblog', 'admin_toolbar_tools']);
 }
 
 /**

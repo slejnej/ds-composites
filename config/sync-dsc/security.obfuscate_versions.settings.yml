@@ -1,0 +1,1 @@
+add_http_headers: "X-Permitted-Cross-Domain-Policies: none\r\nCross-Origin-Embedder-Policy: unsafe-none\r\nCross-Origin-Opener-Policy: same-origin\r\nCross-Origin-Resource-Policy: same-site"

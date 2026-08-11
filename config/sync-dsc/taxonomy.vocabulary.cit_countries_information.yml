@@ -8,3 +8,4 @@ name: Countries
 vid: cit_countries_information
 description: 'Countries information like ISO2 code, ISO3 code, name, official name, numcode and continent.'
 weight: 0
+new_revision: false

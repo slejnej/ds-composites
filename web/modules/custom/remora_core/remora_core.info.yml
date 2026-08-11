@@ -8,7 +8,6 @@ dependencies:
   - drupal:administerusersbyrole
   - drupal:admin_toolbar
   - drupal:admin_toolbar_tools
-  - drupal:admin_toolbar_links_access_filter
   - drupal:administerusersbyrole
   - drupal:captcha
   - drupal:ckeditor5

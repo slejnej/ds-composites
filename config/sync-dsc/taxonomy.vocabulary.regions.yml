@@ -6,5 +6,6 @@ _core:
   default_config_hash: x7EPO-sUNpsuqyEnsYoDD7Ttg10Xi9AbcvRTC_mBRc8
 name: Regions
 vid: regions
-description: ''
+description: null
 weight: 0
+new_revision: false

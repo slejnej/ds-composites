@@ -57,8 +57,9 @@ items:
       dependencies:
         config:
           - simple_sitemap.type.default_hreflang
+      langcode: en
       _core:
-        default_config_hash: zHW-ZT11Lkf2zSRgisGKjgU7TzrNcT8_MwFeuVtl8O8
+        default_config_hash: rzLPapRSW-bgTs4MObzlqsqwj5IxPGO9EQZolw2ZzFc
   -
     collection: ''
     name: simple_sitemap.sitemap.index
@@ -72,8 +73,9 @@ items:
       dependencies:
         config:
           - simple_sitemap.type.index
+      langcode: en
       _core:
-        default_config_hash: aJs7eKxEbjBloVrp0IuxQbeq25CNH0r9AhSS29kHFMw
+        default_config_hash: WffB95XdMvoUEvymTyLFLB-Q_JnCbbjy9Kj7TvlzN9s
   -
     collection: ''
     name: simple_sitemap.type.default_hreflang
@@ -87,8 +89,10 @@ items:
         - entity
         - entity_menu_link_content
         - arbitrary
+      langcode: en
+      status: true
       _core:
-        default_config_hash: pYORFuFzL0b2FKevz6fSag1wOUNTthFPPLxZ18JB1t0
+        default_config_hash: yaHZPVGZtW3BUvzzdMgc4ed5l4GCiFjcgYlLZmupcqA
   -
     collection: ''
     name: simple_sitemap.type.index
@@ -99,5 +103,7 @@ items:
       sitemap_generator: index
       url_generators:
         - index
+      status: true
+      langcode: en
       _core:
-        default_config_hash: pbgJrin6L7zsVEKS8oEDCYJPCzgu765iTGQh2GPX1no
+        default_config_hash: yS_TZXc9X2zr2RfAwk7momW3LG9wra--H2ApqA5Vgak

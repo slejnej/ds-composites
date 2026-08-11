@@ -98,6 +98,7 @@ items:
               type: mini
               options:
                 offset: 0
+                pagination_heading_level: h4
                 items_per_page: 10
                 total_pages: 0
                 id: 0
@@ -386,4 +387,4 @@ items:
               - user.permissions
             tags: {  }
       _core:
-        default_config_hash: z9csC6m3M65M2JczdNul_lMUrVg8ZO66pbSq8jPCBKs
+        default_config_hash: KejdxDJQmx8SaO-t83OVekLw6ar4ldjmsJMGcotGxnQ

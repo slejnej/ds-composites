@@ -1,5 +1,5 @@
 uuid: 0075453c-86a0-46b5-8e0a-6441c58f836d
-langcode: en
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -16,8 +16,8 @@ _core:
   default_config_hash: 8SSUHcTwqm8vw8fZABiS9HNmlJH6Ar23Nto4QXtkOE4
 name: Person
 type: person
-description: ''
-help: ''
+description: null
+help: null
 new_revision: true
 preview_mode: 0
 display_submitted: false

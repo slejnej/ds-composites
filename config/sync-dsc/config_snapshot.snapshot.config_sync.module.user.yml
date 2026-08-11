@@ -751,6 +751,7 @@ items:
               type: full
               options:
                 offset: 0
+                pagination_heading_level: h4
                 items_per_page: 50
                 total_pages: 0
                 id: 0
@@ -1215,7 +1216,7 @@ items:
               - user.permissions
             tags: {  }
       _core:
-        default_config_hash: njaZigMvB4ap21Fg_tQcJhWgYJCGNi49Z5rRL_N6RI0
+        default_config_hash: FFLg74mnzRE10lgg5fspPCZWLnIEcvCnJMlNzj8OEtw
   -
     collection: ''
     name: views.view.who_s_new

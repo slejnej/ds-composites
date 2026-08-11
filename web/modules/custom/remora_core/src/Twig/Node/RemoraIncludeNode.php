@@ -2,9 +2,11 @@
 
 namespace Drupal\remora_core\Twig\Node;
 
+use Twig\Attribute\YieldReady;
 use Twig\Compiler;
 use Twig\Node\IncludeNode;
 
+#[YieldReady]
 class RemoraIncludeNode extends IncludeNode
 {
 
@@ -15,18 +17,30 @@ class RemoraIncludeNode extends IncludeNode
    * @param Compiler $compiler
    * @return void
    */
-  protected function addGetTemplate(Compiler $compiler): void
+  public function compile(Compiler $compiler): void
   {
-    if($compiler->getEnvironment()->isDebug()) {
+    $isDebug = $compiler->getEnvironment()->isDebug();
+    if($isDebug) {
       // add a comment saying which template is being used
       $compiler
-        ->write('echo "<!-- REMORA INCLUDE: " . $this->env->resolveTemplate(')
+        ->write('yield from ["<!-- BEGIN REMORA INCLUDE: " . $this->env->resolveTemplate(')
         ->subcompile($this->getNode('expr'))
-        ->raw(')->getTemplateName() . " -->";')
-      ;
+        ->write(
+          ')->getTemplateName() . " -->"];' . PHP_EOL
+        );
     }
 
-    parent::addGetTemplate($compiler);
+    parent::compile($compiler);
+
+    if($isDebug) {
+      // add a comment saying which template is being used
+      $compiler
+        ->write('yield from ["<!-- END REMORA INCLUDE: " . $this->env->resolveTemplate(')
+        ->subcompile($this->getNode('expr'))
+        ->write(
+          ')->getTemplateName() . " -->"];' . PHP_EOL
+        );
+    }
   }
 
 }

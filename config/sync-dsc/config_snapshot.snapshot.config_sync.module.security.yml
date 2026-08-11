@@ -13,7 +13,7 @@ items:
     collection: ''
     name: permissionspolicy.settings
     data:
-      langcode: en
+      langcode: en-gb
       enforce:
         enable: true
         features:
@@ -103,7 +103,7 @@ items:
     collection: ''
     name: seckit.settings
     data:
-      langcode: en
+      langcode: en-gb
       seckit_xss:
         csp:
           checkbox: true
@@ -160,3 +160,12 @@ items:
         disable_autocomplete: false
       _core:
         default_config_hash: fpcBuAXb8-6iYS5QkNwCVXlmbmWrBBq1In2dUpDbk2Q
+  -
+    collection: ''
+    name: security.obfuscate_versions.settings
+    data:
+      remove_http_headers: "x-powered-by\r\nserver\r\nx-generator\r\nx-drupal-cache\r\nx-drupal-dynamic-cache\r\nserver\r\nx-drupal-cache-contexts\r\nx-drupal-cache-max-age\r\nx-drupal-cache-tags"
+      remove_metatags: Generator
+      add_http_headers: "X-Permitted-Cross-Domain-Policies: none\r\nCross-Origin-Embedder-Policy: unsafe-none\r\nCross-Origin-Resource-Policy: same-site\r\nCross-Origin-Opener-Policy: same-origin"
+      _core:
+        default_config_hash: Sm23XFuvY9M7Zj6A3RMdTgRBtVJSl3unpRqUqKOQqIk

@@ -1,5 +1,5 @@
 uuid: f82833e8-877f-4ce6-b0cd-4d2427b55691
-langcode: en
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -44,4 +44,5 @@ settings:
         - '<i class>'
     linkit_extension:
       linkit_enabled: false
-image_upload: {  }
+image_upload:
+  status: false

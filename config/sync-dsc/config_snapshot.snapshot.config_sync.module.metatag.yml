@@ -121,5 +121,7 @@ items:
       tag_trim_maxlength: {  }
       tag_scroll_max_height: ''
       use_maxlength: true
+      tag_trim_end: '|.,-:;/+&([{"'''
+      trim_suffix: ''
       _core:
-        default_config_hash: tKLBW2GXZVLFXqS9QgLyfTuxCLc1u_quKPQLtCia-Bw
+        default_config_hash: xF-yd0bqa4S5zWER0Kasv-BK0-xGEegxnFERohs2QTs

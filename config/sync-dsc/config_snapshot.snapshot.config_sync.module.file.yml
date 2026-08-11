@@ -494,7 +494,7 @@ items:
                 decimal: .
                 separator: ','
                 format_plural: true
-                format_plural_string: !!binary MSBwbGFjZQNAY291bnQgcGxhY2Vz
+                format_plural_string: !!binary QGNvdW50IHBsYWNlA0Bjb3VudCBwbGFjZXM=
                 prefix: ''
                 suffix: ''
               operations:
@@ -552,6 +552,7 @@ items:
               type: mini
               options:
                 offset: 0
+                pagination_heading_level: h4
                 items_per_page: 50
                 total_pages: 0
                 id: 0
@@ -1087,6 +1088,7 @@ items:
               type: mini
               options:
                 offset: 0
+                pagination_heading_level: h4
                 items_per_page: 10
                 total_pages: 0
                 id: 0
@@ -1227,4 +1229,4 @@ items:
               - user.permissions
             tags: {  }
       _core:
-        default_config_hash: ja1IXL3-eSj1lJFQKxyY6-b0yfBsQzvngMbe0J2F22w
+        default_config_hash: NYJWABHsIFg-cU-Qya8fiMuQSM4rirBEfPFqkgRtsKA

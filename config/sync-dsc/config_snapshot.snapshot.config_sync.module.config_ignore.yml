@@ -14,7 +14,7 @@ items:
     name: config_ignore.settings
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       mode: simple
       ignored_config_entities:
         - system.site

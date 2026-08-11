@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: VVUUpnJomJ_zAlrcmzQCTAVLNHiZWbw4-e4rdaLHic4
+  default_config_hash: SFrpkTm9eV-a9yZurLBwkU8BkSu3Lj9WcNIPUx9W2Nc
 id: seznam
 label: Seznam
 url: null

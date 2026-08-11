@@ -13,13 +13,14 @@ items:
     collection: ''
     name: recaptcha_v3.settings
     data:
-      site_key: ''
-      secret_key: ''
-      verify_hostname: true
-      default_challenge: captcha\Math
-      error_message: 'Anti-bot verification failed.'
-      cacheable: false
-      library_use_recaptcha_net: false
+      langcode: en-gb
+      site_key: null
+      secret_key: null
       hide_badge: false
+      verify_hostname: true
+      default_challenge: recaptcha/reCAPTCHA
+      error_message: 'Antibot verification failed.'
+      cacheable: false
+      library_use_recaptcha_net: true
       _core:
-        default_config_hash: 6xvuojdlZ8-8Q7yJyRldPaE0UK_YijOlDo6HvURmW_E
+        default_config_hash: 8k5KBhShv2Z2F4c6wzlRiCQz8req7CwFUnzHzEz8vIE

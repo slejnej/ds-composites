@@ -1,10 +1,11 @@
 uuid: 3e5aea30-3f6d-48b4-b26b-94c66ab0b4d2
-langcode: en
+langcode: en-gb
 status: true
 dependencies: {  }
 _core:
   default_config_hash: Deoo3IPi5rKzpXozwriXygyN8b_k_QBRejmuJBy0kAw
 name: Departments
 vid: departments
-description: ''
+description: null
 weight: 0
+new_revision: false

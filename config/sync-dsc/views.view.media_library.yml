@@ -1,5 +1,5 @@
 uuid: 72ffd824-af70-4c55-82b1-392f77a98ec7
-langcode: en
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -139,6 +139,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 24
           total_pages: null
           id: 0
