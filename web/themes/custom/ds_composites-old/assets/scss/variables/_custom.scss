@@ -1,0 +1,19 @@
+// Add custom variables - that aren't in Figma - here.
+
+/** ================= [HEADER] ================= **/
+$navbar-toggler-height: 62px;
+$navbar-toggler-width: 62px;
+$navbar-toggler-height-mobile: 50px;
+$navbar-toggler-width-mobile: 50px;
+$navbar-search-height-mobile: $navbar-toggler-height-mobile;
+$navbar-search-width-mobile: $navbar-toggler-width-mobile;
+$navbar-search-height: $navbar-toggler-height;
+$navbar-search-width: $navbar-toggler-width;
+$navbar-search-bg: #1F3D43;
+
+/** ================= [PROMO] ================= **/
+$promo-bg: $global-color-warning-warning-500;
+$promo-title-color: $global-text-primary;
+$promo-text-color: $global-text-primary;
+//$promo-link-color: $text-link !default;
+//$promo-link-color-hover: $text-link-hover !default;

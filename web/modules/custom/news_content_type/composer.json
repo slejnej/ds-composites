@@ -4,12 +4,6 @@
   "description": "News content type - contains functionalities for News CT",
   "minimum-stability": "stable",
   "license": "proprietary",
-  "authors": [
-    {
-      "name": "Dilwar Hussain",
-      "email": "dilwar@mantaraymedia.co.uk"
-    }
-  ],
   "require": {
     "php": ">=8.1"
   }

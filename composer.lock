@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0e0d1bd19c0c6d99daf1c7ff4868466",
+    "content-hash": "feb292ec3bfdbdd4f55587bb45e07e09",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -118,16 +118,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.391.2",
+            "version": "3.392.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "50e1ed57a0b75921efcbcabe2f8702e7508c501c"
+                "reference": "c6bb281dfbfd4c8c2d0bd2c3b95242af41bb1b4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/50e1ed57a0b75921efcbcabe2f8702e7508c501c",
-                "reference": "50e1ed57a0b75921efcbcabe2f8702e7508c501c",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c6bb281dfbfd4c8c2d0bd2c3b95242af41bb1b4c",
+                "reference": "c6bb281dfbfd4c8c2d0bd2c3b95242af41bb1b4c",
                 "shasum": ""
             },
             "require": {
@@ -209,9 +209,9 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.391.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.392.0"
             },
-            "time": "2026-08-10T18:12:09+00:00"
+            "time": "2026-08-11T18:12:10+00:00"
         },
         {
             "name": "chi-teck/drupal-code-generator",
@@ -1067,7 +1067,7 @@
         },
         {
             "name": "deux-cent-deux/drupal_search",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/drupal_search",
@@ -1101,7 +1101,7 @@
         },
         {
             "name": "deux-cent-deux/installation_profile",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/installation_profile",
@@ -1502,87 +1502,6 @@
             "homepage": "https://www.drupal.org/project/advanced_language_selector",
             "support": {
                 "source": "https://git.drupalcode.org/project/advanced_language_selector"
-            }
-        },
-        {
-            "name": "drupal/auto_entitylabel",
-            "version": "3.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/auto_entitylabel.git",
-                "reference": "8.x-3.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/auto_entitylabel-8.x-3.4.zip",
-                "reference": "8.x-3.4",
-                "shasum": "9b3d7bc8e450ae008b3f48fed0dd9dace03ddbb5"
-            },
-            "require": {
-                "drupal/core": "^10.1 || ^11"
-            },
-            "require-dev": {
-                "drupal/book": "^1.0",
-                "drupal/token": "^1.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-3.4",
-                    "datestamp": "1736308389",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "bforchhammer",
-                    "homepage": "https://www.drupal.org/user/216396"
-                },
-                {
-                    "name": "colan",
-                    "homepage": "https://www.drupal.org/user/58704"
-                },
-                {
-                    "name": "dqd",
-                    "homepage": "https://www.drupal.org/user/1001934"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "mandclu",
-                    "homepage": "https://www.drupal.org/user/52136"
-                },
-                {
-                    "name": "pravin ajaaz",
-                    "homepage": "https://www.drupal.org/user/2910049"
-                },
-                {
-                    "name": "purushotam.rai",
-                    "homepage": "https://www.drupal.org/user/3193859"
-                },
-                {
-                    "name": "renatog",
-                    "homepage": "https://www.drupal.org/user/3326031"
-                },
-                {
-                    "name": "vladimiraus",
-                    "homepage": "https://www.drupal.org/user/673120"
-                }
-            ],
-            "description": "Allows hiding of entity label fields and automatic label creation.",
-            "homepage": "https://www.drupal.org/project/auto_entitylabel",
-            "support": {
-                "source": "https://git.drupalcode.org/project/auto_entitylabel",
-                "issues": "https://www.drupal.org/project/issues/auto_entitylabel"
             }
         },
         {
@@ -6922,7 +6841,7 @@
         },
         {
             "name": "mantaraymedia/cache_service",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "local-vendors/cache_service",
@@ -7066,11 +6985,11 @@
         },
         {
             "name": "mrm-remora/attachments_pod",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/attachments_pod",
-                "reference": "c1ed67dfd01363c6c2fe296e5b70c31de497d713"
+                "reference": "5f52b25c435b7382d10b21697d3902ac296e6076"
             },
             "require": {
                 "drupal/field_group": "^3.4",
@@ -7080,12 +6999,6 @@
             "license": [
                 "proprietary"
             ],
-            "authors": [
-                {
-                    "name": "Anna Dunets",
-                    "email": "anna@mantaraymedia.co.uk"
-                }
-            ],
             "description": "Attachments pod - contains functionalities to enable attachments pod",
             "transport-options": {
                 "relative": true
@@ -7093,7 +7006,7 @@
         },
         {
             "name": "mrm-remora/aws-code-deploy",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "local-vendors/aws-code-deploy",
@@ -7144,7 +7057,7 @@
         },
         {
             "name": "mrm-remora/aws-plugin-installer",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "local-vendors/aws-plugin-installer",
@@ -7176,11 +7089,11 @@
         },
         {
             "name": "mrm-remora/banners_pod",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/banners_pod",
-                "reference": "17337b1485951fc72e7e1dd95ff11ae2ac7fdee5"
+                "reference": "59b1c41a14bfe6c274dfbba7ffb41ad1d27c9a08"
             },
             "require": {
                 "drupal/field_group": "^3.4",
@@ -7190,16 +7103,6 @@
             "license": [
                 "proprietary"
             ],
-            "authors": [
-                {
-                    "name": "Ivan Solić",
-                    "email": "ivan@mantaraymedia.co.uk"
-                },
-                {
-                    "name": "Jernej Slejko",
-                    "email": "jernej@mantaraymedia.co.uk"
-                }
-            ],
             "description": "Banners pod - contains functionalities to enable Banners pod",
             "transport-options": {
                 "relative": true
@@ -7207,7 +7110,7 @@
         },
         {
             "name": "mrm-remora/barrio_base_theme",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "local-vendors/barrio_base_theme",
@@ -7236,11 +7139,11 @@
         },
         {
             "name": "mrm-remora/cards_pod",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/cards_pod",
-                "reference": "1f090726e1214fc3e105e5e7c8dbee79bc44de9d"
+                "reference": "000e942fd6ae23613b54cdd3588d40eab9e8ffb6"
             },
             "require": {
                 "drupal/field_group": "^3.0",
@@ -7250,24 +7153,18 @@
             "license": [
                 "proprietary"
             ],
-            "authors": [
-                {
-                    "name": "Dilwar Hussain",
-                    "email": "dilwar@mantaraymedia.co.uk"
-                }
-            ],
-            "description": "Cards pod - contains functionalities to enable cards pod paragraphs. Also provides Card nuglets",
+            "description": "Cards pod - contains functionalities to enable cards pod paragraphs. Also provides Card pea-s",
             "transport-options": {
                 "relative": true
             }
         },
         {
             "name": "mrm-remora/countries_info",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/countries_info",
-                "reference": "89d93a14a305e97868516e19eb83b5f1987793a1"
+                "reference": "3f73514cac71e5fcd43e87ca6ff120e2f0f17ed0"
             },
             "require": {
                 "php": ">=8.1"
@@ -7275,12 +7172,6 @@
             "type": "drupal-custom-module",
             "license": [
                 "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Ivan Solic",
-                    "email": "ivan@mantaraymedia.co.uk"
-                }
             ],
             "description": "Countries taxonomy - contains Countries and Regions taxonomy",
             "transport-options": {
@@ -7289,22 +7180,16 @@
         },
         {
             "name": "mrm-remora/helper_module",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/helper_module",
-                "reference": "87509f9c89fa79ad0259ed78429ab2e1eb1ba678"
+                "reference": "cf86300a2cab67acf959fe0d500857c522f1454f"
             },
             "require": {
                 "drupal/core": "^9.1 | ^10"
             },
             "type": "drupal-custom-module",
-            "authors": [
-                {
-                    "name": "Jernej Slejko",
-                    "email": "slejnej@gmail.com"
-                }
-            ],
             "description": "The Remora helper module with BS5 components",
             "transport-options": {
                 "relative": true
@@ -7312,11 +7197,11 @@
         },
         {
             "name": "mrm-remora/news_content_type",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/news_content_type",
-                "reference": "9b3505c2c3aea980ec0766c118d3862540acce09"
+                "reference": "853fcc9072e2357d44056bacbcf23de4757312ee"
             },
             "require": {
                 "php": ">=8.1"
@@ -7325,12 +7210,6 @@
             "license": [
                 "proprietary"
             ],
-            "authors": [
-                {
-                    "name": "Dilwar Hussain",
-                    "email": "dilwar@mantaraymedia.co.uk"
-                }
-            ],
             "description": "News content type - contains functionalities for News CT",
             "transport-options": {
                 "relative": true
@@ -7338,11 +7217,11 @@
         },
         {
             "name": "mrm-remora/organisations_taxonomy",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/organisations_taxonomy",
-                "reference": "0c88622c7d36186255015a05c408942b7a5aa8db"
+                "reference": "8010f2b49ad710616ba5fa15e6c69bed9dcbde42"
             },
             "require": {
                 "drupal/rabbit_hole": "^2.0@alpha",
@@ -7352,12 +7231,6 @@
             "license": [
                 "proprietary"
             ],
-            "authors": [
-                {
-                    "name": "Ivan Solic",
-                    "email": "ivan@mantaraymedia.co.uk"
-                }
-            ],
             "description": "Remora organisations - Contains organisation taxonomy",
             "transport-options": {
                 "relative": true
@@ -7365,11 +7238,11 @@
         },
         {
             "name": "mrm-remora/page_content_type",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/page_content_type",
-                "reference": "939300a1e745e13e66e60cfc36cc75e967440a96"
+                "reference": "56823559a5f141904e4da18e0923ace9ed16f3f4"
             },
             "require": {
                 "php": ">=8.1"
@@ -7377,12 +7250,6 @@
             "type": "drupal-custom-module",
             "license": [
                 "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Ivan Solic",
-                    "email": "ivan@mantaraymedia.co.uk"
-                }
             ],
             "description": "Page content type - contains functionalities for Page CT",
             "transport-options": {
@@ -7390,33 +7257,12 @@
             }
         },
         {
-            "name": "mrm-remora/person_content_type",
-            "version": "dev-upgrade",
-            "dist": {
-                "type": "path",
-                "url": "web/modules/custom/person_content_type",
-                "reference": "05cd480e5a4358c4c0f698f06ea25e70e61ec4a1"
-            },
-            "require": {
-                "drupal/auto_entitylabel": "^3.0",
-                "php": ">=8.1"
-            },
-            "type": "drupal-custom-module",
-            "license": [
-                "proprietary"
-            ],
-            "description": "Person content type - contains functionalities for Person CT",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
             "name": "mrm-remora/promo_pod",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/promo_pod",
-                "reference": "6b6842776e3915bd85c8b11d31d7ce066cec5977"
+                "reference": "14cc5090282fbaa03f48a6bc8379495f365f40fb"
             },
             "require": {
                 "drupal/field_group": "^3.4",
@@ -7426,12 +7272,6 @@
             "license": [
                 "proprietary"
             ],
-            "authors": [
-                {
-                    "name": "Nelle Cutler",
-                    "email": "nelle@mantaraymedia.co.uk"
-                }
-            ],
             "description": "Promo pod - contains functionalities to enable Promo pod",
             "transport-options": {
                 "relative": true
@@ -7439,7 +7279,7 @@
         },
         {
             "name": "mrm-remora/remora_core",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/remora_core",
@@ -7531,7 +7371,7 @@
         },
         {
             "name": "mrm-remora/remora_sections",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/remora_sections",
@@ -7560,11 +7400,11 @@
         },
         {
             "name": "mrm-remora/security",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/security",
-                "reference": "c57271bd23b20741e79d4f378173416606731c48"
+                "reference": "9608540b81974b78643851c3e8e8bdf2c64c650e"
             },
             "require": {
                 "cweagans/composer-patches": "^1.7",
@@ -7584,12 +7424,6 @@
             "license": [
                 "proprietary"
             ],
-            "authors": [
-                {
-                    "name": "Esli Stavenga",
-                    "email": "esli@mantaraymedia.co.uk"
-                }
-            ],
             "description": "Security - strengthen the security of your site",
             "transport-options": {
                 "relative": true
@@ -7597,11 +7431,11 @@
         },
         {
             "name": "mrm-remora/slideshow_pod",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/slideshow_pod",
-                "reference": "a356fbadefdacccec500d47bce4d57817dd53046"
+                "reference": "7a77036bbc68992e86ffa700c78fe5733d9e52d1"
             },
             "require": {
                 "php": ">=8.1"
@@ -7610,12 +7444,6 @@
             "license": [
                 "proprietary"
             ],
-            "authors": [
-                {
-                    "name": "Dilwar Hussain",
-                    "email": "dilwar@mantaraymedia.co.uk"
-                }
-            ],
             "description": "Slideshow pod - contains functionalities to enable slideshow pod paragraphs. Also provides Slide pea",
             "transport-options": {
                 "relative": true
@@ -7623,11 +7451,11 @@
         },
         {
             "name": "mrm-remora/tagging",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/tagging",
-                "reference": "8a6ea284e228c931f82227ee340028a1e97b49db"
+                "reference": "44b2bbc8329198ee002765b18d9cd17b42874918"
             },
             "require": {
                 "drupal/cshs": "^4.0",
@@ -7638,12 +7466,6 @@
             "license": [
                 "proprietary"
             ],
-            "authors": [
-                {
-                    "name": "Esli Stavenga",
-                    "email": "esli@mantaraymedia.co.uk"
-                }
-            ],
             "description": "Remora tagging - Contains all taxonomy vocabularies required for tagging content",
             "transport-options": {
                 "relative": true
@@ -7651,11 +7473,11 @@
         },
         {
             "name": "mrm-remora/tagline_pod",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/tagline_pod",
-                "reference": "5190c5f645989a96b2990128eb8fe24d52bacdd3"
+                "reference": "db872646bdc622a7da6209278fcf272e99210bf3"
             },
             "require": {
                 "drupal/field_group": "^3.0",
@@ -7665,12 +7487,6 @@
             "license": [
                 "proprietary"
             ],
-            "authors": [
-                {
-                    "name": "Esli Stavenga",
-                    "email": "esli@mantaraymedia.co.uk"
-                }
-            ],
             "description": "Tagline pod - contains functionalities to enable tagline pod paragraphs",
             "transport-options": {
                 "relative": true
@@ -7678,11 +7494,11 @@
         },
         {
             "name": "mrm-remora/text_media_pod",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/text_media_pod",
-                "reference": "50e8a8ab6a6ce52f83c6ee6329cff0515e284692"
+                "reference": "aa10d8f07798437f03ce51b99161531fced41586"
             },
             "require": {
                 "drupal/field_group": "^3.4",
@@ -7692,12 +7508,6 @@
             "license": [
                 "proprietary"
             ],
-            "authors": [
-                {
-                    "name": "Dilwar Hussain",
-                    "email": "dilwar@mantaraymedia.co.uk"
-                }
-            ],
             "description": "Text/media pod - contains functionalities to enable text/media pod",
             "transport-options": {
                 "relative": true
@@ -7705,7 +7515,7 @@
         },
         {
             "name": "mrm-remora/tonic",
-            "version": "dev-upgrade",
+            "version": "dev-upgrade-202",
             "dist": {
                 "type": "path",
                 "url": "local-vendors/tonic",
@@ -13887,7 +13697,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "deux-cent-deux/drupal_search": 20,
         "drupal/gin": 5
     },
     "prefer-stable": true,

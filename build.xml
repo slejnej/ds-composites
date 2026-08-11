@@ -6,8 +6,8 @@
 
   <property environment="env" />
 
-  <property name="barrio_base.dir" value="${basedir}/web/themes/custom/barrio_base_theme"/>
-  <property name="tonic.dir" value="${basedir}/web/themes/custom/tonic"/>
+  <property name="barrio_base.dir" value="${basedir}/web/themes/contrib/barrio_base_theme"/>
+  <property name="tonic.dir" value="${basedir}/web/themes/contrib/tonic"/>
   <property name="dsc.dir" value="${basedir}/web/themes/custom/ds_composites"/>
   <property name="composer.path" value="${basedir}/bin/composer.phar"/>
 

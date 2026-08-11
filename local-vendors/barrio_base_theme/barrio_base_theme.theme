@@ -101,61 +101,16 @@ function barrio_base_theme_form_system_theme_settings_alter_submit(array &$form,
   if ($formState->hasValue('figma_files') && !empty($figmaFiles)) {
     try {
       // human-readable name is irrelevant
-      $result = FigmaSassManager::fromUploadedFile($figmaFiles)->toScss();
+      $scssFiles = FigmaSassManager::fromUploadedFile($figmaFiles)->toScss();
       $themeManager = new ThemeManager($themeName, '');
 
       // now add files that are uploaded
-      /** @var array $scssFiles */
-      $scssFiles = $result['scss'];
       $manager = $themeManager->addScssFiles($scssFiles);
 
       // do not init! This would throw an exception since the theme already exists
       $manager->write();
-
       Drupal::messenger()->addMessage("Successfully regenerated SCSS files for theme: $themeName.");
-
-      // save the mapping
-      $mapping = $result['mapping'];
-      $sources = [];
-      foreach ($figmaFiles as $file) {
-        $filename = $file->getClientOriginalName();
-        // Extract palette name from filename
-        $palette = 'global';
-        if (preg_match('/([^.]*)\.(tokens|manifest)?\.json/', $filename, $matches)) {
-          $baseName = $matches[1];
-
-          if ($baseName === 'primitives') {
-            $palette = 'global';
-          } else {
-            $palette = $baseName;
-          }
-        }
-        $sources[$palette] = $filename;
-      }
-
-      $mappingPath = $themeManager->getThemePath() . '/config/scss_mapping.yml';
-
-      // Create directory if it doesn't exist
-      $directory = dirname($mappingPath);
-      if (!is_dir($directory)) {
-        mkdir($directory, 0777, TRUE);
-      }
-
-      $yaml = Yaml::encode([
-        'variable_mapping' => $mapping,
-        'sources' => $sources,
-        'generated_at' => date('Y-m-d H:i:s')
-      ]);
-      $done = file_put_contents($mappingPath, $yaml);
-
-      if($done !== FALSE) {
-        Drupal::messenger()
-          ->addMessage("Successfully generated mapping file: $mappingPath.");
-      } else {
-        dd($done);
-      }
-    }
-    catch (Exception $e) {
+    } catch(Exception $e) {
       Drupal::messenger()->addError($e->getMessage());
     }
   }
@@ -190,7 +145,7 @@ function barrio_base_theme_preprocess_html(array &$variables): void
     if ($node->hasField('field_hero_content') && !$node->get('field_hero_content')
         ->isEmpty()) {
       foreach ($node->get('field_hero_content')
-        ->referencedEntities() as $paragraph) {
+                 ->referencedEntities() as $paragraph) {
         if ($paragraph->bundle() === 'section') {
           $variables['attributes']['class'][] = 'has-hero';
         }

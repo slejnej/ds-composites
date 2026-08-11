@@ -1,0 +1,12 @@
+// Sub theme styling.
+// load all the variables including bootstrap overrides
+@import 'variables_drupal';
+
+// load the bootstrap from the base theme
+@import 'bootstrap';
+
+// load all the subtheme's components overrides
+@import "components_override";
+
+// load module specific styles
+@import 'modules';

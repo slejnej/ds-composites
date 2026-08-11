@@ -4,12 +4,6 @@
   "description": "Text/media pod - contains functionalities to enable text/media pod",
   "minimum-stability": "stable",
   "license": "proprietary",
-  "authors": [
-    {
-      "name": "Dilwar Hussain",
-      "email": "dilwar@mantaraymedia.co.uk"
-    }
-  ],
   "require": {
     "php": ">=8.1",
     "drupal/field_group": "^3.4"

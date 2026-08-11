@@ -11,7 +11,7 @@
   "require": {
     "php": ">=8.1",
     "composer/installers": "^1.9",
-    "deux-cent-deux/drupal_search": "dev-upgrade",
+    "deux-cent-deux/drupal_search": "*",
     "deux-cent-deux/installation_profile": "*",
     "drupal/advanced_language_selector": "^1.5",
     "drupal/bootstrap5": "^4.0",
@@ -35,7 +35,6 @@
     "mrm-remora/news_content_type": "*",
     "mrm-remora/organisations_taxonomy": "*",
     "mrm-remora/page_content_type": "*",
-    "mrm-remora/person_content_type": "*",
     "mrm-remora/promo_pod": "*",
     "mrm-remora/remora_core": "*",
     "mrm-remora/remora_sections": "*",
@@ -235,12 +234,6 @@
       "name": "mrm-remora/news_content_type",
       "type": "path",
       "url": "web/modules/custom/news_content_type",
-      "no-api": true
-    },
-    {
-      "name": "mrm-remora/person_content_type",
-      "type": "path",
-      "url": "web/modules/custom/person_content_type",
       "no-api": true
     },
     {

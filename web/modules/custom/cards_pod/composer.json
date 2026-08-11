@@ -1,15 +1,9 @@
 {
   "name": "mrm-remora/cards_pod",
   "type": "drupal-custom-module",
-  "description": "Cards pod - contains functionalities to enable cards pod paragraphs. Also provides Card nuglets",
+  "description": "Cards pod - contains functionalities to enable cards pod paragraphs. Also provides Card pea-s",
   "minimum-stability": "stable",
   "license": "proprietary",
-  "authors": [
-    {
-      "name": "Dilwar Hussain",
-      "email": "dilwar@mantaraymedia.co.uk"
-    }
-  ],
   "require": {
     "php": ">=8.1",
     "drupal/field_group": "^3.0"

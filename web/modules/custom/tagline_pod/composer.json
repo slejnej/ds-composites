@@ -4,12 +4,6 @@
   "description": "Tagline pod - contains functionalities to enable tagline pod paragraphs",
   "minimum-stability": "stable",
   "license": "proprietary",
-  "authors": [
-    {
-      "name": "Esli Stavenga",
-      "email": "esli@mantaraymedia.co.uk"
-    }
-  ],
   "require": {
     "php": ">=8.1",
     "drupal/field_group": "^3.0"

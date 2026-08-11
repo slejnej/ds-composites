@@ -14,7 +14,7 @@ class ThemeManager
 {
 
   private const BASE_THEME_MACHINE_NAME = 'barrio_base_theme';
-  private const BASE_THEME_NAME = 'Remora base theme';
+  private const BASE_THEME_NAME = 'Barrio base theme';
 
   private readonly FileSystemInterface $fileSystem;
   /**
@@ -112,7 +112,7 @@ class ThemeManager
   {
     $this->files['README.md'] = <<<EOT
 # $this->humanReadableName theme
-This subtheme is based off of Remora's base theme. An extended documentation is available [here](https://www.github.com/MRM-Remora/barrio_base_theme/tree/master/README.md)
+This subtheme is based off of Barrio's base theme. An extended documentation is available [here](./loca-vendors/barrio_base_theme/README.md)
 
 ## Gulp
 Gulp is used to compile the SCSS to CSS, and run minifiers against the various asset files.  
@@ -250,8 +250,17 @@ EOT
   {
     $filesToCopy = ['.gitignore', '.nvmrc', '.browserslistrc', 'package.json', 'package-lock.json', 'gulpfile.mjs'];
     foreach ($filesToCopy as $file) {
+      
       $pathToBaseFile = sprintf("%s://%s", self::BASE_THEME_MACHINE_NAME, $file);
       $this->files[$file] = file_get_contents($this->fileSystem->realpath($pathToBaseFile));
+
+      if ($file === 'gulpfile.mjs') {
+        $this->files[$file] = preg_replace(
+          '/import cleanCss.*/',
+          "import cleanCss from './../../contrib/barrio_base_theme/.gulp/mrm-clean-css.mjs';",
+          $this->files[$file]
+        );
+      }
     }
 
     foreach (['package.json', 'package-lock.json'] as $packageFile) {

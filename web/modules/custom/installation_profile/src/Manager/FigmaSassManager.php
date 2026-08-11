@@ -28,9 +28,6 @@ class FigmaSassManager
   /** @var InflectorInterface Inflector used to singularize words */
   private readonly InflectorInterface $inflector;
 
-  /** @var array Mapping of SCSS variable names to their original JSON paths */
-  private array $variableMapping = [];
-
   /**
    * Processes the provided Figma JSON files
    *
@@ -59,18 +56,13 @@ class FigmaSassManager
   /**
    * Returns an array of SCSS files, indexed by their filename (without suffix)
    *
-   * @return string[] Formatted as['scss' => [...], 'mapping' => [...]]
+   * @return string[] Formatted as ['alt-1' => '...', ...]
    */
   public function toScss(): array
   {
     $result = [];
     foreach($this->resultingVariables as $key => $variables) {
-      $this->variableMapping[$key] = [];
-
-      $scss = (in_array($key, ['components', 'global'])) ?
-        $this->generateScssRecursively($variables, '', $key) :
-        $this->generateScssRecursively($variables, $key.'-', $key);
-
+      $scss = (in_array($key, ['components', 'global'])) ? $this->generateScssRecursively($variables) : $this->generateScssRecursively($variables, $key.'-');
       if($key !== 'global') {
         $scss = "@import 'global';" . $scss;
       }
@@ -78,10 +70,7 @@ class FigmaSassManager
       $result[$key] = ltrim($scss, PHP_EOL);
     }
 
-    return [
-      'scss' => $result,
-      'mapping' => $this->variableMapping
-    ];
+    return $result;
   }
 
   /**
@@ -108,41 +97,31 @@ class FigmaSassManager
    * @param string $prefix The group's prefix, e.g. buttons-, accordion-
    * @return string An SCSS file
    */
-  private function generateScssRecursively(array $variables, string $prefix = '', string $palette = '', array $jsonPath = []): string
+  private function generateScssRecursively(array $variables, string $prefix = ''): string
   {
     $result = '';
 
+    // loop over all the variables
     foreach($variables as $key => $variable) {
-      $currentJsonPath = array_merge($jsonPath, [$key]);
 
-      if(is_array($variable) && !isset($variable['value'])) {
-        // This is a group, not a variable
+      // if this group contains more variables, add a comment to denote we are entering a group and then process the group
+      if(is_array($variable)) {
         $result .= sprintf('%2$s// %s%2$s', $key, PHP_EOL);
-        $scssKey = $prefix . $this->sanitizeVariableName($key);
-
-        if(!empty($scssKey)) {
-          $scssKey .= '-';
+        $key = $prefix . $this->sanitizeVariableName($key);
+        if(!empty($key)) {
+          $key .= '-';
         }
 
-        $result .= $this->generateScssRecursively($variable, $scssKey, $palette, $currentJsonPath);
+        $result .= $this->generateScssRecursively($variable, $key);
+        // else, parse the variable and add it to the SCSS
       } else {
-        // This is a variable with value and type
-        $scssVarName = strtolower($prefix . $key);
-        $scssVarName = preg_replace('/[^\w-]/', '-', $scssVarName);
-        $scssVarName = $this->dedupeVariable($scssVarName);
+        // covert the entire variable name to lowercase and replace any non-alphanumeric values
+        $key = strtolower($prefix . $key);
+        $key = preg_replace('/[^\w-]/', '-', $key);
+        $key = $this->dedupeVariable($key);
+        $variable = $this->cleanVariable($key, $variable);
 
-        // Store mapping with ORIGINAL type from JSON
-        $path = implode('.', $currentJsonPath);
-        $type = $variable['type']; // This is the original type from JSON
-
-        $this->variableMapping[$palette][$scssVarName] = [
-          'path' => $path,
-          'type' => $type
-        ];
-
-        // Get the value for SCSS
-        $scssValue = $this->cleanVariable($scssVarName, $variable['value']);
-        $result .= sprintf('$%s: %s;%s', $scssVarName, $scssValue, PHP_EOL);
+        $result .= sprintf('$%s: %s;%s', $key, $variable, PHP_EOL);
       }
     }
 
@@ -205,14 +184,14 @@ class FigmaSassManager
   }
 
   /**
-   * Process a single variable and returns its value AND type
+   * Process a single variable and returns its value
+   *
+   * @param array $variableContents
+   * @return string|float|int
    */
-  private function processVariable(array $variableContents): array
+  private function processVariable(array $variableContents): string|float|int
   {
-    return [
-      'value' => $variableContents['$value'],
-      'type' => $variableContents['$type']
-    ];
+    return $variableContents['$value'];
   }
 
   /**
@@ -338,8 +317,14 @@ class FigmaSassManager
    */
   private function sanitizeVariableName(string $x): string
   {
+    // These are already singular and the inflector incorrectly handles them
+    if(preg_match('/radius$/', $x) === 1) {
+      return $x;
+    }
+
+    // don't singularize breakpoints
     if(preg_match('/.*-(xs|s|m|md|l|lg|xl|xxl)$/', $x) === 1) {
-      return $x; // don't singularize breakpoints
+      return $x;
     }
 
     if(isset($this->config['mapping'][$x])) {
@@ -383,46 +368,5 @@ class FigmaSassManager
       // sort whoever mentions whom more
       return $cmp;
     });
-  }
-
-  /**
-   * Get the variable mapping for reverse conversion
-   */
-  public function getVariableMapping(): array
-  {
-    return $this->variableMapping;
-  }
-
-  /**
-   * Save variable mapping to a file
-   */
-  public function saveMapping(string $path): void
-  {
-    $yaml = Yaml::encode(['variable_mapping' => $this->variableMapping]);
-    file_put_contents($path, $yaml);
-  }
-
-  /**
-   * Determine variable type from value
-   */
-  private function determineVariableType($value): string
-  {
-    if (str_starts_with($value, '$')) {
-      return 'reference';
-    }
-
-    if (is_numeric($value)) {
-      return 'number';
-    }
-
-    if (str_starts_with($value, '#')) {
-      return 'color';
-    }
-
-    if (preg_match('/^(rgb|rgba|hsl|hsla)\(/', $value)) {
-      return 'color';
-    }
-
-    return 'string';
   }
 }
