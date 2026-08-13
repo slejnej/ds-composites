@@ -8,6 +8,7 @@ figma_prefixes:
     buttons: ''
     components: ''
     global-background: ''
+    custom colors: ''
 
     # Prevent EnglishInflector::singularize from messing up proper words, mapped words wont be singularized
     offcanvas: 'offcanvas'

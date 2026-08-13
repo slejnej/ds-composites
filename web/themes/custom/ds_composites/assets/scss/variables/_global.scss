@@ -1,0 +1,164 @@
+// custom colors
+$cararra: #E8E7E3;
+$coral-reef: #C9BE9C;
+$twine: #c48f56;
+$graphite: #221307;
+
+// global-background
+$primary: $graphite;
+$secondary: #000;
+$success: #87AB39;
+$danger: #ff2727;
+$warning: #f67726;
+$info: #0dadea;
+$light: #64748b;
+$dark: #2f4858;
+$default: $cararra;
+$alt-1: #fff2f1;
+$alt-2: #ddf3f3;
+
+// global-spacing
+$global-spacing-0: 0px;
+$global-spacing-1: 16px;
+$global-spacing-2: 32px;
+$global-spacing-3: 48px;
+$global-spacing-4: 64px;
+$global-spacing-8: 128px;
+$global-spacing-01: 1.6px;
+$global-spacing-015: 2px;
+$global-spacing-02: 3px;
+$global-spacing-05: 8px;
+$global-spacing-border-radius-sm: 4px;
+$global-spacing-border-radius-m: 9px;
+$global-spacing-border-radius-lg: 18px;
+$global-spacing-border-radius-xlg: 27px;
+$global-spacing-border-radius-pill: 800px;
+
+// global-color
+
+// black
+$global-color-black-white: #ffffff;
+$global-color-black-100: #e0e0e0;
+$global-color-black-300: $cararra;
+$global-color-black-500: $coral-reef;
+$global-color-black-600: #414141;
+$global-color-black-700: $graphite;
+$global-color-black-800: #1a1a1a;
+$global-color-black-black: #000000;
+
+// primary
+$global-color-primary-100: $global-color-black-100;
+$global-color-primary-200: $global-color-black-100;
+$global-color-primary-300: $global-color-black-300;
+$global-color-primary-400: $global-color-black-300;
+$global-color-primary-500: $global-color-black-600;
+$global-color-primary-600: $global-color-black-600;
+$global-color-primary-700: $global-color-black-800;
+$global-color-primary-800: $global-color-black-800;
+$global-color-primary-900: $primary;
+
+// secondary
+$global-color-secondary-100: $global-color-black-100;
+$global-color-secondary-200: $global-color-black-100;
+$global-color-secondary-300: $global-color-black-300;
+$global-color-secondary-400: $global-color-black-300;
+$global-color-secondary-500: $global-color-black-600;
+$global-color-secondary-600: $global-color-black-600;
+$global-color-secondary-700: $global-color-black-800;
+$global-color-secondary-800: $global-color-black-800;
+$global-color-secondary-900: $primary;
+
+// success
+$global-color-success-100: #dcecf1;
+$global-color-success-200: #bed9e3;
+$global-color-success-500: $success;
+$global-color-success-600: #396881;
+$global-color-success-700: #33576b;
+$global-color-success-800: #304a5a;
+$global-color-success-900: #2c3f4d;
+
+// danger
+$global-color-danger-100: #ffdddd;
+$global-color-danger-400: #ff5a5a;
+$global-color-danger-500: $danger;
+$global-color-danger-600: #d40101;
+$global-color-danger-700: #ae0606;
+
+// warning
+$global-color-warning-100: #fff7ed;
+$global-color-warning-200: #fdd5ab;
+$global-color-warning-300: #fbb776;
+$global-color-warning-400: #f88e3f;
+$global-color-warning-500: $warning;
+$global-color-warning-600: #e7550f;
+$global-color-warning-700: #bf3e0f;
+$global-color-warning-800: #983214;
+
+// info
+$global-color-info-100: #e0f3fe;
+$global-color-info-200: #bae8fd;
+$global-color-info-300: #b1d8ec;
+$global-color-info-500: $info;
+$global-color-info-600: #0192d1;
+$global-color-info-700: #026fa2;
+$global-color-info-800: #0b4e6f;
+$global-color-info-900: #083149;
+
+// light
+$global-color-light-100: #f4f7f9;
+$global-color-light-200: #ecf0f3;
+$global-color-light-300: #dce4e9;
+$global-color-light-400: #c6d2db;
+$global-color-light-500: #94a3b8;
+$global-color-light-600: #828fa9;
+$global-color-light-700: #6f7a93;
+$global-color-light-800: #5c6677;
+$global-color-light-900: #4d5462;
+
+// dark
+$global-color-dark-100: #4a6682;
+$global-color-dark-200: #435c75;
+$global-color-dark-300: #3c5268;
+$global-color-dark-400: #34485b;
+$global-color-dark-500: #2f4858;
+$global-color-dark-600: #2f4858;
+$global-color-dark-800: #2c3f4d;
+$global-color-dark-900: #0f151a;
+
+// global-text
+$global-text-primary-font: MontserratRegular;
+$global-text-secondary-font: Font-Light;
+$global-text-tertiary-font: Font-Light;
+$global-text-font-size-xs: 0.8125rem;
+$global-text-font-size-s: 0.875rem;
+$global-text-font-size-m: 1rem;
+$global-text-font-size-l: 1.125rem;
+$global-text-font-size-xl: 1.25rem;
+$global-text-font-size-2xl: 1.5rem;
+$global-text-font-size-3xl: 1.75rem;
+$global-text-font-size-4xl: 2rem;
+$global-text-font-size-5xl: 2.25rem;
+$global-text-font-size-6xl: 2.625rem;
+$global-text-font-size-8xl: 3rem;
+$global-text-font-size-9xl: 3.125rem;
+$global-text-font-size-10xl: 3.5rem;
+$global-text-font-size-11xl: 4rem;
+$global-text-font-size-12xl: 4.5rem;
+$global-text-font-size-14xl: 5rem;
+$global-text-line-height-base: 27px;
+$global-text-font-weight-light: 300;
+$global-text-font-weight-normal: 400;
+$global-text-font-weight-medium: 500;
+$global-text-font-weight-semibold: 600;
+$global-text-font-weight-bold: 700;
+$global-text-primary: $global-color-black-700;
+$global-text-secondary: $global-color-black-800;
+$global-text-info: $global-color-black-600;
+$global-text-date: $global-color-black-600;
+$global-text-link: $primary;
+$global-text-link-hover: $secondary;
+
+// global-border
+$global-border-width: 0.8px;
+$global-border-color: $global-color-black-100;
+$global-border-radius-sm: 12px;

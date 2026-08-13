@@ -149,6 +149,7 @@ class FigmaSassManager
       }
 
       $resultArr = &$this->resultingVariables[$palette];
+      var_dump($filename);
       $this->processFile($contents);
 
 
@@ -231,7 +232,7 @@ class FigmaSassManager
     }
 
     // a variable can reference another variable 🤯
-    // essentially turns {global-color.primary.primary-100} into $global-color-primary-primary-100; for SCSS
+    // essentially turns {global-color.primary.primary-100} into $global-color-primary-100; for SCSS
     // split the variable into its parts
     $variable = explode('.', $matches[1]);
     $variable = array_map([$this, 'sanitizeVariableName'], $variable);

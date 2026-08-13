@@ -1,2 +1,42 @@
 // Add custom variables - that aren't in Figma - here.
 // Also all MODULE styling variables should be overridden here !!!
+@import 'global';
+
+$body-bg: $cararra;
+$body-color: $graphite;
+
+$cookie_bg: $global-color-black-100;
+$cookie_title_color: $global-color-black-black;
+$cookie_text_color: $global-color-black-black;
+$cookie_link_color: $twine;
+$cookie_link_hover_color: $twine;
+$cookie_modal_header_color: $global-color-black-black;
+$cookie_modal_link_color: $global-color-black-black;
+$cookie_modal_link_hover_color: $global-color-black-black;
+
+$navbar-toggler-height: 45px;
+$navbar-toggler-width: 45px;
+$logo-desktop: 40px;
+$logo-mobile: 35px;
+
+$gallery-overlay: $global-color-black-white;
+$gallery-bg: $cararra;
+$gallery-loader-spinner-color: $twine;
+
+$blog-link-color: $twine;
+$blog-link-label-color: $global-color-black-600;
+
+$timeline-gap-mobile: 8px;
+$timeline-gap-desktop: 15px;
+$timeline-item-min-width: 250px;
+$timeline-dots-size: 35px;
+$timeline-max-width: 1200px;
+$timeline-item-background-color: rgba(255, 255, 255, 0.2);
+$timeline-item-border-radius: 4px;
+$timeline-item-border-color: $global-color-black-100;
+$timeline-item-border-width: 1px;
+$timeline-item-active-color: $twine;
+$timeline-button-color: #333;
+$timeline-button-bg-color: none;
+$timeline-guide-color: $global-color-black-600;
+

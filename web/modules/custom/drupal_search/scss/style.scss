@@ -76,7 +76,7 @@ $view-row-gap: $global-text-line-height-base !default;
     width: 100%;
 
     form {
-      background: $global-color-light-light-200;
+      background: $global-color-light-200;
       padding: $global-spacing-1;
 
       .form--inline.clearfix {
@@ -137,7 +137,7 @@ $view-row-gap: $global-text-line-height-base !default;
 
 // Selected filters / Pills
 .remora-search-selected-filters-block:has(div) {
-  background: $global-color-light-light-200;
+  background: $global-color-light-200;
   gap: $global-spacing-05;
   padding: $pagination-padding-y-lg $global-spacing-1;
 

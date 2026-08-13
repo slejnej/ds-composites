@@ -17,7 +17,7 @@ section:not(#sidebar-pods) .layout__region .paragraph.paragraph--type--promo {
 // Overwrite these variables manually in the Subtheme _components-overrides.scss
 // Add any svg/pngs to subtheme/assets/images
 
-$promo-bg: $global-color-info-info-100 !default;
+$promo-bg: $global-color-info-100 !default;
 $promo-title-color: $text-primary !default;
 $promo-text-color: $text-primary !default;
 $promo-link-color: $text-link !default;

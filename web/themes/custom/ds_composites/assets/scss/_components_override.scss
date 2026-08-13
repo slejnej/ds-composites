@@ -1,3 +1,19 @@
 // everything after line below will be deleted on import.
 // Anything general needed can put inside _variables_drupal.scss
 // custom code below this line
+
+/** ================= [ FONTS ] ================= **/
+@font-face {
+  font-family: MontserratRegular;
+  src: url("../assets/fonts/montserrat-regular-webfont.woff") format('woff'),
+  url("../assets/fonts/montserrat-regular-webfont.woff2") format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Font-Light;
+  src: url("../assets/fonts/font-light.woff") format('woff'),
+  url("../assets/fonts/font-light.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}

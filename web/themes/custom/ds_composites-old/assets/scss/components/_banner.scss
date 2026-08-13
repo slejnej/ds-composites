@@ -11,11 +11,11 @@ $banner-padding-desktop: 0;
     z-index: 5;
 
     .caption-link a.btn {
-      background: $global-color-primary-primary-600;
+      background: $global-color-primary-600;
       color: white;
       &:hover {
         background: #D8EDFA;
-        color: $global-color-secondary-secondary-600;
+        color: $global-color-secondary-600;
       }
     }
   }
@@ -160,26 +160,26 @@ $banner-padding-desktop: 0;
 
 .paragraph.paragraph--type--banners {
   @include banner(
-    $global-color-primary-primary-900,
+    $global-color-primary-900,
     white,
     white,
     transparent
   );
 
   @include banner_icon(
-      $global-color-primary-primary-500
+      $global-color-primary-500
   );
 }
 
 .palette-alt-1 .paragraph.paragraph--type--banners {
   @include banner_icon(
-      $global-color-warning-warning-400
+      $global-color-warning-400
   );
 }
 
 .palette-alt-2 .paragraph.paragraph--type--banners {
   @include banner_icon(
-      $global-color-info-info-400
+      $global-color-info-400
   );
 }
 
