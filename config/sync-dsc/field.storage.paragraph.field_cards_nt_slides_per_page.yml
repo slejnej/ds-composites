@@ -1,0 +1,41 @@
+uuid: e0b299b0-a10f-4ed7-b7cd-6bab9eeeb6b4
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+  enforced:
+    module:
+      - cards_pod
+_core:
+  default_config_hash: igzmnTcHBLHcEPlX_yS9x3reez-i9YJSDo3W-S9S8w8
+id: paragraph.field_cards_nt_slides_per_page
+field_name: field_cards_nt_slides_per_page
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: One
+    -
+      value: '2'
+      label: Two
+    -
+      value: '3'
+      label: Three
+    -
+      value: '4'
+      label: Four
+    -
+      value: '6'
+      label: Six
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

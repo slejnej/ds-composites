@@ -2,18 +2,23 @@
 // Anything general needed can put inside _variables_drupal.scss
 // custom code below this line
 
+/** ================= [Custom components] ================= **/
+@import "components/cookies";
+@import "components/header";
+
 /** ================= [ FONTS ] ================= **/
 @font-face {
-  font-family: MontserratRegular;
-  src: url("../assets/fonts/montserrat-regular-webfont.woff") format('woff'),
-  url("../assets/fonts/montserrat-regular-webfont.woff2") format('woff2');
-  font-weight: 400;
+  font-family: 'Noto sans';
+  src: url("../assets/fonts/NotoSans-VariableFont_wdth,wght.woff2") format('woff2'),
+  url("../assets/fonts/NotoSans-VariableFont_wdth,wght.woff") format('woff'),
+  url("../assets/fonts/NotoSans-VariableFont_wdth,wght.ttf") format('truetype');
 }
 
-@font-face {
-  font-family: Font-Light;
-  src: url("../assets/fonts/font-light.woff") format('woff'),
-  url("../assets/fonts/font-light.woff2") format('woff2');
-  font-weight: 400;
-  font-style: normal;
+// override here as drupal is unsetting everything!
+body .progress {
+  display: flex;
+  height: var(--bs-progress-height);
+  overflow: hidden;
+  font-size: var(--bs-progress-font-size);
+  background-color: var(--bs-progress-bg);
 }

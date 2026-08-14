@@ -1,0 +1,131 @@
+uuid: 883d3199-4de7-4854-a31a-7e9ea0c38c1c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - filter.format.title
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - node.type.news
+    - node.type.page
+    - taxonomy.vocabulary.organisations
+  module:
+    - contextual
+    - crop
+    - eu_cookie_compliance
+    - filter
+    - linkchecker
+    - media
+    - menu_admin_per_menu
+    - menu_item_role_access
+    - node
+    - paragraphs_type_permissions
+    - path
+    - redirect
+    - remora_core
+    - system
+    - taxonomy
+    - toolbar
+_core:
+  default_config_hash: dWoqN1_h1V52Co5gdWBpMkFavRFCNH3sL5_xnsTsDBQ
+id: editor
+label: Editor
+weight: 2
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access broken links report'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access media overview'
+  - 'access own broken links report'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'administer account menu items'
+  - 'administer crop types'
+  - 'administer footer menu items'
+  - 'administer header menu items'
+  - 'administer main menu items'
+  - 'administer nodes'
+  - 'administer redirect settings'
+  - 'administer redirects'
+  - 'administer remora settings'
+  - 'bypass node access'
+  - 'create document media'
+  - 'create image media'
+  - 'create media'
+  - 'create news content'
+  - 'create page content'
+  - 'create paragraph content attachments'
+  - 'create paragraph content banner_pea'
+  - 'create paragraph content banners'
+  - 'create paragraph content card_pea'
+  - 'create paragraph content cards'
+  - 'create paragraph content promo'
+  - 'create paragraph content slide_pea'
+  - 'create paragraph content slideshow'
+  - 'create paragraph content tagline'
+  - 'create paragraph content text_media'
+  - 'create remote_video media'
+  - 'create terms in organisations'
+  - 'create url aliases'
+  - 'delete any document media'
+  - 'delete any image media'
+  - 'delete any media'
+  - 'delete any news content'
+  - 'delete any page content'
+  - 'delete any remote_video media'
+  - 'delete paragraph content attachments'
+  - 'delete paragraph content banner_pea'
+  - 'delete paragraph content banners'
+  - 'delete paragraph content card_pea'
+  - 'delete paragraph content cards'
+  - 'delete paragraph content promo'
+  - 'delete paragraph content slide_pea'
+  - 'delete paragraph content slideshow'
+  - 'delete paragraph content tagline'
+  - 'delete paragraph content text_media'
+  - 'delete terms in organisations'
+  - 'display eu cookie compliance popup'
+  - 'edit any document media'
+  - 'edit any image media'
+  - 'edit any news content'
+  - 'edit any page content'
+  - 'edit any remote_video media'
+  - 'edit menu_item_role_access'
+  - 'edit terms in organisations'
+  - 'revert news revisions'
+  - 'revert page revisions'
+  - 'update any media'
+  - 'update paragraph content attachments'
+  - 'update paragraph content banner_pea'
+  - 'update paragraph content banners'
+  - 'update paragraph content card_pea'
+  - 'update paragraph content cards'
+  - 'update paragraph content promo'
+  - 'update paragraph content slide_pea'
+  - 'update paragraph content slideshow'
+  - 'update paragraph content tagline'
+  - 'update paragraph content text_media'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'use text format title'
+  - 'view news revisions'
+  - 'view own unpublished media'
+  - 'view page revisions'
+  - 'view paragraph content attachments'
+  - 'view paragraph content banner_pea'
+  - 'view paragraph content banners'
+  - 'view paragraph content card_pea'
+  - 'view paragraph content cards'
+  - 'view paragraph content promo'
+  - 'view paragraph content slide_pea'
+  - 'view paragraph content slideshow'
+  - 'view paragraph content tagline'
+  - 'view paragraph content text_media'
+  - 'view the administration theme'

@@ -1,0 +1,25 @@
+uuid: a343c866-3d29-4a5b-9a12-1727b2c45039
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+  enforced:
+    module:
+      - slideshow_pod
+_core:
+  default_config_hash: zYMUFaIMvj108RJrtaRXswudf7OOdlxuzXnYkqtOsR0
+id: paragraph.field_slide_nt_title
+field_name: field_slide_nt_title
+entity_type: paragraph
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

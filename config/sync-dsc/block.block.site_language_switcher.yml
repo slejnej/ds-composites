@@ -1,0 +1,20 @@
+uuid: f6e46fa0-2b31-477e-805a-9cf0763e2f9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - ds_composites
+id: site_language_switcher
+theme: ds_composites
+region: nav_branding
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: '0'
+  provider: language
+visibility: {  }

@@ -1,6 +1,6 @@
 @import 'global';
 // surface
-$surface-primary: $default;
+$surface-primary: $global-color-black-white;
 
 // image
 $image-top-left: $global-spacing-border-radius-sm;
@@ -9,12 +9,13 @@ $image-bottom-right: $global-spacing-border-radius-sm;
 $image-bottom-left: $global-spacing-border-radius-sm;
 
 // footer
-$footer-color-bg: $cararra;
-$footer-bar-color: $cararra;
-$footer-link-color: $global-color-black-700;
-$footer-link-hover: $twine;
-$footer-title: $global-color-black-700;
-$footer-bar-content: $global-color-black-700;
+$footer-color-bg: $global-color-dark-900;
+$footer-bar-color: $global-color-black-white;
+$footer-link-color: $global-color-warning-200;
+$footer-link-hover: $global-color-warning-400;
+$footer-title: $global-color-black-white;
+$footer-bar-content: $global-color-primary-900;
+$footer-bar-content-link: $global-color-primary-700;
 
 // text
 $text-primary: $global-text-primary;
@@ -400,16 +401,16 @@ $toast-light-header-background-color: #c6d2db;
 $toast-light-header-border-color: #c6d2db;
 
 // CAROUSEL
-$carousel-bg: $cararra;
+$carousel-bg: $global-color-primary-900;
 
 // control
 $carousel-control-color: $global-color-black-white;
-$carousel-control-hover-color: $twine;
+$carousel-control-hover-color: $global-color-black-white;
 $carousel-control-arrow-height: 60px;
 $carousel-control-arrow-width: 60px;
 $carousel-control-width: 60px;
-$carousel-control-arrow-bg-color: $primary;
-$carousel-control-arrow-border-radius: $global-spacing-border-radius-m;
+$carousel-control-arrow-bg-color: rgba(15, 21, 26, 0.5000);
+$carousel-control-arrow-border-radius: $global-spacing-0;
 $carousel-control-margin-y: $global-spacing-0;
 $carousel-control-margin-x: $global-spacing-0;
 $carousel-control-arrow-bg-hover-color: $global-color-dark-900;
@@ -418,14 +419,14 @@ $carousel-control-hover-border: #ffffff;
 $carousel-control-border-width: 0px;
 
 // indicator
-$carousel-indicator-color: $global-color-black-700;
+$carousel-indicator-color: $global-color-black-white;
 $carousel-indicator-width: 20px;
-$carousel-indicator-height: 4px;
-$carousel-indicator-active-height: 5px;
+$carousel-indicator-height: 3px;
+$carousel-indicator-active-height: 3px;
 $carousel-indicator-hit-area-height: 20px;
 $carousel-indicator-spacer: $global-spacing-05;
-$carousel-indicator-border-radius: $global-spacing-border-radius-lg;
-$carousel-indicator-active-bg: $twine;
+$carousel-indicator-border-radius: $global-spacing-0;
+$carousel-indicator-active-bg: $global-color-black-white;
 
 // layout
 $carousel-layout-margin-y: $global-spacing-0;
@@ -436,9 +437,9 @@ $carousel-indicator-card-color: $primary;
 $carousel-indicator-card-active-bg: $primary;
 
 // caption
-$carousel-caption-bg: rgba($cararra, .6);
-$carousel-caption-color: $global-color-dark-900;
-$carousel-caption-color-subtitle: $global-color-dark-900;
+$carousel-caption-bg: rgba(255, 255, 255, 0.0000);
+$carousel-caption-color: $global-color-black-white;
+$carousel-caption-color-subtitle: $global-color-black-white;
 $carousel-caption-padding-x: $global-spacing-3;
 $carousel-caption-padding-y: $global-spacing-3;
 $carousel-caption-border-radius: $image-top-left;
@@ -666,7 +667,7 @@ $navbar-default-padding-top: 1.5rem;
 $navbar-default-padding-right: $global-spacing-1;
 $navbar-default-padding-bottom: 1.5rem;
 $navbar-default-padding-left: $global-spacing-1;
-$navbar-default-bg: $global-color-black-300;
+$navbar-default-bg: $global-color-primary-900;
 $navbar-default-brand-padding-y: $global-spacing-0;
 
 // link
@@ -691,14 +692,14 @@ $right-sidebar-body-padding-y: $global-spacing-1;
 $right-sidebar-title-padding-x: $global-spacing-1;
 $right-sidebar-title-padding-y: $global-spacing-1;
 $right-sidebar-title-color: $global-text-primary;
-$right-sidebar-title-bg: $cararra;
+$right-sidebar-title-bg: $global-color-dark-100;
 $right-sidebar-title-border: $global-border-color;
 $right-sidebar-title-border-bottom: 1px;
 $right-sidebar-item-padding-x: $global-spacing-0;
 $right-sidebar-item-padding-y: $global-spacing-0;
 $right-sidebar-radius: $image-bottom-right;
 $right-sidebar-border-width: 1px;
-$right-sidebar-bg: $cararra;
+$right-sidebar-bg: $alt-1;
 $right-sidebar-border-color: $global-border-color;
 
 // accordion
@@ -710,13 +711,13 @@ $accordion-button-padding-y: $global-spacing-1;
 $accordion-button-padding-x: $global-spacing-1;
 $accordion-body-padding-y: $global-spacing-1;
 $accordion-body-padding-x: $global-spacing-1;
-$accordion-bg-color: $cararra;
-$accordion-body-color: $global-text-primary;
-$accordion-button-bg: $cararra;
-$accordion-button-color: $global-text-primary;
+$accordion-bg-color: $global-color-light-100;
+$accordion-body-color: $global-color-dark-900;
+$accordion-button-bg: $global-color-light-200;
+$accordion-button-color: $global-color-primary-800;
 $accordion-button-active-bg: $global-color-primary-100;
 $accordion-button-active-color: $global-color-primary-800;
-$accordion-border-color: $global-color-light-200;
+$accordion-border-color: $global-color-light-300;
 
 // popover
 $popover-bg: $global-color-black-300;
@@ -762,10 +763,10 @@ $layout-section-title-border-right: 0px;
 $layout-section-title-border-radius: 0px;
 
 // BREADCRUMB
-$breadcrumb-item: $global-text-primary;
-$breadcrumb-divider-color: $global-color-black-600;
-$breadcrumb-active: $primary;
-$breadcrumb-bg: $cararra;
+$breadcrumb-item: $global-color-black-white;
+$breadcrumb-divider-color: $global-color-black-white;
+$breadcrumb-active: $global-color-primary-500;
+$breadcrumb-bg: $global-color-primary-900;
 $breadcrumb-padding-y: $global-spacing-05;
 $breadcrumb-padding-x: $global-spacing-05;
 $breadcrumb-margin-bottom: $global-spacing-02;
@@ -773,25 +774,27 @@ $breadcrumb-max-width: 1900px;
 $breadcrumb-item-padding-x: $global-spacing-1;
 
 // CARD
-$card-bg-color: $cararra;
-$card-bg-color-hover: $global-color-black-100;
-$card-color: $global-text-primary;
-$card-title-color: $global-color-primary-700;
-$card-summary-color: $global-text-secondary;
-$card-summary-color-hover: $global-text-secondary;
-$card-date-color: $global-text-date;
-$card-date-color-hover: $global-text-date;
-$card-title-color-hover: $global-color-secondary-700;
-$card-tag-bg: $cararra;
-$card-tag-bg-hover: $cararra;
-$card-tag-border: $global-border-color;
-$card-tag-content: $global-text-primary;
-$card-tag-content-hover: $global-text-primary;
+$card-bg-color: $offwhite;
+$card-bg-color-hover: $global-color-light-200;
+$card-color: $global-color-primary-900;
+$card-title-color: $global-color-primary-900;
+$card-summary-color: $global-color-primary-900;
+$card-summary-color-hover: $global-color-primary-900;
+$card-date-color: $global-color-primary-700;
+$card-date-color-hover: $global-color-primary-700;
+$card-title-color-hover: $global-color-primary-800;
+$card-tag-bg: $global-color-primary-100;
+$card-tag-bg-hover: $global-color-primary-100;
+$card-tag-border: $global-color-primary-100;
+$card-tag-border-hover: $global-color-primary-100;
+$card-tag-content: $global-color-primary-800;
+$card-tag-content-hover: $global-color-primary-900;
 $card-padding-y: $global-spacing-2;
 $card-padding-x: $global-spacing-2;
 $card-title-spacer-y: $global-spacing-05;
 $card-text-padding-bottom: $global-spacing-1;
-$card-border-color-hover: $global-border-color;
+$card-border-color: $global-color-warning-500;
+$card-border-color-hover: $global-color-warning-600;
 
 // button
 $card-button-width: fit-content;
@@ -823,8 +826,8 @@ $card-bottom-right: $image-bottom-right;
 $card-bottom-left: $image-bottom-left;
 
 // footer
-$card-footer-primary-bg: $cararra;
-$card-footer-border-color: $cararra;
+$card-footer-primary-bg: $global-color-success-100;
+$card-footer-border-color: $global-color-success-100;
 $card-footer-primary-color: $global-color-dark-800;
 $card-footer-cap-padding-y: $global-spacing-2;
 $card-footer-cap-padding-x: $global-spacing-1;
@@ -867,15 +870,15 @@ $left-sidebar-body-divider: $global-border-color;
 // title
 $left-sidebar-title-padding-x: $global-spacing-1;
 $left-sidebar-title-padding-y: $global-spacing-1;
-$left-sidebar-title-color: $global-text-primary;
-$left-sidebar-title-bg: $cararra;
-$left-sidebar-title-border: $global-border-color;
+$left-sidebar-title-color: $global-color-secondary-900;
+$left-sidebar-title-bg: $alt-1;
+$left-sidebar-title-border: $global-color-primary-100;
 $left-sidebar-title-border-bottom: 1px;
 $left-sidebar-item-padding-x: $global-spacing-0;
 $left-sidebar-item-padding-y: $global-spacing-0;
 $left-sidebar-radius: $image-bottom-right;
 $left-sidebar-border-width: 1px;
-$left-sidebar-bg: $cararra;
+$left-sidebar-bg: $alt-1;
 $left-sidebar-border-color: $global-border-color;
 
 // button
@@ -905,18 +908,18 @@ $dropdown-padding-x: $global-spacing-05;
 $dropdown-item-padding-x: $global-spacing-02;
 $dropdown-item-padding-y: 0.625rem;
 $dropdown-spacer: $global-spacing-05;
-$dropdown-color: $global-text-primary;
-$dropdown-bg: $cararra;
-$dropdown-border-color: $global-border-color;
-$dropdown-border-radius: $image-top-left;
-$dropdown-divider-bg: $global-border-color;
-$dropdown-link-color: $global-text-primary;
-$dropdown-link-hover-color: $global-text-link-hover;
+$dropdown-color: $global-color-primary-900;
+$dropdown-bg: $global-color-black-white;
+$dropdown-border-color: $global-color-light-300;
+$dropdown-border-radius: $global-spacing-0;
+$dropdown-divider-bg: $global-color-light-300;
+$dropdown-link-color: $global-color-primary-800;
+$dropdown-link-hover-color: $global-color-primary-700;
 $dropdown-link-hover-bg: $global-color-primary-100;
 $dropdown-link-active-color: $global-color-black-white;
 $dropdown-link-active-bg: $global-color-primary-700;
 $dropdown-link-disabled-color: $global-color-light-300;
-$dropdown-header-color: $global-color-dark-300;
+$dropdown-header-color: $global-color-primary-700;
 
 // PAGINATION
 $pagination-min-width: 30px;
@@ -946,8 +949,8 @@ $pagination-disabled-border-color: $global-border-color;
 // attachment
 $attachment-padding-x: $global-spacing-1;
 $attachment-padding-y: $global-spacing-1;
-$attachment-bg: $cararra;
-$attachment-border: $global-border-color;
+$attachment-bg: rgba($global-text-primary, 0.1);
+$attachment-border: rgba($global-text-primary, 0.1);
 $attachment-border-bottom: 1px;
 $attachment-border-top: 1px;
 $attachment-border-left: 1px;

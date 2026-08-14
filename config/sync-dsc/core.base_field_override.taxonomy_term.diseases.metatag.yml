@@ -1,0 +1,20 @@
+uuid: d4e2bb59-a7fb-4f90-89a1-d6410b0ff92f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.diseases
+  module:
+    - metatag
+id: taxonomy_term.diseases.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: diseases
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

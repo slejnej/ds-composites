@@ -1,0 +1,29 @@
+uuid: 65b8992f-5e12-4777-9ed7-bccf27efed0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: Dz65KFjU1nK_-bng4hoChuQCK-pfFcHicHaZQGAH3Dw
+id: paragraph.field_banner_tint
+field_name: field_banner_tint
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: dark
+      label: Dark
+    -
+      value: light
+      label: Light
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

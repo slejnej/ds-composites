@@ -1,0 +1,30 @@
+uuid: 19f39519-776c-49d7-bba5-18c8fde60f6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - administerusersbyrole
+    - eu_cookie_compliance
+    - google_tag
+    - paragraphs_type_permissions
+    - system
+    - toolbar
+_core:
+  default_config_hash: sIBQgydVrjneDWcn58UJUTnHWsIIhOKk-e5AreE6hjk
+id: web_admin
+label: 'Web admin'
+weight: -10
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'access users overview'
+  - 'administer google_tag_container'
+  - 'allow empty user mail'
+  - 'cancel users by role'
+  - 'create users'
+  - 'display eu cookie compliance popup'
+  - 'edit users by role'
+  - 'role-assign users by role'
+  - 'view paragraph content attachments'
+  - 'view the administration theme'
+  - 'view users by role'

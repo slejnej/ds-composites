@@ -1,0 +1,31 @@
+uuid: dd3e614f-639a-47ee-b023-1e175802828a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_media_nt_media
+    - media.type.image
+    - media.type.remote_video
+    - paragraphs.paragraphs_type.text_media
+  enforced:
+    module:
+      - text_media_pod
+_core:
+  default_config_hash: uXxgu8j3Ok_nBdG0UGl56TJWMRH4Bj8ubxPQGp4qFTY
+id: paragraph.text_media.field_text_media_nt_media
+field_name: field_text_media_nt_media
+entity_type: paragraph
+bundle: text_media
+label: Media
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_media_types_image_video
+  handler_settings:
+    target_bundles:
+      image: image
+      remote_video: remote_video
+field_type: entity_reference

@@ -782,16 +782,3 @@ if (file_exists(dirname(__FILE__) . '/settings.local.php')) {
 /**
  * EOF
  */
-$databases['default']['default'] = array (
-  'database' => 'drupal10',
-  'username' => 'drupal10',
-  'password' => 'drupal10',
-  'prefix' => '',
-  'host' => 'database',
-  'port' => '3306',
-  'isolation_level' => 'READ COMMITTED',
-  'driver' => 'mysql',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
-);
-$settings['config_sync_directory'] = 'sites/ds-composites/files/config_iSvpG9aWz7-ZzvPD8J9qqcmkOeTNogFbHJxgsPj_va8vbQWihmxP6XV-JV5dHxtusvqylGipdQ/sync';

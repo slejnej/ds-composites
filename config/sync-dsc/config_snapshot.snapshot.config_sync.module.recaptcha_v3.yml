@@ -1,0 +1,25 @@
+uuid: e2b1216e-ff69-4c99-8995-a738cd8f70df
+langcode: en
+status: true
+dependencies:
+  module:
+    - recaptcha_v3
+id: config_sync.module.recaptcha_v3
+snapshotSet: config_sync
+extensionType: module
+extensionName: recaptcha_v3
+items:
+  -
+    collection: ''
+    name: recaptcha_v3.settings
+    data:
+      site_key: ''
+      secret_key: ''
+      verify_hostname: true
+      default_challenge: captcha/Math
+      error_message: 'Anti-bot verification failed.'
+      cacheable: false
+      library_use_recaptcha_net: false
+      hide_badge: false
+      _core:
+        default_config_hash: UqoPtv5ZWzKvrSUU6kRFwsddB-I_BN16Cw38Rtk7H7A

@@ -1,0 +1,12 @@
+uuid: ada3be0e-3cbf-4153-9013-1ba11b29ad6a
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Ep5YuwLwpgU5YK1VVrDPcOFov_4paxA-WQt23_WLqeA
+id: banner_pea
+label: Banner
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

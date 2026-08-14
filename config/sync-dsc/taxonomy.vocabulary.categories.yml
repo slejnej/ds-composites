@@ -1,0 +1,11 @@
+uuid: a950a704-4242-4ef6-8ed1-a611512b28b0
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xr7_T64WcTqL4R0_xtMZVsHrtEWwhR9DrxeeKtS1FKA
+name: Categories
+vid: categories
+description: null
+weight: 0
+new_revision: false

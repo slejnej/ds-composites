@@ -1,0 +1,29 @@
+uuid: 4d04286f-78db-40ca-80be-ceb97534cae6
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_title
+    - filter.format.title
+    - paragraphs.paragraphs_type.cards
+  module:
+    - text
+  enforced:
+    module:
+      - cards_pod
+_core:
+  default_config_hash: bcFuuUXtbMI45Vg1lGp2t0mZR6qLPeN9K6y-GSOj7P8
+id: paragraph.cards.field_display_title
+field_name: field_display_title
+entity_type: paragraph
+bundle: cards
+label: 'Display title'
+description: 'This title is displayed on the page above the content of this section.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - title
+field_type: text

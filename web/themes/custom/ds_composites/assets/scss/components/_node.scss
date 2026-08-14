@@ -1,0 +1,118 @@
+// Global title swoosh
+$under-title-height-mobile: 60px;
+$under-title-height-desktop: 120px;
+
+.under-title img {
+  height: $under-title-height-mobile;
+  bottom: -$under-title-height-mobile;
+  z-index: 0;
+  @media(min-width: 576px) {
+    height: $under-title-height-desktop;
+    bottom: -$under-title-height-desktop;
+  }
+}
+
+.main-content-wrapper {
+  z-index: 1;
+
+  .body-wrapper {
+    background: white;
+    padding: $global-spacing-1;
+    border-radius: $global-spacing-border-radius-m;
+    @media(min-width: 576px) {
+      padding: $global-spacing-2;
+    }
+  }
+}
+
+/* If there's no main content, add some spacing to the first section so swoosh doesn't overlap postscript pods */
+.swooshy-spacing .field--name-field-postscript-pods.field__item:first-child .paragraph-section {
+  padding-top: 80px;
+}
+
+.title-wrapper.main-content .title-inner {
+  padding: $global-spacing-3 $global-spacing-2;
+  border-radius: $global-spacing-border-radius-m;
+}
+
+.title-content-wrapper {
+  margin: 0 $global-spacing-2;
+}
+
+// Organisation specific styles
+.node--type-organisation {
+  .sidebar-details .media-wrapper .media {
+    z-index: 1;
+
+    img {
+      border-radius: $global-spacing-border-radius-m;
+      border: solid 1px $border-primary;
+    }
+  }
+
+  .img-shape {
+    max-width: 300px;
+    width: 100%;
+    bottom: -35px;
+    left: -40px;
+    z-index: 0;
+  }
+}
+
+// Person specific styles
+.node--type-person {
+  #content-sidebar-fields .sidebar-fields-wrapper .left-sidebar-section {
+    overflow: visible !important;
+  }
+
+  .sidebar-details .media-wrapper .media {
+    z-index: 1;
+
+    img {
+      box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.17);
+    }
+  }
+
+  .shape-top {
+    max-width: 215px;
+    top: -20px;
+    left: -40px;
+    z-index: 0;
+  }
+
+  .shape-bottom {
+    max-width: 135px;
+    bottom: -15px;
+    right: -27px;
+    z-index: 0;
+  }
+}
+
+#page-content .main-content-wrapper {
+  .node__content {
+    section {
+      margin-top: 48px;
+      margin-bottom: 48px;
+    }
+    & > section {
+      margin-top: 92px;
+    }
+  }
+
+}
+
+#postscript {
+  .field--name-field-postscript-pods {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+}
+
+.maintenance-page {
+  background: $global-color-primary-900;
+  color: white;
+
+ .name-and-slogan {
+   display: none;
+ }
+}

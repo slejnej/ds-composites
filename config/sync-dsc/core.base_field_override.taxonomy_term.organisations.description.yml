@@ -1,0 +1,21 @@
+uuid: 1fbe25f0-5112-4df7-b84a-ef6fcdf58c6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.organisations
+  module:
+    - text
+id: taxonomy_term.organisations.description
+field_name: description
+entity_type: taxonomy_term
+bundle: organisations
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

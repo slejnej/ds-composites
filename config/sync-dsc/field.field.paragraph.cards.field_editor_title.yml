@@ -1,0 +1,24 @@
+uuid: 3eeacf92-ae50-43ef-9a41-c47fd0c745b6
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_editor_title
+    - paragraphs.paragraphs_type.cards
+  enforced:
+    module:
+      - cards_pod
+_core:
+  default_config_hash: 5wwZdvN99xrNmLq1TT6tVEs-qZMf9Ol4d6fzhUalBX8
+id: paragraph.cards.field_editor_title
+field_name: field_editor_title
+entity_type: paragraph
+bundle: cards
+label: 'Editor title'
+description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

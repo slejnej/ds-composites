@@ -1,0 +1,13 @@
+uuid: b8b80c45-6597-4591-b534-eac687786ac9
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: f4XjqzLjhrCEO8LHwsUfb_InXWxLO4EE80pb3Myidik
+id: media_publish_action
+label: 'Publish media'
+type: media
+plugin: 'entity:publish_action:media'
+configuration: {  }

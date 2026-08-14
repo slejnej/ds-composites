@@ -1,0 +1,25 @@
+uuid: 34412bbf-7711-4f4d-9d7e-9710735a1488
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: CgdWH98cSjqCM-ozm4wMH-bD-8HwE428STLXL2Njfv0
+name: Title
+format: title
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<em><i><sup><sub>'
+      filter_html_help: false
+      filter_html_nofollow: false
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }

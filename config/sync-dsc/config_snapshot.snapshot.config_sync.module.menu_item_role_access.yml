@@ -1,0 +1,19 @@
+uuid: 7934be8c-226c-4795-9628-572b2d5cd7b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_item_role_access
+id: config_sync.module.menu_item_role_access
+snapshotSet: config_sync
+extensionType: module
+extensionName: menu_item_role_access
+items:
+  -
+    collection: ''
+    name: menu_item_role_access.config
+    data:
+      overwrite_internal_link_target_access: false
+      inherit_parent_access: false
+      _core:
+        default_config_hash: BoKtrJ9ngxeDs4crU3DufPf0zkedgz1tBhdGegfwook

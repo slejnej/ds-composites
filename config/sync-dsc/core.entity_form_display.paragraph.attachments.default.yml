@@ -1,0 +1,102 @@
+uuid: 3f5f00f6-f25c-4735-a0e3-2ce212471746
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.attachments.field_attachments_nt_file_atts
+    - field.field.paragraph.attachments.field_display_title
+    - field.field.paragraph.attachments.field_editor_title
+    - field.field.paragraph.attachments.field_items_per_row
+    - paragraphs.paragraphs_type.attachments
+  module:
+    - field_group
+    - field_layout
+    - layout_discovery
+    - media_library
+    - text
+  enforced:
+    module:
+      - attachments_pod
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  field_group:
+    group_pod_title_properties:
+      children:
+        - field_editor_title
+        - field_display_title
+        - field_items_per_row
+      label: 'Pod title & properties'
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+    group_pod_content:
+      children:
+        - field_attachments_nt_file_atts
+      label: 'Pod content'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+_core:
+  default_config_hash: R8Xuzys933xSt_RbZhg5tJ65uXuYMXAI24OH3soylZ4
+id: paragraph.attachments.default
+targetEntityType: paragraph
+bundle: attachments
+mode: default
+content:
+  field_attachments_nt_file_atts:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_display_title:
+    type: text_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_editor_title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_items_per_row:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true

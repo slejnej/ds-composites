@@ -1,0 +1,31 @@
+uuid: 0f17c674-b426-4272-851b-077a0e0eb7bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - eu_cookie_compliance
+    - media
+    - paragraphs_type_permissions
+    - site_settings
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'display eu cookie compliance popup'
+  - 'view media'
+  - 'view paragraph content attachments'
+  - 'view paragraph content banner_pea'
+  - 'view paragraph content banners'
+  - 'view paragraph content card_pea'
+  - 'view paragraph content cards'
+  - 'view paragraph content promo'
+  - 'view paragraph content slide_pea'
+  - 'view paragraph content slideshow'
+  - 'view paragraph content tagline'
+  - 'view paragraph content text_media'
+  - 'view published site setting entities'

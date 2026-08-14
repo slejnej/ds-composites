@@ -1,0 +1,26 @@
+uuid: c62c2880-f7dd-414e-9c07-18cb6ed719ed
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_transcript
+    - filter.format.full_html
+    - media.type.remote_video
+  module:
+    - text
+_core:
+  default_config_hash: 9j7Zv45PHUP4G3eHCrzDkVXlGe3fa8T2axwyv8-iG4I
+id: media.remote_video.field_media_transcript
+field_name: field_media_transcript
+entity_type: media
+bundle: remote_video
+label: Transcript
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

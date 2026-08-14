@@ -1,0 +1,28 @@
+uuid: 7d0c7954-c344-4333-b39d-ecb4131eb7a2
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards_nt_slides_per_page
+    - paragraphs.paragraphs_type.cards
+  module:
+    - options
+  enforced:
+    module:
+      - cards_pod
+_core:
+  default_config_hash: flnTiJ8jqJ2Yvovt7mb148b06HhsoSBrQQLmKei_M4k
+id: paragraph.cards.field_cards_nt_slides_per_page
+field_name: field_cards_nt_slides_per_page
+entity_type: paragraph
+bundle: cards
+label: 'Slides per page'
+description: 'Select number of slides to display on the page.'
+required: true
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,34 @@
+uuid: da2e2450-f31a-4706-8e22-f85065478664
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_attachments_nt_file_atts
+    - media.type.document
+    - paragraphs.paragraphs_type.attachments
+  enforced:
+    module:
+      - attachments_pod
+_core:
+  default_config_hash: jvzXtO2UEh7hCTys3d1kRuqz6x3FQlSJb03_HwfLqq8
+id: paragraph.attachments.field_attachments_nt_file_atts
+field_name: field_attachments_nt_file_atts
+entity_type: paragraph
+bundle: attachments
+label: 'File attachments'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

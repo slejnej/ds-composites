@@ -1,0 +1,29 @@
+uuid: 9b8ded8f-bb8c-4c00-adec-56619fa7d10b
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_nt_summary
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.card_pea
+  module:
+    - text
+  enforced:
+    module:
+      - cards_pod
+_core:
+  default_config_hash: A0s-mcRrpc-48QFu8G0FTBxakjZdU9hsq7YP0Vp7cXM
+id: paragraph.card_pea.field_card_nt_summary
+field_name: field_card_nt_summary
+entity_type: paragraph
+bundle: card_pea
+label: Summary
+description: 'Avoid using hyperlinks here and instead add them to the Footer below'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

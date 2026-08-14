@@ -1,0 +1,23 @@
+uuid: b36cece7-7c0b-4299-ae2b-5068954c4407
+langcode: en
+status: true
+dependencies:
+  module:
+    - admin_toolbar
+id: config_sync.module.admin_toolbar
+snapshotSet: config_sync
+extensionType: module
+extensionName: admin_toolbar
+items:
+  -
+    collection: ''
+    name: admin_toolbar.settings
+    data:
+      enable_toggle_shortcut: false
+      menu_depth: 4
+      sticky_behavior: enabled
+      hoverintent_behavior:
+        enabled: true
+        timeout: 500
+      _core:
+        default_config_hash: uyQNqftluizBjDPnFYOJseLmtGK0tyiCkOyBmLkjOio

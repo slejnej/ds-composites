@@ -1,0 +1,29 @@
+uuid: c7668377-634c-435f-8370-6ee6b98eaf3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_title
+    - filter.format.title
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - text
+  enforced:
+    module:
+      - slideshow_pod
+_core:
+  default_config_hash: swuNNFPTl5z0eFEQT4cvG7hgtwloc9eTnP5lR8atLnA
+id: paragraph.slideshow.field_display_title
+field_name: field_display_title
+entity_type: paragraph
+bundle: slideshow
+label: 'Display title'
+description: 'This title is displayed on the page above the content of this pod.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - title
+field_type: text

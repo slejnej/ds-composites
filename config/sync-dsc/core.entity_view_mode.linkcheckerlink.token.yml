@@ -1,0 +1,11 @@
+uuid: 48a9e07c-b542-4e00-896a-fc9bc53486a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - linkchecker
+id: linkcheckerlink.token
+label: Token
+description: ''
+targetEntityType: linkcheckerlink
+cache: true
