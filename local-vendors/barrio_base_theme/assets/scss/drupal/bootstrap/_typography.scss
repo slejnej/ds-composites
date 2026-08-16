@@ -20,7 +20,7 @@ $li-margin-bottom: .25rem!default;
 
 /** ================= [ Global ] ================= **/
 
-main, body > :not(#toolbar-administration) {
+main, body {
   @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size, $text-mobile-body-regular-weight, $text-mobile-body-regular-line-height);
   @include typography-desktop($text-desktop-body-regular-font, $text-desktop-body-regular-size, $text-desktop-body-regular-weight, $text-desktop-body-regular-line-height);
 

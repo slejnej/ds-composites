@@ -3,8 +3,17 @@
 // custom code below this line
 
 /** ================= [Custom components] ================= **/
+@import "components/banner";
+@import "components/buttons";
+@import "components/card";
 @import "components/cookies";
+@import "components/footer";
 @import "components/header";
+@import "components/menu";
+@import "components/node";
+@import "components/promo";
+@import "components/tagline";
+@import "components/typography";
 
 /** ================= [ FONTS ] ================= **/
 @font-face {

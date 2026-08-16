@@ -2,7 +2,7 @@
 
 {% block content %}
   <div
-    class="banner-wrapper mx-auto h-100 d-flex flex-column flex-lg-row align-items-stretch justify-content-between">
+    class="banner-wrapper mx-auto d-flex flex-column flex-lg-row align-items-stretch justify-content-between">
 
     {{ block('image_caption') }}
 
@@ -55,10 +55,8 @@
             <div class="banner-image position-relative">
 
               <div class="image position-relative">
-                {{ image|remora_image({'default': 'free'}) }}
+                {{ image|remora_image({'default': 'free'}, true, {}, true) }}
               </div>
-
-              <div class="image-cutoff position-absolute"></div>
 
             </div>
           {% endblock %}

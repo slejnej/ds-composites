@@ -1,7 +1,7 @@
 $banner-height-mobile: 500px !default;
 $banner-height-desktop: $banner-section-max-height !default;
 $banner-image-height-mobile: $banner-height-mobile !default;
-$banner-image-height-desktop: calc($banner-section-max-height - ($banner-section-padding-y * 2)) !default;
+$banner-image-height-desktop: calc($banner-height-desktop - ($banner-section-padding-y * 2)) !default;
 $banner-section-max-width: $banner-section-max-width !default;
 $layout-banner-margin-y: 0 !default;
 $banner-gap-mobile: $global-spacing-1 !default;
@@ -27,12 +27,12 @@ section:not(#sidebar-pods) .layout__region .paragraph.paragraph--type--banners {
 .paragraph--type--banners {
   margin-left: auto;
   margin-right: auto;
-  height: auto;
 
   padding: $banner-section-padding-y $banner-section-padding-x;
   max-width: $banner-section-max-width;
 
   .banner-wrapper {
+    height: $banner-height-desktop;
     gap: $banner-gap-mobile;
     animation: fadeIn 500ms;
     border-radius: $banner-wrapper-top-left $banner-wrapper-top-right $banner-wrapper-bottom-right $banner-wrapper-bottom-left;
@@ -74,8 +74,7 @@ section:not(#sidebar-pods) .layout__region .paragraph.paragraph--type--banners {
 
     .banner-image {
       position: relative;
-      width: 100%;
-      height: auto;
+      height: 100%;
       max-height: $banner-image-height-mobile;
       display: flex;
       justify-content: center;
@@ -86,11 +85,19 @@ section:not(#sidebar-pods) .layout__region .paragraph.paragraph--type--banners {
         max-height: $banner-image-height-desktop;
       }
 
+      .image,
+      picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
       img {
-        width: 100%;
-        height: auto;
+        height: 100%;
+        width: auto;
         max-width: 100%;
-        max-height: 100%;
+        max-height: inherit;
         object-fit: cover;
         object-position: center;
         display: block;
@@ -107,6 +114,10 @@ section:not(#sidebar-pods) .layout__region .paragraph.paragraph--type--banners {
     .caption-wrapper {
       left: auto;
       right: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: $banner-image-height-mobile;
     }
   }
 }

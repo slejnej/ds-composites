@@ -34,7 +34,7 @@ $pod-margin-y: $global-spacing-4;
 $promo-margin-y: $global-spacing-4;
 
 // section
-$section-margin-top: $global-spacing-4;
+$section-margin-top: $global-spacing-1;
 $section-margin-bottom: $global-spacing-0;
 $section-padding-y: 0rem;
 $section-padding-x: 0rem;
@@ -754,7 +754,7 @@ $form-color-filled: $global-text-primary;
 
 // layout-section-title
 $layout-section-title-color: $global-text-primary;
-$layout-section-title-align: center;
+$layout-section-title-align: left;
 $layout-section-title-border-color: $global-border-color;
 $layout-section-title-border-bottom: 0px;
 $layout-section-title-border-top: 0px;

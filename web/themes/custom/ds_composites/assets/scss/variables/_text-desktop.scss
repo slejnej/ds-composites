@@ -60,11 +60,11 @@ $text-desktop-heading-1-weight: $global-text-font-weight-semibold;
 $text-desktop-heading-1-line-height: 68px;
 $text-desktop-heading-2-font: $global-text-primary-font;
 $text-desktop-heading-2-size: $global-text-font-size-6xl;
-$text-desktop-heading-2-weight: $global-text-font-weight-semibold;
+$text-desktop-heading-2-weight: $global-text-font-weight-bold;
 $text-desktop-heading-2-line-height: 54px;
 $text-desktop-heading-3-font: $global-text-primary-font;
 $text-desktop-heading-3-size: $global-text-font-size-4xl;
-$text-desktop-heading-3-weight: $global-text-font-weight-semibold;
+$text-desktop-heading-3-weight: $global-text-font-weight-bold;
 $text-desktop-heading-3-line-height: 42px;
 $text-desktop-heading-4-font: $global-text-primary-font;
 $text-desktop-heading-4-size: $global-text-font-size-2xl;
@@ -113,13 +113,13 @@ $text-desktop-title-pod-line-height: $text-desktop-heading-3-line-height;
 
 // slideshow
 $text-desktop-title-slideshow-font: $global-text-primary-font;
-$text-desktop-title-slideshow-size: $text-desktop-heading-1-size;
-$text-desktop-title-slideshow-weight: $text-desktop-heading-1-weight;
-$text-desktop-title-slideshow-line-height: $text-desktop-heading-1-line-height;
+$text-desktop-title-slideshow-size: $global-text-font-size-6xl;
+$text-desktop-title-slideshow-weight: 800;
+$text-desktop-title-slideshow-line-height: 58px;
 $text-desktop-title-slideshow-sub-font: $global-text-secondary-font;
-$text-desktop-title-slideshow-sub-size: $text-desktop-heading-4-size;
+$text-desktop-title-slideshow-sub-size: $global-text-font-size-3xl;
 $text-desktop-title-slideshow-sub-weight: $global-text-font-weight-normal;
-$text-desktop-title-slideshow-sub-line-height: $text-desktop-heading-4-line-height;
+$text-desktop-title-slideshow-sub-line-height: 42px;
 
 // featured article
 $text-desktop-title-featured-article-font: $global-text-primary-font;

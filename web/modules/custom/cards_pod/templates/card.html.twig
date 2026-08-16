@@ -30,18 +30,20 @@ Card block requires the following variables:
       </div>
 
       {% block card_footer %}
-        {# spaceless so we can hide empty footers using SCSS #}
-        <div class="card-footer">{% apply spaceless %}
+        {% if content.field_card_nt_footer['#items'] %}
+          {# spaceless so we can hide empty footers using SCSS #}
+          <div class="card-footer">{% apply spaceless %}
 
-            {% block card_footer_text %}
+              {% block card_footer_text %}
 
-            {% endblock %}
+              {% endblock %}
 
-            {% block card_tags %}
-            {% endblock %}
+              {% block card_tags %}
+              {% endblock %}
 
-          {% endapply %}
-        </div>
+            {% endapply %}
+          </div>
+        {% endif %}
       {% endblock %}
     {% endblock %}
   </div>

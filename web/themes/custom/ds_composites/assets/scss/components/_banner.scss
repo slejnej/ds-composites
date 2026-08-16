@@ -1,10 +1,53 @@
-$banner-height-mobile: 770px;
-$banner-height-desktop: 770px;
+@import "../variables/global";
+
+$banner-height-desktop: 769px;
 $banner-gap-mobile: 40px;
 $banner-gap-desktop: 70px;
 $banner-padding-desktop: 0;
 
-.paragraph.paragraph--type--banners .banner-wrapper {
+@import '../../../../../../modules/custom/banners_pod/scss/style.scss';
+
+// MIXINS
+@mixin banner_icon($banner-icon-color) {
+  .banner-wrapper {
+    .banner-bg-mixed-small, .banner-bg-mixed-medium {
+      background: $banner-icon-color;
+    }
+
+    svg {
+      .splat-color {
+        fill: $banner-icon-color;
+      }
+    }
+  }
+}
+
+.paragraph.paragraph--type--banners {
+  @include banner(
+    $global-color-primary-900,
+    transparent,
+    white,
+    white
+  );
+
+  @include banner_icon(
+      $global-color-primary-500
+  );
+}
+
+.palette-alt-1 .paragraph.paragraph--type--banners {
+  @include banner_icon(
+      $global-color-warning-400
+  );
+}
+
+.palette-alt-2 .paragraph.paragraph--type--banners {
+  @include banner_icon(
+      $global-color-warning-500
+  );
+}
+
+.paragraph.paragraph.paragraph--type--banners .paragraph--type--banner-pea .banner-wrapper {
   max-width: 1800px;
 
   .banner-caption-wrapper {
@@ -139,47 +182,3 @@ $banner-padding-desktop: 0;
     }
   }
 }
-
-// MIXINS
-
-@import '../../../../../../modules/custom/banners_pod/scss/style.scss';
-
-@mixin banner_icon($banner-icon-color) {
-  .banner-wrapper {
-    .banner-bg-mixed-small, .banner-bg-mixed-medium {
-      background: $banner-icon-color;
-    }
-
-    svg {
-      .splat-color {
-        fill: $banner-icon-color;
-      }
-    }
-  }
-}
-
-.paragraph.paragraph--type--banners {
-  @include banner(
-    $global-color-primary-900,
-    white,
-    white,
-    transparent
-  );
-
-  @include banner_icon(
-      $global-color-primary-500
-  );
-}
-
-.palette-alt-1 .paragraph.paragraph--type--banners {
-  @include banner_icon(
-      $global-color-warning-400
-  );
-}
-
-.palette-alt-2 .paragraph.paragraph--type--banners {
-  @include banner_icon(
-      $global-color-info-400
-  );
-}
-

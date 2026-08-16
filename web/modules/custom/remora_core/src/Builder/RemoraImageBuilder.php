@@ -27,6 +27,14 @@ class RemoraImageBuilder
     'xl' => 700,
     'xxl' => 800,
   ];
+  private const BREAKPOINTS_HEIGHT = [
+    'xs' => '(max-height: 575.98px)',
+    'sm' => '(min-height: 576px) and (max-height: 767.98px)',
+    'md' => '(min-height: 768px) and (max-height: 991.98px)',
+    'lg' => '(min-height: 992px) and (max-height: 1199.98px)',
+    'xl' => '(min-height: 1200px) and (max-height: 1599.98px)',
+    'xxl' => '(min-height: 1600px)',
+  ];
   private const SIZES_MASONRY = [
     'xs' => '100vw',
     'sm' => '(min-width: 400px) 50vw',
@@ -111,6 +119,8 @@ class RemoraImageBuilder
     $result = [];
     $sizes = [];
     $imageStyle = null;
+    $originalSize = @getimagesize($imageUri);
+    $isPortrait = is_array($originalSize) && ($originalSize[1] > $originalSize[0]);
 
     foreach ($stylesByBreakpoint as $breakpoint => $style) {
       $imageStyle = $style;
@@ -151,7 +161,9 @@ class RemoraImageBuilder
           }
         } else {
           $imageDimensions = $this->getStyleSize($imageStyleObj, $imageUri);
-          $mediaQuery = $themeBreakpoints[$themeBreakpoint]->getMediaQuery();
+          $mediaQuery = ($isPortrait && isset(self::BREAKPOINTS_HEIGHT[$breakpoint]))
+            ? self::BREAKPOINTS_HEIGHT[$breakpoint]
+            : $themeBreakpoints[$themeBreakpoint]->getMediaQuery();
           $result[$mediaQuery] ??= ['uri' => $imageUrl] + $imageDimensions;
         }
       }
