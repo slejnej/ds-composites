@@ -1,0 +1,39 @@
+.paragraph--type--text-media {
+  .image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      left: 0;
+      width: 100%;
+      height: 140%;
+      background: url('../assets/images/blob-yellow.svg') no-repeat 45% 55%/contain;
+      z-index: 0;
+      pointer-events: none;
+    }
+    picture, img {
+      z-index: 1;
+    }
+  }
+
+  .article-wrapper .image-wrapper {
+    img {
+      border-radius: 50px;
+      width: 70%;
+    }
+  }
+  .feature-wrapper .image-wrapper {
+    img {
+      border-radius: 50px;
+    }
+  }
+}
+.paragraph-section.palette-alt-2 {
+  .paragraph--type--text-media {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}

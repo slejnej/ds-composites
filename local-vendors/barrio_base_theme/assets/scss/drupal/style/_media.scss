@@ -1,6 +1,15 @@
 //GENERAL
 img {
   width: 100%;
+  &.free {
+    &.landscape {
+      height: auto;
+    }
+    &.portrait {
+      width: auto;
+      height: 100%;
+    }
+  }
 }
 
 // Oembed video styles

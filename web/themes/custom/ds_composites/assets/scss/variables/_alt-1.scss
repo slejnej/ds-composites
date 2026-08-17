@@ -585,12 +585,12 @@ $alt-1-pagination-disabled-border-color: $global-border-color;
 // card
 $alt-1-card-bg-color: $global-color-black-white;
 $alt-1-card-bg-color-hover: $global-color-black-white;
-$alt-1-card-title-color: $global-color-primary-700;
+$alt-1-card-title-color: $global-color-primary-900;
 $alt-1-card-summary-color: $global-text-secondary;
 $alt-1-card-summary-color-hover: $global-text-secondary;
 $alt-1-card-date-color: $global-text-date;
 $alt-1-card-date-color-hover: $global-text-date;
-$alt-1-card-title-color-hover: $global-color-secondary-700;
+$alt-1-card-title-color-hover: $global-color-primary-900;;
 $alt-1-card-tag-bg: $global-color-light-100;
 $alt-1-card-tag-bg-hover: $global-color-light-100;
 $alt-1-card-tag-border: $global-border-color;
@@ -630,9 +630,9 @@ $alt-1-card-bottom-right: $image-bottom-right;
 $alt-1-card-bottom-left: $image-bottom-left;
 
 // footer
-$alt-1-card-footer-primary-bg: $global-color-primary-600;
+$alt-1-card-footer-primary-bg: transparent;
 $alt-1-card-footer-border-color: $global-color-primary-600;
-$alt-1-card-footer-primary-color: $global-color-black-white;
+$alt-1-card-footer-primary-color: $global-color-primary-900;
 $alt-1-card-footer-cap-padding-y: $global-spacing-2;
 $alt-1-card-footer-cap-padding-x: $global-spacing-1;
 $alt-1-card-footer-border-radius: $global-spacing-0;

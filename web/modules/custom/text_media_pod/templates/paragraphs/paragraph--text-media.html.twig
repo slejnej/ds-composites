@@ -36,10 +36,12 @@
                         {% elseif imageStyle == 'image-centre' %} col-md-8 mx-auto
                       {% endif %}">
                       {% block article_media_ratio %}
-                        {% set aspect_ratio = content.field_media_ratio['#items'].0.value ?? 'masonry' %}
+                        {% set media_ratio_count = content.field_media_ratio['#items']|length %}
+                        {% set aspect_ratio_value = content.field_media_ratio['#items'].0.value %}
+                        {% set aspect_ratio = (media_ratio_count > 1 and aspect_ratio_value is empty) ? 'masonry' : (aspect_ratio_value ?? 'free') %}
 
                         {% if image %}
-                          {{ image|remora_image({'default': aspect_ratio}, true, {}, shrink_image) }}
+                          {{ image|remora_image({'default': aspect_ratio}, true, {}, true) }}
                         {% else %}
                           {{ video }}
                         {% endif %}

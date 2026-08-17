@@ -73,6 +73,7 @@ class RemoraImageBuilder
       $style = $stylesByBreakpoint[$key] ?? $lastStyle;
       $lastStyle = $style;
     }
+    unset($style);
 
     $response = $this->generateSources($imageUri, $paddedStyles, $shrinkImage);
 
@@ -80,6 +81,29 @@ class RemoraImageBuilder
     $sizes = $response['sizes'];
     $default_image = $sources[self::DEFAULT_BREAKPOINT] ?? '';
     unset($sources[self::DEFAULT_BREAKPOINT]);
+
+    $originalSize = @getimagesize($imageUri);
+    $isPortrait = is_array($originalSize) && ($originalSize[1] > $originalSize[0]);
+    $classes = [$isPortrait ? 'portrait' : 'landscape'];
+
+    foreach ($stylesByBreakpoint as $breakpoint => $breakpointStyle) {
+      if (!empty($breakpointStyle)) {
+        $classes[] = $breakpoint === self::DEFAULT_BREAKPOINT ? $breakpointStyle : "{$breakpoint}-{$breakpointStyle}";
+      }
+    }
+
+    if (isset($attributes['class'])) {
+      if (is_array($attributes['class'])) {
+        $attributes['class'] = array_merge($attributes['class'], $classes);
+      }
+      else {
+        $existingClasses = preg_split('/\s+/', trim((string) $attributes['class']), -1, PREG_SPLIT_NO_EMPTY);
+        $attributes['class'] = array_merge($existingClasses, $classes);
+      }
+    }
+    else {
+      $attributes['class'] = $classes;
+    }
 
     $attributesObj = count($attributes) > 0 ? new Attribute($attributes) : null;
 
@@ -126,6 +150,14 @@ class RemoraImageBuilder
       $imageStyle = $style;
 
       $responsiveStyle = ResponsiveImageStyle::load($style);
+      if ($responsiveStyle === null) {
+        $this->logger->error('No responsive image style "@style" found for breakpoint @breakpoint', [
+          '@breakpoint' => $breakpoint,
+          '@style' => $style,
+        ]);
+        continue;
+      }
+
       $themeBreakpoint = sprintf('%s.%s', self::BREAKPOINT_DEFINITION_THEME, $breakpoint);
 
       if ($breakpoint === self::DEFAULT_BREAKPOINT) {

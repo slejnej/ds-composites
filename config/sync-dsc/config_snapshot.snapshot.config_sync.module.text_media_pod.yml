@@ -5,7 +5,7 @@ dependencies:
   module:
     - text_media_pod
 _core:
-  default_config_hash: OBu3fuXtMLYsuyTYx9FrWBSvDF9OQeuBN6pc5GCEprY
+  default_config_hash: tFtvs-9mxB0Yv6dVqx20jJbUbiKOwe5rUmcBOpXc2Qg
 id: config_sync.module.text_media_pod
 snapshotSet: config_sync
 extensionType: module
@@ -494,19 +494,19 @@ items:
                   value: original_size
                   label: 'Original size'
                 -
-                  value: '16_9'
+                  value: landscape_16_9
                   label: 'Landscape 16x9'
                 -
-                  value: '21_9'
+                  value: landscape_21_9
                   label: 'Landscape 21x9'
                 -
-                  value: '4_3'
+                  value: landscape_4_3
                   label: 'Landscape: 4x3'
                 -
-                  value: '3_4'
+                  value: portrait_3_4
                   label: 'Portrait: 3x4'
                 -
-                  value: '1_1'
+                  value: square_1_1
                   label: 'Square: 1x1'
               allowed_values_function: ''
             module: options
@@ -644,7 +644,7 @@ items:
                 enabled: false
                 available_layouts: {  }
       _core:
-        default_config_hash: OBu3fuXtMLYsuyTYx9FrWBSvDF9OQeuBN6pc5GCEprY
+        default_config_hash: tFtvs-9mxB0Yv6dVqx20jJbUbiKOwe5rUmcBOpXc2Qg
   -
     collection: ''
     name: core.entity_form_display.paragraph.text_media.default
@@ -1154,19 +1154,19 @@ items:
             value: original_size
             label: 'Original size'
           -
-            value: '16_9'
+            value: landscape_16_9
             label: 'Landscape 16x9'
           -
-            value: '21_9'
+            value: landscape_21_9
             label: 'Landscape 21x9'
           -
-            value: '4_3'
+            value: landscape_4_3
             label: 'Landscape: 4x3'
           -
-            value: '3_4'
+            value: portrait_3_4
             label: 'Portrait: 3x4'
           -
-            value: '1_1'
+            value: square_1_1
             label: 'Square: 1x1'
         allowed_values_function: ''
       module: options
@@ -1177,7 +1177,7 @@ items:
       persist_with_no_fields: false
       custom_storage: false
       _core:
-        default_config_hash: 2opCAdmueqs0Zbj-GKqTVvqZECYg2joro8xmie-AaGI
+        default_config_hash: DxS1RD_oaLlnKmhXkR6IIlHHod4DDva0vYT1wBKOGUI
   -
     collection: ''
     name: field.storage.paragraph.field_text_media_nt_media

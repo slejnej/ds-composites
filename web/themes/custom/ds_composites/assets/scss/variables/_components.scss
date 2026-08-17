@@ -586,9 +586,9 @@ $btn-close-white-filter: $global-color-black-white;
 $divider-color: $global-color-light-300;
 
 // hero-caption
-$hero-caption-wrapper-bg: $global-color-black-300;
-$hero-caption-color-bg: $global-color-black-300;
-$hero-caption-color: $global-color-black-700;
+$hero-caption-wrapper-bg: $global-color-primary-900;
+$hero-caption-color-bg: $global-color-primary-900;
+$hero-caption-color: $global-color-black-white;
 $hero-caption-border: rgba(15, 23, 42, 0.0000);
 $hero-caption-border-top: 0px;
 $hero-caption-border-right: 0px;
@@ -615,47 +615,47 @@ $hero-caption-content-max-width: 1600px;
 $navbar-default-padding-top: 1.5rem;
 
 // dark
-$navbar-dark-color: $global-color-black-700;
-$navbar-dark-color-bg: $global-color-black-300;
-$navbar-dark-hover-color: $global-color-black-700;
-$navbar-dark-hover-color-bg: $global-color-black-100;
-$navbar-dark-active-color: $global-color-black-700;
-$navbar-dark-active-color-bg: $global-color-black-500;
+$navbar-dark-color: $global-color-black-white;
+$navbar-dark-color-bg: $global-color-primary-900;
+$navbar-dark-hover-color: $global-color-primary-400;
+$navbar-dark-hover-color-bg: rgba(54, 190, 250, 0.1000);
+$navbar-dark-active-color: $global-color-black-white;
+$navbar-dark-active-color-bg: $global-color-secondary-600;
 $navbar-dark-disabled-color: $global-color-black-600;
 $navbar-dark-disabled-color-bg: $secondary;
 $navbar-dark-padding-x: $global-spacing-2;
-$navbar-dark-height: 70px;
+$navbar-dark-height: 62px;
 
 // default-toggler
 $navbar-default-toggler-padding-y: $global-spacing-05;
 $navbar-default-toggler-padding-x: $global-spacing-05;
 $navbar-default-toggler-font-size: 1.875rem;
-$navbar-default-toggler-bg-color: transparent;
-$navbar-default-toggler-icon-color: $global-color-black-700;
+$navbar-default-toggler-bg-color: $global-color-primary-900;
+$navbar-default-toggler-icon-color: $warning;
 $navbar-default-toggler-border-color: transparent;
 $navbar-default-toggler-bg-hover-color: transparent;
-$navbar-default-toggler-icon-hover-color: $global-color-black-800;
+$navbar-default-toggler-icon-hover-color: $warning;
 $navbar-default-toggler-border-hover-color: transparent;
 $navbar-default-toggler-border-radius: $global-spacing-0;
 
 // dark-link
-$navbar-dark-link-color: $global-color-dark-900;
-$navbar-dark-link-color-bg: $global-color-black-300;
-$navbar-dark-link-hover-color: $global-color-secondary-900;
-$navbar-dark-link-hover-color-bg: $global-color-black-100;
-$navbar-dark-link-active-color: $global-color-black-700;
-$navbar-dark-link-active-color-bg: $global-color-black-500;
+$navbar-dark-link-color: $global-color-primary-900;
+$navbar-dark-link-color-bg: $global-color-black-white;
+$navbar-dark-link-hover-color: $global-color-black-white;
+$navbar-dark-link-hover-color-bg: $global-color-primary-700;
+$navbar-dark-link-active-color: $global-color-primary-900;
+$navbar-dark-link-active-color-bg: $global-color-primary-100;
 $navbar-dark-link-disabled-color: $global-color-light-400;
-$navbar-dark-link-disabled-color-bg: $global-color-black-300;
+$navbar-dark-link-disabled-color-bg: $global-color-black-white;
 $navbar-dark-link-padding-x: $global-spacing-05;
 $navbar-dark-link-padding-y: $global-spacing-05;
 $navbar-dark-link-title-padding-y: 0.75rem;
 $navbar-dark-link-title-padding-x: $global-spacing-05;
-$navbar-dark-link-title-bg: $global-color-light-200;
-$navbar-dark-link-title-color: $global-color-success-900;
+$navbar-dark-link-title-bg: $global-color-primary-100;
+$navbar-dark-link-title-color: $global-color-primary-900;
 $navbar-dark-link-title-border-bottom: 1px;
-$navbar-dark-link-title-border-color: $global-color-light-300;
-$navbar-dark-link-hover-title-bg: $global-color-light-300;
+$navbar-dark-link-title-border-color: $global-color-primary-100;
+$navbar-dark-link-hover-title-bg: $global-color-primary-300;
 $navbar-dark-link-hover-title-color: $global-color-secondary-900;
 
 // dark-bar-padding

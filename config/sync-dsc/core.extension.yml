@@ -74,6 +74,7 @@ module:
   permissionspolicy: 0
   promo_pod: 0
   rabbit_hole: 0
+  raven: 0
   recaptcha: 0
   recaptcha_v3: 0
   redirect: 0
