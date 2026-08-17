@@ -1,0 +1,24 @@
+uuid: b8c294e8-e8b5-48cd-af90-a406cb8b5003
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media
+    - node.type.page
+_core:
+  default_config_hash: 937XUXSiBE1QqXSvN-7l54my9FAdbhd24ZDC710LROg
+id: node.page.field_media
+field_name: field_media
+entity_type: node
+bundle: page
+label: Media
+description: 'Upload a new image or video or select an existing one from your media library.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_media_types_image_video
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference

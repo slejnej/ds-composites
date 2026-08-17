@@ -1,0 +1,25 @@
+uuid: ef5162f0-1cef-45e8-8094-a5cc6ec77d90
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+  enforced:
+    module:
+      - attachments_pod
+_core:
+  default_config_hash: mq9C9veDs-I632ozr6ujc9ZutwSVSnrym973tvicoSU
+id: paragraph.field_attachments_nt_file_atts
+field_name: field_attachments_nt_file_atts
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

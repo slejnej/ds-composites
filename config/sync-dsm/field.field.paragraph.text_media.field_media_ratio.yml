@@ -1,0 +1,23 @@
+uuid: 776dfe29-8ab0-455b-b13d-397a77473bc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_ratio
+    - paragraphs.paragraphs_type.text_media
+  module:
+    - options
+_core:
+  default_config_hash: F208AsXyxfyhKPLyHmDrM1QVJk20jMd2xw4U24cPs84
+id: paragraph.text_media.field_media_ratio
+field_name: field_media_ratio
+entity_type: paragraph
+bundle: text_media
+label: 'Media ratio'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

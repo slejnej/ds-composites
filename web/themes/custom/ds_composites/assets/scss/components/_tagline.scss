@@ -14,8 +14,8 @@
   }
 
   .tagline-bg {
-    mask: url('../assets/images/bg-shape.svg') no-repeat 45% 55%/150%;
-    background: #FCC529;
+    mask: url('../assets/images/bg-shape.svg') repeat-x 0 50%/contain;
+    background: $global-color-warning-200;
     top: 0;
     left: 0;
     z-index: 0;
@@ -30,7 +30,12 @@
   }
 }
 
-
+.palette-default-bg .paragraph--type--tagline {
+  .tagline-content {
+    background-color: transparent;
+    border: none;
+  }
+}
 .palette-alt-1 .paragraph--type--tagline {
   .tagline-bg {
     background: #1993D1;

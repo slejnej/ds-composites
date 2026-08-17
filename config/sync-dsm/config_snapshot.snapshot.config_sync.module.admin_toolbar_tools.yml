@@ -1,0 +1,19 @@
+uuid: f14b9f65-f5e3-4dd5-800e-4144ab92cf8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - admin_toolbar_tools
+id: config_sync.module.admin_toolbar_tools
+snapshotSet: config_sync
+extensionType: module
+extensionName: admin_toolbar_tools
+items:
+  -
+    collection: ''
+    name: admin_toolbar_tools.settings
+    data:
+      max_bundle_number: 20
+      show_local_tasks: false
+      _core:
+        default_config_hash: gw53MTkdqcnGCABUzyXtstgzZKWSpwznplfZdkdY8V0

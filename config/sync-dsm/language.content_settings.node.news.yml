@@ -1,0 +1,20 @@
+uuid: afb5846f-1bea-41d0-9f2f-dd14f3dad34e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.news
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: olNtPwL5Ia1vDZ3agb1WrqLqu-OeJn6TH2XXwjBuzpg
+id: node.news
+target_entity_type_id: node
+target_bundle: news
+default_langcode: site_default
+language_alterable: true

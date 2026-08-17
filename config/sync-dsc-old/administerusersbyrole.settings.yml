@@ -1,5 +1,0 @@
-_core:
-  default_config_hash: gcSFYnONIZ2HD4yWJ5ujPNKH7YYdsWWZDyY3g6CFT08
-roles:
-  web_admin: unsafe
-  editor: unsafe

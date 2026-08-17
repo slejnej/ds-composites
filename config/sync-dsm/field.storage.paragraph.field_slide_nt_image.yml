@@ -1,0 +1,25 @@
+uuid: 97ed3c44-5ef0-44b0-ac32-005e445dad32
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+  enforced:
+    module:
+      - slideshow_pod
+_core:
+  default_config_hash: JK1xaTqI0QA5c7u8d4L3SIaDE7YQvUYloLdp8QRl8qo
+id: paragraph.field_slide_nt_image
+field_name: field_slide_nt_image
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

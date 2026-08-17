@@ -1,0 +1,20 @@
+uuid: a3aa7fd0-2201-47ec-80ae-95a1ef0c5fc4
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+  enforced:
+    module:
+      - text_media_pod
+_core:
+  default_config_hash: C9HSsmiY9Yhnmd1Vp9MfUQ3HwZ58qPGc2UFqm4YRHKM
+id: text_media
+label: 'Text / media'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

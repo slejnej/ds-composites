@@ -1,0 +1,26 @@
+uuid: 4b2ef8a4-9d1b-4238-bf46-9a3d9f336fcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_autoplay
+    - paragraphs.paragraphs_type.slideshow
+  enforced:
+    module:
+      - slideshow_pod
+_core:
+  default_config_hash: KJ_rBAEL11uM60uMkN792dK971BRcihUQvy1lgOEDlY
+id: paragraph.slideshow.field_autoplay
+field_name: field_autoplay
+entity_type: paragraph
+bundle: slideshow
+label: Autoplay
+description: 'Enable to automatically play and advance to subsequent slides.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

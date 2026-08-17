@@ -1,0 +1,26 @@
+uuid: 577bdb19-3d7d-4e63-b3d1-b6cc87d19036
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_nt_add_a_link
+    - paragraphs.paragraphs_type.slide_pea
+  enforced:
+    module:
+      - slideshow_pod
+_core:
+  default_config_hash: 18dR1cqgsn1bxTQpZqtjaYOC82oOP8scWso08z3WmEc
+id: paragraph.slide_pea.field_slide_nt_add_a_link
+field_name: field_slide_nt_add_a_link
+entity_type: paragraph
+bundle: slide_pea
+label: 'Add a link?'
+description: 'Enable to add a link to your slide'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

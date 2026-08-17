@@ -87,7 +87,11 @@
                     <div class="image-wrapper position-relative w-100 flex-md-5 flex-lg-6 flex-xl-7">
                       {% block feature_media_ratio %}
                         {% if image %}
-                          {{ image|remora_image({'default': 'landscape_16_9'}, true, {}, shrink_image) }}
+                          {% set media_ratio_count = content.field_media_ratio['#items']|length %}
+                          {% set aspect_ratio_value = content.field_media_ratio['#items'].0.value %}
+                          {% set aspect_ratio = (media_ratio_count > 1 and aspect_ratio_value is empty) ? 'landscape_16_9' : (aspect_ratio_value ?? 'free') %}
+
+                          {{ image|remora_image({'default': aspect_ratio}, true, {}, shrink_image) }}
                         {% else %}
                           {{ video }}
                         {% endif %}

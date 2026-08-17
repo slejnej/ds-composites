@@ -1,0 +1,18 @@
+uuid: 6b5db65a-79f5-4643-a10b-3d6d7086ba9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.banner_pea
+id: paragraph.banner_pea.created
+field_name: created
+entity_type: paragraph
+bundle: banner_pea
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

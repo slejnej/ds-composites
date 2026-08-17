@@ -1,0 +1,26 @@
+display:
+  default:
+    display_title: Privzeto
+    display_options:
+      title: Seznam
+      fields:
+        group:
+          label: Skupina
+        type:
+          label: Tip
+        description:
+          label: Opis
+        rendered_entity:
+          label: Vrednost
+        operations:
+          label: Operacije
+      exposed_form:
+        options:
+          reset_button_label: Ponastavi
+      filters:
+        group:
+          expose:
+            label: Skupina
+        langcode:
+          expose:
+            label: Jezik

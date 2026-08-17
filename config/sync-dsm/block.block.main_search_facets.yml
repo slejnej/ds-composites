@@ -1,0 +1,35 @@
+uuid: 5be4783c-a98e-442f-aa47-41860ade8b12
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - facets_block
+    - system
+  theme:
+    - barrio_base_theme
+_core:
+  default_config_hash: TjZxKzQtNup-oE28U0cbRcy76d4nqD_dM4uXlVx8250
+id: main_search_facets
+theme: barrio_base_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: facets_block
+settings:
+  id: facets_block
+  label: 'Search Block'
+  label_display: visible
+  provider: facets_block
+  show_title: true
+  exclude_empty_facets: true
+  hide_empty_block: false
+  facets_to_include:
+    - 'facet_block:main_search_content_type'
+    - 'facet_block:main_search_tags'
+    - 'facet_block:main_search_topics'
+  add_js_classes: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search

@@ -1,0 +1,15 @@
+uuid: fd30ed90-6024-427e-87a8-665eed53e8fa
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - slideshow_pod
+_core:
+  default_config_hash: vnBRiL1o4Nr_FAv9WSCHtVwhZEfuy7mq3XCxNEC7mJ0
+id: slideshow
+label: Slideshow
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

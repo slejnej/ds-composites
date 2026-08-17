@@ -1,0 +1,21 @@
+uuid: c446d39b-72da-4c6f-9b9b-9adc188b6f3a
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_audio_summary
+    - media.type.audio
+_core:
+  default_config_hash: OVSINsf0rLqDQfgAHUej10N0gn9Xz5liX5qJbRAIW1s
+id: media.audio.field_media_audio_summary
+field_name: field_media_audio_summary
+entity_type: media
+bundle: audio
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

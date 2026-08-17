@@ -1,0 +1,26 @@
+uuid: b56efe69-2345-4674-8637-6edd7938862c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - crop.type.original_size
+  module:
+    - crop
+_core:
+  default_config_hash: Uc0UIAQSutVulb8MzP65OzVD61SmO1mmU9WLKWKP2SA
+name: original_size
+label: 'Original size'
+effects:
+  fff181cb-bce3-451b-8786-dedd6580ba3d:
+    uuid: fff181cb-bce3-451b-8786-dedd6580ba3d
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: original_size
+      automatic_crop_provider: null
+  4ff9324b-22c7-4abc-93a0-bbbf6ec9e7b5:
+    uuid: 4ff9324b-22c7-4abc-93a0-bbbf6ec9e7b5
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

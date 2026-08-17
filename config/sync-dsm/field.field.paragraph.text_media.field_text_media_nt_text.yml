@@ -1,0 +1,29 @@
+uuid: 5f1fb928-b88c-4b51-978d-93a60d5d9a8f
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_media_nt_text
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.text_media
+  module:
+    - text
+  enforced:
+    module:
+      - text_media_pod
+_core:
+  default_config_hash: Hn9XL4eZtwp7eGkZKgjt1idEgt6jmwKBPSUVAEJG97c
+id: paragraph.text_media.field_text_media_nt_text
+field_name: field_text_media_nt_text
+entity_type: paragraph
+bundle: text_media
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

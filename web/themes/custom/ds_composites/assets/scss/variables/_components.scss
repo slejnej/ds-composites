@@ -461,8 +461,8 @@ $carousel-caption-mobile-padding-y: $global-spacing-2;
 // Intro
 $intro-padding-y: $global-spacing-2;
 $intro-padding-x: $global-spacing-2;
-$intro-color-bg: $global-color-light-100;
-$intro-content-bg: $global-color-light-100;
+$intro-color-bg: $global-color-warning-400;
+$intro-content-bg: $global-color-warning-400;
 $intro-text-color: $global-text-primary;
 $intro-text-padding-x: $global-spacing-3;
 $intro-text-padding-y: $global-spacing-3;
@@ -472,10 +472,10 @@ $intro-top-right: $image-top-right;
 $intro-bottom-right: $image-bottom-right;
 $intro-bottom-left: $image-bottom-left;
 $intro-border-color: $global-color-light-100;
-$intro-border-left: $global-spacing-015;
-$intro-border-top: $global-spacing-015;
-$intro-border-bottom: $global-spacing-015;
-$intro-border-right: $global-spacing-015;
+$intro-border-left: 0;
+$intro-border-top: 0;
+$intro-border-bottom: 0;
+$intro-border-right: 0;
 $intro-mobile-padding-y: $global-spacing-1;
 $intro-mobile-padding-x: $global-spacing-1;
 

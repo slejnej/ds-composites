@@ -1,0 +1,24 @@
+uuid: a297cc71-4955-4d03-bc86-2b4b01f04d8e
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+  enforced:
+    module:
+      - text_media_pod
+_core:
+  default_config_hash: E-WNF-f_Sq5TW4isY5TEzQp190YmEC5I6x7DFf_LHNs
+id: paragraph.field_text_media_nt_text
+field_name: field_text_media_nt_text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

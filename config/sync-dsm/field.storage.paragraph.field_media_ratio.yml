@@ -1,0 +1,41 @@
+uuid: fce8a4f6-b3fb-4ac2-b015-fbbe4319c7f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: DxS1RD_oaLlnKmhXkR6IIlHHod4DDva0vYT1wBKOGUI
+id: paragraph.field_media_ratio
+field_name: field_media_ratio
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: original_size
+      label: 'Original size'
+    -
+      value: landscape_16_9
+      label: 'Landscape 16x9'
+    -
+      value: landscape_21_9
+      label: 'Landscape 21x9'
+    -
+      value: landscape_4_3
+      label: 'Landscape: 4x3'
+    -
+      value: portrait_3_4
+      label: 'Portrait: 3x4'
+    -
+      value: square_1_1
+      label: 'Square: 1x1'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

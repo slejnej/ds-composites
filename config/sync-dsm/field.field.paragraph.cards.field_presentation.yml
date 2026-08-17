@@ -1,0 +1,28 @@
+uuid: 4812c5e9-6f83-4963-bdd5-d7c505f3e609
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_presentation
+    - paragraphs.paragraphs_type.cards
+  module:
+    - options
+  enforced:
+    module:
+      - cards_pod
+_core:
+  default_config_hash: I5cuFD_o2y4BvYQaSpRc2GN63AXwIod3QFxgEQXz4A4
+id: paragraph.cards.field_presentation
+field_name: field_presentation
+entity_type: paragraph
+bundle: cards
+label: Presentation
+description: 'How would you like your cards displayed?'
+required: true
+translatable: true
+default_value:
+  -
+    value: grid
+default_value_callback: ''
+settings: {  }
+field_type: list_string
