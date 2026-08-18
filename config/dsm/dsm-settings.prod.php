@@ -6,11 +6,11 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 $settings['entity_update_batch_size'] = 50;
 $settings['entity_update_backup'] = TRUE;
 
-$settings['config_sync_directory'] = '../config/sync-dsc';
+$settings['config_sync_directory'] = '../config/sync-dsm';
 $databases['default']['default'] = array (
-  'database' => 'xvdjymqf_dsc',
-  'username' => 'xvdjymqf_dsc_dbuser',
-  'password' => 'sa#5&P9Qlz6Iad8R',
+  'database' => '',
+  'username' => '',
+  'password' => '',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
@@ -25,22 +25,23 @@ $config['system.performance']['css']['preprocess'] = FALSE;
 $config['system.performance']['js']['preprocess'] = FALSE;
 
 $config['system.logging']['error_level'] = 'verbose';
-$settings['file_private_path'] = '/home/xvdjymqf/ds-composites/private';
-$settings['file_temp_path'] = '/home/xvdjymqf/ds-composites/tmp';
-$settings['file_public_base_url'] = 'https://ds-composites.eu/sites/ds-composites/files';
+$settings['file_private_path'] = '/home/ubuntu/shared-folders/private/ds-composites/ds-machining';
+$settings['file_temp_path'] = '/home/ubuntu/shared-folders/temp/ds-composites/ds-machining';
+$settings['file_public_base_url'] = 'https://ds-machining.eu/sites/ds-machining/files';
 
 $settings['trusted_host_patterns'] = [
   '^localhost$',
   '127\.0\.0\.1',
-  '^ds-composites\.lndo\.site$',
-  '^ds-composites\.eu$',
+  '^ds-machining\.lndo\.site$',
+  '^ds-machining\.2cent2\.eu$',
+  '^ds-machining\.eu$',
 ];
 
 // to be able to get from variable in TWIG
-$settings['current_multisite'] = 'dsc';
+$settings['current_multisite'] = 'dsm';
 
 # empty on all environments EXCEPT production
-$settings['simple_sitemap_engines.index_now.key'] = 'ad6cd4e4017b49029ea554875c612624';
+$settings['simple_sitemap_engines.index_now.key'] = '52252a4e25c34def938b0e4fbc206b6e';
 
 # reduce cache tables in DB from 5000
 $settings['database_cache_max_rows']['bins']['page'] = 1000;
