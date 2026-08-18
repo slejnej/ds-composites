@@ -43,7 +43,8 @@
     "mrm-remora/tagging": "*",
     "mrm-remora/tagline_pod": "*",
     "mrm-remora/text_media_pod": "*",
-    "mrm-remora/tonic": "*"
+    "mrm-remora/tonic": "*",
+    "mrm-remora/webform_pod": "dev-upgrade-202"
   },
   "require-dev": {
     "pdepend/pdepend": "^2.12",
@@ -67,7 +68,8 @@
       "drupal/core-composer-scaffold": true,
       "drupal/core-project-message": true,
       "mrm-remora/aws-code-deploy": true,
-      "mrm-remora/aws-plugin-installer": true
+      "mrm-remora/aws-plugin-installer": true,
+      "wikimedia/composer-merge-plugin": true
     },
     "sort-packages": true
   },
@@ -264,6 +266,12 @@
       "name": "mrm-remora/tagline_pod",
       "type": "path",
       "url": "web/modules/custom/tagline_pod",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/webform_pod",
+      "type": "path",
+      "url": "web/modules/custom/webform_pod",
       "no-api": true
     }
   ]

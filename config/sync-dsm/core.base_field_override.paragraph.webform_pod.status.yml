@@ -1,0 +1,22 @@
+uuid: 03a1b146-89d2-4758-b989-e59d23af47f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.webform_pod
+id: paragraph.webform_pod.status
+field_name: status
+entity_type: paragraph
+bundle: webform_pod
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

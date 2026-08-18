@@ -1,0 +1,256 @@
+diff --git a/src/EntitySettings/WebformEntitySettingsAccessForm.php b/src/EntitySettings/WebformEntitySettingsAccessForm.php
+index c7c37ebbb..3a8f866f4 100644
+--- a/src/EntitySettings/WebformEntitySettingsAccessForm.php
++++ b/src/EntitySettings/WebformEntitySettingsAccessForm.php
+@@ -37,7 +37,18 @@ class WebformEntitySettingsAccessForm extends WebformEntitySettingsBaseForm {
+ 
+     $access = $webform->getAccessRules() + $this->accessRulesManager->getDefaultAccessRules();
+     $access_rules = $this->accessRulesManager->getAccessRulesInfo();
++
++    // Check if the current user has the 'editor' role.
++    $current_user = \Drupal::currentUser();
++    $user_roles = $current_user->getRoles();
++
++    $isEditor = in_array('editor', $user_roles);
++    $allowedOnes = ['Create submissions', 'View own submissions', 'Delete own submissions', 'Update own submissions'];
+     foreach ($access_rules as $access_rule => $info) {
++      if ($isEditor && !in_array($info['title'], $allowedOnes)){
++        continue;
++      }
++      
+       $form['access'][$access_rule] = [
+         '#type' => ($access_rule === 'create') ? 'fieldset' : 'details',
+         '#title' => $info['title'],
+diff --git a/src/EntitySettings/WebformEntitySettingsConfirmationForm.php b/src/EntitySettings/WebformEntitySettingsConfirmationForm.php
+index e24085383..4565c1a3a 100644
+--- a/src/EntitySettings/WebformEntitySettingsConfirmationForm.php
++++ b/src/EntitySettings/WebformEntitySettingsConfirmationForm.php
+@@ -53,10 +53,17 @@ class WebformEntitySettingsConfirmationForm extends WebformEntitySettingsBaseFor
+ 
+     $settings = $webform->getSettings();
+ 
++    // Check if the current user has the 'editor' role.
++    $current_user = \Drupal::currentUser();
++    $user_roles = $current_user->getRoles();
++
++    $editorAccess = !in_array('editor', $user_roles);
++
+     // Confirmation type.
+     $form['confirmation_type'] = [
+       '#type' => 'fieldset',
+       '#title' => $this->t('Confirmation type'),
++      '#access' => $editorAccess
+     ];
+     $form['confirmation_type']['ajax_confirmation'] = [
+       '#type' => 'webform_message',
+@@ -128,6 +135,7 @@ class WebformEntitySettingsConfirmationForm extends WebformEntitySettingsBaseFor
+       '#type' => 'details',
+       '#title' => $this->t('Confirmation URL'),
+       '#open' => TRUE,
++      '#access' => $editorAccess,
+       '#states' => [
+         'visible' => [
+           [':input[name="confirmation_type"]' => ['value' => WebformInterface::CONFIRMATION_PAGE]],
+@@ -215,6 +223,7 @@ class WebformEntitySettingsConfirmationForm extends WebformEntitySettingsBaseFor
+       '#type' => 'details',
+       '#title' => $this->t('Confirmation attributes'),
+       '#open' => TRUE,
++      '#access' => $editorAccess,
+       '#states' => [
+         'visible' => [
+           [':input[name="confirmation_type"]' => ['value' => WebformInterface::CONFIRMATION_PAGE]],
+@@ -234,6 +243,7 @@ class WebformEntitySettingsConfirmationForm extends WebformEntitySettingsBaseFor
+     $form['back'] = [
+       '#type' => 'details',
+       '#title' => $this->t('Confirmation back link'),
++      '#access' => $editorAccess,
+       '#states' => [
+         'visible' => [
+           [':input[name="confirmation_type"]' => ['value' => WebformInterface::CONFIRMATION_PAGE]],
+diff --git a/src/EntitySettings/WebformEntitySettingsFormForm.php b/src/EntitySettings/WebformEntitySettingsFormForm.php
+index 1f88191a8..0a50b0822 100644
+--- a/src/EntitySettings/WebformEntitySettingsFormForm.php
++++ b/src/EntitySettings/WebformEntitySettingsFormForm.php
+@@ -43,6 +43,12 @@ class WebformEntitySettingsFormForm extends WebformEntitySettingsBaseForm {
+     $default_settings = $this->config('webform.settings')->get('settings');
+     $settings = $webform->getSettings();
+ 
++    // Check if the current user has the 'editor' role.
++    $current_user = \Drupal::currentUser();
++    $user_roles = $current_user->getRoles();
++
++    $editorAccess = !in_array('editor', $user_roles);
++
+     // Form settings.
+     $form['form_settings'] = [
+       '#type' => 'details',
+@@ -155,6 +161,7 @@ class WebformEntitySettingsFormForm extends WebformEntitySettingsBaseForm {
+       '#type' => 'details',
+       '#title' => $this->t('Form attributes'),
+       '#open' => TRUE,
++      '#access' => $editorAccess
+     ];
+     $form['form_settings']['form_attributes_container']['form_attributes'] = [
+       '#type' => 'webform_element_attributes',
+@@ -174,6 +181,7 @@ class WebformEntitySettingsFormForm extends WebformEntitySettingsBaseForm {
+     $form['form_behaviors']['form_prepopulate_source_entity_required']['#states'] = [
+       'visible' => [':input[name="form_prepopulate_source_entity"]' => ['checked' => TRUE]],
+     ];
++    $form['form_behaviors']['Validation']['#access'] = $form['form_behaviors']['Elements']['#access'] = $form['form_behaviors']['Prepopulate']['#access'] = $editorAccess;
+     // Source entity type.
+     $entity_type_options = [];
+     foreach ($this->entityTypeManager->getDefinitions() as $entity_type_id => $entity_type) {
+@@ -219,6 +227,7 @@ class WebformEntitySettingsFormForm extends WebformEntitySettingsBaseForm {
+       '#type' => 'details',
+       '#title' => $this->t('Form access denied settings'),
+       '#open' => TRUE,
++      '#access' => $editorAccess
+     ];
+     $form['access_denied']['form_access_denied'] = [
+       '#type' => 'radios',
+@@ -294,6 +303,7 @@ class WebformEntitySettingsFormForm extends WebformEntitySettingsBaseForm {
+       '#type' => 'details',
+       '#title' => $this->t('Form wizard settings'),
+       '#open' => TRUE,
++      '#access' => $editorAccess,
+       '#states' => [
+         'visible' => [
+           'select[name="form_method"]' => ['value' => ''],
+@@ -548,6 +558,7 @@ class WebformEntitySettingsFormForm extends WebformEntitySettingsBaseForm {
+       '#type' => 'details',
+       '#title' => $this->t('Form preview settings'),
+       '#open' => TRUE,
++      '#access' => $editorAccess,
+       '#states' => [
+         'visible' => [
+           'select[name="form_method"]' => ['value' => ''],
+diff --git a/src/EntitySettings/WebformEntitySettingsGeneralForm.php b/src/EntitySettings/WebformEntitySettingsGeneralForm.php
+index b4769e368..03f16e7f9 100644
+--- a/src/EntitySettings/WebformEntitySettingsGeneralForm.php
++++ b/src/EntitySettings/WebformEntitySettingsGeneralForm.php
+@@ -62,6 +62,11 @@ class WebformEntitySettingsGeneralForm extends WebformEntitySettingsBaseForm {
+ 
+     $default_settings = $this->config('webform.settings')->get('settings');
+     $settings = $webform->getSettings();
++    // Check if the current user has the 'editor' role.
++    $current_user = \Drupal::currentUser();
++    $user_roles = $current_user->getRoles();
++
++    $editorAccess = !in_array('editor', $user_roles);
+ 
+     // General settings.
+     $form['general_settings'] = [
+@@ -510,6 +515,8 @@ class WebformEntitySettingsGeneralForm extends WebformEntitySettingsBaseForm {
+ 
+     $form['#attached']['library'][] = 'webform/webform.admin.settings';
+ 
++    $form['#access'] = $editorAccess;
++
+     return parent::form($form, $form_state);
+   }
+ 
+diff --git a/src/EntitySettings/WebformEntitySettingsSubmissionsForm.php b/src/EntitySettings/WebformEntitySettingsSubmissionsForm.php
+index b109b004a..4a3271a7a 100644
+--- a/src/EntitySettings/WebformEntitySettingsSubmissionsForm.php
++++ b/src/EntitySettings/WebformEntitySettingsSubmissionsForm.php
+@@ -64,6 +64,12 @@ class WebformEntitySettingsSubmissionsForm extends WebformEntitySettingsBaseForm
+     $default_settings = $this->config('webform.settings')->get('settings');
+     $settings = $webform->getSettings();
+ 
++    // Check if the current user has the 'editor' role.
++    $current_user = \Drupal::currentUser();
++    $user_roles = $current_user->getRoles();
++
++    $editorAccess = !in_array('editor', $user_roles);
++
+     // Submission settings.
+     $form['submission_settings'] = [
+       '#type' => 'details',
+@@ -99,6 +105,7 @@ class WebformEntitySettingsSubmissionsForm extends WebformEntitySettingsBaseForm
+       '#title' => $this->t('Previous submissions message'),
+       '#description' => $this->t('A message to be displayed when there are previous submissions.'),
+       '#default_value' => $settings['previous_submissions_message'],
++      '#access' => $editorAccess
+     ];
+     $form['submission_settings']['next_serial'] = [
+       '#type' => 'number',
+@@ -106,6 +113,7 @@ class WebformEntitySettingsSubmissionsForm extends WebformEntitySettingsBaseForm
+       '#description' => $this->t('The value of the next submission number. This is usually 1 when you start and will go up with each webform submission.'),
+       '#min' => 1,
+       '#default_value' => $webform_storage->getNextSerial($webform),
++      '#access' => $editorAccess,
+       '#states' => [
+         'visible' => [
+           ':input[name="serial_disabled"]' => ['checked' => FALSE],
+@@ -118,6 +126,7 @@ class WebformEntitySettingsSubmissionsForm extends WebformEntitySettingsBaseForm
+       '#description' => $this->t('If checked the next number will be automatically set to the internal submission id.'),
+       '#return_value' => TRUE,
+       '#default_value' => $settings['serial_disabled'],
++      '#access' => $editorAccess
+     ];
+     $form['submission_settings']['token_tree_link'] = $this->tokenManager->buildTreeElement();
+     $form['submission_settings']['submission_container']['elements'] = [
+@@ -125,6 +134,7 @@ class WebformEntitySettingsSubmissionsForm extends WebformEntitySettingsBaseForm
+       '#title' => $this->t('Included submission values'),
+       '#description' => $this->t('If you wish to include only parts of the submission when viewing as HTML, table, or plain text, select the elements that should be included. Please note, element specific access controls are still applied to displayed elements.'),
+       '#open' => $settings['submission_excluded_elements'] ? TRUE : FALSE,
++      '#access' => $editorAccess
+     ];
+     $form['submission_settings']['submission_container']['elements']['submission_excluded_elements'] = [
+       '#type' => 'webform_excluded_elements',
+@@ -149,6 +159,7 @@ class WebformEntitySettingsSubmissionsForm extends WebformEntitySettingsBaseForm
+       '#type' => 'details',
+       '#title' => $this->t('Submission behaviors'),
+       '#open' => TRUE,
++      '#access' => $editorAccess
+     ];
+     $form['submission_behaviors']['form_confidential'] = [
+       '#type' => 'checkbox',
+@@ -219,6 +230,7 @@ class WebformEntitySettingsSubmissionsForm extends WebformEntitySettingsBaseForm
+       '#type' => 'details',
+       '#title' => $this->t('Submission user settings'),
+       '#open' => TRUE,
++      '#access' => $editorAccess
+     ];
+     $form['submission_user_settings']['submission_user_duplicate'] = [
+       '#type' => 'checkbox',
+@@ -269,6 +281,7 @@ class WebformEntitySettingsSubmissionsForm extends WebformEntitySettingsBaseForm
+       '#type' => 'details',
+       '#title' => $this->t('Submission access token settings'),
+       '#open' => TRUE,
++      '#access' => $editorAccess
+     ];
+     $form['submission_access']['token_update_warning'] = [
+       '#type' => 'webform_message',
+@@ -312,6 +325,7 @@ class WebformEntitySettingsSubmissionsForm extends WebformEntitySettingsBaseForm
+       '#type' => 'details',
+       '#title' => $this->t('Submission access denied settings'),
+       '#open' => TRUE,
++      '#access' => $editorAccess
+     ];
+     $form['access_denied']['submission_access_denied'] = [
+       '#type' => 'radios',
+@@ -581,6 +595,7 @@ class WebformEntitySettingsSubmissionsForm extends WebformEntitySettingsBaseForm
+       '#type' => 'details',
+       '#title' => $this->t('Submission purge settings'),
+       '#open' => TRUE,
++      '#access' => $editorAccess
+     ];
+     $form['purge_settings']['purge'] = [
+       '#type' => 'select',
+@@ -698,6 +713,7 @@ class WebformEntitySettingsSubmissionsForm extends WebformEntitySettingsBaseForm
+       '#type' => 'details',
+       '#title' => $this->t('Submission autofill settings'),
+       '#open' => TRUE,
++      '#access' => $editorAccess
+     ];
+     $form['autofill_settings']['autofill'] = [
+       '#type' => 'checkbox',
+@@ -737,6 +753,7 @@ class WebformEntitySettingsSubmissionsForm extends WebformEntitySettingsBaseForm
+       '#type' => 'details',
+       '#title' => $this->t('Submission views settings'),
+       '#open' => TRUE,
++      '#access' => $editorAccess
+     ];
+     if (!$this->moduleHandler->moduleExists('webform_views')) {
+       $form['views_settings']['message'] = [

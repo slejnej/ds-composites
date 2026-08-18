@@ -2,8 +2,11 @@ uuid: a3b536a2-bd36-47c6-980d-7653ee093a80
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.webform_default
   module:
     - eu_cookie_compliance
+    - filter
     - media
     - paragraphs_type_permissions
     - site_settings
@@ -17,6 +20,7 @@ is_admin: false
 permissions:
   - 'access content'
   - 'display eu cookie compliance popup'
+  - 'use text format webform_default'
   - 'view media'
   - 'view paragraph content attachments'
   - 'view paragraph content banner_pea'
@@ -31,4 +35,5 @@ permissions:
   - 'view paragraph content slideshow'
   - 'view paragraph content tagline'
   - 'view paragraph content text_media'
+  - 'view paragraph content webform_pod'
   - 'view published site setting entities'

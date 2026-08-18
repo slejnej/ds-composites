@@ -72,6 +72,7 @@ settings:
         - '<h4 id>'
         - '<h5 id>'
         - '<h6 id>'
+        - '<i class>'
     ckeditor5_style:
       styles:
         -
@@ -104,9 +105,6 @@ settings:
         -
           label: 'Borderless table'
           element: '<table class="table-borderless">'
-    linkit_extension:
-      linkit_enabled: true
-      linkit_profile: default
     media_media:
       allow_view_mode_override: true
 image_upload:

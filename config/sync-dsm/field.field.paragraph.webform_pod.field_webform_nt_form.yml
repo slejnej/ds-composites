@@ -1,0 +1,27 @@
+uuid: 15cc491c-6240-4317-bf05-3d8682224bfe
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webform_nt_form
+    - paragraphs.paragraphs_type.webform_pod
+  module:
+    - webform
+_core:
+  default_config_hash: iCnbFraPLUDrb-oT8hHQWKaJmZ9aOte14ao7qp6BoiM
+id: paragraph.webform_pod.field_webform_nt_form
+field_name: field_webform_nt_form
+entity_type: paragraph
+bundle: webform_pod
+label: Webform
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

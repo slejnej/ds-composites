@@ -17,14 +17,16 @@
   {% block footer_secondary %}
     <div class="footer-secondary">
       <div class="d-flex container-xxl mx-auto flex-column flex-sm-row justify-content-between align-items-center py-2">
+        {% block footer_branding %}
+        <div class="footer-branding">
+          &copy; {{ "now"|date("Y") }} By <a href="https://2cent2.eu/">Deux Cent Deux</a>
+        </div>
+
         {% block footer_menu %}
           <div class="footer-menu">
             {{ drupal_menu('footer') }}
           </div>
         {% endblock %}
-
-        {% block footer_branding %}
-        <span></span>
       </div>
       {% endblock %}
 

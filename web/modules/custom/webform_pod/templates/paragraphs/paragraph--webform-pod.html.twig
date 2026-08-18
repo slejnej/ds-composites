@@ -1,0 +1,27 @@
+{% block paragraph %}
+
+  {% set classes = [
+    'paragraph',
+    'paragraph--type--webform',
+  ] %}
+
+  {% block paragraph_content %}
+    <div{{ attributes.addClass(classes) }}>
+      {% block content %}
+
+        {% block pod_title %}
+          {% remora_include 'partials/paragraphs/pod-title.html.twig' %}
+        {% endblock %}
+
+        {% block pod_content %}
+
+          <div class="container-xxl webform-wrapper">
+            {{ content.field_webform_nt_form }}
+          </div>
+        {% endblock %}
+
+      {% endblock %}
+    </div>
+  {% endblock %}
+
+{% endblock %}

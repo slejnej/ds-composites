@@ -1,0 +1,21 @@
+uuid: d8428457-ec9a-427b-bde1-a78ca858db01
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_editor_title
+    - paragraphs.paragraphs_type.webform_pod
+_core:
+  default_config_hash: 1mPDAI1FyXyEK7uvSO-fUsq5xRKdkpeUhYfyshoUevY
+id: paragraph.webform_pod.field_editor_title
+field_name: field_editor_title
+entity_type: paragraph
+bundle: webform_pod
+label: 'Editor title'
+description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -33,3 +33,6 @@ body .progress {
   font-size: var(--bs-progress-font-size);
   background-color: var(--bs-progress-bg);
 }
+.js-form-required.form-required::after {
+  content: " ";
+}

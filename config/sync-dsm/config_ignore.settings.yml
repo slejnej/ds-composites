@@ -12,4 +12,5 @@ ignored_config_entities:
   - system.site
   - user.mail
   - user.settings
+  - 'webform.*'
 uuid: null

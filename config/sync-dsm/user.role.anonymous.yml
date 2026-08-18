@@ -31,4 +31,5 @@ permissions:
   - 'view paragraph content slideshow'
   - 'view paragraph content tagline'
   - 'view paragraph content text_media'
+  - 'view paragraph content webform_pod'
   - 'view published site setting entities'

@@ -22,38 +22,36 @@ function dc_custom_page_attachments(array &$attachments): void
  * @param array $variables
  * @return void
  */
-function dc_custom_preprocess_paragraph(array &$variables): void
-{
+function dc_custom_preprocess_paragraph(array &$variables): void {
   $paragraph = $variables['paragraph'];
   $bundle = $paragraph->bundle();
-  $paragraph_type = ParagraphsType::load($bundle);
 
-  // Check if the paragraph type contains the field that uses CKEditor.
-  $available = ['card_pea', 'text_media'];
-  $availableNt = ['field_card_nt_summary', 'field_text_media_nt_text'];
+  $fields = [
+    'card_pea' => 'field_card_nt_summary',
+    'text_media' => 'field_text_media_nt_text',
+  ];
 
-  if (in_array($bundle, $available)) {
-    $key = array_search($bundle, $available);
-    if (isset($variables['content'][$availableNt[$key]][0]['#text'])) {
-      // Get the content from the CKEditor field.
-      $text = $variables['content'][$availableNt[$key]][0]['#text'];
-
-      // Use a regular expression to find all instances of icon--{icon-name}.
-      $pattern = '/icon--([a-zA-Z0-9-_]+)/';
-
-      // Replace each occurrence of icon--{icon-name} with <i class="bi {icon-name}"></i>.
-      $text = preg_replace_callback($pattern, function ($matches) {
-        // $matches[1] contains the dynamic part of the icon class, e.g., "pin-map".
-        $icon_class = $matches[1];
-
-        // Return the replacement string, e.g., <i class="bi bi-pin-map"></i>.
-        return '<i class="bi bi-' . $icon_class . '"></i>';
-      }, $text);
-
-      // Update the markup with the replaced content.
-      $variables['content'][$availableNt[$key]][0]['#text'] = $text;
-    }
+  if (!isset($fields[$bundle])) {
+    return;
   }
+
+  $field = $fields[$bundle];
+
+  if (!isset($variables['content'][$field][0]['#text'])) {
+    return;
+  }
+
+  $text = $variables['content'][$field][0]['#text'];
+
+  $text = preg_replace_callback(
+    '/icon--([\w-]+)/',
+    static function ($matches) {
+      return '<i class="bi bi-' . $matches[1] . '"></i>';
+    },
+    $text
+  );
+
+  $variables['content'][$field][0]['#text'] = $text;
 }
 
 /**
