@@ -1,0 +1,168 @@
+diff --git a/smtp.install b/smtp.install
+index 0971a4c..b8b0503 100644
+--- a/smtp.install
++++ b/smtp.install
+@@ -17,7 +17,7 @@ function smtp_uninstall() {
+ 
+   // Cleaning garbage.
+   $config = \Drupal::service('config.factory');
+-  $smtp_config = $config->getEditable('smtp.settings');
++  $smtp_config = $config->get('smtp.settings');
+   $smtp_config->delete();
+ }
+ 
+@@ -25,7 +25,7 @@ function smtp_uninstall() {
+  * Add SMTP timeout configuration and change default to 30.
+  */
+ function smtp_update_8001() {
+-  \Drupal::configFactory()->getEditable('smtp.settings')
++  \Drupal::configFactory()->get('smtp.settings')
+     ->set('smtp_timeout', 30)
+     ->save(TRUE);
+ }
+@@ -34,7 +34,7 @@ function smtp_update_8001() {
+  * Add SMTP keepalive configuration and set default to FALSE.
+  */
+ function smtp_update_8002() {
+-  \Drupal::configFactory()->getEditable('smtp.settings')
++  \Drupal::configFactory()->get('smtp.settings')
+     ->set('smtp_keepalive', FALSE)
+     ->save(TRUE);
+ }
+@@ -53,7 +53,7 @@ function smtp_update_8004() {
+  * Add SMTP debug level and set default to 1.
+  */
+ function smtp_update_8005() {
+-  \Drupal::configFactory()->getEditable('smtp.settings')
++  \Drupal::configFactory()->get('smtp.settings')
+     ->set('smtp_debug_level', 1)
+     ->save(TRUE);
+ }
+@@ -62,7 +62,7 @@ function smtp_update_8005() {
+  * Convert smtp_allowhtml to a boolean.
+  */
+ function smtp_update_8006() {
+-  $config = \Drupal::configFactory()->getEditable('smtp.settings');
++  $config = \Drupal::configFactory()->get('smtp.settings');
+   $config->set('smtp_allowhtml', (bool) $config->get('smtp_allowhtml'))
+     ->save(TRUE);
+ }
+@@ -126,7 +126,7 @@ function smtp_requirements(string $phase) {
+ function _disable_smtp() {
+   $config = \Drupal::service('config.factory');
+   // Always make sure SMTP is disabled.
+-  $smtp_config = $config->getEditable('smtp.settings');
++  $smtp_config = $config->get('smtp.settings');
+   if (!$smtp_config->get('smtp_on')) {
+     return;
+   }
+@@ -134,7 +134,7 @@ function _disable_smtp() {
+   $smtp_config->set('smtp_on', FALSE)->save();
+ 
+   // Set the default back to either the previous mail system or php_mail.
+-  $mail_config = $config->getEditable('system.mail');
++  $mail_config = $config->get('system.mail');
+   $current_default = $mail_config->get('interface.default');
+   $system_default = 'php_mail';
+   $previous_mail_system = $smtp_config->get('prev_mail_system') ?? NULL;
+diff --git a/smtp.post_update.php b/smtp.post_update.php
+index 6fbbf9f..e092b1f 100644
+--- a/smtp.post_update.php
++++ b/smtp.post_update.php
+@@ -16,7 +16,7 @@ function smtp_post_update_connection_tester() {
+  * Add SMTP timeout configuration and change default to 30.
+  */
+ function smtp_post_update_set_smtp_timeout() {
+-  \Drupal::configFactory()->getEditable('smtp.settings')
++  \Drupal::configFactory()->get('smtp.settings')
+     ->set('smtp_timeout', 30)
+     ->save(TRUE);
+ }
+@@ -25,7 +25,7 @@ function smtp_post_update_set_smtp_timeout() {
+  * Add SMTP keepalive configuration and set default to FALSE.
+  */
+ function smtp_post_update_set_smtp_keepalive() {
+-  \Drupal::configFactory()->getEditable('smtp.settings')
++  \Drupal::configFactory()->get('smtp.settings')
+     ->set('smtp_keepalive', FALSE)
+     ->save(TRUE);
+ }
+@@ -34,7 +34,7 @@ function smtp_post_update_set_smtp_keepalive() {
+  * Add SMTP Auto TLS configuration and set default to TRUE.
+  */
+ function smtp_post_update_set_smtp_autotls() {
+-  \Drupal::configFactory()->getEditable('smtp.settings')
++  \Drupal::configFactory()->get('smtp.settings')
+     ->set('smtp_autotls', TRUE)
+     ->save(TRUE);
+ }
+diff --git a/smtp.services.yml b/smtp.services.yml
+index cd1a9c6..c4ab1e3 100644
+--- a/smtp.services.yml
++++ b/smtp.services.yml
+@@ -7,7 +7,7 @@ services:
+ 
+   smtp.config:
+     class: Drupal\Core\Config\Config
+-    factory: config.factory:getEditable
++    factory: config.factory:get
+     arguments: ['smtp.settings']
+ 
+   smtp.connection_tester:
+diff --git a/src/Form/SMTPConfigForm.php b/src/Form/SMTPConfigForm.php
+index 476f65d..3eddd02 100644
+--- a/src/Form/SMTPConfigForm.php
++++ b/src/Form/SMTPConfigForm.php
+@@ -73,7 +73,7 @@ class SMTPConfigForm extends ConfigFormBase {
+    * {@inheritdoc}
+    */
+   public function buildForm(array $form, FormStateInterface $form_state) {
+-    $config = $this->configFactory->getEditable('smtp.settings');
++    $config = $this->configFactory->get('smtp.settings');
+ 
+     // Don't overwrite the default if MailSystem module is enabled.
+     $mailsystem_enabled = $this->moduleHandler->moduleExists('mailsystem');
+@@ -333,7 +333,7 @@ class SMTPConfigForm extends ConfigFormBase {
+    *   Boolean.
+    */
+   protected function isOverridden($name) {
+-    $original = $this->configFactory->getEditable('smtp.settings')->get($name);
++    $original = $this->configFactory->get('smtp.settings')->get($name);
+     $current = $this->configFactory->get('smtp.settings')->get($name);
+     return $original != $current;
+   }
+@@ -437,7 +437,7 @@ class SMTPConfigForm extends ConfigFormBase {
+     }
+     else {
+       $default_system_mail = 'php_mail';
+-      $mail_config = $this->configFactory->getEditable('system.mail');
++      $mail_config = $this->configFactory->get('system.mail');
+       $default_interface = $mail_config->get('prev_mail_system') ? $mail_config->get('prev_mail_system') : $default_system_mail;
+       $mail_config->set('interface.default', $default_interface)->save();
+     }
+diff --git a/tests/src/Kernel/ConnectionTester/ConnectionTesterTest.php b/tests/src/Kernel/ConnectionTester/ConnectionTesterTest.php
+index 512d9a9..72a6be8 100644
+--- a/tests/src/Kernel/ConnectionTester/ConnectionTesterTest.php
++++ b/tests/src/Kernel/ConnectionTester/ConnectionTesterTest.php
+@@ -40,7 +40,7 @@ class ConnectionTesterTest extends KernelTestBase {
+    */
+   public function testHookRequirements(string $message, bool $smtp_on, bool $result, string $exception, array $expected) {
+     $smtp_settings = \Drupal::configFactory()
+-      ->getEditable('smtp.settings');
++      ->get('smtp.settings');
+     $smtp_settings->set('smtp_on', $smtp_on);
+     $smtp_settings->save();
+ 
+diff --git a/tests/src/Unit/SMTPConfigFormTest.php b/tests/src/Unit/SMTPConfigFormTest.php
+index 9db3ffd..7917492 100644
+--- a/tests/src/Unit/SMTPConfigFormTest.php
++++ b/tests/src/Unit/SMTPConfigFormTest.php
+@@ -35,7 +35,7 @@ class SMTPConfigFormTest extends UnitTestCase {
+     $this->mockConfigFactory = $this->prophesize(ConfigFactoryInterface::class);
+     $this->mockConfig = $this->prophesize(Config::class);
+     $this->mockConfigFactory->get('smtp.settings')->willReturn($this->mockConfig->reveal());
+-    $this->mockConfigFactory->getEditable('smtp.settings')->willReturn($this->mockConfig->reveal());
++    $this->mockConfigFactory->get('smtp.settings')->willReturn($this->mockConfig->reveal());
+ 
+     $this->mockConfigSystemSite = $this->prophesize(Config::class);
+     $this->mockConfigSystemSite->get('name')->willReturn('Site name');

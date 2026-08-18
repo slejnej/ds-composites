@@ -1,0 +1,24 @@
+uuid: 73d157b7-77e9-460d-acf7-f20a00577269
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+  enforced:
+    module:
+      - cards_pod
+_core:
+  default_config_hash: 8CUfOMyg64e9Zr2Upaf6XJuIhtpStR2F4ffOi7-YXGg
+id: paragraph.field_card_nt_summary
+field_name: field_card_nt_summary
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,26 @@
+uuid: f83d6aad-4c43-4faa-8cf1-7c35442a30e2
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_nt_footer
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.card_pea
+  module:
+    - text
+_core:
+  default_config_hash: 7Bwq3KQxwHMY9Z-e0Tfs17Dfw_a3CqJnKK97NXoSdYQ
+id: paragraph.card_pea.field_card_nt_footer
+field_name: field_card_nt_footer
+entity_type: paragraph
+bundle: card_pea
+label: Footer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

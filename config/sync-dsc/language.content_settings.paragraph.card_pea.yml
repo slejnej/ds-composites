@@ -1,0 +1,18 @@
+uuid: 2f18f8ad-8797-447b-be88-c237308d805e
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.card_pea
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.card_pea
+target_entity_type_id: paragraph
+target_bundle: card_pea
+default_langcode: site_default
+language_alterable: true

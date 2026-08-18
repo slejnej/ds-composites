@@ -1,0 +1,21 @@
+uuid: 4e48ee6e-bc69-46fc-8cf1-1c7054fb7753
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: dI3_1FUwSLkZlcEatNH9vi3BsKrP_TQ3ZiLtnJQCjsI
+id: node.field_seo_description
+field_name: field_seo_description
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

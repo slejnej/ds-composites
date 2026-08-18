@@ -1,0 +1,30 @@
+{% extends "@cards_pod/templates/paragraphs/paragraph--card-pea.html.twig" %}
+
+{% block card_image %}
+{% endblock %}
+
+{% block card_title %}
+  {% set alt_title = node.field_alternative_title.value %}
+  {% set default_title = node.title.value %}
+  <h4 class="card-title">{% if alt_title %} {{ alt_title }} {% else %} {{ node.title.value }} {% endif %}</h4>
+{% endblock %}
+
+{% block card_text %}
+  {% set summary = node.field_summary.value|raw %}
+  {% if summary %}
+    <span class="card-text">{{ summary|raw }}</span>
+  {% endif %}
+{% endblock %}
+
+{% block card_button %}
+  {% set link = node.path.value.0.alias %}
+    <a href="{{ link }}" class="btn btn-outline-primary btn-block {% if button_text is empty %} btn-stretched-hidden {% endif%} m-0 w-100 stretched-link">{{ button_text }}</a>
+{% endblock %}
+
+{% block card_tags %}
+  {{ parent() }}
+  {% block card_type %}
+    {% set type = node.type.0.value.target_id|capitalize %}
+    <span class="badge rounded-pill bg-primary">{{ type }}</span>
+  {% endblock %}
+{% endblock %}

@@ -28,9 +28,6 @@ services:
   remora_core.service.install_dependencies:
     class: Drupal\remora_core\Service\InstallDependenciesService
 
-  remora_core.repository.search_api.node:
-    class: Drupal\remora_core\Repository\SearchAPI\SolrNodeRepository
-
   remora_core.repository.file:
     class: Drupal\remora_core\Repository\FileRepository
 
@@ -38,23 +35,26 @@ services:
     class: Drupal\remora_core\Repository\MediaRepository
     arguments: [ '@remora_core.repository.file' ]
 
-  remora_core.repository.node:
-    class: \MantaRayMedia\BaseRepository\NodeRepository
-
-  remora_core.repository.taxonomy_term:
-    class: \MantaRayMedia\BaseRepository\TaxonomyTermRepository
-
-  remora_core.repository.user:
-    class: \MantaRayMedia\BaseRepository\UserRepository
+  remora_core.twig.extension.asset:
+    class: Drupal\remora_core\Twig\Extension\AssetsExtension
+    arguments: [ '@file_system', '@theme.manager' ]
+    tags:
+      - { name: twig.extension }
 
   remora_core.twig.extension.array:
     class: Drupal\remora_core\Twig\Extension\ArrayExtension
     tags:
       - { name: twig.extension }
 
+  remora_core.twig.extension.id:
+    class: Drupal\remora_core\Twig\Extension\IDExtension
+    arguments: [ '@uuid' ]
+    tags:
+      - { name: twig.extension }
+
   remora_core.twig.extension.image:
     class: Drupal\remora_core\Twig\Extension\ImageExtension
-    arguments: [ '@remora_core.builder.remora_image', '@remora_core.repository.media' ]
+    arguments: [ '@remora_core.builder.remora_image', '@remora_core.repository.media', '@remora_core.logger', '@file_system' ]
     tags:
       - { name: twig.extension }
 
@@ -63,8 +63,18 @@ services:
     tags:
       - { name: twig.extension }
 
+  remora_core.twig.extension.settings:
+    class: Drupal\remora_core\Twig\Extension\SettingsExtension
+    tags:
+      - { name: twig.extension }
+
   remora_core.twig.extension.string:
     class: Drupal\remora_core\Twig\Extension\StringExtension
+    tags:
+      - { name: twig.extension }
+
+  remora_core.twig.extension.tests:
+    class: Drupal\remora_core\Twig\Extension\TestsExtension
     tags:
       - { name: twig.extension }
 
@@ -93,6 +103,10 @@ services:
     arguments: ['@module_handler']
     tags:
       - { name: twig.extension }
+
+  remora_core.manager.ant:
+    class: Drupal\remora_core\Manager\AntManager
+    autowire: true
 
   remora_core.manager.module_permissions:
     class: Drupal\remora_core\Manager\ModulePermissionsManager

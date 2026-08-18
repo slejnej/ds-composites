@@ -1,0 +1,20 @@
+uuid: ae97ebdb-5feb-4f3a-9a3f-dda5ec06275c
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+  enforced:
+    module:
+      - cards_pod
+_core:
+  default_config_hash: MRVCWIspVWHGgcJxKOpJzUgV-3yteQR9SYigz1QlA9g
+id: cards
+label: Cards
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: false
+    available_layouts: {  }

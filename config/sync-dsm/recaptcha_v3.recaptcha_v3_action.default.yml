@@ -1,0 +1,10 @@
+uuid: 5a802018-4a18-44b7-b019-2a056a8494cb
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UyR6ncUSRvktNjByOJczqIaDi7mbw3g6MZuOTiJlb50
+id: default
+label: Default
+threshold: 0.5
+challenge: recaptcha/reCAPTCHA

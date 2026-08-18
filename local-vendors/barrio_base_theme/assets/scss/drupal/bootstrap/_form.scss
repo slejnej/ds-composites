@@ -1,0 +1,70 @@
+.webform-wrapper.barrio-form,
+.barrio-form .webform-wrapper {
+  @include media-breakpoint-down(sm) {
+    padding: $global-spacing-05;
+  }
+}
+
+.webform-wrapper form {
+  input {
+    &[type="text"],
+    &[type="email"],
+    &[type="password"] {
+      @extend .col-12, .col-md-6;
+    }
+
+    &[type="date"] {
+      @extend .col-12, .col-md-3, .col-lg-2;
+    }
+  }
+
+  textarea, select {
+    @extend .col-12, .col-md-6;
+  }
+}
+
+// FORM ELEMENT STYLING
+
+main form {
+  // Global labels
+  label,
+  legend span.fieldset-legend {
+    @extend .h4;
+    display: inline-block;
+  }
+
+  // Checkboxes
+  label.option {
+    @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size, $text-mobile-body-regular-weight, $text-mobile-body-regular-line-height);
+    @include typography-desktop($text-desktop-body-regular-font, $text-desktop-body-regular-size, $text-desktop-body-regular-weight, $text-desktop-body-regular-line-height);
+  }
+
+  // Form-item descriptions
+  .form-item .description,
+  .description > div,
+  .description > *, {
+    @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size-small, $text-mobile-body-regular-weight, $text-mobile-body-regular-line-height);
+    @include typography-desktop($text-desktop-body-regular-font, $text-desktop-body-regular-size-small, $text-desktop-body-regular-weight, $text-desktop-body-regular-line-height);
+  }
+
+  .password-suggestions,
+  .password-suggestions ul li,
+  .password-confirm-message,
+  .password-strength__title,
+  .password-strength__text {
+    @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size-small, $text-mobile-body-regular-weight, $text-mobile-body-regular-line-height);
+    @include typography-desktop($text-desktop-body-regular-font, $text-desktop-body-regular-size-small, $text-desktop-body-regular-weight, $text-desktop-body-regular-line-height);
+  }
+
+  fieldset.webform-type-fieldset {
+    @include media-breakpoint-down(sm) {
+      padding: $global-spacing-05;
+    }
+
+    legend span.fieldset-legend.title-fieldset {
+      @include typography-mobile($text-mobile-heading-3-font, $text-mobile-heading-3-size, $text-mobile-heading-3-weight, $text-mobile-heading-3-line-height);
+      @include typography-desktop($text-desktop-heading-3-font, $text-desktop-heading-3-size, $text-desktop-heading-3-weight, $text-desktop-heading-3-line-height);
+      margin-bottom: $global-spacing-2;
+    }
+  }
+}

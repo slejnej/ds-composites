@@ -1,0 +1,27 @@
+uuid: c0d03eb2-0412-44f5-b9b4-7fa4772ed495
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - drupal_search
+    - system
+  theme:
+    - barrio_base_theme
+_core:
+  default_config_hash: DjIUCW1aqQ4r8M4SPCLd_c9s9EZtIzT47_BmDMqVOBw
+id: main_search_selected_filters_facet
+theme: barrio_base_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: drupal_search_selected_filters_block
+settings:
+  id: drupal_search_selected_filters_block
+  label: 'Drupal Search selected filters Block'
+  label_display: '0'
+  provider: drupal_search
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search

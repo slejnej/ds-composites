@@ -27,9 +27,11 @@ remora_core.remora_settings:
   type: config_object
   label: 'Remora settings'
   mapping:
-    card_settings:
-      type: label
+    global_settings:
+      type: mapping
       label: 'Card settings'
-    card_button_text:
-      type: label
-      label: 'Default card button text'
+      mapping:
+        card_button_text:
+          type: string
+          label: 'Default card button text'
+

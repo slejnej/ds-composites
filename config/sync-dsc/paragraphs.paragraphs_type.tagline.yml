@@ -1,0 +1,12 @@
+uuid: abf88180-29c8-4173-90c3-009aac2f216b
+langcode: en-gb
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: R7BOFsqtTzx-nbLPpNxh4ocpniLaZrMXlpZUXLKr7ic
+id: tagline
+label: Tagline
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

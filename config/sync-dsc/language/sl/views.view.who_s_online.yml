@@ -1,0 +1,11 @@
+display:
+  default:
+    display_title: Privzeto
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Ponastavi
+      filters:
+        access:
+          expose:
+            label: 'Zadnji dostop'

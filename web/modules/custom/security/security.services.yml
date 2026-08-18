@@ -3,3 +3,8 @@ services:
     class: Drupal\security\Middleware\RemoveHttpHeadersMiddleware
     tags:
       - { name: http_middleware, priority: 1000, responder: true }
+
+  security.middleware.add_http_headers:
+    class: Drupal\security\Middleware\AddHttpHeadersMiddleware
+    tags:
+      - { name: http_middleware, priority: 999, responder: true }

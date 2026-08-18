@@ -1,0 +1,12 @@
+uuid: 50e083e5-6a17-4b20-99fc-87e43d973b40
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - site_settings.site_setting_group_entity_type.footer_group
+_core:
+  default_config_hash: 2EKgNZZOeeofVVYbGKJn2VDCv2aFalg1BfYNyhsPauA
+id: footer
+label: Footer
+group: footer_group
+multiple: false

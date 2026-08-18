@@ -1,0 +1,18 @@
+uuid: 49327182-d79f-42a4-9c63-918996f00665
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+id: config_sync.module.crop
+snapshotSet: config_sync
+extensionType: module
+extensionName: crop
+items:
+  -
+    collection: ''
+    name: crop.settings
+    data:
+      flush_derivative_images: true
+      _core:
+        default_config_hash: 7eGOTSG7bRv_AAqu-Ls8CSnob7zPF1ez-lD2OLZgBHs

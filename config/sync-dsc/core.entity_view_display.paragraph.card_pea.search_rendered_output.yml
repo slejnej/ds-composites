@@ -1,0 +1,52 @@
+uuid: a7738f7c-a7c2-4e24-9133-5f5ddc622e01
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.search_rendered_output
+    - field.field.paragraph.card_pea.field_card_nt_alt_button_text
+    - field.field.paragraph.card_pea.field_card_nt_customise_card
+    - field.field.paragraph.card_pea.field_card_nt_display_title
+    - field.field.paragraph.card_pea.field_card_nt_footer
+    - field.field.paragraph.card_pea.field_card_nt_image
+    - field.field.paragraph.card_pea.field_card_nt_link
+    - field.field.paragraph.card_pea.field_card_nt_summary
+    - paragraphs.paragraphs_type.card_pea
+  module:
+    - layout_builder
+    - text
+  enforced:
+    module:
+      - cards_pod
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: OeZnllmNlUeWQ9T_g0GTsxDX_LUNnQzZldU547MUwlw
+id: paragraph.card_pea.search_rendered_output
+targetEntityType: paragraph
+bundle: card_pea
+mode: search_rendered_output
+content:
+  field_card_nt_display_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_card_nt_summary:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_card_nt_alt_button_text: true
+  field_card_nt_customise_card: true
+  field_card_nt_footer: true
+  field_card_nt_image: true
+  field_card_nt_link: true
+  search_api_excerpt: true

@@ -1,0 +1,24 @@
+local:
+  uri: 'https://ds-composites.lndo.site'
+  paths:
+    - files: /app/web/sites/ds-composites'
+dev:
+  host: 'ds-composites.2cent2.eu'
+  user: 'ds_composites.dev'
+  root: '/home/ubuntu/apps/ds-composites/current/web/sites/ds-composites'
+  uri: 'ds-composites.2cent2.eu'
+  ac-site: 'dsc'
+  ac-env: 'dev'
+  ac-realm: 'prod'
+  paths:
+    drush-script: '/app/web/sites/ds-composites/vendor/drush/drush/drush'
+prod:
+  root: '/var/www/html/site1.prod/docroot'
+  ac-site: 'site1'
+  ac-env: 'prod'
+  ac-realm: 'prod'
+  uri: 'site1.prod.acquia-sites.com'
+  host: 'site1.ssh.prod.acquia-sites.com'
+  user: 'site1.prod'
+  paths:
+    drush-script: 'drush8'

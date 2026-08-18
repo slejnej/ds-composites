@@ -1,0 +1,8 @@
+uuid: 565cede5-d611-4476-9ab3-2f7648e8a90f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: My_OIgovIo2V2GWB9eorUC2qGyCsGkQuRTuSM8AEWxM
+id: footer_group
+label: Footer

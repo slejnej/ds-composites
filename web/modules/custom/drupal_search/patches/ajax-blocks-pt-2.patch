@@ -1,0 +1,37 @@
+diff --git a/modules/contrib/facets/src/Plugin/facets/facet_source/SearchApiDisplay.php b/modules/contrib/facets/src/Plugin/facets/facet_source/SearchApiDisplay.php
+index d5b7042d..4a6d2510 100644
+--- a/modules/contrib/facets/src/Plugin/facets/facet_source/SearchApiDisplay.php
++++ b/modules/contrib/facets/src/Plugin/facets/facet_source/SearchApiDisplay.php
+@@ -191,6 +191,32 @@ public function fillFacetsWithResults(array $facets) {
+       if (isset($display_definition['view_id'])) {
+         $view = Views::getView($display_definition['view_id']);
+         $view->setDisplay($display_definition['view_display']);
++
++        // Allow parameters be pulled from the request.
++        // The map stores the actual name of the parameter in the request. Views
++        // which override existing controller, use for example 'node' instead of
++        // arg_nid as name.
++        $route = \Drupal::routeMatch()->getRouteObject();
++        $map = $route?->hasOption('_view_argument_map') ? $route->getOption('_view_argument_map') : [];
++        foreach ($map as $attribute => $parameter_name) {
++          if (isset($map[$attribute])) {
++            $attribute = $map[$attribute];
++          }
++          if ($arg = \Drupal::routeMatch()->getRawParameter($attribute)) {
++          }
++          else {
++            $arg = \Drupal::routeMatch()->getParameter($attribute);
++          }
++
++          if (isset($arg)) {
++            $args[] = $arg;
++          }
++        }
++
++        if (!empty($args)) {
++          $view->setArguments($args);
++        }
++
+         $view->preExecute();
+         $view->execute();
+         $results = $this->searchApiQueryHelper->getResults($search_id);

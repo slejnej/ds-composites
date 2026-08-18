@@ -1,33 +1,19 @@
-# Remora installation profile
+# Custom installation profile
 
-This is the installation profile for all our Remora project.
 It will install all the default CTs and generate an appropriate subtheme.
 
 ## Functionalities
 
 - Installs defined themes and modules during Drupal installation which are defined in info file.
 - Provides additional steps for setting up the subtheme.
-- Automatically generates remora_base_theme-based subtheme using Bootstrap 5.
+- Generates barrio_base_theme-based subtheme using Bootstrap 5.
 - Generates boilerplate SCSS files containing all the relevant variables.
 
-## Installation
-
-1. Add the repository to composer.json
-
-```
-    {
-        "name": "mrm-remora/installation_profile",
-        "type": "vcs",
-        "url": "git@github.com:mrm-remora/installation_profile.git",
-        "no-api": true
-    }
-```
-
-2. Run `composer require mrm-remora/installation_profile:"^v1.0"`
-
 ## Module styling
-To allow modules to ship with their own styles, we automatically add an import statement to the subtheme's `_modules.scss` file if the module has a `scss/style.scss` file.  
-This check is only ran on initial installation of the module, and therefore if the module doesn't initially have a `scss/style.scss` file, it will not be added to the `_modules.scss` file. 
+The subtheme has a SCSS file per module's SCSS file. By default, we have a `style.scss` and `bootstrap.scss` file. The `bootstrap.scss` file is used for layout styling and typography (mainly involving bootstrap `@extends`), while the style.scss file is used for general styling.  
+Modules SCSS files are imported into the subtheme's SCSS file with the matching name. If the file doesn't exist yet in the subtheme, it will be created however not imported into a new SCSS file.
+
+This SCSS generation is only ran on initial installation of the module, and therefore if the module doesn't initially have a `scss/*.scss` file, it will not be added to the subtheme's SCSS file.
 Instead, the module can implement a hook like below.
 
 ```php
@@ -40,6 +26,10 @@ function hook_update_N(): void
 This can safely be run on every environment, since the linkStyles method will only add the import statement if `_modules.scss` doesn't already have an import for the module.  
 
 The import statement is automatically removed when the module is uninstalled. 
+
+The import flow can be found in [whimsical](https://whimsical.com/rbt-subtheme-styling-VobDDkYidw4ugSF6kda4Ev@or4CdLRbgitaZD25VZX8qyTGHRARyEgiEBbV7aq8j), a screenshot has been included below.
+
+![import_flow.png](docs/import_flow.png)
 
 ## Subtheme generation
 

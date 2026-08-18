@@ -1,8 +1,0 @@
-/**
- * Returns the relative path to a bootstrap icon
- * To be used with things like background-image: url();
- * Example: url(icon('search'));
- */
-@function icon($icon-name) {
-  @return "../../../../custom/remora_base_theme/node_modules/bootstrap-icons/icons/#{$icon-name}.svg"
-}

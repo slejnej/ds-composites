@@ -1,0 +1,18 @@
+<?php
+
+use Drupal\remora_core\Manager\LibraryManager;
+
+/**
+ * Automatically registers all the templates in the templates/ directory
+ *
+ * @return array[]
+ */
+function tagline_pod_theme(): array
+{
+  return Drupal::service('remora_core.service.module_template')->generateThemesFromTemplates('tagline_pod');
+}
+
+function tagline_pod_page_attachments(array &$attachments): void
+{
+  LibraryManager::addAdminLibrary($attachments, 'tagline_pod/admin_styles');
+}

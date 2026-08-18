@@ -1,0 +1,5 @@
+services:
+  dc_custom.twig.extension:
+    class: Drupal\dc_custom\Twig\Custom
+    tags:
+      - { name: twig.extension }

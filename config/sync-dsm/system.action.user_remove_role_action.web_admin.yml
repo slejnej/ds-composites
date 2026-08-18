@@ -1,0 +1,14 @@
+uuid: 3ea517d2-42fe-4e67-82d4-a53ca74a85f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.web_admin
+  module:
+    - user
+id: user_remove_role_action.web_admin
+label: 'Remove the Web admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: web_admin

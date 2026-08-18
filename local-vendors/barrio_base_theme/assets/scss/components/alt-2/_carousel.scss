@@ -1,0 +1,34 @@
+.palette-alt-2 {
+  &.carousel,
+  .carousel {
+    .carousel-caption {
+      padding: $alt-2-carousel-caption-padding-y $alt-2-carousel-caption-padding-x;
+      color: $alt-2-carousel-caption-color;
+      background-color: $alt-2-carousel-caption-bg;
+      border-radius: $alt-2-carousel-caption-border-radius;
+      bottom: $alt-2-carousel-caption-bottom;
+      left: $alt-2-carousel-caption-left;
+      right: $alt-2-carousel-caption-right;
+      max-width: $alt-2-carousel-caption-max-width;
+      text-align: $alt-2-carousel-caption-text-align;
+
+      h5 {
+        margin-bottom: $alt-2-carousel-caption-spacer;
+      }
+
+      p {
+        color: $alt-2-carousel-caption-color-subtitle;
+      }
+    }
+
+    .carousel-item:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: $alt-2-carousel-bg;
+    }
+  }
+}

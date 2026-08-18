@@ -1,0 +1,23 @@
+uuid: f31249dc-2273-45ca-939a-28fd175386d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_tint
+    - paragraphs.paragraphs_type.banner_pea
+  module:
+    - options
+_core:
+  default_config_hash: W_4a0IDJD_Q65FUUlFUNpQOll1o3SgFYh0S-1hTOEO0
+id: paragraph.banner_pea.field_banner_tint
+field_name: field_banner_tint
+entity_type: paragraph
+bundle: banner_pea
+label: 'Banner tint'
+description: 'Select type of banner overlay / tint'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

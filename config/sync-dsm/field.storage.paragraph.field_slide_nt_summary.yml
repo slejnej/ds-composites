@@ -1,0 +1,24 @@
+uuid: b6aa1ac8-a9b6-4965-900b-207878d3b762
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+  enforced:
+    module:
+      - slideshow_pod
+_core:
+  default_config_hash: tPQyEhK-b5ttyth_NX9YNjy2EzqaS8suH2xlZ6z8pwk
+id: paragraph.field_slide_nt_summary
+field_name: field_slide_nt_summary
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

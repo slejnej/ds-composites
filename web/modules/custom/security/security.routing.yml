@@ -1,7 +1,7 @@
-security.settings.obfuscate_versions:
-  path: '/admin/config/remora/security/obfuscate-versions'
+security.settings.headers:
+  path: '/admin/config/remora/security/headers'
   defaults:
-    _form: 'Drupal\security\Form\ObfuscateVersionsForm'
+    _form: 'Drupal\security\Form\HeadersConfigForm'
     _title: 'Obfuscate versions config'
   requirements:
     _permission: 'administer site configuration'

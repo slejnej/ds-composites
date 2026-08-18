@@ -6,19 +6,33 @@
 @import "components/banner";
 @import "components/buttons";
 @import "components/card";
+@import "components/cookies";
+@import "components/footer";
 @import "components/header";
 @import "components/menu";
 @import "components/node";
 @import "components/promo";
-@import 'components/tagline';
-@import 'components/typography';
-
+@import "components/slideshow";
+@import "components/tagline";
+@import "components/text_media";
+@import "components/typography";
 
 /** ================= [ FONTS ] ================= **/
-
 @font-face {
   font-family: 'Noto sans';
   src: url("../assets/fonts/NotoSans-VariableFont_wdth,wght.woff2") format('woff2'),
   url("../assets/fonts/NotoSans-VariableFont_wdth,wght.woff") format('woff'),
   url("../assets/fonts/NotoSans-VariableFont_wdth,wght.ttf") format('truetype');
+}
+
+// override here as drupal is unsetting everything!
+body .progress {
+  display: flex;
+  height: var(--bs-progress-height);
+  overflow: hidden;
+  font-size: var(--bs-progress-font-size);
+  background-color: var(--bs-progress-bg);
+}
+.js-form-required.form-required::after {
+  content: " ";
 }

@@ -1,0 +1,109 @@
+uuid: 1163fd51-2046-4072-ba8f-da1d0539d6c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - simple_sitemap
+id: config_sync.module.simple_sitemap
+snapshotSet: config_sync
+extensionType: module
+extensionName: simple_sitemap
+items:
+  -
+    collection: ''
+    name: simple_sitemap.custom_links.default
+    data:
+      links:
+        -
+          path: /
+          priority: '1.0'
+          changefreq: daily
+      _core:
+        default_config_hash: 25hWeYa4sasuJtHqKKcEN_nYiuEC1lMPYHsn5dawJEw
+  -
+    collection: ''
+    name: simple_sitemap.settings
+    data:
+      max_links: 2000
+      cron_generate: true
+      cron_generate_interval: 0
+      generate_duration: 10000
+      entities_per_queue_item: 50
+      remove_duplicates: true
+      skip_untranslated: true
+      xsl: true
+      base_url: ''
+      default_variant: default
+      custom_links_include_images: false
+      disable_language_hreflang: false
+      hide_branding: false
+      excluded_languages: {  }
+      enabled_entity_types:
+        - node
+        - taxonomy_term
+        - menu_link_content
+      _core:
+        default_config_hash: MUpaAk1hn-0Ph4OFw3DD_6gUF9KbGwxja9Y0qmampzo
+  -
+    collection: ''
+    name: simple_sitemap.sitemap.default
+    data:
+      id: default
+      label: Default
+      description: 'The default hreflang sitemap - lists URLs to be indexed by modern search engines.'
+      type: default_hreflang
+      weight: 0
+      status: true
+      dependencies:
+        config:
+          - simple_sitemap.type.default_hreflang
+      langcode: en
+      _core:
+        default_config_hash: rzLPapRSW-bgTs4MObzlqsqwj5IxPGO9EQZolw2ZzFc
+  -
+    collection: ''
+    name: simple_sitemap.sitemap.index
+    data:
+      id: index
+      label: 'Sitemap Index'
+      description: 'The sitemap index listing all other sitemaps - useful if there are at least two other sitemaps. In most cases this sitemap should be last in the generation queue and set as the default sitemap.'
+      type: index
+      weight: 1000
+      status: false
+      dependencies:
+        config:
+          - simple_sitemap.type.index
+      langcode: en
+      _core:
+        default_config_hash: WffB95XdMvoUEvymTyLFLB-Q_JnCbbjy9Kj7TvlzN9s
+  -
+    collection: ''
+    name: simple_sitemap.type.default_hreflang
+    data:
+      id: default_hreflang
+      label: 'Default hreflang'
+      description: 'The default hreflang sitemap type. A sitemap of this type is understood by most modern search engines.'
+      sitemap_generator: default
+      url_generators:
+        - custom
+        - entity
+        - entity_menu_link_content
+        - arbitrary
+      langcode: en
+      status: true
+      _core:
+        default_config_hash: yaHZPVGZtW3BUvzzdMgc4ed5l4GCiFjcgYlLZmupcqA
+  -
+    collection: ''
+    name: simple_sitemap.type.index
+    data:
+      id: index
+      label: 'Sitemap Index'
+      description: 'The sitemap index sitemap type. A sitemap of this type lists sitemaps of all other types.'
+      sitemap_generator: index
+      url_generators:
+        - index
+      status: true
+      langcode: en
+      _core:
+        default_config_hash: yS_TZXc9X2zr2RfAwk7momW3LG9wra--H2ApqA5Vgak

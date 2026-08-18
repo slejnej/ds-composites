@@ -1,0 +1,17 @@
+editor:
+  - 'create paragraph content banners'
+  - 'delete paragraph content banners'
+  - 'update paragraph content banners'
+  - 'view paragraph content banners'
+  - 'create paragraph content banner_pea'
+  - 'delete paragraph content banner_pea'
+  - 'update paragraph content banner_pea'
+  - 'view paragraph content banner_pea'
+
+anonymous:
+  - 'view paragraph content banners'
+  - 'view paragraph content banner_pea'
+
+authenticated:
+  - 'view paragraph content banners'
+  - 'view paragraph content banner_pea'

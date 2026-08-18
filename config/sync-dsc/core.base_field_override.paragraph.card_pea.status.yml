@@ -1,0 +1,22 @@
+uuid: 46b6f601-01b4-47a8-b071-55bbf503e334
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.card_pea
+id: paragraph.card_pea.status
+field_name: status
+entity_type: paragraph
+bundle: card_pea
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

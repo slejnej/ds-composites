@@ -1,0 +1,7 @@
+{% block user_menu %}
+  {% if drupal_menu('account') | render %}
+    <div class="user-menu d-none d-lg-flex flex-column">
+      {{ drupal_menu('account') }}
+    </div>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,13 @@
+uuid: d3c48986-d558-48ac-890d-df4f0794ba48
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - path_alias
+_core:
+  default_config_hash: mtBDKnvzD0K2F1IE1OnqqqztIIW8AOSTufrQxFP3zEI
+id: path_alias.path_alias
+target_entity_type_id: path_alias
+target_bundle: path_alias
+default_langcode: und
+language_alterable: true

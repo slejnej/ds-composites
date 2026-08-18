@@ -1,0 +1,22 @@
+uuid: 058e4f5b-cbec-463a-a937-b2535a39f90a
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - datetime
+    - media
+_core:
+  default_config_hash: doFNv8kWoEZ-rTD8b31nUVTFDH4wQ1u950UEBqLvPgU
+id: media.field_media_audio_date
+field_name: field_media_audio_date
+entity_type: media
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

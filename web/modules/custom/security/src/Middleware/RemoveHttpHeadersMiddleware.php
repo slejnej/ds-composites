@@ -4,14 +4,14 @@ namespace Drupal\security\Middleware;
 
 use Drupal;
 use Drupal\security\Cache\ConfigCache;
-use Drupal\security\Form\ObfuscateVersionsForm;
+use Drupal\security\Form\HeadersConfigForm;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 /**
  * Removes the configured HTTP headers from the response.
- * @see ObfuscateVersionsForm
+ * @see HeadersConfigForm
  */
 class RemoveHttpHeadersMiddleware implements HttpKernelInterface
 {
@@ -54,10 +54,10 @@ class RemoveHttpHeadersMiddleware implements HttpKernelInterface
   {
     // getting from cache is a fair bit faster, and since this runs on every request... Thanks to remove_http_headers module for inspo
     $headersToRemove = ConfigCache::get(
-      'security.settings.obfuscate_versions.http_headers',
+      'security.settings.headers.remove',
       function(): array {
 
-        $configuredHeaders = Drupal::config(ObfuscateVersionsForm::CONFIG_ID)->get('remove_http_headers');
+        $configuredHeaders = Drupal::config(HeadersConfigForm::CONFIG_ID)->get('remove_http_headers');
         return preg_split('/\r\n|\r|\n/', $configuredHeaders ?? '');
       }
     );

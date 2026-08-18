@@ -1,6 +1,7 @@
 <?php
 
-use Drupal\security\Form\ObfuscateVersionsForm;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\security\Form\HeadersConfigForm;
 use Drupal\security\Cache\ConfigCache;
 
 /**
@@ -11,7 +12,7 @@ use Drupal\security\Cache\ConfigCache;
  *    <meta name="Generator" content="Drupal 10 (https://www.drupal.org)">
  * </head>
  * @endcode
- * @see ObfuscateVersionsForm
+ * @see HeadersConfigForm
  */
 function security_page_attachments_alter(array &$attachments): void
 {
@@ -19,7 +20,7 @@ function security_page_attachments_alter(array &$attachments): void
     'security.settings.obfuscate_versions.metatags',
     function(): array {
 
-      $configuredTags = Drupal::config(ObfuscateVersionsForm::CONFIG_ID)->get('remove_metatags');
+      $configuredTags = Drupal::config(HeadersConfigForm::CONFIG_ID)->get('remove_metatags');
       $configuredTags = preg_split('/\r\n|\r|\n/', $configuredTags ?? '');
       return array_map('strtolower', $configuredTags);
     }
@@ -37,3 +38,22 @@ function security_page_attachments_alter(array &$attachments): void
   }
 }
 
+function security_user_logout(): void
+{
+  Drupal::request()->attributes->set('_security.user_logged_out', true);
+}
+
+function security_user_login(): void
+{
+  Drupal::request()->attributes->set('_security.user_logged_in', true);
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function security_form_alter(&$form, FormStateInterface $form_state, $form_id): void
+{
+  if ($form_id === 'seckit_settings_form') {
+    $form['#attached']['library'][] = 'security/textarea_auto_height';
+  }
+}

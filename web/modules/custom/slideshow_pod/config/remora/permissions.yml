@@ -1,0 +1,17 @@
+editor:
+  - 'create paragraph content slideshow'
+  - 'delete paragraph content slideshow'
+  - 'update paragraph content slideshow'
+  - 'view paragraph content slideshow'
+  - 'create paragraph content slide_pea'
+  - 'delete paragraph content slide_pea'
+  - 'update paragraph content slide_pea'
+  - 'view paragraph content slide_pea'
+
+anonymous:
+  - 'view paragraph content slideshow'
+  - 'view paragraph content slide_pea'
+
+authenticated:
+  - 'view paragraph content slideshow'
+  - 'view paragraph content slide_pea'

@@ -4,15 +4,9 @@
   "description": "Remora sections - contains the sections for the remora",
   "minimum-stability": "stable",
   "license": "proprietary",
-  "authors": [
-    {
-      "name": "Esli Stavenga",
-      "email": "esli@mantaraymedia.co.uk"
-    }
-  ],
   "require": {
     "php": ">=8.1",
-    "drupal/site_settings": "^1.20"
+    "drupal/site_settings": "^2"
   },
   "config": {
     "sort-packages": true

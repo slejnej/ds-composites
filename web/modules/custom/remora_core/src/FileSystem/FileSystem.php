@@ -6,7 +6,6 @@ use Drupal;
 use Drupal\Core\File\FileSystem as BaseFileSystem;
 use Drupal\Core\Site\Settings;
 use Drupal\Core\StreamWrapper\StreamWrapperManagerInterface;
-use Psr\Log\LoggerInterface;
 
 class FileSystem extends BaseFileSystem
 {
@@ -16,9 +15,9 @@ class FileSystem extends BaseFileSystem
   private Drupal\Core\Extension\ModuleHandlerInterface $moduleHandler;
   private Drupal\Core\Extension\ThemeHandlerInterface $themeHandler;
 
-  public function __construct(StreamWrapperManagerInterface $stream_wrapper_manager, Settings $settings, LoggerInterface $logger)
+  public function __construct(StreamWrapperManagerInterface $stream_wrapper_manager, Settings $settings)
   {
-    parent::__construct($stream_wrapper_manager, $settings, $logger);
+    parent::__construct($stream_wrapper_manager, $settings);
     $this->moduleHandler = Drupal::moduleHandler();
     $this->themeHandler = Drupal::service('theme_handler');
   }
@@ -86,7 +85,7 @@ class FileSystem extends BaseFileSystem
   /**
    * Returns the realpath to the URI given the theme exists
    *
-   * @param string $uri The URI for the file, e.g. remora_base_theme://README.md
+   * @param string $uri The URI for the file, e.g. barrio_base_theme://README.md
    * @return string|false The absolute path to the file
    */
   private function getThemeRealpath(string $uri): string|false

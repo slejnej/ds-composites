@@ -1,0 +1,22 @@
+uuid: 7e39375c-4611-4ae9-8e7e-06edb084363e
+langcode: en
+status: true
+dependencies:
+  config:
+    - site_settings.site_setting_entity_type.footer
+id: site_setting_entity.footer.status
+field_name: status
+entity_type: site_setting_entity
+bundle: footer
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

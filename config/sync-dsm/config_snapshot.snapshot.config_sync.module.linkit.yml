@@ -1,0 +1,59 @@
+uuid: 2f74172a-0bf0-4679-aa73-fced8c183bc7
+langcode: en
+status: true
+dependencies:
+  module:
+    - linkit
+id: config_sync.module.linkit
+snapshotSet: config_sync
+extensionType: module
+extensionName: linkit
+items:
+  -
+    collection: ''
+    name: image.style.linkit_result_thumbnail
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies: {  }
+      name: linkit_result_thumbnail
+      label: 'Linkit result thumbnail'
+      effects:
+        2943df29-38ea-459c-ba1d-290489bb1807:
+          uuid: 2943df29-38ea-459c-ba1d-290489bb1807
+          id: image_scale_and_crop
+          weight: 1
+          data:
+            width: 50
+            height: 50
+            anchor: center-center
+      _core:
+        default_config_hash: wHVIwkUPtrMmd4x4uJy7pbcx6kvCTxd_FnBx5kNHoYA
+  -
+    collection: ''
+    name: linkit.linkit_profile.default
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - node
+      label: Default
+      id: default
+      description: 'A default Linkit profile'
+      matchers:
+        556010a3-e317-48b3-b4ed-854c10f4b950:
+          id: 'entity:node'
+          uuid: 556010a3-e317-48b3-b4ed-854c10f4b950
+          settings:
+            metadata: '[node:content-type:name] #[node:nid] | [node:created:medium] by [node:author]'
+            bundles: {  }
+            group_by_bundle: false
+            include_unpublished: false
+            substitution_type: canonical
+            limit: 100
+          weight: 0
+      _core:
+        default_config_hash: Zw2zIU4HpyiAnBokQJazpbkztwsdRYe1CZZus2yrfeQ

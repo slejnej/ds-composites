@@ -1,0 +1,5 @@
+// General styles
+.btn.file-link .file-title {
+    @include typography-mobile($text-mobile-default-font, $text-mobile-default-size, $text-mobile-default-weight, $text-mobile-default-line-height);
+    @include typography-desktop($text-desktop-default-font, $text-desktop-default-size, $text-desktop-default-weight, $text-desktop-default-line-height);
+}

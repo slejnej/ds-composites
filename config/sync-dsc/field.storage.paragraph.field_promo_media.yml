@@ -1,0 +1,22 @@
+uuid: 2c507dbf-0f76-401f-9005-dfc536e60825
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: GbRuaRD0v3JJIveJhYRCkLcZKiMOGOOMkAuqQGInlrU
+id: paragraph.field_promo_media
+field_name: field_promo_media
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

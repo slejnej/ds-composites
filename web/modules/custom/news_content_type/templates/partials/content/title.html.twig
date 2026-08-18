@@ -1,0 +1,53 @@
+{% extends '@barrio_base_theme/partials/content/title.html.twig' %}
+
+{% block title_wrapper %}
+  <div class="title-inner d-flex flex-column">
+
+    {% block badge %}
+      <div class="node-category">
+        <div class="badge text-bg-info">{% apply spaceless %}
+            {% if content.field_categories['#items'] is not empty %}
+              {{ content.field_categories }}
+            {% else %}
+              {{ content_type }}
+            {% endif %}
+          {% endapply %}</div>
+      </div>
+    {% endblock badge %}
+
+    {{ block('title') }}
+
+    {% block article_info %}
+      <div class="article-info d-flex flex-column">
+
+        {% block date %}
+          <div class="node-date">
+            {% if content.field_news_display_date['#items'] is not empty %}
+              {{ content.field_news_display_date }}
+            {% else %}
+              {{ content.field_date }}
+            {% endif %}
+          </div>
+        {% endblock %}
+
+        {% block author %}
+          {% if content.field_news_authors['#items'] is not empty %}
+            <div class="node-author font-regular-bold">
+              {{ content.field_news_authors }}
+            </div>
+          {% endif %}
+        {% endblock %}
+
+      </div>
+    {% endblock %}
+
+    {% block link %}
+      {% if content.field_news_link['#items'] is not empty %}
+        <div class="node-link">
+          {{ content.field_news_link }}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+  </div>
+{% endblock %}

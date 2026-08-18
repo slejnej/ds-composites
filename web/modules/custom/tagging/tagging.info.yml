@@ -2,7 +2,7 @@ name: Remora tagging
 type: module
 description: Contains all taxonomy vocabularies required for tagging content
 core_version_requirement: ^10
-package: Remora
+package: Dc2
 version: 0.0.2
 configure: tagging.configuration_form
 dependencies:

@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.media_library
+    - field.field.media.audio.field_media_audio_artwork
+    - field.field.media.audio.field_media_audio_date
     - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_media_audio_summary
     - field.field.media.audio.field_media_transcript
     - image.style.medium
     - media.type.audio
@@ -28,8 +31,12 @@ content:
     region: content
 hidden:
   created: true
+  field_media_audio_artwork: true
+  field_media_audio_date: true
   field_media_audio_file: true
+  field_media_audio_summary: true
   field_media_transcript: true
   langcode: true
   name: true
+  search_api_excerpt: true
   uid: true

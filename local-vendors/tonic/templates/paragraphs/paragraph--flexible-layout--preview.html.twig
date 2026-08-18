@@ -1,0 +1,33 @@
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {% set published_status = paragraph.isPublished == 'true' ? 'Published' : 'Unpublished' %}
+
+      <div class="section-title-wrapper">
+
+        {% block title %}
+          <div class="title-wrapper d-flex flex-column">
+            <div class="field__label title">{{ content.field_editor_title.0 }}</div>
+            <div class="field__label status">[Section] {{ published_status }}</div>
+          </div>
+        {% endblock %}
+
+        {% block icon %}
+          <div class="field__label palette-preview">
+            <div class="palette-icon">
+              <svg width="28" height="28" viewBox="0 0 211 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="211" height="211"/>
+              </svg>
+            </div>
+            <div class="palette-name">
+              Palette {{ content.field_palette }}
+            </div>
+          </div>
+        {% endblock %}
+
+      </div>
+
+      {{ content|without('field_editor_title', 'field_palette' ) }}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

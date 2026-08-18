@@ -1,0 +1,20 @@
+uuid: 8799e3d9-1db2-4c5c-98b6-9cd74136155f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.organisations
+  module:
+    - metatag
+id: taxonomy_term.organisations.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: organisations
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

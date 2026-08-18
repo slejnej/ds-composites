@@ -1,0 +1,25 @@
+uuid: bb59dd8c-b842-4750-938f-91ba9e48ed23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow_image_ratio
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - options
+_core:
+  default_config_hash: yK8P3cy2NAOglif59bHD7EeMM8v2Arp1kw4DLenjTqo
+id: paragraph.slideshow.field_slideshow_image_ratio
+field_name: field_slideshow_image_ratio
+entity_type: paragraph
+bundle: slideshow
+label: 'Image ratio'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '16_9'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

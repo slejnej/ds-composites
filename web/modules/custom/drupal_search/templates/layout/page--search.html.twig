@@ -1,0 +1,40 @@
+{% block page %}
+
+  {% block header %}
+    {% remora_include 'partials/layout/header.html.twig' %}
+  {% endblock %}
+
+  {% block main %}
+    <main class="flex-grow-1">
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+      {% block breadcrumbs %}
+        {{ drupal_entity('block', 'barrio_base_theme_breadcrumbs') }}
+      {% endblock %}
+
+      {% block title_wrapper %}
+        <div class="title-wrapper container-fluid g-0">
+          <div class="container-xxl g-0">
+            <section id="content-title" class="container-xxl">
+              <div class="title-inner">
+                {% block title %}
+                  <h1 class="page-title mb-0">{{ 'Search'|t }}</h1>
+                {% endblock %}
+              </div>
+            </section>
+          </div>
+        </div>
+      {% endblock %}
+
+      <div class="container-xxl">
+        {% include '@drupal_search/partials/search-section.html.twig' %}
+      </div>
+
+    </main>
+  {% endblock %}
+
+  {% block footer %}
+    {% remora_include 'partials/layout/footer.html.twig' %}
+  {% endblock %}
+
+{% endblock %}

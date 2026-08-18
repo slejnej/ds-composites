@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <property name="gallery_pod.dir" value="${basedir}/web/modules/custom/gallery_pod"/>
+
+  <target name="npm-gallery_pod" depends="vendors">
+    <exec executable="npm" failonerror="true">
+      <arg value="install"/>
+      <arg value="--unsafe-perm"/>
+      <arg value="--prefix"/>
+      <arg value="${gallery_pod.dir}"/>
+    </exec>
+  </target>
+</module>

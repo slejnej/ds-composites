@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\remora_core\Manager\LibraryManager;
+
+/**
+ * Adds social links admin styles to admin pages
+ *
+ * @param array $attachments
+ * @return void
+ */
+function webform_pod_page_attachments(array &$attachments): void
+{
+  LibraryManager::addAdminLibrary($attachments, 'webform_pod/admin_styles');
+}
+
+/**
+ * Automatically registers all the templates in the templates/ directory
+ *
+ * @return array[]
+ */
+function webform_pod_theme(): array
+{
+  return Drupal::service('remora_core.service.module_template')->generateThemesFromTemplates('webform_pod');
+}

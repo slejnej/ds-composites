@@ -1,0 +1,4 @@
+textarea_auto_height:
+  version: 1.0
+  js:
+    js/textarea-auto-height.js: {}

@@ -1,0 +1,13 @@
+{% extends "field.html.twig" %}
+
+{% block field_multiple_open %}
+  {% if multiple %}
+    <div{{ attributes.addClass(classes, 'field__items items-per-row row-max-3') }}>
+  {% endif %}
+{% endblock %}
+
+{% block field_content %}
+  {% for item in items %}
+    <div{{ item.attributes.addClass(classes, 'field__item col') }}>{{ item.content }}</div>
+  {% endfor %}
+{% endblock %}

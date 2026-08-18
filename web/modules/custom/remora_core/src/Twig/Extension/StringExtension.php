@@ -14,16 +14,9 @@ class StringExtension extends AbstractExtension {
   public function getFilters(): array
   {
     return [
-      'slugify' => new TwigFilter('slugify', [$this, 'slugify'])
+      'slugify' => new TwigFilter('slugify', StringUtil::slugify(...)),
+      'snakecase' => new TwigFilter('snakecase', StringUtil::snakeCaseify(...)),
+      'snakecaseify' => new TwigFilter('snakecaseify', StringUtil::snakeCaseify(...)),
     ];
-  }
-
-  /**
-   * @deprecated
-   * @see StringUtil::slugify()
-   */
-  public function slugify(string $string): string
-  {
-    return StringUtil::slugify($string);
   }
 }

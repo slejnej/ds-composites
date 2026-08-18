@@ -1,0 +1,156 @@
+$banner-height-mobile: 500px !default;
+$banner-height-desktop: $banner-section-max-height !default;
+$banner-image-height-mobile: $banner-height-mobile !default;
+$banner-image-height-desktop: calc($banner-height-desktop - ($banner-section-padding-y * 2)) !default;
+$banner-section-max-width: $banner-section-max-width !default;
+$layout-banner-margin-y: 0 !default;
+$banner-gap-mobile: $global-spacing-1 !default;
+$banner-text-padding-mobile: $global-spacing-1 $global-spacing-1 $global-spacing-0 !default;
+$banner-text-padding-desktop: $banner-text-padding-y $banner-text-padding-x !default;
+
+// Custom variables for banner margins
+section:not(#sidebar-pods) .layout__region .paragraph.paragraph--type--banners {
+  &:first-child {
+    margin-top: $layout-banner-margin-y;
+  }
+
+  //Half the margins in between pods to avoid large gaps
+  margin-top: calc($layout-banner-margin-y / 2);
+  margin-bottom: calc($layout-banner-margin-y / 2);
+
+  &:last-child {
+    margin-bottom: $layout-banner-margin-y;
+  }
+}
+
+// Basic banner styles
+.paragraph--type--banners {
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: $banner-section-padding-y $banner-section-padding-x;
+  max-width: $banner-section-max-width;
+
+  .banner-wrapper {
+    height: $banner-height-desktop;
+    gap: $banner-gap-mobile;
+    animation: fadeIn 500ms;
+    border-radius: $banner-wrapper-top-left $banner-wrapper-top-right $banner-wrapper-bottom-right $banner-wrapper-bottom-left;
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (min-width: 1400px) {
+      gap: $banner-wrapper-gap;
+    }
+
+    &.overlay-dark .overlay {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    &.overlay-light .overlay {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .banner-caption-wrapper {
+      z-index: 2;
+      border-radius: $banner-text-top-left $banner-text-top-right
+      $banner-text-bottom-right $banner-text-bottom-left;
+      gap: $banner-text-spacer;
+      padding: $banner-text-padding-mobile;
+
+      @media (min-width: 1400px) {
+        padding: $banner-text-padding-desktop;
+      }
+    }
+
+    .banner-image-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: $banner-section-max-width;
+    }
+
+    .banner-image {
+      position: relative;
+      height: 100%;
+      max-height: $banner-image-height-mobile;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      @include media-breakpoint-up(l) {
+        max-height: $banner-image-height-desktop;
+      }
+
+      .image,
+      picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      img {
+        height: 100%;
+        width: auto;
+        max-width: 100%;
+        max-height: inherit;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .caption-wrapper {
+      left: auto;
+      right: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: $banner-image-height-mobile;
+    }
+  }
+}
+
+/** ================= [ Mixins ] ================= **/
+
+@mixin banner($banner-bg, $banner-caption-bg, $banner-title-color, $banner-body-color) {
+  .paragraph--type--banner-pea {
+    background: $banner-bg;
+
+    .banner-wrapper {
+      .banner-caption-wrapper {
+        background: $banner-caption-bg;
+
+        .caption-title p {
+          color: $banner-title-color;
+        }
+
+        .caption-subtitle {
+          p, h2, h3, h4, h5, h6 {
+            color: $banner-body-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.paragraph--type--banners {
+  @include banner(
+                  $banner-wrapper-bg,
+                  $banner-text-bg,
+                  $banner-text-color,
+                  $banner-text-color
+  );
+}

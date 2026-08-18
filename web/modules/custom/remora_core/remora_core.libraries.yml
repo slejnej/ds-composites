@@ -7,3 +7,12 @@ routing:
       weight: -100
       attributes:
         type: 'module'
+
+device_detect:
+  version: 0.0.1
+  header: true
+  js:
+    js/device-detect.js:
+      weight: -101
+      attributes:
+        type: 'module'

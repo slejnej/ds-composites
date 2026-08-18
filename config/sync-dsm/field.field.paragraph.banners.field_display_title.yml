@@ -1,0 +1,26 @@
+uuid: 008a4e21-65d3-4599-9908-09e0035357d1
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_title
+    - filter.format.title
+    - paragraphs.paragraphs_type.banners
+  module:
+    - text
+_core:
+  default_config_hash: FZji1QVPeGiQz-LsUCMkAdJppzk7ULAdOBI15s5cKfs
+id: paragraph.banners.field_display_title
+field_name: field_display_title
+entity_type: paragraph
+bundle: banners
+label: 'Display title'
+description: 'This title is displayed on the page above the content of this pod.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - title
+field_type: text

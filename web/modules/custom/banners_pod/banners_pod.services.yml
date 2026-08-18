@@ -1,0 +1,5 @@
+services:
+  banners_pod.event_subscriber.referencable_entity:
+    class: \Drupal\banners_pod\EventSubscriber\ReferencableEntitySubscriber
+    tags:
+      - { name: 'event_subscriber' }

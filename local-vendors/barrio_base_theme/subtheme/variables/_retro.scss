@@ -1,0 +1,58 @@
+// Maps old variables to new variables
+
+@import 'components';
+@import 'text-desktop';
+@import 'text-mobile';
+
+/** ================= [Buttons] ================= **/
+$button-btn-padding-x: $btn-padding-x;
+$button-btn-padding-y: $btn-padding-y;
+$button-btn-padding-x-sm: $btn-padding-x-sm;
+$button-btn-padding-y-sm: $btn-padding-y-sm;
+$button-btn-padding-x-lg: $btn-padding-x-lg;
+$button-btn-padding-y-lg: $btn-padding-y-lg;
+$button-btn-border-radius: $btn-border-radius;
+$button-btn-border-width: $btn-border-width;
+
+/** ================= [Section titles] ================= **/
+$section-margin-top: $layout-section-title-margin-top;
+$section-margin-bottom: $layout-section-title-margin-bottom;
+$section-padding-y: $layout-section-title-padding-y;
+$section-padding-x: $layout-section-title-padding-x;
+
+/** ================= [pod margins] ================= **/
+$pod-margin-y: $layout-pod-margin-y;
+$promo-margin-y: $layout-promo-margin-y;
+$feature-article-margin-y: $layout-feature-article-margin-y;
+$intro-margin-y: $layout-intro-margin-y;
+$intro-content-max-width: $layout-intro-content-max-width;
+$carousel-layout-margin-y: $layout-carousel-margin-y;
+$carousel-layout-max-width: $layout-carousel-max-width;
+
+/** ================= [Node - sidebars] ================= **/
+$right-sidebar-item-padding-y: $left-sidebar-right-sidebar-item-padding-y;
+$right-sidebar-item-padding-x: $left-sidebar-right-sidebar-item-padding-x;
+$right-sidebar-border-width: $left-sidebar-right-sidebar-border-width;
+$right-sidebar-border-color: $left-sidebar-right-sidebar-border-color;
+$right-sidebar-radius: $left-sidebar-right-sidebar-radius;
+$right-sidebar-bg: $left-sidebar-right-sidebar-bg;
+$right-sidebar-body-padding-y: $left-sidebar-right-sidebar-body-padding-y;
+$right-sidebar-body-padding-x: $left-sidebar-right-sidebar-body-padding-x;
+$right-sidebar-title-bg: $left-sidebar-right-sidebar-title-bg;
+$right-sidebar-title-border-bottom: $left-sidebar-right-sidebar-title-border-bottom;
+$right-sidebar-title-border: $left-sidebar-right-sidebar-title-border;
+$right-sidebar-title-color: $left-sidebar-right-sidebar-title-color;
+$right-sidebar-title-padding-x: $left-sidebar-right-sidebar-title-padding-x;
+$right-sidebar-title-padding-y: $left-sidebar-right-sidebar-title-padding-y;
+
+/** ================= [Node - Title] ================= **/
+$hero-caption-margin-top:  $layout-hero-margin-top;
+$hero-caption-margin-bottom: $layout-hero-margin-bottom;
+$hero-caption-content-max-width: $hero-caption-max-width;
+$hero-caption-wrapper: 100%;
+
+/** ================= [Typography] ================= **/
+$text-mobile-nav-size-slim: $text-mobile-nav-size;
+$text-desktop-nav-size-narrow: $text-desktop-nav-size;
+$text-desktop-nav-size-wide: $text-desktop-nav-size;
+

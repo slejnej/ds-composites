@@ -1,0 +1,10 @@
+{
+  "name": "mrm-remora/slideshow_pod",
+  "type": "drupal-custom-module",
+  "description": "Slideshow pod - contains functionalities to enable slideshow pod paragraphs. Also provides Slide pea",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.1"
+  }
+}

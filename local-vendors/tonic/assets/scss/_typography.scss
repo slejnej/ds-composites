@@ -1,0 +1,29 @@
+body, .lpb-controls-label {
+  font-family: $primary-font;
+
+  .fieldset__label, .fieldset__label--group, .form-item__label {
+    font-size: var(--gin-font-size-m);
+  }
+}
+
+h1.page-title {
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 48px
+}
+
+.vertical-tabs__menu-item-title {
+  font-size: var(--gin-font-size-l);
+  font-weight: 400;
+  line-height: normal
+}
+
+.horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a strong {
+  font-size: var(--gin-font-size-m);
+  font-weight: 400;
+  line-height: normal
+}
+
+
+
+

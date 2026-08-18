@@ -1,0 +1,31 @@
+uuid: 518e855b-a26c-4df6-b774-990ad9146d2e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_audio_artwork
+    - media.type.audio
+    - media.type.image
+_core:
+  default_config_hash: Ow8RfLFG8I-XuZdaRi1oYHE1H7wqiStCKytFFhqIe9U
+id: media.audio.field_media_audio_artwork
+field_name: field_media_audio_artwork
+entity_type: media
+bundle: audio
+label: Artwork
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

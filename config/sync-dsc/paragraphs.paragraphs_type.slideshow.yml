@@ -1,0 +1,15 @@
+uuid: 3d6e4def-26eb-4a70-883b-88a0914c53bc
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - slideshow_pod
+_core:
+  default_config_hash: vnBRiL1o4Nr_FAv9WSCHtVwhZEfuy7mq3XCxNEC7mJ0
+id: slideshow
+label: Slideshow
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,7 +1,7 @@
 {
-  "name": "remora_base_theme",
-  "version": "1.0.0",
-  "description": "Remora base theme SASS implementation",
+  "name": "ds_composites",
+  "version": "1.1.0",
+  "description": "Base theme SASS implementation",
   "main": "gulpfile.mjs",
   "type": "module",
   "scripts": {
@@ -11,8 +11,7 @@
   "keywords": [
     "SASS",
     "Bootstrap",
-    "Drupal",
-    "Remora"
+    "Drupal"
   ],
   "engines": {
     "npm": ">=8",

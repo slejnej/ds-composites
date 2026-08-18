@@ -1,0 +1,11 @@
+uuid: 07720078-fff7-4d16-a1e1-b8b52f4c181d
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.landscape_21x9
+id: crop.landscape_21x9
+target_entity_type_id: crop
+target_bundle: landscape_21x9
+default_langcode: site_default
+language_alterable: false

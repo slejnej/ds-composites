@@ -1,0 +1,43 @@
+.title-wrapper {
+  background-color: $hero-caption-wrapper-bg;
+  text-align: $hero-caption-text-align;
+  border-color: $hero-caption-border;
+  border-style: solid;
+  border-top-width: $hero-caption-border-top;
+  border-right-width: $hero-caption-border-right;
+  border-bottom-width: $hero-caption-border-bottom;
+  border-left-width: $hero-caption-border-left;
+  border-radius: $hero-caption-radius;
+  padding: $hero-caption-padding-top $hero-caption-padding-right $hero-caption-padding-bottom $hero-caption-padding-left;
+  margin: $hero-caption-margin-top auto $hero-caption-margin-bottom;
+  max-width: $hero-caption-wrapper;
+
+  .title-inner {
+    background-color: $hero-caption-color-bg;
+    color: $hero-caption-color;
+    border-radius: $hero-caption-radius;
+    text-align: $hero-caption-text-align;
+    max-width: $hero-caption-content-max-width;
+    padding: calc($hero-caption-text-padding-y / 2) 0;
+
+    @media(min-width: 576px) {
+      padding: $hero-caption-text-padding-y $hero-caption-text-padding-x;
+    }
+
+    .type, .node-category {
+      padding-bottom: $hero-caption-type-padding-bottom;
+    }
+
+    h1 {
+      padding-bottom: $hero-caption-title-padding-bottom;
+    }
+
+    .date, .node-date {
+      padding-bottom: $hero-caption-date-padding-bottom;
+    }
+
+    .author, .node-author {
+      padding-bottom: $hero-caption-author-padding-bottom;
+    }
+  }
+}

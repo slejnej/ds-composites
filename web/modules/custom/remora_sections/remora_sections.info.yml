@@ -2,7 +2,7 @@ name: Remora sections
 type: module
 description: Contains the sections for the remora
 core_version_requirement: ^10
-package: Remora
+package: Dc2
 dependencies:
   - drupal:site_settings
   - site_settings:site_settings_type_permissions

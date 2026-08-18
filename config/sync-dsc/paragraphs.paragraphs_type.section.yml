@@ -1,0 +1,18 @@
+uuid: 1e96c228-221e-44b7-94bf-b1be4407171c
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+_core:
+  default_config_hash: feOvJn8FWlcjp2ZP_apEwZUCrpt_U5wYhFYQ90YLdC0
+id: section
+label: Section
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      layout_onecol: 'One column'

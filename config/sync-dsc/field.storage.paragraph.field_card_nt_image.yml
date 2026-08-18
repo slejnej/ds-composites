@@ -1,0 +1,25 @@
+uuid: 34943eba-12f8-49c6-b62c-4bfbd2a8ae76
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+  enforced:
+    module:
+      - cards_pod
+_core:
+  default_config_hash: vPOjRQjxd_ygtfFA0zOwGnM9rDRA6rI18oJY0LY0nFc
+id: paragraph.field_card_nt_image
+field_name: field_card_nt_image
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

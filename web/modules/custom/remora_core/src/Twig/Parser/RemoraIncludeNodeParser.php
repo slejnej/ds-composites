@@ -23,13 +23,13 @@ use Twig\TokenParser\IncludeTokenParser;
  *   - directory ~ path ~ '--' ~ bundle ~ '.html.twig'
  *   - '@module_name' ~ path ~ '.html.twig'
  *   - directory ~ path ~ '.html.twig'
- *   - '@remora_base_theme' ~ path ~ '.html.twig'
+ *   - '@barrio_base_theme' ~ path ~ '.html.twig'
  *
  */
 class RemoraIncludeNodeParser extends IncludeTokenParser
 {
   private const FILE_EXT = '.html.twig';
-  private const FALLBACK_THEME = '@remora_base_theme';
+  private const FALLBACK_THEME = '@barrio_base_theme';
 
   /**
    * Gets the tag name associated with this token parser.
@@ -86,7 +86,7 @@ class RemoraIncludeNodeParser extends IncludeTokenParser
     // ct ~ '/templates/' ~ path ~ '/' ~ filename ~ '.html.twig'
     // '@module_name' ~ path ~ '.html.twig'
     // directory ~ path ~ '.html.twig'
-    // '@remora_base_theme' ~ path ~ '.html.twig'
+    // '@barrio_base_theme' ~ path ~ '.html.twig'
     $directoryExpr = new NameExpression('directory', $lineNo);
     $objectBeingRendered = new NullCoalesceExpression(
       new GetAttrExpression(new NameExpression('element', $lineNo), new ConstantExpression('#object', $lineNo), new ArrayExpression([], $lineNo), 'property', $lineNo),
@@ -107,8 +107,16 @@ class RemoraIncludeNodeParser extends IncludeTokenParser
           new ConstantExpression(self::FILE_EXT, $lineNo), $lineNo
         ),
         $lineNo),
-      // the content type's template
+      // the subtheme's generic override template
       new ConstantExpression(1, $lineNo),
+      new ConcatBinary($directoryExpr,
+        new ConcatBinary(
+            new ConstantExpression('/templates/' . $path . '/' . $filename . '--oust', $lineNo),
+          new ConstantExpression(self::FILE_EXT, $lineNo), $lineNo
+        ),
+        $lineNo),
+      // the content type's template
+      new ConstantExpression(2, $lineNo),
       new ConcatBinary(
         new ConstantExpression('@', $lineNo),
         new ConcatBinary(
@@ -117,18 +125,18 @@ class RemoraIncludeNodeParser extends IncludeTokenParser
           $lineNo),
         $lineNo
       ),
-      // the nugget's template
-      new ConstantExpression(2, $lineNo),
+      // the pod's template
+      new ConstantExpression(3, $lineNo),
       new ConcatBinary(
         new ConstantExpression('@', $lineNo),
         new ConcatBinary(
           $objectBundle,
-          new ConstantExpression('_nugget/templates/' . $path . '/' . $filename . self::FILE_EXT, $lineNo),
+          new ConstantExpression('_pod/templates/' . $path . '/' . $filename . self::FILE_EXT, $lineNo),
           $lineNo),
         $lineNo
       ),
       // the module's template
-      new ConstantExpression(5, $lineNo),
+      new ConstantExpression(4, $lineNo),
       new ConcatBinary(
         new ConcatBinary(
           new ConstantExpression('@', $lineNo),
@@ -139,10 +147,10 @@ class RemoraIncludeNodeParser extends IncludeTokenParser
         $lineNo
       ),
       // the subtheme's generic template
-      new ConstantExpression(3, $lineNo),
+      new ConstantExpression(5, $lineNo),
       new ConcatBinary($directoryExpr, new ConstantExpression('/templates/' . $path . '/' . $filename . self::FILE_EXT, $lineNo), $lineNo),
-      // the base theme's template
-      new ConstantExpression(4, $lineNo),
+      // the base theme's generic template
+      new ConstantExpression(6, $lineNo),
       new ConstantExpression(self::FALLBACK_THEME . '/' . $path . '/' . $filename . self::FILE_EXT, $lineNo),
     ];
 
@@ -156,4 +164,3 @@ class RemoraIncludeNodeParser extends IncludeTokenParser
     );
   }
 }
-

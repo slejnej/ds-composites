@@ -1,0 +1,9 @@
+editor:
+  - 'create paragraph content text_media'
+  - 'delete paragraph content text_media'
+  - 'update paragraph content text_media'
+  - 'view paragraph content text_media'
+authenticated:
+  - 'view paragraph content text_media'
+anonymous:
+  - 'view paragraph content text_media'

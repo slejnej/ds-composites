@@ -1,0 +1,100 @@
+.lpb-component-list__item.type-text_media .pod-icon {
+  mask: url("../icons/icon.svg") no-repeat 50% 50% / 90px 90px;
+}
+
+
+/* Presentation styles */
+
+.paragraph-type-text-media .field-group-details[data-drupal-selector="edit-group-pod-content"] .form-radios {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.paragraph-type-text-media .field-group-details[data-drupal-selector="edit-group-pod-content"] .form-radios .form-type--boolean .form-boolean {
+  transform: translate(10px, -12px);
+}
+
+.paragraph-type-text-media .field-group-details[data-drupal-selector="edit-group-pod-content"] .form-radios .js-form-type-radio {
+  margin: 0;
+  width: calc(100% / 7 - 15px);
+  display: grid;
+  column-gap: 8px;
+  row-gap: 10px;
+  border-right: solid 1px #AAADB4;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "lg lg"
+    "sm_1 sm_2";
+}
+
+.paragraph-type-text-media .field-group-details[data-drupal-selector="edit-group-pod-content"] .form-radios .js-form-type-radio:last-child {
+  border: none;
+}
+
+.paragraph-type-text-media .field-group-details[data-drupal-selector="edit-group-pod-content"] .form-radios .js-form-type-radio:has(input:hover)::before,
+.paragraph-type-text-media .field-group-details[data-drupal-selector="edit-group-pod-content"] .form-radios .js-form-type-radio:has(input[checked="checked"])::before {
+  background: var(--gin-color-primary);
+}
+
+.paragraph-type-text-media .field-group-details[data-drupal-selector="edit-group-pod-content"] .form-radios .js-form-type-radio::before {
+  margin-left: calc(50% - 68px);
+  content: "";
+  width: 100px;
+  height: 100px;
+  grid-area: lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: #2A2A2D;
+}
+
+.paragraph-type-text-media .field-group-details[data-drupal-selector="edit-group-pod-content"] .form-radios .js-form-type-radio input {
+  grid-area: sm_1;
+  margin: 0;
+}
+
+.paragraph-type-text-media .field-group-details[data-drupal-selector="edit-group-pod-content"] .form-radios .js-form-type-radio label {
+  grid-area: sm_2;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Presentation icons */
+.field--name-field-text-media-nt-presentation .form-radios .js-form-type-radio::before {
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
+  mask-size: 90px 90px;
+}
+
+.js-form-type-radio:has([value="text_only"])::before {
+  mask-image: url("../icons/text_only.svg");
+}
+
+.js-form-type-radio:has([value="media_only"])::before {
+  mask-image: url("../icons/media_only.svg");
+}
+
+.js-form-type-radio:has([value="article_left"])::before {
+  mask-image: url("../icons/article_left.svg");
+}
+
+.js-form-type-radio:has([value="article_right"])::before {
+  mask-image: url("../icons/article_right.svg");
+}
+
+.js-form-type-radio:has([value="feature_left"])::before {
+  mask-image: url("../icons/feature_left.svg");
+}
+
+.js-form-type-radio:has([value="feature_right"])::before {
+  mask-image: url("../icons/feature_right.svg");
+}
+
+.js-form-type-radio:has([value="centre"])::before {
+  mask-image: url("../icons/article_centre.svg");
+}

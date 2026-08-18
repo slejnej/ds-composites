@@ -2,7 +2,7 @@ name: Organisations taxonomy
 type: module
 description: Contains organisations taxonomy vocabulary
 core_version_requirement: ^10
-package: Remora
+package: Dc2
 version: 0.0.2
 dependencies:
   - drupal:rabbit_hole

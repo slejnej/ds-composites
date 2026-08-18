@@ -1,0 +1,29 @@
+uuid: 73361edd-4db4-4a72-bd59-ecb25013015b
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_title
+    - filter.format.title
+    - paragraphs.paragraphs_type.attachments
+  module:
+    - text
+  enforced:
+    module:
+      - attachments_pod
+_core:
+  default_config_hash: xnu8cLTe7SAXfExut56r_LkM1HJB4bF5wJEKteZjm5w
+id: paragraph.attachments.field_display_title
+field_name: field_display_title
+entity_type: paragraph
+bundle: attachments
+label: 'Display title'
+description: 'This title is displayed on the page above the content of this pod.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - title
+field_type: text

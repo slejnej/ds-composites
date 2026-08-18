@@ -1,0 +1,23 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Ponastavi
+      fields:
+        redirect_source__path:
+          label: Od
+        enabled:
+          label: Omogočeno
+        created:
+          label: Ustvarjeno
+      filters:
+        redirect_source__path:
+          expose:
+            label: Od
+        redirect_redirect__uri:
+          expose:
+            label: Za
+  page_1:
+    display_title: Stran

@@ -19,6 +19,14 @@ targetEntityType: site_setting_entity
 bundle: footer
 mode: default
 content:
+  description:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_footer_sections:
     type: layout_paragraphs
     weight: 2
@@ -28,6 +36,16 @@ content:
       nesting_depth: 0
       require_layouts: 1
       empty_message: ''
+    third_party_settings: {  }
+  group:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -46,4 +64,5 @@ content:
     third_party_settings: {  }
 hidden:
   fieldset: true
+  status: true
   user_id: true

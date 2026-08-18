@@ -1,0 +1,14 @@
+section:not(#sidebar-pods) {
+  .palette-alt-1 {
+    .section-title-wrapper {
+      color: $alt-1-layout-section-title-color;
+      border-style: solid;
+      border-color: $alt-1-layout-section-title-border-color;
+      border-right-width: $alt-1-layout-section-title-border-right;
+      border-left-width: $alt-1-layout-section-title-border-left;
+      border-bottom-width: $alt-1-layout-section-title-border-bottom;
+      border-top-width: $alt-1-layout-section-title-border-top;
+      border-radius: $alt-1-layout-section-title-border-radius;
+    }
+  }
+}

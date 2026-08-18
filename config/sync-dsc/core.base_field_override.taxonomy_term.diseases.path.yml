@@ -1,0 +1,20 @@
+uuid: 6044d6e2-9a45-406f-9b9a-603f9cb93cbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.diseases
+  module:
+    - path
+id: taxonomy_term.diseases.path
+field_name: path
+entity_type: taxonomy_term
+bundle: diseases
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

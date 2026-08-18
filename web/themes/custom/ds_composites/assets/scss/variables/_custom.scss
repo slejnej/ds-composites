@@ -1,4 +1,20 @@
 // Add custom variables - that aren't in Figma - here.
+// Also all MODULE styling variables should be overridden here !!!
+@import 'global';
+
+$cookie_bg: $global-color-success-400;
+$cookie_title_color: $global-text-primary;
+$cookie_text_color: $global-text-primary;
+$cookie_link_color: $global-text-link;
+$cookie_link_hover_color: $global-text-link-hover;
+$cookie_modal_header_color: $global-color-black-black;
+$cookie_modal_link_color: $global-color-black-black;
+$cookie_modal_link_hover_color: $global-color-black-black;
+
+$navbar-toggler-height: 45px;
+$navbar-toggler-width: 45px;
+$logo-desktop: 40px;
+$logo-mobile: 35px;
 
 /** ================= [HEADER] ================= **/
 $navbar-toggler-height: 62px;
@@ -12,8 +28,10 @@ $navbar-search-width: $navbar-toggler-width;
 $navbar-search-bg: #1F3D43;
 
 /** ================= [PROMO] ================= **/
-$promo-bg: $global-color-warning-warning-500;
+$promo-bg: $warning;
 $promo-title-color: $global-text-primary;
 $promo-text-color: $global-text-primary;
-//$promo-link-color: $text-link !default;
-//$promo-link-color-hover: $text-link-hover !default;
+
+$main-content-margin-top: 0;
+$menu-top-level-icon-color-hover: transparent;
+$banner-text-padding-desktop: 1rem;

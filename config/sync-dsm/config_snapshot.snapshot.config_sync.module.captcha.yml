@@ -1,0 +1,59 @@
+uuid: 262c7e79-8b48-4a10-a185-035b36645394
+langcode: en
+status: true
+dependencies:
+  module:
+    - captcha
+id: config_sync.module.captcha
+snapshotSet: config_sync
+extensionType: module
+extensionName: captcha
+items:
+  -
+    collection: ''
+    name: captcha.captcha_point.contact_message_personal_form
+    data:
+      langcode: en
+      status: false
+      dependencies: {  }
+      formId: contact_message_personal_form
+      captchaType: default
+      label: contact_message_personal_form
+      _core:
+        default_config_hash: 7zUmOK1ti1l0bc78ieysHa3_57MOin7IgHpHhwbSugs
+  -
+    collection: ''
+    name: captcha.captcha_point.user_login_form
+    data:
+      langcode: en
+      status: false
+      dependencies: {  }
+      formId: user_login_form
+      captchaType: default
+      label: user_login_form
+      _core:
+        default_config_hash: XbughDuwgOtc_8ztmYxz84gaXBeR760xH3bGSKD9v1Q
+  -
+    collection: ''
+    name: captcha.captcha_point.user_pass
+    data:
+      langcode: en
+      status: false
+      dependencies: {  }
+      formId: user_pass
+      captchaType: default
+      label: user_pass
+      _core:
+        default_config_hash: qZeHI5fZ9WQRKsfl8FMBwzk3puSsWCRtWKEZh04JJUo
+  -
+    collection: ''
+    name: captcha.captcha_point.user_register_form
+    data:
+      langcode: en
+      status: false
+      dependencies: {  }
+      formId: user_register_form
+      captchaType: default
+      label: user_register_form
+      _core:
+        default_config_hash: 2iz3cMg7T1eSKXtNIB9WyaRptfg7wosDDPBSBhXFXl0

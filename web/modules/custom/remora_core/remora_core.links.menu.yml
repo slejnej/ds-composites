@@ -24,9 +24,15 @@ remora_core.permissions.reimport:
   route_name: remora_core.permissions.reimport
   parent: remora_core.settings
 
+remora_core.styles.link:
+  title: 'Link all module styles'
+  description: "Loops over all remora modules and re-links all styles"
+  route_name: remora_core.styles.link
+  parent: remora_core.settings
+
 remora_config.remora_settings:
-  title: 'Remora settings'
+  title: 'Website settings'
   parent: system.admin_config
   route_name: remora_config_page.remora_settings
-  description: 'Manage Remora settings'
+  description: 'Manage Website settings'
   weight: -9

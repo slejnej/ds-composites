@@ -1,0 +1,30 @@
+// General styles for card
+html body .card {
+  .card-text-wrapper {
+    .h4.card-title, .card-title {
+      @include typography-mobile($text-mobile-title-card-font, $text-mobile-title-card-size, $text-mobile-title-card-weight, $text-mobile-title-card-line-height);
+      @include typography-desktop($text-desktop-title-card-font, $text-desktop-title-card-size, $text-desktop-title-card-weight, $text-desktop-title-card-line-height);
+    }
+
+    .card-subtitle, .card-tag {
+      @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size-small, $text-mobile-body-regular-weight, $text-mobile-body-regular-line-height);
+      @include typography-desktop($text-desktop-body-regular-font, $text-desktop-body-regular-size-small, $text-desktop-body-regular-weight, $text-desktop-body-regular-line-height);
+    }
+  }
+
+  // If a card has a header, overlap the image, if no image, position header at top of card
+  .card-with-image .card-header {
+    @extend .position-absolute;
+  }
+}
+
+// Sliders
+
+.card-slider .slider-controls {
+  // Markers
+  .slide-cards-dots {
+    ul.slick-dots {
+      @extend .list-unstyled;
+    }
+  }
+}

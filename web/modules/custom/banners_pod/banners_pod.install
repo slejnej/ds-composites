@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Updated styles for banners_pod
+ */
+function banners_pod_update_10101(): void
+{
+  Drupal::service('installation_profile.manager.module_scss')->linkStyles('banners_pod');
+}

@@ -1,0 +1,38 @@
+uuid: b53d9675-efd2-483e-92ce-f1d5599e2639
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.slide_pea.field_editor_title
+    - field.field.paragraph.slide_pea.field_slide_nt_add_a_link
+    - field.field.paragraph.slide_pea.field_slide_nt_image
+    - field.field.paragraph.slide_pea.field_slide_nt_link
+    - field.field.paragraph.slide_pea.field_slide_nt_summary
+    - field.field.paragraph.slide_pea.field_slide_nt_title
+    - paragraphs.paragraphs_type.slide_pea
+  enforced:
+    module:
+      - slideshow_pod
+_core:
+  default_config_hash: f8p7RXG_BlX4SrpHi-w900XzJgqEBe_5qtfcNyoKfco
+id: paragraph.slide_pea.preview
+targetEntityType: paragraph
+bundle: slide_pea
+mode: preview
+content:
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_slide_nt_add_a_link: true
+  field_slide_nt_image: true
+  field_slide_nt_link: true
+  field_slide_nt_summary: true
+  field_slide_nt_title: true
+  search_api_excerpt: true

@@ -1,0 +1,25 @@
+uuid: 5fdfe4a3-6e6d-472c-a045-29ab0b4b0cf2
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+  enforced:
+    module:
+      - slideshow_pod
+_core:
+  default_config_hash: CZWzGZ-KASdUtG_pKv30CK445rMDLgxOXWTRHGapr1c
+id: paragraph.field_slideshow_nt_slides
+field_name: field_slideshow_nt_slides
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

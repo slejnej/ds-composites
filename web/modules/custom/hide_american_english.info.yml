@@ -1,0 +1,6 @@
+name: Hide American English
+type: module
+description: 'Hides American English, and updates the British English to pretend to be American.'
+package: Remora
+version: 1.0.0
+core_version_requirement: ^10

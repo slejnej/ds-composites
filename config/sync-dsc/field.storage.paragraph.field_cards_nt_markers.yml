@@ -1,0 +1,23 @@
+uuid: cde48299-d25b-49dd-b1c3-ad3ff3e6c189
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+  enforced:
+    module:
+      - cards_pod
+_core:
+  default_config_hash: LZpSC2HFbm1z1bwVks2HABLwi-Ljr10JSJy2wQvuGZA
+id: paragraph.field_cards_nt_markers
+field_name: field_cards_nt_markers
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

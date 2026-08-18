@@ -1,0 +1,130 @@
+body {
+  // Always show 'Add section/pod' buttons
+  .js-lpb-component > .lpb-btn,
+  .js-lpb-component .lpb-btn--add,
+  .js-lpb-region .lpb-btn--add {
+    opacity: 1;
+    background: white;
+    color: var(--color-text);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--gin-color-primary);
+      background: var(--color-bgblue-hover);
+    }
+  }
+
+
+  // Display only top and bottom 'Add pod' buttons
+  .lpb-btn--add:not(.center) {
+    display: none;
+  }
+
+  .js-lpb-region .js-lpb-component:first-child {
+    .lpb-btn--add.before {
+      display: block;
+    }
+  }
+
+  .js-lpb-region .js-lpb-component:last-of-type {
+    .lpb-btn--add.after {
+      display: block;
+    }
+  }
+
+  // 'Add pod' button
+  .lpb-btn--add {
+    min-width: 90px;
+    padding: 6px 10px;
+    border: 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .15);
+    text-align: center;
+    text-decoration: none;
+
+    &::after {
+      content: "Add pod";
+    }
+
+  }
+
+  .lpb-layout:not(:first-child) .lpb-btn.before {
+    display: none;
+  }
+
+  .js-lpb-component, .lp-builder {
+    .lpb-btn, .lpb-btn--add {
+      border-radius: $global-spacing-border-radius-sm;
+      padding: $global-spacing-05 $global-spacing-1;
+      font-size: var(--gin-font-size-m);
+      line-height: 120%;
+      font-weight: 500;
+      box-shadow: none;
+      height: auto;
+      text-decoration: none;
+    }
+  }
+
+  // Button positioning (Add section)
+  .js-lpb-component .lpb-btn,
+  .lp-builder .lpb-btn {
+    background-color: var(--gin-color-primary);
+    color: var(--gin-color-button-text);
+
+    &:hover {
+      background-color: var(--gin-color-primary-hover);
+      color: var(--gin-color-button-text);
+    }
+  }
+
+  .lpb-btn.before {
+    top: calc(0% - ($global-spacing-2 + 34px));
+  }
+
+  .lpb-btn.after {
+    bottom: calc(0% - ($global-spacing-2 + 34px));
+  }
+
+  // Button positioning (Add pod)
+  .js-lpb-component .lpb-btn--add,
+  .lpb-empty-container__wrapper .lpb-btn--add {
+    color: var(--gin-color-primary);
+    border: 1px solid var(--gin-color-primary);
+    background: transparent;
+
+    &:hover {
+      background-color: var(--gin-color-primary);
+      color: var(--gin-color-button-text);
+    }
+  }
+
+  .lpb-btn--add.before {
+    top: calc(0% - ($global-spacing-1 + 40px));
+  }
+
+  .lpb-btn--add.after {
+    bottom: calc(0% - ($global-spacing-1 + 40px));
+  }
+
+}
+
+
+fieldset .lpb-btn--add {
+  min-width: 120px;
+  color: var(--gin-color-primary);
+  border: 1px solid var(--gin-color-primary);
+  background: transparent;
+
+  &:hover {
+    background: var(--gin-color-primary);
+    color: var(--gin-color-button-text);
+  }
+}
+
+.manage-taxonomy-link {
+  display: flex;
+  justify-content: end;
+
+  a.button.btn-taxonomy {
+    margin: -10px 0 0;
+  }
+}

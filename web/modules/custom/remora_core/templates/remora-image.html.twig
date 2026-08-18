@@ -1,8 +1,38 @@
-<picture>
-  {% for breakpoint, image in sources %}
-    <source srcset="{{ image }}" media="{{ breakpoint }}"/>
+{% if sizes is defined and sizes is not empty and sizes|length > 5 %}
+  {% set generated_srcset = '' %}
+  {% for width, img_link in sources %}
+    {% set generated_srcset = generated_srcset ~ img_link ~ ' ' ~ width ~ 'w' %}
+    {% if not loop.last %}{% set generated_srcset = generated_srcset ~ ', ' %}{% endif %}
   {% endfor %}
-  {% if default_image is defined %}
-    <img src="{{ default_image }}" alt="{{ media.field_media_image.alt ?? '' }}"/>
-  {% endif %}
-</picture>
+
+
+  {% set isEager = image_attributes['loading'] == 'eager' or image_attributes['eager'] is defined %}
+  {% set isLazy = image_attributes['loading'] == 'lazy' or image_attributes['eager'] == 'lazy' %}
+
+  <img
+      {% if image_attributes['data-lazy-srcset'] is defined %}
+        data-lazy="{{ default_image.uri }}"
+        data-srcset="{{ generated_srcset }}"
+        data-sizes="{{ sizes }}"
+      {% else %}
+        src="{{ default_image.uri }}"
+        srcset="{{ generated_srcset }}"
+        sizes="{{ sizes }}"
+      {% endif %}
+      alt="{{ media.field_media_image.alt ?? '' }}"
+      {{ image_attributes }}
+  >
+{% else %}
+  <picture>{% apply spaceless %}
+      {% for breakpoint, data in sources %}
+        <source srcset="{{ data.uri }}" media="{{ breakpoint }}"
+                width="{{ data.width }}" height="{{ data.height }}"/>
+      {% endfor %}
+      {% if default_image is defined %}
+        <img src="{{ default_image.uri }}" alt="{{ media.field_media_image.alt ?? '' }}"
+             width="{{ default_image.width }}" height="{{ default_image.height }}"
+            {{ image_attributes }}/>
+      {% endif %}
+    {% endapply %}
+  </picture>
+{% endif %}

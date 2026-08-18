@@ -1,0 +1,26 @@
+uuid: 1248afde-6b9e-49c0-8826-e64ae3a1b552
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_markers
+    - paragraphs.paragraphs_type.slideshow
+  enforced:
+    module:
+      - slideshow_pod
+_core:
+  default_config_hash: ijanwyw_TPFsVMGgWqv4PnMnaWUmc8_dDP6shcSkNBY
+id: paragraph.slideshow.field_markers
+field_name: field_markers
+entity_type: paragraph
+bundle: slideshow
+label: Markers
+description: 'Enable to show clickable markers which jump to a particular slide.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,5 +1,7 @@
 global-styling:
   css:
+    layout:
+      build/css/bootstrap.min.css: {}
     theme:
       build/css/style.min.css: {}
 

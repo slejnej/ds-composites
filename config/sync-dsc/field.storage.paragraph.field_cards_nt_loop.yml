@@ -1,0 +1,23 @@
+uuid: d20df715-7039-4ed7-8d2f-a1dfd3660a5b
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - paragraphs
+  enforced:
+    module:
+      - cards_pod
+_core:
+  default_config_hash: bAghblez4na0xHsrsJncEHIq5dQIoBUc_-dds9bTeb0
+id: paragraph.field_cards_nt_loop
+field_name: field_cards_nt_loop
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

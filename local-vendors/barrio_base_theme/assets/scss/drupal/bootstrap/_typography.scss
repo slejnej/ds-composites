@@ -1,0 +1,296 @@
+/** ================= [ Variables ] ================= **/
+$h1-margin-bottom: 2rem !default;
+$h2-margin-top: 3.5rem !default;
+$h2-margin-bottom: 1.5rem !default;
+$h3-margin-top: 2.5rem !default;
+$h3-margin-bottom: 1.25rem !default;
+$h4-margin-top: 2rem !default;
+$h4-margin-bottom: 1rem !default;
+$h5-margin-top: 1.5rem !default;
+$h5-margin-bottom: 0.75rem !default;
+$h6-margin-top: 1.25rem !default;
+$h6-margin-bottom: 0.5rem !default;
+$h6-text-style: uppercase!default;
+$pod-title-margin-bottom: $global-spacing-2!default;
+$sidebar-title-alignment: center!default;
+$sidebar-h3-margin-top: 1.125rem !default;
+$sidebar-h3-margin-bottom: 1rem !default;
+$p-margin-bottom: 1rem !default;
+$li-margin-bottom: .25rem!default;
+
+/** ================= [ Global ] ================= **/
+
+main, body {
+  @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size, $text-mobile-body-regular-weight, $text-mobile-body-regular-line-height);
+  @include typography-desktop($text-desktop-body-regular-font, $text-desktop-body-regular-size, $text-desktop-body-regular-weight, $text-desktop-body-regular-line-height);
+
+  .font-regular-bold {
+    @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size, $text-mobile-body-bold-weight, $text-mobile-body-regular-line-height);
+    @include typography-desktop($text-desktop-body-regular-font, $text-desktop-body-regular-size, $text-desktop-body-bold-weight, $text-desktop-body-regular-line-height);
+  }
+
+  /** ================= [ Default body/p styles ] ================= **/
+  p {
+    @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size, $text-mobile-body-regular-weight, $text-mobile-body-regular-line-height);
+    @include typography-desktop($text-desktop-body-regular-font, $text-desktop-body-regular-size, $text-desktop-body-regular-weight, $text-desktop-body-regular-line-height);
+    word-break: normal;
+    overflow-wrap: anywhere;
+    margin-bottom: $p-margin-bottom;
+
+    &.text-larger {
+      @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size-large, $text-mobile-body-regular-weight, $text-mobile-body-large-line-height);
+      @include typography-desktop($text-desktop-body-regular-font, $text-desktop-body-regular-size-large, $text-desktop-body-regular-weight, $text-desktop-body-large-line-height);
+    }
+
+    &.text-smaller {
+      @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size-small, $text-mobile-body-regular-weight, $text-mobile-body-regular-line-height);
+      @include typography-desktop($text-desktop-body-regular-font, $text-desktop-body-regular-size-small, $text-desktop-body-regular-weight, $text-desktop-body-regular-line-height);
+    }
+
+    strong {
+      font-weight: $text-mobile-body-bold-weight;
+    }
+  }
+
+  .caption-wrapper p {
+    @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size-small, $text-mobile-body-regular-weight, $text-mobile-body-regular-line-height);
+    @include typography-desktop($text-desktop-body-regular-font, $text-desktop-body-regular-size-small, $text-desktop-body-regular-weight, $text-desktop-body-regular-line-height);
+  }
+
+
+  /** ================= [ Node title ] ================= **/
+
+  h1 {
+    @include typography-mobile($text-mobile-title-node-font, $text-mobile-title-node-size, $text-mobile-title-node-weight, $text-mobile-title-node-line-height);
+    @include typography-desktop($text-desktop-title-node-font, $text-desktop-title-node-size, $text-desktop-title-node-weight, $text-desktop-title-node-line-height);
+    margin-bottom: $h1-margin-bottom;
+  }
+
+  /** ================= [ Heading styles ] ================= **/
+
+  .h1 {
+    @include typography-mobile($text-mobile-heading-1-font, $text-mobile-heading-1-size, $text-mobile-heading-1-weight, $text-mobile-heading-1-line-height);
+    @include typography-desktop($text-desktop-heading-1-font, $text-desktop-heading-1-size, $text-desktop-heading-1-weight, $text-desktop-heading-1-line-height);
+    margin-bottom: $h1-margin-bottom;
+  }
+
+  h2, .h2, ol:has(h2), ul:has(h2):not(.toolbar-menu) {
+    @include typography-mobile($text-mobile-heading-2-font, $text-mobile-heading-2-size, $text-mobile-heading-2-weight, $text-mobile-heading-2-line-height);
+    @include typography-desktop($text-desktop-heading-2-font, $text-desktop-heading-2-size, $text-desktop-heading-2-weight, $text-desktop-heading-2-line-height);
+  }
+
+  h3, .h3, ol:has(h3), ul:has(h3):not(.toolbar-menu) {
+    @include typography-mobile($text-mobile-heading-3-font, $text-mobile-heading-3-size, $text-mobile-heading-3-weight, $text-mobile-heading-3-line-height);
+    @include typography-desktop($text-desktop-heading-3-font, $text-desktop-heading-3-size, $text-desktop-heading-3-weight, $text-desktop-heading-3-line-height);
+  }
+
+  h4, .h4, ol:has(h4), ul:has(h4):not(.toolbar-menu) {
+    @include typography-mobile($text-mobile-heading-4-font, $text-mobile-heading-4-size, $text-mobile-heading-4-weight, $text-mobile-heading-4-line-height);
+    @include typography-desktop($text-desktop-heading-4-font, $text-desktop-heading-4-size, $text-desktop-heading-4-weight, $text-desktop-heading-4-line-height);
+  }
+
+  h5, .h5, ol:has(h5), ul:has(h5):not(.toolbar-menu) {
+    @include typography-mobile($text-mobile-heading-5-font, $text-mobile-heading-5-size, $text-mobile-heading-5-weight, $text-mobile-heading-5-line-height);
+    @include typography-desktop($text-desktop-heading-5-font, $text-desktop-heading-5-size, $text-desktop-heading-5-weight, $text-desktop-heading-5-line-height);
+  }
+
+  h6, .h6, ol:has(h6), ul:has(h6):not(.toolbar-menu) {
+    @include typography-mobile($text-mobile-heading-6-font, $text-mobile-heading-6-size, $text-mobile-heading-6-weight, $text-mobile-heading-6-line-height);
+    @include typography-desktop($text-desktop-heading-6-font, $text-desktop-heading-6-size, $text-desktop-heading-6-weight, $text-desktop-heading-6-line-height);
+    text-transform: $h6-text-style;
+  }
+
+  $heading-margins: (
+          h2: (top: $h2-margin-top, bottom: $h2-margin-bottom),
+          h3: (top: $h3-margin-top, bottom: $h3-margin-bottom),
+          h4: (top: $h4-margin-top, bottom: $h4-margin-bottom),
+          h5: (top: $h5-margin-top, bottom: $h5-margin-bottom),
+          h6: (top: $h6-margin-top, bottom: $h6-margin-bottom)
+  );
+
+  @each $heading, $margins in $heading-margins {
+    .field--type-text-long {
+      #{$heading} {
+        margin-top: map-get($margins, top);
+        margin-bottom: map-get($margins, bottom);
+      }
+    }
+  }
+
+  // Remove margin-top if heading is the first element in a div
+  @for $i from 1 through 6 {
+    .field--type-text-long,
+    .text-wrapper {
+      > h#{$i}:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  /** ================= [ Display styles ] ================= **/
+
+  .display-1 {
+    @include typography-mobile($text-mobile-display-1-font, $text-mobile-display-1-size, $text-mobile-display-1-weight, $text-mobile-display-1-line-height);
+    @include typography-desktop($text-desktop-display-1-font, $text-desktop-display-1-size, $text-desktop-display-1-weight, $text-desktop-heading-1-line-height);
+  }
+
+  .display-2 {
+    @include typography-mobile($text-mobile-display-2-font, $text-mobile-display-2-size, $text-mobile-display-2-weight, $text-mobile-display-2-line-height);
+    @include typography-desktop($text-desktop-display-2-font, $text-desktop-display-2-size, $text-desktop-display-2-weight, $text-desktop-display-2-line-height);
+  }
+
+  .display-3 {
+    @include typography-mobile($text-mobile-display-3-font, $text-mobile-display-3-size, $text-mobile-display-3-weight, $text-mobile-display-3-line-height);
+    @include typography-desktop($text-desktop-display-3-font, $text-desktop-display-3-size, $text-desktop-display-3-weight, $text-desktop-display-3-line-height);
+  }
+
+  .display-4 {
+    @include typography-mobile($text-mobile-display-4-font, $text-mobile-display-4-size, $text-mobile-display-4-weight, $text-mobile-display-4-line-height);
+    @include typography-desktop($text-desktop-display-4-font, $text-desktop-display-4-size, $text-desktop-display-4-weight, $text-desktop-display-4-line-height);
+  }
+
+  .display-5 {
+    @include typography-mobile($text-mobile-display-5-font, $text-mobile-display-5-size, $text-mobile-display-5-weight, $text-mobile-display-5-line-height);
+    @include typography-desktop($text-desktop-display-5-font, $text-desktop-display-5-size, $text-desktop-display-5-weight, $text-desktop-display-5-line-height);
+  }
+
+  .display-6 {
+    @include typography-mobile($text-mobile-display-6-font, $text-mobile-display-6-size, $text-mobile-display-6-weight, $text-mobile-display-6-line-height);
+    @include typography-desktop($text-desktop-display-6-font, $text-desktop-display-6-size, $text-desktop-display-6-weight, $text-desktop-display-6-line-height);
+  }
+
+  /** ================= [ Section, pod & Sidebar title styles ] ================= **/
+
+  h2.section-title, .section-title {
+    @include typography-mobile($text-mobile-title-section-font, $text-mobile-title-section-size, $text-mobile-title-section-weight, $text-mobile-title-section-line-height);
+    @include typography-desktop($text-desktop-title-section-font, $text-desktop-title-section-size, $text-desktop-title-section-weight, $text-desktop-title-section-line-height);
+  }
+
+  h3.paragraph-title, .paragraph-title,
+  h3.pod-title, .pod-title {
+    @include typography-mobile($text-mobile-title-pod-font, $text-mobile-title-pod-size, $text-mobile-title-pod-weight, $text-mobile-title-pod-line-height);
+    @include typography-desktop($text-desktop-title-pod-font, $text-desktop-title-pod-size, $text-desktop-title-pod-weight, $text-desktop-title-pod-line-height);
+    margin-bottom: $pod-title-margin-bottom;
+  }
+
+  // Specific for Section titles in left & right sidebars
+  #sidebar-pods, #content-sidebar-fields {
+    h2.section-title, h3.section-title {
+      @include typography-mobile($text-mobile-heading-3-font, $text-mobile-heading-3-size, $text-mobile-heading-3-weight, $text-mobile-heading-3-line-height);
+      @include typography-desktop($text-desktop-heading-3-font, $text-desktop-heading-3-size, $text-desktop-heading-3-weight, $text-desktop-heading-3-line-height);
+    }
+  }
+
+  // Specific for pod titles in right sidebars
+  #sidebar-pods {
+    .h3.paragraph-title, .paragraph-title,
+    .h3.pod-title, .pod-title {
+      @include typography-mobile($text-mobile-heading-2-font, $global-text-font-size-2xl, $text-mobile-heading-2-weight, $global-text-font-size-2xl);
+      @include typography-desktop($text-desktop-heading-2-font, $global-text-font-size-2xl, $text-desktop-heading-2-weight, $global-text-font-size-2xl);
+      margin-top: $sidebar-h3-margin-top;
+      margin-bottom: $sidebar-h3-margin-bottom;
+      text-align: $sidebar-title-alignment;
+    }
+  }
+
+  /** ================= [ Button styles ] ================= **/
+
+  .btn {
+    @include typography-mobile($text-mobile-default-font, $text-mobile-default-size, $text-mobile-default-weight, $text-mobile-default-line-height);
+    @include typography-desktop($text-desktop-default-font, $text-desktop-default-size, $text-desktop-default-weight, $text-desktop-default-line-height);
+
+    &.btn-lg {
+      @include typography-mobile($text-mobile-default-font, $text-mobile-large-size, $text-mobile-large-weight, $text-mobile-large-line-height);
+      @include typography-desktop($text-desktop-default-font, $text-desktop-large-size, $text-desktop-large-weight, $text-desktop-large-line-height);
+    }
+
+    &.btn-sm {
+      @include typography-mobile($text-mobile-default-font, $text-mobile-small-size, $text-mobile-small-weight, $text-mobile-small-line-height);
+      @include typography-desktop($text-desktop-default-font, $text-desktop-small-size, $text-desktop-small-weight, $text-desktop-small-line-height);
+    }
+  }
+
+  /** ================= [ List styles ] ================= **/
+
+  ul, ol {
+    @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size, $text-mobile-body-regular-weight, $text-mobile-body-regular-line-height);
+    @include typography-desktop($text-desktop-body-regular-font, $text-desktop-body-regular-size, $text-desktop-body-regular-weight, $text-desktop-body-regular-line-height);
+
+    &.toolbar-menu {
+      font-size: 1em;
+    }
+  }
+
+  /** ================= [ WYSIWYG styles ] ================= **/
+
+  .field--name-field-body, .field--name-field-text-media-nt-text {
+    margin-top: 0;
+
+    ul, ol {
+      li {
+        margin-bottom: $li-margin-bottom;
+      }
+    }
+  }
+
+  /** ================= [ Breadcrumb styles ] ================= **/
+
+  li.breadcrumb-item {
+    @include typography-mobile($text-mobile-breadcrumb-font, $text-mobile-breadcrumb-size, $text-mobile-breadcrumb-weight, $text-mobile-breadcrumb-line-height);
+    @include typography-desktop($text-desktop-breadcrumb-font, $text-desktop-breadcrumb-size, $text-desktop-breadcrumb-weight, $text-desktop-breadcrumb-line-height);
+  }
+
+  /** ================= [ Navigation styles ] ================= **/
+
+  nav.navbar[data-bs-theme=dark] .navbar-nav .nav-item a.nav-link {
+
+    // Top level (0)
+    &:not(.dropdown-item) {
+      @mixin nav-typography($font-family, $font-weight, $line-height) {
+        font-family: "" + $font-family + "";
+        font-weight: $font-weight;
+        line-height: $line-height;
+      }
+
+      @include nav-typography($text-mobile-nav-font, $text-mobile-nav-weight, $text-mobile-nav-line-height);
+      font-size: $text-mobile-nav-size-slim;
+
+      @include media-breakpoint-up('lg') {
+        @include nav-typography($text-desktop-nav-font, $text-desktop-nav-weight, $text-desktop-nav-line-height);
+        font-size: $text-desktop-nav-size-narrow;
+      }
+
+      @include media-breakpoint-up('xl') {
+        font-size: $text-desktop-nav-size-wide;
+      }
+    }
+
+    // Sub levels (1+)
+    @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size, $text-mobile-body-regular-weight, $text-mobile-body-regular-line-height);
+    @include typography-desktop($text-desktop-body-regular-font, $text-desktop-body-regular-size, $text-desktop-body-regular-weight, $text-desktop-body-regular-line-height);
+  }
+
+  /** ================= [ Footer styles ] ================= **/
+
+  .footer-primary {
+    .h3.paragraph-title, .paragraph-title,
+    .h3.pod-title, .pod-title {
+      @include typography-mobile($text-mobile-heading-3-font, $text-mobile-heading-3-size, $text-mobile-heading-3-weight, $text-mobile-heading-3-line-height);
+      @include typography-desktop($text-desktop-heading-3-font, $text-desktop-heading-3-size, $text-desktop-heading-3-weight, $text-desktop-heading-3-line-height);
+      margin-top: 0;
+      margin-bottom: $h3-margin-bottom;
+    }
+  }
+
+  .footer-secondary {
+    .footer-menu a.nav-link {
+      @include typography-mobile($text-mobile-default-font, $text-mobile-small-size, $text-mobile-small-weight, $text-mobile-small-line-height);
+      @include typography-desktop($text-desktop-default-font, $text-desktop-small-size, $text-desktop-small-weight, $text-desktop-small-line-height);
+    }
+
+    .footer-branding {
+      @include typography-mobile($text-mobile-body-regular-font, $text-mobile-small-size, $text-mobile-small-weight, $text-mobile-small-line-height);
+      @include typography-desktop($text-desktop-body-regular-font, $text-desktop-small-size, $text-desktop-small-weight, $text-desktop-small-line-height);
+    }
+  }
+}

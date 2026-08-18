@@ -1,0 +1,21 @@
+uuid: 87f94adc-f4c3-4f90-921c-2de7e70d9963
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_editor_title
+    - paragraphs.paragraphs_type.banner_pea
+_core:
+  default_config_hash: 1ynIxD92BlJGcExRbp9U_-0VDAEtRbkffPxhDIEYX-o
+id: paragraph.banner_pea.field_editor_title
+field_name: field_editor_title
+entity_type: paragraph
+bundle: banner_pea
+label: 'Editor title'
+description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

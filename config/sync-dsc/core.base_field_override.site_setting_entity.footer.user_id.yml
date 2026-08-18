@@ -1,0 +1,20 @@
+uuid: c91da60d-c5ea-4c61-865b-e18f6b93abbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - site_settings.site_setting_entity_type.footer
+id: site_setting_entity.footer.user_id
+field_name: user_id
+entity_type: site_setting_entity
+bundle: footer
+label: 'Authored by'
+description: 'The user ID of author of the Site Setting entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\site_settings\Entity\SiteSettingEntity::getDefaultUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

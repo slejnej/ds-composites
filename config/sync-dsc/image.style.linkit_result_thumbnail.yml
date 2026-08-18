@@ -1,0 +1,17 @@
+uuid: 7b844611-9731-48f6-93a8-231ae1bcfe28
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wHVIwkUPtrMmd4x4uJy7pbcx6kvCTxd_FnBx5kNHoYA
+name: linkit_result_thumbnail
+label: 'Linkit result thumbnail'
+effects:
+  2943df29-38ea-459c-ba1d-290489bb1807:
+    uuid: 2943df29-38ea-459c-ba1d-290489bb1807
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 50
+      height: 50
+      anchor: center-center

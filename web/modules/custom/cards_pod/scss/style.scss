@@ -1,0 +1,376 @@
+// General styles for card
+html body .card {
+  border: none;
+
+  .card-body-image-wrapper {
+    border-radius: inherit;
+
+    &.card-with-image {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  .card-body {
+    gap: $card-text-padding-bottom;
+    border-radius: inherit;
+
+    .card-text-wrapper {
+      gap: $card-text-padding-bottom;
+
+      .card-title.h4 {
+        margin-bottom: $card-title-spacer-y;
+      }
+
+      span:last-child {
+        margin-bottom: 0;
+      }
+
+      > span {
+        display: block;
+      }
+
+      .card-text {
+        // move all the links inside the card-body above the stretched link
+        a {
+          position: relative;
+          z-index: 2;
+        }
+
+        > span {
+          display: block;
+        }
+
+        p:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  // if the card has a footer (e.g. summary/tags) hide the border separating the footer and body to make em look like 1
+  .card-footer {
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  // hide a stretched button but let it stretch still
+  .btn-stretched-hidden {
+    max-height: 0 !important;
+    max-width: 0 !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+    min-width: 0 !important;
+    border: none !important;
+  }
+
+  // If a card has a header, overlap the image, if no image, position header at top of card
+  .card-with-image .card-header {
+    bottom: 0;
+    position: absolute;
+  }
+}
+
+/** ================= [ Sliders ] ================= **/
+
+.card-slider {
+  .slick-cards {
+    .slick-list {
+      margin-bottom: $global-spacing-2;
+      @include media-breakpoint-up('sm') {
+        margin-left: - (calc($global-spacing-2 / 2));
+        margin-right: - (calc($global-spacing-2 / 2));
+      }
+
+      .slide {
+        @include media-breakpoint-up('sm') {
+          padding: 0 calc($global-spacing-2 / 2);
+        }
+      }
+    }
+  }
+
+  .slider-controls {
+    gap: $layout-pod-carousel-spacer;
+
+    // Arrows
+    button.arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 16px;
+        height: 16px
+      }
+
+      &.slide-cards-next {
+        right: 0;
+      }
+    }
+
+    // Markers
+    .slide-cards-dots ul.slick-dots {
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      gap: $carousel-indicator-spacer;
+      min-width: $carousel-indicator-width;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: $carousel-indicator-hit-area-height;
+
+        button {
+          border: none;
+          text-indent: -9999px;
+          transition: width 150ms ease-in-out;
+          width: $carousel-indicator-width;
+          height: $carousel-indicator-height;
+          border-radius: $carousel-indicator-border-radius;
+          background: $carousel-indicator-color;
+          opacity: 0.5;
+        }
+
+        &.slick-active button {
+          background: $carousel-indicator-active-bg;
+          height: $carousel-indicator-active-height;
+          width: calc($carousel-indicator-width + 10px);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+
+/** ================= [ One/Two in a row in a One col section ] ================= **/
+
+.layout-onecol {
+  .row-max-1 .card-body-image-wrapper {
+    @include media-breakpoint-up('sm') {
+      border-radius: inherit;
+    }
+
+    &.card-with-image {
+      @include media-breakpoint-up('sm') {
+        flex-direction: row !important;
+        border-radius: inherit;
+
+        .image-header {
+          flex: 6;
+          align-items: center;
+          display: flex;
+          padding-right: $global-spacing-05;
+        }
+        .card-body {
+          flex: 6;
+        }
+      }
+      @include media-breakpoint-up('lg') {
+        .image-header {
+          flex: 4;
+        }
+        .card-body {
+          flex: 8;
+        }
+      }
+    }
+  }
+
+  .row-max-2 .card-body-image-wrapper {
+    @include media-breakpoint-up('xl') {
+      border-radius: inherit;
+    }
+
+    &.card-with-image {
+      @include media-breakpoint-up('xl') {
+        flex-direction: row !important;
+        border-radius: inherit;
+
+        .image-header {
+          flex: 6;
+          align-items: center;
+          display: flex;
+          padding-right: $global-spacing-05;
+        }
+
+        .card-body {
+          flex: 6;
+        }
+      }
+    }
+  }
+}
+
+/** ================= [ Mixins ] ================= **/
+
+@mixin slider_controls($slider-control-arrow-height, $slider-control-arrow-width, $slider-control-arrow-bg, $slider-border-width,
+$slider-border-color, $slider-control-arrow-radius, $slider-control-arrow-color, $slider-control-arrow-bg-hover, $slider-border-color-hover,
+$layout-pod-carousel-hover-color, $slider-indicator-color, $slider-indicator-active-color) {
+  .slider-controls {
+
+    // Arrows
+
+    button.arrow {
+      height: $slider-control-arrow-height;
+      width: $slider-control-arrow-width;
+      background-color: $slider-control-arrow-bg;
+      border: $slider-border-width solid $slider-border-color;
+      border-radius: $slider-control-arrow-radius;
+
+      svg {
+        fill: $slider-control-arrow-color;
+      }
+
+      &:hover {
+        background-color: $slider-control-arrow-bg-hover;
+        border-color: $slider-border-color-hover;
+
+        svg {
+          fill: $layout-pod-carousel-hover-color;
+        }
+
+      }
+    }
+
+    // Indicators
+
+    .slide-cards-dots ul.slick-dots li {
+      button {
+        background: $slider-indicator-color;
+      }
+
+      &.slick-active button {
+        background: $slider-indicator-active-color;
+      }
+    }
+  }
+}
+
+@mixin view-more($view-more-icon, $view-more-icon-hover) {
+  a.view-more {
+    .button-icon svg {
+      fill: $view-more-icon;
+    }
+
+    &:hover .button-icon svg {
+      fill: $view-more-icon-hover;
+    }
+  }
+}
+
+
+// DEFAULT
+
+.card-slider {
+  @include slider_controls(
+                  $layout-pod-carousel-height,
+                  $layout-pod-carousel-width,
+                  $layout-pod-carousel-default-bg,
+                  $layout-pod-carousel-border-width,
+                  $layout-pod-carousel-default-border,
+                  $layout-pod-carousel-border-radius,
+                  $layout-pod-carousel-default-color,
+                  $layout-pod-carousel-hover-bg,
+                  $layout-pod-carousel-hover-border,
+                  $layout-pod-carousel-hover-color,
+                  $carousel-indicator-card-color,
+                  $carousel-indicator-card-active-bg
+  );
+}
+
+.view-more-wrapper {
+  @include view-more(
+                  $btn-link-color,
+                  $btn-link-hover-color
+  );
+}
+
+// PALETTE-ALT-1
+
+.palette-alt-1 {
+  .card-slider {
+    @include slider_controls(
+                    $alt-1-layout-pod-carousel-height,
+                    $alt-1-layout-pod-carousel-width,
+                    $alt-1-layout-pod-carousel-default-bg,
+                    $alt-1-layout-pod-carousel-border-width,
+                    $alt-1-layout-pod-carousel-default-border,
+                    $alt-1-layout-pod-carousel-border-radius,
+                    $alt-1-layout-pod-carousel-default-color,
+                    $alt-1-layout-pod-carousel-hover-bg,
+                    $alt-1-layout-pod-carousel-hover-border,
+                    $alt-1-layout-pod-carousel-hover-color,
+                    $alt-1-carousel-indicator-card-color,
+                    $alt-1-carousel-indicator-card-active-bg
+    );
+  }
+
+  .view-more-wrapper {
+    @include view-more(
+                    $alt-1-btn-link-color,
+                    $alt-1-btn-link-hover-color
+    );
+  }
+}
+
+// PALETTE-ALT-2
+
+.palette-alt-2 {
+  .card-slider {
+    @include slider_controls(
+                    $alt-2-layout-pod-carousel-height,
+                    $alt-2-layout-pod-carousel-width,
+                    $alt-2-layout-pod-carousel-default-bg,
+                    $alt-2-layout-pod-carousel-border-width,
+                    $alt-2-layout-pod-carousel-default-border,
+                    $alt-2-layout-pod-carousel-border-radius,
+                    $alt-2-layout-pod-carousel-default-color,
+                    $alt-2-layout-pod-carousel-hover-bg,
+                    $alt-2-layout-pod-carousel-hover-border,
+                    $alt-2-layout-pod-carousel-hover-color,
+                    $alt-2-carousel-indicator-card-color,
+                    $alt-2-carousel-indicator-card-active-bg
+    );
+  }
+
+  .view-more-wrapper {
+    @include view-more(
+                    $alt-2-btn-link-color,
+                    $alt-2-btn-link-hover-color
+    );
+  }
+}
+
+#sidebar-pods .card-slider {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  .slider-controls button.arrow {
+    top: auto;
+    bottom: calc(0% - ($layout-pod-carousel-height / 2));
+
+    &.slide-cards-prev {
+      right: auto;
+      left: 0;
+    }
+  }
+}
+
+// CARDS in flex
+.card-fluid .col {
+  min-width: 220px;
+  max-width: 480px;
+  .card-body .card-title {
+    word-break: normal;
+  }
+}

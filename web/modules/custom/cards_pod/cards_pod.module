@@ -1,0 +1,171 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\paragraphs\ParagraphInterface;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Field\EntityReferenceFieldItemListInterface;
+use Drupal\cards_pod\Repository\ParagraphRepository;
+use Drupal\remora_core\Manager\LibraryManager;
+
+/**
+ * Automatically registers all the templates in the templates/ directory
+ *
+ * @return array[]
+ */
+function cards_pod_theme(): array
+{
+  return Drupal::service('remora_core.service.module_template')->generateThemesFromTemplates('cards_pod');
+}
+
+/**
+ *  Adding help text to node title
+ *  Close pod title properties accordion if editing paragraph
+ */
+function cards_pod_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void
+{
+  // only trigger for component forms
+  if($form_id !== 'layout_paragraphs_component_form') {
+    return;
+  }
+
+  // conditional field for card customisation & link field help text
+  if (isset($form['field_card_nt_customise_card'])) {
+
+    //override and hide the default link field help text
+    unset($form['field_card_nt_link']['widget'][0]['uri']['#description']['#items'][1]);
+
+    // all fields in 'customised content' only shown when customise card value is checked
+    foreach ($form['#fieldgroups']['group_customised_content']->children as $form_element_id) {
+      $form[$form_element_id]['#states'] = [
+        'visible' => [
+          ':input[name="field_card_nt_customise_card[value]"]' => ['checked' => true],
+        ],
+      ];
+    }
+
+    // show customised content fieldgroup if customise content selected
+    $form['#fieldgroups']['group_customised_content']->form_api_states = [
+      'visible' => [
+        ':input[name="field_card_nt_customise_card[value]"]' => ['checked' => true],
+      ]
+    ];
+
+  }
+
+  if(isset($form['field_cards_nt_slides_per_page'])) {
+
+    // all fields in 'slideshow settings' fieldgroup only shown when presentation value is 'slideshow'
+    foreach ($form['#fieldgroups']['group_slideshow_settings']->children as $form_element_id) {
+      $form[$form_element_id]['#states'] = [
+        'visible' => [
+          ':input[name="field_presentation"]' => ['value' => 'slideshow'],
+        ],
+      ];
+    }
+
+    // show slideshow settings fieldgroup if slideshow presentation selected
+    $form['#fieldgroups']['group_slideshow_settings']->form_api_states = [
+      'visible' => [
+        ':input[name="field_presentation"]' => ['value' => 'slideshow'],
+      ]
+    ];
+
+    // items per row only shown when presentation value is 'grid'
+    $form['field_items_per_row']['#states'] = [
+      'visible' => [
+        ':input[name="field_presentation"]' => ['value' => 'grid'],
+      ]
+    ];
+
+  }
+}
+
+/**
+ * Add our custom styles for cards edit
+ *
+ * @param array $attachments
+ * @return void
+ */
+function cards_pod_page_attachments(array &$attachments): void
+{
+  if (!isset($attachments['#attached']['library'])) {
+    $attachments['#attached']['library'] = [];
+  }
+
+  LibraryManager::addAdminLibrary($attachments, 'cards_pod/admin_styles');
+
+  // @TODO: test and move these to per paragraph attachment
+  if (!in_array('cards_pod/cards', $attachments['#attached']['library'])){
+    $attachments['#attached']['library'][] = 'cards_pod/cards';
+  }
+  if (!in_array('barrio_base_theme/slick-carousel', $attachments['#attached']['library'])){
+    $attachments['#attached']['library'][] = 'barrio_base_theme/slick-carousel';
+  }
+}
+
+
+/**
+ * Add paragraph related node to cache, so it is invalidated when node is saved
+ *
+ * @param $view
+ * @param EntityInterface $entity
+ * @return void
+ */
+function cards_pod_entity_view_alter(&$view, EntityInterface $entity): void
+{
+  if (!($entity instanceof ParagraphInterface) || $entity->getParagraphType()->id() !== 'card_pea') {
+    return;
+  }
+
+  // only the related node ones
+  foreach ($entity->get('field_card_nt_link') as $link) {
+    if (str_starts_with($link->uri, 'entity:node/')) {
+
+      // Get the node ID from URI
+      $nid = Url::fromUri($link->uri)->getRouteParameters()['node'];
+      $nodeTag = sprintf('node:%s', $nid);
+
+      // add the tag to view cache info
+      $view['#cache']['tags'][] = $nodeTag;
+    }
+  }
+}
+
+/**
+ * on node delete, removes all card pea paragraphs where the node is linked so we don't get empty cards
+ *
+ * @param Node $node
+ */
+function cards_pod_node_delete(Node $node): void
+{
+  /** @var ParagraphRepository $paragraphManager */
+  $paragraphManager = Drupal::service('cards_pod.repository.paragraph.card_pea');
+
+  $uri = sprintf('entity:node/%s', $node->id());
+
+  $cardPeas = $paragraphManager->findBy(['field_card_nt_link.uri' => $uri]);
+
+  foreach ($cardPeas as $cardPea) {
+    // Load parent cards paragraph so that we can unset reference
+    $parent = $cardPea->getParentEntity();
+    if ($parent->hasField('field_cards_nt_card')) {
+      /** @var EntityReferenceFieldItemListInterface $cardReferenceField */
+      $cardReferenceField = $parent->get('field_cards_nt_card');
+
+      // Remove the reference (there are multiple cards probably in each field)
+      foreach ($cardReferenceField as $delta => $item) {
+        if ($item->target_id === $cardPea->id()) {
+          $cardReferenceField->removeItem($delta);
+        }
+      }
+
+      // Save the parent entity after updating references.
+      $parent->save();
+    }
+
+    // Delete the card pea after unsetting references in parents.
+    $cardPea->delete();
+  }
+}

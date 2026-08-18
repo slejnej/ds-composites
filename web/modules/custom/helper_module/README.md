@@ -2,7 +2,7 @@
 
 This module is to help us with styling of `Bootstrap 5 Components` and to use `components templates` in future as a helper for UI.
 
-The module does work on it's own, but needs installed `drupal/bootstrap5` or `mrm-remora/remora_base_theme` for everything to work.
+The module does work on it's own, but needs installed `drupal/bootstrap5` or `mrm-remora/barrio_base_theme` for everything to work.
 
 ## Installation
 

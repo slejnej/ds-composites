@@ -1,0 +1,5 @@
+name: DC Custom code
+type: module
+description: Contains custom functionalities
+core_version_requirement: ^10
+package: Custom

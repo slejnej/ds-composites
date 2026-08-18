@@ -1,0 +1,26 @@
+uuid: eab2cad8-d11a-49ad-b0c0-f09ab195d997
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_title
+    - filter.format.title
+    - paragraphs.paragraphs_type.webform_pod
+  module:
+    - text
+_core:
+  default_config_hash: iOor2PsDZsqLzpeSUaEz2U9-wvcFaU1LrImgaccIges
+id: paragraph.webform_pod.field_display_title
+field_name: field_display_title
+entity_type: paragraph
+bundle: webform_pod
+label: 'Display title'
+description: 'This title is displayed on the page above the content of this pod.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - title
+field_type: text

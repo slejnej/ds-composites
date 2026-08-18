@@ -1,0 +1,8 @@
+// Set all the bootstrap variables
+
+@import 'variables_bootstrap';
+
+// Include base theme + bootstrap.
+@import '../../../../contrib/barrio_base_theme/assets/scss/bootstrap';
+
+@import './modules/bootstrap';

@@ -1,0 +1,25 @@
+uuid: 98ee8213-9ff6-442e-99bf-a20f6ed83b60
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_nt_link
+    - paragraphs.paragraphs_type.banner_pea
+  module:
+    - link
+_core:
+  default_config_hash: genEoTVgYvSa3MFc-WNM7YOAFbpVTXEIQO1zhtl9CS0
+id: paragraph.banner_pea.field_banner_nt_link
+field_name: field_banner_nt_link
+entity_type: paragraph
+bundle: banner_pea
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link
