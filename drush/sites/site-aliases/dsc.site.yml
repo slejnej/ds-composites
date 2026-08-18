@@ -3,12 +3,12 @@ local:
   paths:
     - files: /app/web/sites/ds-composites'
 dev:
-     root: /home/ubuntu/apps/ds-composites/current/web/sites/ds-machining
-     uri: 'https://ds-machining.2cent2.eu'
+     root: /home/ubuntu/apps/ds-composites/current/web/sites/ds-composites
+     uri: 'https://ds-composites.2cent2.eu'
      paths:
        drush-script: '/app/ds-composites/current/vendor/drush/drush/drush'
 prod:
-  root: /home/ubuntu/apps/ds-composites/current/web/sites/ds-machining
-  uri: 'https://ds-machining.eu'
+  root: /home/ubuntu/apps/ds-composites/current/web/sites/ds-composites
+  uri: 'https://ds-composites.eu'
   paths:
     drush-script: '/app/ds-composites/current/vendor/drush/drush/drush'
