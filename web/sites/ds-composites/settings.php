@@ -778,6 +778,8 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #
 if (file_exists(dirname(__FILE__) . '/settings.local.php')) {
   include dirname(__FILE__) . '/settings.local.php';
+} elseif (file_exists('/home/ubuntu/shared-folders/config/ds-composites/dsc-settings.local.php')) {
+  include '/home/ubuntu/shared-folders/config/ds-composites/dsc-settings.local.php';
 }
 /**
  * EOF
