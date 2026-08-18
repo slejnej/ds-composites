@@ -8,9 +8,9 @@ $settings['entity_update_backup'] = TRUE;
 
 $settings['config_sync_directory'] = '../config/sync-dsm';
 $databases['default']['default'] = array (
-  'database' => '',
-  'username' => '',
-  'password' => '',
+  'database' => 'xvdjymqf_dsm',
+  'username' => 'xvdjymqf_dsm_dbuser',
+  'password' => 'z#B2H2pR^LQm3DXQ',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
