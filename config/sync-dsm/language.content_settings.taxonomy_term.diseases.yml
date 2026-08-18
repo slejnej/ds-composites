@@ -1,9 +1,16 @@
-uuid: be41c599-f437-4371-9752-9192376b260f
-langcode: en
+uuid: a402f582-ca81-4e7a-9e70-27343493196c
+langcode: en-gb
 status: true
 dependencies:
   config:
     - taxonomy.vocabulary.diseases
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: JcLf6AeKbeoUJqCmwxuSau0Yxn1yhfInTU47PjTardw
 id: taxonomy_term.diseases

@@ -1,5 +1,5 @@
-uuid: c6c58da0-90d2-4a78-9dd3-7fe2856087ed
-langcode: en
+uuid: d1632e47-1548-405a-8b3f-1deb3b0ee4fc
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -17,7 +17,7 @@ bundle: news
 label: 'Alternative title'
 description: 'If you would like a different title to the main page title, add it here. This will also be used for SEO.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

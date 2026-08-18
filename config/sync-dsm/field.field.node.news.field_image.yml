@@ -1,5 +1,5 @@
-uuid: 7069c5a5-fc9f-40b2-ab1d-cf4d407ec319
-langcode: en
+uuid: f543360d-ecc1-4de7-a0a0-4296a36bb2fa
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ bundle: news
 label: Image
 description: 'This image will be displayed on other pages on this site when referencing back to this page. It may also be used by social media platforms when this page is shared.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

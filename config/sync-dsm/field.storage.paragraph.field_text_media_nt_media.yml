@@ -1,5 +1,5 @@
-uuid: 1e2884ab-f8aa-4b89-b939-24aa6157b627
-langcode: en
+uuid: bf28c392-65d8-43ec-8578-2a2f9d00a39b
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -7,9 +7,9 @@ dependencies:
     - paragraphs
   enforced:
     module:
-      - text_media_nugget
+      - text_media_pod
 _core:
-  default_config_hash: xcooFpCG4Z4mZ2NW7Qcl4Oe85iopkZi7kxBE7dpekgk
+  default_config_hash: 0QOV40WY9IelF4xAWEWyjKR0Twk6_HbhsD9GrAV5Uik
 id: paragraph.field_text_media_nt_media
 field_name: field_text_media_nt_media
 entity_type: paragraph

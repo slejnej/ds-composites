@@ -1,9 +1,9 @@
-uuid: 135433af-cb03-4696-b6ff-e680fe0c7a71
+uuid: b47a5c02-4c5f-4326-a176-ae6ad11cdc54
 langcode: en
 status: true
 dependencies: {  }
 id: sl
 label: Slovenian
 direction: ltr
-weight: 1
+weight: 2
 locked: false

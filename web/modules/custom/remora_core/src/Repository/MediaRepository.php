@@ -2,8 +2,8 @@
 
 namespace Drupal\remora_core\Repository;
 
+use Drupal\drupal_search\BaseRepository\BaseRepository;
 use Drupal\media\Entity\Media;
-use MantaRayMedia\BaseRepository\BaseRepository;
 
 class MediaRepository extends BaseRepository
 {
@@ -22,8 +22,7 @@ class MediaRepository extends BaseRepository
     }
 
     return $this->findOneBy([
-      'field_media_image.target_id' => $file->id()
+      'field_media_image' => $uri
     ]);
   }
-
 }

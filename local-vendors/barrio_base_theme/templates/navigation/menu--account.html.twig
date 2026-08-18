@@ -1,0 +1,14 @@
+{% block menu %}
+  <ul class="d-flex list-unstyled justify-content-between m-0">
+    {% block items %}
+      {% for item in items %}
+        {% block item %}
+          <li class="nav-item px-1">
+            {{ link(item.title, item.url, {'class': ['btn btn-link p-0 text-decoration-none']}) }}
+          </li>
+        {% endblock %}
+      {% endfor %}
+    {% endblock %}
+  </ul>
+{% endblock %}
+

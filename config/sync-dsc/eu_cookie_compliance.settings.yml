@@ -1,7 +1,10 @@
 _core:
-  default_config_hash: bFn00nhJM0zldL370oHquoSrU8dUO3TnBNhBcqxuvq0
-uuid: null
-langcode: en-gb
+  default_config_hash: zmkyvoZ03LGqfVeB0mtslC-pkWMOrGIU9lJl9_jqUkc
+langcode: en
+dependencies:
+  config:
+    - filter.format.full_html
+uuid: 671c76fc-1e03-4755-bcfc-6c441db378e8
 popup_enabled: true
 popup_clicking_confirmation: false
 popup_scrolling_confirmation: false
@@ -14,11 +17,11 @@ popup_info:
   value: '<h2>We use cookies on this site to enhance your user experience</h2><p>By clicking the Accept button, you agree to us doing so.</p>'
   format: full_html
 mobile_popup_info:
-  value: '<h2>We use cookies on this site to enhance your user experience</h2><p>By tapping the Accept button, you agree to us doing so.</p>'
+  value: ''
   format: full_html
 popup_info_template: new
 popup_agree_button_message: Accept
-popup_more_info_button_message: 'More info'
+popup_more_info_button_message: 'Cookies page'
 mobile_breakpoint: 768
 popup_agreed_enabled: false
 popup_hide_agreed: false
@@ -66,10 +69,10 @@ withdraw_tab_button_label: 'Privacy settings'
 withdraw_action_button_label: 'Withdraw consent'
 withdraw_enabled: false
 withdraw_button_on_info_popup: false
-save_preferences_button_label: 'Save preferences'
+save_preferences_button_label: 'Save and close'
 accept_all_categories_button_label: 'Accept all cookies'
 enable_save_preferences_button: true
-domain_all_sites: true
+domain_all_sites: false
 settings_tab_enabled: false
 containing_element: body
 cookie_policy_version: 1.0.0
@@ -81,6 +84,3 @@ close_button_action: close_banner
 reject_button_label: ''
 reject_button_enabled: false
 close_button_enabled: false
-dependencies:
-  config:
-    - filter.format.full_html

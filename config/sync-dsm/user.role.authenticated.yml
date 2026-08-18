@@ -1,13 +1,13 @@
-uuid: d7441f15-54d6-4559-a196-86d193e88894
+uuid: a3b536a2-bd36-47c6-980d-7653ee093a80
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.person
+    - filter.format.webform_default
   module:
     - eu_cookie_compliance
+    - filter
     - media
-    - node
     - paragraphs_type_permissions
     - site_settings
     - system
@@ -20,17 +20,20 @@ is_admin: false
 permissions:
   - 'access content'
   - 'display eu cookie compliance popup'
+  - 'use text format webform_default'
   - 'view media'
   - 'view paragraph content attachments'
-  - 'view paragraph content banner_nugglet'
+  - 'view paragraph content banner_pea'
   - 'view paragraph content banners'
+  - 'view paragraph content card_pea'
+  - 'view paragraph content cards'
   - 'view paragraph content flexible_layout'
   - 'view paragraph content footer_section'
   - 'view paragraph content promo'
   - 'view paragraph content section'
-  - 'view paragraph content slide_nugglet'
+  - 'view paragraph content slide_pea'
   - 'view paragraph content slideshow'
   - 'view paragraph content tagline'
   - 'view paragraph content text_media'
-  - 'view person revisions'
+  - 'view paragraph content webform_pod'
   - 'view published site setting entities'

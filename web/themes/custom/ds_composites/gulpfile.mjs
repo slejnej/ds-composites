@@ -6,7 +6,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import postcss from 'gulp-postcss';
 import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
-import cleanCss from './../../custom/barrio_base_theme/.gulp/mrm-clean-css.mjs';
+import cleanCss from './../../contrib/barrio_base_theme/.gulp/mrm-clean-css.mjs';
 import browserSync from 'browser-sync';
 import uglify from 'gulp-uglify';
 import minimist from 'minimist';
@@ -26,6 +26,7 @@ const paths = {
     watch: './assets/**/*'
   },
   scss: {
+    origin: './assets/scss',
     src: globSync('./assets/scss/[!_]*.scss').map(x => x.toString()), // compile all SCSS files that aren't prefixed with _
     dest: './build/css',
     watch: './assets/scss/**/*.scss',
@@ -35,7 +36,7 @@ const paths = {
     dest: './build/js',
     watch: './assets/js/*.js',
   }
-}
+};
 
 /**
  * Swallows an error thrown by gulp, displays it to the user and ends the chain so watch keeps running
@@ -55,25 +56,32 @@ const clean = (cb) => {
 
 // Compile SCSS into CSS, makes it compatible with older browsers and minifies
 const styles = (cb) => {
-  gulp.src(paths.scss.src)
-    .pipe(gulpif(!isProductionBuild, sourcemaps.init({})))
-    .pipe(sass())
-    .on('error', swallowError)
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(cleanCss({
-      level: {
-        1: {
-          tidySelectors: false // need this for rules that are formatted as nth-child(1 of ...) https://github.com/clean-css/clean-css/issues/1246#issuecomment-1651226263
-        },
-      }
-    }))
-    .pipe(gulpif(!isProductionBuild, sourcemaps.write('.', undefined)))
-    .pipe(gulp.dest(paths.scss.dest))
-    .pipe(browserSync.stream());
+  const currentDir = process.cwd();
+  process.chdir(paths.scss.origin);
 
+  if(paths.scss.src.length > 0) {
+
+    gulp.src(paths.scss.src.map(x => x.slice(paths.scss.origin.length - 1)))
+      .pipe(gulpif(!isProductionBuild, sourcemaps.init({})))
+      .pipe(sass())
+      .on('error', swallowError)
+      .pipe(postcss([
+        autoprefixer()
+      ]))
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(cleanCss({
+        level: {
+          1: {
+            tidySelectors: false // need this for rules that are formatted as nth-child(1 of ...) https://github.com/clean-css/clean-css/issues/1246#issuecomment-1651226263
+          },
+        }
+      }))
+      .pipe(gulpif(!isProductionBuild, sourcemaps.write('.', undefined)))
+      .pipe(gulp.dest(paths.scss.dest))
+      .pipe(browserSync.stream());
+  }
+
+  process.chdir(currentDir);
   cb();
 };
 
@@ -96,7 +104,7 @@ const js = (cb) => {
  */
 const assets = (cb) => {
   if(paths.assets.src.length > 0) {
-    gulp.src(paths.assets.src, {base: './', encoding: false})
+    gulp.src(paths.assets.src, {base: './' , encoding:false})
       .pipe(gulpif((file) => ['.png', '.jpg', '.jpeg', '.gif', '.svg'].includes(file.extname), imagemin()))
       .pipe(gulp.dest(paths.assets.dest))
       .pipe(browserSync.stream());
@@ -108,7 +116,7 @@ const assets = (cb) => {
 // Serve the assets through browsersync
 const serve = (cb) => {
   browserSync.init(null, {
-    proxy: 'https://ds-composites.lndo.site',
+    proxy: 'https://project.lndo.site',
     open: false
   });
 

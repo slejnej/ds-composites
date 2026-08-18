@@ -1,5 +1,5 @@
-uuid: 986c47eb-6921-473c-bcf4-fb7ee87e9ccb
-langcode: en
+uuid: d5b1d8f4-65ab-4ae4-a183-1b03dd49ab66
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -7,22 +7,21 @@ dependencies:
     - field.field.node.news.field_alternative_title
     - field.field.node.news.field_body
     - field.field.node.news.field_categories
-    - field.field.node.news.field_countries
     - field.field.node.news.field_date
     - field.field.node.news.field_diseases
     - field.field.node.news.field_hero_content
     - field.field.node.news.field_image
-    - field.field.node.news.field_main_nuggets
+    - field.field.node.news.field_main_pods
     - field.field.node.news.field_media
     - field.field.node.news.field_meta_tags
     - field.field.node.news.field_news_attachments
     - field.field.node.news.field_news_authors
     - field.field.node.news.field_news_display_date
     - field.field.node.news.field_news_link
-    - field.field.node.news.field_postscript_nuggets
+    - field.field.node.news.field_postscript_pods
     - field.field.node.news.field_seo_description
     - field.field.node.news.field_seo_title
-    - field.field.node.news.field_sidebar_nuggets
+    - field.field.node.news.field_sidebar_pods
     - field.field.node.news.field_summary
     - field.field.node.news.field_tags
     - field.field.node.news.field_topics
@@ -34,7 +33,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: 4BdK_iYY5oGEAGDr215Zi5DE_vrNimRAcsf6-l5keV4
+  default_config_hash: CSkKxTSxjZWrp-uQvj4z7hLhh_hUKQNrkyzlI46y4hs
 id: node.news.search_index
 targetEntityType: node
 bundle: news
@@ -89,7 +88,7 @@ content:
     third_party_settings: {  }
     weight: 12
     region: content
-  field_main_nuggets:
+  field_main_pods:
     type: layout_paragraphs
     label: hidden
     settings:
@@ -143,7 +142,7 @@ content:
     third_party_settings: {  }
     weight: 17
     region: content
-  field_postscript_nuggets:
+  field_postscript_pods:
     type: layout_paragraphs
     label: hidden
     settings:
@@ -167,7 +166,7 @@ content:
     third_party_settings: {  }
     weight: 14
     region: content
-  field_sidebar_nuggets:
+  field_sidebar_pods:
     type: layout_paragraphs
     label: hidden
     settings:
@@ -183,16 +182,29 @@ content:
     third_party_settings: {  }
     weight: 13
     region: content
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_topics:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 21
     region: content
 hidden:
-  field_countries: true
   field_diseases: true
   field_meta_tags: true
-  field_tags: true
-  field_topics: true
   langcode: true
   search_api_excerpt: true

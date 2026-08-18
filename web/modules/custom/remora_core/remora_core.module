@@ -1,18 +1,25 @@
 <?php
 
+use Drupal\Core\Breadcrumb\Breadcrumb;
+use Drupal\Core\Entity\EntityFormInterface;
 use Drupal\Core\Field\FieldFilteredMarkup;
+use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Menu\MenuLinkManagerInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Routing\RouteProvider;
-use Drupal\Core\Site\Settings;
 use Drupal\media\MediaInterface;
 use Drupal\node\Entity\Node;
 use Drupal\node\Entity\NodeType;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\paragraphs\Entity\ParagraphsType;
+use Drupal\remora_core\Manager\AntManager;
 use Drupal\remora_core\Manager\ConfigIgnoreManager;
 use Drupal\remora_core\Manager\ModulePermissionsManager;
 use Drupal\remora_core\Util\StringUtil;
 use Drupal\user\Entity\User;
+use MantaRayMedia\CacheService\CacheService;
 
 /**
  * Adds metatags to any node being saved that has SEO fields
@@ -75,6 +82,68 @@ function remora_core_rebuild(): void
 }
 
 /**
+ * Adds the palette variable to radio input elements
+ * This value is used by tonic to update the "Choose a layout" colours
+ *
+ * @param array $variables
+ * @return void
+ */
+function remora_core_preprocess_input(array &$variables): void
+{
+  $originalHook = $variables['theme_hook_original'] ?? null;
+  if($originalHook !== 'input__radio' || ($variables['element']['#attributes']['name'] ?? '') !== 'field_palette') {
+    return;
+  }
+
+  // get the radio button's palette-xxx value
+  $logger = Drupal::service('remora_core.logger');
+  $value = $variables['element']['#attributes']['value'] ?? '';
+  $palette = str_replace('palette-', '', $value);
+
+  $hex = CacheService::get("remora_core:palette:$palette", function () use ($palette, $logger): ?string {
+
+    // retrieve the subtheme
+    /** @var FileSystemInterface $fs */
+    $fs = Drupal::service('file_system');
+    $rp = $fs->realpath(__DIR__ . '/../../../themes/custom/');
+
+    $customThemes = $fs->scanDirectory($rp, '/.*/', [
+      'recurse' => FALSE
+    ]);
+
+    // if for some reason there are 0 or more than 1 themes, cancel
+    if(count($customThemes) !== 1) {
+      $logger->error('Not exactly 1 custom theme found');
+      return null;
+    }
+
+    $customThemeName = reset($customThemes)->filename;
+    $globalVariables = $fs->realpath("$customThemeName://assets/scss/variables/_global.scss");
+
+    if($globalVariables === false || !is_readable($globalVariables)) {
+      $logger->error('Global variables file not found or not readable');
+      return null;
+    }
+
+    // read the theme's scss variables
+    $scssVariables = file_get_contents($globalVariables);
+    $hasMatch = preg_match_all('/^\\$' . $palette . ':(.*);/m', $scssVariables, $matches);
+
+    if($hasMatch !== 1) {
+      $logger->error('Global variables file not found or not readable');
+      return null;
+    }
+
+    // return the one match for $default, $alt-1, or $alt-2
+    return trim($matches[1][0]);
+  });
+
+  $variables['element']['#attributes']['data-remora-palette'] = $hex;
+  $variables['attributes']['data-remora-palette'] = $hex;
+}
+
+
+/**
  * Pick up templates from the Tonic theme for admin pages + custom templates for twig functions/filters
  *
  * @return array[]
@@ -88,7 +157,10 @@ function remora_core_theme(): array
         'variables' => [
           'sources' => [],
           'default_image' => null,
-          'media' => null
+          'media' => null,
+          'shrink_image' => false,
+          'sizes' => null,
+          'image_attributes' => [],
         ]
       ]
     ];
@@ -115,11 +187,14 @@ function remora_core_modules_installed(array $modules, bool $isSyncing): void
   $permissionsManager = Drupal::service('remora_core.manager.module_permissions');
   /** @var ConfigIgnoreManager $configIgnoreManager */
   $configIgnoreManager = Drupal::service('remora_core.manager.config_ignore');
+  /** @var AntManager $module */
+  $antManager = Drupal::service('remora_core.manager.ant');
 
   foreach($modules as $module) {
     try {
       $permissionsManager->handleModulePermissions($module);
       $configIgnoreManager->addToConfigIgnore($module);
+      $antManager->addSteps($module);
       // catch any and all exceptions to prevent the installation from aborting on malformed modules
     } catch(Exception $e) {
       Drupal::service('remora_core.logger')->error($e->getMessage());
@@ -129,7 +204,7 @@ function remora_core_modules_installed(array $modules, bool $isSyncing): void
 
 /**
  *  Adding help text to node title
- *  Close nugget title properties accordion if editing paragraph
+ *  Close pod title properties accordion if editing paragraph
  *  Don't show media revisions to editors
  */
 function remora_core_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void
@@ -148,8 +223,8 @@ function remora_core_form_alter(array &$form, FormStateInterface $form_state, st
   }
 
   $current_route = Drupal::routeMatch()->getRouteName();
-  if($current_route === 'layout_paragraphs.builder.edit_item' && isset($form['#fieldgroups']['group_nugget_title_properties'])) {
-    $form['#fieldgroups']['group_nugget_title_properties']->format_settings['open'] = false;
+  if($current_route === 'layout_paragraphs.builder.edit_item' && isset($form['#fieldgroups']['group_pod_title_properties'])) {
+    $form['#fieldgroups']['group_pod_title_properties']->format_settings['open'] = false;
   }
 
   $hasRole = User::load(Drupal::currentUser()->id())->hasRole('administrator');
@@ -166,6 +241,91 @@ function remora_core_form_alter(array &$form, FormStateInterface $form_state, st
     $form['#after_build'][] = 'remora_core_override_after_build';
   }
 
+  // Hide Redirect to link field and Redirect to attachment option from rabbit hole
+  $formObject = $form_state->getFormObject();
+  if (!$formObject instanceof EntityFormInterface) {
+    return;
+  }
+  $node = $formObject->getEntity();
+  if ($node->getEntityTypeId() !== 'node') {
+    return;
+  }
+
+  // Find out if node has field
+  $hideLink = !$node->hasField(sprintf('field_%s_link', $node->bundle()));
+  $hideAttach = !$node->hasField(sprintf('field_%s_attachments', $node->bundle()));
+
+  // Add after build to remove the option
+  if ($hideLink) {
+    $form['rabbit_hole__settings']['widget']['#after_build'][] = 'remora_core_rh_widget_after_build_hide_link_option';
+  }
+  if ($hideAttach) {
+    $form['rabbit_hole__settings']['widget']['#after_build'][] = 'remora_core_rh_widget_after_build_hide_attachment_option';
+  }
+
+  $form['#validate'][] = 'remora_core_validate_rh_attachment_requires_single';
+}
+
+/**
+ * After-build: remove "redirect_to_link_field" from the per-node Rabbit hole options.
+ */
+function remora_core_rh_widget_after_build_hide_link_option(array $element, FormStateInterface $form_state): array
+{
+  if (isset($element[0]['action']['#options']['redirect_to_link_field'])) {
+    unset($element[0]['action']['#options']['redirect_to_link_field']);
+  }
+  return $element;
+}
+
+/**
+ * After-build: remove "redirect_to_attachment" from the per-node Rabbit hole options.
+ */
+function remora_core_rh_widget_after_build_hide_attachment_option(array $element, FormStateInterface $form_state): array
+{
+  if (isset($element[0]['action']['#options']['redirect_to_attachment'])) {
+    unset($element[0]['action']['#options']['redirect_to_attachment']);
+  }
+  return $element;
+}
+
+/**
+ * If Rabbit Hole action == redirect_to_attachment, enforce exactly 1 attachment.
+ */
+function remora_core_validate_rh_attachment_requires_single(array &$form, FormStateInterface $form_state): void
+{
+  $trigger = $form_state->getTriggeringElement();
+  if ($trigger['#id'] !== 'edit-submit') {
+    return;
+  }
+  $formObject = $form_state->getFormObject();
+  if (!$formObject instanceof EntityFormInterface) {
+    return;
+  }
+  $node = $formObject->getEntity();
+  if (!$node || $node->getEntityTypeId() !== 'node') {
+    return;
+  }
+  $action = $form_state->getValue(['rabbit_hole__settings', 0, 'action']);
+  if ($action !== 'redirect_to_attachment') {
+    return;
+  }
+
+  // Get attachments field
+  $attachmentsField = sprintf('field_%s_attachments', $node->bundle());
+
+  // Count attachments
+  $values = $form_state->getValue($attachmentsField);
+  $selection = $values['selection'] ?? [];
+  $count = 0;
+  foreach ($selection as $item) {
+    if (!empty($item['target_id'])) {
+      $count++;
+    }
+  }
+
+  if ($count !== 1) {
+    $form_state->setErrorByName($attachmentsField, t('The current rabbit hole setting requires exactly 1 attachment to be set.'));
+  }
 }
 
 /**
@@ -211,7 +371,7 @@ function remora_core_override_after_build(array $form, FormStateInterface &$form
  */
 function remora_core_main_content_fieldgroup_process(array $element): array
 {
-  $fieldgroups = ['group_overview', 'group_initial_content', 'group_tagging', 'group_nuggets'];
+  $fieldgroups = ['group_overview', 'group_initial_content', 'group_tagging', 'group_pods'];
 
   foreach($fieldgroups as $fieldgroup) {
     if(isset($element['#fieldgroups'][$fieldgroup])) {
@@ -323,9 +483,22 @@ function remora_core_preprocess_file_link(array &$variables): void
 function remora_core_preprocess_paragraph(array &$variables): void
 {
   $paragraph = $variables['paragraph'];
-  $bundle = $paragraph->bundle();
-  $paragraph_type = ParagraphsType::load($bundle);
-  $variables['human_readable_name'] = $paragraph_type->label();
+  $paragraph_type = ParagraphsType::load($paragraph->bundle());
+  $human_readable_name = $paragraph_type->label();
+
+  \Drupal::moduleHandler()->alter(
+    'remora_core_human_readable_name',
+    $human_readable_name,
+    $paragraph,
+    $variables
+  );
+  $variables['human_readable_name'] = $human_readable_name;
+
+  if (!empty($variables['elements']['#shrink_image'])) {
+    $variables['shrink_image'] = $variables['elements']['#shrink_image'];
+  }
+
+  _remora_core_pass_location_to_children($variables['shrink_image'] ?? false, $variables['content']);
 }
 
 /**
@@ -340,6 +513,32 @@ function remora_core_preprocess_node(array &$variables): void
     $contentTypeEntity = NodeType::load($contentType);
     $humanName = $contentTypeEntity->label();
     $variables['content_type'] = $humanName;
+  }
+
+  if (!empty($variables['content']['field_sidebar_pods'])) {
+    foreach ($variables['content']['field_sidebar_pods'] as &$item) {
+      if (is_array($item) && isset($item['#paragraph'])) {
+        $item['#shrink_image'] = true;
+      }
+    }
+  }
+}
+
+/**
+ * Recursively propagate #shrink_image to nested paragraphs.
+ */
+function _remora_core_pass_location_to_children(bool $shrinkImage, array &$content): void
+{
+  foreach ($content as &$item) {
+    if (!is_array($item)) {
+      continue;
+    }
+
+    if (isset($item['#paragraph'])) {
+      $item['#shrink_image'] = $shrinkImage;
+    }
+
+    _remora_core_pass_location_to_children($shrinkImage, $item);
   }
 }
 
@@ -363,3 +562,116 @@ function remora_core_media_presave(MediaInterface $media): void
     }
 }
 
+/**
+ * After editing user account: redirect to user profile page.
+ */
+function remora_core_form_user_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void
+{
+  $form['actions']['submit']['#submit'][] = 'remora_core_user_edit_form_submit';
+}
+
+function remora_core_user_edit_form_submit(array &$form, FormStateInterface $form_state): void
+{
+  $user = \Drupal::currentUser();
+  $form_state->setRedirect('entity.user.canonical', ['user' => $user->id()]);
+}
+
+/**
+ * After registering redirect user to the homepage.
+ */
+function remora_core_form_user_register_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void {
+  $form['actions']['submit']['#submit'][] = 'remora_core_user_register_form_submit';
+}
+
+function remora_core_user_register_form_submit($form, FormStateInterface $form_state): void
+{
+  $form_state->setRedirect('<front>');
+}
+
+/**
+ * Make sure the _them hook of this is called at the end
+ * so it overrides anything that was set before in module and hook discovery
+ *
+ * Implements hook_module_implements_alter().
+ */
+function remora_core_module_implements_alter(&$implementations, $hook): void
+{
+  if ($hook == 'theme') {
+    if (isset($implementations['remora_core'])) {
+      // Move remora_core to the end of the implementations array.
+      $implementation = $implementations['remora_core'];
+      unset($implementations['remora_core']);
+      $implementations['remora_core'] = $implementation;
+    }
+  }
+}
+
+/**
+ * Implements hook_system_breadcrumb_alter().
+ */
+function remora_core_system_breadcrumb_alter(Breadcrumb &$breadcrumb, RouteMatchInterface $route_match, array $context)
+{
+  $links = $breadcrumb->getLinks();
+
+  if (empty($links)) {
+    return;
+  }
+
+  /** @var MenuLinkManagerInterface $menuLinkManager */
+  $menuLinkManager = \Drupal::service('plugin.manager.menu.link');
+
+  // Get current route
+  $currentRouteName = $route_match->getRouteName();
+  $currentRouteParams = $route_match->getRawParameters()->all();
+
+  // Find menu links for current route
+  $currentMenuLinks = $menuLinkManager->loadLinksByRoute($currentRouteName, $currentRouteParams);
+
+  if (empty($currentMenuLinks)) {
+    return; // Not in menu
+  }
+
+  // Take first matching menu link
+  $currentMenuLink = reset($currentMenuLinks);
+
+  // Walk up parent chain to get ALL parents
+  $allParents = [];
+  $parentId = $currentMenuLink->getParent();
+
+  while ($parentId && $parentId !== '' && $parentId !== 'system.admin') {
+    try {
+      $parentLink = $menuLinkManager->createInstance($parentId);
+      $allParents[] = $parentLink;
+      $parentId = $parentLink->getParent();
+    } catch (\Exception $e) {
+      break;
+    }
+  }
+
+  // Create new breadcrumb
+  $newBreadcrumb = new Breadcrumb();
+  $newBreadcrumb->addCacheContexts($breadcrumb->getCacheContexts());
+  $newBreadcrumb->addCacheTags($breadcrumb->getCacheTags());
+  $newBreadcrumb->mergeCacheMaxAge($breadcrumb->getCacheMaxAge());
+
+  // Always add Home first
+  $newBreadcrumb->addLink(Link::createFromRoute(t('Home'), '<front>'));
+
+  // Add all parents in reverse order (root -> current)
+  $allParents = array_reverse($allParents);
+  foreach ($allParents as $parent) {
+    $newBreadcrumb->addLink(Link::fromTextAndUrl(
+      $parent->getTitle(),
+      $parent->getUrlObject()
+    ));
+  }
+
+  // Add current page
+  $newBreadcrumb->addLink(Link::fromTextAndUrl(
+    $currentMenuLink->getTitle(),
+    $currentMenuLink->getUrlObject()
+  ));
+
+  // Replace the breadcrumb
+  $breadcrumb = $newBreadcrumb;
+}

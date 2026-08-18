@@ -1,24 +1,46 @@
-uuid: 5a2a72ba-d2db-4383-8547-75d6689ec345
-langcode: en
+uuid: 28b34318-d591-425b-8ad8-7d287af3a519
+langcode: en-gb
 status: true
 dependencies:
   config:
+    - field.field.media.audio.field_media_audio_artwork
+    - field.field.media.audio.field_media_audio_date
     - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_media_audio_summary
     - field.field.media.audio.field_media_transcript
     - media.type.audio
   module:
+    - datetime
     - file
     - text
 _core:
-  default_config_hash: pzzFxGwoadXMTG_V8S-quWgjSXiIfBCsD6cPWuQabWs
+  default_config_hash: FwWgcVdXHmSazCinrwaYOxK-M8rfzGRwz2XYyRyMEmY
 id: media.audio.default
 targetEntityType: media
 bundle: audio
 mode: default
 content:
+  field_media_audio_artwork:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_media_audio_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: remora_ct_date
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_media_audio_file:
     type: file_audio
-    label: visually_hidden
+    label: hidden
     settings:
       controls: true
       autoplay: false
@@ -27,16 +49,32 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_media_audio_summary:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_media_transcript:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 1
     region: content
 hidden:
   created: true
   langcode: true
-  name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

@@ -38,3 +38,5 @@ $settings['trusted_host_patterns'] = [
   '^ds-machining\.lndo\.site$'
 ];
 
+// to be able to get from variable in TWIG
+$settings['current_multisite'] = 'dsm';

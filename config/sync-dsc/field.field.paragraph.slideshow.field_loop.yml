@@ -1,4 +1,4 @@
-uuid: 7069f411-33cb-4f32-9fc0-4d9c5a4339c3
+uuid: a7d04d57-e48d-467b-b05a-1360d37bfc00
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
     - paragraphs.paragraphs_type.slideshow
   enforced:
     module:
-      - slideshow_nugget
+      - slideshow_pod
 _core:
-  default_config_hash: s4KsBwcfGPG5Jta_mqhl5GzMhPKgiTLSm8k0o-CuFlo
+  default_config_hash: V9R7hDKjxwn1xWc0rBIj5LrCE5RBd162EKROnaPOomg
 id: paragraph.slideshow.field_loop
 field_name: field_loop
 entity_type: paragraph

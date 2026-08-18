@@ -1,4 +1,4 @@
-uuid: 0a018ff8-55ec-489b-bd1a-3dc96caf078e
+uuid: 401947e8-3f8a-4981-9b87-9ea68e543544
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ items:
     collection: ''
     name: administerusersbyrole.settings
     data:
-      langcode: en
+      langcode: en-gb
       roles:
         web_admin: unsafe
         editor: safe

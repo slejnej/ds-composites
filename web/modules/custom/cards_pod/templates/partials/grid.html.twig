@@ -1,0 +1,41 @@
+<div class="card-grid">
+  {# Determine the column class dynamically based on the number of items per row #}
+  {% set columnClass = 'row-max-' ~ (items_per_row) %}
+  <div class="items-per-row {{ columnClass }}">
+    {% block cards %}
+      {% for card in cards %}
+        {% set isRestricted = false %}
+        {% set card_id = card.entity.id.value %}
+        {% if card_id is numeric %}
+          {% set cardObject = drupal_entity('paragraph', card_id) %}
+          {% set cardObject = cardObject['#paragraph'] %}
+          {% set field_link = cardObject.field_card_nt_link|first %}
+          {% if field_link.uri starts with 'entity:node/' %}
+            {% set referencedNode = drupal_entity('node', field_link.url.routeParameters.node, 'card') %}
+            {% set referencedNode = referencedNode['#node'] %}
+          {% endif %}
+          {% if field_link.uri starts with 'entity:node/' and referencedNode is null  %}
+            {% set isRestricted = true %}
+          {% endif %}
+        {% endif %}
+
+        {% if card.entity.isPublished() and not isRestricted %}
+          <div class="col">
+            {% if card_id is not numeric %}
+              {% remora_include 'partials/error/card-preview.html.twig' %}
+            {% else %}
+              {{ drupal_entity('paragraph', card_id) }}
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% endblock %}
+  </div>
+
+  {% block view_more %}
+    {% if paragraph.field_view_more_link is not empty %}
+      {% include '@cards_pod/templates/partials/view-more.html.twig'%}
+    {% endif %}
+  {% endblock %}
+
+</div>

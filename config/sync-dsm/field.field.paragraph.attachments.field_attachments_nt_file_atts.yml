@@ -1,5 +1,5 @@
-uuid: cd97c8d5-3c44-4f70-a3b2-90cc7a12d176
-langcode: en
+uuid: 12343d6c-b9b8-4d20-a345-dd33cb933dbe
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -8,9 +8,9 @@ dependencies:
     - paragraphs.paragraphs_type.attachments
   enforced:
     module:
-      - attachments_nugget
+      - attachments_pod
 _core:
-  default_config_hash: 9_xuH9JcPiPt7LyIfg3sC2W9-O9AboUJplLjfsIrovI
+  default_config_hash: jvzXtO2UEh7hCTys3d1kRuqz6x3FQlSJb03_HwfLqq8
 id: paragraph.attachments.field_attachments_nt_file_atts
 field_name: field_attachments_nt_file_atts
 entity_type: paragraph
@@ -18,7 +18,7 @@ bundle: attachments
 label: 'File attachments'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

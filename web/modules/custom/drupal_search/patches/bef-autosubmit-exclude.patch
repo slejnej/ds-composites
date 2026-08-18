@@ -1,0 +1,13 @@
+diff --git a/src/Plugin/views/exposed_form/BetterExposedFilters.php b/src/Plugin/views/exposed_form/BetterExposedFilters.php
+index 811b5d7..212c89d 100644
+--- a/src/Plugin/views/exposed_form/BetterExposedFilters.php
++++ b/src/Plugin/views/exposed_form/BetterExposedFilters.php
+@@ -766,7 +766,7 @@ class BetterExposedFilters extends InputRequired {
+
+       if (!empty($bef_options['general']['autosubmit_exclude_textfield'])) {
+         $supported_types = ['entity_autocomplete', 'textfield'];
+-        foreach ($form as $element) {
++        foreach ($form as &$element) {
+           $element_type = $element['#type'] ?? NULL;
+           if (in_array($element_type, $supported_types)) {
+             $element['#attributes']['data-bef-auto-submit-exclude'] = '';

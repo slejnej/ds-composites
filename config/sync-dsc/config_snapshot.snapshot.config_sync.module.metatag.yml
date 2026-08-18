@@ -1,4 +1,4 @@
-uuid: e5a3ab95-b937-4fd0-96eb-37f55fe59394
+uuid: ae281dd0-1d83-462f-a401-76652ca27328
 langcode: en
 status: true
 dependencies:
@@ -121,5 +121,7 @@ items:
       tag_trim_maxlength: {  }
       tag_scroll_max_height: ''
       use_maxlength: true
+      tag_trim_end: '|.,-:;/+&([{"'''
+      trim_suffix: ''
       _core:
-        default_config_hash: tKLBW2GXZVLFXqS9QgLyfTuxCLc1u_quKPQLtCia-Bw
+        default_config_hash: xF-yd0bqa4S5zWER0Kasv-BK0-xGEegxnFERohs2QTs

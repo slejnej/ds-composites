@@ -1,0 +1,14 @@
+drupal_search:
+  version: 1.0.1
+  js:
+    js/search.js: {}
+  dependencies:
+    - core/jquery.once
+    - core/drupal
+
+drupal_search_header_block:
+  version: 1.1.0
+  js:
+    js/header-search.js: {}
+  dependencies:
+    - core/jquery

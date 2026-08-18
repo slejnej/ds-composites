@@ -1,0 +1,18 @@
+uuid: 56dafeb6-d7ff-4ed8-8a3d-cd09247d57e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.footer_section
+id: paragraph.footer_section.created
+field_name: created
+entity_type: paragraph
+bundle: footer_section
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

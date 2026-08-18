@@ -1,9 +1,9 @@
-uuid: 71f7dd2d-a8a8-4189-9932-1b758339fe92
+uuid: 9c7480cf-5dac-4202-a1c9-92179b606802
 langcode: en
 status: true
 dependencies: {  }
 id: de
 label: German
 direction: ltr
-weight: 2
+weight: 1
 locked: false

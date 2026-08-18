@@ -1,5 +1,5 @@
-uuid: 3e1c946c-201b-4c4a-9531-f618126cab64
-langcode: en
+uuid: 74392337-7e07-4d10-a2c0-3aeea7059213
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -9,9 +9,9 @@ dependencies:
     - options
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
-  default_config_hash: yuQe2FEougUklG6PLODvUOO6Je6LE2PfoTztxT1onZ0
+  default_config_hash: iPX_06OAUtFe3H-gxUOURdLYPiQ14tMmlzQVowQAASs
 id: paragraph.cards.field_items_per_row
 field_name: field_items_per_row
 entity_type: paragraph
@@ -19,7 +19,7 @@ bundle: cards
 label: 'Items per row'
 description: 'Select number of items to display per row.'
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: '4'

@@ -1,5 +1,5 @@
-uuid: 205822d6-c77f-49e0-8a11-028e9aab0c4f
-langcode: en
+uuid: e208e345-511f-4022-bdef-fdc5343d823a
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -26,5 +26,6 @@ hidden:
   created: true
   langcode: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

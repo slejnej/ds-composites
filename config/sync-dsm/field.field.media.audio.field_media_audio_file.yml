@@ -1,5 +1,5 @@
-uuid: 8a268a04-f482-41ef-9202-6058cefa9938
-langcode: en
+uuid: 6c9a5d2c-3b4c-4e50-b2f2-b520590c2139
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -8,7 +8,7 @@ dependencies:
   module:
     - file
 _core:
-  default_config_hash: RigDYGXdZeT9EhmnZljgFs-qArdj54Ludb6yk40A9JM
+  default_config_hash: DTixovOw_kqiNs4RyQZXjamXIW2VSJakDEbr13GlLXc
 id: media.audio.field_media_audio_file
 field_name: field_media_audio_file
 entity_type: media
@@ -16,14 +16,14 @@ bundle: audio
 label: 'Audio file'
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:file'
   handler_settings: {  }
   file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'mp3 wav aac'
-  max_filesize: ''
+  file_extensions: 'mp3 wma flac wav aac ogg m3a'
+  max_filesize: '100 MB'
   description_field: false
 field_type: file

@@ -1,11 +1,12 @@
-uuid: 2e85d041-ea06-4272-835d-c9e1e1557d2d
-langcode: en
+uuid: c7751387-2fcd-4651-8b55-2b1d2b3ccd5e
+langcode: en-gb
 status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.text_media.field_display_title
     - field.field.paragraph.text_media.field_editor_title
+    - field.field.paragraph.text_media.field_media_ratio
     - field.field.paragraph.text_media.field_text_media_nt_media
     - field.field.paragraph.text_media.field_text_media_nt_presentation
     - field.field.paragraph.text_media.field_text_media_nt_text
@@ -14,13 +15,13 @@ dependencies:
     - layout_builder
   enforced:
     module:
-      - text_media_nugget
+      - text_media_pod
 third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: 3FrLCi4LkECTl4BVSTebjMcDxT_brE73tTyK38N1umo
+  default_config_hash: uqYlldZQBt4aJ-4vy8DPWwn-CIg4GsioK5u_KjcarSI
 id: paragraph.text_media.preview
 targetEntityType: paragraph
 bundle: text_media
@@ -36,6 +37,8 @@ content:
     region: content
 hidden:
   field_display_title: true
+  field_media_ratio: true
   field_text_media_nt_media: true
   field_text_media_nt_presentation: true
   field_text_media_nt_text: true
+  search_api_excerpt: true

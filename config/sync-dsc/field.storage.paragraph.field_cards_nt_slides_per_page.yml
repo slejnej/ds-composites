@@ -1,5 +1,5 @@
-uuid: bd766a24-8e6e-4a0c-b468-a73089ac9919
-langcode: en
+uuid: e0b299b0-a10f-4ed7-b7cd-6bab9eeeb6b4
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -7,9 +7,9 @@ dependencies:
     - paragraphs
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
-  default_config_hash: 2pbyFwbnSQTVfYI0wRHZ7IWegXeRw2i9aCFvCXzqiaQ
+  default_config_hash: igzmnTcHBLHcEPlX_yS9x3reez-i9YJSDo3W-S9S8w8
 id: paragraph.field_cards_nt_slides_per_page
 field_name: field_cards_nt_slides_per_page
 entity_type: paragraph

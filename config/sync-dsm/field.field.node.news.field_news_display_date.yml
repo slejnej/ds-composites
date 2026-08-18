@@ -1,5 +1,5 @@
-uuid: 95e675d7-1f38-4fd3-904c-d6bc56378489
-langcode: en
+uuid: 09255bf5-8790-4706-9716-19fcdfaed60f
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ bundle: news
 label: 'Display date'
 description: 'Override the default display of the news item.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

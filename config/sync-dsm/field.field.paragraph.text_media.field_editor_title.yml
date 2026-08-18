@@ -1,5 +1,5 @@
-uuid: d57b520b-c7ce-45a8-9c7b-a6807927adc1
-langcode: en
+uuid: 633ad04c-eb81-4e5f-8b62-f4eaafbeb816
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -7,17 +7,17 @@ dependencies:
     - paragraphs.paragraphs_type.text_media
   enforced:
     module:
-      - text_media_nugget
+      - text_media_pod
 _core:
-  default_config_hash: d17cUq-dzP4wO7L7njs4KJInDD8QwkxXN5qSg-XzcqY
+  default_config_hash: sFwLR0c1-OV09O4Mu0PJHDeZaiLhgRLmC-8wwUUqTpU
 id: paragraph.text_media.field_editor_title
 field_name: field_editor_title
 entity_type: paragraph
 bundle: text_media
 label: 'Editor title'
-description: 'This title is used to describe the content within this nugget for web editors. This title is not displayed on the page.'
+description: 'This title is used to describe the content within this pod for web editors. This title is not displayed on the page.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -1,4 +1,4 @@
-uuid: 9e187dcb-6757-42ac-84a0-586186a00fad
+uuid: 069f2775-665e-4188-a5a4-98633308d3fb
 langcode: en
 status: true
 dependencies:
@@ -15,4 +15,4 @@ id: paragraph.slideshow
 target_entity_type_id: paragraph
 target_bundle: slideshow
 default_langcode: site_default
-language_alterable: true
+language_alterable: false

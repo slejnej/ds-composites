@@ -1,4 +1,4 @@
-uuid: f7f3b5c2-0cbe-4e2c-9a7a-5df7b6a5eef8
+uuid: d8fc9f8e-2c29-493d-9a11-065fcceeb046
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ items:
     name: eu_cookie_compliance.cookie_category.analytics_cookies
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -35,7 +35,7 @@ items:
     name: eu_cookie_compliance.cookie_category.necessary_cookies
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies: {  }
       id: necessary_cookies
@@ -45,3 +45,18 @@ items:
       weight: -9
       _core:
         default_config_hash: ESyhPQjtPGripoae1llj9c0DFHZUd19xKtz78PcMR2k
+  -
+    collection: ''
+    name: eu_cookie_compliance.cookie_category.third_party
+    data:
+      uuid: null
+      langcode: en-gb
+      status: true
+      dependencies: {  }
+      id: third_party
+      label: Third-party
+      description: "These are non-essential cookies used by external websites to provide added functionality and are optional. Be aware, aspects of this site may not work correctly without them.\r\n\r\n"
+      checkbox_default_state: unchecked
+      weight: -7
+      _core:
+        default_config_hash: lTUOk77O5_8H1fcsJ0edIIbXj5qxxM4VnA3qrxOOdGM

@@ -1,0 +1,36 @@
+{%
+  set classes = [
+  'preview-wrapper',
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+]
+%}
+
+{% set published_status = paragraph.isPublished == 'true' ? 'Published' : 'Unpublished' %}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+
+    {% block content %}
+      <div class="preview-content">
+        {% block icon %}
+          <div class="field__icon">
+            {% block icon_path %}
+              {{ include('@tonic/assets/images/icon-default.svg') }}
+            {% endblock %}
+          </div>
+        {% endblock %}
+
+        {% block title %}
+          <div class="title-wrapper d-flex flex-column">
+            <div class="field__label">{{ content.field_editor_title.0 }}</div>
+            <div class="field__label status">[{{ human_readable_name }}] {{ published_status }}</div>
+          </div>
+        {% endblock %}
+      </div>
+    {% endblock %}
+
+  </div>
+{% endblock paragraph %}

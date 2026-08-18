@@ -1,0 +1,11 @@
+{
+  "name": "mrm-remora/promo_pod",
+  "type": "drupal-custom-module",
+  "description": "Promo pod - contains functionalities to enable Promo pod",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.1",
+    "drupal/field_group": "^3.4"
+  }
+}

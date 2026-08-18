@@ -1,0 +1,12 @@
+.search-view-content .view {
+  @extend .g-0;
+}
+
+.offcanvas-body .region-sidebar-first {
+  form .form-actions.form-wrapper input[value="Reset"] {
+    @extend .btn-secondary;
+  }
+}
+.popover.header-search-popover .popover-body label {
+  @extend .h4;
+}

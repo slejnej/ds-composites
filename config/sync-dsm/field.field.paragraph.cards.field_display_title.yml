@@ -1,5 +1,5 @@
-uuid: c4cce3c2-155d-495d-bf4b-f7b1ce53345a
-langcode: en
+uuid: c91c97e6-ce37-4aae-bef2-a7412f391973
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -10,9 +10,9 @@ dependencies:
     - text
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
-  default_config_hash: _jZPlfSTOiccGeMrE-GNbF9M0IH4epMEFphzOGU3Nqs
+  default_config_hash: bcFuuUXtbMI45Vg1lGp2t0mZR6qLPeN9K6y-GSOj7P8
 id: paragraph.cards.field_display_title
 field_name: field_display_title
 entity_type: paragraph
@@ -20,7 +20,7 @@ bundle: cards
 label: 'Display title'
 description: 'This title is displayed on the page above the content of this section.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

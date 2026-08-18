@@ -1,4 +1,4 @@
-uuid: 0e06b118-ecab-480f-9342-c0758a4ea09b
+uuid: 8f8bebe6-2a86-4124-939a-a8ff33044635
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ dependencies:
     module:
       - media_library
 _core:
-  default_config_hash: iFhkNhGoobQ7V0PJEH_Io9Vlli35kiaeQfdqUttfQeU
+  default_config_hash: 9u9hwW-Q0-uQJz1vgenJTQhZGYN0FBZoOogwPD6kgkQ
 id: media_library
 label: 'Media library'
 module: views
@@ -139,6 +139,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 24
           total_pages: null
           id: 0

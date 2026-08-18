@@ -1,5 +1,5 @@
-uuid: 06924260-b171-411d-bef8-5b846fc8ffc7
-langcode: en
+uuid: fa6623fe-e4e7-4955-a390-458c1c0e2094
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -8,7 +8,7 @@ dependencies:
     module:
       - user
 _core:
-  default_config_hash: 6eiNWATGTd3lUEKuxNPNyDRDVMsUlM0HS90_R6JJLUI
+  default_config_hash: pwznBDVbsQGj0a4yhv2Zqwd8SsOA4zmwmZ4WrlhfkvE
 id: pathauto_update_alias_user
 label: 'Update URL alias'
 type: user

@@ -1,5 +1,5 @@
 # Tagging
-Contains all the taxonomy vocabularies required for tagging (except for countries which are [here](https://github.com/MRM-Remora/countries_info).)
+Contains all the taxonomy vocabularies required for tagging.
 
 ## Update hook
 Update hook in .module file adds all of the fields to the search index if the `remora_search` module is enabled.

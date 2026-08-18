@@ -1,5 +1,5 @@
-uuid: 3b40a049-710f-4754-b3f9-a76bd908c49b
-langcode: en
+uuid: 8d9386f1-a9b8-49c0-9dcb-4764a49bc43e
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ bundle: news
 label: Link
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

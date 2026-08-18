@@ -1,0 +1,3 @@
+remove_http_headers: "x-powered-by\r\nserver\r\nx-generator\r\nx-drupal-cache\r\nx-drupal-dynamic-cache\r\nserver\r\nx-drupal-cache-contexts\r\nx-drupal-cache-max-age\r\nx-drupal-cache-tags"
+remove_metatags: Generator
+add_http_headers: "X-Permitted-Cross-Domain-Policies: none\r\nCross-Origin-Embedder-Policy: unsafe-none\r\nCross-Origin-Resource-Policy: same-site\r\nCross-Origin-Opener-Policy: same-origin"

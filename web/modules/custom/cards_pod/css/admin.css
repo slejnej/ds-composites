@@ -1,0 +1,163 @@
+fieldset[data-drupal-selector="edit-field-cards-nt-card"] {
+    border: none;
+}
+
+fieldset[data-drupal-selector="edit-field-cards-nt-card"] .fieldset__legend {
+    display: none;
+}
+
+fieldset[data-drupal-selector="edit-field-cards-nt-card"] .lpb-btn--add {
+    background: none;
+}
+
+fieldset[data-drupal-selector="edit-field-cards-nt-card"] .lpb-btn--add:after {
+    content: 'Add card';
+}
+
+fieldset[data-drupal-selector="edit-field-cards-nt-card"] .js-lpb-component:first-child .lpb-btn--add.before {
+    display: block;
+}
+
+fieldset[data-drupal-selector="edit-field-cards-nt-card"] .js-lpb-component:last-of-type .lpb-btn--add.after {
+    display: block;
+}
+
+.lpb-component-list__item.type-cards .pod-icon {
+    mask: url("../icons/icon.svg") no-repeat 50% 50% / 90px 90px;
+}
+
+
+/* Presentation styles */
+
+.paragraph-type-cards .field-group-details[data-drupal-selector="edit-group-pod-title-properties"] .form-radios {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.paragraph-type-cards .field-group-details[data-drupal-selector="edit-group-pod-title-properties"] .form-radios .form-type--boolean .form-boolean {
+    transform: translate(13px, -13px);
+}
+
+.paragraph-type-cards .field-group-details[data-drupal-selector="edit-group-pod-title-properties"] .form-radios .js-form-type-radio {
+    margin: 0;
+    width: calc(100% / 6 - 30px);
+    display: grid;
+    column-gap: 8px;
+    row-gap: 10px;
+    border-right: solid 1px #AAADB4;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "lg lg"
+    "sm_1 sm_2";
+}
+
+.paragraph-type-cards .field-group-details[data-drupal-selector="edit-group-pod-title-properties"] .form-radios .js-form-type-radio:has(input[value="grid"]) {
+    grid-template-columns: 30% 70%;
+}
+
+.paragraph-type-cards .field-group-details[data-drupal-selector="edit-group-pod-title-properties"] .form-radios .form-type--boolean:has(input[value="grid"]) .form-boolean  {
+    transform: translate(30px, -13px);
+}
+
+
+.paragraph-type-cards .field-group-details[data-drupal-selector="edit-group-pod-title-properties"] .form-radios .js-form-type-radio:last-child {
+    border: none;
+}
+
+.paragraph-type-cards .field-group-details[data-drupal-selector="edit-group-pod-title-properties"] .form-radios .js-form-type-radio:has(input:hover)::before,
+.paragraph-type-cards .field-group-details[data-drupal-selector="edit-group-pod-title-properties"] .form-radios .js-form-type-radio:has(.form-boolean--type-radio:checked:not(:disabled))::before {
+    background: var(--gin-color-primary);
+}
+
+
+.paragraph-type-cards .field-group-details[data-drupal-selector="edit-group-pod-title-properties"] .form-radios .js-form-type-radio::before {
+    margin-left: calc(50% - 68px);
+    content: "";
+    width: 100px;
+    height: 100px;
+    grid-area: lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: #2A2A2D;
+}
+
+.paragraph-type-cards .field-group-details[data-drupal-selector="edit-group-pod-title-properties"] .form-radios .js-form-type-radio input {
+    grid-area: sm_1;
+    margin: 0;
+}
+
+.paragraph-type-cards .field-group-details[data-drupal-selector="edit-group-pod-title-properties"] .form-radios .js-form-type-radio label {
+    grid-area: sm_2;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Presentation icons */
+.field--name-field-presentation .form-radios .js-form-type-radio::before {
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    mask-size: 90px 90px;
+}
+
+.js-form-type-radio:has([value="grid"])::before {
+    mask-image: url("../icons/presentation_grid.svg");
+}
+
+.js-form-type-radio:has([value="slideshow"])::before {
+    mask-image: url("../icons/presentation_slideshow.svg");
+}
+
+.js-form-type-radio:has([value="fluid"])::before {
+    mask-image: url("../icons/presentation_fluid.svg");
+}
+
+.js-form-type-radio:has([value="spotlight"])::before {
+    mask-image: url("../icons/presentation_spotlight.svg");
+}
+
+
+/* Spotlight icons */
+
+.paragraph-type-cards .field-group-details[data-drupal-selector="edit-group-pod-title-properties"] .field--name-field-cards-nt-spotlight-style .form-radios .js-form-type-radio {
+    width: calc(100% / 5 - 30px);
+}
+
+.field--name-field-cards-nt-spotlight-style .form-radios .js-form-type-radio::before {
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    mask-size: 90px 90px;
+}
+
+.js-form-type-radio:has([value="spotlight_3_left"])::before {
+    mask-image: url("../icons/spotlight_3_left.svg");
+}
+
+.js-form-type-radio:has([value="spotlight_3_right"])::before {
+    mask-image: url("../icons/spotlight_3_right.svg");
+}
+
+.js-form-type-radio:has([value="spotlight_5_left"])::before {
+    mask-image: url("../icons/spotlight_5_left.svg");
+}
+
+.js-form-type-radio:has([value="spotlight_5_right"])::before {
+    mask-image: url("../icons/spotlight_5_right.svg");
+}
+
+.js-form-type-radio:has([value="spotlight_7_left"])::before {
+    mask-image: url("../icons/spotlight_7_left.svg");
+}
+
+.js-form-type-radio:has([value="spotlight_7_right"])::before {
+    mask-image: url("../icons/spotlight_7_right.svg");
+}
+
+.js-form-type-radio:has([value="spotlight_5_center"])::before {
+    mask-image: url("../icons/spotlight_5_center.svg");
+}

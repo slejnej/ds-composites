@@ -1,0 +1,7 @@
+{% block top_menu %}
+  {% if drupal_menu('header') | render %}
+    <div class="top-menu d-flex flex-column">
+      {{ drupal_menu('header') }}
+    </div>
+  {% endif %}
+{% endblock %}

@@ -10,6 +10,7 @@ use Drupal\remora_core\Logger\Raven;
 use Drupal\remora_core\Service\LinkChecker\BatchExtractorService;
 use Drupal\remora_core\Service\LinkChecker\ExtractorService;
 use Symfony\Component\DependencyInjection\Definition;
+use Symfony\Component\DependencyInjection\Reference;
 
 class RemoraCoreServiceProvider extends ServiceProviderBase implements ServiceProviderInterface
 {
@@ -25,8 +26,8 @@ class RemoraCoreServiceProvider extends ServiceProviderBase implements ServicePr
     $def = $container->getDefinition('file_system');
     $def->setClass(FileSystem::class);
 
-//    $this->registerRavenDecorator($container);
-//    $this->registerLinkExtractors($container);
+    $this->registerRavenDecorator($container);
+    $this->registerLinkExtractors($container);
   }
 
   /**
@@ -54,7 +55,7 @@ class RemoraCoreServiceProvider extends ServiceProviderBase implements ServicePr
     $this->overwriteServiceClass($container, 'linkchecker.extractor_batch', BatchExtractorService::class);
 
     $this->overwriteServiceClass($container, 'linkchecker.extractor', ExtractorService::class)
-      ?->addArgument($container->getDefinition('remora_core.repository.search_api.node'));
+      ->addArgument(new Reference('logger.channel.linkchecker'));
   }
 
   /**
@@ -71,7 +72,6 @@ class RemoraCoreServiceProvider extends ServiceProviderBase implements ServicePr
       return null;
     }
 
-    return $containerBuilder->getDefinition($serviceId)
-                                   ->setClass($newClass);
+    return $containerBuilder->getDefinition($serviceId)->setClass($newClass);
   }
 }

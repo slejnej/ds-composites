@@ -1,12 +1,12 @@
-uuid: edb8ac88-eb7d-4b52-9af1-2aef1580959e
-langcode: en
+uuid: aba0ad18-541b-4048-bf84-afb0306b488e
+langcode: en-gb
 status: true
 dependencies:
   module:
     - options
     - paragraphs
 _core:
-  default_config_hash: exANf4ct8t7-j17Rco8kZ7yaIOhFaqRSNWXa4eAUzPY
+  default_config_hash: mtvknXu_sAsXwqyWszTBJZneaYCeZ-sOsUKxlDjuoAs
 id: paragraph.field_presentation
 field_name: field_presentation
 entity_type: paragraph
@@ -19,6 +19,9 @@ settings:
     -
       value: slideshow
       label: Slideshow
+    -
+      value: fluid
+      label: Fluid
   allowed_values_function: ''
 module: options
 locked: false

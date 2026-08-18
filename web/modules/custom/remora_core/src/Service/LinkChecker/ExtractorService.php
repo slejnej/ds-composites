@@ -2,7 +2,6 @@
 
 namespace Drupal\remora_core\Service\LinkChecker;
 
-use Drupal;
 use Drupal\Component\Datetime\TimeInterface;
 use Drupal\Core\Config\ConfigFactory;
 use Drupal\Core\Database\Connection;
@@ -12,75 +11,104 @@ use Drupal\linkchecker\Entity\LinkCheckerLink;
 use Drupal\linkchecker\LinkExtractorService as BaseExtractor;
 use Drupal\linkchecker\Plugin\LinkExtractorManager;
 use Drupal\node\Entity\Node;
-use Drupal\remora_core\Repository\SearchAPI\SolrNodeRepository;
-use Drupal\search_api\Plugin\search_api\data_type\value\TextValue;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 
-class ExtractorService extends BaseExtractor
-{
+class ExtractorService extends BaseExtractor {
 
-  public function __construct(LinkExtractorManager $extractorManager, EntityTypeManagerInterface $entityTypeManager, ConfigFactory $configFactory, RequestStack $requestStack, Connection $dbConnection, TimeInterface $time, private readonly SolrNodeRepository $solrRepository)
-  {
+  protected LoggerInterface $logger;
+
+  public function __construct(
+    LinkExtractorManager $extractorManager,
+    EntityTypeManagerInterface $entityTypeManager,
+    ConfigFactory $configFactory,
+    RequestStack $requestStack,
+    Connection $dbConnection,
+    TimeInterface $time,
+    LoggerInterface $logger
+  ) {
     parent::__construct($extractorManager, $entityTypeManager, $configFactory, $requestStack, $dbConnection, $time);
+    $this->logger = $logger;
   }
-
 
   /**
    * {@inheritDoc}
    */
   public function extractFromEntity(FieldableEntityInterface $entity) {
-    if(!$entity instanceof Node) {
+    // If not a node, fallback to parent extraction.
+    if (!$entity instanceof Node) {
       return parent::extractFromEntity($entity);
     }
 
+    // Create the HTML link extractor plugin.
     $extractor = $this->extractorManager->createInstance('html_link_extractor');
     $links = [];
     $this->pos = 0;
 
-    // get the node from SOLR
-    // can't use find because multi-lingual
-    $result = $this->solrRepository->findBy(['nid' => $entity->id()]);
+    // We'll extract links from all text-based fields (e.g., body, field_text) of the node.
+    // Adjust the field names as per your content type fields.
+    $field_names = array_filter($entity->getFieldDefinitions(), function ($field_definition) {
+      return $field_definition->getType() === 'text_with_summary' || $field_definition->getType() === 'text_long' || $field_definition->getType() === 'text';
+    });
 
+    $texts_to_extract = [];
 
-    /** @var Drupal\search_api\Item\Item $item */
-    foreach($result as $item) {
-      $values = $item->getField('rendered_item')->getValues();
-      if(count($values) === 0) {
-        continue;
+    foreach ($field_names as $field_name => $definition) {
+      if ($entity->hasField($field_name) && !$entity->get($field_name)->isEmpty()) {
+        // Collect all field values as strings for extraction.
+        foreach ($entity->get($field_name) as $item) {
+          $value = $item->value ?? '';
+          if (!empty($value)) {
+            $texts_to_extract[] = ['value' => $value];
+          }
+        }
       }
+    }
 
-      // Extract links from the rendered item.
-      $urls = $extractor->extract(
-        array_map(fn(TextValue $textValue) => ['value' => $textValue->getText()], $values)
-      );
+    // Extract URLs from the collected field values.
+    $urls = $extractor->extract($texts_to_extract);
 
-      try {
-        $baseContentUrl = $entity
-          ->toUrl()
-          ->setAbsolute()
-          ->toString();
-      }
-      catch (\Exception $e) {
-        $baseContentUrl = NULL;
-      }
+    try {
+      $baseContentUrl = $entity
+        ->toUrl()
+        ->setAbsolute()
+        ->toString();
+    }
+    catch (\Exception $e) {
+      $baseContentUrl = NULL;
+      $this->logger->warning('Could not generate absolute URL for entity ID ' . $entity->id() . ': ' . $e->getMessage());
+    }
 
-      // Remove empty values.
-      $urls = array_filter($urls);
-      // Remove duplicate urls.
-      $urls = array_unique($urls);
-      $urls = $this->getLinks($urls, $baseContentUrl);
+    // Clean up URLs.
+    $urls = array_filter($urls);
+    $urls = array_unique($urls);
+    $urls = $this->getLinks($urls, $baseContentUrl);
 
+    foreach ($urls as $url) {
+      foreach ($field_names as $field_name => $definition) {
+        if (!$entity->hasField($field_name) || $entity->get($field_name)->isEmpty()) {
+          continue;
+        }
 
-      foreach ($urls as $link) {
-        $links[$this->pos++] = LinkCheckerLink::create([
-          'url' => $link,
-          'entity_id' => [
-            'target_id' => $entity->id(),
-            'target_type' => $entity->getEntityTypeId(),
-          ],
-          'entity_field' => 'nid', // this has to be anything non-empty, otherwise results will get duplicated
-          'entity_langcode' => $item->getLanguage(),
-        ]);
+        foreach ($entity->get($field_name) as $item) {
+          $value = $item->value ?? '';
+          if (empty($value)) {
+            continue;
+          }
+
+          $linkObject = LinkCheckerLink::create([
+            'url' => $url,
+            'entity_id' => [
+              'target_id' => $entity->id(),
+              'target_type' => $entity->getEntityTypeId(),
+            ],
+            'entity_field' => $field_name,
+            'entity_langcode' => $entity->language()->getId(),
+          ]);
+
+          $linkObject->setParentEntity($entity);
+          $links[$this->pos++] = $linkObject;
+        }
       }
     }
 

@@ -1,5 +1,5 @@
-uuid: 1f71ac8c-2469-4e37-b87f-283b5b6e7e4e
-langcode: en
+uuid: 6e10e33e-3e43-4416-adee-588501bc5d12
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -7,9 +7,9 @@ dependencies:
     - paragraphs.paragraphs_type.cards
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
-  default_config_hash: leKauKs0fj4d_L2mr2W5RjockhRjVdJXmnFPX5FZaU4
+  default_config_hash: yfBO27jmuA9mp36_dlor_i4nGHEVumXBUVCTm_Tz3po
 id: paragraph.cards.field_cards_nt_markers
 field_name: field_cards_nt_markers
 entity_type: paragraph
@@ -17,7 +17,7 @@ bundle: cards
 label: Markers
 description: 'Enable to show clickable markers which jump to a particular slide.'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 1

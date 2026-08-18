@@ -1,14 +1,14 @@
-uuid: 12e8e3f5-7399-4b0e-86ee-bc398f8d1d44
-langcode: en
+uuid: 346c94f5-b5b5-495e-8062-55ed0676fade
+langcode: en-gb
 status: true
 dependencies:
   module:
     - paragraphs
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
-  default_config_hash: LjgJ547XDJGoNfSDwe114cvNbRL1k0gorDd5QK8WX4g
+  default_config_hash: SqvVJbyjcCcD1aPipXigr88KI8KKgTNAHMy6IciDBDE
 id: paragraph.field_cards_nt_arrows
 field_name: field_cards_nt_arrows
 entity_type: paragraph

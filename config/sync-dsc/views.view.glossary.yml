@@ -1,4 +1,4 @@
-uuid: 57608864-8dbc-4e1f-88a7-13d7a820402d
+uuid: 9143d456-17bf-4a0d-92e6-ca92edaa3fdd
 langcode: en
 status: false
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: nmnCpWLsIDkgaZEKlzl9uYT7NYEM_5uKzQtTbvkl878
+  default_config_hash: r-klgGeO4haVHqAwxW1HXZLzdzLSMUVC08OuTBrRh58
 id: glossary
 label: Glossary
 module: node
@@ -196,6 +196,7 @@ display:
         type: mini
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 36
           total_pages: 0
           id: 0

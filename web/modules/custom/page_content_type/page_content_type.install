@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\remora_core\Service\AddNewField;
 use Drupal\tagging\Service\InstallTaggingFieldsService;
 
 /**
@@ -15,10 +16,18 @@ function page_content_type_install(bool $isSyncing): void
     return;
   }
 
+  /** @var AddNewField $addNewFieldService */
+  $addNewFieldService = Drupal::service('remora_core.service.add_new_field');
+  $addNewFieldService->addToSearchIndex('field_categories', 'Categories » Taxonomy term » Name');
+  $addNewFieldService->addToSearchIndex('field_tags', 'Tags » Taxonomy term » Name');
+  $addNewFieldService->addToSearchIndex('field_topics', 'Topics » Taxonomy term » Name');
+
   /** @var InstallTaggingFieldsService $fieldService */
   $fieldService = Drupal::service('tagging.service.install_fields');
   // Attach the fields to CT.
   $fieldService->installFields('page');
   // add fields to the search index
   $fieldService->addSearchFields();
+
+  $addNewFieldService->addToSearchIndex('field_media_image', 'Media » Image » File URI', 'string', 'uri', 'entity:media');
 }

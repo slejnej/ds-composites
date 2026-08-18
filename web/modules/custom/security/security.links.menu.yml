@@ -13,7 +13,7 @@ security.settings.permissionspolicy:
     route_name: permissionspolicy.settings
     parent: security.settings
 
-security.settings.obfuscate_versions:
-  title: 'Obfuscate versions config'
-  route_name: security.settings.obfuscate_versions
+security.settings.headers:
+  title: 'Headers config'
+  route_name: security.settings.headers
   parent: security.settings

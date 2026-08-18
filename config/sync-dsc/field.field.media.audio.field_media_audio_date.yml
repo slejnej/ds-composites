@@ -1,0 +1,23 @@
+uuid: e2238f13-f0ae-41f8-b23a-58c425a3cce6
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_audio_date
+    - media.type.audio
+  module:
+    - datetime
+_core:
+  default_config_hash: pS3bnuWmQX6VSpfpCb7dJh__-AzaboVTBOIJyZs3BF0
+id: media.audio.field_media_audio_date
+field_name: field_media_audio_date
+entity_type: media
+bundle: audio
+label: 'Published date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,4 +1,4 @@
-uuid: 3a28cd2e-ba1b-4be2-9286-ad34bf71fc88
+uuid: 3bb03a8a-baee-4af0-9231-0137957eea1f
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ items:
     name: core.base_field_override.node.news.promote
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -41,7 +41,7 @@ items:
     collection: ''
     name: core.entity_form_display.node.news.default
     data:
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -50,17 +50,17 @@ items:
           - field.field.node.news.field_date
           - field.field.node.news.field_hero_content
           - field.field.node.news.field_image
-          - field.field.node.news.field_main_nuggets
+          - field.field.node.news.field_main_pods
           - field.field.node.news.field_media
           - field.field.node.news.field_meta_tags
           - field.field.node.news.field_news_attachments
           - field.field.node.news.field_news_authors
           - field.field.node.news.field_news_display_date
           - field.field.node.news.field_news_link
-          - field.field.node.news.field_postscript_nuggets
+          - field.field.node.news.field_postscript_pods
           - field.field.node.news.field_seo_description
           - field.field.node.news.field_seo_title
-          - field.field.node.news.field_sidebar_nuggets
+          - field.field.node.news.field_sidebar_pods
           - field.field.node.news.field_summary
           - node.type.news
         module:
@@ -117,7 +117,7 @@ items:
             children:
               - group_overview
               - group_news_details
-              - group_nuggets
+              - group_pods
             label: 'Main content tabs'
             region: content
             parent_name: group_main_content
@@ -158,12 +158,12 @@ items:
               classes: ''
               show_empty_fields: true
               id: ''
-              description: 'This image/video and body will be displayed in a set location on this page. If you want to customise the layout, do not complete this section and use the Nuggets section.'
+              description: 'This image/video and body will be displayed in a set location on this page. If you want to customise the layout, do not complete this section and use the Pods section.'
               required_fields: true
-          group_nuggets:
+          group_pods:
             children:
-              - field_main_nuggets
-            label: Nuggets
+              - field_main_pods
+            label: Pods
             region: content
             parent_name: group_main_content_tabs
             weight: 22
@@ -192,7 +192,7 @@ items:
               required_fields: true
           group_sidebar_content:
             children:
-              - field_sidebar_nuggets
+              - field_sidebar_pods
             label: 'Sidebar content'
             region: content
             parent_name: group_news_tabs
@@ -203,11 +203,11 @@ items:
               show_empty_fields: true
               id: ''
               formatter: closed
-              description: 'These nuggets will be displayed on the right hand side of your page, but may also drop below the main content on smaller screen sizes.'
+              description: 'These pods will be displayed on the right hand side of your page, but may also drop below the main content on smaller screen sizes.'
               required_fields: true
           group_postscript_content:
             children:
-              - field_postscript_nuggets
+              - field_postscript_pods
             label: 'Postscript content'
             region: content
             parent_name: group_news_tabs
@@ -218,7 +218,7 @@ items:
               show_empty_fields: true
               id: ''
               formatter: closed
-              description: 'These nuggets will be displayed below all other content added to your page, above the footer and will usually fill the width of the page.'
+              description: 'These pods will be displayed below all other content added to your page, above the footer and will usually fill the width of the page.'
               required_fields: true
           group_summary_seo:
             children:
@@ -337,7 +337,7 @@ items:
           settings:
             media_types: {  }
           third_party_settings: {  }
-        field_main_nuggets:
+        field_main_pods:
           type: layout_paragraphs
           weight: 8
           region: content
@@ -385,7 +385,7 @@ items:
             placeholder_url: ''
             placeholder_title: ''
           third_party_settings: {  }
-        field_postscript_nuggets:
+        field_postscript_pods:
           type: layout_paragraphs
           weight: 5
           region: content
@@ -411,7 +411,7 @@ items:
             size: 60
             placeholder: ''
           third_party_settings: {  }
-        field_sidebar_nuggets:
+        field_sidebar_pods:
           type: layout_paragraphs
           weight: 16
           region: content
@@ -499,12 +499,12 @@ items:
       hidden:
         field_meta_tags: true
       _core:
-        default_config_hash: '-heRG2qR7U4LD_yxln-Crpvv3LCLMQxis7GBWZyOkCo'
+        default_config_hash: nZjmbwMvXW1qGYeW2YREMyi4HYBhOoLc0tD8ZIkN084
   -
     collection: ''
     name: core.entity_view_display.node.news.card
     data:
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -514,17 +514,17 @@ items:
           - field.field.node.news.field_date
           - field.field.node.news.field_hero_content
           - field.field.node.news.field_image
-          - field.field.node.news.field_main_nuggets
+          - field.field.node.news.field_main_pods
           - field.field.node.news.field_media
           - field.field.node.news.field_meta_tags
           - field.field.node.news.field_news_attachments
           - field.field.node.news.field_news_authors
           - field.field.node.news.field_news_display_date
           - field.field.node.news.field_news_link
-          - field.field.node.news.field_postscript_nuggets
+          - field.field.node.news.field_postscript_pods
           - field.field.node.news.field_seo_description
           - field.field.node.news.field_seo_title
-          - field.field.node.news.field_sidebar_nuggets
+          - field.field.node.news.field_sidebar_pods
           - field.field.node.news.field_summary
           - node.type.news
         module:
@@ -594,22 +594,225 @@ items:
       hidden:
         field_body: true
         field_hero_content: true
-        field_main_nuggets: true
+        field_main_pods: true
         field_media: true
         field_meta_tags: true
         field_news_attachments: true
         field_news_link: true
-        field_postscript_nuggets: true
+        field_postscript_pods: true
         field_seo_description: true
         field_seo_title: true
-        field_sidebar_nuggets: true
+        field_sidebar_pods: true
         langcode: true
         search_api_excerpt: true
   -
     collection: ''
+    name: core.entity_view_display.node.news.content_specific_search_index
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.node.content_specific_search_index
+          - field.field.node.news.field_alternative_title
+          - field.field.node.news.field_body
+          - field.field.node.news.field_categories
+          - field.field.node.news.field_date
+          - field.field.node.news.field_hero_content
+          - field.field.node.news.field_image
+          - field.field.node.news.field_main_pods
+          - field.field.node.news.field_media
+          - field.field.node.news.field_meta_tags
+          - field.field.node.news.field_news_attachments
+          - field.field.node.news.field_news_authors
+          - field.field.node.news.field_news_display_date
+          - field.field.node.news.field_news_link
+          - field.field.node.news.field_postscript_pods
+          - field.field.node.news.field_seo_description
+          - field.field.node.news.field_seo_title
+          - field.field.node.news.field_sidebar_pods
+          - field.field.node.news.field_summary
+          - field.field.node.news.field_tags
+          - field.field.node.news.field_topics
+          - node.type.news
+        module:
+          - datetime
+          - entity_reference_revisions
+          - layout_builder
+          - link
+          - metatag
+          - text
+          - user
+      third_party_settings:
+        layout_builder:
+          enabled: false
+          allow_custom: false
+      id: node.news.content_specific_search_index
+      targetEntityType: node
+      bundle: news
+      mode: content_specific_search_index
+      content:
+        field_alternative_title:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 112
+          region: content
+        field_body:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 104
+          region: content
+        field_categories:
+          type: entity_reference_entity_view
+          label: hidden
+          settings:
+            view_mode: default
+            link: false
+          third_party_settings: {  }
+          weight: 10
+          region: content
+        field_date:
+          type: datetime_default
+          label: hidden
+          settings:
+            timezone_override: ''
+            format_type: remora_ct_date
+          third_party_settings: {  }
+          weight: 117
+          region: content
+        field_image:
+          type: entity_reference_entity_view
+          label: hidden
+          settings:
+            view_mode: default
+            link: false
+          third_party_settings: {  }
+          weight: 113
+          region: content
+        field_main_pods:
+          type: entity_reference_revisions_entity_view
+          label: hidden
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 109
+          region: content
+        field_media:
+          type: entity_reference_entity_view
+          label: hidden
+          settings:
+            view_mode: default
+            link: false
+          third_party_settings: {  }
+          weight: 103
+          region: content
+        field_meta_tags:
+          type: metatag_empty_formatter
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 17
+          region: content
+        field_news_attachments:
+          type: entity_reference_entity_view
+          label: hidden
+          settings:
+            view_mode: default
+            link: false
+          third_party_settings: {  }
+          weight: 120
+          region: content
+        field_news_authors:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 121
+          region: content
+        field_news_display_date:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 122
+          region: content
+        field_news_link:
+          type: link
+          label: hidden
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: ''
+            target: ''
+          third_party_settings: {  }
+          weight: 119
+          region: content
+        field_postscript_pods:
+          type: entity_reference_revisions_entity_view
+          label: hidden
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 110
+          region: content
+        field_seo_description:
+          type: basic_string
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 116
+          region: content
+        field_seo_title:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 115
+          region: content
+        field_sidebar_pods:
+          type: entity_reference_revisions_entity_view
+          label: hidden
+          settings:
+            view_mode: default
+            link: ''
+          third_party_settings: {  }
+          weight: 111
+          region: content
+        field_summary:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 114
+          region: content
+        links:
+          settings: {  }
+          third_party_settings: {  }
+          weight: 100
+          region: content
+      hidden:
+        field_hero_content: true
+        field_tags: true
+        field_topics: true
+        langcode: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: 1lcXMsPjmrX35zFPrgx4HbuWKN4i-96vc0S5LcPiDbw
+  -
+    collection: ''
     name: core.entity_view_display.node.news.default
     data:
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -618,17 +821,17 @@ items:
           - field.field.node.news.field_date
           - field.field.node.news.field_hero_content
           - field.field.node.news.field_image
-          - field.field.node.news.field_main_nuggets
+          - field.field.node.news.field_main_pods
           - field.field.node.news.field_media
           - field.field.node.news.field_meta_tags
           - field.field.node.news.field_news_attachments
           - field.field.node.news.field_news_authors
           - field.field.node.news.field_news_display_date
           - field.field.node.news.field_news_link
-          - field.field.node.news.field_postscript_nuggets
+          - field.field.node.news.field_postscript_pods
           - field.field.node.news.field_seo_description
           - field.field.node.news.field_seo_title
-          - field.field.node.news.field_sidebar_nuggets
+          - field.field.node.news.field_sidebar_pods
           - field.field.node.news.field_summary
           - node.type.news
         module:
@@ -675,7 +878,7 @@ items:
           third_party_settings: {  }
           weight: 113
           region: content
-        field_main_nuggets:
+        field_main_pods:
           type: entity_reference_revisions_entity_view
           label: above
           settings:
@@ -737,7 +940,7 @@ items:
           third_party_settings: {  }
           weight: 119
           region: content
-        field_postscript_nuggets:
+        field_postscript_pods:
           type: entity_reference_revisions_entity_view
           label: above
           settings:
@@ -761,7 +964,7 @@ items:
           third_party_settings: {  }
           weight: 115
           region: content
-        field_sidebar_nuggets:
+        field_sidebar_pods:
           type: entity_reference_revisions_entity_view
           label: above
           settings:
@@ -787,12 +990,12 @@ items:
         langcode: true
         search_api_excerpt: true
       _core:
-        default_config_hash: 7jqkm9nxEP6rHWDeUb5DAk1bZYg9XQummlcJsMitTHE
+        default_config_hash: 6aJytVsfj5PVyKwC-QZluP8gO4fJM24tRLdQCETBQMc
   -
     collection: ''
     name: core.entity_view_display.node.news.full
     data:
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -802,17 +1005,17 @@ items:
           - field.field.node.news.field_date
           - field.field.node.news.field_hero_content
           - field.field.node.news.field_image
-          - field.field.node.news.field_main_nuggets
+          - field.field.node.news.field_main_pods
           - field.field.node.news.field_media
           - field.field.node.news.field_meta_tags
           - field.field.node.news.field_news_attachments
           - field.field.node.news.field_news_authors
           - field.field.node.news.field_news_display_date
           - field.field.node.news.field_news_link
-          - field.field.node.news.field_postscript_nuggets
+          - field.field.node.news.field_postscript_pods
           - field.field.node.news.field_seo_description
           - field.field.node.news.field_seo_title
-          - field.field.node.news.field_sidebar_nuggets
+          - field.field.node.news.field_sidebar_pods
           - field.field.node.news.field_summary
           - node.type.news
         module:
@@ -867,7 +1070,7 @@ items:
           third_party_settings: {  }
           weight: 8
           region: content
-        field_main_nuggets:
+        field_main_pods:
           type: layout_paragraphs
           label: hidden
           settings:
@@ -922,7 +1125,7 @@ items:
           third_party_settings: {  }
           weight: 13
           region: content
-        field_postscript_nuggets:
+        field_postscript_pods:
           type: layout_paragraphs
           label: hidden
           settings:
@@ -946,7 +1149,7 @@ items:
           third_party_settings: {  }
           weight: 10
           region: content
-        field_sidebar_nuggets:
+        field_sidebar_pods:
           type: layout_paragraphs
           label: hidden
           settings:
@@ -972,12 +1175,12 @@ items:
         langcode: true
         search_api_excerpt: true
       _core:
-        default_config_hash: KTuYzdzFp-ktC2y7iqrwdYx6BKx4QHc4JuOkLoURE0o
+        default_config_hash: Ckj9i6y9RTSbBF-r2cguS13hq5KwMslLG815fAOlyLY
   -
     collection: ''
     name: core.entity_view_display.node.news.search_index
     data:
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -987,17 +1190,17 @@ items:
           - field.field.node.news.field_date
           - field.field.node.news.field_hero_content
           - field.field.node.news.field_image
-          - field.field.node.news.field_main_nuggets
+          - field.field.node.news.field_main_pods
           - field.field.node.news.field_media
           - field.field.node.news.field_meta_tags
           - field.field.node.news.field_news_attachments
           - field.field.node.news.field_news_authors
           - field.field.node.news.field_news_display_date
           - field.field.node.news.field_news_link
-          - field.field.node.news.field_postscript_nuggets
+          - field.field.node.news.field_postscript_pods
           - field.field.node.news.field_seo_description
           - field.field.node.news.field_seo_title
-          - field.field.node.news.field_sidebar_nuggets
+          - field.field.node.news.field_sidebar_pods
           - field.field.node.news.field_summary
           - node.type.news
         module:
@@ -1052,7 +1255,7 @@ items:
           third_party_settings: {  }
           weight: 12
           region: content
-        field_main_nuggets:
+        field_main_pods:
           type: layout_paragraphs
           label: hidden
           settings:
@@ -1106,7 +1309,7 @@ items:
           third_party_settings: {  }
           weight: 17
           region: content
-        field_postscript_nuggets:
+        field_postscript_pods:
           type: layout_paragraphs
           label: hidden
           settings:
@@ -1130,7 +1333,7 @@ items:
           third_party_settings: {  }
           weight: 14
           region: content
-        field_sidebar_nuggets:
+        field_sidebar_pods:
           type: layout_paragraphs
           label: hidden
           settings:
@@ -1156,12 +1359,12 @@ items:
         langcode: true
         search_api_excerpt: true
       _core:
-        default_config_hash: 4BdK_iYY5oGEAGDr215Zi5DE_vrNimRAcsf6-l5keV4
+        default_config_hash: CSkKxTSxjZWrp-uQvj4z7hLhh_hUKQNrkyzlI46y4hs
   -
     collection: ''
     name: core.entity_view_display.node.news.search_rendered_output
     data:
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1171,17 +1374,17 @@ items:
           - field.field.node.news.field_date
           - field.field.node.news.field_hero_content
           - field.field.node.news.field_image
-          - field.field.node.news.field_main_nuggets
+          - field.field.node.news.field_main_pods
           - field.field.node.news.field_media
           - field.field.node.news.field_meta_tags
           - field.field.node.news.field_news_attachments
           - field.field.node.news.field_news_authors
           - field.field.node.news.field_news_display_date
           - field.field.node.news.field_news_link
-          - field.field.node.news.field_postscript_nuggets
+          - field.field.node.news.field_postscript_pods
           - field.field.node.news.field_seo_description
           - field.field.node.news.field_seo_title
-          - field.field.node.news.field_sidebar_nuggets
+          - field.field.node.news.field_sidebar_pods
           - field.field.node.news.field_summary
           - node.type.news
         module:
@@ -1231,7 +1434,7 @@ items:
           third_party_settings: {  }
           weight: 5
           region: content
-        field_main_nuggets:
+        field_main_pods:
           type: layout_paragraphs
           label: hidden
           settings:
@@ -1264,7 +1467,7 @@ items:
           third_party_settings: {  }
           weight: 17
           region: content
-        field_postscript_nuggets:
+        field_postscript_pods:
           type: layout_paragraphs
           label: hidden
           settings:
@@ -1273,7 +1476,7 @@ items:
           third_party_settings: {  }
           weight: 7
           region: content
-        field_sidebar_nuggets:
+        field_sidebar_pods:
           type: layout_paragraphs
           label: hidden
           settings:
@@ -1300,74 +1503,13 @@ items:
         links: true
         search_api_excerpt: true
       _core:
-        default_config_hash: R-zmc-26G-FTOGytGsqB7ipI5Ep2UIMcmc-dNVjztAU
-  -
-    collection: ''
-    name: core.entity_view_display.node.news.teaser
-    data:
-      langcode: en
-      status: true
-      dependencies:
-        config:
-          - core.entity_view_mode.node.teaser
-          - field.field.node.news.field_alternative_title
-          - field.field.node.news.field_body
-          - field.field.node.news.field_date
-          - field.field.node.news.field_hero_content
-          - field.field.node.news.field_image
-          - field.field.node.news.field_main_nuggets
-          - field.field.node.news.field_media
-          - field.field.node.news.field_meta_tags
-          - field.field.node.news.field_news_attachments
-          - field.field.node.news.field_news_authors
-          - field.field.node.news.field_news_display_date
-          - field.field.node.news.field_news_link
-          - field.field.node.news.field_postscript_nuggets
-          - field.field.node.news.field_seo_description
-          - field.field.node.news.field_seo_title
-          - field.field.node.news.field_sidebar_nuggets
-          - field.field.node.news.field_summary
-          - node.type.news
-        module:
-          - user
-      id: node.news.teaser
-      targetEntityType: node
-      bundle: news
-      mode: teaser
-      content:
-        links:
-          settings: {  }
-          third_party_settings: {  }
-          weight: 100
-          region: content
-      hidden:
-        field_alternative_title: true
-        field_body: true
-        field_date: true
-        field_hero_content: true
-        field_image: true
-        field_main_nuggets: true
-        field_media: true
-        field_meta_tags: true
-        field_news_attachments: true
-        field_news_authors: true
-        field_news_display_date: true
-        field_news_link: true
-        field_postscript_nuggets: true
-        field_seo_description: true
-        field_seo_title: true
-        field_sidebar_nuggets: true
-        field_summary: true
-        langcode: true
-        search_api_excerpt: true
-      _core:
-        default_config_hash: tuxRtG_7Y-XurU7iLuOnxJ5_jEXZH7PaFjZOQdFJXqE
+        default_config_hash: eyp9-63ApeAzaOwogAGViQYfl9J8awa6LEQu9dhU8FU
   -
     collection: ''
     name: field.field.node.news.field_alternative_title
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1397,7 +1539,7 @@ items:
     name: field.field.node.news.field_body
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1424,45 +1566,10 @@ items:
         default_config_hash: 7273dzuXEIekLNlXbJR7jrpzAFR4p6P63IkQ5PBDl_4
   -
     collection: ''
-    name: field.field.node.news.field_countries
-    data:
-      uuid: null
-      langcode: en
-      status: true
-      dependencies:
-        config:
-          - field.storage.node.field_countries
-          - node.type.news
-          - taxonomy.vocabulary.cit_countries_information
-      id: node.news.field_countries
-      field_name: field_countries
-      entity_type: node
-      bundle: news
-      label: Countries
-      description: 'Relate your content to one or multiple countries.'
-      required: false
-      translatable: false
-      default_value: {  }
-      default_value_callback: ''
-      settings:
-        handler: 'default:taxonomy_term'
-        handler_settings:
-          target_bundles:
-            cit_countries_information: cit_countries_information
-          sort:
-            field: name
-            direction: asc
-          auto_create: false
-          auto_create_bundle: ''
-      field_type: entity_reference
-      _core:
-        default_config_hash: D8YQ4eGAltHgamYI4wkO_3v-3wxdQW71pCL8pmlD9gg
-  -
-    collection: ''
     name: field.field.node.news.field_date
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1492,7 +1599,7 @@ items:
     name: field.field.node.news.field_diseases
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1527,7 +1634,7 @@ items:
     name: field.field.node.news.field_hero_content
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1540,7 +1647,7 @@ items:
       entity_type: node
       bundle: news
       label: 'Hero content'
-      description: 'These nuggets will be displayed at the top of your page.'
+      description: 'These pods will be displayed at the top of your page.'
       required: false
       translatable: false
       default_value: {  }
@@ -1551,13 +1658,13 @@ items:
           target_bundles: null
       field_type: entity_reference_revisions
       _core:
-        default_config_hash: yW-azsKFxTNbpLIBV0JVVe8r8RGI8u-SHxc0qNTPgg8
+        default_config_hash: eL14-78P4jDcjWYfQquCpGxFWwcAdzW7zqavaIXkc8s
   -
     collection: ''
     name: field.field.node.news.field_image
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1582,22 +1689,22 @@ items:
         default_config_hash: k7PKwVLe2UqQ3j2vkIfQRwUCB4PSXYLSE2lqvm7oijQ
   -
     collection: ''
-    name: field.field.node.news.field_main_nuggets
+    name: field.field.node.news.field_main_pods
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
-          - field.storage.node.field_main_nuggets
+          - field.storage.node.field_main_pods
           - node.type.news
         module:
           - entity_reference_revisions
-      id: node.news.field_main_nuggets
-      field_name: field_main_nuggets
+      id: node.news.field_main_pods
+      field_name: field_main_pods
       entity_type: node
       bundle: news
-      label: Nuggets
+      label: Pods
       description: ''
       required: false
       translatable: false
@@ -1609,13 +1716,13 @@ items:
           target_bundles: null
       field_type: entity_reference_revisions
       _core:
-        default_config_hash: 2qHmwHKP38X0gK2sV8si8062l7_rEmzSLQfFfX36lyc
+        default_config_hash: '-AcJF10WthhsdaedboHP8P4SmzwU0HUuQOObD1rbGFo'
   -
     collection: ''
     name: field.field.node.news.field_media
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1642,7 +1749,7 @@ items:
     collection: ''
     name: field.field.node.news.field_meta_tags
     data:
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1669,7 +1776,7 @@ items:
     name: field.field.node.news.field_news_attachments
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1704,7 +1811,7 @@ items:
     name: field.field.node.news.field_news_authors
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1729,7 +1836,7 @@ items:
     name: field.field.node.news.field_news_display_date
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1754,7 +1861,7 @@ items:
     name: field.field.node.news.field_news_link
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1780,22 +1887,22 @@ items:
         default_config_hash: JvG7z_55SUM14EUgA9JXlavcwhWuPfa7BK-Jll4c4Zw
   -
     collection: ''
-    name: field.field.node.news.field_postscript_nuggets
+    name: field.field.node.news.field_postscript_pods
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
-          - field.storage.node.field_postscript_nuggets
+          - field.storage.node.field_postscript_pods
           - node.type.news
         module:
           - entity_reference_revisions
-      id: node.news.field_postscript_nuggets
-      field_name: field_postscript_nuggets
+      id: node.news.field_postscript_pods
+      field_name: field_postscript_pods
       entity_type: node
       bundle: news
-      label: Nuggets
+      label: Pods
       description: ''
       required: false
       translatable: false
@@ -1807,12 +1914,12 @@ items:
           target_bundles: null
       field_type: entity_reference_revisions
       _core:
-        default_config_hash: GLF2S6JsHDEpTbQC3jbsRffkj3SLtpjZMWyK9brnKco
+        default_config_hash: t0zYtZiKcs_-EX9REgV3WOYvCQ7wYbekAGuZyubddc4
   -
     collection: ''
     name: field.field.node.news.field_seo_description
     data:
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1838,7 +1945,7 @@ items:
     collection: ''
     name: field.field.node.news.field_seo_title
     data:
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1862,22 +1969,22 @@ items:
         default_config_hash: yaUH9bqqOSLV5fUMVGCNCSiISisXQOy4E315WUU8lFU
   -
     collection: ''
-    name: field.field.node.news.field_sidebar_nuggets
+    name: field.field.node.news.field_sidebar_pods
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
-          - field.storage.node.field_sidebar_nuggets
+          - field.storage.node.field_sidebar_pods
           - node.type.news
         module:
           - entity_reference_revisions
-      id: node.news.field_sidebar_nuggets
-      field_name: field_sidebar_nuggets
+      id: node.news.field_sidebar_pods
+      field_name: field_sidebar_pods
       entity_type: node
       bundle: news
-      label: Nuggets
+      label: Pods
       description: ''
       required: false
       translatable: false
@@ -1889,13 +1996,13 @@ items:
           target_bundles: null
       field_type: entity_reference_revisions
       _core:
-        default_config_hash: m_h5QiksCQSur0OjreuIEQeekzkylJgyNQmg7MmV2g4
+        default_config_hash: 2deo0DhxSj2Bwg2c4wRxTrZsdq0crZAEnayUJfkkH3w
   -
     collection: ''
     name: field.field.node.news.field_summary
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1925,7 +2032,7 @@ items:
     name: field.field.node.news.field_tags
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1960,7 +2067,7 @@ items:
     name: field.field.node.news.field_topics
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1995,7 +2102,7 @@ items:
     name: field.storage.node.field_news_attachments
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -2021,7 +2128,7 @@ items:
     name: field.storage.node.field_news_authors
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -2048,7 +2155,7 @@ items:
     name: field.storage.node.field_news_display_date
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -2075,7 +2182,7 @@ items:
     name: field.storage.node.field_news_link
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -2099,7 +2206,7 @@ items:
     collection: ''
     name: language.content_settings.node.news
     data:
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -2116,7 +2223,7 @@ items:
     name: node.type.news
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         module:

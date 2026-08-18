@@ -1,5 +1,5 @@
-uuid: 36394297-02cb-48ae-970d-4e2953992e76
-langcode: en
+uuid: 4c597a7c-7a6e-4543-a9c9-1d9c6c249fc9
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -7,9 +7,9 @@ dependencies:
     - paragraphs.paragraphs_type.cards
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
-  default_config_hash: M1mqgN1rOtmCvKtUhhPmFxLZeukmNrIPUmKplcOKHqs
+  default_config_hash: bXVZclZPP4b_QtZc-91Aj5Ls178HULv88MWG2ZquNVY
 id: paragraph.cards.field_cards_nt_autoplay
 field_name: field_cards_nt_autoplay
 entity_type: paragraph
@@ -17,7 +17,7 @@ bundle: cards
 label: Autoplay
 description: 'Enable to automatically play and advance to subsequent slides.'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 1

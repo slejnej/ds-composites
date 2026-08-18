@@ -4,12 +4,8 @@ namespace Drupal\remora_core\EventSubscriber;
 
 use Drupal;
 use Drupal\Core\Entity\EntityReferenceSelection\SelectionPluginManagerInterface;
-use Drupal\Core\Url;
 use Drupal\field\Entity\FieldConfig;
-use Drupal\layout_paragraphs\Event\LayoutParagraphsAllowedTypesEvent;
-use Drupal\media_library\Event\BuildUIEvent;
-use Drupal\remora_core\Plugin\EntityReferenceSelection\BaseMediaSelection;
-use Drupal\remora_core\Plugin\EntityReferenceSelection\BaseParagraphSelection;
+use Drupal\remora_core\Event\BuildUIEvent;
 use Drupal\remora_core\Plugin\EntityReferenceSelection\ReferenceableEntitySelectionInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -81,7 +77,7 @@ class MediaLibraryBuildUISubscriber implements EventSubscriberInterface
     $allowedTypes = $handler->getReferenceableEntityService()->getAllReferenceableEntityTypes();
 
     // only keep the types we agree are allowed
-    $types = array_intersect_key($types, $allowedTypes);
+    $types = array_intersect($types, $allowedTypes);
     $event->setAllowedTypeIDs($types);
   }
 }

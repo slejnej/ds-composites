@@ -2,8 +2,8 @@
 
 namespace Drupal\remora_core\Repository;
 
+use Drupal\drupal_search\BaseRepository\BaseRepository;
 use Drupal\file\Entity\File;
-use MantaRayMedia\BaseRepository\BaseRepository;
 
 class FileRepository extends BaseRepository
 {
@@ -11,7 +11,18 @@ class FileRepository extends BaseRepository
 
   public function findByUri(string $uri): ?File
   {
-    return $this->findOneBy(['uri' => $uri]);
-  }
+    $files = $this->getStorage()->loadByProperties(['uri' => $uri]);
 
+    if (count($files) > 1) {
+      \Drupal::logger('remora_core')->warning(
+        'Multiple files found for URI "@uri". Expected only one.',
+        ['@uri' => $uri]
+      );
+      return null;
+    }
+
+    $file = reset($files);
+
+    return $file instanceof File ? $file : null;
+  }
 }

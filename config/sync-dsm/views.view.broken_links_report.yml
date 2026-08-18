@@ -1,5 +1,5 @@
-uuid: c06a4fdf-2651-4123-b645-8ccf378adf39
-langcode: en
+uuid: b4a47d81-05f9-4b33-8be0-1ddb48ca25ed
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -797,6 +797,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:

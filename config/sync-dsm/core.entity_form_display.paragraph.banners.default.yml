@@ -1,5 +1,5 @@
-uuid: 38994dd7-8bd4-44ba-9485-9809af2205d4
-langcode: en
+uuid: 50f5aa02-92d4-4a93-96a8-7b44f41eadf3
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -19,11 +19,11 @@ third_party_settings:
     settings:
       label: ''
   field_group:
-    group_nugget_title_properties:
+    group_pod_title_properties:
       children:
         - field_editor_title
         - field_display_title
-      label: 'Nugget title & properties'
+      label: 'Pod title & properties'
       region: content
       parent_name: ''
       weight: 0
@@ -35,10 +35,10 @@ third_party_settings:
         open: true
         description: ''
         required_fields: true
-    group_nugget_content:
+    group_pod_content:
       children:
         - field_banner_nt_banners
-      label: 'Nugget content'
+      label: 'Pod content'
       region: content
       parent_name: ''
       weight: 1
@@ -51,7 +51,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: tz0VKUkk5Mr1uhU5RkAqw7zUinBQD-6kGObzvRzj9QQ
+  default_config_hash: uVdNEfGLjDPWd2PNnLRo1U95osh-r25xhWF1c0Lmssk
 id: paragraph.banners.default
 targetEntityType: paragraph
 bundle: banners

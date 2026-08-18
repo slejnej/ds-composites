@@ -1,0 +1,30 @@
+uuid: 6b79ceab-f3ed-4b67-bbbf-3d81061635b6
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - views.view.search
+  module:
+    - system
+    - views
+  theme:
+    - barrio_base_theme
+_core:
+  default_config_hash: xMOXRmFs17mjz79SDElcWudrbmPwMEKmbOXIuS6KTYA
+id: main_search_exposed_form_facet
+theme: barrio_base_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:search-search'
+settings:
+  id: 'views_exposed_filter_block:search-search'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search

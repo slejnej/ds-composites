@@ -23,7 +23,7 @@ nav.navbar .navbar-nav .nav-item {
   }
 
   &:hover {
-    color: $global-color-primary-primary-400;
+    color: $global-color-primary-400;
   }
 }
 
@@ -33,7 +33,7 @@ nav.navbar .navbar-nav .nav-item {
   @media(min-width: 992px) {
     background: $navbar-search-bg;
     svg {
-      fill: $global-color-warning-warning-500;
+      fill: $global-color-warning-500;
     }
   }
 }

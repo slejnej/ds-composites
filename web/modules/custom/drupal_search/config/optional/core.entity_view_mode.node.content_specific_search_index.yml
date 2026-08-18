@@ -1,0 +1,10 @@
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+id: node.content_specific_search_index
+label: 'Content specific search index'
+description: 'This display will be used on content specific search pages, such as the upcoming/past event searches, or the PRA + resource search.'
+targetEntityType: node
+cache: true

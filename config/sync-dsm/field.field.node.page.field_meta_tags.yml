@@ -1,5 +1,5 @@
-uuid: 68b57f92-1a9d-4691-a5d6-0924732aa44b
-langcode: en
+uuid: b5fe74d3-375c-4583-b450-d827f0445a97
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ bundle: page
 label: 'Meta tags'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\node\Entity\Node;
+use Drupal\remora_core\Service\AddNewField;
 
 /**
  *  Automatically registers all the templates in the templates/ directory

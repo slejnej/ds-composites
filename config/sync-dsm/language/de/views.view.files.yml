@@ -1,13 +1,10 @@
 label: Dateien
-description: 'Dateien suchen und verwalten.'
 display:
   default:
     display_title: Standard
     display_options:
       title: Dateien
       fields:
-        fid:
-          label: Fid
         filename:
           label: Name
           separator: ', '
@@ -20,15 +17,10 @@ display:
           settings:
             format_custom_false: Temporär
             format_custom_true: Dauerhaft
-        created:
-          label: Upload-Datum
         changed:
           label: Änderungsdatum
         count:
           label: 'Verwendet in'
-          alter:
-            path: 'admin/content/files/usage/{{ fid }}'
-          format_plural_string: !!binary MSBTdGVsbGUDQGNvdW50IFN0ZWxsZW4=
         operations:
           label: Aktionen
       pager:
@@ -44,12 +36,9 @@ display:
         options:
           submit_button: Filter
           reset_button_label: Zurücksetzen
-          exposed_sorts_label: Sortierung
+          exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
-      empty:
-        area_text_custom:
-          content: 'Keine Dateien verfügbar'
       filters:
         filename:
           expose:
@@ -61,7 +50,6 @@ display:
           expose:
             label: Status
   page_1:
-    display_title: Dateiübersicht
     display_options:
       menu:
         title: Dateien
@@ -74,11 +62,8 @@ display:
           label: Entität
         type:
           label: Entitätstyp
-        module:
-          label: 'Registrierendes Modul'
         count:
           label: Verwendungsanzahl
-          format_plural_string: !!binary MQNAY291bnQ=
       pager:
         options:
           tags:
@@ -92,4 +77,3 @@ display:
         fid:
           exception:
             title: Alle
-          title: 'Informationen zur Nutzung der Datei {{ arguments.fid }}'

@@ -1,0 +1,188 @@
+$form-wrapper-width: 1200px !default;
+
+$form-wrapper-padding: $global-spacing-2 !default;
+$form-wrapper-background: white !default;
+$form-wrapper-radius: $global-border-radius-sm !default;
+
+.user-content.barrio-form form {
+  max-width: $form-wrapper-width;
+  padding: $form-wrapper-padding;
+  background: $form-wrapper-background;
+  border-radius: $form-wrapper-radius;
+  margin: 0;
+  width: 100%;
+
+  .alert.alert-info {
+    margin: 0;
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .lpb-btn {
+    @extend .btn-primary;
+  }
+
+  input.field-add-more-submit {
+    background: $btn-primary-background;
+    color: $btn-primary-color;
+    &:hover {
+      background: $btn-primary-hover-background;
+      color: $btn-primary-hover-color;
+    }
+  }
+
+  .draggable a.tabledrag-handle {
+    margin-left: 0;
+  }
+
+  button.link.tabledrag-toggle-weight {
+    display: none;
+  }
+
+  .fieldset-wrapper {
+    gap: 0;
+  }
+}
+
+.form-control {
+  border-radius: $form-border-radius;
+  border-color: $form-color;
+  color: $form-color;
+  &::placeholder {
+    color: $form-color;
+  }
+}
+
+body .form-select {
+  padding: 4px 12px 4px 8px ;
+  min-width: auto ;
+  color: $form-color;
+}
+
+// FORM ELEMENT STYLES
+main form {
+  display: flex;
+  flex-direction: column;
+  gap: $global-spacing-2;
+
+  .fieldset-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $global-spacing-2;
+
+    .form-item {
+      margin: 0;
+    }
+  }
+
+  // Global labels
+  label,
+  legend span.fieldset-legend {
+    display: inline-block;
+    color: $text-primary;
+    margin-bottom: $global-spacing-05;
+  }
+
+  // Checkboxes
+  label.option {
+    color: $form-color-filled;
+
+    &:hover {
+      color: $form-focused-border;
+    }
+  }
+
+  // Form-item descriptions
+  .form-item .description,
+  .description > div,
+  .description > *, {
+    color: $text-secondary;
+
+    a {
+      color: $text-link;
+
+      &:hover {
+        color: $text-link-hover;
+      }
+    }
+  }
+
+  .form-checkboxes,
+  .form-radios {
+    margin-top: 0;
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+
+    input {
+      margin-right: 5px;
+      border-color: $form-color;
+    }
+
+    label,
+    legend span.fieldset-legend {
+      margin-bottom: $global-spacing-05;
+    }
+  }
+
+  fieldset {
+    border: solid 1px $form-default-border;
+    padding: $global-spacing-2;
+    border-radius: $form-border-radius;
+  }
+}
+
+// User form specific
+.user-content .user-form {
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $global-spacing-2;
+
+    .form-wrapper {
+      gap: 0;
+    }
+  }
+
+  .form-item {
+    margin: 0;
+  }
+
+  .layout__region {
+    display: flex;
+    flex-direction: column;
+    gap: $global-spacing-2;
+  }
+
+  .btn {
+    max-width: 100px;
+  }
+
+  .confirm-parent {
+    margin-top: $global-spacing-2;
+  }
+
+  .password-suggestions {
+    color: $text-secondary;
+  }
+}
+
+.js-form-required.form-required {
+  &::after {
+    content:"*";
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    margin-left: 5px;
+    color: $danger;
+  }
+}
+
+input[type="file"] {
+  font-size: 1rem;
+  margin-bottom: $global-spacing-05;
+}
+
+legend {
+  margin-bottom: $global-spacing-0;
+}

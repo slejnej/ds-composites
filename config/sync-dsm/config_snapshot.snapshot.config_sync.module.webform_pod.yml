@@ -1,0 +1,303 @@
+uuid: 0c0d8657-3e4b-4ff1-9acb-c5b01351a45c
+langcode: en
+status: true
+dependencies:
+  module:
+    - webform_pod
+id: config_sync.module.webform_pod
+snapshotSet: config_sync
+extensionType: module
+extensionName: webform_pod
+items:
+  -
+    collection: ''
+    name: core.entity_form_display.paragraph.webform_pod.default
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.webform_pod.field_display_title
+          - field.field.paragraph.webform_pod.field_editor_title
+          - field.field.paragraph.webform_pod.field_webform_nt_form
+          - paragraphs.paragraphs_type.webform_pod
+        module:
+          - field_group
+          - field_layout
+          - layout_discovery
+          - text
+          - webform
+      third_party_settings:
+        field_layout:
+          id: layout_onecol
+          settings:
+            label: ''
+        field_group:
+          group_pod_title_properties:
+            children:
+              - field_editor_title
+              - field_display_title
+            label: 'Pod title & properties'
+            region: content
+            parent_name: ''
+            weight: 0
+            format_type: details
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              open: true
+              description: ''
+              required_fields: true
+          group_pod_content:
+            children:
+              - field_webform_nt_form
+            label: 'Pod content'
+            region: content
+            parent_name: ''
+            weight: 1
+            format_type: details
+            format_settings:
+              classes: ''
+              show_empty_fields: false
+              id: ''
+              open: true
+              description: ''
+              required_fields: true
+      id: paragraph.webform_pod.default
+      targetEntityType: paragraph
+      bundle: webform_pod
+      mode: default
+      content:
+        field_display_title:
+          type: text_textfield
+          weight: 2
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_editor_title:
+          type: string_textfield
+          weight: 1
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
+        field_webform_nt_form:
+          type: webform_entity_reference_select
+          weight: 2
+          region: content
+          settings:
+            default_data: true
+            webforms: {  }
+          third_party_settings: {  }
+      hidden:
+        created: true
+        status: true
+      _core:
+        default_config_hash: bIPO4N9VA2H6pVLG5O2gB0weLN-CHatfsel2o_T0_i0
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.webform_pod.default
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.field.paragraph.webform_pod.field_display_title
+          - field.field.paragraph.webform_pod.field_editor_title
+          - field.field.paragraph.webform_pod.field_webform_nt_form
+          - paragraphs.paragraphs_type.webform_pod
+        module:
+          - text
+          - webform
+      id: paragraph.webform_pod.default
+      targetEntityType: paragraph
+      bundle: webform_pod
+      mode: default
+      content:
+        field_display_title:
+          type: text_default
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 1
+          region: content
+        field_editor_title:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 0
+          region: content
+        field_webform_nt_form:
+          type: webform_entity_reference_entity_view
+          label: hidden
+          settings:
+            source_entity: true
+            lazy: false
+          third_party_settings: {  }
+          weight: 2
+          region: content
+      hidden:
+        search_api_excerpt: true
+      _core:
+        default_config_hash: DgMfbi1XtZQUwfxyMgx7Haq-I2qSueW7oRhGzgiyLMU
+  -
+    collection: ''
+    name: core.entity_view_display.paragraph.webform_pod.preview
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - core.entity_view_mode.paragraph.preview
+          - field.field.paragraph.webform_pod.field_display_title
+          - field.field.paragraph.webform_pod.field_editor_title
+          - field.field.paragraph.webform_pod.field_webform_nt_form
+          - paragraphs.paragraphs_type.webform_pod
+      id: paragraph.webform_pod.preview
+      targetEntityType: paragraph
+      bundle: webform_pod
+      mode: preview
+      content:
+        field_editor_title:
+          type: string
+          label: hidden
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 0
+          region: content
+      hidden:
+        field_display_title: true
+        field_webform_nt_form: true
+        search_api_excerpt: true
+      _core:
+        default_config_hash: 4cngAF8YL3yr6wvfnj3IgJGm6A9LqVSPDB5ZmsgEOQI
+  -
+    collection: ''
+    name: field.field.paragraph.webform_pod.field_display_title
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_display_title
+          - filter.format.title
+          - paragraphs.paragraphs_type.webform_pod
+        module:
+          - text
+      id: paragraph.webform_pod.field_display_title
+      field_name: field_display_title
+      entity_type: paragraph
+      bundle: webform_pod
+      label: 'Display title'
+      description: 'This title is displayed on the page above the content of this pod.'
+      required: false
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        allowed_formats:
+          - title
+      field_type: text
+      _core:
+        default_config_hash: iOor2PsDZsqLzpeSUaEz2U9-wvcFaU1LrImgaccIges
+  -
+    collection: ''
+    name: field.field.paragraph.webform_pod.field_editor_title
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_editor_title
+          - paragraphs.paragraphs_type.webform_pod
+      id: paragraph.webform_pod.field_editor_title
+      field_name: field_editor_title
+      entity_type: paragraph
+      bundle: webform_pod
+      label: 'Editor title'
+      description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings: {  }
+      field_type: string
+      _core:
+        default_config_hash: 1mPDAI1FyXyEK7uvSO-fUsq5xRKdkpeUhYfyshoUevY
+  -
+    collection: ''
+    name: field.field.paragraph.webform_pod.field_webform_nt_form
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - field.storage.paragraph.field_webform_nt_form
+          - paragraphs.paragraphs_type.webform_pod
+        module:
+          - webform
+      id: paragraph.webform_pod.field_webform_nt_form
+      field_name: field_webform_nt_form
+      entity_type: paragraph
+      bundle: webform_pod
+      label: Webform
+      description: ''
+      required: true
+      translatable: false
+      default_value: {  }
+      default_value_callback: ''
+      settings:
+        handler: 'default:webform'
+        handler_settings:
+          target_bundles: null
+          auto_create: false
+      field_type: webform
+      _core:
+        default_config_hash: iCnbFraPLUDrb-oT8hHQWKaJmZ9aOte14ao7qp6BoiM
+  -
+    collection: ''
+    name: field.storage.paragraph.field_webform_nt_form
+    data:
+      langcode: en-gb
+      status: true
+      dependencies:
+        module:
+          - paragraphs
+          - webform
+      id: paragraph.field_webform_nt_form
+      field_name: field_webform_nt_form
+      entity_type: paragraph
+      type: webform
+      settings:
+        target_type: webform
+      module: webform
+      locked: false
+      cardinality: 1
+      translatable: true
+      indexes: {  }
+      persist_with_no_fields: false
+      custom_storage: false
+      _core:
+        default_config_hash: yWj_X7mpIQgeNTMmqZx_YMz_JqDfS-KQ7ceB6tiYeck
+  -
+    collection: ''
+    name: paragraphs.paragraphs_type.webform_pod
+    data:
+      langcode: en-gb
+      status: true
+      dependencies: {  }
+      id: webform_pod
+      label: Webform
+      icon_uuid: null
+      icon_default: null
+      description: ''
+      behavior_plugins: {  }
+      _core:
+        default_config_hash: z6hr6qmuqYaayEkiuZnNvozSDsRJfcqRZgV_Jtd1x_Q

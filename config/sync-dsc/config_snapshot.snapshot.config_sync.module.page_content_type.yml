@@ -1,4 +1,4 @@
-uuid: e5d194f6-8eaf-4952-9624-8971951784b6
+uuid: cb27ee5e-0be1-4241-9bd4-392382606c5a
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ items:
     name: core.base_field_override.node.page.promote
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -66,24 +66,22 @@ items:
     name: core.entity_form_display.node.page.default
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
           - field.field.node.page.field_alternative_title
           - field.field.node.page.field_body
-          - field.field.node.page.field_countries
-          - field.field.node.page.field_diseases
           - field.field.node.page.field_hero_content
           - field.field.node.page.field_image
           - field.field.node.page.field_landing
-          - field.field.node.page.field_main_nuggets
+          - field.field.node.page.field_main_pods
           - field.field.node.page.field_media
           - field.field.node.page.field_meta_tags
-          - field.field.node.page.field_postscript_nuggets
+          - field.field.node.page.field_postscript_pods
           - field.field.node.page.field_seo_description
           - field.field.node.page.field_seo_title
-          - field.field.node.page.field_sidebar_nuggets
+          - field.field.node.page.field_sidebar_pods
           - field.field.node.page.field_summary
           - field.field.node.page.field_tags
           - field.field.node.page.field_topics
@@ -123,7 +121,7 @@ items:
               width_breakpoint: 640
           group_sidebar_content:
             children:
-              - field_sidebar_nuggets
+              - field_sidebar_pods
             label: 'Sidebar content'
             region: content
             parent_name: group_page_tabs
@@ -134,7 +132,7 @@ items:
               show_empty_fields: true
               id: ''
               formatter: closed
-              description: 'These nuggets will be displayed on the right hand side of your page, but may also drop below the main content on smaller screen sizes.'
+              description: 'These pods will be displayed on the right hand side of your page, but may also drop below the main content on smaller screen sizes.'
               required_fields: true
           group_hero_content:
             children:
@@ -149,11 +147,11 @@ items:
               show_empty_fields: true
               id: ''
               formatter: closed
-              description: 'Nuggets added to the Hero will display at the top of the page.'
+              description: 'Pods added to the Hero will display at the top of the page.'
               required_fields: true
           group_postscript_content:
             children:
-              - field_postscript_nuggets
+              - field_postscript_pods
             label: 'Postscript content'
             region: content
             parent_name: group_page_tabs
@@ -164,7 +162,7 @@ items:
               show_empty_fields: true
               id: ''
               formatter: closed
-              description: 'These nuggets will be displayed below all other content added to your page, above the footer and will usually fill the width of the page.'
+              description: 'These pods will be displayed below all other content added to your page, above the footer and will usually fill the width of the page.'
               required_fields: true
           group_summary_seo:
             children:
@@ -215,12 +213,10 @@ items:
               classes: ''
               show_empty_fields: true
               id: ''
-              description: 'This image/video and body will be displayed in a set location on this page. If you want to customise the layout, do not complete this section and use the Nuggets section below.'
+              description: 'This image/video and body will be displayed in a set location on this page. If you want to customise the layout, do not complete this section and use the Pods section below.'
               required_fields: true
           group_tagging:
             children:
-              - field_countries
-              - field_diseases
               - field_tags
               - field_topics
             label: Tagging
@@ -235,10 +231,10 @@ items:
               formatter: closed
               description: 'Tag this page to make it easier to find in the site search'
               required_fields: true
-          group_nuggets:
+          group_pods:
             children:
-              - field_main_nuggets
-            label: Nuggets
+              - field_main_pods
+            label: Pods
             region: content
             parent_name: group_main_content_tabs
             weight: 24
@@ -248,7 +244,7 @@ items:
               show_empty_fields: true
               id: ''
               formatter: closed
-              description: 'Add nuggets which are displayed in the main content area of this page.'
+              description: 'Add pods which are displayed in the main content area of this page.'
               required_fields: true
               open: true
           group_main_content_details:
@@ -285,7 +281,7 @@ items:
           group_main_content_tabs:
             children:
               - group_overview
-              - group_nuggets
+              - group_pods
             label: 'Main content tabs'
             region: content
             parent_name: group_main_content_details
@@ -324,26 +320,6 @@ items:
             rows: 5
             placeholder: ''
           third_party_settings: {  }
-        field_countries:
-          type: entity_reference_autocomplete
-          weight: 132
-          region: content
-          settings:
-            match_operator: CONTAINS
-            match_limit: 10
-            size: 60
-            placeholder: ''
-          third_party_settings: {  }
-        field_diseases:
-          type: entity_reference_autocomplete
-          weight: 133
-          region: content
-          settings:
-            match_operator: CONTAINS
-            match_limit: 10
-            size: 60
-            placeholder: ''
-          third_party_settings: {  }
         field_hero_content:
           type: layout_paragraphs
           weight: 131
@@ -368,7 +344,7 @@ items:
           settings:
             display_label: true
           third_party_settings: {  }
-        field_main_nuggets:
+        field_main_pods:
           type: layout_paragraphs
           weight: 24
           region: content
@@ -385,7 +361,7 @@ items:
           settings:
             media_types: {  }
           third_party_settings: {  }
-        field_postscript_nuggets:
+        field_postscript_pods:
           type: layout_paragraphs
           weight: 37
           region: content
@@ -411,7 +387,7 @@ items:
             size: 60
             placeholder: ''
           third_party_settings: {  }
-        field_sidebar_nuggets:
+        field_sidebar_pods:
           type: layout_paragraphs
           weight: 36
           region: content
@@ -519,13 +495,13 @@ items:
       hidden:
         field_meta_tags: true
       _core:
-        default_config_hash: MI3fhoWXxFSdlEz2OVwfVQtEXhSU8kNEJSYFVctlkGU
+        default_config_hash: E6codeNwTnbvYvI2IOWER6iZw36pLZqB1SDCENbiG7I
   -
     collection: ''
     name: core.entity_view_display.node.page.card
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -535,13 +511,13 @@ items:
           - field.field.node.page.field_hero_content
           - field.field.node.page.field_image
           - field.field.node.page.field_landing
-          - field.field.node.page.field_main_nuggets
+          - field.field.node.page.field_main_pods
           - field.field.node.page.field_media
           - field.field.node.page.field_meta_tags
-          - field.field.node.page.field_postscript_nuggets
+          - field.field.node.page.field_postscript_pods
           - field.field.node.page.field_seo_description
           - field.field.node.page.field_seo_title
-          - field.field.node.page.field_sidebar_nuggets
+          - field.field.node.page.field_sidebar_pods
           - field.field.node.page.field_summary
           - node.type.page
         module:
@@ -588,25 +564,25 @@ items:
       hidden:
         field_hero_content: true
         field_landing: true
-        field_main_nuggets: true
+        field_main_pods: true
         field_media: true
         field_meta_tags: true
-        field_postscript_nuggets: true
+        field_postscript_pods: true
         field_seo_description: true
         field_seo_title: true
-        field_sidebar_nuggets: true
+        field_sidebar_pods: true
         field_summary: true
         langcode: true
         links: true
         search_api_excerpt: true
       _core:
-        default_config_hash: ho2oJlhSP94ptDyYqi9l31ean09PlUQ2rQAKy7Vy4Bw
+        default_config_hash: _uJWmbgJbkl8J4WorvIy9C4n7kIOGfyrzeV_cBT0LT4
   -
     collection: ''
     name: core.entity_view_display.node.page.default
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -615,13 +591,13 @@ items:
           - field.field.node.page.field_hero_content
           - field.field.node.page.field_image
           - field.field.node.page.field_landing
-          - field.field.node.page.field_main_nuggets
+          - field.field.node.page.field_main_pods
           - field.field.node.page.field_media
           - field.field.node.page.field_meta_tags
-          - field.field.node.page.field_postscript_nuggets
+          - field.field.node.page.field_postscript_pods
           - field.field.node.page.field_seo_description
           - field.field.node.page.field_seo_title
-          - field.field.node.page.field_sidebar_nuggets
+          - field.field.node.page.field_sidebar_pods
           - field.field.node.page.field_summary
           - node.type.page
         module:
@@ -803,7 +779,7 @@ items:
                   uuid: 1eada999-1aef-4b8e-a69b-aa0affb64c28
                   region: content
                   configuration:
-                    id: 'field_block:node:page:field_main_nuggets'
+                    id: 'field_block:node:page:field_main_pods'
                     label_display: '0'
                     context_mapping:
                       entity: layout_builder.entity
@@ -820,7 +796,7 @@ items:
                   uuid: 32b07dba-6417-4362-90b7-f7cc1646b0c2
                   region: content
                   configuration:
-                    id: 'field_block:node:page:field_sidebar_nuggets'
+                    id: 'field_block:node:page:field_sidebar_pods'
                     label_display: '0'
                     context_mapping:
                       entity: layout_builder.entity
@@ -837,7 +813,7 @@ items:
                   uuid: d639a803-a3e0-446f-aeae-e5212e4568de
                   region: content
                   configuration:
-                    id: 'field_block:node:page:field_postscript_nuggets'
+                    id: 'field_block:node:page:field_postscript_pods'
                     label_display: '0'
                     context_mapping:
                       entity: layout_builder.entity
@@ -889,7 +865,7 @@ items:
           third_party_settings: {  }
           weight: 102
           region: content
-        field_main_nuggets:
+        field_main_pods:
           type: entity_reference_revisions_entity_view
           label: above
           settings:
@@ -914,7 +890,7 @@ items:
           third_party_settings: {  }
           weight: 110
           region: content
-        field_postscript_nuggets:
+        field_postscript_pods:
           type: entity_reference_revisions_entity_view
           label: above
           settings:
@@ -938,7 +914,7 @@ items:
           third_party_settings: {  }
           weight: 108
           region: content
-        field_sidebar_nuggets:
+        field_sidebar_pods:
           type: entity_reference_revisions_entity_view
           label: above
           settings:
@@ -964,13 +940,13 @@ items:
         langcode: true
         search_api_excerpt: true
       _core:
-        default_config_hash: 0t8Eg8v9Zw0DBY3KFEauLETMSQXvfciZgUWRon-Nkcg
+        default_config_hash: SkB-fjgJ3UCdpcNv-OZNcrL-GVy6dSOgbm6IwDJmWhE
   -
     collection: ''
     name: core.entity_view_display.node.page.full
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -980,13 +956,13 @@ items:
           - field.field.node.page.field_hero_content
           - field.field.node.page.field_image
           - field.field.node.page.field_landing
-          - field.field.node.page.field_main_nuggets
+          - field.field.node.page.field_main_pods
           - field.field.node.page.field_media
           - field.field.node.page.field_meta_tags
-          - field.field.node.page.field_postscript_nuggets
+          - field.field.node.page.field_postscript_pods
           - field.field.node.page.field_seo_description
           - field.field.node.page.field_seo_title
-          - field.field.node.page.field_sidebar_nuggets
+          - field.field.node.page.field_sidebar_pods
           - field.field.node.page.field_summary
           - node.type.page
         module:
@@ -1051,7 +1027,7 @@ items:
           third_party_settings: {  }
           weight: 2
           region: content
-        field_main_nuggets:
+        field_main_pods:
           type: layout_paragraphs
           label: hidden
           settings:
@@ -1076,7 +1052,7 @@ items:
           third_party_settings: {  }
           weight: 13
           region: content
-        field_postscript_nuggets:
+        field_postscript_pods:
           type: layout_paragraphs
           label: hidden
           settings:
@@ -1100,7 +1076,7 @@ items:
           third_party_settings: {  }
           weight: 11
           region: content
-        field_sidebar_nuggets:
+        field_sidebar_pods:
           type: layout_paragraphs
           label: hidden
           settings:
@@ -1125,13 +1101,13 @@ items:
         langcode: true
         search_api_excerpt: true
       _core:
-        default_config_hash: eOK3q_k-BPhKwIn_I7dW5svnRttS9e_JzLd120H3YvM
+        default_config_hash: V84naIjntfC6nTopRApOO-euOwh-CLoLp_Dk-Z5aGgM
   -
     collection: ''
     name: core.entity_view_display.node.page.search_index
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1141,13 +1117,13 @@ items:
           - field.field.node.page.field_hero_content
           - field.field.node.page.field_image
           - field.field.node.page.field_landing
-          - field.field.node.page.field_main_nuggets
+          - field.field.node.page.field_main_pods
           - field.field.node.page.field_media
           - field.field.node.page.field_meta_tags
-          - field.field.node.page.field_postscript_nuggets
+          - field.field.node.page.field_postscript_pods
           - field.field.node.page.field_seo_description
           - field.field.node.page.field_seo_title
-          - field.field.node.page.field_sidebar_nuggets
+          - field.field.node.page.field_sidebar_pods
           - field.field.node.page.field_summary
           - node.type.page
         module:
@@ -1212,7 +1188,7 @@ items:
           third_party_settings: {  }
           weight: 2
           region: content
-        field_main_nuggets:
+        field_main_pods:
           type: entity_reference_revisions_entity_view
           label: hidden
           settings:
@@ -1237,7 +1213,7 @@ items:
           third_party_settings: {  }
           weight: 17
           region: content
-        field_postscript_nuggets:
+        field_postscript_pods:
           type: entity_reference_revisions_entity_view
           label: hidden
           settings:
@@ -1261,7 +1237,7 @@ items:
           third_party_settings: {  }
           weight: 15
           region: content
-        field_sidebar_nuggets:
+        field_sidebar_pods:
           type: entity_reference_revisions_entity_view
           label: hidden
           settings:
@@ -1294,13 +1270,13 @@ items:
       hidden:
         search_api_excerpt: true
       _core:
-        default_config_hash: 993DSjfLMMNjyMDCZvKdr1vkLdTqUCxd58NDnWxP8u0
+        default_config_hash: uun5NwRaP0_xNHoxNK016gzv_hpcv98weeG7dVkc3J8
   -
     collection: ''
     name: core.entity_view_display.node.page.search_rendered_output
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1310,19 +1286,20 @@ items:
           - field.field.node.page.field_hero_content
           - field.field.node.page.field_image
           - field.field.node.page.field_landing
-          - field.field.node.page.field_main_nuggets
+          - field.field.node.page.field_main_pods
           - field.field.node.page.field_media
           - field.field.node.page.field_meta_tags
-          - field.field.node.page.field_postscript_nuggets
+          - field.field.node.page.field_postscript_pods
           - field.field.node.page.field_seo_description
           - field.field.node.page.field_seo_title
-          - field.field.node.page.field_sidebar_nuggets
+          - field.field.node.page.field_sidebar_pods
           - field.field.node.page.field_summary
           - node.type.page
         module:
-          - entity_reference_revisions
           - field_layout
           - layout_builder
+          - layout_paragraphs
+          - metatag
           - text
           - user
       third_party_settings:
@@ -1343,7 +1320,7 @@ items:
           label: hidden
           settings: {  }
           third_party_settings: {  }
-          weight: 105
+          weight: 5
           region: content
         field_body:
           type: text_default
@@ -1353,7 +1330,7 @@ items:
           weight: 103
           region: content
         field_hero_content:
-          type: entity_reference_revisions_entity_view
+          type: layout_paragraphs
           label: hidden
           settings:
             view_mode: search_rendered_output
@@ -1361,8 +1338,8 @@ items:
           third_party_settings: {  }
           weight: 0
           region: content
-        field_main_nuggets:
-          type: entity_reference_revisions_entity_view
+        field_main_pods:
+          type: layout_paragraphs
           label: hidden
           settings:
             view_mode: search_rendered_output
@@ -1370,8 +1347,8 @@ items:
           third_party_settings: {  }
           weight: 111
           region: content
-        field_postscript_nuggets:
-          type: entity_reference_revisions_entity_view
+        field_postscript_pods:
+          type: layout_paragraphs
           label: hidden
           settings:
             view_mode: search_rendered_output
@@ -1379,8 +1356,8 @@ items:
           third_party_settings: {  }
           weight: 0
           region: content
-        field_sidebar_nuggets:
-          type: entity_reference_revisions_entity_view
+        field_sidebar_pods:
+          type: layout_paragraphs
           label: hidden
           settings:
             view_mode: search_rendered_output
@@ -1406,94 +1383,13 @@ items:
         links: true
         search_api_excerpt: true
       _core:
-        default_config_hash: YaXey9DFtBvDUr0OaajvkqTcUdP1Wi7kDSZSe73gWdA
-  -
-    collection: ''
-    name: core.entity_view_display.node.page.teaser
-    data:
-      uuid: null
-      langcode: en
-      status: true
-      dependencies:
-        config:
-          - core.entity_view_mode.node.teaser
-          - field.field.node.page.field_alternative_title
-          - field.field.node.page.field_body
-          - field.field.node.page.field_hero_content
-          - field.field.node.page.field_image
-          - field.field.node.page.field_landing
-          - field.field.node.page.field_main_nuggets
-          - field.field.node.page.field_media
-          - field.field.node.page.field_meta_tags
-          - field.field.node.page.field_postscript_nuggets
-          - field.field.node.page.field_seo_description
-          - field.field.node.page.field_seo_title
-          - field.field.node.page.field_sidebar_nuggets
-          - field.field.node.page.field_summary
-          - node.type.page
-        module:
-          - field_layout
-          - layout_builder
-          - layout_discovery
-          - user
-      third_party_settings:
-        field_layout:
-          id: layout_onecol
-          settings:
-            label: ''
-        layout_builder:
-          enabled: true
-          sections:
-            -
-              layout_id: layout_onecol
-              layout_settings:
-                label: ''
-              components:
-                15e94f39-20e6-49a7-8bac-f7de4d1340e7:
-                  uuid: 15e94f39-20e6-49a7-8bac-f7de4d1340e7
-                  region: content
-                  configuration:
-                    id: 'extra_field_block:node:page:links'
-                    label_display: '0'
-                    context_mapping:
-                      entity: layout_builder.entity
-                  weight: 0
-                  additional: {  }
-              third_party_settings: {  }
-      id: node.page.teaser
-      targetEntityType: node
-      bundle: page
-      mode: teaser
-      content:
-        links:
-          settings: {  }
-          third_party_settings: {  }
-          weight: 100
-          region: content
-      hidden:
-        field_alternative_title: true
-        field_body: true
-        field_hero_content: true
-        field_image: true
-        field_landing: true
-        field_main_nuggets: true
-        field_media: true
-        field_meta_tags: true
-        field_postscript_nuggets: true
-        field_seo_description: true
-        field_seo_title: true
-        field_sidebar_nuggets: true
-        field_summary: true
-        langcode: true
-        search_api_excerpt: true
-      _core:
-        default_config_hash: tUiy4w3AL6GG-V46kXJObZPLUKD3-9Tt9yufkTQkJ8c
+        default_config_hash: bc4QvYQaa71ROfjN7Yk44G3yRZso62s8N8SCWB5KZMw
   -
     collection: ''
     name: core.entity_view_mode.node.token
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -1509,7 +1405,7 @@ items:
     name: field.field.node.page.field_alternative_title
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1539,7 +1435,7 @@ items:
     name: field.field.node.page.field_body
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1566,80 +1462,10 @@ items:
         default_config_hash: lMCwEFap-gPPsjGN2k8R-wk8b5QFNsY9Hl5IAxZmpu4
   -
     collection: ''
-    name: field.field.node.page.field_countries
-    data:
-      uuid: null
-      langcode: en
-      status: true
-      dependencies:
-        config:
-          - field.storage.node.field_countries
-          - node.type.page
-          - taxonomy.vocabulary.cit_countries_information
-      id: node.page.field_countries
-      field_name: field_countries
-      entity_type: node
-      bundle: page
-      label: Countries
-      description: 'Relate your content to one or multiple countries.'
-      required: false
-      translatable: false
-      default_value: {  }
-      default_value_callback: ''
-      settings:
-        handler: 'default:taxonomy_term'
-        handler_settings:
-          target_bundles:
-            cit_countries_information: cit_countries_information
-          sort:
-            field: name
-            direction: asc
-          auto_create: false
-          auto_create_bundle: ''
-      field_type: entity_reference
-      _core:
-        default_config_hash: cDzPbBQOjgWy6fVX9b645Xfx3avknjsLGvkeQXcGUBE
-  -
-    collection: ''
-    name: field.field.node.page.field_diseases
-    data:
-      uuid: null
-      langcode: en
-      status: true
-      dependencies:
-        config:
-          - field.storage.node.field_diseases
-          - node.type.page
-          - taxonomy.vocabulary.diseases
-      id: node.page.field_diseases
-      field_name: field_diseases
-      entity_type: node
-      bundle: page
-      label: Diseases
-      description: 'Relate your content to one or multiple diseases.'
-      required: false
-      translatable: false
-      default_value: {  }
-      default_value_callback: ''
-      settings:
-        handler: 'default:taxonomy_term'
-        handler_settings:
-          target_bundles:
-            diseases: diseases
-          sort:
-            field: name
-            direction: asc
-          auto_create: true
-          auto_create_bundle: ''
-      field_type: entity_reference
-      _core:
-        default_config_hash: K9hIE2eKDBEHYeQYdSGPjn8s9d3giQL9F4Y1vqhCk3I
-  -
-    collection: ''
     name: field.field.node.page.field_hero_content
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1669,7 +1495,7 @@ items:
     name: field.field.node.page.field_image
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1697,7 +1523,7 @@ items:
     name: field.field.node.page.field_landing
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1721,22 +1547,22 @@ items:
         default_config_hash: cUvj5kVxVdUq9NYPAwrAlwC0ILFbyUkbGfmpNm7031I
   -
     collection: ''
-    name: field.field.node.page.field_main_nuggets
+    name: field.field.node.page.field_main_pods
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
-          - field.storage.node.field_main_nuggets
+          - field.storage.node.field_main_pods
           - node.type.page
         module:
           - entity_reference_revisions
-      id: node.page.field_main_nuggets
-      field_name: field_main_nuggets
+      id: node.page.field_main_pods
+      field_name: field_main_pods
       entity_type: node
       bundle: page
-      label: 'Main content nuggets'
+      label: 'Main content pods'
       description: ''
       required: false
       translatable: false
@@ -1748,13 +1574,13 @@ items:
           target_bundles: null
       field_type: entity_reference_revisions
       _core:
-        default_config_hash: 43NwEXOB-4osZrjqRtnnQxYZ3L3F9iDtnKFXMzNZN2s
+        default_config_hash: A06HcuQjmimUr1NGG1Ofdin-tmd0jdhjXPSwflqyhj0
   -
     collection: ''
     name: field.field.node.page.field_media
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1782,7 +1608,7 @@ items:
     name: field.field.node.page.field_meta_tags
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1806,22 +1632,22 @@ items:
         default_config_hash: 95NcA6sj1XRL1kPAeLugcYymKvAG1PQuUxct2gMY0zk
   -
     collection: ''
-    name: field.field.node.page.field_postscript_nuggets
+    name: field.field.node.page.field_postscript_pods
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
-          - field.storage.node.field_postscript_nuggets
+          - field.storage.node.field_postscript_pods
           - node.type.page
         module:
           - entity_reference_revisions
-      id: node.page.field_postscript_nuggets
-      field_name: field_postscript_nuggets
+      id: node.page.field_postscript_pods
+      field_name: field_postscript_pods
       entity_type: node
       bundle: page
-      label: 'Postscript nuggets'
+      label: 'Postscript pods'
       description: ''
       required: false
       translatable: false
@@ -1833,13 +1659,13 @@ items:
           target_bundles: null
       field_type: entity_reference_revisions
       _core:
-        default_config_hash: h6Z4Ey1douC0mRjrFtqwSg8J8sJ0yEEGIZNTS6dERjI
+        default_config_hash: zZG_2WM62-g0GRvBUrTdN1UcQl3WKQM-5nn2-mLn2Ak
   -
     collection: ''
     name: field.field.node.page.field_seo_description
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1866,7 +1692,7 @@ items:
     name: field.field.node.page.field_seo_title
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1890,22 +1716,22 @@ items:
         default_config_hash: BwFFfwGVDb-42frMByA6PPyn4w3ld-EvoeHYT5dCfmk
   -
     collection: ''
-    name: field.field.node.page.field_sidebar_nuggets
+    name: field.field.node.page.field_sidebar_pods
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
-          - field.storage.node.field_sidebar_nuggets
+          - field.storage.node.field_sidebar_pods
           - node.type.page
         module:
           - entity_reference_revisions
-      id: node.page.field_sidebar_nuggets
-      field_name: field_sidebar_nuggets
+      id: node.page.field_sidebar_pods
+      field_name: field_sidebar_pods
       entity_type: node
       bundle: page
-      label: 'Sidebar nuggets'
+      label: 'Sidebar pods'
       description: ''
       required: false
       translatable: false
@@ -1917,13 +1743,13 @@ items:
           target_bundles: null
       field_type: entity_reference_revisions
       _core:
-        default_config_hash: lDj0HolYdujgmL-jCLqLkOguxqb-2t-h5VPTjkBIk2s
+        default_config_hash: 5jQIt7YwZDx9GhoXQCEy6YnkE2pEU6wzEWvPGJInHO8
   -
     collection: ''
     name: field.field.node.page.field_summary
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1953,7 +1779,7 @@ items:
     name: field.field.node.page.field_tags
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -1988,7 +1814,7 @@ items:
     name: field.field.node.page.field_topics
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -2023,7 +1849,7 @@ items:
     name: language.content_settings.node.page
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -2040,7 +1866,7 @@ items:
     name: node.type.page
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         module:

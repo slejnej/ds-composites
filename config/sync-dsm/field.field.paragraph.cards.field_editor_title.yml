@@ -1,5 +1,5 @@
-uuid: 6aec177c-f930-4afb-9e2a-41fd8f0b8848
-langcode: en
+uuid: 485f623e-d764-4969-baa3-34d07c5a7b80
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -7,9 +7,9 @@ dependencies:
     - paragraphs.paragraphs_type.cards
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
-  default_config_hash: FCgOWfWdjz35j38ypKw6GeMxF1uTyQjajJS75KqU79Q
+  default_config_hash: 5wwZdvN99xrNmLq1TT6tVEs-qZMf9Ol4d6fzhUalBX8
 id: paragraph.cards.field_editor_title
 field_name: field_editor_title
 entity_type: paragraph
@@ -17,7 +17,7 @@ bundle: cards
 label: 'Editor title'
 description: 'This title is used to describe the content within this section for web editors. This title is not displayed on the page.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

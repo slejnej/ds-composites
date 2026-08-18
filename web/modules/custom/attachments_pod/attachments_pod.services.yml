@@ -1,0 +1,5 @@
+services:
+  attachments_pod.event_subscriber.referenceable_entity:
+    class: \Drupal\attachments_pod\EventSubscriber\ReferenceableEntitySubscriber
+    tags:
+      - { name: 'event_subscriber' }

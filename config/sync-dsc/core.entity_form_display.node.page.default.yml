@@ -1,23 +1,21 @@
-uuid: ba647ff8-c09c-47a6-b67f-5f4382843b52
-langcode: en
+uuid: ae24b049-2007-45a7-ab6c-9c84089e9924
+langcode: en-gb
 status: true
 dependencies:
   config:
     - field.field.node.page.field_alternative_title
     - field.field.node.page.field_body
     - field.field.node.page.field_categories
-    - field.field.node.page.field_countries
-    - field.field.node.page.field_diseases
     - field.field.node.page.field_hero_content
     - field.field.node.page.field_image
     - field.field.node.page.field_landing
-    - field.field.node.page.field_main_nuggets
+    - field.field.node.page.field_main_pods
     - field.field.node.page.field_media
     - field.field.node.page.field_meta_tags
-    - field.field.node.page.field_postscript_nuggets
+    - field.field.node.page.field_postscript_pods
     - field.field.node.page.field_seo_description
     - field.field.node.page.field_seo_title
-    - field.field.node.page.field_sidebar_nuggets
+    - field.field.node.page.field_sidebar_pods
     - field.field.node.page.field_summary
     - field.field.node.page.field_tags
     - field.field.node.page.field_topics
@@ -58,7 +56,7 @@ third_party_settings:
         width_breakpoint: 640
     group_sidebar_content:
       children:
-        - field_sidebar_nuggets
+        - field_sidebar_pods
       label: 'Sidebar content'
       region: content
       parent_name: group_page_tabs
@@ -69,7 +67,7 @@ third_party_settings:
         show_empty_fields: true
         id: ''
         formatter: closed
-        description: 'These nuggets will be displayed on the right hand side of your page, but may also drop below the main content on smaller screen sizes.'
+        description: 'These pods will be displayed on the right hand side of your page, but may also drop below the main content on smaller screen sizes.'
         required_fields: true
     group_hero_content:
       children:
@@ -84,11 +82,11 @@ third_party_settings:
         show_empty_fields: true
         id: ''
         formatter: closed
-        description: 'Nuggets added to the Hero will display at the top of the page.'
+        description: 'Pods added to the Hero will display at the top of the page.'
         required_fields: true
     group_postscript_content:
       children:
-        - field_postscript_nuggets
+        - field_postscript_pods
       label: 'Postscript content'
       region: content
       parent_name: group_page_tabs
@@ -99,7 +97,7 @@ third_party_settings:
         show_empty_fields: true
         id: ''
         formatter: closed
-        description: 'These nuggets will be displayed below all other content added to your page, above the footer and will usually fill the width of the page.'
+        description: 'These pods will be displayed below all other content added to your page, above the footer and will usually fill the width of the page.'
         required_fields: true
     group_summary_seo:
       children:
@@ -110,7 +108,7 @@ third_party_settings:
       label: 'Summary & SEO'
       region: content
       parent_name: group_page_tabs
-      weight: 6
+      weight: 50
       format_type: tab
       format_settings:
         classes: ''
@@ -123,8 +121,8 @@ third_party_settings:
       children:
         - title
         - field_landing
-        - field_categories
         - group_initial_content
+        - field_categories
       label: Overview
       region: content
       parent_name: group_main_content_tabs
@@ -151,18 +149,16 @@ third_party_settings:
         classes: ''
         show_empty_fields: true
         id: ''
-        description: 'This image/video and body will be displayed in a set location on this page. If you want to customise the layout, do not complete this section and use the Nuggets section below.'
+        description: 'This image/video and body will be displayed in a set location on this page. If you want to customise the layout, do not complete this section and use the Pods section below.'
         required_fields: true
     group_tagging:
       children:
-        - field_countries
-        - field_diseases
         - field_tags
         - field_topics
       label: Tagging
       region: content
       parent_name: group_page_tabs
-      weight: 5
+      weight: 40
       format_type: tab
       format_settings:
         classes: ''
@@ -171,10 +167,10 @@ third_party_settings:
         formatter: closed
         description: 'Tag this page to make it easier to find in the site search'
         required_fields: true
-    group_nuggets:
+    group_pods:
       children:
-        - field_main_nuggets
-      label: Nuggets
+        - field_main_pods
+      label: Pods
       region: content
       parent_name: group_main_content_tabs
       weight: 24
@@ -184,7 +180,7 @@ third_party_settings:
         show_empty_fields: true
         id: ''
         formatter: closed
-        description: 'Add nuggets which are displayed in the main content area of this page.'
+        description: 'Add pods which are displayed in the main content area of this page.'
         required_fields: true
         open: true
     group_main_content_details:
@@ -221,7 +217,7 @@ third_party_settings:
     group_main_content_tabs:
       children:
         - group_overview
-        - group_nuggets
+        - group_pods
       label: 'Main content tabs'
       region: content
       parent_name: group_main_content_details
@@ -234,7 +230,7 @@ third_party_settings:
         direction: horizontal
         width_breakpoint: 640
 _core:
-  default_config_hash: MI3fhoWXxFSdlEz2OVwfVQtEXhSU8kNEJSYFVctlkGU
+  default_config_hash: E6codeNwTnbvYvI2IOWER6iZw36pLZqB1SDCENbiG7I
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -242,7 +238,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -274,26 +270,7 @@ content:
       hierarchy_depth: 0
       required_depth: 0
       none_label: '- Please select -'
-    third_party_settings: {  }
-  field_countries:
-    type: entity_reference_autocomplete
-    weight: 132
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_diseases:
-    type: entity_reference_autocomplete
-    weight: 133
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      allow_unpublished: false
     third_party_settings: {  }
   field_hero_content:
     type: layout_paragraphs
@@ -319,7 +296,7 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  field_main_nuggets:
+  field_main_pods:
     type: layout_paragraphs
     weight: 24
     region: content
@@ -336,7 +313,7 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_postscript_nuggets:
+  field_postscript_pods:
     type: layout_paragraphs
     weight: 37
     region: content
@@ -362,7 +339,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_sidebar_nuggets:
+  field_sidebar_pods:
     type: layout_paragraphs
     weight: 36
     region: content
@@ -382,7 +359,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete
-    weight: 134
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -392,7 +369,7 @@ content:
     third_party_settings: {  }
   field_topics:
     type: entity_reference_autocomplete
-    weight: 135
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -400,21 +377,28 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 3
+    weight: 4
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   simple_sitemap:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -425,14 +409,14 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 5
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 4
+    weight: 5
     region: content
     settings:
       display_label: true
@@ -445,14 +429,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  translation:
-    weight: 8
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 2
     region: content
     settings:
       match_operator: CONTAINS
@@ -461,10 +440,9 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 9
+    weight: 50
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_meta_tags: true
-  langcode: true

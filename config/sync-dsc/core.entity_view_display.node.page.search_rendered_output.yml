@@ -1,5 +1,5 @@
-uuid: db824e60-6ddb-48bb-869a-ad6a108efcda
-langcode: en
+uuid: 5c148607-cce3-4bd4-a7da-cdb6dc00ab29
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -7,26 +7,24 @@ dependencies:
     - field.field.node.page.field_alternative_title
     - field.field.node.page.field_body
     - field.field.node.page.field_categories
-    - field.field.node.page.field_countries
-    - field.field.node.page.field_diseases
     - field.field.node.page.field_hero_content
     - field.field.node.page.field_image
     - field.field.node.page.field_landing
-    - field.field.node.page.field_main_nuggets
+    - field.field.node.page.field_main_pods
     - field.field.node.page.field_media
     - field.field.node.page.field_meta_tags
-    - field.field.node.page.field_postscript_nuggets
+    - field.field.node.page.field_postscript_pods
     - field.field.node.page.field_seo_description
     - field.field.node.page.field_seo_title
-    - field.field.node.page.field_sidebar_nuggets
+    - field.field.node.page.field_sidebar_pods
     - field.field.node.page.field_summary
     - field.field.node.page.field_tags
     - field.field.node.page.field_topics
     - node.type.page
   module:
-    - entity_reference_revisions
     - field_layout
     - layout_builder
+    - layout_paragraphs
     - text
     - user
 third_party_settings:
@@ -38,7 +36,7 @@ third_party_settings:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: YaXey9DFtBvDUr0OaajvkqTcUdP1Wi7kDSZSe73gWdA
+  default_config_hash: bc4QvYQaa71ROfjN7Yk44G3yRZso62s8N8SCWB5KZMw
 id: node.page.search_rendered_output
 targetEntityType: node
 bundle: page
@@ -49,7 +47,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 105
+    weight: 5
     region: content
   field_body:
     type: text_default
@@ -60,14 +58,14 @@ content:
     region: content
   field_categories:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 10
     region: content
   field_hero_content:
-    type: entity_reference_revisions_entity_view
+    type: layout_paragraphs
     label: hidden
     settings:
       view_mode: search_rendered_output
@@ -75,8 +73,8 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_main_nuggets:
-    type: entity_reference_revisions_entity_view
+  field_main_pods:
+    type: layout_paragraphs
     label: hidden
     settings:
       view_mode: search_rendered_output
@@ -84,8 +82,8 @@ content:
     third_party_settings: {  }
     weight: 111
     region: content
-  field_postscript_nuggets:
-    type: entity_reference_revisions_entity_view
+  field_postscript_pods:
+    type: layout_paragraphs
     label: hidden
     settings:
       view_mode: search_rendered_output
@@ -93,8 +91,8 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_sidebar_nuggets:
-    type: entity_reference_revisions_entity_view
+  field_sidebar_pods:
+    type: layout_paragraphs
     label: hidden
     settings:
       view_mode: search_rendered_output
@@ -109,17 +107,29 @@ content:
     third_party_settings: {  }
     weight: 107
     region: content
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_topics:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
 hidden:
-  field_countries: true
-  field_diseases: true
   field_image: true
   field_landing: true
   field_media: true
   field_meta_tags: true
   field_seo_description: true
   field_seo_title: true
-  field_tags: true
-  field_topics: true
   langcode: true
   links: true
   search_api_excerpt: true

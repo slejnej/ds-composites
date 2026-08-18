@@ -44,8 +44,13 @@ function remora_core_tokens(string $type, array $tokens, array $data, array $opt
     return [];
   }
 
+  // Format the SEO title with the alternative title (if available) or the node label, followed by the site name.
+  $seoTitle = sprintf('%s | %s',
+    $node->get('field_alternative_title')->value ?? $node->label(),
+    Drupal::config('system.site')->get('name'));
+
   return [
-    '[remora:seo_title]' => $node->get('field_alternative_title')->value ?: $node->label(),
+    '[remora:seo_title]' => $seoTitle,
     '[remora:seo_description]' => $node->get('field_summary')->value ?: '',
   ];
 }

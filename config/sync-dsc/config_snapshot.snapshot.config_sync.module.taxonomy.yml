@@ -1,4 +1,4 @@
-uuid: 1510cf1c-e5ec-4574-b89c-b257f8040f9e
+uuid: 1372a6e9-d7f8-417a-a83c-66e43638239e
 langcode: en
 status: true
 dependencies:
@@ -98,6 +98,7 @@ items:
               type: mini
               options:
                 offset: 0
+                pagination_heading_level: h4
                 items_per_page: 10
                 total_pages: 0
                 id: 0
@@ -386,4 +387,4 @@ items:
               - user.permissions
             tags: {  }
       _core:
-        default_config_hash: z9csC6m3M65M2JczdNul_lMUrVg8ZO66pbSq8jPCBKs
+        default_config_hash: KejdxDJQmx8SaO-t83OVekLw6ar4ldjmsJMGcotGxnQ

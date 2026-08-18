@@ -1,0 +1,25 @@
+.slick-dots {
+  padding: 0;
+  justify-content: center;
+
+  $pip_gap: $carousel-indicator-spacer * 4;
+  $pip_step: 0.25;
+  // 4 x gap between pips + 5 pips x by total pip steps + two 20px gap between arrows and pips
+  min-width: $pip_gap + ($carousel-indicator-width * 3.5) + 40px;
+
+  li {
+    display: none;
+    transition: 500ms;
+
+    &.show {
+      display: flex;
+
+      @for $i from 0 through 2 {
+        &.slick-active-index-#{$i} {
+          opacity: 1 - $i * $pip_step;
+          transform: scaleX(1 - $i * $pip_step);
+        }
+      }
+    }
+  }
+}

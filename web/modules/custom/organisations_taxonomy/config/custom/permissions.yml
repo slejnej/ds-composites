@@ -1,0 +1,10 @@
+dependencies:
+  module:
+    - taxonomy
+
+editor:
+  - 'access taxonomy overview'
+  - 'create terms in organisations'
+  - 'delete terms in organisations'
+  - 'edit terms in organisations'
+  - 'rabbit hole bypass taxonomy_term'

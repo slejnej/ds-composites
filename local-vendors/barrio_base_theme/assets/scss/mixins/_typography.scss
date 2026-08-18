@@ -1,0 +1,15 @@
+@mixin typography-mobile($font-family-mobile, $font-size-mobile, $font-weight-mobile, $line-height-mobile) {
+  font-family: "" + $font-family-mobile + "";
+  font-size: $font-size-mobile;
+  font-weight: $font-weight-mobile;
+  line-height: $line-height-mobile;
+}
+
+@mixin typography-desktop($font-family-desktop, $font-size-desktop, $font-weight-desktop, $line-height-desktop) {
+  @include media-breakpoint-up('md') {
+    font-family: "" + $font-family-desktop + "";
+    font-size: $font-size-desktop;
+    font-weight: $font-weight-desktop;
+    line-height: $line-height-desktop;
+  }
+}

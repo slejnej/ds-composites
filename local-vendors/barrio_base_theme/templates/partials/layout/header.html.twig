@@ -1,0 +1,44 @@
+{% block header %}
+
+  <header class="header-wrapper d-flex flex-lg-column align-items-end p-0">
+
+    {% block header_logo_menu %}
+      <div class="header-logo-menu d-flex flex-column-reverse flex-md-row container-xxl justify-content-between align-items-center py-3">
+
+        {% block logo %}
+          <div class="logo d-flex">
+            {% remora_include 'partials/layout/header-logo.html.twig' %}
+          </div>
+        {% endblock %}
+
+        {% block header_content_wrapper %}
+          <div class="header-content-wrapper d-flex align-items-center">
+
+            {% block top_menu %}
+              {% remora_include 'partials/navigation/top-menu.html.twig' %}
+            {% endblock %}
+
+            {% block user_menu %}
+              {% remora_include 'partials/navigation/user-menu.html.twig' %}
+            {% endblock %}
+
+            {% block header_content %}
+              {% remora_include 'partials/layout/header-content.html.twig' %}
+            {% endblock %}
+
+          </div>
+        {% endblock %}
+
+      </div>
+    {% endblock %}
+
+    {% block header_main_menu %}
+      <div class="main-menu container-fluid g-0 d-flex d-lg-block justify-content-end py-3 py-lg-0">
+        {% block main_menu %}
+          {% remora_include 'partials/navigation/main-menu.html.twig' %}
+        {% endblock %}
+      </div>
+    {% endblock %}
+
+  </header>
+{% endblock %}

@@ -1,9 +1,11 @@
-uuid: de507188-4fac-49b0-9991-2dd09fd4f43b
+uuid: 4ff21dd1-e78a-44b0-9e0e-d948d8361be2
 langcode: en
 status: true
 dependencies:
   module:
     - administerusersbyrole
+    - eu_cookie_compliance
+    - google_tag
     - paragraphs_type_permissions
     - system
     - toolbar
@@ -16,9 +18,11 @@ is_admin: null
 permissions:
   - 'access toolbar'
   - 'access users overview'
+  - 'administer google_tag_container'
   - 'allow empty user mail'
   - 'cancel users by role'
   - 'create users'
+  - 'display eu cookie compliance popup'
   - 'edit users by role'
   - 'role-assign users by role'
   - 'view paragraph content attachments'

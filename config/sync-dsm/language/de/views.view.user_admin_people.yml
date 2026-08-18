@@ -1,5 +1,4 @@
 label: Benutzer
-description: 'Personen finden und verwalten, die mit Ihrer Website interagieren.'
 display:
   default:
     display_title: Standard
@@ -36,8 +35,8 @@ display:
           tags:
             next: 'Weiter ›'
             previous: '‹ Zurück'
-            first: '« Anfang'
-            last: 'Ende »'
+            first: '« Erste'
+            last: 'Letzte »'
           expose:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
@@ -46,7 +45,7 @@ display:
         options:
           submit_button: Filter
           reset_button_label: Zurücksetzen
-          exposed_sorts_label: Sortierung
+          exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
       empty:
@@ -76,7 +75,6 @@ display:
     display_options:
       menu:
         title: Liste
-        description: 'Personen finden und verwalten, die mit Ihrer Website interagieren.'
       tab_options:
         title: Benutzer
         description: 'Verwalten von Benutzerkonten, Rollen und Zugriffsrechten.'

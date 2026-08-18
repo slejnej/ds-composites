@@ -1,5 +1,5 @@
-uuid: 272023f4-aab1-4826-aae1-4b5ddd04fd50
-langcode: en
+uuid: 14003951-8da2-4d7b-9fb3-db2b85bda869
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -17,7 +17,7 @@ bundle: promo
 label: 'Body text'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

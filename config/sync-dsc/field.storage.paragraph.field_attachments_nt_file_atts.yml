@@ -1,5 +1,5 @@
-uuid: 1072b1a3-f30c-4788-9431-385bd3123258
-langcode: en
+uuid: dd45b859-3f43-410c-8ade-341093c26223
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -7,9 +7,9 @@ dependencies:
     - paragraphs
   enforced:
     module:
-      - attachments_nugget
+      - attachments_pod
 _core:
-  default_config_hash: gIi1ppZxCdCeuuqIgWd8ba-bEC7dUNRR7ixw4tie5b0
+  default_config_hash: mq9C9veDs-I632ozr6ujc9ZutwSVSnrym973tvicoSU
 id: paragraph.field_attachments_nt_file_atts
 field_name: field_attachments_nt_file_atts
 entity_type: paragraph

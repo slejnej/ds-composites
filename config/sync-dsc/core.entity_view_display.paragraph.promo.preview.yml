@@ -1,5 +1,5 @@
-uuid: 6113dba0-8cb8-44a3-9030-29d0d1f15d3f
-langcode: en
+uuid: 609f6c72-f33f-41b1-952f-953bfee7779c
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -32,3 +32,4 @@ hidden:
   field_promo_media: true
   field_promo_text: true
   field_promo_title: true
+  search_api_excerpt: true

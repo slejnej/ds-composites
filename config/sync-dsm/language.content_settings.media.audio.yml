@@ -1,9 +1,16 @@
-uuid: 22653c04-00b1-44b9-8dd5-1e936c3d0b2f
-langcode: en
+uuid: b8b8e90a-2d6c-4f5a-82ad-9d6d5016f0c3
+langcode: en-gb
 status: true
 dependencies:
   config:
     - media.type.audio
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: zShMaL1L8ka9fWtLTuuMe9pLIVOFah5dyuRu3geGXZM
 id: media.audio

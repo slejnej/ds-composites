@@ -1,0 +1,11 @@
+{
+  "name": "mrm-remora/attachments_pod",
+  "type": "drupal-custom-module",
+  "description": "Attachments pod - contains functionalities to enable attachments pod",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.1",
+    "drupal/field_group": "^3.4"
+  }
+}

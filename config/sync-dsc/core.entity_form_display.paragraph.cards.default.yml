@@ -1,5 +1,5 @@
-uuid: 1d362f9e-7bdf-4d73-87b2-bf8d2f3f0941
-langcode: en
+uuid: ac9ad136-95ce-4dff-beac-68360c82fa6b
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -24,21 +24,21 @@ dependencies:
     - text
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings:
       label: ''
   field_group:
-    group_nugget_title_properties:
+    group_pod_title_properties:
       children:
         - field_editor_title
         - field_display_title
         - field_presentation
         - field_items_per_row
         - group_slideshow_settings
-      label: 'Nugget title & properties'
+      label: 'Pod title & properties'
       region: content
       parent_name: ''
       weight: 0
@@ -59,7 +59,7 @@ third_party_settings:
         - field_cards_nt_slides_per_page
       label: 'Slideshow settings'
       region: content
-      parent_name: group_nugget_title_properties
+      parent_name: group_pod_title_properties
       weight: 5
       format_type: fieldset
       format_settings:
@@ -68,10 +68,10 @@ third_party_settings:
         id: ''
         description: ''
         required_fields: false
-    group_nugget_content:
+    group_pod_content:
       children:
         - field_cards_nt_card
-      label: 'Nugget content'
+      label: 'Pod content'
       region: content
       parent_name: ''
       weight: 1
@@ -83,10 +83,10 @@ third_party_settings:
         open: true
         description: ''
         required_fields: true
-    group_nugget_link:
+    group_pod_link:
       children:
         - field_view_more_link
-      label: 'Nugget link'
+      label: 'Pod link'
       region: content
       parent_name: ''
       weight: 2
@@ -99,7 +99,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: RFF7VB78WL6oyKsb3vbzY9k3XfYgs3Vl7e1NGP1DMpg
+  default_config_hash: 2952KPhDuxjdP_h9tuxXsAnnSvOo6VSppY6XXB6GGnM
 id: paragraph.cards.default
 targetEntityType: paragraph
 bundle: cards

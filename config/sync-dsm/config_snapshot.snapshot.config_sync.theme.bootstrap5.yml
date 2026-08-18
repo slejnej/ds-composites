@@ -1,4 +1,4 @@
-uuid: 772c915e-99ca-4301-8e49-d9b02d1e0efe
+uuid: 235dbb3b-f6e9-46ed-8e28-c4ce36a81ff9
 langcode: en
 status: true
 dependencies:
@@ -147,31 +147,6 @@ items:
       visibility: {  }
       _core:
         default_config_hash: xBR1vgpnqSUW4pA2LC3rfhu27FQUox9zZEYsdAFM2Sg
-  -
-    collection: ''
-    name: block.block.bootstrap5_help
-    data:
-      langcode: en
-      status: true
-      dependencies:
-        module:
-          - help
-        theme:
-          - bootstrap5
-      id: bootstrap5_help
-      theme: bootstrap5
-      region: content
-      weight: -3
-      provider: null
-      plugin: help_block
-      settings:
-        id: help_block
-        label: Help
-        provider: help
-        label_display: '0'
-      visibility: {  }
-      _core:
-        default_config_hash: S0Y16qIQfKiOEzWlddOGk3u_BKwAruAheA8VVFfGbLc
   -
     collection: ''
     name: block.block.bootstrap5_local_actions
@@ -335,5 +310,6 @@ items:
       b5_footer_bg_schema: secondary
       b5_top_container: container
       b5_top_container_config: ''
+      b5_theme_mode: light
       _core:
-        default_config_hash: o7UdhCuEHWPn7Pz1c9KT7W818Cvg9EMVd2Gay1qKKPk
+        default_config_hash: O08HPJWKLXyhIkDBnPv65k-Kz0K_NJwF0uPNhNNAbQg

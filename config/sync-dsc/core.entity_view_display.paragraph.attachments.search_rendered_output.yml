@@ -1,5 +1,5 @@
-uuid: e7d51ada-cc0a-4b5c-9150-1f6e665910ec
-langcode: en
+uuid: a39b1ac8-90f3-4c14-b6dc-9885c5f348b2
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -14,13 +14,13 @@ dependencies:
     - text
   enforced:
     module:
-      - attachments_nugget
+      - attachments_pod
 third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: aG3duO3uvMrAK5d5hkkcz2zNq9_e2rJiHyhUcOZCuz4
+  default_config_hash: y-lGfvpNY9dAcUPU_VU9BYcSC5cHOHocZB8wrAbnyss
 id: paragraph.attachments.search_rendered_output
 targetEntityType: paragraph
 bundle: attachments

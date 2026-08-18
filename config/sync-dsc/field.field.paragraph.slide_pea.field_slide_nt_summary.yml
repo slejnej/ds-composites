@@ -1,0 +1,29 @@
+uuid: 293e616b-d359-4813-8cdf-3a1d5a8538d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_nt_summary
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.slide_pea
+  module:
+    - text
+  enforced:
+    module:
+      - slideshow_pod
+_core:
+  default_config_hash: fkal6FYnnl_yCtO8Wb9IdKjkm8RbBaNDnL-w7oEGaoU
+id: paragraph.slide_pea.field_slide_nt_summary
+field_name: field_slide_nt_summary
+entity_type: paragraph
+bundle: slide_pea
+label: Summary
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - restricted_html
+field_type: text_long

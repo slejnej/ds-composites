@@ -1,5 +1,5 @@
-uuid: 474e1454-b2e5-4fa5-939d-2d7ed3c9a78a
-langcode: en
+uuid: d79f8ac8-018f-4c12-b66b-59d76303e1f5
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -32,4 +32,5 @@ hidden:
   field_media_file: true
   langcode: true
   name: true
+  search_api_excerpt: true
   uid: true

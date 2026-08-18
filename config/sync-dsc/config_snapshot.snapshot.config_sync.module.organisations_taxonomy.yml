@@ -1,4 +1,4 @@
-uuid: 9fdf49d5-1bfc-4e28-a4de-bf0e4748e4ca
+uuid: f4a61bf8-2aeb-4c99-95b8-6e5e45bc157b
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ items:
     collection: ''
     name: core.entity_form_display.taxonomy_term.organisations.default
     data:
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -52,7 +52,7 @@ items:
     collection: ''
     name: language.content_settings.taxonomy_term.organisations
     data:
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -68,7 +68,7 @@ items:
     collection: ''
     name: rabbit_hole.behavior_settings.taxonomy_term.organisations
     data:
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -89,7 +89,7 @@ items:
     collection: ''
     name: taxonomy.vocabulary.organisations
     data:
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies: {  }
       name: Organisations

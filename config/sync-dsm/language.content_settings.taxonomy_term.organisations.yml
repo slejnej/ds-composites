@@ -1,9 +1,16 @@
-uuid: 64fb72ee-5215-44ac-84dc-b5a0ce3c06ba
-langcode: en
+uuid: 42bb8e38-626d-43a5-bfdd-2f8c676f5b5a
+langcode: en-gb
 status: true
 dependencies:
   config:
     - taxonomy.vocabulary.organisations
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: LfOeb2oNx7ERTHEUasZzsIfjN74-dLOQQJ4FW-BpiTg
 id: taxonomy_term.organisations

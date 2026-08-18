@@ -7,8 +7,6 @@ display:
           label: Naslov
         name:
           label: Avtor
-        changed:
-          label: 'Zadnja posodobitev'
       exposed_form:
         options:
           reset_button_label: Ponastavi

@@ -1,4 +1,4 @@
-uuid: d23aa681-1220-4c5f-af80-a172fd8e958b
+uuid: 97ed3c44-5ef0-44b0-ac32-005e445dad32
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
     - paragraphs
   enforced:
     module:
-      - slideshow_nugget
+      - slideshow_pod
 _core:
-  default_config_hash: IAKSZGwoRrVk29tPB6s_xxsnFIOXeMzk7bZghaXmcmA
+  default_config_hash: JK1xaTqI0QA5c7u8d4L3SIaDE7YQvUYloLdp8QRl8qo
 id: paragraph.field_slide_nt_image
 field_name: field_slide_nt_image
 entity_type: paragraph

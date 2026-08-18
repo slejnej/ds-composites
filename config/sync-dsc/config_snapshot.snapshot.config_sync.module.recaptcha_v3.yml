@@ -1,4 +1,4 @@
-uuid: fc05ada1-6647-4b6e-8e2f-99ccaaaca264
+uuid: e2b1216e-ff69-4c99-8995-a738cd8f70df
 langcode: en
 status: true
 dependencies:
@@ -16,10 +16,10 @@ items:
       site_key: ''
       secret_key: ''
       verify_hostname: true
-      default_challenge: captcha\Math
+      default_challenge: captcha/Math
       error_message: 'Anti-bot verification failed.'
       cacheable: false
       library_use_recaptcha_net: false
       hide_badge: false
       _core:
-        default_config_hash: 6xvuojdlZ8-8Q7yJyRldPaE0UK_YijOlDo6HvURmW_E
+        default_config_hash: UqoPtv5ZWzKvrSUU6kRFwsddB-I_BN16Cw38Rtk7H7A

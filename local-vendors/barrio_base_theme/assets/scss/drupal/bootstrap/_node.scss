@@ -1,0 +1,397 @@
+$main-content-margin-top: 60px !default;
+
+body:not(.has-hero)[data-breadcrumbs="0"] {
+  main {
+    margin-top: $main-content-margin-top;
+    @include media-breakpoint-up('lg') {
+      margin-top: calc(#{$main-content-margin-top} + 30px);
+    }
+  }
+}
+
+/** ================= [ Landing pages ] ================= **/
+
+.node-landing-page #page-content:not(:has(#content-sidebar-fields > *), :has(#content-main-fields > *)) {
+  display: none;
+}
+
+/** ================= [ Temporary wysiwyg media styles ] ================= **/
+
+.field--type-text-long .media {
+  @extend .mb-4;
+  picture {
+    display: flex;
+  }
+
+  &.align-left, &.align-right {
+    @extend .col-md-6;
+  }
+
+  &.align-center {
+    @extend .col-sm-10, .mb-3;
+  }
+
+  &.align-right {
+    @extend .ms-md-5;
+  }
+
+  &.align-left {
+    @extend .me-md-5;
+  }
+}
+
+
+/** ================= [ Sections + 2/3 layouts ] ================= **/
+
+$layout-content-gap: 30px;
+
+// Explicitly setting #content-main width when sidebars are present
+@include media-breakpoint-up('md') {
+  .main-content-wrapper .row:has(#sidebar-pods):has(#content-sidebar-fields) #content-main {
+    width: calc(50% - 2 * #{$layout-content-gap});
+  }
+}
+
+@include media-breakpoint-up('lg') {
+  .main-content-wrapper .row:has(#sidebar-pods) #content-main {
+    width: calc(75% - #{$layout-content-gap});
+  }
+  .main-content-wrapper .row:has(#sidebar-pods):has(#content-sidebar-fields) #content-main {
+    width: calc(58.33% - 2 * #{$layout-content-gap});
+  }
+}
+
+.paragraph-section {
+  @extend .d-flex, .flex-column, .m-0;
+
+  .layout__region {
+    @extend .d-flex, .flex-column;
+  }
+
+  &.layout-twocol,
+  &.layout-threecol {
+    .section-wrapper {
+      @extend .container-xxl, .px-0;
+    }
+  }
+
+  .layout {
+    column-gap: 1.5rem;
+
+    @include media-breakpoint-up('lg') {
+      column-gap: $layout-content-gap;
+    }
+
+    .layout__region {
+      &.layout-50 {
+        flex: 0 1 100%;
+
+        @include media-breakpoint-up('md') {
+          flex: 0 1 calc(50% - ($layout-content-gap / 2));
+        }
+      }
+
+      &.layout-25 {
+        flex: 0 1 100%;
+
+        @include media-breakpoint-up('xl') {
+          flex: 0 1 calc(25% - 23px);
+        }
+      }
+
+      &.layout-33 {
+        flex: 0 1 100%;
+
+        @include media-breakpoint-up('xl') {
+          flex: 0 1 calc(100% / 3 - 20px);
+        }
+      }
+    }
+  }
+}
+
+/* if two sidebars, push right sidebar beneath below lg screens */
+#content-sidebar-fields ~ #sidebar-pods {
+  @extend .col-md-auto, .col-lg-3;
+}
+
+
+/** ================= [ Paragraphs ] ================= **/
+// Default margins for pods. Specific margins are applied per pod module
+
+section:not(#sidebar-pods) {
+  .paragraph {
+    &:first-child {
+      margin-top: $pod-margin-y;
+    }
+
+    //Half the margins in between pods to avoid large gaps
+    margin-top: calc($pod-margin-y / 2);
+    margin-bottom: calc($pod-margin-y / 2);
+
+    &:last-child {
+      margin-bottom: $pod-margin-y;
+    }
+  }
+}
+
+// You can thank Dave for this hot mess :3
+#page-content:has(#content-main)+#postscript .field--name-field-postscript-pods.field__item:first-child .paragraph-section.palette-default:first-child  {
+  .section-title-wrapper {
+    margin-top: 0 !important;
+    margin-bottom: calc($pod-margin-y / 2);
+  }
+  .paragraph:first-child {
+    @extend .mt-0;
+  }
+}
+
+#main-content-pods .field__item:first-child {
+  .section-title-wrapper {
+    margin-top: 0 !important;
+    margin-bottom: calc($pod-margin-y / 2);
+  }
+
+  .paragraph {
+    @extend .mt-0;
+  }
+}
+
+
+/** ================= [ Main content ] ================= **/
+
+.main-content-wrapper {
+
+  &:has(> .row.g-0:empty) {
+    @extend .d-none;
+  }
+
+  .row {
+    column-gap: 1.5rem;
+
+    @include media-breakpoint-up('xl') {
+      column-gap: $layout-content-gap;
+    }
+
+    .content-main-container {
+      margin-bottom: $layout-hero-margin-bottom;
+
+      @include media-breakpoint-up('xl') {
+        max-width: $layout-content-node-max-width;
+        padding-left: $layout-content-padding-left;
+      }
+
+      .body-wrapper, .media-wrapper {
+        margin-bottom: $layout-hero-margin-bottom;
+
+        a:not(.btn) {
+          color: $text-link;
+
+          &:hover {
+            color: $text-link-hover;
+          }
+        }
+      }
+    }
+
+    /* Remove main padding if left sidebar */
+    #content-sidebar-fields + #content-main {
+      .content-main-container {
+        padding-left: 0 !important;
+      }
+    }
+
+    #main-content-pods {
+      margin-bottom: -$layout-content-gap;
+
+      .paragraph {
+        .container-xxl,
+        &.container-xxl {
+          @extend .g-0;
+        }
+      }
+    }
+  }
+
+  .node-download-wrapper .attachments {
+    background: $left-sidebar-bg;
+    padding: $global-spacing-05 $global-spacing-05;
+
+    @include media-breakpoint-up('sm') {
+      padding: $left-sidebar-body-padding-y $left-sidebar-body-padding-x;
+    }
+  }
+}
+
+.field--type-text-long p:last-child {
+  margin-bottom: 0;
+}
+
+
+/** ================= [ Right sidebar ] ================= **/
+
+$layout-sidebar-gap: 32px!default;
+$right-sidebar-title-align: left!default;
+
+#sidebar-pods {
+  padding: $right-sidebar-item-padding-y $right-sidebar-item-padding-x;
+  margin-bottom: $layout-sidebar-gap;
+
+  .field--name-field-sidebar-pods {
+    @extend .d-flex, .flex-column;
+    gap: $layout-sidebar-gap;
+
+    .paragraph-section {
+      @extend .p-0, .overflow-hidden;
+      border: solid $right-sidebar-border-width $right-sidebar-border-color;
+      border-radius: $right-sidebar-radius;
+
+      .paragraph {
+        .container-xxl,
+        &.container-xxl {
+          @extend .g-0;
+        }
+      }
+
+      .layout {
+        background: $right-sidebar-bg;
+        padding: $global-spacing-05 $global-spacing-05;
+
+        @include media-breakpoint-up('sm') {
+          padding: $right-sidebar-body-padding-y $right-sidebar-body-padding-x;
+        }
+
+        .layout__region {
+          gap: $layout-sidebar-gap;
+          @extend .d-flex, .flex-column;
+        }
+      }
+    }
+
+    .section-title-container.container-xxl {
+      @extend .g-0;
+
+      .section-title-wrapper h2.section-title {
+        background: $right-sidebar-title-bg;
+        border-bottom: solid $right-sidebar-title-border-bottom $right-sidebar-title-border;
+        color: $right-sidebar-title-color;
+        padding: $global-spacing-05 $global-spacing-05;
+        text-align: $right-sidebar-title-align;
+        @extend .m-0;
+
+        @include media-breakpoint-up('sm') {
+          padding: $right-sidebar-title-padding-x $right-sidebar-title-padding-y;
+        }
+      }
+    }
+
+    .paragraph {
+      h3.paragraph-title, .paragraph-title,
+      h3.pod-title, .pod-title {
+        text-align: $right-sidebar-title-align;
+      }
+    }
+  }
+}
+
+/** ================= [ Left sidebar ] ================= **/
+
+$left-sidebar-details-gap: $global-spacing-05!default;
+$left-sidebar-details-font: $global-text-secondary-font!default;
+
+#content-sidebar-fields {
+  padding: $left-sidebar-item-padding-y $left-sidebar-item-padding-x;
+  margin-bottom: $layout-hero-margin-bottom;
+
+  .sidebar-fields-wrapper {
+    @extend .d-flex, .flex-column;
+    gap: $layout-sidebar-gap;
+
+    .left-sidebar-section {
+      @extend .p-0, .overflow-hidden;
+      border: solid $left-sidebar-border-width $left-sidebar-border-color;
+      border-radius: $left-sidebar-radius;
+
+      .layout {
+        @extend .d-flex, .flex-column;
+        background: $left-sidebar-bg;
+        padding: $global-spacing-05 $global-spacing-05;
+        gap: $global-spacing-05;
+
+        @include media-breakpoint-up('sm') {
+          padding: $left-sidebar-body-padding-y $left-sidebar-body-padding-x;
+        }
+      }
+    }
+
+    .container {
+      @extend .g-0;
+    }
+
+    h2.section-title {
+      background: $left-sidebar-title-bg;
+      border-bottom: solid $left-sidebar-title-border-bottom $left-sidebar-title-border;
+      color: $left-sidebar-title-color;
+      padding: $global-spacing-05 $global-spacing-05;
+      @extend .m-0, .text-center;
+
+      @include media-breakpoint-up('sm') {
+        padding: $left-sidebar-title-padding-y $left-sidebar-title-padding-x;
+      }
+    }
+
+    .attachments {
+      .field__items {
+        display: flex;
+        flex-direction: column;
+        gap: $left-sidebar-body-spacer;
+      }
+    }
+
+    /* Node details */
+
+    .sidebar-details {
+      color: $left-sidebar-body-color;
+      font-family: $left-sidebar-details-font;
+
+      dd:has(> svg:first-child) {
+        gap: $left-sidebar-details-gap;
+      }
+
+      * + dt + dd.dd-border-top {
+        border-top: solid 1px $left-sidebar-body-divider;
+        padding-top: 0.5rem;
+      }
+
+      dt {
+        @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size, $text-mobile-body-bold-weight, $text-mobile-body-regular-line-height);
+        @include typography-desktop($text-desktop-body-regular-font, $text-mobile-body-regular-size, $text-desktop-body-bold-weight, $text-desktop-body-regular-line-height);
+        gap: 16px;
+
+        .divider {
+          height: 1px;
+          background: $divider-color;
+        }
+      }
+
+      dd {
+        @include typography-mobile($text-mobile-body-regular-font, $text-mobile-body-regular-size, $text-mobile-body-regular-weight, $text-mobile-body-regular-line-height);
+        @include typography-desktop($text-desktop-body-regular-font, $text-mobile-body-regular-size, $text-desktop-body-regular-weight, $text-desktop-body-regular-line-height);
+        margin-bottom: $left-sidebar-body-spacer;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      hr {
+        color: $divider-color;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+hr.content-divider {
+  margin: $global-spacing-2 0;
+}

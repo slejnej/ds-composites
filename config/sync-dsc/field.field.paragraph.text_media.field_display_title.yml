@@ -1,5 +1,5 @@
-uuid: fcb82233-1066-4de5-b02b-7e233949d490
-langcode: en
+uuid: 60b7d2b9-5a7a-4f24-a06e-dcc49d7a98c8
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -10,15 +10,15 @@ dependencies:
     - text
   enforced:
     module:
-      - text_media_nugget
+      - text_media_pod
 _core:
-  default_config_hash: O1vY4glThR56QXblB5JzXnCGzJWi48dSt05KYKYYocU
+  default_config_hash: rQVfsB0DylpbknH1ngZ8lYprZaBIQ5wQ5t8IrqS17E0
 id: paragraph.text_media.field_display_title
 field_name: field_display_title
 entity_type: paragraph
 bundle: text_media
 label: 'Display title'
-description: 'This title is displayed on the page above the content of this nugget.'
+description: 'This title is displayed on the page above the content of this pod.'
 required: false
 translatable: true
 default_value: {  }

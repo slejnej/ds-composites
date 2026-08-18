@@ -1,4 +1,4 @@
-uuid: 486ecbbc-229a-48d9-9958-40382d9f5095
+uuid: 6bb7f8c7-738e-4ec2-926e-f6568837b606
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
     - text
   enforced:
     module:
-      - slideshow_nugget
+      - slideshow_pod
 _core:
-  default_config_hash: bZCPXybdr8oCU2s8w0oBVvQhhHpe8AJb0_7xrJdclOg
+  default_config_hash: zYMUFaIMvj108RJrtaRXswudf7OOdlxuzXnYkqtOsR0
 id: paragraph.field_slide_nt_title
 field_name: field_slide_nt_title
 entity_type: paragraph

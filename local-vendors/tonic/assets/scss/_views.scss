@@ -1,0 +1,29 @@
+body {
+
+  .js-media-library-view.media-library-view, .view-media {
+    display: flex;
+    flex-direction: column;
+
+    .view-filters {
+      order: 1;
+    }
+
+    .view-header-wrapper {
+      order: 2;
+      .view-header {
+        padding: 0;
+        background: none;
+        box-shadow: none;
+      }
+    }
+
+    .view-content {
+      order: 3;
+    }
+
+    .pager{
+      order: 3;
+    }
+  }
+
+}

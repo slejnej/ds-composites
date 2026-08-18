@@ -1,0 +1,5039 @@
+uuid: 5acca704-d0e2-458d-8ad4-37de115ca01b
+langcode: en
+status: true
+dependencies:
+  module:
+    - webform
+id: config_sync.module.webform
+snapshotSet: config_sync
+extensionType: module
+extensionName: webform
+items:
+  -
+    collection: ''
+    name: filter.format.webform_default
+    data:
+      uuid: null
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      name: 'Webform (Default) - DO NOT EDIT'
+      format: webform_default
+      weight: 100
+      roles:
+        - authenticated
+      filters: {  }
+      _core:
+        default_config_hash: EeKp_M4Oid3erARiAam9rsgBKR91uEnFkEP3aZS2ol8
+  -
+    collection: ''
+    name: system.action.webform_archive_action
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - webform
+      id: webform_archive_action
+      label: 'Archive webform'
+      type: webform
+      plugin: webform_archive_action
+      configuration: {  }
+      _core:
+        default_config_hash: OmnschvBLb9ZJn0iVyBd2odf8U8Nt0INjRbRMixZw9U
+  -
+    collection: ''
+    name: system.action.webform_close_action
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - webform
+      id: webform_close_action
+      label: 'Close webform'
+      type: webform
+      plugin: webform_close_action
+      configuration: {  }
+      _core:
+        default_config_hash: Dl-1T9PDkraB7MyMUjTJAioPEx6UNvIB9gqmnB1CRkk
+  -
+    collection: ''
+    name: system.action.webform_delete_action
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - webform
+      id: webform_delete_action
+      label: 'Delete webform'
+      type: webform
+      plugin: webform_delete_action
+      configuration: {  }
+      _core:
+        default_config_hash: e1bCTp0ryXZZtnS9nlVAbtoWz3-8fmbNlqKY3GHzbsM
+  -
+    collection: ''
+    name: system.action.webform_open_action
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - webform
+      id: webform_open_action
+      label: 'Open webform'
+      type: webform
+      plugin: webform_open_action
+      configuration: {  }
+      _core:
+        default_config_hash: AK83C-dOZEPruvi6GbkuhihWLnO4VtrbesqSC6izf4o
+  -
+    collection: ''
+    name: system.action.webform_submission_delete_action
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - webform
+      id: webform_submission_delete_action
+      label: 'Delete submission'
+      type: webform_submission
+      plugin: webform_submission_delete_action
+      configuration: {  }
+      _core:
+        default_config_hash: TBnl4vapW7sy5bRi7TcF-ueJnvz7aZNLif95ifvhfTQ
+  -
+    collection: ''
+    name: system.action.webform_submission_make_lock_action
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - webform
+      id: webform_submission_make_lock_action
+      label: 'Lock submission'
+      type: webform_submission
+      plugin: webform_submission_make_lock_action
+      configuration: {  }
+      _core:
+        default_config_hash: MKmZlPRk3OJKNcYdYxSeZGQUh7LMah6MRShfkzch4bk
+  -
+    collection: ''
+    name: system.action.webform_submission_make_sticky_action
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - webform
+      id: webform_submission_make_sticky_action
+      label: 'Star/flag submission'
+      type: webform_submission
+      plugin: webform_submission_make_sticky_action
+      configuration: {  }
+      _core:
+        default_config_hash: mPWBT52fKHyINRl9S3cCWFxY3rKbwkIRxaK6sIA26oo
+  -
+    collection: ''
+    name: system.action.webform_submission_make_unlock_action
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - webform
+      id: webform_submission_make_unlock_action
+      label: 'Unlock submission'
+      type: webform_submission
+      plugin: webform_submission_make_unlock_action
+      configuration: {  }
+      _core:
+        default_config_hash: begZ0-RmTzO_zDAwEKA2lKvtGYw1vbFOzbQOJzUbZX0
+  -
+    collection: ''
+    name: system.action.webform_submission_make_unsticky_action
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - webform
+      id: webform_submission_make_unsticky_action
+      label: 'Unstar/unflag submission'
+      type: webform_submission
+      plugin: webform_submission_make_unsticky_action
+      configuration: {  }
+      _core:
+        default_config_hash: n4gTFiUsdp7gw6yWUlDbKFEasZLCgXWWCmm7eJejay0
+  -
+    collection: ''
+    name: system.action.webform_unarchive_action
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        module:
+          - webform
+      id: webform_unarchive_action
+      label: 'Restore webform'
+      type: webform
+      plugin: webform_unarchive_action
+      configuration: {  }
+      _core:
+        default_config_hash: aqi5Ftlnhe9KyOowpK7CanEvJMBBo8xAR1dA99bKOuc
+  -
+    collection: ''
+    name: views.view.webform_submissions
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+        module:
+          - user
+          - webform
+      id: webform_submissions
+      label: 'Webform submissions'
+      module: views
+      description: 'Default webform submissions views.'
+      tag: ''
+      base_table: webform_submission
+      base_field: sid
+      display:
+        default:
+          display_plugin: default
+          id: default
+          display_title: Master
+          position: 0
+          display_options:
+            access:
+              type: none
+              options: {  }
+            cache:
+              type: tag
+              options: {  }
+            query:
+              type: views_query
+              options:
+                disable_sql_rewrite: false
+                distinct: false
+                replica: false
+                query_comment: ''
+                query_tags: {  }
+            exposed_form:
+              type: basic
+              options:
+                submit_button: Apply
+                reset_button: false
+                reset_button_label: Reset
+                exposed_sorts_label: 'Sort by'
+                expose_sort_order: true
+                sort_asc_label: Asc
+                sort_desc_label: Desc
+            pager:
+              type: full
+              options:
+                items_per_page: 25
+                offset: 0
+                id: 0
+                total_pages: null
+                tags:
+                  previous: ‹‹
+                  next: ››
+                  first: '« First'
+                  last: 'Last »'
+                expose:
+                  items_per_page: false
+                  items_per_page_label: 'Items per page'
+                  items_per_page_options: '5, 10, 25, 50, 100, 200'
+                  items_per_page_options_all: false
+                  items_per_page_options_all_label: '- All -'
+                  offset: false
+                  offset_label: Offset
+                quantity: 9
+            style:
+              type: table
+              options:
+                grouping: {  }
+                row_class: ''
+                default_row_class: true
+                override: true
+                sticky: false
+                caption: ''
+                summary: ''
+                description: ''
+                columns:
+                  webform_submission_bulk_form: webform_submission_bulk_form
+                  sid: sid
+                  in_draft: in_draft
+                  sticky: sticky
+                  locked: locked
+                  created: created
+                  completed: completed
+                  remote_addr: remote_addr
+                  view_webform_submission: view_webform_submission
+                  edit_webform_submission: view_webform_submission
+                info:
+                  webform_submission_bulk_form:
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  sid:
+                    sortable: true
+                    default_sort_order: desc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  in_draft:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  sticky:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  locked:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  created:
+                    sortable: true
+                    default_sort_order: desc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  completed:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  remote_addr:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  view_webform_submission:
+                    sortable: false
+                    default_sort_order: asc
+                    align: ''
+                    separator: ' '
+                    empty_column: false
+                    responsive: ''
+                  edit_webform_submission:
+                    sortable: false
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                default: created
+                empty_table: false
+            row:
+              type: fields
+              options:
+                inline: {  }
+                separator: ''
+                hide_empty: false
+                default_field_elements: true
+            fields:
+              sid:
+                id: sid
+                table: webform_submission
+                field: sid
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: '#'
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: number_integer
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: sid
+                plugin_id: field
+              in_draft:
+                id: in_draft
+                table: webform_submission
+                field: in_draft
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Draft
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: boolean
+                settings:
+                  format: yes-no
+                  format_custom_true: ''
+                  format_custom_false: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: in_draft
+                plugin_id: field
+              created:
+                id: created
+                table: webform_submission
+                field: created
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Created
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: timestamp
+                settings:
+                  date_format: medium
+                  custom_date_format: ''
+                  timezone: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: created
+                plugin_id: field
+              remote_addr:
+                id: remote_addr
+                table: webform_submission
+                field: remote_addr
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: 'IP address'
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                settings:
+                  link_to_entity: false
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: remote_addr
+                plugin_id: field
+              view_webform_submission:
+                id: view_webform_submission
+                table: webform_submission
+                field: view_webform_submission
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Operations
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                text: view
+                output_url_as_text: false
+                absolute: false
+                entity_type: webform_submission
+                plugin_id: entity_link
+            filters: {  }
+            sorts: {  }
+            header:
+              result:
+                id: result
+                table: views
+                field: result
+                relationship: none
+                group_type: group
+                admin_label: ''
+                empty: false
+                content: 'Displaying @start - @end of @total'
+                plugin_id: result
+            footer: {  }
+            empty:
+              area_text_custom:
+                id: area_text_custom
+                table: views
+                field: area_text_custom
+                relationship: none
+                group_type: group
+                admin_label: ''
+                empty: true
+                tokenize: false
+                content: 'No submissions available.'
+                plugin_id: text_custom
+            relationships: {  }
+            arguments:
+              webform_id:
+                id: webform_id
+                table: webform_submission
+                field: webform_id
+                entity_type: webform_submission
+                entity_field: webform_id
+                plugin_id: string
+              entity_type:
+                id: entity_type
+                table: webform_submission
+                field: entity_type
+                entity_type: webform_submission
+                entity_field: entity_type
+                plugin_id: string
+              entity_id:
+                id: entity_id
+                table: webform_submission
+                field: entity_id
+                entity_type: webform_submission
+                entity_field: entity_id
+                plugin_id: string
+              uid:
+                id: uid
+                table: webform_submission
+                field: uid
+                entity_type: webform_submission
+                entity_field: uid
+                plugin_id: entity_target_id
+              in_draft:
+                id: in_draft
+                table: webform_submission
+                field: in_draft
+                relationship: none
+                group_type: group
+                admin_label: ''
+                default_action: ignore
+                exception:
+                  value: all
+                  title_enable: false
+                  title: All
+                title_enable: false
+                title: ''
+                default_argument_type: fixed
+                default_argument_options:
+                  argument: ''
+                summary_options:
+                  base_path: ''
+                  count: true
+                  items_per_page: 25
+                  override: false
+                summary:
+                  sort_order: asc
+                  number_of_records: 0
+                  format: default_summary
+                specify_validation: false
+                validate:
+                  type: none
+                  fail: 'not found'
+                validate_options: {  }
+                break_phrase: false
+                not: false
+                entity_type: webform_submission
+                entity_field: in_draft
+                plugin_id: numeric
+            display_extenders: {  }
+            filter_groups:
+              operator: AND
+              groups: {  }
+            title: 'Webform submissions'
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - url.query_args
+              - user
+            tags: {  }
+        embed_default:
+          display_plugin: embed
+          id: embed_default
+          display_title: 'Embed: Default'
+          position: 1
+          display_options:
+            display_extenders: {  }
+            display_description: 'Display submissions.'
+            defaults:
+              fields: true
+              style: false
+              row: false
+              filters: true
+              filter_groups: true
+            style:
+              type: table
+              options:
+                grouping: {  }
+                row_class: ''
+                default_row_class: true
+                override: true
+                sticky: false
+                caption: ''
+                summary: ''
+                description: ''
+                columns:
+                  sid: sid
+                  in_draft: in_draft
+                  created: created
+                  remote_addr: remote_addr
+                  view_webform_submission: view_webform_submission
+                info:
+                  sid:
+                    sortable: true
+                    default_sort_order: desc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  in_draft:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  created:
+                    sortable: true
+                    default_sort_order: desc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  remote_addr:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  view_webform_submission:
+                    sortable: false
+                    default_sort_order: asc
+                    align: ''
+                    separator: ' '
+                    empty_column: false
+                    responsive: ''
+                default: created
+                empty_table: false
+            row:
+              type: fields
+              options:
+                inline: {  }
+                separator: ''
+                hide_empty: false
+                default_field_elements: true
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - url.query_args
+              - user
+            tags: {  }
+        embed_administer:
+          display_plugin: embed
+          id: embed_administer
+          display_title: 'Embed: Administer'
+          position: 2
+          display_options:
+            display_extenders: {  }
+            display_description: 'Administer submissions.'
+            style:
+              type: table
+              options:
+                grouping: {  }
+                row_class: ''
+                default_row_class: true
+                override: true
+                sticky: false
+                caption: ''
+                summary: ''
+                description: ''
+                columns:
+                  webform_submission_bulk_form: webform_submission_bulk_form
+                  sid: sid
+                  in_draft: in_draft
+                  sticky: sticky
+                  locked: locked
+                  created: created
+                  completed: completed
+                  remote_addr: remote_addr
+                  view_webform_submission: view_webform_submission
+                  edit_webform_submission: view_webform_submission
+                info:
+                  webform_submission_bulk_form:
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  sid:
+                    sortable: true
+                    default_sort_order: desc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  in_draft:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  sticky:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  locked:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  created:
+                    sortable: true
+                    default_sort_order: desc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  completed:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  remote_addr:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  view_webform_submission:
+                    sortable: false
+                    default_sort_order: asc
+                    align: ''
+                    separator: ' '
+                    empty_column: false
+                    responsive: ''
+                  edit_webform_submission:
+                    sortable: false
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                default: created
+                empty_table: false
+            defaults:
+              style: false
+              row: false
+              access: false
+              fields: false
+              filters: false
+              filter_groups: false
+            row:
+              type: fields
+              options:
+                inline: {  }
+                separator: ''
+                hide_empty: false
+                default_field_elements: true
+            access:
+              type: perm
+              options:
+                perm: 'administer webform submission'
+            fields:
+              webform_submission_bulk_form:
+                id: webform_submission_bulk_form
+                table: webform_submission
+                field: webform_submission_bulk_form
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: 'Webform submission operations bulk form'
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                action_title: Action
+                include_exclude: exclude
+                selected_actions: {  }
+                entity_type: webform_submission
+                plugin_id: webform_submission_bulk_form
+              sid:
+                id: sid
+                table: webform_submission
+                field: sid
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: '#'
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: number_integer
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: sid
+                plugin_id: field
+              in_draft:
+                id: in_draft
+                table: webform_submission
+                field: in_draft
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Draft
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: boolean
+                settings:
+                  format: yes-no
+                  format_custom_true: ''
+                  format_custom_false: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: in_draft
+                plugin_id: field
+              sticky:
+                id: sticky
+                table: webform_submission
+                field: sticky
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Sticky
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: boolean
+                settings:
+                  format: yes-no
+                  format_custom_true: ''
+                  format_custom_false: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: sticky
+                plugin_id: field
+              locked:
+                id: locked
+                table: webform_submission
+                field: locked
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Locked
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: boolean
+                settings:
+                  format: yes-no
+                  format_custom_true: ''
+                  format_custom_false: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: locked
+                plugin_id: field
+              created:
+                id: created
+                table: webform_submission
+                field: created
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Created
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: timestamp
+                settings:
+                  date_format: medium
+                  custom_date_format: ''
+                  timezone: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: created
+                plugin_id: field
+              completed:
+                id: completed
+                table: webform_submission
+                field: completed
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Completed
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: timestamp
+                settings:
+                  date_format: medium
+                  custom_date_format: ''
+                  timezone: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: completed
+                plugin_id: field
+              remote_addr:
+                id: remote_addr
+                table: webform_submission
+                field: remote_addr
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: 'IP address'
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                settings:
+                  link_to_entity: false
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: remote_addr
+                plugin_id: field
+              operations:
+                id: operations
+                table: webform_submission
+                field: operations
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Operations
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                destination: true
+                entity_type: null
+                entity_field: null
+                plugin_id: entity_operations
+            filters:
+              in_draft:
+                id: in_draft
+                table: webform_submission
+                field: in_draft
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: '='
+                value: All
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: ''
+                  label: 'Is draft'
+                  description: ''
+                  use_operator: false
+                  operator: in_draft_op
+                  identifier: in_draft
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                    anonymous: '0'
+                    administrator: '0'
+                  operator_limit_selection: false
+                  operator_list: {  }
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                entity_type: webform_submission
+                entity_field: in_draft
+                plugin_id: boolean
+              sticky:
+                id: sticky
+                table: webform_submission
+                field: sticky
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: '='
+                value: All
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: ''
+                  label: Sticky
+                  description: ''
+                  use_operator: false
+                  operator: sticky_op
+                  identifier: sticky
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                    anonymous: '0'
+                    administrator: '0'
+                  operator_limit_selection: false
+                  operator_list: {  }
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                entity_type: webform_submission
+                entity_field: sticky
+                plugin_id: boolean
+              locked:
+                id: locked
+                table: webform_submission
+                field: locked
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: '='
+                value: All
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: ''
+                  label: Locked
+                  description: ''
+                  use_operator: false
+                  operator: locked_op
+                  identifier: locked
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                    anonymous: '0'
+                    administrator: '0'
+                    demo_region: '0'
+                  operator_limit_selection: false
+                  operator_list: {  }
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                entity_type: webform_submission
+                entity_field: locked
+                plugin_id: boolean
+            filter_groups:
+              operator: AND
+              groups:
+                1: AND
+          cache_metadata:
+            max-age: 0
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - url.query_args
+              - user
+              - user.permissions
+            tags: {  }
+        embed_manage:
+          display_plugin: embed
+          id: embed_manage
+          display_title: 'Embed: Manage'
+          position: 3
+          display_options:
+            display_extenders: {  }
+            display_description: 'Manage submissions.'
+            fields:
+              webform_submission_bulk_form:
+                id: webform_submission_bulk_form
+                table: webform_submission
+                field: webform_submission_bulk_form
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: 'Webform submission operations bulk form'
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                action_title: Action
+                include_exclude: include
+                selected_actions:
+                  - webform_submission_make_lock_action
+                  - webform_submission_make_sticky_action
+                  - webform_submission_make_unlock_action
+                  - webform_submission_make_unsticky_action
+                entity_type: webform_submission
+                plugin_id: webform_submission_bulk_form
+              sid:
+                id: sid
+                table: webform_submission
+                field: sid
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: '#'
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: number_integer
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: sid
+                plugin_id: field
+              in_draft:
+                id: in_draft
+                table: webform_submission
+                field: in_draft
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Draft
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: boolean
+                settings:
+                  format: yes-no
+                  format_custom_true: ''
+                  format_custom_false: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: in_draft
+                plugin_id: field
+              sticky:
+                id: sticky
+                table: webform_submission
+                field: sticky
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Sticky
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: boolean
+                settings:
+                  format: yes-no
+                  format_custom_true: ''
+                  format_custom_false: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: sticky
+                plugin_id: field
+              locked:
+                id: locked
+                table: webform_submission
+                field: locked
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Locked
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: boolean
+                settings:
+                  format: yes-no
+                  format_custom_true: ''
+                  format_custom_false: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: locked
+                plugin_id: field
+              created:
+                id: created
+                table: webform_submission
+                field: created
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Created
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: timestamp
+                settings:
+                  date_format: medium
+                  custom_date_format: ''
+                  timezone: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: created
+                plugin_id: field
+              completed:
+                id: completed
+                table: webform_submission
+                field: completed
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Completed
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: timestamp
+                settings:
+                  date_format: medium
+                  custom_date_format: ''
+                  timezone: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: completed
+                plugin_id: field
+              remote_addr:
+                id: remote_addr
+                table: webform_submission
+                field: remote_addr
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: 'IP address'
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                settings:
+                  link_to_entity: false
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: remote_addr
+                plugin_id: field
+              view_webform_submission:
+                id: view_webform_submission
+                table: webform_submission
+                field: view_webform_submission
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Operations
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                text: view
+                output_url_as_text: false
+                absolute: false
+                entity_type: webform_submission
+                plugin_id: entity_link
+              edit_webform_submission:
+                id: edit_webform_submission
+                table: webform_submission
+                field: edit_webform_submission
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Operations
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                text: edit
+                output_url_as_text: false
+                absolute: false
+                entity_type: webform_submission
+                plugin_id: entity_link_edit
+            defaults:
+              fields: false
+              style: false
+              row: false
+              access: false
+              filters: false
+              filter_groups: false
+            style:
+              type: table
+              options:
+                grouping: {  }
+                row_class: ''
+                default_row_class: true
+                override: true
+                sticky: false
+                caption: ''
+                summary: ''
+                description: ''
+                columns:
+                  webform_submission_bulk_form: webform_submission_bulk_form
+                  sid: sid
+                  in_draft: in_draft
+                  sticky: sticky
+                  locked: locked
+                  created: created
+                  completed: completed
+                  remote_addr: remote_addr
+                  view_webform_submission: view_webform_submission
+                  edit_webform_submission: view_webform_submission
+                info:
+                  webform_submission_bulk_form:
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  sid:
+                    sortable: true
+                    default_sort_order: desc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  in_draft:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  sticky:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  locked:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  created:
+                    sortable: true
+                    default_sort_order: desc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  completed:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  remote_addr:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  view_webform_submission:
+                    sortable: false
+                    default_sort_order: asc
+                    align: ''
+                    separator: ' '
+                    empty_column: false
+                    responsive: ''
+                  edit_webform_submission:
+                    sortable: false
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                default: created
+                empty_table: false
+            row:
+              type: fields
+              options:
+                inline: {  }
+                separator: ''
+                hide_empty: false
+                default_field_elements: true
+            access:
+              type: perm
+              options:
+                perm: 'edit any webform submission'
+            filters:
+              in_draft:
+                id: in_draft
+                table: webform_submission
+                field: in_draft
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: '='
+                value: All
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: ''
+                  label: 'Is draft'
+                  description: ''
+                  use_operator: false
+                  operator: in_draft_op
+                  identifier: in_draft
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                    anonymous: '0'
+                    administrator: '0'
+                  operator_limit_selection: false
+                  operator_list: {  }
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                entity_type: webform_submission
+                entity_field: in_draft
+                plugin_id: boolean
+              sticky:
+                id: sticky
+                table: webform_submission
+                field: sticky
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: '='
+                value: All
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: ''
+                  label: Sticky
+                  description: ''
+                  use_operator: false
+                  operator: sticky_op
+                  identifier: sticky
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                    anonymous: '0'
+                    administrator: '0'
+                  operator_limit_selection: false
+                  operator_list: {  }
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                entity_type: webform_submission
+                entity_field: sticky
+                plugin_id: boolean
+              locked:
+                id: locked
+                table: webform_submission
+                field: locked
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: '='
+                value: All
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: ''
+                  label: Locked
+                  description: ''
+                  use_operator: false
+                  operator: locked_op
+                  identifier: locked
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                    anonymous: '0'
+                    administrator: '0'
+                    demo_region: '0'
+                  operator_limit_selection: false
+                  operator_list: {  }
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                entity_type: webform_submission
+                entity_field: locked
+                plugin_id: boolean
+            filter_groups:
+              operator: AND
+              groups:
+                1: AND
+          cache_metadata:
+            max-age: 0
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - url.query_args
+              - user
+              - user.permissions
+            tags: {  }
+        embed_review:
+          display_plugin: embed
+          id: embed_review
+          display_title: 'Embed: Review'
+          position: 4
+          display_options:
+            display_extenders: {  }
+            display_description: 'Review submissions.'
+            fields:
+              sid:
+                id: sid
+                table: webform_submission
+                field: sid
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: '#'
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: number_integer
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: sid
+                plugin_id: field
+              in_draft:
+                id: in_draft
+                table: webform_submission
+                field: in_draft
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Draft
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: boolean
+                settings:
+                  format: yes-no
+                  format_custom_true: ''
+                  format_custom_false: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: in_draft
+                plugin_id: field
+              sticky:
+                id: sticky
+                table: webform_submission
+                field: sticky
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Sticky
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: boolean
+                settings:
+                  format: yes-no
+                  format_custom_true: ''
+                  format_custom_false: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: sticky
+                plugin_id: field
+              locked:
+                id: locked
+                table: webform_submission
+                field: locked
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Locked
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: boolean
+                settings:
+                  format: yes-no
+                  format_custom_true: ''
+                  format_custom_false: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: locked
+                plugin_id: field
+              created:
+                id: created
+                table: webform_submission
+                field: created
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Created
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: false
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: timestamp
+                settings:
+                  date_format: medium
+                  custom_date_format: ''
+                  timezone: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: created
+                plugin_id: field
+              completed:
+                id: completed
+                table: webform_submission
+                field: completed
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Completed
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: timestamp
+                settings:
+                  date_format: medium
+                  custom_date_format: ''
+                  timezone: ''
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: completed
+                plugin_id: field
+              remote_addr:
+                id: remote_addr
+                table: webform_submission
+                field: remote_addr
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: 'IP address'
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                click_sort_column: value
+                type: string
+                settings:
+                  link_to_entity: false
+                group_column: value
+                group_columns: {  }
+                group_rows: true
+                delta_limit: 0
+                delta_offset: 0
+                delta_reversed: false
+                delta_first_last: false
+                multi_type: separator
+                separator: ', '
+                field_api_classes: false
+                entity_type: webform_submission
+                entity_field: remote_addr
+                plugin_id: field
+              view_webform_submission:
+                id: view_webform_submission
+                table: webform_submission
+                field: view_webform_submission
+                relationship: none
+                group_type: group
+                admin_label: ''
+                label: Operations
+                exclude: false
+                alter:
+                  alter_text: false
+                  text: ''
+                  make_link: false
+                  path: ''
+                  absolute: false
+                  external: false
+                  replace_spaces: false
+                  path_case: none
+                  trim_whitespace: false
+                  alt: ''
+                  rel: ''
+                  link_class: ''
+                  prefix: ''
+                  suffix: ''
+                  target: ''
+                  nl2br: false
+                  max_length: 0
+                  word_boundary: true
+                  ellipsis: true
+                  more_link: false
+                  more_link_text: ''
+                  more_link_path: ''
+                  strip_tags: false
+                  trim: false
+                  preserve_tags: ''
+                  html: false
+                element_type: ''
+                element_class: ''
+                element_label_type: ''
+                element_label_class: ''
+                element_label_colon: true
+                element_wrapper_type: ''
+                element_wrapper_class: ''
+                element_default_classes: true
+                empty: ''
+                hide_empty: false
+                empty_zero: false
+                hide_alter_empty: true
+                text: view
+                output_url_as_text: false
+                absolute: false
+                entity_type: webform_submission
+                plugin_id: entity_link
+            defaults:
+              fields: false
+              style: false
+              row: false
+              access: false
+              filters: false
+              filter_groups: false
+            style:
+              type: table
+              options:
+                grouping: {  }
+                row_class: ''
+                default_row_class: true
+                override: true
+                sticky: false
+                caption: ''
+                summary: ''
+                description: ''
+                columns:
+                  webform_submission_bulk_form: webform_submission_bulk_form
+                  sid: sid
+                  in_draft: in_draft
+                  sticky: sticky
+                  locked: locked
+                  created: created
+                  completed: completed
+                  remote_addr: remote_addr
+                  view_webform_submission: view_webform_submission
+                  edit_webform_submission: view_webform_submission
+                info:
+                  webform_submission_bulk_form:
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  sid:
+                    sortable: true
+                    default_sort_order: desc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  in_draft:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  sticky:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  locked:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  created:
+                    sortable: true
+                    default_sort_order: desc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  completed:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  remote_addr:
+                    sortable: true
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                  view_webform_submission:
+                    sortable: false
+                    default_sort_order: asc
+                    align: ''
+                    separator: ' '
+                    empty_column: false
+                    responsive: ''
+                  edit_webform_submission:
+                    sortable: false
+                    default_sort_order: asc
+                    align: ''
+                    separator: ''
+                    empty_column: false
+                    responsive: ''
+                default: created
+                empty_table: false
+            row:
+              type: fields
+              options:
+                inline: {  }
+                separator: ''
+                hide_empty: false
+                default_field_elements: true
+            access:
+              type: perm
+              options:
+                perm: 'view any webform submission'
+            filters:
+              in_draft:
+                id: in_draft
+                table: webform_submission
+                field: in_draft
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: '='
+                value: All
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: ''
+                  label: 'Is draft'
+                  description: ''
+                  use_operator: false
+                  operator: in_draft_op
+                  identifier: in_draft
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                    anonymous: '0'
+                    administrator: '0'
+                  operator_limit_selection: false
+                  operator_list: {  }
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                entity_type: webform_submission
+                entity_field: in_draft
+                plugin_id: boolean
+              sticky:
+                id: sticky
+                table: webform_submission
+                field: sticky
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: '='
+                value: All
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: ''
+                  label: Sticky
+                  description: ''
+                  use_operator: false
+                  operator: sticky_op
+                  identifier: sticky
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                    anonymous: '0'
+                    administrator: '0'
+                  operator_limit_selection: false
+                  operator_list: {  }
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                entity_type: webform_submission
+                entity_field: sticky
+                plugin_id: boolean
+              locked:
+                id: locked
+                table: webform_submission
+                field: locked
+                relationship: none
+                group_type: group
+                admin_label: ''
+                operator: '='
+                value: All
+                group: 1
+                exposed: true
+                expose:
+                  operator_id: ''
+                  label: Locked
+                  description: ''
+                  use_operator: false
+                  operator: locked_op
+                  identifier: locked
+                  required: false
+                  remember: false
+                  multiple: false
+                  remember_roles:
+                    authenticated: authenticated
+                    anonymous: '0'
+                    administrator: '0'
+                    demo_region: '0'
+                  operator_limit_selection: false
+                  operator_list: {  }
+                is_grouped: false
+                group_info:
+                  label: ''
+                  description: ''
+                  identifier: ''
+                  optional: true
+                  widget: select
+                  multiple: false
+                  remember: false
+                  default_group: All
+                  default_group_multiple: {  }
+                  group_items: {  }
+                entity_type: webform_submission
+                entity_field: locked
+                plugin_id: boolean
+            filter_groups:
+              operator: AND
+              groups:
+                1: AND
+          cache_metadata:
+            max-age: -1
+            contexts:
+              - 'languages:language_content'
+              - 'languages:language_interface'
+              - url
+              - url.query_args
+              - user
+              - user.permissions
+            tags: {  }
+      _core:
+        default_config_hash: uIuCYXi8Y6GTe4pKUxK2t9OjQEcrwvFJZFeitfnQ8Ys
+  -
+    collection: ''
+    name: webform.settings
+    data:
+      settings:
+        default_status: open
+        default_categories: {  }
+        default_page: true
+        default_page_base_path: /form
+        default_ajax: false
+        default_ajax_effect: fade
+        default_ajax_speed: 500
+        default_ajax_progress_type: throbber
+        default_form_open_message: 'This form has not yet been opened to submissions.'
+        default_form_close_message: 'Sorry… This form is closed to new submissions.'
+        default_form_exception_message: 'Unable to display this webform. Please contact the site administrator.'
+        default_submit_button_label: Submit
+        default_reset_button_label: Reset
+        default_delete_button_label: Delete
+        default_form_submit_once: false
+        default_form_confidential_message: 'This form is confidential. You must <a href="[site:login-url]/logout?destination=[current-page:url:relative]">Log out</a> to submit it.'
+        default_form_access_denied_message: 'Please log in to access this form.'
+        default_form_disable_back: false
+        default_form_submit_back: false
+        default_form_unsaved: false
+        default_form_disable_remote_addr: false
+        default_form_novalidate: false
+        default_form_disable_inline_errors: false
+        default_form_required: false
+        default_form_required_label: 'Indicates required field'
+        default_form_details_toggle: true
+        default_form_file_limit: ''
+        default_form_file_limit_message: "This form's file upload quota of %quota has been exceeded. Please remove some files."
+        form_classes: |
+          container-inline clearfix
+          form--inline clearfix
+          messages messages--error
+          messages messages--warning
+          messages messages--status
+        button_classes: ''
+        default_wizard_prev_button_label: '< Previous'
+        default_wizard_next_button_label: 'Next >'
+        default_wizard_start_label: Start
+        default_wizard_confirmation_label: Complete
+        default_wizard_toggle_show_label: 'Show all'
+        default_wizard_toggle_hide_label: 'Hide all'
+        default_preview_next_button_label: Preview
+        default_preview_prev_button_label: '< Previous'
+        default_preview_label: Preview
+        default_preview_title: '[webform:title]: Preview'
+        default_preview_message: 'Please review your submission. Your submission is not complete until you press the "Submit" button!'
+        default_draft_button_label: 'Save Draft'
+        default_draft_saved_message: 'Submission saved. You may return to this form later and it will restore the current values.'
+        default_draft_loaded_message: 'A partially-completed form was found. Please complete the remaining portions.'
+        default_draft_pending_single_message: 'You have a pending draft for this webform. <a href="#">Load your pending draft</a>.'
+        default_draft_pending_multiple_message: 'You have pending drafts for this webform. <a href="#">View your pending drafts</a>.'
+        default_confirmation_message: 'New submission added to [webform:title].'
+        default_confirmation_back_label: 'Back to form'
+        default_confirmation_noindex: true
+        default_submission_label: '[webform_submission:submitted-to]: Submission #[webform_submission:serial]'
+        default_submission_access_denied_message: 'Please log in to access this submission.'
+        default_submission_exception_message: 'Unable to process this submission. Please contact the site administrator.'
+        default_submission_locked_message: 'This submission has been locked.'
+        default_submission_log: false
+        default_submission_views: {  }
+        default_submission_views_replace:
+          global_routes:
+            - entity.webform_submission.collection
+            - entity.webform_submission.user
+          webform_routes:
+            - entity.webform.results_submissions
+            - entity.webform.user.drafts
+            - entity.webform.user.submissions
+          node_routes:
+            - entity.node.webform.results_submissions
+            - entity.node.webform.user.drafts
+            - entity.node.webform.user.submissions
+        default_results_customize: false
+        default_previous_submission_message: 'You have already submitted this webform. <a href="#">View your previous submission</a>.'
+        default_previous_submissions_message: 'You have already submitted this webform. <a href="#">View your previous submissions</a>.'
+        default_autofill_message: 'This submission has been autofilled with your previous submission.'
+        preview_classes: |
+          messages messages--error
+          messages messages--warning
+          messages messages--status
+        confirmation_classes: |
+          messages messages--error
+          messages messages--warning
+          messages messages--status
+        confirmation_back_classes: |
+          button
+        default_limit_total_message: 'No more submissions are permitted.'
+        default_limit_user_message: 'No more submissions are permitted.'
+        default_share: false
+        default_share_node: false
+        default_share_theme_name: ''
+        dialog: false
+        dialog_options:
+          narrow:
+            title: Narrow
+            width: 600
+          normal:
+            title: Normal
+            width: 800
+          wide:
+            title: Wide
+            width: 1000
+        webform_bulk_form: true
+        webform_bulk_form_actions:
+          - webform_open_action
+          - webform_close_action
+          - webform_archive_action
+          - webform_unarchive_action
+          - webform_delete_action
+        webform_submission_bulk_form: true
+        webform_submission_bulk_form_actions:
+          - webform_submission_make_sticky_action
+          - webform_submission_make_unsticky_action
+          - webform_submission_make_lock_action
+          - webform_submission_make_unlock_action
+          - webform_submission_delete_action
+      assets:
+        css: ''
+        javascript: ''
+      handler:
+        excluded_handlers: {  }
+      variant:
+        excluded_variants: {  }
+      export:
+        temp_directory: ''
+        exporter: delimited
+        multiple_delimiter: ;
+        header_format: label
+        header_prefix: true
+        header_prefix_label_delimiter: ': '
+        header_prefix_key_delimiter: __
+        composite_element_item_format: label
+        options_single_format: compact
+        options_multiple_format: compact
+        options_item_format: label
+        entity_reference_items:
+          - id
+          - title
+          - url
+        likert_answers_format: label
+        signature_format: status
+        delimiter: ','
+        excel: false
+        archive_type: tar
+        excluded_exporters: {  }
+      batch:
+        default_batch_export_size: 500
+        default_batch_import_size: 100
+        default_batch_update_size: 500
+        default_batch_delete_size: 500
+        default_batch_email_size: 500
+      purge:
+        cron_size: 100
+      form:
+        limit: 50
+        filter_category: ''
+        filter_state: ''
+      element:
+        machine_name_pattern: a-z0-9_
+        empty_message: '{Empty}'
+        allowed_tags: admin
+        wrapper_classes: |
+          container-inline clearfix
+          form--inline clearfix
+          messages messages--error
+          messages messages--warning
+          messages messages--status
+        classes: |
+          container-inline clearfix
+          form--inline clearfix
+          messages messages--error
+          messages messages--warning
+          messages messages--status
+        horizontal_rule_classes: |
+          webform-horizontal-rule--solid
+          webform-horizontal-rule--dashed
+          webform-horizontal-rule--dotted
+          webform-horizontal-rule--gradient
+          webform-horizontal-rule--thin
+          webform-horizontal-rule--medium
+          webform-horizontal-rule--thick
+          webform-horizontal-rule--flaired
+          webform-horizontal-rule--glyph
+        default_description_display: ''
+        default_more_title: More
+        default_section_title_tag: h2
+        default_empty_option: true
+        default_empty_option_required: ''
+        default_empty_option_optional: ''
+        excluded_elements:
+          password: password
+          password_confirm: password_confirm
+      html_editor:
+        disabled: false
+        element_format: webform_default
+        mail_format: webform_default
+        tidy: true
+        make_unused_managed_files_temporary: true
+      file:
+        file_public: false
+        file_private_redirect: true
+        file_private_redirect_message: 'Please log in to access the uploaded file.'
+        default_max_filesize: ''
+        default_managed_file_extensions: 'gif jpg jpeg png bmp eps tif pict psd txt rtf html odf pdf doc docx ppt pptx xls xlsx xml avi mov mp3 mp4 ogg wav bz2 dmg gz jar rar sit svg tar zip'
+        default_audio_file_extensions: 'mp3 ogg wav'
+        default_document_file_extensions: 'txt rtf pdf doc docx odt ppt pptx odp xls xlsx ods'
+        default_image_file_extensions: 'gif jpg jpeg png'
+        default_video_file_extensions: 'avi mov mp4 ogg wav webm'
+        make_unused_managed_files_temporary: true
+        delete_temporary_managed_files: true
+      format: {  }
+      mail:
+        default_to_mail: '[site:mail]'
+        default_from_mail: '[site:mail]'
+        default_from_name: '[site:name]'
+        default_reply_to: ''
+        default_return_path: ''
+        default_sender_mail: ''
+        default_sender_name: ''
+        default_subject: 'Webform submission from: [webform_submission:source-title]'
+        default_body_text: |
+          Submitted on [webform_submission:created]
+          Submitted by: [webform_submission:user]
+
+          Submitted values are:
+          [webform_submission:values]
+        default_body_html: |
+          <p>Submitted on [webform_submission:created]</p>
+          <p>Submitted by: [webform_submission:user]</p>
+          <p>Submitted values are:</p>
+          [webform_submission:values]
+        roles: {  }
+      test:
+        types: |
+          checkbox:
+            - true
+          color:
+            - '#ffffcc'
+            - '#ffffcc'
+            - '#ccffff'
+          email:
+            - 'example@example.com'
+            - 'test@test.com'
+            - 'random@random.com'
+          language_select:
+            - en
+          machine_name:
+            - 'loremipsum'
+            - 'oratione'
+            - 'dixisset'
+          tel:
+            - '123-456-7890'
+            - '098-765-4321'
+          textarea:
+            - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Negat esse eam, inquit, propter se expetendam. Primum Theophrasti, Strato, physicum se voluit; Id mihi magnum videtur. Itaque mihi non satis videmini considerare quod iter sit naturae quaeque progressio. Quare hoc videndum est, possitne nobis hoc ratio philosophorum dare. Est enim tanti philosophi tamque nobilis audacter sua decreta defendere.'
+            - 'Huius, Lyco, oratione locuples, rebus ipsis ielunior. Duo Reges: constructio interrete. Sed haec in pueris; Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Sapiens autem semper beatus est et est aliquando in dolore; Immo videri fortasse. Paulum, cum regem Persem captum adduceret, eodem flumine invectio? Et ille ridens: Video, inquit, quid agas;'
+            - 'Quae cum dixisset, finem ille. Quamquam non negatis nos intellegere quid sit voluptas, sed quid ille dicat. Progredientibus autem aetatibus sensim tardeve potius quasi nosmet ipsos cognoscimus. Gloriosa ostentatio in constituendo summo bono. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Duarum enim vitarum nobis erunt instituta capienda. Comprehensum, quod cognitum non habet? Qui enim existimabit posse se miserum esse beatus non erit. Causa autem fuit huc veniendi ut quosdam hinc libros promerem. Nunc omni virtuti vitium contrario nomine opponitur.'
+          text_format:
+            - value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Negat esse eam, inquit, propter se expetendam. Primum Theophrasti, Strato, physicum se voluit; Id mihi magnum videtur. Itaque mihi non satis videmini considerare quod iter sit naturae quaeque progressio. Quare hoc videndum est, possitne nobis hoc ratio philosophorum dare. Est enim tanti philosophi tamque nobilis audacter sua decreta defendere.</p>'
+            - value: '<p>Huius, Lyco, oratione locuples, rebus ipsis ielunior. Duo Reges: constructio interrete. Sed haec in pueris; Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Sapiens autem semper beatus est et est aliquando in dolore; Immo videri fortasse. Paulum, cum regem Persem captum adduceret, eodem flumine invectio? Et ille ridens: Video, inquit, quid agas;</p>'
+            - value: '<p>Quae cum dixisset, finem ille. Quamquam non negatis nos intellegere quid sit voluptas, sed quid ille dicat. Progredientibus autem aetatibus sensim tardeve potius quasi nosmet ipsos cognoscimus. Gloriosa ostentatio in constituendo summo bono. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Duarum enim vitarum nobis erunt instituta capienda. Comprehensum, quod cognitum non habet? Qui enim existimabit posse se miserum esse beatus non erit. Causa autem fuit huc veniendi ut quosdam hinc libros promerem. Nunc omni virtuti vitium contrario nomine opponitur.</p>'
+          url:
+            - 'http://example.com'
+            - 'http://test.com'
+          webform_email_confirm:
+            - 'example@example.com'
+            - 'test@test.com'
+            - 'random@random.com'
+          webform_email_multiple:
+            - 'example@example.com, test@test.com, random@random.com'
+          webform_time:
+            - '09:00'
+            - '17:00'
+        names: |
+          first_name:
+            - 'John'
+            - 'Paul'
+            - 'Ringo'
+            - 'George'
+          last_name:
+            - 'Lennon'
+            - 'McCartney'
+            - 'Starr'
+            - 'Harrison'
+          address:
+            - '10 Main Street'
+            - '11 Brook Alley Road. APT 1'
+          zip:
+            - '11111'
+            - '12345'
+            - '12345-6789'
+          postal_code:
+            - '11111'
+            - '12345'
+            - '12345-6789'
+          phone:
+            - '123-456-7890'
+            - '098-765-4321'
+          fax:
+            - '123-456-7890'
+            - '098-765-4321'
+          city:
+            - 'Springfield'
+            - 'Pleasantville'
+            - 'Hill Valley'
+          url:
+            - 'http://example.com'
+            - 'http://test.com'
+          default:
+            - 'Loremipsum'
+            - 'Oratione'
+            - 'Dixisset'
+      ui:
+        video_display: dialog
+        details_save: true
+        help_disabled: false
+        dialog_disabled: false
+        offcanvas_disabled: false
+        promotions_disabled: false
+        support_disabled: false
+        description_help: true
+        toolbar_item: false
+      libraries:
+        excluded_libraries:
+          - choices
+          - jquery.chosen
+      requirements:
+        cdn: true
+        clientside_validation: true
+        spam: true
+      langcode: en
+      third_party_settings:
+        captcha:
+          replace_administration_mode: true
+      _core:
+        default_config_hash: 7jkcONJCeAj9U78Fi8W2Os2B70oxqWk4Ett0bKYOvKU
+  -
+    collection: ''
+    name: webform.webform.contact
+    data:
+      uuid: null
+      langcode: en
+      status: open
+      dependencies:
+        enforced:
+          module:
+            - webform
+      open: null
+      close: null
+      weight: 0
+      uid: null
+      template: false
+      archive: false
+      id: contact
+      title: Contact
+      description: 'Basic email contact webform.'
+      categories: {  }
+      elements: |
+        name:
+          '#title': 'Your Name'
+          '#type': textfield
+          '#required': true
+          '#default_value': '[current-user:display-name]'
+        email:
+          '#title': 'Your Email'
+          '#type': email
+          '#required': true
+          '#default_value': '[current-user:mail]'
+        subject:
+          '#title': Subject
+          '#type': textfield
+          '#required': true
+          '#test': 'Testing contact webform from [site:name]'
+        message:
+          '#title': Message
+          '#type': textarea
+          '#required': true
+          '#test': 'Please ignore this email.'
+        actions:
+          '#type': webform_actions
+          '#title': 'Submit button(s)'
+          '#submit__label': 'Send message'
+      css: ''
+      javascript: ''
+      settings:
+        ajax: false
+        ajax_scroll_top: form
+        ajax_progress_type: ''
+        ajax_effect: ''
+        ajax_speed: null
+        page: true
+        page_submit_path: ''
+        page_confirm_path: ''
+        page_theme_name: ''
+        form_title: source_entity_webform
+        form_submit_once: false
+        form_exception_message: ''
+        form_open_message: ''
+        form_close_message: ''
+        form_previous_submissions: true
+        form_confidential: false
+        form_confidential_message: ''
+        form_disable_remote_addr: false
+        form_convert_anonymous: false
+        form_prepopulate: false
+        form_prepopulate_source_entity: false
+        form_prepopulate_source_entity_required: false
+        form_prepopulate_source_entity_type: ''
+        form_reset: false
+        form_disable_autocomplete: false
+        form_novalidate: false
+        form_disable_inline_errors: false
+        form_required: false
+        form_unsaved: false
+        form_disable_back: false
+        form_submit_back: false
+        form_autofocus: false
+        form_details_toggle: false
+        form_access_denied: default
+        form_access_denied_title: ''
+        form_access_denied_message: ''
+        form_access_denied_attributes: {  }
+        form_file_limit: ''
+        form_method: ''
+        form_action: ''
+        form_attributes: {  }
+        share: false
+        share_node: false
+        share_theme_name: ''
+        share_title: true
+        share_page_body_attributes: {  }
+        submission_label: ''
+        submission_log: false
+        submission_views: {  }
+        submission_views_replace: {  }
+        submission_user_columns: {  }
+        submission_user_duplicate: false
+        submission_access_denied: default
+        submission_access_denied_title: ''
+        submission_access_denied_message: ''
+        submission_access_denied_attributes: {  }
+        submission_exception_message: ''
+        submission_locked_message: ''
+        submission_excluded_elements: {  }
+        submission_exclude_empty: false
+        submission_exclude_empty_checkbox: false
+        previous_submission_message: ''
+        previous_submissions_message: ''
+        autofill: false
+        autofill_message: ''
+        autofill_excluded_elements: {  }
+        wizard_progress_bar: true
+        wizard_progress_pages: false
+        wizard_progress_percentage: false
+        wizard_progress_link: false
+        wizard_progress_states: false
+        wizard_auto_forward: true
+        wizard_auto_forward_hide_next_button: false
+        wizard_keyboard: true
+        wizard_start_label: ''
+        wizard_preview_link: false
+        wizard_confirmation: true
+        wizard_confirmation_label: ''
+        wizard_track: ''
+        wizard_prev_button_label: ''
+        wizard_next_button_label: ''
+        wizard_toggle: false
+        wizard_toggle_show_label: ''
+        wizard_toggle_hide_label: ''
+        wizard_page_type: container
+        wizard_page_title_tag: h2
+        preview: 0
+        preview_label: ''
+        preview_title: ''
+        preview_message: ''
+        preview_attributes: {  }
+        preview_excluded_elements: {  }
+        preview_exclude_empty: true
+        preview_exclude_empty_checkbox: false
+        draft: none
+        draft_multiple: false
+        draft_auto_save: false
+        draft_saved_message: ''
+        draft_loaded_message: ''
+        draft_pending_single_message: ''
+        draft_pending_multiple_message: ''
+        confirmation_type: url_message
+        confirmation_title: ''
+        confirmation_message: 'Your message has been sent.'
+        confirmation_url: '<front>'
+        confirmation_attributes: {  }
+        confirmation_back: true
+        confirmation_back_label: ''
+        confirmation_back_attributes: {  }
+        confirmation_exclude_query: false
+        confirmation_exclude_token: false
+        confirmation_update: false
+        limit_total: null
+        limit_total_interval: null
+        limit_total_message: ''
+        limit_total_unique: false
+        limit_user: null
+        limit_user_interval: null
+        limit_user_message: ''
+        limit_user_unique: false
+        entity_limit_total: null
+        entity_limit_total_interval: null
+        entity_limit_user: null
+        entity_limit_user_interval: null
+        purge: none
+        purge_days: null
+        results_disabled: false
+        results_disabled_ignore: false
+        results_customize: false
+        token_view: false
+        token_update: false
+        token_delete: false
+        serial_disabled: false
+      access:
+        create:
+          roles:
+            - anonymous
+            - authenticated
+          users: {  }
+          permissions: {  }
+        view_any:
+          roles: {  }
+          users: {  }
+          permissions: {  }
+        update_any:
+          roles: {  }
+          users: {  }
+          permissions: {  }
+        delete_any:
+          roles: {  }
+          users: {  }
+          permissions: {  }
+        purge_any:
+          roles: {  }
+          users: {  }
+          permissions: {  }
+        view_own:
+          roles: {  }
+          users: {  }
+          permissions: {  }
+        update_own:
+          roles: {  }
+          users: {  }
+          permissions: {  }
+        delete_own:
+          roles: {  }
+          users: {  }
+          permissions: {  }
+        administer:
+          roles: {  }
+          users: {  }
+          permissions: {  }
+        test:
+          roles: {  }
+          users: {  }
+          permissions: {  }
+        configuration:
+          roles: {  }
+          users: {  }
+          permissions: {  }
+      handlers:
+        email_confirmation:
+          id: email
+          label: 'Email confirmation'
+          notes: ''
+          handler_id: email_confirmation
+          status: true
+          conditions: {  }
+          weight: 1
+          settings:
+            states:
+              - completed
+            to_mail: '[current-user:mail]'
+            to_options: {  }
+            cc_mail: ''
+            cc_options: {  }
+            bcc_mail: ''
+            bcc_options: {  }
+            from_mail: _default
+            from_options: {  }
+            from_name: _default
+            subject: '[webform_submission:values:subject:raw]'
+            body: '[webform_submission:values:message:value]'
+            excluded_elements: {  }
+            ignore_access: false
+            exclude_empty: true
+            exclude_empty_checkbox: false
+            exclude_attachments: false
+            html: true
+            attachments: false
+            twig: false
+            theme_name: ''
+            parameters: {  }
+            debug: false
+            reply_to: ''
+            return_path: ''
+            sender_mail: ''
+            sender_name: ''
+        email_notification:
+          id: email
+          label: 'Email notification'
+          notes: ''
+          handler_id: email_notification
+          status: true
+          conditions: {  }
+          weight: 2
+          settings:
+            states:
+              - completed
+            to_mail: _default
+            to_options: {  }
+            cc_mail: ''
+            cc_options: {  }
+            bcc_mail: ''
+            bcc_options: {  }
+            from_mail: '[webform_submission:values:email:raw]'
+            from_options: {  }
+            from_name: '[webform_submission:values:name:raw]'
+            subject: '[webform_submission:values:subject:raw]'
+            body: '[webform_submission:values:message:value]'
+            excluded_elements: {  }
+            ignore_access: false
+            exclude_empty: true
+            exclude_empty_checkbox: false
+            exclude_attachments: false
+            html: true
+            attachments: false
+            twig: false
+            theme_name: ''
+            parameters: {  }
+            debug: false
+            reply_to: ''
+            return_path: ''
+            sender_mail: ''
+            sender_name: ''
+      variants: {  }
+      _core:
+        default_config_hash: _je-MWeeJB6gfm6iECiqjcyNetfMFbn-YIInYwZ1gIk
+  -
+    collection: ''
+    name: webform.webform_options.country_codes
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: country_codes
+      label: 'Country codes'
+      category: Geographic
+      likert: false
+      options: ''
+      _core:
+        default_config_hash: adQ16YGDPk7QfUKrfrC35o2sKdHEozdNtdpiH7CftQQ
+  -
+    collection: ''
+    name: webform.webform_options.country_names
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: country_names
+      label: 'Country names'
+      category: Geographic
+      likert: false
+      options: ''
+      _core:
+        default_config_hash: zsfFP124dAM-sJkuEfnwaA7DN6o3-IsaXLgdNmObbYg
+  -
+    collection: ''
+    name: webform.webform_options.days
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: days
+      label: Days
+      category: 'Date and time'
+      likert: false
+      options: |
+        Sunday: Sunday
+        Monday: Monday
+        Tuesday: Tuesday
+        Wednesday: Wednesday
+        Thursday: Thursday
+        Friday: Friday
+        Saturday: Saturday
+      _core:
+        default_config_hash: YNrKbYrWWjeubUUM8AsQ19KnX7cU1elACR14CZJHmdg
+  -
+    collection: ''
+    name: webform.webform_options.education
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: education
+      label: Education
+      category: Demographic
+      likert: false
+      options: |
+        High School: High School
+        Associate Degree: Associate Degree
+        Graduate or Professional Degree: Graduate or Professional Degree
+        Some College: Some College
+      _core:
+        default_config_hash: mII4acOv33s-j8PINywrCag4OITbeJGxdPO373dnHHw
+  -
+    collection: ''
+    name: webform.webform_options.employment_status
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: employment_status
+      label: 'Employment status'
+      category: Demographic
+      likert: false
+      options: |
+        'Full Time': 'Full Time'
+        'Part Time': 'Part Time'
+        'Military': 'Military'
+        Unemployed: Unemployed
+        Retired: Retired
+      _core:
+        default_config_hash: 8MCmsz_csdJkVItxI8g_s4zp2PM285YqCy_gWTzOLPw
+  -
+    collection: ''
+    name: webform.webform_options.ethnicity
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: ethnicity
+      label: Ethnicity
+      category: Demographic
+      likert: false
+      options: |
+        Caucasian: Caucasian
+        'Latino/Hispanic': 'Latino/Hispanic'
+        'Middle Eastern': 'Middle Eastern'
+        African: African
+        Caribbean: Caribbean
+        'South Asian': 'South Asian'
+        'East Asian': 'East Asian'
+        Mixed: Mixed
+      _core:
+        default_config_hash: pIPgrAC82wE2GAk1mOv2UvMYv71YQe4VT8667QIYdvI
+  -
+    collection: ''
+    name: webform.webform_options.gender
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: gender
+      label: Gender
+      category: Demographic
+      likert: false
+      options: |
+        Man: Man
+        Woman: Woman
+        Non-binary: Non-binary
+        Agender/Genderless: Agender/Genderless
+        Androgyne/Androgynous: Androgyne/Androgynous
+        Aporagender: Aporagender
+        Bigender: Bigender
+        Demi-agender: Demi-agender
+        Demi-boy: Demi-boy
+        Demi-fluid: Demi-fluid
+        Demi-girl: Demi-girl
+        Demi-gender: Demi-gender
+        Demi-non-binary: Demi-non-binary
+        Genderqueer: Genderqueer
+        Genderflux: Genderflux
+        Genderfluid: Genderfluid
+        Gender-indifferent: Gender-indifferent
+        Gender-neutral: Gender-neutral
+        Graygender: Graygender
+        Intergender: Intergender
+        Maverique: Maverique
+        Maxigender: Maxigender
+        Multigender/Polygender: Multigender/Polygender
+        Neutrois: Neutrois
+        Pangender/Omnigender: Pangender/Omnigender
+        Trigender: Trigender
+        Two-spirit: Two-spirit
+        'Prefer Not to Answer': 'Prefer Not to Answer'
+      _core:
+        default_config_hash: yxhG0JmQs2HT-Ro6ZeDQboDc9ZWR4GglflTtyoqxK4A
+  -
+    collection: ''
+    name: webform.webform_options.industry
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: industry
+      label: Industry
+      category: Demographic
+      likert: false
+      options: |
+        Accounting/Finance: Accounting/Finance
+        Advertising/Public Relations: Advertising/Public Relations
+        Aerospace/Aviation: Aerospace/Aviation
+        Arts/Entertainment/Publishing: Arts/Entertainment/Publishing
+        Automotive: Automotive
+        Banking/Mortgage: Banking/Mortgage
+        Business Development: Business Development
+        Business Opportunity: Business Opportunity
+        Clerical/Administrative: Clerical/Administrative
+        Construction/Facilities: Construction/Facilities
+        Consumer Goods: Consumer Goods
+        Customer Service: Customer Service
+        Education/Training: Education/Training
+        Energy/Utilities: Energy/Utilities
+        Engineering: Engineering
+        Government/Military: Government/Military
+        Healthcare: Healthcare
+        Hospitality/Travel: Hospitality/Travel
+        Human Resources: Human Resources
+        Installation/Maintenance: Installation/Maintenance
+        Insurance: Insurance
+        Internet: Internet
+        Law Enforcement/Security: Law Enforcement/Security
+        Legal: Legal
+        Management/Executive: Management/Executive
+        Manufacturing/Operations: Manufacturing/Operations
+        Marketing: Marketing
+        Non-Profit/Volunteer: Non-Profit/Volunteer
+        Pharmaceutical/Biotech: Pharmaceutical/Biotech
+        Professional Services: Professional Services
+        Real Estate: Real Estate
+        Restaurant/Food Service: Restaurant/Food Service
+        Retail: Retail
+        Sales: Sales
+        Science/Research: Science/Research
+        Skilled Labor: Skilled Labor
+        Technology: Technology
+        Telecommunications: Telecommunications
+        Transportation/Logistics: Transportation/Logistics
+      _core:
+        default_config_hash: s_SXZn2HbRGvTex-TLOCxz2oOnMYqtEZh8HD4_318QI
+  -
+    collection: ''
+    name: webform.webform_options.languages
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: languages
+      label: Languages
+      category: Language
+      likert: false
+      options: ''
+      _core:
+        default_config_hash: mYH14Vi65Ixj10c_GFa7CipxU3D0Bt9wgo8zE8zjOfE
+  -
+    collection: ''
+    name: webform.webform_options.likert_agreement
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: likert_agreement
+      label: 'Likert: Agreement'
+      category: Likert
+      likert: true
+      options: |
+        1: Strongly Disagree
+        2: Disagree
+        3: Neutral
+        4: Agree
+        5: Strongly Agree
+      _core:
+        default_config_hash: nPp-CfMKrP0yDMtyO0wQRwawEqaJVAPzQapinXmDgyU
+  -
+    collection: ''
+    name: webform.webform_options.likert_comparison
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: likert_comparison
+      label: 'Likert: Comparison'
+      category: Likert
+      likert: true
+      options: |
+        1: Much Worse
+        2: Somewhat Worse
+        3: About the Same
+        4: Somewhat Better
+        5: Much Better
+      _core:
+        default_config_hash: DMG4TKTHEXtHN8ho_sG_GiZHgweZ6nrRm6BAjk0LZ_Y
+  -
+    collection: ''
+    name: webform.webform_options.likert_importance
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: likert_importance
+      label: 'Likert: Importance'
+      category: Likert
+      likert: true
+      options: |
+        1: Not at all Important
+        2: Somewhat Important
+        3: Neutral
+        4: Important
+        5: Very Important
+      _core:
+        default_config_hash: Hbc8n5HtVZVs5fSBSpSbuY07CVvqkKP76csvRHN9pK8
+  -
+    collection: ''
+    name: webform.webform_options.likert_quality
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: likert_quality
+      label: 'Likert: Quality'
+      category: Likert
+      likert: true
+      options: |
+        1: Poor
+        2: Fair
+        3: Good
+        4: Very good
+        5: Excellent
+      _core:
+        default_config_hash: swmYtBVUbwq7aHJWWDN7ODByuvur9vMkexDC9h64NZ8
+  -
+    collection: ''
+    name: webform.webform_options.likert_satisfaction
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: likert_satisfaction
+      label: 'Likert: Satisfaction'
+      category: Likert
+      likert: true
+      options: |
+        1: Very Unsatisfied
+        2: Unsatisfied
+        3: Neutral
+        4: Satisfied
+        5: Very Satisfied
+      _core:
+        default_config_hash: AKE2SNwCpl6Mu_cmbq9ZM2_cXxCikCVj1vcPE9oHWTs
+  -
+    collection: ''
+    name: webform.webform_options.likert_ten_scale
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: likert_ten_scale
+      label: 'Likert: Ten Scale'
+      category: Likert
+      likert: true
+      options: |
+        1: 1
+        2: 2
+        3: 3
+        4: 4
+        5: 5
+        6: 6
+        7: 7
+        8: 8
+        9: 9
+        10: 10
+      _core:
+        default_config_hash: zEZX8JSVqznnFtqFfpuC593h3t1JDAZhF0Q3pvA229o
+  -
+    collection: ''
+    name: webform.webform_options.likert_would_you
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: likert_would_you
+      label: 'Likert: Would You'
+      category: Likert
+      likert: true
+      options: |
+        1: Definitely Not
+        2: Probably Not
+        3: Not Sure
+        4: Probably
+        5: Definitely
+      _core:
+        default_config_hash: qBS2TmfAJB37Qn3TnrNM8x4AWimmDapcizzRllgo0fo
+  -
+    collection: ''
+    name: webform.webform_options.marital_status
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: marital_status
+      label: 'Marital status'
+      category: Demographic
+      likert: false
+      options: |
+        Single: Single
+        Married: Married
+        Divorced: Divorced
+        Widowed: Widowed
+      _core:
+        default_config_hash: cjVDbAE5BlopGrY-tfxsxMoyEibwBBNgdQwDdxOSkow
+  -
+    collection: ''
+    name: webform.webform_options.months
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: months
+      label: Months
+      category: 'Date and time'
+      likert: false
+      options: |
+        January: January
+        February: February
+        March: March
+        April: April
+        May: May
+        June: June
+        July: July
+        August: August
+        September: September
+        October: October
+        November: November
+        December: December
+      _core:
+        default_config_hash: pZJnuQkh9afNML5IcMuKTUC__vmHMFn66Qr5IWtedZ4
+  -
+    collection: ''
+    name: webform.webform_options.phone_types
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: phone_types
+      label: 'Phone type'
+      category: Demographic
+      likert: false
+      options: |
+        Home: Home
+        Office: Office
+        Cell: Cell
+      _core:
+        default_config_hash: LkO63Zl2cP_l9YdjzWI8dWoD9uD0pytkPiUiUM2bo9A
+  -
+    collection: ''
+    name: webform.webform_options.province_codes
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: province_codes
+      label: 'Province codes'
+      category: Geographic
+      likert: false
+      options: |
+        AB: Alberta
+        BC: 'British Columbia'
+        MB: Manitoba
+        NB: 'New Brunswick'
+        NL: 'Newfoundland and Labrador'
+        NS: 'Nova Scotia'
+        NT: 'Northwest Territories'
+        NU: Nunavut
+        'ON': Ontario
+        PE: 'Prince Edward Island'
+        QC: Quebec
+        SK: Saskatchewan
+        YT: Yukon
+      _core:
+        default_config_hash: cR3A6XXinVGC9g5vLS-vVvTC2ppZXRNXLPWA8xBUMew
+  -
+    collection: ''
+    name: webform.webform_options.province_names
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: province_names
+      label: 'Province names'
+      category: Geographic
+      likert: false
+      options: |
+        Alberta: Alberta
+        'British Columbia': 'British Columbia'
+        Manitoba: Manitoba
+        'New Brunswick': 'New Brunswick'
+        'Newfoundland and Labrador': 'Newfoundland and Labrador'
+        'Nova Scotia': 'Nova Scotia'
+        'Northwest Territories': 'Northwest Territories'
+        Nunavut: Nunavut
+        Ontario: Ontario
+        'Prince Edward Island': 'Prince Edward Island'
+        Quebec: Quebec
+        Saskatchewan: Saskatchewan
+        Yukon: Yukon
+      _core:
+        default_config_hash: aaEeYBWoWETLKX2ivmZBpUAd3uPe2iPNydaxBuLPXKc
+  -
+    collection: ''
+    name: webform.webform_options.relationship
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: relationship
+      label: Relationship
+      category: Demographic
+      likert: false
+      options: |
+        Parent: Parent
+        'Significant Other': 'Significant Other'
+        Sibling: Sibling
+        Child: Child
+        Friend: Friend
+      _core:
+        default_config_hash: 4J2RPG4JmsD4Fm1NlIQY0JHkrJ08UUl0qTF0_EjUxvw
+  -
+    collection: ''
+    name: webform.webform_options.sex
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: sex
+      label: Sex
+      category: Demographic
+      likert: false
+      options: |
+        Male: Male
+        Female: Female
+      _core:
+        default_config_hash: WRpxpwYpfcO_i0so7BV4QXxXlbPiSVppYmAV6DAz4c0
+  -
+    collection: ''
+    name: webform.webform_options.sex_icao
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: sex_icao
+      label: 'Sex - International Civil Aviation Organization (ICAO)'
+      category: Demographic
+      likert: false
+      options: |
+        M: Male
+        F: Female
+        X: Unspecified
+      _core:
+        default_config_hash: 9mxo86dMII5OxkHl4mbe2l4AgQloOXuErOte57BU9IY
+  -
+    collection: ''
+    name: webform.webform_options.size
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: size
+      label: Size
+      category: General
+      likert: false
+      options: |
+        Extra Small: Extra Small
+        Small: Small
+        Medium: Medium
+        Large: Large
+        Extra Large: Extra Large
+      _core:
+        default_config_hash: RKkc6tf1VudvYiOtwPCf3Tp_EoA6fov6BFC34D7gMoQ
+  -
+    collection: ''
+    name: webform.webform_options.state_codes
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: state_codes
+      label: 'State codes'
+      category: Geographic
+      likert: false
+      options: |
+        AL: Alabama
+        AK: Alaska
+        AZ: Arizona
+        AR: Arkansas
+        CA: California
+        CO: Colorado
+        CT: Connecticut
+        DE: Delaware
+        DC: 'District of Columbia'
+        FL: Florida
+        GA: Georgia
+        GU: Guam
+        HI: Hawaii
+        ID: Idaho
+        IL: Illinois
+        IN: Indiana
+        IA: Iowa
+        KS: Kansas
+        KY: Kentucky
+        LA: Louisiana
+        ME: Maine
+        MD: Maryland
+        MA: Massachusetts
+        MI: Michigan
+        MN: Minnesota
+        MS: Mississippi
+        MO: Missouri
+        MT: Montana
+        NE: Nebraska
+        NV: Nevada
+        NH: 'New Hampshire'
+        NJ: 'New Jersey'
+        NM: 'New Mexico'
+        NY: 'New York'
+        NC: 'North Carolina'
+        ND: 'North Dakota'
+        OH: Ohio
+        OK: Oklahoma
+        OR: Oregon
+        PA: Pennsylvania
+        RI: 'Rhode Island'
+        SC: 'South Carolina'
+        SD: 'South Dakota'
+        TN: Tennessee
+        TX: Texas
+        UT: Utah
+        VT: Vermont
+        VA: Virginia
+        WA: Washington
+        WV: 'West Virginia'
+        WI: Wisconsin
+        WY: Wyoming
+      _core:
+        default_config_hash: 8mYO8ewsZX3LVfNga69jXa0RNO0LNN8-EGkXLhSAMBU
+  -
+    collection: ''
+    name: webform.webform_options.state_names
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: state_names
+      label: 'State names'
+      category: Geographic
+      likert: false
+      options: |
+        Alabama: Alabama
+        Alaska: Alaska
+        Arizona: Arizona
+        Arkansas: Arkansas
+        California: California
+        Colorado: Colorado
+        Connecticut: Connecticut
+        Delaware: Delaware
+        'District of Columbia': 'District of Columbia'
+        Florida: Florida
+        Georgia: Georgia
+        Hawaii: Hawaii
+        Idaho: Idaho
+        Illinois: Illinois
+        Indiana: Indiana
+        Iowa: Iowa
+        Kansas: Kansas
+        Kentucky: Kentucky
+        Louisiana: Louisiana
+        Maine: Maine
+        Maryland: Maryland
+        Massachusetts: Massachusetts
+        Michigan: Michigan
+        Minnesota: Minnesota
+        Mississippi: Mississippi
+        Missouri: Missouri
+        Montana: Montana
+        Nebraska: Nebraska
+        Nevada: Nevada
+        'New Hampshire': 'New Hampshire'
+        'New Jersey': 'New Jersey'
+        'New Mexico': 'New Mexico'
+        'New York': 'New York'
+        'North Carolina': 'North Carolina'
+        'North Dakota': 'North Dakota'
+        Ohio: Ohio
+        Oklahoma: Oklahoma
+        Oregon: Oregon
+        Pennsylvania: Pennsylvania
+        'Rhode Island': 'Rhode Island'
+        'South Carolina': 'South Carolina'
+        'South Dakota': 'South Dakota'
+        Tennessee: Tennessee
+        Texas: Texas
+        Utah: Utah
+        Vermont: Vermont
+        Virginia: Virginia
+        Washington: Washington
+        'West Virginia': 'West Virginia'
+        Wisconsin: Wisconsin
+        Wyoming: Wyoming
+      _core:
+        default_config_hash: KfYqMSrFJ5iGtDzvy_rGUeRUJ4KyM7Xt-tWtYx9WjiM
+  -
+    collection: ''
+    name: webform.webform_options.state_province_codes
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: state_province_codes
+      label: 'State/Province codes'
+      category: Geographic
+      likert: false
+      options: |
+        AL: Alabama
+        AK: Alaska
+        AS: 'American Samoa'
+        AZ: Arizona
+        AR: Arkansas
+        AE: 'Armed Forces (Canada, Europe, Africa, or Middle East)'
+        AA: 'Armed Forces Americas'
+        AP: 'Armed Forces Pacific'
+        CA: California
+        CO: Colorado
+        CT: Connecticut
+        DE: Delaware
+        DC: 'District of Columbia'
+        FM: 'Federated States of Micronesia'
+        FL: Florida
+        GA: Georgia
+        GU: Guam
+        HI: Hawaii
+        ID: Idaho
+        IL: Illinois
+        IN: Indiana
+        IA: Iowa
+        KS: Kansas
+        KY: Kentucky
+        LA: Louisiana
+        ME: Maine
+        MH: 'Marshall Islands'
+        MD: Maryland
+        MA: Massachusetts
+        MI: Michigan
+        MN: Minnesota
+        MS: Mississippi
+        MO: Missouri
+        MT: Montana
+        NE: Nebraska
+        NV: Nevada
+        NH: 'New Hampshire'
+        NJ: 'New Jersey'
+        NM: 'New Mexico'
+        NY: 'New York'
+        NC: 'North Carolina'
+        ND: 'North Dakota'
+        MP: 'Northern Mariana Islands'
+        OH: Ohio
+        OK: Oklahoma
+        OR: Oregon
+        PW: Palau
+        PA: Pennsylvania
+        PR: 'Puerto Rico'
+        RI: 'Rhode Island'
+        SC: 'South Carolina'
+        SD: 'South Dakota'
+        TN: Tennessee
+        TX: Texas
+        UT: Utah
+        VT: Vermont
+        VI: 'Virgin Islands'
+        VA: Virginia
+        WA: Washington
+        WV: 'West Virginia'
+        WI: Wisconsin
+        WY: Wyoming
+        AB: Alberta
+        BC: 'British Columbia'
+        MB: Manitoba
+        NB: 'New Brunswick'
+        NL: 'Newfoundland and Labrador'
+        NS: 'Nova Scotia'
+        NT: 'Northwest Territories'
+        NU: Nunavut
+        'ON': Ontario
+        PE: 'Prince Edward Island'
+        QC: Quebec
+        SK: Saskatchewan
+        YT: Yukon
+      _core:
+        default_config_hash: ziWv9xVss1UBnP_R38EqduZOprwOAifpxjXhyOPzmys
+  -
+    collection: ''
+    name: webform.webform_options.state_province_names
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: state_province_names
+      label: 'State/Province names'
+      category: Geographic
+      likert: false
+      options: |
+        Alabama: Alabama
+        Alaska: Alaska
+        'American Samoa': 'American Samoa'
+        Arizona: Arizona
+        Arkansas: Arkansas
+        'Armed Forces (Canada, Europe, Africa, or Middle East)': 'Armed Forces (Canada, Europe, Africa, or Middle East)'
+        'Armed Forces Americas': 'Armed Forces Americas'
+        'Armed Forces Pacific': 'Armed Forces Pacific'
+        California: California
+        Colorado: Colorado
+        Connecticut: Connecticut
+        Delaware: Delaware
+        'District of Columbia': 'District of Columbia'
+        'Federated States of Micronesia': 'Federated States of Micronesia'
+        Florida: Florida
+        Georgia: Georgia
+        Guam: Guam
+        Hawaii: Hawaii
+        Idaho: Idaho
+        Illinois: Illinois
+        Indiana: Indiana
+        Iowa: Iowa
+        Kansas: Kansas
+        Kentucky: Kentucky
+        Louisiana: Louisiana
+        Maine: Maine
+        'Marshall Islands': 'Marshall Islands'
+        Maryland: Maryland
+        Massachusetts: Massachusetts
+        Michigan: Michigan
+        Minnesota: Minnesota
+        Mississippi: Mississippi
+        Missouri: Missouri
+        Montana: Montana
+        Nebraska: Nebraska
+        Nevada: Nevada
+        'New Hampshire': 'New Hampshire'
+        'New Jersey': 'New Jersey'
+        'New Mexico': 'New Mexico'
+        'New York': 'New York'
+        'North Carolina': 'North Carolina'
+        'North Dakota': 'North Dakota'
+        'Northern Mariana Islands': 'Northern Mariana Islands'
+        Ohio: Ohio
+        Oklahoma: Oklahoma
+        Oregon: Oregon
+        Palau: Palau
+        Pennsylvania: Pennsylvania
+        'Puerto Rico': 'Puerto Rico'
+        'Rhode Island': 'Rhode Island'
+        'South Carolina': 'South Carolina'
+        'South Dakota': 'South Dakota'
+        Tennessee: Tennessee
+        Texas: Texas
+        Utah: Utah
+        Vermont: Vermont
+        'Virgin Islands': 'Virgin Islands'
+        Virginia: Virginia
+        Washington: Washington
+        'West Virginia': 'West Virginia'
+        Wisconsin: Wisconsin
+        Wyoming: Wyoming
+        Alberta: Alberta
+        'British Columbia': 'British Columbia'
+        Manitoba: Manitoba
+        'New Brunswick': 'New Brunswick'
+        'Newfoundland and Labrador': 'Newfoundland and Labrador'
+        'Nova Scotia': 'Nova Scotia'
+        'Northwest Territories': 'Northwest Territories'
+        Nunavut: Nunavut
+        Ontario: Ontario
+        'Prince Edward Island': 'Prince Edward Island'
+        Quebec: Quebec
+        Saskatchewan: Saskatchewan
+        Yukon: Yukon
+      _core:
+        default_config_hash: d4mxS_CxdzHZK4WaGQf1H3m-Uubm5HPbu9U4ydzscuo
+  -
+    collection: ''
+    name: webform.webform_options.time_zones
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: time_zones
+      label: 'Time zones'
+      category: 'Date and time'
+      likert: false
+      options: ''
+      _core:
+        default_config_hash: 8rVcRXLnTAEoWs7zl8du-7RIUnayqUcGYnvb3JT21-o
+  -
+    collection: ''
+    name: webform.webform_options.titles
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: titles
+      label: Titles
+      category: Demographic
+      likert: false
+      options: |
+        Miss: Miss
+        Ms: Ms
+        Mr: Mr
+        Mrs: Mrs
+        Dr: Dr
+      _core:
+        default_config_hash: PEUoedWrfYEX7oZ8CcOukfBTVxar1cPSROX8534esuU
+  -
+    collection: ''
+    name: webform.webform_options.translations
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: translations
+      label: Translations
+      category: Language
+      likert: false
+      options: ''
+      _core:
+        default_config_hash: Mb_L3vE-0IBZH5s2rjpk2LNn0QHClQP9AARQdCmVLt4
+  -
+    collection: ''
+    name: webform.webform_options.yes_no
+    data:
+      langcode: en
+      status: true
+      dependencies:
+        enforced:
+          module:
+            - webform
+      id: yes_no
+      label: Yes/No
+      category: General
+      likert: false
+      options: |
+        Yes: Yes
+        No: No
+      _core:
+        default_config_hash: W88NYg31DbaVNQx1Uir_dwwXHVtF09QOq4VBGsH1Snk

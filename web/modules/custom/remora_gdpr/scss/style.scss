@@ -1,12 +1,12 @@
 // COOKIE BANNER
 
-$cookie_bg: $global-color-light-light-100 !default;
+$cookie_bg: $global-color-light-100 !default;
 $cookie_title_color: $text-primary !default;
 $cookie_text_color: $text-secondary !default;
 $cookie_link_color: $text-link !default;
 $cookie_link_hover_color: $text-link-hover !default;
 
-$cookie_modal_radius: $global-border-border-radius-sm !default;
+$cookie_modal_radius: $global-border-radius-sm !default;
 $cookie_modal_padding: 40px !default;
 $cookie_modal_gap: 20px !default;
 $cookie_modal_shadow: 5px 5px 10px rgba(0, 0, 0, 0.25) !default;
@@ -15,12 +15,12 @@ $cookie_modal_header_color: $text-primary !default;
 $cookie_modal_link_color: $text-link !default;
 $cookie_modal_link_hover_color: $text-link-hover !default;
 
-$cookie_modal_toggle_disabled_bg: $global-color-black-black-100 !default;
-$cookie_modal_toggle_disabled_icon: $global-color-black-black-300 !default;
-$cookie_modal_toggle_disabled_border: $global-color-black-black-300 !default;
+$cookie_modal_toggle_disabled_bg: $global-color-black-100 !default;
+$cookie_modal_toggle_disabled_icon: $global-color-black-300 !default;
+$cookie_modal_toggle_disabled_border: $global-color-black-300 !default;
 $cookie_modal_toggle_default_icon: $btn-primary-background !default;
 $cookie_modal_toggle_checked_icon: $btn-primary-hover-background !default;
-$cookie_modal_toggle_default_border: $global-color-black-black-300 !default;
+$cookie_modal_toggle_default_border: $global-color-black-300 !default;
 
 
 #sliding-popup.sliding-popup-bottom {

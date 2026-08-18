@@ -1,5 +1,5 @@
-uuid: 93423334-acf8-423e-ae04-0864097b575c
-langcode: en
+uuid: ab3ce259-b67f-473d-acd2-800c4472d3e6
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -22,13 +22,13 @@ dependencies:
     - text
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: kPk-dFwgyrVcAmLBU-94dpCnB1kxgg4DDHG0B7Sx1q0
+  default_config_hash: POPw56m-AWoA3ptE3EIiCxoUkToP_4fPinmc33rCr4k
 id: paragraph.cards.search_rendered_output
 targetEntityType: paragraph
 bundle: cards

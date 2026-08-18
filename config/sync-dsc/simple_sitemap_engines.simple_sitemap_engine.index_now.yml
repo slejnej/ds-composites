@@ -1,9 +1,9 @@
-uuid: 8fbc229f-6ba5-4025-b42a-b79ef77a6783
+uuid: 805411ca-6f9f-4221-8bcc-f9b202aaa20f
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: CEvRzshIbGfbSDdfC3_RrIcyIACFbQzIqPK0W2l0LpY
+  default_config_hash: cJyK6yH2O24Ko_CAZowYLFSdl58TLX_gRZ6CigRanKs
 id: index_now
 label: IndexNow
 url: null

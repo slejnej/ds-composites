@@ -1,4 +1,4 @@
-uuid: 086160a5-f059-48a8-9712-2a29cf426689
+uuid: 4c3b3e34-01ed-434e-92ac-e53bf5fc6312
 langcode: en
 status: true
 dependencies:
@@ -19,7 +19,7 @@ items:
         hyphen: 1
       verbose: false
       separator: '-'
-      max_length: 100
+      max_length: 150
       max_component_length: 100
       transliterate: true
       reduce_ascii: false
@@ -34,7 +34,7 @@ items:
         - url
         - url-brief
       _core:
-        default_config_hash: SwvLp8snyPEExF41CaJJYdPUVomofLqtXvwciHc4cPg
+        default_config_hash: 6A_AsNxy1stL6FWrHMo-FQaoy4ZJFYcZYA2hySobR70
   -
     collection: ''
     name: system.action.pathauto_update_alias_node

@@ -1,5 +1,5 @@
-uuid: 51be5ffc-23e1-4ce5-8381-d3ce88b44b43
-langcode: en
+uuid: 4ce1831e-47b0-4041-adc8-0e7525d24894
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ bundle: news
 label: 'Promoted to front page'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 0

@@ -1,14 +1,14 @@
-uuid: 40fa2eec-a067-4d6f-886b-5b2fff392f5c
-langcode: en
+uuid: effb5ae6-2a7c-43ec-b819-fb417124e8d9
+langcode: en-gb
 status: true
 dependencies:
   module:
     - paragraphs
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
-  default_config_hash: sCwEqFhY7G025Py10Fgzb3etG1wDIR7z2_YwKy-Gs18
+  default_config_hash: V0X4VLbPJoXG5tcnFJyl9WN62XgPMrxYv4JxHBM8bG0
 id: paragraph.field_card_nt_alt_button_text
 field_name: field_card_nt_alt_button_text
 entity_type: paragraph

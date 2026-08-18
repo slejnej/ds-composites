@@ -1,4 +1,4 @@
-uuid: 1e70e639-9542-47c6-ac0b-0b8809356a63
+uuid: 9d217073-5d25-4436-bfb3-a699579348c3
 langcode: en
 status: true
 dependencies:
@@ -66,6 +66,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+          pagination_heading_level: h4
       style:
         type: table
         options:

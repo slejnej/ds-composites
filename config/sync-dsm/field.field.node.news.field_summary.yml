@@ -1,5 +1,5 @@
-uuid: 09736172-48ec-43d0-a315-d2e1f60a8064
-langcode: en
+uuid: c3a1f9c0-f428-4d6b-9eda-eea984d9ebcf
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -17,7 +17,7 @@ bundle: news
 label: Summary
 description: 'This summary will be displayed on other pages on your website when referencing back to this page. It may also be used by social media platforms when this page is shared. If you want to have different copy for SEO, please edit the ‘Customised SEO’ section below.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

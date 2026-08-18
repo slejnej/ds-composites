@@ -1,0 +1,14 @@
+name: Webform pod
+type: module
+description: 'Webform pod'
+package: Dc2
+version: 1.0.0
+core_version_requirement: ^10
+dependencies:
+  - drupal:field_group
+  - drupal:layout_paragraphs
+  - drupal:remora_core
+  - drupal:webform
+  - drupal:webform_attachment
+  - drupal:webform_bootstrap
+  - drupal:webform_ui

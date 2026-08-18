@@ -1,0 +1,27 @@
+{
+  "name": "mrm-remora/webform_pod",
+  "type": "drupal-custom-module",
+  "description": "Webform pod",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.1",
+    "wikimedia/composer-merge-plugin": "^2.1",
+    "drupal/webform": "6.2.*",
+    "drupal/webform_bootstrap": "6.2.*"
+  },
+  "extra": {
+    "merge-plugin": {
+      "include": [
+        "web/modules/contrib/webform/composer.libraries.json"
+      ]
+    },
+    "enable-patching": true,
+    "patches": {
+      "drupal/webform": {
+        "Remora 3 adjustments": "web/modules/custom/webform_pod/patches/remora3_webform.patch"
+      }
+    }
+  }
+}
+

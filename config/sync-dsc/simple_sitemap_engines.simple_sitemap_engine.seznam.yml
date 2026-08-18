@@ -1,9 +1,9 @@
-uuid: d4b1d480-90e0-4f5e-b483-e5579b533382
+uuid: 5853695e-889b-4bb9-8534-840fe41b4bc0
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: VVUUpnJomJ_zAlrcmzQCTAVLNHiZWbw4-e4rdaLHic4
+  default_config_hash: SFrpkTm9eV-a9yZurLBwkU8BkSu3Lj9WcNIPUx9W2Nc
 id: seznam
 label: Seznam
 url: null

@@ -1,13 +1,12 @@
 #sliding-popup {
   &.sliding-popup-bottom {
-    -webkit-box-shadow: 0px -4px 15px 0px rgba(0,0,0,0.82);
-    box-shadow: 0px -4px 15px 0px rgba(0,0,0,0.82);
+    -webkit-box-shadow: 0px -4px 15px 0px rgba(0, 0, 0, 0.82);
+    box-shadow: 0px -4px 15px 0px rgba(0, 0, 0, 0.82);
 
     width: 500px !important;
 
     .eu-cookie-compliance-banner {
-      padding-left: 12px;
-      padding-right: 24px;
+      padding: 12px;
     }
 
     .btn {
@@ -19,17 +18,27 @@
         text-shadow: none;
       }
     }
-  }
 
-  .eu-cookie-compliance-banner {
-    background-color: $global-color-success-success-400;
 
-    h2, p, .eu-cookie-compliance-message button {
-      color: $dark;
+    .eu-cookie-compliance-banner .eu-cookie-compliance-content {
+      #popup-text h2,
+      h2,
+      p,
+      .eu-cookie-compliance-message button {
+        color: $dark;
+        line-height: unset;
+      }
+
+      .eu-cookie-compliance-message {
+        max-width: unset;
+      }
+      .btn {
+        margin: 8px !important;
+      }
     }
-
-    .btn {
-      margin: 8px !important;
-    }
   }
+}
+
+.accordion-body {
+  font-size: 1rem;
 }

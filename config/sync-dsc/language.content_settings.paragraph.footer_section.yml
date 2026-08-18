@@ -1,4 +1,4 @@
-uuid: 3a9f03f0-7c6b-42f2-a57b-6e0ab2bf2d1f
+uuid: b5def0bd-27c9-464f-8f71-a9c49575b762
 langcode: en
 status: true
 dependencies:
@@ -15,4 +15,4 @@ id: paragraph.footer_section
 target_entity_type_id: paragraph
 target_bundle: footer_section
 default_langcode: site_default
-language_alterable: true
+language_alterable: false

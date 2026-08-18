@@ -1,5 +1,5 @@
-uuid: 43b49256-202b-4d89-beb1-7fc7aa154f1c
-langcode: en
+uuid: fe0c516f-d674-4e16-8eec-c0edff898247
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -16,8 +16,8 @@ _core:
   default_config_hash: xjapmnvKLXdMxTZ5o12jECXYZdfKQCvXnIueoKaSiWI
 name: News
 type: news
-description: ''
-help: ''
+description: null
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

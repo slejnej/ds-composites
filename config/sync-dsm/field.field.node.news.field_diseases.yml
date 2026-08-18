@@ -1,5 +1,5 @@
-uuid: 280a5228-d9e5-41e7-9506-47379ed0cbbf
-langcode: en
+uuid: 1bddaf56-ddb3-4a88-9336-a0f768eb9842
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -15,7 +15,7 @@ bundle: news
 label: Diseases
 description: 'Relate your content to one or multiple diseases.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

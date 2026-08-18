@@ -1,21 +1,64 @@
-$banner-height-mobile: 770px;
-$banner-height-desktop: 770px;
+@import "../variables/global";
+
+$banner-height-desktop: 769px;
 $banner-gap-mobile: 40px;
 $banner-gap-desktop: 70px;
 $banner-padding-desktop: 0;
 
-.paragraph.paragraph--type--banners .banner-wrapper {
+@import '../../../../../../modules/custom/banners_pod/scss/style.scss';
+
+// MIXINS
+@mixin banner_icon($banner-icon-color) {
+  .banner-wrapper {
+    .banner-bg-mixed-small, .banner-bg-mixed-medium {
+      background: $banner-icon-color;
+    }
+
+    svg {
+      .splat-color {
+        fill: $banner-icon-color;
+      }
+    }
+  }
+}
+
+.paragraph.paragraph--type--banners {
+  @include banner(
+    $global-color-primary-900,
+    transparent,
+    white,
+    white
+  );
+
+  @include banner_icon(
+      $global-color-primary-500
+  );
+}
+
+.palette-alt-1 .paragraph.paragraph--type--banners {
+  @include banner_icon(
+      $global-color-warning-400
+  );
+}
+
+.palette-alt-2 .paragraph.paragraph--type--banners {
+  @include banner_icon(
+      $global-color-warning-500
+  );
+}
+
+.paragraph.paragraph.paragraph--type--banners .paragraph--type--banner-pea .banner-wrapper {
   max-width: 1800px;
 
   .banner-caption-wrapper {
     z-index: 5;
 
     .caption-link a.btn {
-      background: $global-color-primary-primary-600;
+      background: $global-color-primary-600;
       color: white;
       &:hover {
         background: #D8EDFA;
-        color: $global-color-secondary-secondary-600;
+        color: $global-color-secondary-600;
       }
     }
   }
@@ -65,7 +108,8 @@ $banner-padding-desktop: 0;
 
       @include media-breakpoint-up('xl') {
         bottom: 0;
-        left: 0;
+        right: 0;
+        text-align: right;
         svg {
           height: 650px;
           width: 920px;
@@ -139,46 +183,3 @@ $banner-padding-desktop: 0;
     }
   }
 }
-
-// MIXINS
-
-@import '../../../../../../modules/custom/banners_nugget/scss/style.scss';
-
-@mixin banner_icon($banner-icon-color) {
-  .banner-wrapper {
-    .banner-bg-mixed-small, .banner-bg-mixed-medium {
-      background: $banner-icon-color;
-    }
-
-    svg {
-      .splat-color {
-        fill: $banner-icon-color;
-      }
-    }
-  }
-}
-
-.paragraph.paragraph--type--banners {
-  @include banner(
-    $global-color-primary-primary-900,
-    white,
-    white
-  );
-
-  @include banner_icon(
-      $global-color-primary-primary-500
-  );
-}
-
-.palette-alt-1 .paragraph.paragraph--type--banners {
-  @include banner_icon(
-      $global-color-warning-warning-400
-  );
-}
-
-.palette-alt-2 .paragraph.paragraph--type--banners {
-  @include banner_icon(
-      $global-color-info-info-400
-  );
-}
-

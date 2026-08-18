@@ -1,0 +1,30 @@
+/**
+ * Applies th and td styles
+ * Should be applied directly to the table element and not to thead or tbody
+ */
+@mixin table-styles($title-color, $title-bg, $title-border-color, $data-color, $data-bg, $data-border-color, $border-width) {
+  &:not(.table-borderless) {
+    th, td {
+      border-width: $border-width;
+      border-style: solid;
+    }
+
+    th {
+      border-color: $title-border-color;
+    }
+
+    td {
+      border-color: $data-border-color;
+    }
+  }
+
+  th {
+    color: $title-color;
+    background: $title-bg;
+  }
+
+  td {
+    color: $data-color;
+    background: $data-bg;
+  }
+}

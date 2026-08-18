@@ -1,5 +1,5 @@
-uuid: 4137e270-b7bb-4257-9ab4-5127db95cb04
-langcode: en
+uuid: fd78bde5-d7ac-494c-9a97-70237570c9bc
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -32,3 +32,4 @@ content:
 hidden:
   field_display_title: true
   field_palette: true
+  search_api_excerpt: true

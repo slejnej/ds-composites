@@ -1,0 +1,264 @@
+form.node-form {
+  border-radius: $global-spacing-border-radius-sm;
+  box-shadow: none;
+  border: none;
+
+  // Vertical tabs menu
+  .vertical-tabs__items.vertical-tabs__panes {
+    border-radius: $global-spacing-border-radius-sm;
+    box-shadow: none;
+  }
+
+  .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before {
+    border-radius: $global-spacing-border-radius-sm;
+  }
+
+  // Vertical tabs content
+  .vertical-tabs__items .vertical-tabs__item > .claro-details__wrapper {
+    padding: 0;
+
+    .claro-details__content--vertical-tabs-item {
+      margin: 0;
+      padding: $global-spacing-2 $global-spacing-2 64px;
+
+      details > .details-wrapper {
+        padding: 0;
+      }
+    }
+  }
+
+  .horizontal-tabs .horizontal-tabs-pane > .details-wrapper > .claro-details__description {
+    margin-block-start: var(--gin-spacing-l);
+  }
+}
+
+// Popup styles
+
+body .ui-dialog {
+  .ui-dialog-titlebar {
+    background: var(--gin-color-primary) !important;
+
+    .ui-dialog-title {
+      font-size: var(--gin-font-size-h3);
+      color: var(--gin-color-button-text);
+    }
+  }
+
+  .ui-dialog-content {
+    .claro-details__summary {
+      background-color: var(--gin-color-primary-light);
+      background-color: var(--gin-bg-section-layer2);
+      padding-inline-start: 1.125em;
+
+      &::before {
+        inset-inline-end: 1.125em;
+        inset-inline-start: auto !important;
+      }
+    }
+
+    details > .details-wrapper {
+      padding: 0;
+
+      .field--widget-layout-paragraphs {
+        margin: calc(50px + 1.125rem) 0 50px;
+      }
+
+      .form-item:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+
+// Help text
+.claro-details__description, .fieldset__description {
+  line-height: 140%;
+  font-size: var(--gin-font-size-s);
+  color: var(--gin-color-text);
+  font-weight: 500;
+  background: var(--gin-bg-section-layer2);
+  border-radius: 4px;
+  padding: $global-spacing-1 $global-spacing-1 $global-spacing-1 44px;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    mask: url('../assets/images/lightbulb.svg') no-repeat 50% 50% / 30px 30px;
+    background-color: var(--gin-color-text);
+    height: 30px;
+    width: 30px;
+    content: "";
+    left: 8px;
+    top: 12px;
+  }
+}
+
+.gin--dark-mode .claro-details__description, .fieldset__description {
+  &:before {
+    background-color: var(--gin-color-text-light);
+  }
+}
+
+// fieldsets
+fieldset .fieldset__description {
+  margin: $global-spacing-1 var(--space-l);
+}
+
+form.layout-paragraphs-component-form fieldset.fieldset--group .fieldset__description {
+  margin-left: 0;
+}
+
+fieldset fieldset:first-child {
+  margin-top: 0;
+}
+
+.fieldset__description + .fieldset__wrapper {
+  margin-top: 0;
+}
+
+// Have to specify fieldset styling as it affects all fieldsets in edit form
+#edit-field-main-pods,
+#edit-field-hero-content,
+#edit-field-postscript-pods,
+#edit-field-sidebar-pods {
+  border: none;
+
+  .fieldset__legend {
+    display: none;
+  }
+
+  .fieldset__wrapper {
+    margin: 0;
+  }
+}
+
+// Checkboxes
+
+.field--widget-options-buttons .form-checkboxes {
+  max-height: 300px;
+  padding: $global-spacing-05 $global-spacing-1;
+  background: $athens-gray;
+  border-radius: 4px;
+}
+
+.gin--dark-mode .field--widget-options-buttons .form-checkboxes {
+  background: var(--gin-bg-section-layer2);
+}
+
+//label/input order
+
+.page-wrapper__node-edit-form {
+  .js-form-item:not(.form-type--checkbox,.js-form-type-radio, .js-form-type-cshs) {
+    display: flex;
+    flex-direction: column;
+
+    label, .form-item {
+      order: 1;
+    }
+
+    .form-item__description {
+      order: 2;
+      margin-top: 0;
+      margin-bottom: $global-spacing-05;
+    }
+
+    input, select, * {
+      order: 3;
+    }
+  }
+
+  .fieldset__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .fieldset__description {
+      order: 1;
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    > * {
+      order: 2;
+    }
+  }
+}
+
+.lpb-controls-label {
+  box-shadow: none;
+  border-radius: $global-spacing-border-radius-sm;
+}
+
+.field__label {
+  font-size: var(--gin-font-size-l);
+  color: var(--gin-color-text);
+  font-weight: 500;
+
+  &.status {
+    font-size: var(--gin-font-size-s);
+  }
+}
+
+// Inputs
+.form-element--type-select {
+  max-width: 300px;
+}
+
+.form-element--type-text {
+  max-width: 700px;
+}
+
+.form-element--type-date {
+  max-width: 160px;
+}
+
+.gin--dark-mode .vertical-tabs__menu a.vertical-tabs__menu-link::after {
+  background-color: var(--gin-color-text-light);
+}
+
+.vertical-tabs__menu a.vertical-tabs__menu-link {
+  padding: 16px 0 16px 60px !important;
+
+  &::after {
+    content: "";
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 6px;
+    top: calc(50% - 25px);
+    mask: url("../assets/images/layout-default.svg") no-repeat 50% 50% / 100%;
+    background-color: $shark;
+    border: none !important;
+    margin: 0 !important;
+  }
+
+  &:hover::after,
+  &:has(#active-vertical-tab)::after {
+    background-color: var(--gin-color-primary);
+  }
+
+  &[href="#edit-group-sidebar-content"]::after {
+    mask: url("../assets/images/layout-sidebar.svg") no-repeat 50% 50% / 100%;
+  }
+
+  &[href="#edit-group-main-content-details"]::after,
+  &[href="#edit-group-main-content"]::after {
+    mask: url("../assets/images/layout-main.svg") no-repeat 50% 50% / 100%;
+  }
+
+  &[href="#edit-group-postscript-content"]::after {
+    mask: url("../assets/images/layout-postscript.svg") no-repeat 50% 50% / 100%;
+  }
+
+  &[href="#edit-group-hero-content"]::after {
+    mask: url("../assets/images/layout-hero.svg") no-repeat 50% 50% / 100%;
+  }
+
+  &[href="#edit-group-tagging"]::after {
+    mask: url("../assets/images/layout-tagging.svg") no-repeat 50% 50% / 100%;
+  }
+
+  &[href="#edit-group-summary-seo"]::after {
+    mask: url("../assets/images/layout-card.svg") no-repeat 50% 50% / 100%;
+  }
+}

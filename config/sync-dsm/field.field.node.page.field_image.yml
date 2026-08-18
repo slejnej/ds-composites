@@ -1,5 +1,5 @@
-uuid: c0aa27fd-f35c-43e0-9670-3771a5c27b21
-langcode: en
+uuid: 8da93764-b10f-4f11-9f76-37de81af917f
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ bundle: page
 label: Image
 description: 'This image will be displayed on other pages on this site when referencing back to this page. It may also be used by social media platforms when this page is shared.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

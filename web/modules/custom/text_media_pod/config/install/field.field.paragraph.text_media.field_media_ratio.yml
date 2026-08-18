@@ -1,0 +1,21 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_ratio
+    - paragraphs.paragraphs_type.text_media
+  module:
+    - options
+id: paragraph.text_media.field_media_ratio
+field_name: field_media_ratio
+entity_type: paragraph
+bundle: text_media
+label: 'Media ratio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

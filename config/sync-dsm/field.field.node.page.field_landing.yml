@@ -1,5 +1,5 @@
-uuid: b8383018-2d0d-42a0-af08-da463289f541
-langcode: en
+uuid: 1a61986e-ca2f-4c09-9e0f-53fc25e28fa4
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ bundle: page
 label: 'Landing page'
 description: 'Enable to apply an alternative design and hide your page title.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

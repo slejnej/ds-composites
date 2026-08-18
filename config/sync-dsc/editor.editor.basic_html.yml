@@ -1,5 +1,5 @@
-uuid: f82833e8-877f-4ce6-b0cd-4d2427b55691
-langcode: en
+uuid: da00ff2e-8c8b-4ebf-afb3-8f05ea7ed657
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -40,8 +40,6 @@ settings:
         startIndex: true
       multiBlock: true
     ckeditor5_sourceEditing:
-      allowed_tags:
-        - '<i class>'
-    linkit_extension:
-      linkit_enabled: false
-image_upload: {  }
+      allowed_tags: {  }
+image_upload:
+  status: false

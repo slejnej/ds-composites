@@ -1,14 +1,14 @@
-uuid: 5a60d271-7561-44f5-8472-8f8be4879749
-langcode: en
+uuid: ae97ebdb-5feb-4f3a-9a3f-dda5ec06275c
+langcode: en-gb
 status: true
 dependencies:
   module:
     - layout_paragraphs
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
-  default_config_hash: KSNh7OSyNl5e_fR28olBUHD0rKLwro4S1sADn5VfhjU
+  default_config_hash: MRVCWIspVWHGgcJxKOpJzUgV-3yteQR9SYigz1QlA9g
 id: cards
 label: Cards
 icon_uuid: null

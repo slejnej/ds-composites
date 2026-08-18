@@ -1,5 +1,5 @@
-uuid: 1ef121a3-9706-4a4b-8c5f-17786fd57ffd
-langcode: en
+uuid: 59a1f519-dae0-4f9f-a021-6ac828313da2
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ bundle: diseases
 label: 'Rabbit Hole settings'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

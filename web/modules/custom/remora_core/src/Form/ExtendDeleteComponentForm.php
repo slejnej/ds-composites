@@ -18,10 +18,10 @@ class ExtendDeleteComponentForm extends DeleteComponentForm {
     $type = $component->getEntity()->getParagraphType()->label();
     $editorTitle = $component->getEntity()->hasField('field_editor_title') ? $component->getEntity()->get('field_editor_title')->value : '';
 
-    $form['#title'] = $this->t('Delete nugget', ['@type' => $type]);
+    $form['#title'] = $this->t('Delete pod', ['@type' => $type]);
     $form['confirm'] = [
       '#markup' => $this->t(
-        'Are you sure you want to delete this <i>@editorTitle [@type nugget]</i> ? There is no undo.',
+        'Are you sure you want to delete this <i>@editorTitle [@type pod]</i> ? There is no undo.',
         ['@editorTitle' => $editorTitle, '@type' => $type]
       ),
     ];

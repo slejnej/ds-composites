@@ -1,5 +1,5 @@
-uuid: a267b637-b582-4ad2-83d1-b22e1934eba1
-langcode: en
+uuid: bf31bcbe-982a-4314-bff1-613bad7f1bb3
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -15,7 +15,7 @@ bundle: news
 label: Topics
 description: 'Relate your content to a one or multiple topics.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

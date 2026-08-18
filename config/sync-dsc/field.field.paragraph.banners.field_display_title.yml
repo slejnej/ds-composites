@@ -1,5 +1,5 @@
-uuid: c4d87953-dbb0-48c2-b055-8644a1638593
-langcode: en
+uuid: 118edf36-d60c-43bd-9306-6c6e93877dab
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -9,13 +9,13 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: rfbNV9TKHtQDYL84xn8WuwHD0thdpcyrlHSGjRAx1WM
+  default_config_hash: FZji1QVPeGiQz-LsUCMkAdJppzk7ULAdOBI15s5cKfs
 id: paragraph.banners.field_display_title
 field_name: field_display_title
 entity_type: paragraph
 bundle: banners
 label: 'Display title'
-description: 'This title is displayed on the page above the content of this nugget.'
+description: 'This title is displayed on the page above the content of this pod.'
 required: false
 translatable: true
 default_value: {  }

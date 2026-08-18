@@ -1,0 +1,16 @@
+{% extends '@slideshow_pod/paragraphs/paragraph--slide-pea.html.twig' %}
+
+{% block slide_image_ratio %}
+  <div class="banner-bg-mixed position-absolute">
+    {{ source(directory ~ '/assets/images/banner-bg-mixed.svg') }}
+  </div>
+
+  {% set slide_index = attributes['data-slide-index'] | render %}
+  {%  if slide_index == '0' %}
+    {% set loading_attr = {'loading': 'eager', 'fetchpriority': 'high'} %}
+  {% else %}
+    {% set loading_attr = {'loading': 'lazy', 'class': 'load-hidden'} %}
+  {% endif %}
+
+  {{ image|remora_image({'default': 'free'}, true, loading_attr, true) }}
+{% endblock %}

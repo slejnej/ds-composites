@@ -1,10 +1,10 @@
-{% set fields = content.field_media|merge_safe(content.field_body, content.field_main_nuggets) %}
+{% set fields = content.field_media|merge_safe(content.field_body, content.field_main_pods) %}
 {% if fields['#items'] is empty %}
   {% set page_style = 'swooshy-spacing' %}
 {% endif %}
 
-{% if content.field_postscript_nuggets['#items'] is not empty %}
-  <section id="postscript" class="container-fluid g-0 {{ page_style }}">
-    {{ content.field_postscript_nuggets }}
+{% if content.field_postscript_pods['#items'] is not empty %}
+  <section id="postscript" class="container-fluid g-0">
+    {{ content.field_postscript_pods}}
   </section>
 {% endif %}

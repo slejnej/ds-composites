@@ -1,4 +1,4 @@
-uuid: 8f9de2ed-da52-4700-b81f-9ca4d7fccc8d
+uuid: 71c53d6e-38cf-4cd9-ba48-210a33f354b2
 langcode: en
 status: true
 dependencies:
@@ -624,6 +624,7 @@ items:
               type: full
               options:
                 offset: 0
+                pagination_heading_level: h4
                 items_per_page: 50
                 total_pages: null
                 id: 0
@@ -1020,4 +1021,4 @@ items:
               - user.permissions
             tags: {  }
       _core:
-        default_config_hash: 27loqXfECE8tWznkMVYi7qOU8oCYFgn5MEysgZQQOV8
+        default_config_hash: kOTUk5XWeupgBOJuRRarCiDcFKVZcvaW-FT5MTzrML8

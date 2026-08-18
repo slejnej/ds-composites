@@ -1,23 +1,21 @@
-uuid: 56d13fc7-2393-46ab-b7b0-abca8526eaff
-langcode: en
+uuid: 6cd8850c-4467-426e-8364-d7157437293f
+langcode: en-gb
 status: true
 dependencies:
   config:
     - field.field.node.page.field_alternative_title
     - field.field.node.page.field_body
     - field.field.node.page.field_categories
-    - field.field.node.page.field_countries
-    - field.field.node.page.field_diseases
     - field.field.node.page.field_hero_content
     - field.field.node.page.field_image
     - field.field.node.page.field_landing
-    - field.field.node.page.field_main_nuggets
+    - field.field.node.page.field_main_pods
     - field.field.node.page.field_media
     - field.field.node.page.field_meta_tags
-    - field.field.node.page.field_postscript_nuggets
+    - field.field.node.page.field_postscript_pods
     - field.field.node.page.field_seo_description
     - field.field.node.page.field_seo_title
-    - field.field.node.page.field_sidebar_nuggets
+    - field.field.node.page.field_sidebar_pods
     - field.field.node.page.field_summary
     - field.field.node.page.field_tags
     - field.field.node.page.field_topics
@@ -201,7 +199,7 @@ third_party_settings:
             uuid: 1eada999-1aef-4b8e-a69b-aa0affb64c28
             region: content
             configuration:
-              id: 'field_block:node:page:field_main_nuggets'
+              id: 'field_block:node:page:field_main_pods'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -218,7 +216,7 @@ third_party_settings:
             uuid: 32b07dba-6417-4362-90b7-f7cc1646b0c2
             region: content
             configuration:
-              id: 'field_block:node:page:field_sidebar_nuggets'
+              id: 'field_block:node:page:field_sidebar_pods'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -235,7 +233,7 @@ third_party_settings:
             uuid: d639a803-a3e0-446f-aeae-e5212e4568de
             region: content
             configuration:
-              id: 'field_block:node:page:field_postscript_nuggets'
+              id: 'field_block:node:page:field_postscript_pods'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
@@ -248,8 +246,8 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 13
             additional: {  }
-          8285329e-956b-41f0-b915-d5eac6710f2a:
-            uuid: 8285329e-956b-41f0-b915-d5eac6710f2a
+          459b2e75-3834-4aad-9937-ef061b8b323c:
+            uuid: 459b2e75-3834-4aad-9937-ef061b8b323c
             region: content
             configuration:
               id: 'field_block:node:page:field_categories'
@@ -265,9 +263,43 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 14
             additional: {  }
+          b9164952-5b25-4220-8e13-f0365e37c831:
+            uuid: b9164952-5b25-4220-8e13-f0365e37c831
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_tags'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 15
+            additional: {  }
+          651c104c-b6ce-4920-a895-0dafa55c2105:
+            uuid: 651c104c-b6ce-4920-a895-0dafa55c2105
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_topics'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 16
+            additional: {  }
         third_party_settings: {  }
 _core:
-  default_config_hash: 0t8Eg8v9Zw0DBY3KFEauLETMSQXvfciZgUWRon-Nkcg
+  default_config_hash: SkB-fjgJ3UCdpcNv-OZNcrL-GVy6dSOgbm6IwDJmWhE
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -315,7 +347,7 @@ content:
     third_party_settings: {  }
     weight: 102
     region: content
-  field_main_nuggets:
+  field_main_pods:
     type: entity_reference_revisions_entity_view
     label: above
     settings:
@@ -340,7 +372,7 @@ content:
     third_party_settings: {  }
     weight: 110
     region: content
-  field_postscript_nuggets:
+  field_postscript_pods:
     type: entity_reference_revisions_entity_view
     label: above
     settings:
@@ -364,7 +396,7 @@ content:
     third_party_settings: {  }
     weight: 108
     region: content
-  field_sidebar_nuggets:
+  field_sidebar_pods:
     type: entity_reference_revisions_entity_view
     label: above
     settings:
@@ -380,16 +412,30 @@ content:
     third_party_settings: {  }
     weight: 107
     region: content
+  field_tags:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_topics:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
-  field_countries: true
-  field_diseases: true
   field_hero_content: true
-  field_tags: true
-  field_topics: true
   langcode: true
   search_api_excerpt: true

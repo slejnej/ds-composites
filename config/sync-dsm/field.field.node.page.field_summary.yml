@@ -1,5 +1,5 @@
-uuid: 61b4559c-bcd1-488f-bda1-15741c5e0b8b
-langcode: en
+uuid: 204501b9-78a1-409f-95fc-1c24e6a4cbca
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -17,7 +17,7 @@ bundle: page
 label: Summary
 description: 'This summary will be displayed on other pages on your website when referencing back to this page. It may also be used by social media platforms when this page is shared. If you want to have different copy for SEO, please edit the ‘Customised SEO’ section below.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

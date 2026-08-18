@@ -1,10 +1,11 @@
-uuid: 9193c73c-3407-4952-b203-9ab5d32ea848
-langcode: en
+uuid: 2f639f7e-e200-458e-8060-a7dbac2c05e5
+langcode: en-gb
 status: true
 dependencies: {  }
 _core:
   default_config_hash: 8bDkNSWl9QbGd83zKZNdGxlmc4G-gpB_dXuciGWZpD4
 name: Tags
 vid: tags
-description: ''
+description: null
 weight: 0
+new_revision: false

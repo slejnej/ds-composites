@@ -11,39 +11,40 @@
   "require": {
     "php": ">=8.1",
     "composer/installers": "^1.9",
+    "deux-cent-deux/drupal_search": "*",
+    "deux-cent-deux/installation_profile": "*",
+    "drupal/advanced_language_selector": "^1.5",
     "drupal/bootstrap5": "^4.0",
-    "drupal/core-composer-scaffold": "10.2.7",
-    "drupal/core-project-message": "10.2.7",
-    "drupal/core-recommended": "10.2.7",
+    "drupal/core-composer-scaffold": "^10.5",
+    "drupal/core-project-message": "^10.5",
+    "drupal/dynamic_entity_reference": "^3.2",
     "drupal/eu_cookie_compliance": "^1.24",
     "drupal/eu_cookie_compliance_gtm": "^2.1",
     "drupal/gin": "^3.0@RC",
     "drupal/remove_generator": "^2.0",
     "drush/drush": "^12.4",
-    "mantaraymedia/base_repository": "*",
     "mantaraymedia/cache_service": "*",
-    "mrm-remora/attachments_nugget": "*",
+    "mrm-remora/attachments_pod": "*",
     "mrm-remora/aws-code-deploy": "*",
     "mrm-remora/aws-plugin-installer": "*",
-    "mrm-remora/banners_nugget": "*",
+    "mrm-remora/banners_pod": "*",
     "mrm-remora/barrio_base_theme": "*",
-    "mrm-remora/cards_nugget": "*",
+    "mrm-remora/cards_pod": "*",
     "mrm-remora/countries_info": "*",
     "mrm-remora/helper_module": "*",
-    "mrm-remora/installation_profile": "*",
     "mrm-remora/news_content_type": "*",
     "mrm-remora/organisations_taxonomy": "*",
     "mrm-remora/page_content_type": "*",
-    "mrm-remora/person_content_type": "*",
-    "mrm-remora/promo_nugget": "*",
+    "mrm-remora/promo_pod": "*",
     "mrm-remora/remora_core": "*",
     "mrm-remora/remora_sections": "*",
     "mrm-remora/security": "*",
-    "mrm-remora/slideshow_nugget": "*",
+    "mrm-remora/slideshow_pod": "*",
     "mrm-remora/tagging": "*",
-    "mrm-remora/tagline_nugget": "*",
-    "mrm-remora/text_media_nugget": "*",
-    "mrm-remora/tonic": "*"
+    "mrm-remora/tagline_pod": "*",
+    "mrm-remora/text_media_pod": "*",
+    "mrm-remora/tonic": "*",
+    "mrm-remora/webform_pod": "dev-upgrade-202"
   },
   "require-dev": {
     "pdepend/pdepend": "^2.12",
@@ -67,7 +68,8 @@
       "drupal/core-composer-scaffold": true,
       "drupal/core-project-message": true,
       "mrm-remora/aws-code-deploy": true,
-      "mrm-remora/aws-plugin-installer": true
+      "mrm-remora/aws-plugin-installer": true,
+      "wikimedia/composer-merge-plugin": true
     },
     "sort-packages": true
   },
@@ -119,6 +121,18 @@
       "url": "https://packages.drupal.org/8"
     },
     {
+      "name": "deux-cent-deux/installation_profile",
+      "type": "path",
+      "url": "web/modules/custom/installation_profile",
+      "no-api": true
+    },
+    {
+      "name": "deux-cent-deux/drupal_search",
+      "type": "path",
+      "url": "web/modules/custom/drupal_search",
+      "no-api": true
+    },
+    {
       "name": "mrm-remora/remora_core",
       "type": "path",
       "url": "web/modules/custom/remora_core",
@@ -131,22 +145,20 @@
       "no-api": true
     },
     {
-      "name": "mantaraymedia/base_repository",
-      "type": "path",
-      "url": "local-vendors/base_repository",
-      "no-api": true
-    },
-    {
-      "name": "mrm-remora/installation_profile",
-      "type": "path",
-      "url": "web/modules/custom/installation_profile",
-      "no-api": true
-    },
-    {
       "name": "mrm-remora/barrio_base_theme",
       "type": "path",
-      "url": "web/themes/custom/barrio_base_theme",
-      "no-api": true
+      "url": "local-vendors/barrio_base_theme",
+      "options": {
+        "symlink": false
+      }
+    },
+    {
+      "name": "mrm-remora/tonic",
+      "type": "path",
+      "url": "local-vendors/tonic",
+      "options": {
+        "symlink": false
+      }
     },
     {
       "name": "mrm-remora/aws-plugin-installer",
@@ -161,27 +173,21 @@
       "no-api": true
     },
     {
-      "name": "mrm-remora/tonic",
-      "type": "path",
-      "url": "web/themes/custom/tonic",
-      "no-api": true
-    },
-    {
       "name": "mrm-remora/helper_module",
       "type": "path",
       "url": "web/modules/custom/helper_module",
       "no-api": true
     },
     {
-      "name": "mrm-remora/attachments_nugget",
+      "name": "mrm-remora/attachments_pod",
       "type": "path",
-      "url": "web/modules/custom/attachments_nugget",
+      "url": "web/modules/custom/attachments_pod",
       "no-api": true
     },
     {
-      "name": "mrm-remora/cards_nugget",
+      "name": "mrm-remora/cards_pod",
       "type": "path",
-      "url": "web/modules/custom/cards_nugget",
+      "url": "web/modules/custom/cards_pod",
       "no-api": true
     },
     {
@@ -221,9 +227,9 @@
       "no-api": true
     },
     {
-      "name": "mrm-remora/text_media_nugget",
+      "name": "mrm-remora/text_media_pod",
       "type": "path",
-      "url": "web/modules/custom/text_media_nugget",
+      "url": "web/modules/custom/text_media_pod",
       "no-api": true
     },
     {
@@ -233,27 +239,21 @@
       "no-api": true
     },
     {
-      "name": "mrm-remora/person_content_type",
+      "name": "mrm-remora/promo_pod",
       "type": "path",
-      "url": "web/modules/custom/person_content_type",
+      "url": "web/modules/custom/promo_pod",
       "no-api": true
     },
     {
-      "name": "mrm-remora/promo_nugget",
+      "name": "mrm-remora/slideshow_pod",
       "type": "path",
-      "url": "web/modules/custom/promo_nugget",
+      "url": "web/modules/custom/slideshow_pod",
       "no-api": true
     },
     {
-      "name": "mrm-remora/slideshow_nugget",
+      "name": "mrm-remora/banners_pod",
       "type": "path",
-      "url": "web/modules/custom/slideshow_nugget",
-      "no-api": true
-    },
-    {
-      "name": "mrm-remora/banners_nugget",
-      "type": "path",
-      "url": "web/modules/custom/banners_nugget",
+      "url": "web/modules/custom/banners_pod",
       "no-api": true
     },
     {
@@ -263,9 +263,15 @@
       "no-api": true
     },
     {
-      "name": "mrm-remora/tagline_nugget",
+      "name": "mrm-remora/tagline_pod",
       "type": "path",
-      "url": "web/modules/custom/tagline_nugget",
+      "url": "web/modules/custom/tagline_pod",
+      "no-api": true
+    },
+    {
+      "name": "mrm-remora/webform_pod",
+      "type": "path",
+      "url": "web/modules/custom/webform_pod",
       "no-api": true
     }
   ]

@@ -1,10 +1,12 @@
-uuid: 7f6387e1-30bf-40b1-90af-5c83114be0ad
-langcode: en
+uuid: 50e083e5-6a17-4b20-99fc-87e43d973b40
+langcode: en-gb
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - site_settings.site_setting_group_entity_type.footer_group
 _core:
-  default_config_hash: U7rtJlObJLgj7MMJFHb8iYweD63MVWfyPeCW2jjKMgw
+  default_config_hash: 2EKgNZZOeeofVVYbGKJn2VDCv2aFalg1BfYNyhsPauA
 id: footer
 label: Footer
-fieldset: Global
+group: footer_group
 multiple: false

@@ -1,5 +1,5 @@
-uuid: 41473d28-8b25-49e1-9ae4-03e0e7570ee1
-langcode: en
+uuid: 84252382-6c64-4802-8d0c-6b03e78d8eb2
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -80,7 +80,6 @@ display:
           buttons: false
           action_title: Action
           clear_on_exposed: true
-          force_selection_info: false
           selected_actions:
             6:
               action_id: views_bulk_edit
@@ -107,6 +106,7 @@ display:
               preconfiguration:
                 add_confirmation: false
                 label_override: 'Unpublish content '
+          force_selection_info: false
         title:
           id: title
           table: node_field_data
@@ -323,7 +323,7 @@ display:
           admin_label: ''
           entity_type: node
           entity_field: langcode
-          plugin_id: field
+          plugin_id: field_language
           label: Language
           exclude: false
           alter:
@@ -384,6 +384,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0

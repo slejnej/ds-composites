@@ -1,0 +1,53 @@
+// Blockquotes
+
+$blockquote-icon-spacing: 70px !default;
+$blockquote-icon-height: 140px !default;
+$blockquote-icon-line-height: 80% !default;
+$blockquote-icon-weight: 400 !default;
+$blockquote-icon-width: 40px !default;
+$blockquote-icon-font: $global-text-primary-font !default;
+
+blockquote {
+  position: relative;
+  padding: $global-spacing-2 $global-spacing-1 $global-spacing-1;
+  margin: $global-spacing-2 0 $global-spacing-1;
+
+  @include media-breakpoint-up('sm') {
+    padding: $global-spacing-1;
+    margin: $global-spacing-1 0 $global-spacing-1 $blockquote-icon-spacing;
+  }
+
+  h2, h3, h4, h5, h6 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &::before {
+    display: inline-block;
+    content: '"';
+    width: $blockquote-icon-width;
+    height: $blockquote-icon-height;
+    position: absolute;
+    left: $global-spacing-05;
+    top: -$global-spacing-1;
+    font-weight: $blockquote-icon-weight;
+    font-size: $blockquote-icon-height;
+    line-height: $blockquote-icon-line-height;
+    font-family: "" + $blockquote-icon-font + "";
+    @include media-breakpoint-up('sm') {
+      left: -$blockquote-icon-spacing;
+      top: 0;
+    }
+  }
+}
+
+#sidebar-pods blockquote {
+  padding: $global-spacing-2 $global-spacing-1 $global-spacing-1;
+  margin: $global-spacing-2 0 $global-spacing-1;
+
+  &::before {
+    left: $global-spacing-05;
+    top: -$global-spacing-1;
+  }
+}

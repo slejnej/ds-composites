@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Link the attachments pod styles
+ */
+function attachments_pod_update_10102(): void
+{
+  Drupal::service('installation_profile.manager.module_scss')->linkStyles('attachments_pod');
+}

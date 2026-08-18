@@ -1,15 +1,9 @@
 {
   "name": "mrm-remora/organisations_taxonomy",
-  "type": "drupal-custom-module",
+  "type": "drupal-module",
   "description": "Remora organisations - Contains organisation taxonomy",
   "minimum-stability": "stable",
   "license": "proprietary",
-  "authors": [
-    {
-      "name": "Ivan Solic",
-      "email": "ivan@mantaraymedia.co.uk"
-    }
-  ],
   "require": {
     "php": ">=8.1",
     "drupal/rabbit_hole": "^2.0@alpha"

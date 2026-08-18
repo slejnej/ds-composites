@@ -1,0 +1,11 @@
+// Bootstrap overriden variables.
+// @see https://getbootstrap.com/docs/5.2/customize/sass/#variable-defaults.
+@import 'variables/variables_drupal';
+@import 'variables/variables_bootstrap';
+
+// Include bootstrap.
+@import '../../../../contrib/bootstrap5/scss/style';
+
+@import "mixins/index";
+
+@import 'drupal/bootstrap/index';

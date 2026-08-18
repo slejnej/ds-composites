@@ -1,5 +1,5 @@
-uuid: c84b6625-f185-4653-8e81-6315c688ab86
-langcode: en
+uuid: 416e4fa0-7767-4146-8217-e5379c3f1540
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -16,5 +16,5 @@ _core:
 id: node.page
 target_entity_type_id: node
 target_bundle: page
-default_langcode: en
+default_langcode: site_default
 language_alterable: false

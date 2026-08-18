@@ -1,4 +1,4 @@
-uuid: 9a266ea0-930d-4379-b9d9-8c16e15d79e6
+uuid: 435be7f2-d873-4cee-864d-688a39798df7
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ items:
     name: config_ignore.settings
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       mode: simple
       ignored_config_entities:
         - system.site

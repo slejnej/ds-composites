@@ -1,5 +1,5 @@
-uuid: becabad4-3447-4507-8e42-a5814e4b9c56
-langcode: en
+uuid: f1e706f4-24e7-47d9-ae39-b48c511237c4
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -8,13 +8,13 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: yW-azsKFxTNbpLIBV0JVVe8r8RGI8u-SHxc0qNTPgg8
+  default_config_hash: eL14-78P4jDcjWYfQquCpGxFWwcAdzW7zqavaIXkc8s
 id: node.news.field_hero_content
 field_name: field_hero_content
 entity_type: node
 bundle: news
 label: 'Hero content'
-description: 'These nuggets will be displayed at the top of your page.'
+description: 'These pods will be displayed at the top of your page.'
 required: false
 translatable: true
 default_value: {  }

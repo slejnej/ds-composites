@@ -1,5 +1,5 @@
-uuid: 62ec69ad-7b0f-4809-b177-8bd21c23becc
-langcode: en
+uuid: 01b73d93-7d06-4a4c-ac7f-b77a4227c2e3
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ bundle: news
 label: 'SEO Description'
 description: "Complete this field to specify the text which may be displayed on search engine results.\r\nA brief and concise summary of the page's content that is a maximum of 160 characters in length. The description meta tag may be used by search engines to display a snippet about the page in search results."
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: '[remora:seo_description]'

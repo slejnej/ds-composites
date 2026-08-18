@@ -27,7 +27,7 @@ remora_core.remora_settings:
   type: config_object
   label: 'Remora settings'
   mapping:
-    card_settings:
+    global_settings:
       type: mapping
       label: 'Card settings'
       mapping:

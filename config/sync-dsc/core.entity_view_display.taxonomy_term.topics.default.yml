@@ -1,5 +1,5 @@
-uuid: bce57a16-b5b8-4211-8fc4-b399f7137ac1
-langcode: en
+uuid: a7cf33b7-8013-432a-ba4c-9274487e41e9
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -24,3 +24,4 @@ content:
 hidden:
   langcode: true
   rabbit_hole__settings: true
+  search_api_excerpt: true

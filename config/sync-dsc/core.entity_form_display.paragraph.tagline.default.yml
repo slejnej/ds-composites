@@ -1,5 +1,5 @@
-uuid: ffeb4a63-c9a6-4aa3-87ab-6049755aae31
-langcode: en
+uuid: 113d459b-bdbf-4d67-88cf-4c929c7a6d7b
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -18,11 +18,11 @@ third_party_settings:
     settings:
       label: ''
   field_group:
-    group_nugget_title_properties:
+    group_pod_title_properties:
       children:
         - field_editor_title
         - field_display_title
-      label: 'Nugget title & properties'
+      label: 'Pod title & properties'
       region: content
       parent_name: ''
       weight: 0
@@ -34,10 +34,10 @@ third_party_settings:
         open: true
         description: ''
         required_fields: true
-    group_nugget_content:
+    group_pod_content:
       children:
         - field_tagline_nt_text
-      label: 'Nugget content'
+      label: 'Pod content'
       region: content
       parent_name: ''
       weight: 1
@@ -50,7 +50,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: _-c8K9kHwu6cJLJDba0fBE8g5qsp0K_VIM5u07_hPfc
+  default_config_hash: YP899wLSnH_qQQ_YhNJBlUTeob0gfyp8jL6qibMpuqA
 id: paragraph.tagline.default
 targetEntityType: paragraph
 bundle: tagline
@@ -86,11 +86,6 @@ content:
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
-  translation:
-    weight: 10
-    region: content
-    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true

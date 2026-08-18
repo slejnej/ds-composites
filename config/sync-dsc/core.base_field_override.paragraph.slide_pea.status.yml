@@ -1,0 +1,22 @@
+uuid: c570a20c-45d6-491b-9827-59f177f31fe0
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.slide_pea
+id: paragraph.slide_pea.status
+field_name: status
+entity_type: paragraph
+bundle: slide_pea
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,5 +1,5 @@
-uuid: 50e2aa40-2b1c-491f-a7ba-2c96f22a8c41
-langcode: en
+uuid: 1c2395ef-121e-4d37-b46c-da99f6999b40
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -14,7 +14,7 @@ bundle: page
 label: 'SEO Title'
 description: "Complete this field to specify the text to display in the title bar of a visitor's web browser when they view this page. It may also be displayed on search engine results. It is recommended that the title is no greater than 55 - 65 characters long, including spaces (and the site’s name which will automatically be added)."
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: '[remora:seo_title]'

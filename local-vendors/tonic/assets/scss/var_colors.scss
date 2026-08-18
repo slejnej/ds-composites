@@ -1,0 +1,47 @@
+
+$athens-gray: #EBECEE;
+$athens-silver: #F9F9FA;
+$pickled_bluewood: #2C3F4D;
+$shark: #2A2A2D;
+$tuna: #3B3B3F;
+$charade: #222330;
+$mid-gray: #64656E;
+
+$input-box-text: var(--gin-color-title);
+
+$tonic-shadow: 2px 2px 7px 0 rgba(3, 98, 70, 0.20);
+
+$input-box-border-solid: 1px solid #AAADB4;
+$input-box-border: 1px dashed #AAADB4;
+
+$global-spacing-border-radius-sm: 4px;
+$global-spacing-border-radius-m: 9px;
+
+$global-spacing-05: 8px;
+$global-spacing-1: 16px;
+$global-spacing-2: 32px;
+
+@font-face {
+  font-family: 'Bahloo Bhai 2';
+  src: url("../assets/fonts/BalooBhai2-VariableFont_wght.woff2") format('woff2');
+}
+
+$primary-font: 'Bahloo Bhai 2';
+
+:root {
+  // Layers
+  --gin-bg-section-layer: #{$athens-gray};
+  --gin-bg-section-layer2: #{$athens-silver};
+
+  --gin-font: $primary-font, Ginter, Inter, 'Helvetica Neue', BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+  --gin-font-size-h1: 2.25em;
+  --gin-font-size-h3: 1.375em;
+  --gin-max-line-length: 1000px;
+  --gin-color-primary: #20398d;
+}
+
+.gin--dark-mode {
+  // Layers
+  --gin-bg-section-layer: #{$shark};
+  --gin-bg-section-layer2: #{$tuna};
+}

@@ -1,5 +1,5 @@
-uuid: be451c72-f424-408b-8847-4070ca974a29
-langcode: en
+uuid: 6a6d971b-c64f-401b-9a68-dabeb86a7504
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ bundle: cards
 label: 'View more link'
 description: 'Add a link to content within the site. This link will display alongside the content.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

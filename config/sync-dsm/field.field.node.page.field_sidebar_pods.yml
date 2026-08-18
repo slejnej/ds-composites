@@ -1,0 +1,26 @@
+uuid: f64b7c40-03d7-4652-869f-9dc64c6fc985
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_pods
+    - node.type.page
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: 5jQIt7YwZDx9GhoXQCEy6YnkE2pEU6wzEWvPGJInHO8
+id: node.page.field_sidebar_pods
+field_name: field_sidebar_pods
+entity_type: node
+bundle: page
+label: 'Sidebar pods'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: remora_referenceable_paragraph_types_sidebar
+  handler_settings:
+    target_bundles: null
+field_type: entity_reference_revisions

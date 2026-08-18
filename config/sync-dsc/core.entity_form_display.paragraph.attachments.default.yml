@@ -1,5 +1,5 @@
-uuid: 5b1185ec-f749-495d-9f25-cfa31312aa1d
-langcode: en
+uuid: 3f5f00f6-f25c-4735-a0e3-2ce212471746
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -16,19 +16,19 @@ dependencies:
     - text
   enforced:
     module:
-      - attachments_nugget
+      - attachments_pod
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings:
       label: ''
   field_group:
-    group_nugget_title_properties:
+    group_pod_title_properties:
       children:
         - field_editor_title
         - field_display_title
         - field_items_per_row
-      label: 'Nugget title & properties'
+      label: 'Pod title & properties'
       region: content
       parent_name: ''
       weight: 0
@@ -40,10 +40,10 @@ third_party_settings:
         open: true
         description: ''
         required_fields: true
-    group_nugget_content:
+    group_pod_content:
       children:
         - field_attachments_nt_file_atts
-      label: 'Nugget content'
+      label: 'Pod content'
       region: content
       parent_name: ''
       weight: 1
@@ -56,7 +56,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: iczpeDHH64EYBG3z5m4c9zgJPfJKBJ6O17PFs8YIJo4
+  default_config_hash: R8Xuzys933xSt_RbZhg5tJ65uXuYMXAI24OH3soylZ4
 id: paragraph.attachments.default
 targetEntityType: paragraph
 bundle: attachments
@@ -97,11 +97,6 @@ content:
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
-  translation:
-    weight: 10
-    region: content
-    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true

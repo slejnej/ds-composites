@@ -1,5 +1,5 @@
-uuid: af1259ba-fa41-44a7-9cf7-af1071bdadf6
-langcode: en
+uuid: 4812c5e9-6f83-4963-bdd5-d7c505f3e609
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -9,9 +9,9 @@ dependencies:
     - options
   enforced:
     module:
-      - cards_nugget
+      - cards_pod
 _core:
-  default_config_hash: dSwiw4nczg_K4DuzpwNMg6qIOSP2bqgYlCHTbRpUDqA
+  default_config_hash: I5cuFD_o2y4BvYQaSpRc2GN63AXwIod3QFxgEQXz4A4
 id: paragraph.cards.field_presentation
 field_name: field_presentation
 entity_type: paragraph
@@ -19,7 +19,7 @@ bundle: cards
 label: Presentation
 description: 'How would you like your cards displayed?'
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: grid

@@ -1,13 +1,10 @@
-uuid: 1fcc6cc4-567b-4864-a91f-cd2e2e2638fb
+uuid: 7b640c00-25ca-43d6-a99c-afa23973ff95
 langcode: en
 status: true
 dependencies:
-  config:
-    - node.type.person
   module:
     - eu_cookie_compliance
     - media
-    - node
     - paragraphs_type_permissions
     - site_settings
     - system
@@ -22,15 +19,13 @@ permissions:
   - 'display eu cookie compliance popup'
   - 'view media'
   - 'view paragraph content attachments'
-  - 'view paragraph content banner_nugglet'
+  - 'view paragraph content banner_pea'
   - 'view paragraph content banners'
-  - 'view paragraph content flexible_layout'
-  - 'view paragraph content footer_section'
+  - 'view paragraph content card_pea'
+  - 'view paragraph content cards'
   - 'view paragraph content promo'
-  - 'view paragraph content section'
-  - 'view paragraph content slide_nugglet'
+  - 'view paragraph content slide_pea'
   - 'view paragraph content slideshow'
   - 'view paragraph content tagline'
   - 'view paragraph content text_media'
-  - 'view person revisions'
   - 'view published site setting entities'

@@ -1,12 +1,12 @@
-uuid: bdfcbcf3-7d3e-4f1e-a4c4-612acc1a6e1c
+uuid: fd30ed90-6024-427e-87a8-665eed53e8fa
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
-      - slideshow_nugget
+      - slideshow_pod
 _core:
-  default_config_hash: 5Oc9UnMhvU6FUsmqHokXySPvIaCTT1PT7tk1LNFugts
+  default_config_hash: vnBRiL1o4Nr_FAv9WSCHtVwhZEfuy7mq3XCxNEC7mJ0
 id: slideshow
 label: Slideshow
 icon_uuid: null

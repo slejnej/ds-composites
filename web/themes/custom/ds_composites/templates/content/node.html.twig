@@ -21,9 +21,17 @@
   <div class="main-content-wrapper container-xxl position-relative">
     <div class="row g-0">
 
-      {{ block('sidebar_content') }}
-      {{ block('main_content') }}
-      {{ block('sidebar_nuggets') }}
+      {% block sidebar_content %}
+        {% remora_include 'partials/content/sidebar-content.html.twig' %}
+      {% endblock %}
+
+      {% block main_content %}
+        {% remora_include 'partials/content/main-content.html.twig' %}
+      {% endblock %}
+
+      {% block sidebar_pods %}
+        {% remora_include 'partials/content/sidebar-pods.html.twig' %}
+      {% endblock %}
 
     </div>
   </div>

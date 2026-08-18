@@ -1,0 +1,28 @@
+// FLEX GROW
+
+@each $breakpoint, $value in $grid-breakpoints {
+  @for $i from 0 through 12 {
+    .flex-#{$breakpoint}-#{$i} {
+      @include media-breakpoint-up($breakpoint) {
+        flex: $i;
+      }
+    }
+  }
+}
+
+// GAPS
+
+$sizes: (
+  null: $global-spacing-02,
+  xs: $global-spacing-02,
+  sm: $global-spacing-05,
+  md: $global-spacing-1,
+  lg: $global-spacing-2,
+  xl: $global-spacing-3
+);
+
+@each $size, $value in $sizes {
+  .flex-gap-#{$size} {
+    gap: $value;
+  }
+}

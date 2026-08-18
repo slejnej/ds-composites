@@ -9,8 +9,8 @@ display:
           tags:
             next: 'Weiter ›'
             previous: '‹ Zurück'
-            first: '« Anfang'
-            last: 'Ende »'
+            first: '« Erste'
+            last: 'Letzte »'
           expose:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
@@ -19,14 +19,9 @@ display:
         options:
           submit_button: Anwenden
           reset_button_label: Zurücksetzen
-          exposed_sorts_label: Sortierung
+          exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
-      empty:
-        area_text_custom:
-          content: 'Es wurde noch kein Inhalt für die Startseite erstellt.<br />Lesen Sie das <a target="_blank" href="https://www.drupal.org/de/docs/user_guide/de/index.html">Benutzerhandbuch</a>, um mehr über das Erstellen von Websites mit Drupal zu erfahren.'
-        title:
-          title: 'Herzlich willkommen!'
   feed_1:
     display_title: Newsfeed
   page_1:

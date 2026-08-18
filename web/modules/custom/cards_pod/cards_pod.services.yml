@@ -1,0 +1,8 @@
+services:
+  cards_pod.event_subscriber.referenceable_entity:
+    class: \Drupal\cards_pod\EventSubscriber\ReferenceableEntitySubscriber
+    tags:
+      - { name: 'event_subscriber' }
+
+  cards_pod.repository.paragraph.card_pea:
+    class: Drupal\cards_pod\Repository\ParagraphRepository

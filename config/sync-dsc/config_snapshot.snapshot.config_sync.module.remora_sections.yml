@@ -1,4 +1,4 @@
-uuid: af9870e2-59db-4f9e-afeb-52194639c7f5
+uuid: 45860d4a-4847-47bd-8971-a4cf4a6fd5bc
 langcode: en
 status: true
 dependencies:
@@ -79,7 +79,7 @@ items:
     name: core.entity_form_display.paragraph.section.default
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -144,7 +144,7 @@ items:
     name: core.entity_form_display.site_setting_entity.footer.default
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -164,6 +164,14 @@ items:
       bundle: footer
       mode: default
       content:
+        description:
+          type: string_textfield
+          weight: 26
+          region: content
+          settings:
+            size: 60
+            placeholder: ''
+          third_party_settings: {  }
         field_footer_sections:
           type: layout_paragraphs
           weight: 2
@@ -173,6 +181,16 @@ items:
             nesting_depth: 0
             require_layouts: 1
             empty_message: ''
+          third_party_settings: {  }
+        group:
+          type: entity_reference_autocomplete
+          weight: 5
+          region: content
+          settings:
+            match_operator: CONTAINS
+            match_limit: 10
+            size: 60
+            placeholder: ''
           third_party_settings: {  }
         langcode:
           type: language_select
@@ -191,9 +209,10 @@ items:
           third_party_settings: {  }
       hidden:
         fieldset: true
+        status: true
         user_id: true
       _core:
-        default_config_hash: cfqrSUC1O7M7zK_0hmM48IjSFd5lnk6YvyUEa6MqO38
+        default_config_hash: hwGd5IjehAcbisbx4DSp1C5oqeFNVHX--rXY_IMnj1c
   -
     collection: ''
     name: core.entity_view_display.paragraph.flexible_layout.default
@@ -283,7 +302,7 @@ items:
     name: core.entity_view_display.paragraph.section.default
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -322,7 +341,7 @@ items:
     name: core.entity_view_display.paragraph.section.preview
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -360,7 +379,7 @@ items:
     name: core.entity_view_display.site_setting_entity.footer.default
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -374,6 +393,14 @@ items:
       bundle: footer
       mode: default
       content:
+        description:
+          type: string
+          label: above
+          settings:
+            link_to_entity: false
+          third_party_settings: {  }
+          weight: 2
+          region: content
         field_footer_sections:
           type: entity_reference_revisions_entity_view
           label: above
@@ -391,6 +418,13 @@ items:
           third_party_settings: {  }
           weight: -4
           region: content
+        group:
+          type: author
+          label: hidden
+          settings: {  }
+          third_party_settings: {  }
+          weight: 0
+          region: content
         name:
           type: string
           label: above
@@ -406,9 +440,11 @@ items:
           third_party_settings: {  }
           weight: 0
           region: content
-      hidden: {  }
+      hidden:
+        langcode: true
+        search_api_excerpt: true
       _core:
-        default_config_hash: StQ3EX6Hd6jZh1Tn5F-dIjYpVDn-WtNrpiBWK9hRjNw
+        default_config_hash: pakUKBPB7j-ZPpLU5SgcBQVnefiNruZ06P-bXkJkbW0
   -
     collection: ''
     name: field.field.paragraph.flexible_layout.field_display_title
@@ -428,7 +464,7 @@ items:
       entity_type: paragraph
       bundle: flexible_layout
       label: 'Display title'
-      description: "This title is displayed on the page above the content of this section.\r\nAllowed HTML tags: <em> <i class> <sup> <sub>"
+      description: "This title is displayed on the page above the content of this section.\r\nAllowed HTML tags: <em> <i> <sup> <sub>"
       required: false
       translatable: false
       default_value: {  }
@@ -498,7 +534,7 @@ items:
     name: field.field.paragraph.section.field_display_title
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -528,7 +564,7 @@ items:
     name: field.field.paragraph.section.field_editor_title
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -553,7 +589,7 @@ items:
     name: field.field.paragraph.section.field_palette
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -582,7 +618,7 @@ items:
     name: field.field.site_setting_entity.footer.field_footer_sections
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         config:
@@ -612,7 +648,7 @@ items:
     name: field.storage.site_setting_entity.field_footer_sections
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -639,7 +675,7 @@ items:
     name: paragraphs.paragraphs_type.flexible_layout
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -667,7 +703,7 @@ items:
     name: paragraphs.paragraphs_type.footer_section
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -695,7 +731,7 @@ items:
     name: paragraphs.paragraphs_type.section
     data:
       uuid: null
-      langcode: en
+      langcode: en-gb
       status: true
       dependencies:
         module:
@@ -717,12 +753,26 @@ items:
     name: site_settings.site_setting_entity_type.footer
     data:
       uuid: null
+      langcode: en-gb
+      status: true
+      dependencies:
+        config:
+          - site_settings.site_setting_group_entity_type.footer_group
+      id: footer
+      label: Footer
+      group: footer_group
+      multiple: false
+      _core:
+        default_config_hash: 2EKgNZZOeeofVVYbGKJn2VDCv2aFalg1BfYNyhsPauA
+  -
+    collection: ''
+    name: site_settings.site_setting_group_entity_type.footer_group
+    data:
+      uuid: null
       langcode: en
       status: true
       dependencies: {  }
-      id: footer
+      id: footer_group
       label: Footer
-      fieldset: Global
-      multiple: false
       _core:
-        default_config_hash: U7rtJlObJLgj7MMJFHb8iYweD63MVWfyPeCW2jjKMgw
+        default_config_hash: My_OIgovIo2V2GWB9eorUC2qGyCsGkQuRTuSM8AEWxM

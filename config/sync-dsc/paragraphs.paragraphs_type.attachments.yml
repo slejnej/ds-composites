@@ -1,14 +1,14 @@
-uuid: cd06d479-e4f1-416b-97e4-66f8090a9c06
-langcode: en
+uuid: e4559688-be95-4d40-8038-62f8294a30d4
+langcode: en-gb
 status: true
 dependencies:
   module:
     - layout_paragraphs
   enforced:
     module:
-      - attachments_nugget
+      - attachments_pod
 _core:
-  default_config_hash: cRv1YxNf7cecbZ1XN2x4vi6AYNTn3Im1ETXaKCzo764
+  default_config_hash: VCuImR3sn8znRd7jIPtfMTJffnKlRYL8RffIVaNYzjM
 id: attachments
 label: Attachments
 icon_uuid: null

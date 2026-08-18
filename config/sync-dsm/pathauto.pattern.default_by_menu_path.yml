@@ -1,5 +1,5 @@
-uuid: 2a6d37b2-f8ca-4026-80f7-7e81726ac33e
-langcode: en
+uuid: 4cec1734-8898-40dc-9916-51150048ea86
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -9,7 +9,7 @@ _core:
 id: default_by_menu_path
 label: 'Default by menu path'
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:parent:url:path]/[node:title]'
+pattern: '/[node:menu-link:parent:url:path]/[node:title]'
 selection_criteria: {  }
 selection_logic: and
 weight: 0

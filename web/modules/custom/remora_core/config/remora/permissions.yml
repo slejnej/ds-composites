@@ -17,6 +17,18 @@ editor:
   - 'administer remora settings'
   - 'access broken links report'
   - 'access own broken links report'
+  - 'bypass node access'
+  - 'create document media'
+  - 'delete any document media'
+  - 'edit any document media'
+  - 'create image media'
+  - 'delete any image media'
+  - 'edit any image media'
+  - 'create remote_video media'
+  - 'delete any remote_video media'
+  - 'edit any remote_video media'
+  - 'edit menu_item_role_access'
+  - 'administer account menu items'
 
 web_admin:
   - 'administer google_tag_container'

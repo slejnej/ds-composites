@@ -1,5 +1,5 @@
-uuid: 8dfdf409-750d-4e21-bfb5-55edc4b46075
-langcode: en
+uuid: a0d67e26-0d0f-48dc-98f0-e4ee63b38fd9
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -7,22 +7,21 @@ dependencies:
     - field.field.node.news.field_alternative_title
     - field.field.node.news.field_body
     - field.field.node.news.field_categories
-    - field.field.node.news.field_countries
     - field.field.node.news.field_date
     - field.field.node.news.field_diseases
     - field.field.node.news.field_hero_content
     - field.field.node.news.field_image
-    - field.field.node.news.field_main_nuggets
+    - field.field.node.news.field_main_pods
     - field.field.node.news.field_media
     - field.field.node.news.field_meta_tags
     - field.field.node.news.field_news_attachments
     - field.field.node.news.field_news_authors
     - field.field.node.news.field_news_display_date
     - field.field.node.news.field_news_link
-    - field.field.node.news.field_postscript_nuggets
+    - field.field.node.news.field_postscript_pods
     - field.field.node.news.field_seo_description
     - field.field.node.news.field_seo_title
-    - field.field.node.news.field_sidebar_nuggets
+    - field.field.node.news.field_sidebar_pods
     - field.field.node.news.field_summary
     - field.field.node.news.field_tags
     - field.field.node.news.field_topics
@@ -38,7 +37,7 @@ third_party_settings:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: R-zmc-26G-FTOGytGsqB7ipI5Ep2UIMcmc-dNVjztAU
+  default_config_hash: eyp9-63ApeAzaOwogAGViQYfl9J8awa6LEQu9dhU8FU
 id: node.news.search_rendered_output
 targetEntityType: node
 bundle: news
@@ -60,9 +59,9 @@ content:
     region: content
   field_categories:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 10
     region: content
@@ -84,7 +83,7 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
-  field_main_nuggets:
+  field_main_pods:
     type: layout_paragraphs
     label: hidden
     settings:
@@ -117,7 +116,7 @@ content:
     third_party_settings: {  }
     weight: 17
     region: content
-  field_postscript_nuggets:
+  field_postscript_pods:
     type: layout_paragraphs
     label: hidden
     settings:
@@ -126,7 +125,7 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
-  field_sidebar_nuggets:
+  field_sidebar_pods:
     type: layout_paragraphs
     label: hidden
     settings:
@@ -142,8 +141,23 @@ content:
     third_party_settings: {  }
     weight: 11
     region: content
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_topics:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
 hidden:
-  field_countries: true
   field_diseases: true
   field_image: true
   field_media: true
@@ -151,8 +165,6 @@ hidden:
   field_news_link: true
   field_seo_description: true
   field_seo_title: true
-  field_tags: true
-  field_topics: true
   langcode: true
   links: true
   search_api_excerpt: true

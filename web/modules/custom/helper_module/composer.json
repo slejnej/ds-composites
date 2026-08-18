@@ -4,11 +4,5 @@
   "type": "drupal-custom-module",
   "require": {
     "drupal/core": "^9.1 | ^10"
-  },
-  "authors": [
-    {
-      "name": "Jernej Slejko",
-      "email": "slejnej@gmail.com"
-    }
-  ]
+  }
 }

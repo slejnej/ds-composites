@@ -1,7 +1,7 @@
 (function($, Drupal) {
   'use strict';
 
-  Drupal.behaviors.gaelf_global = {
+  Drupal.behaviors.ds_composites_global = {
     attach: function(context, settings) {
       if (context !== document) {
         return;

@@ -1,5 +1,5 @@
-uuid: 3e289769-3041-47bd-b8e2-f6e315eebc84
-langcode: en
+uuid: 2f372c9c-42e4-4a89-9efa-fabf61bb02ba
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -72,6 +72,7 @@ settings:
         - '<h4 id>'
         - '<h5 id>'
         - '<h6 id>'
+        - '<i class>'
     ckeditor5_style:
       styles:
         -
@@ -104,9 +105,7 @@ settings:
         -
           label: 'Borderless table'
           element: '<table class="table-borderless">'
-    linkit_extension:
-      linkit_enabled: true
-      linkit_profile: default
     media_media:
       allow_view_mode_override: true
-image_upload: {  }
+image_upload:
+  status: false

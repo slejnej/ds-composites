@@ -1,0 +1,18 @@
+uuid: 95692046-a887-4728-84d5-1b435e27dd18
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.slideshow
+id: paragraph.slideshow.created
+field_name: created
+entity_type: paragraph
+bundle: slideshow
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,29 @@
+uuid: c45d9ef4-0fac-44b8-9c3b-177461a8c236
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.webform_pod.field_display_title
+    - field.field.paragraph.webform_pod.field_editor_title
+    - field.field.paragraph.webform_pod.field_webform_nt_form
+    - paragraphs.paragraphs_type.webform_pod
+_core:
+  default_config_hash: 4cngAF8YL3yr6wvfnj3IgJGm6A9LqVSPDB5ZmsgEOQI
+id: paragraph.webform_pod.preview
+targetEntityType: paragraph
+bundle: webform_pod
+mode: preview
+content:
+  field_editor_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_display_title: true
+  field_webform_nt_form: true
+  search_api_excerpt: true

@@ -1,0 +1,20 @@
+uuid: e7c6209f-2219-41d5-a904-69da09fbb18f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.material
+  module:
+    - metatag
+id: taxonomy_term.material.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: material
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

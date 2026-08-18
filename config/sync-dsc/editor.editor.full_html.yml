@@ -1,5 +1,5 @@
-uuid: f942063e-6093-4f54-b96b-5fd823f8f9cf
-langcode: en
+uuid: a6d676e0-3f91-4f92-96d6-5badfb9317e0
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -105,9 +105,7 @@ settings:
         -
           label: 'Borderless table'
           element: '<table class="table-borderless">'
-    linkit_extension:
-      linkit_enabled: true
-      linkit_profile: default
     media_media:
       allow_view_mode_override: true
-image_upload: {  }
+image_upload:
+  status: false

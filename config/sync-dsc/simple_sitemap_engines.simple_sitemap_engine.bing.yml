@@ -1,9 +1,9 @@
-uuid: 319be06c-8d72-4def-b112-3d8267c5490e
+uuid: 483ca6ed-042a-4d08-9c67-89b429d71fa4
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: uOksGlB4ho0egmcvzWqkR0Gon2HxOILPRhHQYuvcQ_E
+  default_config_hash: 8O0RaK1pszvH7yEaxf8ELHq9ITuX4d99abWRB_54cyQ
 id: bing
 label: Bing
 url: null

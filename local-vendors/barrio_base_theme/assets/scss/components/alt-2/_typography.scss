@@ -1,0 +1,24 @@
+// Blockquotes
+
+$alt-2-blockquote-bg: $surface-primary !default;
+$alt-2-blockquote-heading-color: $text-primary !default;
+$alt-2-blockquote-color: $text-primary !default;
+$alt-2-blockquote-icon-color: $primary !default;
+
+.palette-alt-2 {
+  blockquote {
+    background: $alt-2-blockquote-bg;
+
+    h2, h3, h4, h5, h6 {
+      color: $alt-2-blockquote-heading-color;
+    }
+
+    p {
+      color: $alt-2-blockquote-color;
+    }
+
+    &::before {
+      color: $alt-2-blockquote-icon-color;
+    }
+  }
+}

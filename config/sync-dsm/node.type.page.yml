@@ -1,5 +1,5 @@
-uuid: 6c686988-3c2e-4283-82b1-ea943bb07dc8
-langcode: en
+uuid: 4b0a5a41-59d1-4c27-95f8-e8d90dbb64f9
+langcode: en-gb
 status: true
 dependencies:
   module:
@@ -16,8 +16,8 @@ _core:
   default_config_hash: O9hycvpgz3q2OzBeAsIp5Q8pa3DRP0sbSYmCGERPDDQ
 name: Page
 type: page
-description: ''
-help: ''
+description: null
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

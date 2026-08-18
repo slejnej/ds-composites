@@ -1,15 +1,15 @@
-uuid: bc2b8eac-b02c-41bc-8549-3e6e63503259
-langcode: en
+uuid: 9f88277b-ba7e-40c4-8cb9-e98e058173c3
+langcode: en-gb
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_banner_nt_banners
-    - paragraphs.paragraphs_type.banner_nugglet
+    - paragraphs.paragraphs_type.banner_pea
     - paragraphs.paragraphs_type.banners
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: fbvSsLAMjCq1mJT5W8L-8TB4b2wDe-RpJieCYBo1cX8
+  default_config_hash: IoxNLAf9gxrNSPubXPxymBG1xm4A4MT8cIO-i4TRR24
 id: paragraph.banners.field_banner_nt_banners
 field_name: field_banner_nt_banners
 entity_type: paragraph
@@ -17,17 +17,17 @@ bundle: banners
 label: Banners
 description: 'Banners appear randomly on page load if more than one is added.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      banner_nugglet: banner_nugglet
+      banner_pea: banner_pea
     negate: 0
     target_bundles_drag_drop:
-      accordion_nugglet:
+      accordion_pea:
         weight: 24
         enabled: false
       accordions:
@@ -36,7 +36,7 @@ settings:
       attachments:
         weight: 25
         enabled: false
-      banner_nugglet:
+      banner_pea:
         weight: 24
         enabled: true
       banners:
@@ -45,7 +45,7 @@ settings:
       block:
         weight: 27
         enabled: false
-      card_nugglet:
+      card_pea:
         weight: 29
         enabled: false
       cards:
@@ -78,7 +78,7 @@ settings:
       section:
         weight: 38
         enabled: false
-      slide_nugglet:
+      slide_pea:
         weight: 40
         enabled: false
       slideshow:
@@ -93,7 +93,7 @@ settings:
       text_media:
         weight: 43
         enabled: false
-      webform_nugget:
+      webform_pod:
         weight: 44
         enabled: false
 field_type: entity_reference_revisions

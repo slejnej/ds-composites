@@ -1,11 +1,15 @@
 _core:
   default_config_hash: 9O9cB-DKI5YqdkPtvZ-kiBQXXoUspp2qSZAzs0orwd0
-langcode: en
+langcode: en-gb
 mode: simple
 ignored_config_entities:
   - captcha.settings
+  - 'google_tag.container.*'
   - google_tag.settings
   - recaptcha.settings
   - recaptcha_v3.settings
+  - smtp.settings
   - system.site
+  - user.mail
+  - user.settings
 uuid: null

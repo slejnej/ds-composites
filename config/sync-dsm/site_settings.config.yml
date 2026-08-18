@@ -1,4 +1,11 @@
 _core:
-  default_config_hash: d-bH3--ktq6mwN7d37KW59P77RS2YPh2ybgA7kAwfTU
+  default_config_hash: 2sRhnBzqTdvaE4kodkfAsed1w1NNcgfiP9UCyv7dcPc
 template_key: site_settings
-disable_auto_loading: false
+loader_plugin: full
+disable_auto_loading: true
+hide_description: true
+hide_advanced: true
+hide_group: true
+simple_summary: true
+show_groups_in_menu: true
+edit_form_on_canonical_route: true

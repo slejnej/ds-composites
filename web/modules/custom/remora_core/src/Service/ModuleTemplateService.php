@@ -3,6 +3,7 @@
 namespace Drupal\remora_core\Service;
 
 use Drupal;
+use Drupal\Core\Logger\RfcLogLevel;
 
 /**
  * Helps modules with basic template functionality on _theme hook
@@ -41,11 +42,26 @@ class ModuleTemplateService
       // add whatever is left to the module path
       $pathToTemplate = "@$moduleName/templates" . $pathInModule;
 
+      $vars_for_hook = $variables[$themeHook] ?? [];
+
+      // Logging check
+      array_walk_recursive($theme, function ($value, $key) {
+        if (is_object($value)) {
+          \Drupal::logger('theme_variable_debug')->warning(
+            'Object found in theme definition: key "@key", type "@type"',
+            [
+              '@key' => $key,
+              '@type' => get_class($value),
+            ]
+          );
+        }
+      });
+
       $theme[$themeHook] = [
         'template' => $templateName,
         'path' => $pathToTemplate,
-        'variables' => $variables[$themeHook] ?? [],
-        'base hook' => $templateBaseHook
+        'variables' => $vars_for_hook,
+        'base hook' => $templateBaseHook,
       ];
     }
 

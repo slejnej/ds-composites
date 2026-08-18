@@ -1,5 +1,5 @@
-uuid: d009f9fa-8050-4ce2-9514-5ca36bac8101
-langcode: en
+uuid: 4c0b161f-f85e-48e4-8933-83ab3c494c38
+langcode: en-gb
 status: true
 dependencies:
   config:
@@ -9,9 +9,9 @@ dependencies:
     - options
   enforced:
     module:
-      - text_media_nugget
+      - text_media_pod
 _core:
-  default_config_hash: hcl3QFD7-MZ296JsYrvQlMLV4Vv1oWr6dG69Gh3y4CA
+  default_config_hash: aMnFsZW--fNJx-WbPVbQ7x2wcZkivc01yJ1O8A9p7A0
 id: paragraph.text_media.field_text_media_nt_presentation
 field_name: field_text_media_nt_presentation
 entity_type: paragraph
@@ -19,7 +19,7 @@ bundle: text_media
 label: Presentation
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: text_only

@@ -1,0 +1,18 @@
+uuid: beb8d853-32db-4b19-ae0a-2254bbc4853e
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.flexible_layout
+id: paragraph.flexible_layout.created
+field_name: created
+entity_type: paragraph
+bundle: flexible_layout
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created
