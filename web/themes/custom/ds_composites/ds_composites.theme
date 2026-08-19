@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function ds_composites_page_attachments_alter(array &$attachments) {
+  $currSite = Settings::get('current_multisite');
+
+  if ($currSite) {
+    // Remove existing favicon links
+    if (isset($attachments['#attached']['html_head_link'])) {
+      foreach ($attachments['#attached']['html_head_link'] as $key => $link) {
+        if (isset($link[0]['rel']) && $link[0]['rel'] === 'icon') {
+          unset($attachments['#attached']['html_head_link'][$key]);
+        }
+      }
+      // Re-index the array
+      $attachments['#attached']['html_head_link'] = array_values($attachments['#attached']['html_head_link']);
+    }
+
+    // Remove from html_head as well (some themes use this)
+    if (isset($attachments['#attached']['html_head'])) {
+      foreach ($attachments['#attached']['html_head'] as $key => $head) {
+        if (isset($head[0]['#attributes']['rel']) &&
+          in_array($head[0]['#attributes']['rel'], ['icon', 'shortcut icon'])) {
+          unset($attachments['#attached']['html_head'][$key]);
+        }
+      }
+      $attachments['#attached']['html_head'] = array_values($attachments['#attached']['html_head']);
+    }
+
+    // Add your favicon using html_head (more reliable than html_head_link)
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#tag' => 'link',
+        '#attributes' => [
+          'rel' => 'icon',
+          'href' => '/' . $currSite . '-favicon.ico',
+          'type' => 'image/vnd.microsoft.icon',
+        ],
+      ],
+      'site_favicon',
+    ];
+  }
+}

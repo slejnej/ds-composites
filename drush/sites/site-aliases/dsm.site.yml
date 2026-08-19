@@ -1,14 +1,18 @@
 local:
   uri: 'https://ds-machining.lndo.site'
+  root: '/app/web'
   paths:
-    - files: /app/web/sites/ds-composites'
+    files: '/app/web/sites/ds-composites'
+
 dev:
-  root: /home/ubuntu/apps/ds-composites/current/web/sites/ds-machining
+  root: '/home/ubuntu/apps/ds-composites/current/web'
   uri: 'https://ds-machining.2cent2.eu'
   paths:
-    drush-script: '/app/ds-composites/current/vendor/drush/drush/drush'
+    files: '/home/ubuntu/apps/ds-composites/current/web/sites/ds-machining'
+    drush-script: '/home/ubuntu/apps/ds-composites/current/vendor/drush/drush/drush'
+
 prod:
-  root: /home/ubuntu/apps/ds-composites/current/web/sites/ds-machining
+  root: '/home/ubuntu/apps/ds-composites/current/web'
   uri: 'https://ds-machining.eu'
   paths:
-    drush-script: '/app/ds-composites/current/vendor/drush/drush/drush'
+    drush-script: '/home/ubuntu/apps/ds-composites/current/vendor/drush/drush/drush'
