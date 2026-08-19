@@ -18,6 +18,40 @@ function dc_custom_page_attachments(array &$attachments): void
 }
 
 /**
+ * Implements hook_page_attachments_alter().
+ */
+function dc_custom_page_attachments_alter(array &$attachments) {
+  $site_key = Settings::get('current_multisite', 'default');
+
+  // Strip any existing favicon link (theme/core default).
+  if (!empty($attachments['#attached']['html_head_link'])) {
+    foreach ($attachments['#attached']['html_head_link'] as $key => $link) {
+      if (isset($link[0]['rel']) && $link[0]['rel'] === 'icon') {
+        unset($attachments['#attached']['html_head_link'][$key]);
+      }
+    }
+  }
+
+  $theme_path = \Drupal::service('extension.list.theme')->getPath('ds_composites');
+  $favicon_relative = $theme_path . '/build/assets/icons/' . $site_key . '-favicon.ico';
+  $favicon_absolute = DRUPAL_ROOT . '/' . $favicon_relative;
+
+  // Fallback if a site-specific icon doesn't exist.
+  if (!file_exists($favicon_absolute)) {
+    $favicon_relative = $theme_path . '/build/assets/icons/default-favicon.ico';
+    $favicon_absolute = DRUPAL_ROOT . '/' . $favicon_relative;
+  }
+
+  $cache_bust = file_exists($favicon_absolute) ? filemtime($favicon_absolute) : \Drupal::time()->getRequestTime();
+
+  $attachments['#attached']['html_head_link'][][] = [
+    'rel' => 'icon',
+    'href' => \Drupal::request()->getBasePath() . '/' . $favicon_relative . '?v=' . $cache_bust,
+    'type' => 'image/vnd.microsoft.icon',
+  ];
+}
+
+/**
  * Add human readable name of paragraph to render on templates
  * @param array $variables
  * @return void
