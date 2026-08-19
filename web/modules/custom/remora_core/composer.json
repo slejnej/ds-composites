@@ -83,6 +83,9 @@
       },
       "drupal/smtp": {
         "read from settings": "web/modules/custom/remora_core/patches/smtp_read_from_settings.patch"
+      },
+      "drupal/simple_sitemap": {
+        "fix for indexing": "web/modules/custom/remora_core/patches/simple_sitemap-remove-xrobotstag-noindex.patch"
       }
     },
     "enable-patching": true

@@ -44,7 +44,7 @@
     "mrm-remora/tagline_pod": "*",
     "mrm-remora/text_media_pod": "*",
     "mrm-remora/tonic": "*",
-    "mrm-remora/webform_pod": "dev-upgrade-202"
+    "mrm-remora/webform_pod": "*"
   },
   "require-dev": {
     "pdepend/pdepend": "^2.12",

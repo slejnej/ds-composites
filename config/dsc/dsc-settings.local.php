@@ -45,3 +45,13 @@ $settings['simple_sitemap_engines.index_now.key'] = 'ad6cd4e4017b49029ea554875c6
 
 # reduce cache tables in DB from 5000
 $settings['database_cache_max_rows']['bins']['page'] = 1000;
+
+$settings['reverse_proxy'] = TRUE;
+$settings['reverse_proxy_addresses'] = [
+  '172.31.0.0/16',
+];
+$settings['reverse_proxy_trusted_headers'] =
+  \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_FOR |
+  \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_HOST |
+  \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PORT |
+  \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PROTO;

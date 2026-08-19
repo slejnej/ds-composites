@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02514798a71eaff64d601418e275d1be",
+    "content-hash": "f1da1ebbacbf1360b0c2741b65beeb2f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -118,16 +118,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.392.0",
+            "version": "3.393.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "c6bb281dfbfd4c8c2d0bd2c3b95242af41bb1b4c"
+                "reference": "1401412d30a7542b9b7a2e97ddd73c82723bc624"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c6bb281dfbfd4c8c2d0bd2c3b95242af41bb1b4c",
-                "reference": "c6bb281dfbfd4c8c2d0bd2c3b95242af41bb1b4c",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/1401412d30a7542b9b7a2e97ddd73c82723bc624",
+                "reference": "1401412d30a7542b9b7a2e97ddd73c82723bc624",
                 "shasum": ""
             },
             "require": {
@@ -209,9 +209,9 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.392.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.393.1"
             },
-            "time": "2026-08-11T18:12:10+00:00"
+            "time": "2026-08-18T18:16:28+00:00"
         },
         {
             "name": "chi-teck/drupal-code-generator",
@@ -1067,7 +1067,7 @@
         },
         {
             "name": "deux-cent-deux/drupal_search",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/drupal_search",
@@ -1101,7 +1101,7 @@
         },
         {
             "name": "deux-cent-deux/installation_profile",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/installation_profile",
@@ -2996,7 +2996,7 @@
             "extra": {
                 "drupal": {
                     "version": "3.2.3",
-                    "datestamp": "1785877642",
+                    "datestamp": "1786570530",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4755,7 +4755,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.23",
-                    "datestamp": "1785907921",
+                    "datestamp": "1786629882",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7003,7 +7003,7 @@
         },
         {
             "name": "mantaraymedia/cache_service",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "local-vendors/cache_service",
@@ -7031,24 +7031,24 @@
         },
         {
             "name": "masterminds/html5",
-            "version": "2.10.1",
+            "version": "2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Masterminds/html5-php.git",
-                "reference": "fd5018f6815fff903946d0564977b44ce8010e29"
+                "reference": "a1e7a2f88ee13635d86fc61cfbdf2306a76ddfc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/fd5018f6815fff903946d0564977b44ce8010e29",
-                "reference": "fd5018f6815fff903946d0564977b44ce8010e29",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/a1e7a2f88ee13635d86fc61cfbdf2306a76ddfc7",
+                "reference": "a1e7a2f88ee13635d86fc61cfbdf2306a76ddfc7",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
-                "php": ">=5.3.0"
+                "php": ">=7.4"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7.21 || ^6 || ^7 || ^8 || ^9 || ^10"
+                "phpunit/phpunit": "^6 || ^7 || ^8 || ^9 || ^10"
             },
             "type": "library",
             "extra": {
@@ -7092,22 +7092,22 @@
             ],
             "support": {
                 "issues": "https://github.com/Masterminds/html5-php/issues",
-                "source": "https://github.com/Masterminds/html5-php/tree/2.10.1"
+                "source": "https://github.com/Masterminds/html5-php/tree/2.11.0"
             },
-            "time": "2026-06-23T18:43:15+00:00"
+            "time": "2026-08-18T06:18:41+00:00"
         },
         {
             "name": "mck89/peast",
-            "version": "v1.17.7",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mck89/peast.git",
-                "reference": "89ee39f81e82cb7ed36cc5abaf2edd43cef71770"
+                "reference": "9c211ef67a0cf7511f864b6d390fe5939a837d05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mck89/peast/zipball/89ee39f81e82cb7ed36cc5abaf2edd43cef71770",
-                "reference": "89ee39f81e82cb7ed36cc5abaf2edd43cef71770",
+                "url": "https://api.github.com/repos/mck89/peast/zipball/9c211ef67a0cf7511f864b6d390fe5939a837d05",
+                "reference": "9c211ef67a0cf7511f864b6d390fe5939a837d05",
                 "shasum": ""
             },
             "require": {
@@ -7120,7 +7120,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.17.7-dev"
+                    "dev-master": "1.18.0-dev"
                 }
             },
             "autoload": {
@@ -7141,13 +7141,13 @@
             "description": "Peast is PHP library that generates AST for JavaScript code",
             "support": {
                 "issues": "https://github.com/mck89/peast/issues",
-                "source": "https://github.com/mck89/peast/tree/v1.17.7"
+                "source": "https://github.com/mck89/peast/tree/v1.18.0"
             },
-            "time": "2026-07-21T11:56:06+00:00"
+            "time": "2026-08-19T09:36:10+00:00"
         },
         {
             "name": "mrm-remora/attachments_pod",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/attachments_pod",
@@ -7168,7 +7168,7 @@
         },
         {
             "name": "mrm-remora/aws-code-deploy",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "local-vendors/aws-code-deploy",
@@ -7219,7 +7219,7 @@
         },
         {
             "name": "mrm-remora/aws-plugin-installer",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "local-vendors/aws-plugin-installer",
@@ -7251,7 +7251,7 @@
         },
         {
             "name": "mrm-remora/banners_pod",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/banners_pod",
@@ -7272,7 +7272,7 @@
         },
         {
             "name": "mrm-remora/barrio_base_theme",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "local-vendors/barrio_base_theme",
@@ -7301,7 +7301,7 @@
         },
         {
             "name": "mrm-remora/cards_pod",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/cards_pod",
@@ -7322,7 +7322,7 @@
         },
         {
             "name": "mrm-remora/countries_info",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/countries_info",
@@ -7342,7 +7342,7 @@
         },
         {
             "name": "mrm-remora/helper_module",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/helper_module",
@@ -7359,7 +7359,7 @@
         },
         {
             "name": "mrm-remora/news_content_type",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/news_content_type",
@@ -7379,7 +7379,7 @@
         },
         {
             "name": "mrm-remora/organisations_taxonomy",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/organisations_taxonomy",
@@ -7400,7 +7400,7 @@
         },
         {
             "name": "mrm-remora/page_content_type",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/page_content_type",
@@ -7420,7 +7420,7 @@
         },
         {
             "name": "mrm-remora/promo_pod",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/promo_pod",
@@ -7441,11 +7441,11 @@
         },
         {
             "name": "mrm-remora/remora_core",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/remora_core",
-                "reference": "9a66191f565b40aeaa14f21ddff5c4d4eccf8776"
+                "reference": "935eeb321c660c5e936b6fa88671f29c7a348c6b"
             },
             "require": {
                 "cweagans/composer-patches": "^1.7",
@@ -7522,6 +7522,9 @@
                     },
                     "drupal/smtp": {
                         "read from settings": "web/modules/custom/remora_core/patches/smtp_read_from_settings.patch"
+                    },
+                    "drupal/simple_sitemap": {
+                        "fix for indexing": "web/modules/custom/remora_core/patches/simple_sitemap-remove-xrobotstag-noindex.patch"
                     }
                 },
                 "enable-patching": true
@@ -7533,7 +7536,7 @@
         },
         {
             "name": "mrm-remora/remora_sections",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/remora_sections",
@@ -7562,7 +7565,7 @@
         },
         {
             "name": "mrm-remora/security",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/security",
@@ -7593,7 +7596,7 @@
         },
         {
             "name": "mrm-remora/slideshow_pod",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/slideshow_pod",
@@ -7613,7 +7616,7 @@
         },
         {
             "name": "mrm-remora/tagging",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/tagging",
@@ -7635,7 +7638,7 @@
         },
         {
             "name": "mrm-remora/tagline_pod",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/tagline_pod",
@@ -7656,7 +7659,7 @@
         },
         {
             "name": "mrm-remora/text_media_pod",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/text_media_pod",
@@ -7677,7 +7680,7 @@
         },
         {
             "name": "mrm-remora/tonic",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "local-vendors/tonic",
@@ -7704,7 +7707,7 @@
         },
         {
             "name": "mrm-remora/webform_pod",
-            "version": "dev-upgrade-202",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/webform_pod",
@@ -13951,8 +13954,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/gin": 5,
-        "mrm-remora/webform_pod": 20
+        "drupal/gin": 5
     },
     "prefer-stable": true,
     "prefer-lowest": false,
