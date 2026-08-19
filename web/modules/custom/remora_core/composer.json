@@ -83,6 +83,9 @@
       },
       "drupal/smtp": {
         "read from settings": "web/modules/custom/remora_core/patches/smtp_read_from_settings.patch"
+      },
+      "drupal/simple_sitemap": {
+        "fix for indexing": "https://www.drupal.org/files/issues/2021-09-21/simple_sitemap_index_configuration_settings.patch"
       }
     },
     "enable-patching": true
