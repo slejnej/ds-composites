@@ -7445,7 +7445,7 @@
             "dist": {
                 "type": "path",
                 "url": "web/modules/custom/remora_core",
-                "reference": "efc13044785d64d2120c09098f28c5735558c732"
+                "reference": "935eeb321c660c5e936b6fa88671f29c7a348c6b"
             },
             "require": {
                 "cweagans/composer-patches": "^1.7",
@@ -7524,7 +7524,7 @@
                         "read from settings": "web/modules/custom/remora_core/patches/smtp_read_from_settings.patch"
                     },
                     "drupal/simple_sitemap": {
-                        "fix for indexing": "https://www.drupal.org/files/issues/2021-09-21/simple_sitemap_index_configuration_settings.patch"
+                        "fix for indexing": "web/modules/custom/remora_core/patches/simple_sitemap-remove-xrobotstag-noindex.patch"
                     }
                 },
                 "enable-patching": true
