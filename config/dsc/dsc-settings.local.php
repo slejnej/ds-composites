@@ -24,7 +24,9 @@ $settings['skip_permissions_hardening'] = TRUE;
 $config['system.performance']['css']['preprocess'] = FALSE;
 $config['system.performance']['js']['preprocess'] = FALSE;
 
-$config['system.logging']['error_level'] = 'verbose';
+// Disable error display for anonymous users.
+$config['system.logging']['error_level'] = 'critical';
+
 $settings['file_private_path'] = '/home/ubuntu/shared-folders/private/ds-composites/ds-composites';
 $settings['file_temp_path'] = '/home/ubuntu/shared-folders/temp/ds-composites/ds-composites';
 $settings['file_public_base_url'] = 'https://ds-composites.eu/sites/ds-composites/files';
