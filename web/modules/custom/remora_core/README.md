@@ -83,21 +83,11 @@ function MODULE_NAME_update_9005() {
 1. Add the repository to composer
 
 ```json
-    {
-  "name": "mrm-remora/remora_core",
-  "type": "vcs",
-  "url": "git@github.com:MRM-Remora/remora_core.git"
-},
 {
-"name": "mantaraymedia/cache_service",
+"name": "mrm-remora/remora_core",
 "type": "vcs",
-"url": "git@github.com:MantaRayMedia/cache_service.git"
-},
-{
-"name": "mantaraymedia/base_repository",
-"type": "vcs",
-"url": "git@github.com:MantaRayMedia/base_repository.git"
-}  
+"url": "git@github.com:MRM-Remora/remora_core.git"
+}
 ```
 
 2. Add `"extra.enable-patching": true` to composer.json

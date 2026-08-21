@@ -57,3 +57,30 @@ $settings['reverse_proxy_trusted_headers'] =
   \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_HOST |
   \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PORT |
   \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PROTO;
+
+/**
+ * smtp_host = SMTP server
+ * smtp_port = SMTP port
+ * smtp_protocol = SMTP protocol (ssl or tls)
+ * smtp_username = SMTP username
+ * smtp_password = SMTP password
+ * smtp_on = Enable SMTP
+ * smtp_from = 'From' email address
+ * smtp_fromname = 'From' name
+ * smtp_keepalive = Keep SMTP connection alive
+ * smtp_allowhtml = Allow HTML in emails
+ *
+ * @var array $config
+ */
+$config['smtp.settings'] = [
+  'smtp_host' => 'mail.ds-machining.eu',
+  'smtp_port' => 465,
+  'smtp_protocol' => 'ssl',
+  'smtp_username' => 'info@ds-machining.eu',
+  'smtp_password' => '',
+  'smtp_on' => 1,
+  'smtp_from' => 'info@ds-machining.eu',
+  'smtp_fromname' => 'DS Kompoziti d.o.o. - ds-machining.eu',
+  'smtp_keepalive' => false,
+  'smtp_allowhtml' => true
+];
