@@ -92,6 +92,7 @@ module:
   site_settings: 0
   site_settings_type_permissions: 0
   slideshow_pod: 0
+  smtp: 0
   system: 0
   tagging: 0
   tagline_pod: 0
